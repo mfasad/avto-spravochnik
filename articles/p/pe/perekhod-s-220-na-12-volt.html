@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Переход с 220 на 12 вольт: схемы, драйверы и ошибки — Авто Справочник</title>
+    <meta name="description" content="Как безопасно перейти с 220 на 12 вольт. Выбор драйвера, трансформатора или блока питания для светодиодов и авто. Схемы подключения и расчет мощности.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pe/perekhod-s-220-na-12-volt.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Переход с 220 на 12 вольт: схемы, драйверы и ошибки">
+    <meta property="og:description" content="Как безопасно перейти с 220 на 12 вольт. Выбор драйвера, трансформатора или блока питания для светодиодов и авто. Схемы подключения и расчет мощности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Переход с 220 на 12 вольт: схемы, драйверы и ошибки</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#основные-методы-понижения-напряжения">Основные методы понижения напряжения</a></li><li><a href="#расчет-мощности-и-выбор-блока-питания">Расчет мощности и выбор блока питания</a></li><li><a href="#использование-драйверов-для-светодиодов">Использование драйверов для светодиодов</a></li><li><a href="#схемы-подключения-и-монтаж-оборудования">Схемы подключения и монтаж оборудования</a></li><li><a href="#защита-от-перегрузок-и-короткого-замыкания">Защита от перегрузок и короткого замыкания</a></li><li><a href="#типичные-ошибки-при-конвертации-напряжения">Типичные ошибки при конвертации напряжения</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-podsoedinit-prikurivatel-v-mashine.html">Как подсоединить прикуриватель в машине: полная инструкция</a></li><li><a href="/articles/k/ka/kak-proverit-katushku-na-ispravnost.html">Как проверить катушку зажигания: мультиметром и осциллографом</a></li><li><a href="/articles/u/us/ustanovka-rozetki-dlya-elektromobilya.html">Установка розетки для электромобиля: виды, монтаж, нормы</a></li><li><a href="/articles/c/ch/chem-otlichaetsya-generator-peremennogo-toka-ot-postoyannogo.html">Генератор переменного и постоянного тока: отличие и принцип работы</a></li><li><a href="/articles/p/pr/priznak-neispravnoj-katushki-zazhiganiya.html">Признаки неисправной катушки зажигания: как диагностировать и устранить</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Переход с 220 на 12 вольт: надежные методы и схемы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#основные-методы-понижения-напряжения">Основные методы понижения напряжения</a></li><li><a href="#расчет-мощности-и-выбор-блока-питания">Расчет мощности и выбор блока питания</a></li><li><a href="#использование-драйверов-для-светодиодов">Использование драйверов для светодиодов</a></li><li><a href="#схемы-подключения-и-монтаж-оборудования">Схемы подключения и монтаж оборудования</a></li><li><a href="#защита-от-перегрузок-и-короткого-замыкания">Защита от перегрузок и короткого замыкания</a></li><li><a href="#типичные-ошибки-при-конвертации-напряжения">Типичные ошибки при конвертации напряжения</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный мир электроники диктует свои правила, и всё чаще перед владельцами автомобилей, дачниками и мастерами "умного дома" встает задача запитать низковольтные устройства от стандартной бытовой сети. <strong>Переход с 220 на 12 вольт</strong> — это не просто техническая необходимость, но и вопрос безопасности, так как низкое напряжение значительно снижает риск поражения током во влажных помещениях или при обслуживании техники.</p>
+
+<p>Однако, несмотря на кажущуюся простоту, процесс конвертации напряжения требует грамотного подхода к выбору оборудования. Неправильно подобранный <em>трансформатор</em> или дешевый <em>блок питания</em> могут стать причиной выхода из строя дорогостоящей светодиодной ленты или электроники автомобиля.</p>
+
+<p>В этой статье мы разберем основные способы реализации этой задачи, от простых диодных схем до профессиональных импульсных преобразователей. Вы узнаете, как рассчитать необходимую мощность и избежать типичных ошибок, которые допускают новички при монтаже.</p>
+
+<h2 id="основные-методы-понижения-напряжения">Основные методы понижения напряжения</h2>
+
+<p>Существует несколько принципиально разных способов получить 12 вольт из 220. Выбор конкретного метода зависит от того, для какой нагрузки предназначено питание: для светодиодов, зарядки аккумуляторов или работы сложной электроники.</p>
+
+<p>Самым простым, но наименее эффективным способом является использование гасящего резистора или конденсатора. Такая схема подходит только для маломощных индикаторов, так как КПД здесь крайне низок, а вся лишняя энергия превращается в тепло.</p>
+
+<p>Для более серьезных задач применяются трансформаторные и импульсные блоки питания. Первые отличаются надежностью и отсутствием высокочастотных помех, вторые — компактностью и высоким КПД. <strong>Импульсные преобразователи</strong> сегодня доминируют на рынке благодаря своей универсальности.</p>
+
+<ul>
+<li>🔌 <strong>Трансформаторные БП:</strong> тяжелые, надежные, дают минимум помех, идеальны для аудиоаппаратуры.</li>
+<li>⚡ <strong>Импульсные БП:</strong> легкие, компактные, выдерживают скачки напряжения, подходят для большинства задач.</li>
+<li>📉 <strong>Линейные стабилизаторы:</strong> просты в сборке, но сильно греются при большой разнице напряжений.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Использование самодельных бестрансаторных схем (где 220В идет напрямую через конденсатор) смертельно опасно из-за отсутствия гальванической развязки. Не прикасайтесь к элементам такой схемы, пока она включена в сеть!</p>
+</blockquote>
+
+<h2 id="расчет-мощности-и-выбор-блока-питания">Расчет мощности и выбор блока питания</h2>
+
+<p>Ключевой параметр при подборе оборудования — это мощность. Если вы планируете запитать светодиодную ленту или автомобильный компрессор от сети, необходимо суммировать потребление всех приборов и добавить запас.</p>
+
+<p>Формула расчета проста: умножьте напряжение (12В) на силу тока (А), которую потребляет ваш прибор. Полученное значение в Ваттах — это минимальная мощность, которую должен выдавать блок питания. <strong>Запас мощности</strong> должен составлять не менее 20-30%, чтобы устройство не работало на пределе своих возможностей.</p>
+
+<p>Рассмотрим типичные значения для различных потребителей. Важно понимать, что для светодиодов важен именно стабильный ток, а для электроники — стабильное напряжение.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип потребителя</th>
+<th>Примерная мощность</th>
+<th>Ток (при 12В)</th>
+<th>Рекомендуемый запас БП</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Светодиодная лента (1 метр)</td>
+<td>4.8 - 14 Вт</td>
+<td>0.4 - 1.2 А</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>Автомобильный холодильник</td>
+<td>40 - 60 Вт</td>
+<td>3 - 5 А</td>
+<td>30%</td>
+</tr>
+<tr>
+<td>Видеонаблюдение (камера)</td>
+<td>5 - 10 Вт</td>
+<td>0.5 - 1 А</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>Портативная акустика</td>
+<td>20 - 50 Вт</td>
+<td>2 - 4 А</td>
+<td>25%</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-85e7ff2e"><div class="pb-poll-question">📊 Какой тип нагрузки вы планируете запитывать?</div><div class="pb-poll-option" data-poll="85e7ff2e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Светодиоды (лента/лампы)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="85e7ff2e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Автомобильная электроника</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="85e7ff2e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Зарядка аккумуляторов</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="85e7ff2e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое оборудование</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>При выборе блока питания обращайте внимание на маркировку. Если указано <code>Output: 12V DC 5A</code>, это означает, что максимальный ток составляет 5 Ампер. Превышение этого значения приведет к срабатыванию защиты или перегреву.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы используете длинную светодиодную ленту (более 5 метров), подключайте её параллельно от блока питания, а не последовательно, чтобы избежать падения напряжения и неравномерного свечения.</p></aside>
+
+<h2 id="использование-драйверов-для-светодиодов">Использование драйверов для светодиодов</h2>
+
+<p>Частой ошибкой при организации освещения является попытка запитать светодиоды обычным блоком питания 12В. Светодиоды — это нелинейные элементы, им нужен <strong>стабилизатор тока</strong> (драйвер), а не просто стабилизатор напряжения.</p>
+
+<p>Если подключить мощные LED-кристаллы напрямую к 12 вольтам без драйвера, ток через них начнет расти экспоненциально при малейшем нагреве, что приведет к мгновенному выходу из строя. Драйвер же автоматически регулирует напряжение на выходе, чтобы поддерживать заданный ток.</p>
+
+<p>Существуют драйверы с входным напряжением 220В, которые уже содержат в себе все необходимые компоненты для перехода на низковольтную часть. При их выборе важно смотреть на диапазон выходных напряжений, например <code>10-15V</code>.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Не путайте блок питания (constant voltage) и драйвер (constant current). Подключение светодиодов к блоку питания без токоограничивающих резисторов или драйвера гарантированно выведет их из строя.</p>
+</blockquote>
+
+<p>Для автомобильной электрики, где напряжение бортовой сети колеблется от 11 до 15 вольт, использование драйверов особенно актуально. Они защищают дорогостоящие LED-фары от скачков напряжения при работе стартера или генератора.</p>
+
+<details class="pb-accordion"><summary>Почему мигают светодиоды?</summary><div class="pb-accordion-body"><p>Частое мигание светодиодов при подключении к сети 220В через драйвер часто вызвано несовместимостью с диммером или недостаточной мощностью самого драйвера. Также причиной может быть наводка от выключателя с подсветкой.</p></div></details>
+
+<h2 id="схемы-подключения-и-монтаж-оборудования">Схемы подключения и монтаж оборудования</h2>
+
+<p>Правильный монтаж — залог долгой службы оборудования. При переходе с 220 на 12 вольт важно соблюдать полярность и качественно изолировать соединения. Ошибка в полярности может сжечь входные цепи низковольтного устройства.</p>
+
+<p>Для подключения используйте медные провода сечением, соответствующим току нагрузки. Для токов до 5 Ампер достаточно сечения 0.5-0.75 мм², для более мощных потребителей (автомобильные усилители, компрессоры) сечение должно быть не менее 1.5-2.5 мм².</p>
+
+<p>Схема подключения обычно выглядит следующим образом: сетевой кабель 220В подключается к входу блока питания (часто маркируется как L и N), а к выходу (V+ и V-) подключается нагрузка. Важно не перепутать входы и выходы.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед включением</h4><label class="check-item"><input type="checkbox"><span>Проверить полярность подключения нагрузки</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии короткого замыкания</span></label><label class="check-item"><input type="checkbox"><span>Проверить соответствие напряжения (12В)</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в надежной фиксации проводов</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Если вы собираете схему самостоятельно, используйте пайку или качественные клеммники. Скрутки в низковольтных цепях с большим током могут нагреваться и окисляться, что приведет к падению напряжения и пожароопасной ситуации.</p>
+
+<h2 id="защита-от-перегрузок-и-короткого-замыкания">Защита от перегрузок и короткого замыкания</h2>
+
+<p>Любая система, работающая с электричеством, должна быть защищена. В цепях 12 вольт часто забывают про предохранители, считая напряжение безопасным. Однако короткое замыкание в низковольтной цепи может привести к возгоранию проводов или выходу из строя самого блока питания 220/12В.</p>
+
+<p>Рекомендуется устанавливать <strong>автоматические предохранители</strong> или плавкие вставки сразу после выхода 12 вольт из блока питания. Номинал предохранителя должен быть на 10-15% выше рабочего тока нагрузки.</p>
+
+<p>Современные импульсные блоки питания часто имеют встроенную защиту (OCP, OTP, SCP), которая отключает устройство при перегрузке, перегреве или коротком замыкании. Однако полагаться только на электронику не стоит — механическая защита надежнее.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Установка отдельного предохранителя в разрыв плюсового провода 12В — это минимальное требование безопасности, которое спасет вашу проводку и оборудование в случае аварии.</p></aside>
+
+<p>Также стоит учитывать температурный режим. Блоки питания, особенно мощные, требуют хорошей вентиляции. Не размещайте их в закрытых нишах без доступа воздуха или рядом с источниками тепла.</p>
+
+<h2 id="типичные-ошибки-при-конвертации-напряжения">Типичные ошибки при конвертации напряжения</h2>
+
+<p>Одной из самых распространенных ошибок является использование блока питания с мощностью "впритык". Работа на 100% нагрузки сокращает ресурс конденсаторов и транзисторов, приводя к быстрому выходу устройства из строя.</p>
+
+<p>Еще одна ошибка — игнирование качества выпрямленного тока. Дешевые блоки питания могут выдавать напряжение с большой пульсацией, что критично для аудиоаппаратуры и чувствительной электроники. На осциллографе вместо прямой линии вы увидите "пилу".</p>
+
+<p>Часто новички пытаются использовать зарядные устройства от телефонов (5В) для питания 12-вольтовых устройств, забывая, что напряжение должно строго соответствовать. Понижение 220В до 5В не даст 12В, а подключение 12В устройства к 5В блоку просто не запустит его.</p>
+
+<ul>
+<li>🔥 <strong>Перегрев:</strong> Установка блока питания в закрытый короб без вентиляции.</li>
+<li>📉 <strong>Просадка напряжения:</strong> Использование слишком тонких проводов для длинной линии 12В.</li>
+<li>⚡ <strong>Импульсные помехи:</strong> Отсутствие фильтрации в аудиосистемах при использовании дешевых БП.</li>
+</ul>
+
+<p>Помните, что <mark>качественный блок питания с запасом мощности стоит дешевле, чем ремонт сгоревшей светодиодной ленты или электронной платы</mark>, поэтому экономить на этом элементе системы нецелесообразно.</p>
+
+<details>
+<summary>Можно ли использовать блок питания от компьютера для питания 12-вольтовой нагрузки?</summary>
+<p>Да, компьютерные блоки питания (АТХ) имеют мощную линию 12 вольт (желтый провод). Для запуска такого блока вне корпуса компьютера нужно замкнуть зеленый провод (PS-ON) с любым черным (GND) на основном разъеме. Это отличный и дешевый вариант для мощных нагрузок.</p>
+</details>
+
+<details>
+<summary>Почему блок питания гудит или свистит?</summary>
+<p>Гул может издавать трансформатор из-за вибрации пластин или плохой затяжки. Свист чаще всего указывает на работу схемы защиты, перегрузку или неисправность конденсаторов. Если свит громкий и постоянный, блок лучше заменить.</p>
+</details>
+
+<details>
+<summary>Как проверить, держит ли блок питания заявленную мощность?</summary>
+<p>Самый надежный способ — подключить нагрузку (например, автомобильную лампу) и измерить напряжение под нагрузкой мультиметром. Если напряжение просаживается ниже 11.5В или блок уходит в защиту, его реальная мощность ниже заявленной.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-podsoedinit-prikurivatel-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Как подсоединить прикуриватель в машине: полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство: как подсоединить прикуриватель в машине. Схема подключения, выбор предохранит</span>
+            </a><a href="/articles/k/ka/kak-proverit-katushku-na-ispravnost.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить катушку зажигания: мультиметром и осциллографом</span>
+                <span class="pb-related-desc">Подробная инструкция, как проверить катушку зажигания на исправность мультиметром, искрой и осциллог</span>
+            </a><a href="/articles/u/us/ustanovka-rozetki-dlya-elektromobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Установка розетки для электромобиля: виды, монтаж, нормы</span>
+                <span class="pb-related-desc">Как установить розетку для зарядки электромобиля в гараже. Выбор мощности, кабель-менеджмент, типы р</span>
+            </a><a href="/articles/c/ch/chem-otlichaetsya-generator-peremennogo-toka-ot-postoyannogo.html" class="pb-related-card">
+                <span class="pb-related-title">Генератор переменного и постоянного тока: отличие и принцип работы</span>
+                <span class="pb-related-desc">Подробный разбор того, чем отличается генератор переменного тока от постоянного. Устройство, примене</span>
+            </a><a href="/articles/p/pr/priznak-neispravnoj-katushki-zazhiganiya.html" class="pb-related-card">
+                <span class="pb-related-title">Признаки неисправной катушки зажигания: как диагностировать и устранить</span>
+                <span class="pb-related-desc">Топ-10 симптомов поломки катушки зажигания: троение двигателя, пропуски зажигания, ошибки P0300-P030</span>
+            </a><a href="/articles/k/ka/kak-obnovit-panel-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Как обновить панель автомобиля: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по обновлению панели приборов автомобиля: методы, инструменты, возможные ошибк</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

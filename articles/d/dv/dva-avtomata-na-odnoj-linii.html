@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Два автомата на одной линии: схема, правила ПУЭ, монтаж — Авто Справочник</title>
+    <meta name="description" content="Можно ли ставить два автомата на одну линию? Разбор ПУЭ, схемы подключения, риски селективности и правильная разводка электрощита.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/d/dv/dva-avtomata-na-odnoj-linii.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Два автомата на одной линии: схема, правила ПУЭ, монтаж">
+    <meta property="og:description" content="Можно ли ставить два автомата на одну линию? Разбор ПУЭ, схемы подключения, риски селективности и правильная разводка электрощита.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/garazh-i-strojka/">Гараж и Стройка</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Два автомата на одной линии: схема, правила ПУЭ, монтаж</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принципы-работы-автоматического-выключателя">Принципы работы автоматического выключателя</a></li><li><a href="#проблема-селективности-защиты">Проблема селективности защиты</a></li><li><a href="#сценарии-когда-установка-двух-автоматов-оправдана">Сценарии, когда установка двух автоматов оправдана</a></li><li><a href="#опасности-и-риски-при-последовательном-соединении">Опасности и риски при последовательном соединении</a></li><li><a href="#правильная-схема-подключения-и-разводка">Правильная схема подключения и разводка</a></li><li><a href="#выбор-оборудования-характеристики-и-бренды">Выбор оборудования: характеристики и бренды</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/g/ga/garazh-na-2-mashiny-s-podemnikom.html">Гараж на 2 машины с подъемником: проект, размеры, чертежи</a></li><li><a href="/articles/n/na/nakladki-na-petli-dverej.html">Накладки на петли дверей: защита, реставрация и выбор</a></li><li><a href="/articles/s/st/stroitelstvo-garazha-iz-kirpicha.html">Строительство гаража из кирпича: пошаговая инструкция 2026</a></li><li><a href="/articles/p/pe/perekryt-kryshu-myagkoj-krovlej.html">Перекрыть крышу мягкой кровлей: технологии, цены, монтаж</a></li><li><a href="/articles/k/ka/kak-postavit-garazh-na-kadastrovyj-uchet-v-garazhnom-kooperative.html">Гараж в кооперативе: пошаговая инструкция по кадастровому учету 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Два автомата на одной линии: правила, риски и схемы подключения</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принципы-работы-автоматического-выключателя">Принципы работы автоматического выключателя</a></li><li><a href="#проблема-селективности-защиты">Проблема селективности защиты</a></li><li><a href="#сценарии-когда-установка-двух-автоматов-оправдана">Сценарии, когда установка двух автоматов оправдана</a></li><li><a href="#опасности-и-риски-при-последовательном-соединении">Опасности и риски при последовательном соединении</a></li><li><a href="#правильная-схема-подключения-и-разводка">Правильная схема подключения и разводка</a></li><li><a href="#выбор-оборудования-характеристики-и-бренды">Выбор оборудования: характеристики и бренды</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Вопрос о том, можно ли установить два автоматических выключателя последовательно на одну линию, часто возникает при модернизации старой проводки или переносе розеток в гараже. Владельцы недвижимости ищут способ повысить безопасность или просто использовать имеющиеся запасы комплектующих, не задумываясь о физических процессах, происходящих внутри цепи. Однако электричество не прощает ошибок, и неправильное распределение токовой нагрузки может привести к пожару или выходу из строя дорогостоящей техники.</p>
+
+<p>С технической точки зрения, установка двух защитных устройств на один участок цепи возможна, но она должна подчиняться строгим правилам <strong>селективности</strong>. Если просто соединить два одинаковых автомата последовательно, вы не получите двойную защиту, а лишь создадите точку непредсказуемого отказа. В лучшем случае будет выбивать тот прибор, который сработает быстрее из-за производственного разброса характеристик, в худшем — оба не сработают вовремя, и проводка начнет плавиться.</p>
+
+<p>В данной статье мы разберем, в каких случаях такая схема оправдана, а когда она является грубым нарушением норм. Мы рассмотрим физические свойства <em>тепловых</em> и <em>электромагнитных</em> расцепителей, чтобы вы понимали, как именно происходит защита. Также будет затронута тема <mark>токоограничения</mark> — ключевого параметра, который часто игнорируется при сборке щитов в частных домах.</p>
+
+<h2 id="принципы-работы-автоматического-выключателя">Принципы работы автоматического выключателя</h2>
+
+<p>Чтобы понять, почему два автомата на одной линии ведут себя непредсказуемо, нужно вспомнить их внутреннее устройство. Любой современный модульный автомат состоит из двух независимых механизмов защиты. Первый — это <strong>тепловой расцепитель</strong>, представляющий собой биметаллическую пластину, которая изгибается при длительном превышении номинального тока. Именно он защищает кабель от перегрузки.</p>
+
+<p>Второй механизм — <strong>электромагнитный расцепитель</strong>. Это катушка, которая мгновенно реагирует на резкий скачок тока, возникающий при коротком замыкании. Время срабатывания здесь исчисляется миллисекундами. Если вы поставите два устройства последовательно, их внутренние характеристики начнут взаимодействовать друг с другом, создавая сложную систему, поведение которой трудно предугадать без лабораторных тестов.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не полагайтесь на то, что второй автомат станет "резервным". В цепи постоянного последовательного соединения ток одинаков во всех точках, и оба устройства будут греться одинаково, что может привести к ложным срабатываниям из-за нагрева соседних элементов.</p>
+</blockquote>
+
+<p>Особое внимание следует уделить <em>температурной компенсации</em>. Автоматы чувствительны к температуре окружающей среды. Если два прибора плотно прижаты друг к другу в щите, они будут взаимно нагревать соседей. Это приведет к тому, что тепловой расцепитель сработает при токе меньшем, чем его номинал, особенно в жаркую погоду или в тесном металлическом боксе.</p>
+
+<h2 id="проблема-селективности-защиты">Проблема селективности защиты</h2>
+
+<p>Главным камнем преткновения при монтаже нескольких защитных устройств является отсутствие <strong>селективности</strong>. В идеальной системе при коротком замыкании должен отключаться только тот автомат, который стоит ближе всего к аварийному участку. Остальная часть сети должна оставаться под напряжением. Когда на одной линии стоят два одинаковых автомата, например, оба номиналом 16А с характеристикой "C", селективность практически отсутствует.</p>
+
+<p>При возникновении сверхтока оба расцепителя начнут отсчет времени до срабатывания одновременно. Кто отключится первым — вопрос случайности, зависящий от конкретного экземпляра устройства, его степени износа и текущей температуры. Это создает ситуацию неопределенности, когда при ремонте электрик не знает, какой именно участок обесточен, если маркировка нечитаема.</p>
+
+<div class="pb-poll" id="poll-81b351d4"><div class="pb-poll-question">📊 Какая у вас сейчас стоит защита на линии розеток?</div><div class="pb-poll-option" data-poll="81b351d4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Один автомат</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="81b351d4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Два последовательно</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="81b351d4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Дифавтомат</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="81b351d4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю / Не помню</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<ul>
+<li>🔌 <strong>Полная селективность</strong> — выключение только поврежденного участка (идеальный вариант, достижимый при разной номинации).</li>
+<li>⚡ <strong>Частичная селективность</strong> — выключение гарантировано только до определенного тока перегрузки.</li>
+<li>🚫 <strong>Отсутствие селективности</strong> — хаотичное отключение любого из аппаратов или обоих сразу.</li>
+</ul>
+
+<p>Для обеспечения селективности необходимо, чтобы вышестоящий автомат (вводной или групповой) имел номинал значительно выше нижестоящего. Например, связка 25А + 16А будет работать корректно: при перегрузке в 20А сработает только меньший автомат. Но связка 16А + 16А на одной линии — это деньги на ветер и лишние точки сопротивления в цепи.</p>
+
+<h2 id="сценарии-когда-установка-двух-автоматов-оправдана">Сценарии, когда установка двух автоматов оправдана</h2>
+
+<p>Несмотря на вышесказанное, существуют ситуации, когда использование двух коммутационных аппаратов на одной линии является технически грамотным решением. Чаще всего это касается разделения функций: один аппарат служит для защиты, а второй — для коммутации или специфического контроля. Например, в схемах с <em>независимым расцепителем</em> или реле напряжения.</p>
+
+<p>Частый случай — использование одного автомата как вводного рубильника для конкретной группы потребителей, а второго — как непосредственной защиты линии. Хотя ПУЭ не требует обязательного разрыва цепи перед автоматом, наличие видимого разрыва (которым является выключенный автомат) облегчает обслуживание. Однако для этой цели лучше использовать <strong>рубильники</strong> или выключатели нагрузки, а не автоматы защиты.</p>
+
+<details class="pb-accordion"><summary>Можно ли использовать автомат как выключатель света?</summary><div class="pb-accordion-body"><p>Технически автоматический выключатель может размыкать цепь под нагрузкой, но его ресурс на количество циклов включения/выключения ограничен (обычно 4-20 тысяч циклов). Для частой коммутации освещения предназначены выключатели нагрузки или импульсные реле. Использование автомата в качестве выключателя света приведет к быстрому износу контактов и залипанию.</p></div></details>
+
+<p>Еще один легитимный сценарий — каскадное подключение, где первый автомат имеет высокий номинал и стоит в труднодоступном месте (например, на столбе), а второй, с меньшим номиналом, установлен внутри дома для защиты внутренней проводки. Здесь важна разница в номиналах минимум в одну ступень (например, 25А на улице и 16А в доме).</p>
+
+<h2 id="опасности-и-риски-при-последовательном-соединении">Опасности и риски при последовательном соединении</h2>
+
+<p>Игнорирование правил монтажа может привести к серьезным последствиям. Одним из главных рисков является <strong>увеличение переходного сопротивления</strong>. Каждое соединение — это потенциально слабое место. Два автомата вместо одного означают лишние контакты, лишние винты, которые нужно протягивать, и лишние точки, где может возникнуть искрение или нагрев.</p>
+
+<p>Также стоит упомянуть о проблеме <em>предельной отключающей способности</em>. Если через два последовательно соединенных автомата пройдет ток короткого замыкания, близкий к предельному значению, дугогасительные камеры обоих устройств могут не справиться с энергией дуги. Это может привести к взрыву модульного корпуса и пожару внутри щитовой.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Один автомат</th>
+<th>Два автомата (одинаковые)</th>
+<th>Риск</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сопротивление цепи</td>
+<td>Нормативное</td>
+<td>Удвоенное</td>
+<td>Нагрев контактов</td>
+</tr>
+<tr>
+<td>Вероятность отказа</td>
+<td>Базовая</td>
+<td>Возрастает</td>
+<td>Не сработает ни один</td>
+</tr>
+<tr>
+<td>Селективность</td>
+<td>Не применимо</td>
+<td>Отсутствует</td>
+<td>Хаотичное отключение</td>
+</tr>
+<tr>
+<td>Занимаемое место</td>
+<td>1 модуль</td>
+<td>2 модуля</td>
+<td>Переполнение щита</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ Внимание: Установка двух автоматов с одинаковым номиналом (например, 16А + 16А) не увеличивает надежность защиты. Напротив, это снижает общую надежность системы из-за удвоения количества механических элементов, которые могут выйти из строя.</p>
+</blockquote>
+
+<h2 id="правильная-схема-подключения-и-разводка">Правильная схема подключения и разводка</h2>
+
+<p>Если вы все же пришли к выводу, что вам необходима двухступенчатая защита (что разумно для разделения зон ответственности), схема должна строиться по принципу иерархии. Вводной автомат должен иметь номинал больше или равный сумме номиналов нижестоящих, но с учетом коэффициента одновременности. Для одной линии правило простое: верхний автомат ставится с большим номиналом.</p>
+
+<p>Для подключения используйте медный провод сечением, соответствующим току верхнего автомата. Соединение между автоматами выполняйте короткой перемычкой или гребенчатой шиной, чтобы минимизировать сопротивление. Важно обеспечить надежный контакт, так как плохая затяжка винта на первом автомате приведет к нагреву всей конструкции.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед включением</h4><label class="check-item"><input type="checkbox"><span>Затяжка всех винтовых соединений</span></label><label class="check-item"><input type="checkbox"><span>Визуальный осмотр на отсутствие сколов</span></label><label class="check-item"><input type="checkbox"><span>Замер сопротивления изоляции</span></label><label class="check-item"><input type="checkbox"><span>Проверка работы расцепителя кнопкой "Тест" (если есть)</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>При монтаже в щите оставляйте пространство для циркуляции воздуха. Плотная установка нескольких рядов автоматов приводит к тепловому влиянию друг на друга. В некоторых случаях производители рекомендуют снижать номинальный ток (дератировать) при плотной установке, что указано в техническом паспорте изделия.</p>
+
+<h2 id="выбор-оборудования-характеристики-и-бренды">Выбор оборудования: характеристики и бренды</h2>
+
+<p>При сборке щита, где планируется каскадное подключение, критически важно использовать автоматы одной серии и желательно одного производителя. Разные линейки даже одного бренда могут иметь различия в время-токовых характеристиках. Например, <em>характеристика C</em> у одного бренда может срабатывать быстрее, чем у другого.</p>
+
+<p>Обращайте внимание на класс токоограничения. Для бытовой сети оптимальным считается 2-й или 3-й класс. Если вы ставите два автомата, убедитесь, что оба имеют высокий класс токоограничения, чтобы минимизировать воздействие тока КЗ на проводку.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При покупке автоматов обращайте внимание на дату производства. Старые устройства, пролежавшие на складе более 10 лет, могут иметь высохшую смазку в механизме, что повлияет на скорость срабатывания.</p></aside>
+
+<p>Не экономьте на коммутационных элементах. Дешевые китайские аналоги часто имеют реальный ток срабатывания, отличающийся от номинала на 20-30%. В каскаде из двух таких устройств непредсказуемость поведения системы возрастает многократно.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Золотое правило: на одной линии может стоять много автоматов, но защищать её будет только тот, у которого самый маленький номинал. Все остальные должны быть либо рубильниками, либо иметь больший номинал для обеспечения селективности.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли поставить два автомата 16А вместо одного 32А?</summary>
+<p>Нет, нельзя. Два последовательно соединенных автомата по 16А не дадут суммарный ток 32А. Через них будет проходить тот же ток, и сработают они при 16А (или чуть выше из-за нагрева). Чтобы получить 32А, нужен один автомат соответствующего номинала и кабель сечением 6 мм².</p>
+</details>
+
+<details>
+<summary>Зачем ставят автомат и УЗО на одну линию?</summary>
+<p>Это стандартная и правильная схема. Автомат защищает кабель от перегрузки и короткого замыкания (токовая защита), а УЗО защищает человека от утечки тока (дифференциальная защита). Они выполняют разные функции и дополняют друг друга.</p>
+</details>
+
+<details>
+<summary>Сработает ли первый автомат, если второй уже неисправен?</summary>
+<p>Не обязательно. Если второй автомат "залип" в замкнутом состоянии или его контакты сварились, ток короткого замыкания пойдет через него. Первый автомат сработает только если ток превысит его уставку. Однако надежность такой связки крайне низка.</p>
+</details>
+
+<details>
+<summary>Как проверить селективность двух автоматов дома?</summary>
+<p>Полноценную проверку можно провести только на специальном стенде с нагрузочным тестером. В домашних условиях можно лишь убедиться, что при кратковременной перегрузке (включении мощного прибора) выбивает нижний автомат, но это не гарантирует селективность при коротком замыкании.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/g/ga/garazh-na-2-mashiny-s-podemnikom.html" class="pb-related-card">
+                <span class="pb-related-title">Гараж на 2 машины с подъемником: проект, размеры, чертежи</span>
+                <span class="pb-related-desc">Как построить гараж на 2 машины с подъемником? Расчет габаритов, выбор оборудования, усиление фундам</span>
+            </a><a href="/articles/n/na/nakladki-na-petli-dverej.html" class="pb-related-card">
+                <span class="pb-related-title">Накладки на петли дверей: защита, реставрация и выбор</span>
+                <span class="pb-related-desc">Как выбрать и установить накладки на петли дверей? Обзор материалов, инструкция по монтажу и советы </span>
+            </a><a href="/articles/s/st/stroitelstvo-garazha-iz-kirpicha.html" class="pb-related-card">
+                <span class="pb-related-title">Строительство гаража из кирпича: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Как построить кирпичный гараж своими руками: выбор материалов, фундамент, кладка, кровля и утепление</span>
+            </a><a href="/articles/p/pe/perekryt-kryshu-myagkoj-krovlej.html" class="pb-related-card">
+                <span class="pb-related-title">Перекрыть крышу мягкой кровлей: технологии, цены, монтаж</span>
+                <span class="pb-related-desc">Как правильно перекрыть крышу мягкой кровлью? Подробная инструкция по укладке битумной черепицы, выб</span>
+            </a><a href="/articles/k/ka/kak-postavit-garazh-na-kadastrovyj-uchet-v-garazhnom-kooperative.html" class="pb-related-card">
+                <span class="pb-related-title">Гараж в кооперативе: пошаговая инструкция по кадастровому учету 2026</span>
+                <span class="pb-related-desc">Как поставить гараж на кадастровый учет в ГСК? Полный гид по сбору документов, техплану и регистраци</span>
+            </a><a href="/articles/p/pa/paveletskij-vokzal-besplatnaya-parkovka.html" class="pb-related-card">
+                <span class="pb-related-title">Бесплатная парковка у Павелецкого вокзала: правила и лайфхаки 2026</span>
+                <span class="pb-related-desc">Где найти бесплатную парковку рядом с Павелецким вокзалом в Москве? Актуальные зоны, ограничения и с</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

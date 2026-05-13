@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как работала Энигма: устройство шифровальной машины — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор принципов работы Энигмы: роторы, коммутационная панель, электрическая схема. Узнайте, как создавались и ломались коды.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-rabotala-mashina-enigma.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работала Энигма: устройство шифровальной машины">
+    <meta property="og:description" content="Подробный разбор принципов работы Энигмы: роторы, коммутационная панель, электрическая схема. Узнайте, как создавались и ломались коды.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/obuchenie-i-testy/">Обучение и Тесты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работала Энигма: устройство шифровальной машины</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#конструкция-роторов-и-электрическая-схема">Конструкция роторов и электрическая схема</a></li><li><a href="#роль-коммутационной-панели-steckerbrett">Роль коммутационной панели (Steckerbrett)</a></li><li><a href="#алгоритм-шифрования-пошаговый-процесс">Алгоритм шифрования: пошаговый процесс</a></li><li><a href="#настройка-ключей-и-начальное-положение">Настройка ключей и начальное положение</a></li><li><a href="#уязвимости-и-причины-взлома">Уязвимости и причины взлома</a></li><li><a href="#наследие-и-влияние-на-современный-мир">Наследие и влияние на современный мир</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-nakhodit-srednyuyu-skorost-v-fizike.html">Как найти среднюю скорость в физике: формулы и примеры</a></li><li><a href="/articles/k/ka/kak-perevoditsya-s-anglijskogo-na-russkij-horn.html">Как переводится Horn: значение, контекст и примеры</a></li><li><a href="/articles/8/80/80-km-v-chas-v-km-v-minutu.html">80 км/ч в км/мин: точный перевод и формулы</a></li><li><a href="/articles/p/pa/parallelnaya-parkovka-poshagovaya-instruktsiya-na-avtomate.html">Параллельная парковка на автомате: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kategoriya-b-n1-chto-eto-znachit.html">Категория B N1 в правах: что это значит и кому нужна в 2026 году</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как работала машина Энигма: устройство и принципы шифрования</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#конструкция-роторов-и-электрическая-схема">Конструкция роторов и электрическая схема</a></li><li><a href="#роль-коммутационной-панели-steckerbrett">Роль коммутационной панели (Steckerbrett)</a></li><li><a href="#алгоритм-шифрования-пошаговый-процесс">Алгоритм шифрования: пошаговый процесс</a></li><li><a href="#настройка-ключей-и-начальное-положение">Настройка ключей и начальное положение</a></li><li><a href="#уязвимости-и-причины-взлома">Уязвимости и причины взлома</a></li><li><a href="#наследие-и-влияние-на-современный-мир">Наследие и влияние на современный мир</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В истории криптографии мало устройств, которые окутаны такой же плотной завесой тайны и инженерного гения, как <strong>шифровальная машина Энигма</strong>. Созданная в начале XX века, она стала символом защиты информации в годы Второй мировой войны, а её взлом заложил основы современной компьютерной науки. Понимание того, как именно функционировал этот сложный электромеханический аппарат, позволяет оценить масштаб задачи, стоявшей перед криптоаналитиками того времени.</p>
+
+<p>Принцип действия устройства бакируется на <strong>полиалфавитной замене</strong>, реализуемой через цепочку вращающихся дисков. В отличие от простых шифров, где одна буква всегда заменяется на одну и ту же, здесь путь сигнала менялся с каждым нажатием клавиши. Это делало частотный анализ текста практически бесполезным для неподготовленного оператора. Давайте погрузимся в анатомию этого легендарного устройства.</p>
+
+<p>Сердцем механизма являлась система роторов, каждый из которых имел уникальную внутреннюю разводку контактов. Электрический ток, порожденный нажатием клавиши на клавиатуре, проходил через эту сложную систему, меняя свой путь и возвращаясь обратно, зажигая лампочку с зашифрованным символом на панели индикаторов. Именно эта обратная связь позволяла использовать одну и ту же машину как для шифрования, так и для дешифрования сообщений.</p>
+
+<h2 id="конструкция-роторов-и-электрическая-схема">Конструкция роторов и электрическая схема</h2>
+
+<p>Основным элементом, определяющим стойкость шифра, были <strong>роторы</strong> (или колеса). В стандартной армейской версии их было три, в морской — четыре. Каждый ротор представлял собой диск с 26 контактами с каждой стороны, соединенными внутри сложным, но фиксированным образом. При установке в машину они замыкали электрическую цепь, пропуская ток от входа к выходу по уникальному пути.</p>
+
+<p>Ключевой особенностью была возможность вращения. После каждого нажатия клавиши правый ротор поворачивался на одну позицию (1/26 оборота). Это меняло электрическое соединение для следующей буквы. Когда правый ротор совершал полный оборот, он приводил в движение средний ротор, а тот, в свою очередь, при определенном положении запускал левый. Этот механизм напоминал работу автомобильного одометра.</p>
+
+<details class="pb-accordion"><summary>Техническая деталь</summary><div class="pb-accordion-body"><p> почему роторы были съемными?:Съемные роторы позволяли менять их порядок установки ежедневно. Поскольку каждый ротор имел уникальную внутреннюю проводку, изменение последовательности (например, I-II-III вместо III-I-II) кардинально меняло алгоритм шифрования, увеличивая количество комбинаций в разы.</p></div></details>
+
+<p>Электрическая схема работала от батарей или внешнего источника постоянного тока. Ток шел от клавиатуры через входной вал, последовательно проходил через все роторы, достигал рефлектора и возвращался обратно через роторы в обратном порядке, загораясь на лампочке-индикаторе. Важно отметить, что <strong>рефлектор</strong> (Umkehrwalze) был статичным элементом, который замыкал цепь на себя, гарантируя, что буква никогда не шифруется сама в себя.</p>
+
+<h2 id="роль-коммутационной-панели-steckerbrett">Роль коммутационной панели (Steckerbrett)</h2>
+
+<p>Немецкие инженеры понимали, что одной лишь механики роторов может быть недостаточно для защиты от мощных вычислительных машин. Поэтому была внедрена <strong>коммутационная панель</strong>, известная как <em>Steckerbrett</em>. Она располагалась перед роторами и позволяла оператору соединять пары букв кабелями перед подачей сигнала на входную группу.</p>
+
+<p>Если, например, буква "А" была соединена с буквой "Б" на панели, то при нажатии "А" ток сначала превращался в "Б", и только потом шел на роторы. На выходе происходил обратный процесс. Наличие этой панели увеличивало количество возможных начальных конфигураций машины на несколько порядков, делая полный перебор ключей практически невозможным вручную.</p>
+
+<ul>
+<li>🔌 Панель позволяла коммутировать до 13 пар букв одновременно, оставляя остальные 0-10 букв незакоммутрированными.</li>
+<li>🔌 Кабели были двусторонними: если "А" соединена с "Б", то "Б" автоматически становится "А" при обратном ходе.</li>
+<li>🔌 Ежедневные инструкции по использованию панели (Steckerplan) менялись каждый день, что требовало от операторов высокой дисциплины.</li>
+</ul>
+
+<p>Именно <strong>Steckerbrett</strong> стала главным препятствием для польских и британских криптоаналитиков в начале войны. Без учета коммутации дешифровка была бы делом нескольких часов, но с ней задача усложнилась экспоненциально. Операторы должны были внимательно следить за правильностью подключения кабелей согласно_daily_ключам_, так как одна ошибка делала сообщение нечитаемым для получателя.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При изучении схемы Энигмы помните: коммутационная панель работала ДО роторов и ПОСЛЕ них (на обратном пути). Это создавало двойной слой перестановки, который был критически важен для безопасности.</p></aside>
+
+<h2 id="алгоритм-шифрования-пошаговый-процесс">Алгоритм шифрования: пошаговый процесс</h2>
+
+<p>Процесс превращения открытого текста в шифрограмму был полностью электромеханическим и происходил мгновенно. Оператор садился за машину, проверял правильность установки роторов и положение колец, а также подключение штекеров на панели. После подготовки начиналась сама магия криптографии.</p>
+
+<p>Когда палец оператора касался клавиши, например, буквы "К", замыкалась электрическая цепь. Ток устремлялся через панель коммутации, затем пробегал через три (или четыре) вращающихся ротора, ударялся о рефлектор и возвращался обратно по той же траектории, но в обратном направлении. В итоге загоралась лампочка, скажем, "Х".</p>
+
+<p>Сразу после этого, до того как оператор отпускал клавишу или нажимал следующую, механика машины срабатывала, проворачивая роторы. Это означало, что даже если оператор нажмет "К" еще раз через секунду, загорится уже совершенно другая буква, так как электрический путь внутри роторов сместился. <strong>Полиалфавитность</strong> достигалась именно за счет этого постоянного изменения состояния системы.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка готовности Энигмы к работе</h4><label class="check-item"><input type="checkbox"><span>Проверка заряда батарей или подключения питания</span></label><label class="check-item"><input type="checkbox"><span>Сверка порядка роторов с ежедневной таблицей</span></label><label class="check-item"><input type="checkbox"><span>Установка начального положения колец (Ringstellung)</span></label><label class="check-item"><input type="checkbox"><span>Проверка соединений на коммутационной панели</span></label><label class="check-item"><input type="checkbox"><span>Тестовое шифрование контрольной фразы</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Важно понимать, что машина не печатала текст на бумаге. Оператор должен был записывать загорающиеся буквы вручную на бланк телеграммы. Получатель сообщения, настроивший свою машину идентичным образом (те же роторы, тот же порядок, те же настройки колец и панели), вводил полученную шифрограмму и видел, как загораются буквы исходного текста.</p>
+
+<h2 id="настройка-ключей-и-начальное-положение">Настройка ключей и начальное положение</h2>
+
+<p>Безопасность системы зависела не только от устройства, но и от процедуры установки ключей. Ежедневно операторы получали таблицы, в которых указывались параметры на текущие сутки. Эти параметры включали порядок роторов, положение колец на них и схему коммутации.</p>
+
+<p>Однако, для каждого отдельного сообщения устанавливалось уникальное <strong>начальное положение</strong> (Grundstellung). Чтобы передать это положение получателю без его раскрытия, немцы использовали сложный протокол. Сначала шифровалось случайное трехбуквенное сообщение, затем оно шифровалось повторно. Получатель дешифровывал первые три буквы, устанавливал машину в это положение и читал основной текст.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр настройки</th>
+<th>Описание</th>
+<th>Частота смены</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Walzenlage (Порядок роторов)</td>
+<td>Выбор и последовательность 3 из 5 доступных роторов</td>
+<td>Ежедневно (иногда реже)</td>
+</tr>
+<tr>
+<td>Ringstellung (Кольца)</td>
+<td>Смещение алфавитного кольца относительно внутренней проводки</td>
+<td>Ежедневно</td>
+</tr>
+<tr>
+<td>Steckerverbindungen (Панель)</td>
+<td>Пары соединенных букв на коммутационной доске</td>
+<td>Ежедневно</td>
+</tr>
+<tr>
+<td>Grundstellung (Старт)</td>
+<td>Начальное видимое положение роторов для сообщения</td>
+<td>Каждое сообщение</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Ошибка в установке хотя бы одного параметра, например, неверное положение кольца на роторе, приводила к тому, что весь текст превращался в бессмысленный набор символов. <strong>Синхронизация</strong> отправителя и получателя была абсолютным требованием. Именно эта зависимость от человеческого фактора часто становилась слабым звеном в защите.</p>
+
+<div class="pb-poll" id="poll-283f033d"><div class="pb-poll-question">📊 Что, на ваш взгляд, было сложнее всего взломать в Энигме?</div><div class="pb-poll-option" data-poll="283f033d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Постоянная смена роторов</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="283f033d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Коммутационная панель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="283f033d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Ежедневные ключи</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="283f033d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Человеческий фактор и ошибки операторов</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="уязвимости-и-причины-взлома">Уязвимости и причины взлома</h2>
+
+<p>Несмотря на кажущуюся несокрушимость, машина <em>Энигма</em> имела ряд конструктивных и procedural weaknesses. Главной логической уязвимостью был рефлектор. Из-за его конструкции буква "А" никогда не могла быть зашифрована как "А". Это казалось мелочью, но для криптоаналитиков из Блетчли-Парка это стало мощнейшим инструментом отсечения неверных вариантов перебора.</p>
+
+<p>Кроме того, немцы часто использовали шаблонные фразы в начале и конце сообщений (погодные сводки, приветствия "Heil Hitler", подписи), что позволяло применять метод "известного открытого текста". Если криптоаналитик предполагал, что в начале сообщения стоит слово "Wetter" (погода), он мог проверить, приводит ли это к противоречию с правилом "буква не шифруется сама в себя".</p>
+
+<blockquote>
+<p>⚠️ Внимание: Самой большой уязвимостью часто становилась не математика, а лень или беспечность операторов. Использование простых комбинаций вроде "AAA" или "123" в качестве начального положения роторов, а также повторение ключей сообщений, значительно облегчали работу дешифровальщикам.</p>
+</blockquote>
+
+<p>Британцам во главе с Аланом Тьюрингом удалось создать электромеханические машины "Бомба", которые автоматизировали процесс поиска ключей. Они моделировали работу нескольких Энигм одновременно, быстро перебирая варианты и отбрасывая те, которые приводили к логическим противоречиям (например, когда буква шифровалась сама в себя). Это сократило время дешифровки с недель до часов.</p>
+
+<h2 id="наследие-и-влияние-на-современный-мир">Наследие и влияние на современный мир</h2>
+
+<p>История Энигмы — это не просто рассказ о войне, это фундамент современной информатики. Борьба шифра и кода породила необходимость в автоматизации вычислений, что привело к созданию первых программируемых электронных компьютеров, таких как <strong>Colossus</strong>. Принципы, заложенные в борьбе с Энигмой, лежат в основе современных протоколов безопасности.</p>
+
+<p>Сегодня мы понимаем, что безопасность системы не должна зависеть от секретности её устройства (принцип Керкгоффса), а только от секретности ключа. Энигма была сложной, но её алгоритм стал известен союзникам благодаря захваченным машинам и документам. Тем не менее, даже зная устройство, прочитать сообщения без ключей оставалось невероятно сложной задачей.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Энигма доказала, что даже самая совершенная механическая защита уязвима перед математическим анализом и вычислительной мощью. Переход от механики к электронике стал неизбежным следствием этой гонки вооружений.</p></aside>
+
+<p>Изучение того, как работала эта машина, дает нам ценные уроки о балансе между удобством использования и безопасностью. Сложные процедуры настройки, необходимые для защиты, часто игнорировались пользователями, что и стало одной из причин победы союзников в информационной войне. Машина осталась в музеях, но её дух живет в каждом зашифрованном сообщении в вашем смартфоне.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли было использовать Энигму для дешифровки без знания ключей?</summary>
+<p>Нет, без точного знания ежедневных настроек (порядок роторов, кольца, панель) и начального положения для конкретного сообщения, восстановить текст было практически невозможно вручную. Машина требовала полной синхронизации параметров отправителя и получателя.</p>
+</details>
+
+<details>
+<summary>Почему буква не могла быть зашифрована сама в себя?</summary>
+<p>Это было следствием конструкции рефлектора (Umkehrwalze). Ток всегда проходил через роторы туда и обратно, но никогда не мог вернуться по тому же контакту, с которого вышел. Это свойство стало главной "ахиллесовой пятой" для криптоаналитиков.</p>
+</details>
+
+<details>
+<summary>Сколько существовало вариантов машины Энигма?</summary>
+<p>Существовало множество модификаций: коммерческие версии, армейские (Wehrmacht), люфтваффе, кригсмарине (военно-морские) с дополнительным четвертым ротором, а также версии для абвера и дипломатической связи. Каждая имела свои особенности конструкции и протоколы.</p>
+</details>
+
+<details>
+<summary>Кто впервые взломал Энигму?</summary>
+<p>Первые успешные методы взлома были разработаны польскими математикаками (Рейевский, Ружицкий, Зыгальский) еще до войны. Они создали первые машины "Бомба". Позже, в Блетчли-Парке, Алан Тьюринг и Гордон Уэлчман усовершенствовали эти методы, создав более мощные электромеханические устройства.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-nakhodit-srednyuyu-skorost-v-fizike.html" class="pb-related-card">
+                <span class="pb-related-title">Как найти среднюю скорость в физике: формулы и примеры</span>
+                <span class="pb-related-desc">Пошаговое руководство по расчёту средней скорости: формулы, типичные ошибки, примеры задач с решения</span>
+            </a><a href="/articles/k/ka/kak-perevoditsya-s-anglijskogo-na-russkij-horn.html" class="pb-related-card">
+                <span class="pb-related-title">Как переводится Horn: значение, контекст и примеры</span>
+                <span class="pb-related-desc">Подробный разбор слова Horn: перевод с английского, различия между рогом, гудком и клаксоном. Таблиц</span>
+            </a><a href="/articles/8/80/80-km-v-chas-v-km-v-minutu.html" class="pb-related-card">
+                <span class="pb-related-title">80 км/ч в км/мин: точный перевод и формулы</span>
+                <span class="pb-related-desc">Как перевести 80 км в час в км в минуту? Подробный разбор формулы, таблица скоростей, калькуляция дл</span>
+            </a><a href="/articles/p/pa/parallelnaya-parkovka-poshagovaya-instruktsiya-na-avtomate.html" class="pb-related-card">
+                <span class="pb-related-title">Параллельная парковка на автомате: пошаговая инструкция</span>
+                <span class="pb-related-desc">Идеальная параллельная парковка на АКПП: пошаговая инструкция, техника работы педалями, советы нович</span>
+            </a><a href="/articles/k/ka/kategoriya-b-n1-chto-eto-znachit.html" class="pb-related-card">
+                <span class="pb-related-title">Категория B N1 в правах: что это значит и кому нужна в 2026 году</span>
+                <span class="pb-related-desc">Разбираемся, что означает категория B N1 в водительском удостоверении: какие машины можно водить, че</span>
+            </a><a href="/articles/k/kt/kto-napisal-starika-khottabycha-avtor.html" class="pb-related-card">
+                <span class="pb-related-title">Кто написал Старика Хоттабыча: автор и история сказки</span>
+                <span class="pb-related-desc">Узнайте, кто написал Старика Хоттабыча. Подробно об авторе Лазаре Лагине, истории создания книги и е</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

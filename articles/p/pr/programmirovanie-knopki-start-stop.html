@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Программирование кнопки Старт-Стоп: установка и настройка — Авто Справочник</title>
+    <meta name="description" content="Подробная инструкция по программированию кнопки Старт-Стоп. Схемы подключения, настройка иммобилайзера, диагностика ошибок и секреты работы CAN-шины.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pr/programmirovanie-knopki-start-stop.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Программирование кнопки Старт-Стоп: установка и настройка">
+    <meta property="og:description" content="Подробная инструкция по программированию кнопки Старт-Стоп. Схемы подключения, настройка иммобилайзера, диагностика ошибок и секреты работы CAN-шины.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Программирование кнопки Старт-Стоп: установка и настройка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-и-архитектура-системы-запуска">Принцип работы и архитектура системы запуска</a></li><li><a href="#необходимое-оборудование-и-подготовка-к-работе">Необходимое оборудование и подготовка к работе</a></li><li><a href="#алгоритм-подключения-и-настройка-модулей">Алгоритм подключения и настройка модулей</a></li><li><a href="#настройка-обхода-иммобилайзера-и-синхронизация">Настройка обхода иммобилайзера и синхронизация</a></li><li><a href="#диагностика-типовых-ошибок-при-запуске">Диагностика типовых ошибок при запуске</a></li><li><a href="#секреты-успешной-интеграции-в-сложные-системы">Секреты успешной интеграции в сложные системы</a></li><li><a href="#проверка-работоспособности-и-финальная-калибровка">Проверка работоспособности и финальная калибровка</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/mi/migaet-znachok-mashina-i-zamok.html">Мигает значок машина и замок на панели: причины и решения 2026</a></li><li><a href="/articles/s/sh/shim-kontroller-dlya-chego-nuzhen.html">ШИМ контроллер: назначение, устройство и принцип работы</a></li><li><a href="/articles/k/ka/kak-vybrat-provoda-dlya-prikurivaniya.html">Как выбрать провода для прикуривания автомобиля: экспертный гайд 2026</a></li><li><a href="/articles/k/ka/kak-vklyuchit-vebasto-v-mashine.html">Как включить Вебасто в машине: пошаговая инструкция 2026</a></li><li><a href="/articles/p/pr/provod-dlya-zaryadki-elektromobilya.html">Как выбрать провод для зарядки электромобиля: типы, мощность, безопасность</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Программирование кнопки Старт-Стоп: полное руководство по установке</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-и-архитектура-системы-запуска">Принцип работы и архитектура системы запуска</a></li><li><a href="#необходимое-оборудование-и-подготовка-к-работе">Необходимое оборудование и подготовка к работе</a></li><li><a href="#алгоритм-подключения-и-настройка-модулей">Алгоритм подключения и настройка модулей</a></li><li><a href="#настройка-обхода-иммобилайзера-и-синхронизация">Настройка обхода иммобилайзера и синхронизация</a></li><li><a href="#диагностика-типовых-ошибок-при-запуске">Диагностика типовых ошибок при запуске</a></li><li><a href="#секреты-успешной-интеграции-в-сложные-системы">Секреты успешной интеграции в сложные системы</a></li><li><a href="#проверка-работоспособности-и-финальная-калибровка">Проверка работоспособности и финальная калибровка</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный автомобиль невозможно представить без системы запуска двигателя с кнопки. Это не просто элемент комфорта, заменяющий традиционный поворот ключа, а сложный программно-аппаратный комплекс, требующий точной настройки при установке. <strong>Программирование кнопки Старт-Стоп</strong> становится обязательным этапом, если вы решили внедрить эту функцию в автомобиль, где она не была предусмотрена заводом-изготовителем, или если штатная система начала сбоить.</p>
+<p>В отличие от простого механического замыкания контактов, электронная система управления запуском опрашивает множество датчиков и блоков управления. Ошибки в конфигурации могут привести к тому, что двигатель не заведется, либо, что хуже, автомобиль невозможно будет заглушить. В этой статье мы детально разберем алгоритмы настройки модулей, работу с <em>CAN-шиной</em> и методы обхода штатного иммобилайзера.</p>
+
+<h2 id="принцип-работы-и-архитектура-системы-запуска">Принцип работы и архитектура системы запуска</h2>
+<p>Фундаментальное отличие системы <em>Keyless Go</em> или <em>Push-to-Start</em> от классического зажигания заключается в цифровом обмене данными. Когда вы нажимаете на педаль тормоза и кнопку запуска, сигнал не идет напрямую к стартеру. Сначала запрос обрабатывается блоком комфорта или отдельным модулем <strong>BCM</strong> (Body Control Module). Система считывает метку ключа, проверяет статус педалей и только затем дает команду на включение стартера.</p>
+<p>Важно понимать, что программирование в данном контексте — это не всегда написание кода с нуля. Чаще всего речь идет о правильной конфигурации универсальных модулей обхода или адаптации штатных параметров через диагностический интерфейс. <strong>CAN-шина</strong> передает данные о состоянии автомобиля со скоростью до 1 Мбит/с, и любой сбой в синхронизации приводит к отказу запуска.</p>
+<blockquote>⚠️ Внимание: Прямое подключение кнопки к цепи стартера без использования контроллера может вызвать короткое замыкание или выход из строя бортовой электроники. Всегда используйте промежуточные реле или специализированные модули.</blockquote>
+<p>Существует два основных типа систем: аналоговые, где управление происходит через изменение сопротивления цепи, и цифровые, завязанные на обмене пакетами данных. Для современных автомобилей актуальна именно цифровая архитектура, требующая эмуляцииPresence-сигнала.</p>
+
+<h2 id="необходимое-оборудование-и-подготовка-к-работе">Необходимое оборудование и подготовка к работе</h2>
+<p>Перед началом любых работ по интеграции системы запуска необходимо подготовить специализированный инструментарий. Базовым элементом является мультиметр с высоким входным сопротивлением для проверки цепей без внесения помех. Также вам потребуется ноутбук с установленным ПО для программирования контроллеров, например, <em>StarLine</em>, <em>Pandora</em> или универсальные конфигураторы для <strong>CAN-модулей</strong>.</p>
+<p>Не забудьте про паяльное оборудование и качественные расходные материалы. Дешевая изоляция или припой с низким содержанием серебра могут стать причиной окисления контактов и потери сигнала через несколько месяцев эксплуатации. Для работы с салонной проводкой идеально подходят разъемы типа <em>Fast-on</em> или метод пайки с последующей термоусадкой.</p>
+<p>Ниже приведен список оборудования, который обеспечит комфортную и безопасную работу:</p>
+<ul>
+<li>🔌 Универсальный модуль обхода иммобилайзера с поддержкой CAN-шины</li>
+<li>💻 Кабель OBDII для подключения к диагностическому разъему</li>
+<li>🔍 Мультиметр с функцией прозвонки и измерения напряжения</li>
+<li>🛠️ Набор инструментов для аккуратного снятия пластиковых панелей салона</li>
+</ul>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте только медный провод сечением не менее 0.75 мм² для силовых цепей и 0.35 мм² для сигнальных линий, чтобы избежать падения напряжения.</p></aside>
+
+<h2 id="алгоритм-подключения-и-настройка-модулей">Алгоритм подключения и настройка модулей</h2>
+<p>Процесс установки начинается с демонтажа декоративных накладок и получения доступа к блоку управления замками зажигания или непосредственно к кнопке старта, если она уже установлена но не работает. Первым шагом всегда является поиск проводов <strong>ACC</strong> (аксессуары), <em>IGN</em> (зажигание) и <strong>START</strong>. Их местоположение варьируется в зависимости от марки автомобиля.</p>
+<p>После физического подключения проводов необходимо перейти к программной части. Если вы используете универсальный модуль, его нужно "обучить". Это делается путем имитации определенных действий: включения зажигания, нажатия педали тормоза и активации кнопки в строгой последовательности. Тайминги здесь критичны: задержка более 2 секунд между действиями может сбросить процесс обучения.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед программированием</h4><label class="check-item"><input type="checkbox"><span>Найдены силовые провода зажигания</span></label><label class="check-item"><input type="checkbox"><span>Подключен модуль CAN</span></label><label class="check-item"><input type="checkbox"><span>Проверено напряжение бортсети</span></label><label class="check-item"><input type="checkbox"><span>Снят минусовой провод аккумулятора</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<p>При работе с <em>CAN-шиной</em> важно правильно определить пары проводов High и Low. Подключение к ним позволяет модулю "видеть" состояние автомобиля без вмешательства в штатную проводку. Это называется "цифровым подключением" и является наиболее безопасным методом.</p>
+
+<h2 id="настройка-обхода-иммобилайзера-и-синхронизация">Настройка обхода иммобилайзера и синхронизация</h2>
+<p>Самым сложным этапом является обход штатной защиты. Иммобилайзер считывает код с чипа в ключе и сверяет его с блоком двигателя (<em>ECU</em>). При установке кнопки Старт-Стоп ключ часто остается дома, поэтому необходимо эмулировать присутствие чипа. Для этого используются модули <strong>ALCA</strong> или <em>RF-клонировщики</em>.</p>
+<p>Программирование обходчика заключается в считывании данных с оригинального ключа и записи их в память модуля. В некоторых автомобилях (например, <em>VAG</em> группа) требуется онлайн-синхронизация через сервер производителя, что невозможно без специального оборудования. В более простых случаях достаточно статической эмуляции сигнала.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип системы</th>
+<th>Метод обхода</th>
+<th>Сложность</th>
+<th>Необходимое оборудование</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Аналоговая</td>
+<td>Разрыв цепи чипа</td>
+<td>Низкая</td>
+<td>Реле, провода</td>
+</tr>
+<tr>
+<td>Цифровая (CAN)</td>
+<td>Эмуляция диалога</td>
+<td>Средняя</td>
+<td>CAN-модуль</td>
+</tr>
+<tr>
+<td>Защищенная (VAG/BMW)</td>
+<td>Онлайн-синхронизация</td>
+<td>Высокая</td>
+<td>Дилерский софт</td>
+</tr>
+<tr>
+<td>Bluetooth/Смартфон</td>
+<td>Мобильное приложение</td>
+<td>Средняя</td>
+<td>GSM-модуль</td>
+</tr>
+</tbody>
+</table></div>
+<p>Ошибки при настройке этого узла приводят к тому, что двигатель заводится и сразу глохнет. Это защитная реакция системы. В таких случаях необходимо перепроверить подключение антенны считывателя вокруг замка зажигания или качество эмуляции сигнала.</p>
+
+<h2 id="диагностика-типовых-ошибок-при-запуске">Диагностика типовых ошибок при запуске</h2>
+<p>Даже идеально выполненная схема подключения может дать сбой из-за программных конфликтов. Частой проблемой является "дребезг" контактов кнопки или неправильная длительность импульса запуска. Стартер должен крутить двигатель определенное время, обычно от 1 до 3 секунд, после чего модуль должен отключить питание, как только обороты двигателя превысят <strong>500 об/мин</strong>.</p>
+<p>Если стартер не отключается после запуска, это критическая ошибка, грозящая разрушением бендикса и венца маховика. В настройках модуля необходимо увеличить чувствительность контроля оборотов или переключить метод контроля с бортового напряжения на тахометр. <mark>Контроль по тахометру (RPM) является наиболее точным способом определения успешного запуска двигателя.</mark></p>
+<details class="pb-accordion"><summary>Что делать, если кнопка не загорается?</summary><div class="pb-accordion-body"><p>Отсутствие подсветки кнопки часто указывает на неправильное подключение к габаритам или ACC. Проверьте наличие +12В на соответствующем контакте кнопки при включенном зажигании.</p></div></details>
+<p>Также стоит обратить внимание на напряжение в бортовой сети. Если при попытке запуска voltage падает ниже 9 Вольт, модуль может расценивать это как разряд аккумулятора и блокировать запуск, выдавая ошибку на индикатор.</p>
+
+<div class="pb-poll" id="poll-618045b4"><div class="pb-poll-question">📊 С каким типом системы запуска вы сталкивались?</div><div class="pb-poll-option" data-poll="618045b4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Только ключ-брелок</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="618045b4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Кнопка с ключом в руке</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="618045b4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Полный Keyless</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="618045b4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю / Другое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="секреты-успешной-интеграции-в-сложные-системы">Секреты успешной интеграции в сложные системы</h2>
+<p>В автомобилях премиум-класса, таких как <em>Mercedes-Benz</em> или <em>BMW</em>, простая подача сигнала на стартер недостаточна. Система может требовать подтверждения от педали тормоза, которая также имеет электронный датчик хода. Программирование педали часто требует подключения к ее сигнальному проводу или использования имитатора нажатия.</p>
+<p>Важным аспектом является сохранение гарантии и целостности штатных систем. Использование <strong>CAN-фильтров</strong> позволяет избежать появления ошибок на приборной панели ("Check Engine" или "Service Required"). Фильтр сглаживает скачки напряжения, которые возникают в момент работы стартера, не давая им проникнуть в цифровую сеть.</p>
+<ul>
+<li>🚗 Всегда делайте резервную копию конфигурации штатных блоков перед вмешательством.</li>
+<li>⚡ Используйте отдельные предохранители для каждого нового узла системы запуска.</li>
+<li>📡 Экранируйте провода, идущие к антенным модулям, чтобы избежать помех от радиостанций.</li>
+</ul>
+<blockquote>⚠️ Внимание: При работе с подушками безопасности (SRS) категорически запрещено прокладывать новые провода в жгутах, идущих к пиропатронам. Это может привести к ложному срабатыванию или отказу системы.</blockquote>
+
+<h2 id="проверка-работоспособности-и-финальная-калибровка">Проверка работоспособности и финальная калибровка</h2>
+<p>После завершения всех монтажных и программных работ следует этап тщательной проверки. Не спешите собирать салон. Проведите серию тестовых запусков в разных режимах: на холодную, на горячую, с включенными потребителями энергии (фары, печка). Обратите внимание на время отклика системы.</p>
+<p>Финальная калибровка может включать в себя настройку времени удержания кнопки. В некоторых системах короткое нажатие включает зажигание, а длинное — запускает двигатель. Эти параметры задаются в программном обеспечении модуля и могут быть адаптированы под привычки владельца.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Успешная установка кнопки Старт-Стоп определяется не только фактом запуска двигателя, но и стабильной работой всех электронных систем автомобиля в процессе эксплуатации.</p></aside>
+<p>Регулярно проверяйте состояние соединений в первые недели эксплуатации. Вибрация и перепады температур могут ослабить контакты, поэтому повторная протяжка или проверка пайки через месяц будет не лишней мерой профилактики.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+<details>
+<summary>Можно ли установить кнопку Старт-Стоп на автомобиль без ключа-брелока с чипом?</summary>
+<p>Да, это возможно, но потребует установки дополнительного электронного замка зажигания или полной замены ЭБУ двигателя на универсальный, что является крайне сложной и дорогой процедурой. В большинстве случаев проще сохранить штатный ключ.</p>
+</details>
+<details>
+<summary>Снизится ли безопасность автомобиля после установки такой системы?</summary>
+<p>При использовании качественных модулей с шифрованным каналом связи и правильном монтаже уровень безопасности не снижается. Однако дешевые китайские аналоги могут иметь уязвимости в коде, позволяющие угонщикам легко обойти защиту.</p>
+</details>
+<details>
+<summary>Что делать, если сел аккумулятор в машине с кнопкой?</summary>
+<p>Большинство систем предусматривают аварийный запуск. Обычно нужно поднести разряженный ключ-брелок непосредственно к кнопке запуска или к специальному месту на рулевой колонке, чтобы считыватель мог считать чип даже при слабом заряде батареи брелока.</p>
+</details>
+<details>
+<summary>Влияет ли кнопка Старт-Стоп на расход топлива?</summary>
+<p>Сама по себе кнопка не влияет на расход. Однако, если система оснащена функцией Auto Start-Stop (заглушение двигателя на светофорах), то экономия топлива может составить от 5% до 10% в городском цикле.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/mi/migaet-znachok-mashina-i-zamok.html" class="pb-related-card">
+                <span class="pb-related-title">Мигает значок машина и замок на панели: причины и решения 2026</span>
+                <span class="pb-related-desc">Разбираемся, почему моргает индикатор автомобиля с замком на приборной панели: от иммобилайзера до н</span>
+            </a><a href="/articles/s/sh/shim-kontroller-dlya-chego-nuzhen.html" class="pb-related-card">
+                <span class="pb-related-title">ШИМ контроллер: назначение, устройство и принцип работы</span>
+                <span class="pb-related-desc">Для чего нужен ШИМ контроллер в электронике и авто? Разбираем устройство, маркировку, причины поломо</span>
+            </a><a href="/articles/k/ka/kak-vybrat-provoda-dlya-prikurivaniya.html" class="pb-related-card">
+                <span class="pb-related-title">Как выбрать провода для прикуривания автомобиля: экспертный гайд 2026</span>
+                <span class="pb-related-desc">Разбираемся, какие провода для прикуривания выбрать: сечение, длина, зажимы, изоляция. Сравниваем бр</span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-vebasto-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить Вебасто в машине: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Подробное руководство по запуску Вебасто: с пульта, таймера, телефона. Разбираем ошибки, особенности</span>
+            </a><a href="/articles/p/pr/provod-dlya-zaryadki-elektromobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Как выбрать провод для зарядки электромобиля: типы, мощность, безопасность</span>
+                <span class="pb-related-desc">Разбираемся в типах кабелей для зарядки электромобилей (Type 1/2, CCS, CHAdeMO), мощности, длине и б</span>
+            </a><a href="/articles/s/sv/svetovye-pribory-na-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">Световые приборы на автомобиле: виды, неисправности и правила</span>
+                <span class="pb-related-desc">Полный обзор автомобильной оптики. Виды фар, лампы, регулировка света, ПДД, причины запотевания и со</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

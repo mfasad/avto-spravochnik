@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Расчет плиты под гараж: пошаговый гид с примерами — Авто Справочник</title>
+    <meta name="description" content="Как правильно рассчитать фундаментную плиту для гаража: нагрузки, толщина, армирование, формулы и таблицы для самостоятельного проектирования.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/r/ra/raschet-plity-pod-garazh.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Расчет плиты под гараж: пошаговый гид с примерами">
+    <meta property="og:description" content="Как правильно рассчитать фундаментную плиту для гаража: нагрузки, толщина, армирование, формулы и таблицы для самостоятельного проектирования.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/garazh-i-strojka/">Гараж и Стройка</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Расчет плиты под гараж: пошаговый гид с примерами</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-плитный-фундамент-лучший-выбор-для-гаража">Почему плитный фундамент — лучший выбор для гаража?</a></li><li><a href="#какие-нагрузки-учитывать-при-расчёте">Какие нагрузки учитывать при расчёте?</a></li><li><a href="#определение-параметров-плиты-толщина-площадь-вес">Определение параметров плиты: толщина, площадь, вес</a></li><li><a href="#расчёт-армирования-диаметр-шаг-количество-стержней">Расчёт армирования: диаметр, шаг, количество стержней</a></li><li><a href="#выбор-бетона-и-расчёт-его-объёма">Выбор бетона и расчёт его объёма</a></li><li><a href="#учёт-грунтовых-условий-и-гидроизоляция">Учёт грунтовых условий и гидроизоляция</a></li><li><a href="#пример-расчёта-плиты-для-гаража-64-м">Пример расчёта плиты для гаража 6×4 м</a></li><li><a href="#частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/st/stantsiya-vysokogo-davleniya-dlya-avtomojki.html">Станция высокого давления для автомойки: выбор и монтаж</a></li><li><a href="/articles/g/ga/garazh-iz-proftruby-svoimi-rukami-chertezhi.html">Гараж из профтрубы своими руками: чертежи, схемы, пошаговая инструкция</a></li><li><a href="/articles/t/tr/truby-dlya-dymokhoda-iz-nerzhavejki-razmery.html">Размеры труб для дымохода из нержавейки: таблица и выбор</a></li><li><a href="/articles/k/ka/kak-obshit-garazh-sajdingom.html">Как обшить гараж сайдингом своими руками: пошаговая инструкция</a></li><li><a href="/articles/b/be/besplatnaya-parkovka-kurskij-vokzal.html">Бесплатная парковка у Курского вокзала 2026: карта, правила, альтернативы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Расчёт монолитной плиты под гараж: формулы, нормативы и практические советы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-плитный-фундамент-лучший-выбор-для-гаража">Почему плитный фундамент — лучший выбор для гаража?</a></li><li><a href="#какие-нагрузки-учитывать-при-расчёте">Какие нагрузки учитывать при расчёте?</a></li><li><a href="#определение-параметров-плиты-толщина-площадь-вес">Определение параметров плиты: толщина, площадь, вес</a></li><li><a href="#расчёт-армирования-диаметр-шаг-количество-стержней">Расчёт армирования: диаметр, шаг, количество стержней</a></li><li><a href="#выбор-бетона-и-расчёт-его-объёма">Выбор бетона и расчёт его объёма</a></li><li><a href="#учёт-грунтовых-условий-и-гидроизоляция">Учёт грунтовых условий и гидроизоляция</a></li><li><a href="#пример-расчёта-плиты-для-гаража-64-м">Пример расчёта плиты для гаража 6×4 м</a></li><li><a href="#частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="почему-плитный-фундамент-лучший-выбор-для-гаража">Почему плитный фундамент — лучший выбор для гаража?</h2>
+
+<p>Монолитная плита под гараж — это универсальное решение, которое подходит для большинства типов грунтов, включая пучинистые и слабые. В отличие от ленточного или столбчатого фундамента, <strong>плита равномерно распределяет нагрузку</strong> от автомобиля, оборудования и самой конструкции, исключая риск просадки или трещин.</p>
+
+<p>Особенно актуален такой фундамент для гаражей с подвалом или смотровой ямой, где требуется высокая устойчивость к деформациям. К тому же, плита одновременно служит полом, что упрощает строительство и сокращает расходы на отделочные работы.</p>
+
+<h2 id="какие-нагрузки-учитывать-при-расчёте">Какие нагрузки учитывать при расчёте?</h2>
+
+<p>Перед тем как приступить к расчётам, необходимо определить <strong>все виды нагрузок</strong>, которые будет воспринимать плита. Они делятся на две категории:</p>
+
+<ul>
+<li>🚗 <strong>Постоянные нагрузки</strong> — вес стен, крыши, перекрытий, а также собственный вес плиты.</li>
+<li>🔧 <strong>Временные нагрузки</strong> — масса автомобиля (или нескольких), оборудования (верстак, инструменты), а также снеговая нагрузка на крышу.</li>
+</ul>
+
+<p>Для точного расчёта используйте нормативные значения из <em>СNiП 2.01.07-85</em> (Нагрузки и воздействия). Например, средний вес легкового автомобиля принимают за <code>1,5–2,5 т</code>, а для грузового — до <code>10 т</code>. Снеговая нагрузка зависит от региона: в средней полосе России это <code>180–240 кг/м²</code>.</p>
+
+<div class="pb-poll" id="poll-89571f4b"><div class="pb-poll-question">📊 Какой тип гаража вы планируете построить?</div><div class="pb-poll-option" data-poll="89571f4b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Легковой (1 машина)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="89571f4b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Грузовой (1 машина)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="89571f4b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Гараж с подвалом</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="89571f4b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Двухъярусный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="89571f4b" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="определение-параметров-плиты-толщина-площадь-вес">Определение параметров плиты: толщина, площадь, вес</h2>
+
+<p><strong>Толщина плиты</strong> — ключевой параметр, который зависит от нагрузки и типа грунта. Для легкового гаража обычно достаточно <code>15–20 см</code>, для грузового или с подвалом — <code>25–30 см</code>. Если грунт слабый (торфяной, глинистый), толщину увеличивают на <code>20–30%</code>.</p>
+
+<p>Площадь плиты должна быть на <code>30–50 см больше</code> габаритов гаража с каждой стороны. Это защитит стены от влаги и предотвратит деформацию при промерзании грунта.</p>
+
+<p>Вес плиты рассчитывается по формуле:</p>
+<p><code>V = S × h</code>, где <code>S</code> — площадь, <code>h</code> — толщина. Затем объём умножают на плотность бетона (<code>2500 кг/м³</code> для стандартного бетона класса <em>B20</em>).</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для гаража с подвалом учтите дополнительную нагрузку от грунта и гидроизоляции — это может увеличить толщину плиты на 5–10 см.</p></aside>
+
+<h2 id="расчёт-армирования-диаметр-шаг-количество-стержней">Расчёт армирования: диаметр, шаг, количество стержней</h2>
+
+<p>Армирование плиты выполняется <strong>двумя слоями арматуры</strong> (верхний и нижний), связанными между собой. Для этого используют <em>рифлёную арматуру</em> класса <em>A500C</em> диаметром <code>12–16 мм</code> в зависимости от нагрузки.</p>
+
+<p>Шаг между стержнями обычно составляет <code>15–20 см</code>. Для гаража стандартных размеров (<code>6×4 м</code>) по длине и ширине потребуется:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr><th>Параметр</th><th>Значение</th></tr>
+</thead>
+<tbody>
+<tr><td>Длина гаража</td><td>6 м</td></tr>
+<tr><td>Ширина гаража</td><td>4 м</td></tr>
+<tr><td>Шаг арматуры</td><td>20 см (0,2 м)</td></tr>
+<tr><td>Количество стержней по длине</td><td>6 / 0,2 = 30 шт.</td></tr>
+<tr><td>Количество стержней по ширине</td><td>4 / 0,2 = 20 шт.</td></tr>
+</tbody>
+</table></div>
+
+<p>Общее количество арматуры для одного слоя: <code>30 × 20 = 600 м</code>. Поскольку слоёв два, итог — <code>1200 м</code>. Не забывайте про <strong>нахлёст</strong> при стыковке стержней (не менее <code>40 диаметров арматуры</code>).</p>
+
+<blockquote>⚠️ Внимание: При использовании арматуры диаметром <code>12 мм</code> нахлёст должен быть не менее <code>48 см</code>. Для диаметра <code>16 мм</code> — <code>64 см</code>.</blockquote>
+
+<h2 id="выбор-бетона-и-расчёт-его-объёма">Выбор бетона и расчёт его объёма</h2>
+
+<p>Для плитного фундамента под гараж рекомендуется бетон класса <em>B20–B25</em> (прочность <code>20–25 МПа</code>). Такой бетон выдерживает нагрузки до <code>200–250 кг/см²</code> и подходит для большинства климатических зон.</p>
+
+<p>Объём бетона рассчитывается по формуле:</p>
+<p><code>V = S × h</code>, где <code>S</code> — площадь плиты, <code>h</code> — её толщина. Например, для гаража <code>6×4 м</code> с толщиной плиты <code>20 см</code>:</p>
+<p><code>V = 6 × 4 × 0,2 = 4,8 м³</code>.</p>
+
+<p>При заказе бетона учитывайте <strong>коэффициент уплотнения</strong> (<code>1,02–1,05</code>), чтобы избежать нехватки материала. То есть заказывайте <code>4,8 × 1,05 ≈ 5,04 м³</code>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к заливке плиты</h4><label class="check-item"><input type="checkbox"><span>Удалить растительный слой грунта</span></label><label class="check-item"><input type="checkbox"><span>Уложить геотекстиль</span></label><label class="check-item"><input type="checkbox"><span>Создать песчаную подушку (20–30 см)</span></label><label class="check-item"><input type="checkbox"><span>Установить опалубку</span></label><label class="check-item"><input type="checkbox"><span>Проверить горизонтальность основания</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="учёт-грунтовых-условий-и-гидроизоляция">Учёт грунтовых условий и гидроизоляция</h2>
+
+<p>Тип грунта напрямую влияет на конструкцию плиты. На <strong>пучинистых грунтах</strong> (глина, суглинок) необходимо:</p>
+<ul>
+<li>🏗️ Увеличить толщину песчаной подушки до <code>30–40 см</code>.</li>
+<li>💧 Уложить дренажную систему по периметру гаража.</li>
+<li>🛡️ Использовать <em>гидроизоляционные мембраны</em> (например, <em>Технониколь</em> или <em>Bitumast</em>).</li>
+</ul>
+
+<p>На <strong>непучинистых грунтах</strong> (песок, гравий) можно ограничиться песчаной подушкой толщиной <code>15–20 см</code> и рулонной гидроизоляцией.</p>
+
+<blockquote>⚠️ Внимание: Если уровень грунтовых вод выше <code>1,5 м</code> от поверхности, обязательно уложите <strong>двойной слой гидроизоляции</strong> и организуйте отвод воды.</blockquote>
+
+<p><details class="pb-accordion"><summary>Почему нельзя игнорировать гидроизоляцию?</summary><div class="pb-accordion-body"><p>Без гидроизоляции влага из грунта проникнет в бетон, что приведёт к коррозии арматуры и разрушению плиты. В холодное время года вода в микротрещинах замерзает и расширяется, ускоряя процесс разрушения.</p></div></details></p>
+
+<h2 id="пример-расчёта-плиты-для-гаража-64-м">Пример расчёта плиты для гаража 6×4 м</h2>
+
+<p>Рассмотрим практический пример для гаража размером <code>6×4 м</code> с легковым автомобилем (<code>2 т</code>) и снеговой нагрузкой <code>200 кг/м²</code>.</p>
+
+<p><strong>1. Нагрузки:</strong></p>
+<ul>
+<li>🚗 Вес автомобиля: <code>2000 кг</code>.</li>
+<li>❄️ Снеговая нагрузка: <code>6 × 4 × 200 = 4800 кг</code>.</li>
+<li>🏠 Вес стен и крыши (приблизительно): <code>6000 кг</code>.</li>
+<li>🪨 Собственный вес плиты (толщина <code>20 см</code>): <code>6 × 4 × 0,2 × 2500 = 12 000 кг</code>.</li>
+</ul>
+<p><strong>Итоговая нагрузка:</strong> <code>2000 + 4800 + 6000 + 12 000 = 24 800 кг</code>.</p>
+
+<p><strong>2. Давление на грунт:</strong></p>
+<p><code>P = 24 800 кг / (6 × 4) = 1033 кг/м²</code>.</p>
+<p>Для большинства грунтов допустимое давление составляет <code>1500–2000 кг/м²</code>, поэтому плита толщиной <code>20 см</code> подходит.</p>
+
+<p><strong>3. Армирование:</strong></p>
+<p>При шаге <code>20 см</code> и диаметре арматуры <code>12 мм</code> потребуется <code>1200 м</code> арматуры (как в разделе выше).</p>
+
+<p><aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для гаража 6×4 м с легковым автомобилем достаточно плиты толщиной 20 см и арматуры диаметром 12 мм с шагом 20 см.</p></aside></p>
+
+<h2 id="частые-ошибки-и-как-их-избежать">Частые ошибки и как их избежать</h2>
+
+<p>Даже опытные строители допускают ошибки при расчёте плиты под гараж. Вот самые распространённые:</p>
+
+<ul>
+<li>📏 <strong>Недостаточная толщина плиты</strong> — приводит к трещинам при высоких нагрузках. Всегда делайте запас <code>10–20%</code>.</li>
+<li>🔗 <strong>Неправильное армирование</strong> — слишком большой шаг между стержнями или отсутствие верхнего слоя арматуры.</li>
+<li>💦 <strong>Отсутствие гидроизоляции</strong> — бетон впитывает влагу, что приводит к коррозии арматуры.</li>
+<li>🏗️ <strong>Неровное основание</strong> — плита должна заливаться на идеально ровную поверхность, иначе она деформируется.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: Не используйте <em>гладкую арматуру</em> для плиты — она не обеспечивает необходимого сцепления с бетоном. Только <em>рифлёная</em>!</blockquote>
+
+<p>Ещё одна ошибка — <strong>экономия на бетоне</strong>. Дешёвый бетон низкого класса (<em>B10–B15</em>) не выдержит нагрузки и быстро разрушится. <mark>Оптимальный класс для гаража — B20–B25.</mark></p>
+
+<details>
+<summary>🔍 Как проверить качество бетона на стройплощадке?</summary>
+<p>Используйте <em>молоток Шмидта</em> для определения прочности бетона на сжатие. Также можно взять пробу бетона и отправить её в лабораторию для испытаний. Некачественный бетон часто имеет неравномерный цвет или расслаивается при ударе.</p>
+</details>
+
+<details>
+<summary>🔍 Можно ли заливать плиту в дождь?</summary>
+<p>Заливка бетона под дождём не рекомендуется, так как избыточная вода ухудшает прочность бетона. Если дождь начался во время работы, укройте плиту <em>полиэтиленовой плёнкой</em> и приостановите заливку до улучшения погоды.</p>
+</details>
+
+<details>
+<summary>🔍 Нужно ли утеплять плиту под гаражом?</summary>
+<p>Утепление плиты целесообразно, если гараж отапливается или в нём хранится оборудование, чувствительное к температуре. Используйте <em>экструдированный пенополистирол</em> толщиной <code>5–10 см</code>, уложенный под гидроизоляцией.</p>
+</details>
+
+<details>
+<summary>🔍 Сколько времени высыхает бетонная плита?</summary>
+<p>Бетон набирает <code>70%</code> прочности через <code>7–10 дней</code>, а полную прочность — через <code>28 дней</code>. В первые <code>3–5 дней</code> плиту необходимо поливать водой для предотвращения трещин.</p>
+</details>
+
+<details>
+<summary>🔍 Можно ли построить гараж на плитном фундаменте без подвала?</summary>
+<p>Да, плитный фундамент подходит и для гаражей без подвала. В этом случае можно уменьшить толщину плиты до <code>15 см</code> и сэкономить на материалах. Однако не забывайте про гидроизоляцию и дренаж.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/st/stantsiya-vysokogo-davleniya-dlya-avtomojki.html" class="pb-related-card">
+                <span class="pb-related-title">Станция высокого давления для автомойки: выбор и монтаж</span>
+                <span class="pb-related-desc">Как выбрать станцию высокого давления для автомойки? Обзор насосов, фильтров и частотных преобразова</span>
+            </a><a href="/articles/g/ga/garazh-iz-proftruby-svoimi-rukami-chertezhi.html" class="pb-related-card">
+                <span class="pb-related-title">Гараж из профтрубы своими руками: чертежи, схемы, пошаговая инструкция</span>
+                <span class="pb-related-desc">Как построить гараж из профильной трубы самостоятельно: готовые чертежи, расчет материалов, этапы сб</span>
+            </a><a href="/articles/t/tr/truby-dlya-dymokhoda-iz-nerzhavejki-razmery.html" class="pb-related-card">
+                <span class="pb-related-title">Размеры труб для дымохода из нержавейки: таблица и выбор</span>
+                <span class="pb-related-desc">Полный гид по размерам труб для дымохода из нержавейки. Таблица диаметров, толщины стенок, марки ста</span>
+            </a><a href="/articles/k/ka/kak-obshit-garazh-sajdingom.html" class="pb-related-card">
+                <span class="pb-related-title">Как обшить гараж сайдингом своими руками: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гид по обшивке гаража сайдингом. Выбор материалов, расчеты, монтаж обрешетки и панелей, ут</span>
+            </a><a href="/articles/b/be/besplatnaya-parkovka-kurskij-vokzal.html" class="pb-related-card">
+                <span class="pb-related-title">Бесплатная парковка у Курского вокзала 2026: карта, правила, альтернативы</span>
+                <span class="pb-related-desc">Где припарковаться бесплатно рядом с Курским вокзалом в Москве? Актуальные зоны, ограничения по врем</span>
+            </a><a href="/articles/i/in/invertor-napryazheniya-s-12-na-220.html" class="pb-related-card">
+                <span class="pb-related-title">Инвертор напряжения с 12 на 220 Вольт: выбор, расчет и установка</span>
+                <span class="pb-related-desc">Как выбрать инвертор напряжения с 12 на 220 вольт для авто. Расчет мощности, виды синусоиды, подключ</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

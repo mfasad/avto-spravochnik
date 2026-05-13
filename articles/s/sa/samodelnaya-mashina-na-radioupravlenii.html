@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Самодельная машина на радиоуправлении: чертежи и схемы сборки — Авто Справочник</title>
+    <meta name="description" content="Как собрать самодельную машину на радиоуправлении своими руками. Подбор двигателей, аккумуляторов и передатчиков. Подробный гид по электронике.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/sa/samodelnaya-mashina-na-radioupravlenii.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Самодельная машина на радиоуправлении: чертежи и схемы сборки">
+    <meta property="og:description" content="Как собрать самодельную машину на радиоуправлении своими руками. Подбор двигателей, аккумуляторов и передатчиков. Подробный гид по электронике.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Самодельная машина на радиоуправлении: чертежи и схемы сборки</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#проектирование-шасси-и-выбор-масштаба">Проектирование шасси и выбор масштаба</a></li><li><a href="#силовая-установка-моторы-и-регуляторы">Силовая установка: моторы и регуляторы</a></li><li><a href="#система-управления-и-передатчики">Система управления и передатчики</a></li><li><a href="#питание-аккумуляторы-и-зарядные-устройства">Питание: аккумуляторы и зарядные устройства</a></li><li><a href="#сборка-ходовой-части-и-трансмиссии">Сборка ходовой части и трансмиссии</a></li><li><a href="#настройка-и-первый-запуск">Настройка и первый запуск</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/mo/molniya-makvin-v-realnoj-zhizni.html">Молния Маквин в реальной жизни: как сделать машину как у героя Disney</a></li><li><a href="/articles/f/fo/forsazh-3-vse-mashiny.html">Форсаж 3: все машины — полный список авто и характеристики</a></li><li><a href="/articles/k/ka/kak-kleit-naklejki-na-steklo.html">Как клеить наклейки на стекло авто: инструкция без пузырей</a></li><li><a href="/articles/k/ka/kak-nachat-igrat-v-my-summer-car.html">Как начать играть в My Summer Car: руководство для новичка</a></li><li><a href="/articles/k/ka/kamera-videonablyudeniya-na-kolesakh.html">Камера видеонаблюдения на колесах: виды, монтаж, законы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Самодельная машина на радиоуправлении: от идеи до первого запуска</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#проектирование-шасси-и-выбор-масштаба">Проектирование шасси и выбор масштаба</a></li><li><a href="#силовая-установка-моторы-и-регуляторы">Силовая установка: моторы и регуляторы</a></li><li><a href="#система-управления-и-передатчики">Система управления и передатчики</a></li><li><a href="#питание-аккумуляторы-и-зарядные-устройства">Питание: аккумуляторы и зарядные устройства</a></li><li><a href="#сборка-ходовой-части-и-трансмиссии">Сборка ходовой части и трансмиссии</a></li><li><a href="#настройка-и-первый-запуск">Настройка и первый запуск</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Создание собственной модели транспорта — это увлекательный процесс, который объединяет в себе инженерное творчество, работу с электроникой и удовольствие от вождения. <strong>Самодельная машина на радиоуправлении</strong> может превзойти по характеристикам многие заводские аналоги, если правильно подойти к выбору компонентов и сборке узлов. В отличие от готовых наборов, здесь вы сами определяете баланс между скоростью, проходимостью и стоимостью проекта.</p>
+
+<p>Начинающему моделисту предстоит разобраться в множестве технических нюансов: от выбора типа шасси до калибровки регулятора хода. <em>RC-моделизм</em> требует внимательности к деталям, так как некачественная пайка или неправильно подобранный <strong>аккумулятор</strong> могут привести к выходу электроники из строя. Однако результат того стоит: вы получаете уникальное устройство, полностью адаптированное под ваши нужды.</p>
+
+<p>В этой статье мы рассмотрим ключевые этапы создания автомобиля, уделив особое внимание технической стороне вопроса. Вы узнаете, как избежать типичных ошибок при компоновке агрегатов и какие инструменты действительно необходимы для качественной сборки. <mark>Правильный расчет центра тяжести на этапе проектирования рамы сэкономит вам часы настроек и доработок после первого выезда.</mark></p>
+
+<h2 id="проектирование-шасси-и-выбор-масштаба">Проектирование шасси и выбор масштаба</h2>
+
+<p>Первым шагом всегда становится определение концепции будущей модели. Будет ли это быстрый <em>багги</em> для песчаных дюн, тяжелый <strong>трак</strong> для бездорожья или низкий гоночный болид? От этого зависит выбор масштаба, который традиционно варьируется от 1:24 до 1:8. Для первых экспериментов оптимальным считается масштаб 1:10, так как он предоставляет достаточное пространство для размещения крупногабаритных компонентов и прост в обслуживании.</p>
+
+<p>Конструкция рамы должна обеспечивать жесткость на скручивание, но при этом оставаться легкой. Часто энтузиасты используют алюминиевые профили или печатают элементы на <strong>3D-принтере</strong> из прочного пластика ABS или PETG. Важно заранее предусмотреть места крепления сервоприводов и мотора, чтобы не пришлось сверлить дополнительные отверстия в уже собранной конструкции.</p>
+
+<div class="pb-poll" id="poll-0fae3864"><div class="pb-poll-question">📊 Какой тип привода вы планируете использовать?</div><div class="pb-poll-option" data-poll="0fae3864" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Полный привод (4WD)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0fae3864" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Задний привод (2WD)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0fae3864" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Передний привод (FWD)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0fae3864" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Электропривод на каждом колесе (Hub motors)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>При проектировании подвески стоит обратить внимание на ход штока амортизаторов. Слишком жесткая подвеска заставит машину «скакать» на неровностях, теряя сцепление, а чрезмерно мягкая приведет к сильным кренам в поворотах. <em>Геометрия рычагов</em> также играет критическую роль в стабильности управления.</p>
+
+<ul>
+    <li>🏎️ Масштаб 1:10 — золотой стандарт для начинающих, баланс цены и размера.</li>
+    <li>⚙️ Использование карбоновых пластин для снижения веса без потери прочности.</li>
+    <li>🛠️ Возможность быстрой замены поврежденных узлов в полевых условиях.</li>
+</ul>
+
+<h2 id="силовая-установка-моторы-и-регуляторы">Силовая установка: моторы и регуляторы</h2>
+
+<p>Сердцем вашей машины станет электрический двигатель. На сегодняшний день наиболее популярны бесколлекторные моторы (<em>brushless</em>), которые отличаются высоким КПД и отсутствием изнашивающихся щеток. В отличие от коллекторных аналогов, они требуют обязательного использования специального регулятора хода (ESC), который преобразует постоянный ток аккумулятора в трехфазный ток для вращения ротора.</p>
+
+<p>При выборе пары «мотор-регулятор» необходимо учитывать вольтаж системы. Современные <strong>Li-Po аккумуляторы</strong> позволяют строить системы на 2S, 3S и даже 4S (от 7.4В до 14.8В). Чем выше напряжение, тем меньше ток при той же мощности, что снижает нагрев проводов и контактов. Однако высокая вольтажность требует более качественной изоляции и осторожности при эксплуатации.</p>
+
+<blockquote>
+    <p>⚠️ <strong>Внимание:</strong> Никогда не подключайте аккумулятор напрямую к бесколлекторному мотору, минуя регулятор. Это приведет к мгновенному сгоранию обмоток и необратимому повреждению магнитов ротора.</p>
+</blockquote>
+
+<p>Охлаждение силовых элементов — еще один важный аспект. При длительной работе под нагрузкой мотор и регулятор могут нагреваться до критических температур. Установка радиаторов с ребрами или даже небольших вентиляторов (кулеров) значительно продлит жизнь электронике. Некоторые продвинутые регуляторы имеют встроенную функцию <code>thermal protection</code>, отключающую питание при перегреве.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для проверки температуры мотора после заезда капните каплю воды на корпус. Если вода шипит и испаряется мгновенно — двигатель перегрет, нужно снижать нагрузку или менять передаточное число шестерен.</p></aside>
+
+<h2 id="система-управления-и-передатчики">Система управления и передатчики</h2>
+
+<p>Качество связи между оператором и моделью напрямую влияет на удовольствие от вождения. Стандартные пульты работают на частоте 2.4 ГГц, что обеспечивает устойчивый сигнал и отсутствие задержек. При сборке машины своими руками важно правильно разместить приемник, чтобы антенна не экранировалась металлическими частями рамы или аккумулятором.</p>
+
+<p>Современные системы позволяют настраивать экспоненты (чувствительность стиков), двойные расходы хода руля и смешивание каналов. Для сложных моделей с двухскоростной коробкой передач или лебедкой функционал пульта может быть расширен дополнительными модулями. <strong>Цифровые сервоприводы</strong> обеспечивают более точное и быстрое реагирование рулевого механизма по сравнению с аналоговыми.</p>
+
+<div class="pb-table-wrap"><table>
+    <thead>
+        <tr>
+            <th>Тип сервопривода</th>
+            <th>Скорость реакции (сек/60°)</th>
+            <th>Усилие (кг/см)</th>
+            <th>Применение</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Алоговый стандарт</td>
+            <td>0.12 - 0.18</td>
+            <td>2.5 - 4.0</td>
+            <td>Малые модели, легкое управление</td>
+        </tr>
+        <tr>
+            <td>Цифровой стандарт</td>
+            <td>0.08 - 0.12</td>
+            <td>4.0 - 6.0</td>
+            <td>Универсальные модели 1:10</td>
+        </tr>
+        <tr>
+            <td>Цифровой высокий крутящий момент</td>
+            <td>0.10 - 0.15</td>
+            <td>10.0 - 20.0+</td>
+            <td>Тяжелые тракы, масштабные копии</td>
+        </tr>
+        <tr>
+            <td>Высокоскоростной (High Speed)</td>
+            <td>0.04 - 0.06</td>
+            <td>3.0 - 5.0</td>
+            <td>Гоночные болиды, дрифтовые авто</td>
+        </tr>
+    </tbody>
+</table></div>
+
+<p>При монтаже приемника используйте мягкие подкладки (поролон или двусторонний скотч), чтобы гасить вибрации. Чувствительная электроника может некорректно работать при сильной тряске, что приведет к «дерганью» машины или потере управления.</p>
+
+<h2 id="питание-аккумуляторы-и-зарядные-устройства">Питание: аккумуляторы и зарядные устройства</h2>
+
+<p>Энергоемкость и токоотдача источника питания определяют динамику и время работы модели. Литий-полимерные (<em>Li-Po</em>) батареи являются безальтернативным лидером в современном моделизме благодаря малому весу и способности отдавать огромные токи. Параметр <strong>C-rating</strong> (ток отдачи) показывает, насколько быстро батарея может разряжаться без повреждения.</p>
+
+<p>Для расчета требуемой токоотдачи умножьте емкость аккумулятора (в Ампер-часах) на C-rating. Например, аккумулятор 2200 мАч (2.2 Ач) с рейтингом 50C способен кратковременно отдавать ток 110 Ампер. Этого более чем достаточно для большинства моторов масштаба 1:10. Однако помните, что реальная емкость может отличаться от заявленной у дешевых брендов.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка состояния аккумулятора</h4><label class="check-item"><input type="checkbox"><span>Визуальный осмотр на вздутие</span></label><label class="check-item"><input type="checkbox"><span>Замер напряжения каждой банки</span></label><label class="check-item"><input type="checkbox"><span>Проверка баланса ячеек</span></label><label class="check-item"><input type="checkbox"><span>Контроль температуры после заряда</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Зарядка аккумуляторов должна производиться только специализированным балансным зарядным устройством. Оно контролирует напряжение на каждой банке отдельно, предотвращая перезаряд, который может привести к возгоранию. <em>Li-Po</em> батареи пожароопасны при неправильной эксплуатации, поэтому зарядку следует проводить в негорючем контейнере или мешке.</p>
+
+<ul>
+    <li>🔋 Всегда храните аккумуляторы в разряженном до 40-60% состоянии (Storage mode), если не планируете использовать их длительное время.</li>
+    <li>🔥 Никогда не заряжайте поврежденные или вздувшиеся батареи.</li>
+    <li>⚡ Используйте провода достаточного сечения для подключения мощных аккумуляторов, чтобы избежать падения напряжения.</li>
+</ul>
+
+<h2 id="сборка-ходовой-части-и-трансмиссии">Сборка ходовой части и трансмиссии</h2>
+
+<p>Механическая часть требует точности и аккуратности. Все подшипники должны вращаться свободно, без люфтов, но и без заеданий. Шестерни главной передачи должны иметь правильный зацепление, известное как «mesh». Слишком плотное зацепление приведет к быстрому износу и нагреву, а слишком свободное — к проскальзыванию и шуму.</p>
+
+<p>Для проверки зацепления между шестернями мотора и дифференциала часто используют лист бумаги. Вставьте лист между зубьями, прижмите шестерни и уберите бумагу — останется идеальный зазор. Дифференциалы (если они есть в конструкции) необходимо заполнять специальной силиконовой смазкой нужной вязкости, которая влияет на поведение машины в поворотах.</p>
+
+<blockquote>
+    <p>⚠️ <strong>Внимание:</strong> Перед первым запуском обязательно проверьте затяжку всех винтовых соединений с фиксатором резьбы. Вибрации при работе мотора могут быстро раскрутить обычные винты, что приведет к разрушению узлов на ходу.</p>
+</blockquote>
+
+<p>Колеса и шины подбираются в зависимости от покрытия. Для асфальта нужны жесткие слики с минимальным протектором, для грунта — мягкая резина с агрессивным рисунком. Диаметр колес влияет на финальную скорость и проходимость: большие колеса увеличивают клиренс, но снижают крутящий момент на оси.</p>
+
+<details class="pb-accordion"><summary>Секрет настройки дифференциала</summary><div class="pb-accordion-body"><p>Если машина избыточно поворачивает (заднюю ось срывает), попробуйте использовать более густую смазку в дифференциале. Если не хватает поворачиваемости — более жидкую.>:Для точной настройки поведения машины можно экспериментировать с вязкостью масла в дифференциалах. Изменение вязкости на 5-10 тысяч сСт (centistokes) заметно меняет характер машины. Густое масло блокирует дифференциал, заставляя колеса вращаться с одинаковой скоростью, что полезно на прямых, но ухудшает вход в поворот.</p>
+
+<h2 id="настройка-и-первый-запуск">Настройка и первый запуск</h2>
+
+<p>Когда механическая и электрическая части собраны, наступает этап настройки. В первую очередь необходимо откалибровать регулятор хода согласно инструкции производителя. Обычно это процедура подачи максимального и минимального сигнала через пульт при включении питания. Также проверяется направление вращения мотора: при движении вперед машина должна ехать вперед, а не назад.</p>
+
+<p>Рулевое управление настраивается так, чтобы при нейтральном положении стика колеса стояли строго прямо. Механические тяги (linkages) позволяют регулировать длину, изменяя схождение колес. Правильное схождение критически важно для стабильности: колеса, смотрящие внутрь (toe-in), улучшают курсовую устойчивость, а наружу (toe-out) — улучшают реакцию на поворот руля.</p>
+
+
+
+<p>После короткого тестового заезда обязательно проверьте температуру всех узлов. Потрошайте мотор, регулятор и аккумулятор. Если какой-то элемент горячий настолько, что трудно удержать палец, значит, система работает с перегрузкой. В таком случае необходимо уменьшить передаточное число (уменьшить шестерню на моторе) или снизить агрессивность стиля вождения.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+    <summary>Какой аккумулятор лучше выбрать для новичка: Li-Po или NiMH?</summary>
+    <p>Для новичков, которые только учатся собирать и обслуживать технику, <strong>NiMH</strong> (никель-металлгидридные) аккумуляторы могут быть безопаснее и проще в эксплуатации. Они менее требовательны к условиям хранения и не так склонны к воспламенению при повреждении. Однако <em>Li-Po</em> дают значительно больше мощности и времени работы при меньшем весе, поэтому для серьезных гонок выбор все же за ними.</p>
+</details>
+
+<details>
+    <summary>Почему греется мотор и что с этим делать?</summary>
+    <p>Нагрев мотора может быть вызван несколькими причинами: слишком маленькая шестерня на двигателе (большая нагрузка), плохое качество подшипников, зажатые тормоза или просто слишком агрессивная езда с постоянными разгонами. Также проверьте, не застряла ли в намотке волос или грязь, блокирующая охлаждение.</p>
+</details>
+
+<details>
+    <summary>Можно ли использовать детали от разных производителей?</summary>
+    <p>Да, в мире RC-моделизма стандартизация — это норма. Моторы, сервоприводы и электроника обычно имеют стандартные размеры и крепления (например, посадочное место под мотор 540 или сервоприводы стандартного размера 1:1). Главное — следить за совместимостью разъемов и вольтажом.</p>
+</details>
+
+<details>
+    <summary>Как часто нужно смазывать дифференциалы?</summary>
+    <p>Частота обслуживания зависит от условий эксплуатации. Если вы катаетесь по пыльной сухой трассе, смазывать нужно чаще (каждые 5-10 часов), так как пыль смешивается с маслом. После катания по мокрому снегу или грязи обслуживание требуется немедленно после мойки, чтобы предотвратить коррозию шестерен.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/mo/molniya-makvin-v-realnoj-zhizni.html" class="pb-related-card">
+                <span class="pb-related-title">Молния Маквин в реальной жизни: как сделать машину как у героя Disney</span>
+                <span class="pb-related-desc">Реальные аналоги Молнии Маквина, тюнинг под мультгероя, юридические нюансы и стоимость переделки. По</span>
+            </a><a href="/articles/f/fo/forsazh-3-vse-mashiny.html" class="pb-related-card">
+                <span class="pb-related-title">Форсаж 3: все машины — полный список авто и характеристики</span>
+                <span class="pb-related-desc">Полный разбор всех машин из фильма «Токийский дрифт». Технические характеристики Nissan Silvia S15, </span>
+            </a><a href="/articles/k/ka/kak-kleit-naklejki-na-steklo.html" class="pb-related-card">
+                <span class="pb-related-title">Как клеить наклейки на стекло авто: инструкция без пузырей</span>
+                <span class="pb-related-desc">Подробная инструкция, как клеить наклейки на стекло. Выбор материалов, подготовка поверхности, техно</span>
+            </a><a href="/articles/k/ka/kak-nachat-igrat-v-my-summer-car.html" class="pb-related-card">
+                <span class="pb-related-title">Как начать играть в My Summer Car: руководство для новичка</span>
+                <span class="pb-related-desc">Полный гайд: как собрать Satsuma в My Summer Car. Сборка двигателя, покраска, первый запуск и вожден</span>
+            </a><a href="/articles/k/ka/kamera-videonablyudeniya-na-kolesakh.html" class="pb-related-card">
+                <span class="pb-related-title">Камера видеонаблюдения на колесах: виды, монтаж, законы</span>
+                <span class="pb-related-desc">Полный гид по мобильным камерам для авто: скрытые и внешние модели, установка своими руками, выбор р</span>
+            </a><a href="/articles/d/do/dodzh-ram-trkh-obzor.html" class="pb-related-card">
+                <span class="pb-related-title">Dodge Ram TRX обзор: характеристики, расход и тюнинг</span>
+                <span class="pb-related-desc">Подробный обзор Dodge Ram TRX: 707 л.с., разгон до 100 км/ч, реальный расход топлива, подвеска FOX и</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

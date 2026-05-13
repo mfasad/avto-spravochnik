@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Сканер ELM327 на Android: Полная инструкция по подключению — Авто Справочник</title>
+    <meta name="description" content="Как пользоваться сканером ELM327 на Андроид. Выбор приложений, пошаговая инструкция подключения, чтение и сброс ошибок двигателя своими руками.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/sk/skaner-elm327-kak-polzovatsya-na-android.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Сканер ELM327 на Android: Полная инструкция по подключению">
+    <meta property="og:description" content="Как пользоваться сканером ELM327 на Андроид. Выбор приложений, пошаговая инструкция подключения, чтение и сброс ошибок двигателя своими руками.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Сканер ELM327 на Android: Полная инструкция по подключению</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-подходящего-оборудования-и-приложений">Выбор подходящего оборудования и приложений</a></li><li><a href="#первое-подключение-и-настройка-сопряжения">Первое подключение и настройка сопряжения</a></li><li><a href="#чтение-и-расшифровка-диагностических-кодов">Чтение и расшифровка диагностических кодов</a></li><li><a href="#мониторинг-параметров-в-реальном-времени">Мониторинг параметров в реальном времени</a></li><li><a href="#сброс-ошибок-и-адаптация-систем">Сброс ошибок и адаптация систем</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-sdelat-klyuch-po-lichinke.html">Как сделать ключ по личинке замка: полная инструкция</a></li><li><a href="/articles/k/ka/kak-overlozhit-na-shvejnoj-mashinke.html">Как оверложить на швейной машинке: пошаговая инструкция</a></li><li><a href="/articles/o/ob/obd-2-chto-eto.html">OBD 2: что это такое, где разъем и как пользоваться сканером</a></li><li><a href="/articles/a/av/avtomat-kalashnikova-tekhnicheskie-kharakteristiki.html">АК-47: технические характеристики, устройство и особенности автомата Калашникова</a></li><li><a href="/articles/k/ka/kak-polzovatsya-nasosom-dlya-avtomobilya.html">Как правильно пользоваться автомобильным насосом — пошаговая инструкция 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Сканер ELM327: Как пользоваться на Андроид — Гид по диагностике</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-подходящего-оборудования-и-приложений">Выбор подходящего оборудования и приложений</a></li><li><a href="#первое-подключение-и-настройка-сопряжения">Первое подключение и настройка сопряжения</a></li><li><a href="#чтение-и-расшифровка-диагностических-кодов">Чтение и расшифровка диагностических кодов</a></li><li><a href="#мониторинг-параметров-в-реальном-времени">Мониторинг параметров в реальном времени</a></li><li><a href="#сброс-ошибок-и-адаптация-систем">Сброс ошибок и адаптация систем</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современная диагностика автомобиля перестала быть уделом исключительно профессиональных сервисов с дорогим оборудованием. Сегодня любой владелец смартфона на базе операционной системы <em>Android</em> может превратить свой гаджет в мощный диагностический центр, используя компактный адаптер <strong>ELM327</strong>. Это устройство считывает коды ошибок из электронного блока управления (ЭБУ) и выводит их на экран в понятном виде, позволяя оперативно реагировать на неисправности.</p>
+
+<p>Популярность связки <em>смартфон + адаптер</em> обусловлена доступностью и универсальностью. Вам не нужно быть дипломированным автомехаником, чтобы понять, почему горит лампочка <strong>Check Engine</strong>. Достаточно знать базовые принципы работы протокола <code>OBD-II</code> и иметь под рукой подходящее программное обеспечение. В этой статье мы разберем все нюансы выбора, настройки и эффективного использования сканера.</p>
+
+<p>Основная задача такого тандема — обеспечить двустороннюю связь между человеком и"мозгами" автомобиля. <strong>Интерфейс ELM327</strong> транслирует запросы приложения в команды, понятные бортовому компьютеру, и наоборот. Это позволяет не только читать статические ошибки, но и отслеживать параметры работы двигателя в реальном времени, что критически важно для поиска плавающих неисправностей.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Перед началом диагностики убедитесь, что аккумулятор автомобиля полностью заряжен. Длительное подключение сканера при неработающем двигателе может разрядить батарею, особенно если у вас старый АКБ.</p>
+</blockquote>
+
+<h2 id="выбор-подходящего-оборудования-и-приложений">Выбор подходящего оборудования и приложений</h2>
+
+<p>Рынок переполнен различными версиями адаптеров, и новичку легко запутаться в многообразии моделей. Самым распространенным стандартом является версия <strong>ELM327 v1.5</strong>, которая базируется на чипе <em>PIC18F25K80</em>. Именно эти устройства гарантируют стабильную работу с большинством современных приложений и поддерживают все необходимые протоколы связи. Дешевые копии версии 2.1 часто имеют урезанный функционал и могут некорректно работать с некоторыми марками автомобилей.</p>
+
+<p>При выборе программного обеспечения для <em>Android</em> стоит ориентироваться на рейтинг в Google Play и количество активных пользователей. Лидерами рынка уже остаются приложения <strong>Torque Pro</strong>, <em>Car Scanner ELM OBD2</em> и <strong>HobDrive</strong>. Каждое из них имеет свои особенности интерфейса и набор поддерживаемых функций. Бесплатные версии часто ограничены в возможностях записи логов или создания собственных панелей приборов.</p>
+
+<p>Важно учитывать тип подключения адаптера к смартфону. Большинство современных моделей используют Bluetooth (классический или Low Energy), что удобно и не требует проводов. Однако для автомобилей сной электроникой или при необходимости проведения глубокой диагностики лучше рассмотреть варианты с <strong>Wi-Fi</strong> подключением, так как они обеспечивают более высокую скорость передачи данных.</p>
+
+<ul>
+<li>📱 <strong>Torque Pro</strong> — самое популярное приложение с огромным количеством настроек и плагинов.</li>
+<li>🚗 <em>Car Scanner</em> — отличный интерфейс и поддержка специфических функций для разных марок авто.</li>
+<li>🔧 <strong>HobDrive</strong> — мощный инструмент для ведения бортового журнала и глубокой аналитики.</li>
+<li>📶 <em>OpenDiag</em> — специализированное решение, особенно популярное среди владельцев автомобилей ВАЗ.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ Внимание: Избегайте покупки адаптеров без маркировки версии или с подозрительно низкой ценой. Дешевые китайские клоны могут не иметь защиты от скачков напряжения и способны повредить ЭБУ вашего автомобиля.</p>
+</blockquote>
+
+<h2 id="первое-подключение-и-настройка-сопряжения">Первое подключение и настройка сопряжения</h2>
+
+<p>Процесс установки связи между адаптером и телефоном обычно не вызывает сложностей, но требует последовательности действий. Сначала необходимо физически вставить сканер в диагностический разъем автомобиля, который чаще всего расположен под рулевой колонкой или рядом с предохранителями. После включения зажигания на адаптере должны загореться индикаторы, сигнализирующие о готовности к работе.</p>
+
+<p>Далее следует перейти в настройки Bluetooth вашего <em>Android</em>-устройства. В списке доступных устройств нужно найти сканер, который обычно называется <code>OBDII</code>, <strong>ELM327</strong> или имеет похожее название. Стандартный пароль для сопряжения в большинстве случаев составляет <code>1234</code> или <code>0000</code>. Если система запрашивает PIN-код, его можно найти в инструкции к конкретному устройству.</p>
+
+<p>После успешного сопряжения в системе необходимо запустить выбранное диагностическое приложение. В настройках программы важно правильно выбрать тип подключения (Bluetooth или Wi-Fi) и соответствующий адаптер. Некоторые приложения автоматически находят устройство, но в случае проблем придется вручную указать порт подключения или изменить настройки протокола связи.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка подключения</h4><label class="check-item"><input type="checkbox"><span>Вставлен адаптер в разъем OBD2</span></label><label class="check-item"><input type="checkbox"><span>Загорелись индикаторы на сканере</span></label><label class="check-item"><input type="checkbox"><span>Включен Bluetooth на телефоне</span></label><label class="check-item"><input type="checkbox"><span>Введен правильный PIN-код (1234)</span></label><label class="check-item"><input type="checkbox"><span>Приложение видит адаптер</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Стоит отметить, что на некоторых смартфонах с новыми версиями <em>Android</em> могут возникать проблемы с видимостью Bluetooth-устройств. В таком случае полезно проверить разрешения приложения — доступ к геолокации должен быть включен, так как сканирование Bluetooth-устройств в Android тесно связано с этим параметром безопасности.</p>
+
+<h2 id="чтение-и-расшифровка-диагностических-кодов">Чтение и расшифровка диагностических кодов</h2>
+
+<p>Главная функция, ради которой приобретается <strong>ELM327</strong>, — это чтение коов неисправностей. Когда приложение подключается к ЭБУ, оно считывает сохраненные в памяти коы ошибок, которые имеют стандартный формат. Каждый код состоит из буквы и четырех цифр, например, <code>P0300</code>. Буква указывает на систему, где произошла ошибка: <strong>P</strong> — двигатель и трансмиссия, <em>B</em> — кузов, <strong>C</strong> — шасси, <em>U</em> — сеть передачи данных.</p>
+
+<p>Расшифровка кодов позволяет понять суть проблемы. Например, код <code>P0171</code> указывает на слишком бедную смесь, а <code>P0420</code> часто свидетельствует о проблемах с катализатором. Приложения обычно имеют встроенную базу данных с описанием ошибок на русском или английском языке, что значительно упрощает жизнь автолюбителя. Однако стоит помнить, что код ошибки указывает лишь на симптом, а не всегда на точную причину поломки.</p>
+
+<p>Важно различать текущие (Pending) и сохраненные (Stored) ошибки. Текущие ошибки фиксируются в момент диагностики, если параметр вышел за пределы нормы. Сохраненные ошибки были зафиксированы ранее и могут не проявляться прямо сейчас. Для принятия решения о ремонте необходимо проанализировать историю появления кода и сопутствующие параметры работы двигателя.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Код ошибки</th>
+<th>Описание</th>
+<th>Возможная причина</th>
+<th>Срочность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>P0300</code></td>
+<td>Случайные пропуски воспламенения</td>
+<td>Свечи, катушки, форсунки</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td><code>P0171</code></td>
+<td>Слишком бедная смесь (Банк 1)</td>
+<td>Подсос воздуха, датчик кислорода</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td><code>P0420</code></td>
+<td>Низкая эффективность катализатора</td>
+<td>Катализатор, лямбда-зонд</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td><code>P0500</code></td>
+<td>Неисправность датчика скорости</td>
+<td>Датчик скорости, проводка</td>
+<td>Средняя</td>
+</tr>
+</tbody>
+</table></div>
+
+<details class="pb-accordion"><summary>Что такое Freeze Frame?</summary><div class="pb-accordion-body"><p>Freeze Frame (стоп-кадр) — это набор параметров работы двигателя в момент возникновения ошибки. Анализируя обороты, температуру и нагрузку в этот момент, можно точнее определить причину неисправности.</p></div></details>
+
+<h2 id="мониторинг-параметров-в-реальном-времени">Мониторинг параметров в реальном времени</h2>
+
+<p>Функция мониторинга в реальном времени превращает смартфон в полноценную приборную панель с расширенными возможностями. С помощью <strong>ELM327</strong> и приложения на <em>Android</em> можно выводить на экран до десятка параметров одновременно: от частоты вращения коленвала и скорости автомобиля до положения дроссельной заслонки и угла опережения зажигания. Это особенно полезно при поиске неисправностей, которые не вызывают постоянных ошибок.</p>
+
+<p>Графики изменения параметров позволяют увидеть динамику процессов, происходящих в двигателе. Например, резкие скачки напряжения на датчике кислорода или нестабильность показаний <strong>MAF</strong>-сенсора (датчика массового расхода воздуха) могут указать на проблему раньше, чем загорится лампочка <code>Check Engine</code>. Настройка пороговых значений позволяет получать звуковые уведомления при выходе параметров за допустимые пределы.</p>
+
+<p>Для любителей тюнинга и точной настройки важен мониторинг коррекции топливоподачи (Long Term и Short Term Fuel Trim). Эти параметры показывают, как ЭБУ корректирует состав смеси. Значения, выходящие за пределы ±10%, говорят о проблемах с системой впуска, топливной системой или датчиками. Анализ этих данных требует внимательности, но дает исчерпывающую картину здоровья двигателя.</p>
+
+<ul>
+<li>📊 <strong>Обороты двигателя (RPM)</strong> — основной параметр для оценки работы мотора.</li>
+<li>🌡️ <em>Температура ОЖ</em> — критически важна для предотвращения перегрева.</li>
+<li>⛽ <strong>Нагрузка на двигатель</strong> — показывает процент использования мощности мотора.</li>
+<li>🔋 <em>Напряжение бортсети</em> — контроль работы генератора и аккумулятора.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Создайте свой собственный dashboard (панель приборов) в приложении, выведя только те 4-6 параметров, которые вы проверяете чаще всего. Это сэкономит время и сделает мониторинг удобнее.</p></aside>
+
+<h2 id="сброс-ошибок-и-адаптация-систем">Сброс ошибок и адаптация систем</h2>
+
+<p>После устранения неисправности или проведения ремонтных работ необходимо сбросить сохраненные коы ошибок. В приложениях для <em>Android</em> эта функция обычно называется"Clear DTC" или"Сбросить коды". Важно понимать, что простое удаление ошибки не ремонтирует автомобиль — если проблема не устранена физически, код появится снова через определенный пробег или количество циклов запуска двигателя.</p>
+
+<p>Кроме сброса ошибок, <strong>ELM327</strong> позволяет выполнять некоторые функции адаптации и калибровки. Например, можно провести процедуру обучения дроссельной заслонки после ее чистки или сбросить адаптацию топливных коррекций. Некоторые продвинутые приложения поддерживают кодирование отдельных функций, таких как активация скрытых меню или изменение логики работы электроприводов, но это зависит от конкретной модели автомобиля.</p>
+
+<p>При сбросе ошибок также очищаются данные о готовности систем к проверке (I/M Readiness). Это означает, что сразу после сброса при прохождении техосмотра или проверки экологичности автомобиль может показать статус"Не готово". Для восстановления статуса необходимо проехать определенный цикл (Drive Cycle), который включает прогрев, движение с разной скоростью и простои.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не производите сброс ошибок, не выяснив и не устранив причину их появления. Игнорирование неисправностей, таких как пропуски зажигания, может привести к серьезному повреждению катализатора и дорогостоящему ремонту.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-0e14a463"><div class="pb-poll-question">📊 Как часто вы проводите компьютерную диагностику автомобиля?</div><div class="pb-poll-option" data-poll="0e14a463" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Раз в месяц перед ТО</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0e14a463" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Только когда горит Check Engine</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0e14a463" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда, только в сервисе</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0e14a463" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Еженедельно для контроля</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему телефон не видит адаптер ELM327?</summary>
+<p>Чаще всего проблема кроется в правах доступа. Убедитесь, что на смартфоне включена геолокация (GPS), так как Android требует это разрешение для сканирования Bluetooth-устройств. Также проверьте, не подключено ли устройство к другому телефону или планшету, так как адаптер обычно держит только одно активное соединение.</p>
+</details>
+
+<details>
+<summary>Можно ли оставить сканер в разъеме постоянно?</summary>
+<p>Большинство адаптеров потребляют ток даже в спящем режиме. Если вы планируете оставить автомобиль на длительную стоянку (неделя и более), сканер лучше извлечь, чтобы избежать глубокого разряда аккумулятора. Для ежедневной эксплуатации оставление в разъеме безопасно.</p>
+</details>
+
+<details>
+<summary>Подойдет ли ELM327 для диагностики коробки передач?</summary>
+<p>Стандартный протокол OBD-II, который реализует <strong>ELM327</strong>, в первую очередь ориентирован на двигатель. Доступ к блоку управления трансмиссией (TCM) возможен далеко не на всех автомобилях и зависит от возможностей конкретного приложения. Для глубокой диагностики АКПП часто требуется более специализированное оборудование.</p>
+</details>
+
+<details>
+<summary>Безопасно ли использовать приложения из Google Play?</summary>
+<p>Да, популярные приложения из официального магазина безопасны. Однако избегайте установки модифицированных (взломанных) версий платных программ из непроверенных источников, так как они могут содержать вредоносный код или некорректно работать с вашим автомобилем.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>ELM327 в связке с Android-смартфоном — это идеальный инструмент для начальной и средней диагностики, позволяющий сэкономить деньги на посещении СТО для простых задач.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-sdelat-klyuch-po-lichinke.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать ключ по личинке замка: полная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как сделать ключ по личинке замка. Разборка, методы подбора и изготовление дубликата в гара</span>
+            </a><a href="/articles/k/ka/kak-overlozhit-na-shvejnoj-mashinke.html" class="pb-related-card">
+                <span class="pb-related-title">Как оверложить на швейной машинке: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как оверложить на швейной машинке: выбор лапки, настройка зигзага и оверлочного шва для обр</span>
+            </a><a href="/articles/o/ob/obd-2-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">OBD 2: что это такое, где разъем и как пользоваться сканером</span>
+                <span class="pb-related-desc">Полный гид по системе OBD 2: распиновка разъема, назначение контактов, коды ошибок и лучшие адаптеры</span>
+            </a><a href="/articles/a/av/avtomat-kalashnikova-tekhnicheskie-kharakteristiki.html" class="pb-related-card">
+                <span class="pb-related-title">АК-47: технические характеристики, устройство и особенности автомата Калашникова</span>
+                <span class="pb-related-desc">Подробный разбор ТТХ АК-47: калибр, скорострельность, прицел, вес и модификации. Сравнение с АКМ, АК</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-nasosom-dlya-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно пользоваться автомобильным насосом — пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Подробное руководство по использованию насоса для авто: выбор типа, подготовка, накачка колес, ошибк</span>
+            </a><a href="/articles/p/po/pozharnaya-mashina-kak-nazyvaetsya.html" class="pb-related-card">
+                <span class="pb-related-title">Пожарная машина как называется: классификация, АЦ и АЛ</span>
+                <span class="pb-related-desc">Как правильно называется пожарная машина? Разбираем виды техники: АЦ, АЛ, автолестницы, аэродромные </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

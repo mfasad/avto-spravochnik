@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как работает генератор помех: устройство и виды — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор принципов работы генераторов помех. Виды шумов, схемотехника и сферы применения приборов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-rabotaet-generator-pomekh.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работает генератор помех: устройство и виды">
+    <meta property="og:description" content="Подробный разбор принципов работы генераторов помех. Виды шумов, схемотехника и сферы применения приборов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работает генератор помех: устройство и виды</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физические-принципы-формирования-электромагнитного-шума">Физические принципы формирования электромагнитного шума</a></li><li><a href="#основные-типы-генераторов-и-их-схемотехника">Основные типы генераторов и их схемотехника</a></li><li><a href="#модуляция-и-спектральные-характеристики-сигнала">Модуляция и спектральные характеристики сигнала</a></li><li><a href="#системы-усиления-и-антенные-устройства">Системы усиления и антенные устройства</a></li><li><a href="#сферы-применения-от-защиты-до-тестирования">Сферы применения: от защиты до тестирования</a></li><li><a href="#методы-защиты-от-электромагнитных-помех">Методы защиты от электромагнитных помех</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/n/na/nasadka-dlya-nakachivaniya-koles.html">Насадка для накачивания колес: виды, выбор и применение</a></li><li><a href="/articles/o/os/osnovnye-mekhanizmy-ak-47.html">Основные механизмы АК 47: устройство, работа и характеристики</a></li><li><a href="/articles/p/pu/pusko-zaryadnoe-ustrojstvo-carku-pro-60.html">CARKU PRO 60: пуско-зарядное устройство для авто — обзор и инструкция</a></li><li><a href="/articles/s/so/soedinitelnaya-detal-5-bukv.html">Соединительная деталь 5 букв: ответы на кроссворды и виды фитингов</a></li><li><a href="/articles/s/sk/skaner-obd-2-dlya-diagnostiki.html">Сканер OBD2 для диагностики авто: выбор, подключение, ошибки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как работает генератор помех: устройство и виды</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физические-принципы-формирования-электромагнитного-шума">Физические принципы формирования электромагнитного шума</a></li><li><a href="#основные-типы-генераторов-и-их-схемотехника">Основные типы генераторов и их схемотехника</a></li><li><a href="#модуляция-и-спектральные-характеристики-сигнала">Модуляция и спектральные характеристики сигнала</a></li><li><a href="#системы-усиления-и-антенные-устройства">Системы усиления и антенные устройства</a></li><li><a href="#сферы-применения-от-защиты-до-тестирования">Сферы применения: от защиты до тестирования</a></li><li><a href="#методы-защиты-от-электромагнитных-помех">Методы защиты от электромагнитных помех</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В современном мире радиочастотного спектра и цифровой обработки сигналов защита информации и тестирование оборудования становятся приоритетными задачами. <strong>Генератор помех</strong> представляет собой специализированное электронное устройство, способное создавать широкий спектр электромагнитных излучений или электрических сигналов. Эти сигналы предназначены для нарушения работы приемных устройств, систем связи или навигации в определенном радиусе.</p>
+
+<p>Принципиальная основа работы любого подобного прибора базируется на формировании хаотичных колебаний, которые перекрывают полезный сигнал. <em>Шумовая маскировка</em> может быть реализована как в аналоговом, так и в цифровом виде, в зависимости от сложности целевой системы. Понимание физики процессов позволяет инженерам создавать эффективные средства защиты периметра или, наоборот, разрабатывать устойчивую к помехам аппаратуру.</p>
+
+<p>Важно осознавать, что спектр создаваемых воздействий может варьироваться от узкополосных сигналов до широкополосного белого шума. <mark>Критическим параметром является плотность мощности излучения, которая определяет радиус подавления целевого сигнала.</mark> Далее мы детально рассмотрим внутреннее устройство, типы модуляции и технические нюансы функционирования этих систем.</p>
+
+<div class="pb-poll" id="poll-84b7069c"><div class="pb-poll-question">📊 Какой тип защиты информации вас интересует больше?</div><div class="pb-poll-option" data-poll="84b7069c" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Пассивная защита (экранирование)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="84b7069c" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Активное подавление (глушилки)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="84b7069c" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Криптографические методы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="84b7069c" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Физическая охрана</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="физические-принципы-формирования-электромагнитного-шума">Физические принципы формирования электромагнитного шума</h2>
+
+<p>Фундаментом работы генератора является источник случайного сигнала, часто называемый источником энтропии. В классической схемотехнике для этого используются <strong>шумящие диоды</strong> или специальные транзисторы, работающие в режиме пробоя. Тепловые флуктуации в полупроводниковых материалах создают хаотичное движение электронов, которое преобразуется в электрический сигнал с равномерной спектральной плотностью.</p>
+
+<p>Полученный первичный сигнал обладает крайне низкой амплитудой, поэтому следующим этапом становится его усиление. <em>Каскады усилителей</em> должны обладать широкой полосой пропускания, чтобы не искажать спектральную картину шума. Если усилитель срежет высокие частоты, эффективность подавления современных систем связи с частотной модуляцией резко упадет.</p>
+
+<p>Для повышения эффективности воздействия часто применяется амплитудная модуляция несущей частоты шумовым сигналом. Это позволяет «размазать» энергию помехи по более широкому диапазону частот, затрудняя фильтрацию полезного сигнала на стороне приемника. <strong>Коэффициент подавления</strong> напрямую зависит от соотношения мощности полезного сигнала и мощности создаваемой помехи.</p>
+
+<blockquote>⚠️ Внимание: Эксперименты с генерацией мощных электромагнитных полей могут вызвать необратимые повреждения в nearby электронике, включая медицинское оборудование и системы жизнеобеспечения.</blockquote>
+
+<h2 id="основные-типы-генераторов-и-их-схемотехника">Основные типы генераторов и их схемотехника</h2>
+
+<p>Все устройства генерации помех можно классифицировать по типу формируемого сигнала и целевому назначению. Наиболее распространены широкополосные генераторы, которые излучают шум во всем рабочем диапазоне частот. Их схема проще, так как не требует точной настройки на конкретную частоту связи, но они менее эффективны на больших дистанциях из-за рассеивания энергии.</p>
+
+<p>Узкополосные генераторы, или «заградительные», настраиваются на конкретную частоту (например, 433 МГц для автосигнализаций или 2.4 ГГц для Wi-Fi). В таких устройствах используется <strong>перестраиваемый генератор</strong> (VCO), управляемый напряжением. Точность настройки позволяет достигать высокой плотности мощности в узкой полосе частот, что экономит энергию батареи.</p>
+
+<p>Современные программно-определяемые системы (SDR) позволяют генерировать сложные виды помех, имитирующие легитимные пакеты данных. <em>Цифровая обработка сигналов (DSP)</em> дает возможность создавать «умные» помехи, которые активируются только при обнаружении активности в эфире. Это делает их работу менее заметной и более энергоэффективной.</p>
+
+<details class="pb-accordion"><summary>Технические детали реализации ВЧ-части</summary><div class="pb-accordion-body"><p>В высокочастотной части генераторов критически важна согласованность импеданса всех каскадов. Несоответствие волнового сопротивления (обычно 50 Ом) приводит к стоячим волнам, перегреву выходных транзисторов и снижению КПД. Для минимизации потерь используются аттенюаторы и циркуляторы.</p></div></details>
+
+<p>Ниже приведена сравнительная таблица основных характеристик различных типов генераторов:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип генератора</th>
+<th>Принцип действия</th>
+<th>Эффективность</th>
+<th>Сложность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Широкополосный</td>
+<td>Усиление теплового шума</td>
+<td>Низкая на дистанции</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>Узкополосный</td>
+<td>Генерация несущей + модуляция</td>
+<td>Высокая в точке</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Импульсный</td>
+<td>Короткие мощные всплески</td>
+<td>Средняя (сбивает синхронизацию)</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>SDR-глушилка</td>
+<td>Цифровая генерация</td>
+<td>Адаптивная</td>
+<td>Очень высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="модуляция-и-спектральные-характеристики-сигнала">Модуляция и спектральные характеристики сигнала</h2>
+
+<p>Качество и пробивная способность помехи определяются видом используемой модуляции. Простейшим вариантом является амплитудная модуляция (АМ), где шумовой сигнал изменяет амплитуду несущей. Однако современные системы связи часто используют <strong>частотную манипуляцию</strong>, против которой АМ-помехи малоэффективны.</p>
+
+<p>Для подавления цифровых каналов связи (GSM, LTE, Wi-Fi) требуется создание помех, нарушающих целостность пакетов данных. Здесь применяется частотная модуляция (ЧМ) или фазовая манипуляция. <em>Псевдослучайная перестройка частоты</em> позволяет «догонять» полезный сигнал, если он использует скачкообразное изменение частоты (FHSS).</p>
+
+<p>Спектральная чистота генератора также играет роль. Если в сигнале помехи присутствуют побочные гармоники, они могут создавать помехи в непреднамеренных диапазонах, что особенно важно при тестировании собственной аппаратуры на устойчивость. Инженеры стремятся к форме сигнала, максимально приближенной к <strong>гауссовскому белому шуму</strong>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При анализе спектра помехи используйте логарифмический масштаб детектирования (MaxHold), чтобы увидеть пиковые значения кратковременных всплесков, которые могут быть опаснее постоянного шума.</p></aside>
+
+<h2 id="системы-усиления-и-антенные-устройства">Системы усиления и антенные устройства</h2>
+
+<p>Сгенерированный сигнал имеет малую мощность (порядка милливатт), поэтому для создания рабочей зоны подавления необходимы усилители мощности (УМ). В зависимости от диапазона частот применяются различные типы транзисторов: биполярные для низких частот и полевые (LDMOS, GaN) для СВЧ-диапазона. <strong>КПД усилителя</strong> напрямую влияет на время автономной работы устройства.</p>
+
+<p>Антенна является неотъемлемой частью системы, преобразующей электрический ток в электромагнитную волну. Для широкополосных генераторов часто используются спиральные или логопериодические антенны, обеспечивающие равномерное излучение в широком диапазоне. <em>Коэффициент усиления антенны</em> определяет направленность и дальность действия помехи.</p>
+
+<p>Неправильный подбор антенны может привести к выходу из строя выходного каскада генератора из-за высокого коэффициента стоячей волны (КСВ). Поэтому в профессиональных устройствах всегда присутствуют <strong>аттенюаторы</strong> и схемы защиты от рассогласования нагрузки. Направленные антенны позволяют фокусировать энергию в нужном секторе, увеличивая дальность.</p>
+
+<blockquote>⚠️ Внимание: Длительное нахождение в зоне действия мощного генератора помех может представлять опасность для здоровья человека из-за высокого уровня электромагнитного излучения (ЭМИ).</blockquote>
+
+<h2 id="сферы-применения-от-защиты-до-тестирования">Сферы применения: от защиты до тестирования</h2>
+
+<p>Основная легальная сфера применения генераторов помех — это тестирование электромагнитной совместимости (ЭМС) оборудования. Производители электроники обязаны проверять свои устройства на устойчивость к внешним воздействиям. Для этого используются сертифицированные <strong>генераторы тестовых помех</strong>, создающие нормированные воздействия по стандартам ГОСТ или IEC.</p>
+
+<p>В сфере информационной безопасности устройства активного подавления используются для защиты помещений от утечки информации по техническим каналам. Системы «защиты речи» создают акустические или вибрационные помехи, делая невозможным прослушивание через скрытые микрофоны. <em>Акустические генераторы</em> широко применяются в переговорных комнатах государственных и коммерческих структур.</p>
+
+<p>Также существуют специализированные применения в военном деле и спецслужбах для нейтрализации радиоуправляемых взрывных устройств (РУВ) и дронов. В этом контексте критически важна скорость реакции и широкий частотный охват, перекрывающий все возможные каналы управления. <strong>Мобильные комплексы</strong> способны создавать «купол» безопасности вокруг охраняемого объекта.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Критерии выбора тестового генератора</h4><label class="check-item"><input type="checkbox"><span>Диапазон частот покрытия</span></label><label class="check-item"><input type="checkbox"><span>Выходная мощность</span></label><label class="check-item"><input type="checkbox"><span>Тип модуляции</span></label><label class="check-item"><input type="checkbox"><span>Наличие сертификации</span></label><label class="check-item"><input type="checkbox"><span>Время автономной работы</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="методы-защиты-от-электромагнитных-помех">Методы защиты от электромагнитных помех</h2>
+
+<p>Понимание того, как работает генератор помех, позволяет эффективно противостоять его воздействию. Базовым методом является экранирование: размещение чувствительной электроники в замкнутых объемах из материалов с высокой магнитной проницаемостью (пермаллой, мю-металл). <strong>Экраны</strong> отражают или поглощают электромагнитную энергию, не давая ей проникнуть внутрь.</p>
+
+<p>В линиях связи и питания используются фильтры, срезающие высокочастотную составляющую шума. Ферритовые кольца, установленные на кабелях, повышают индуктивность провода для ВЧ-сигналов, превращая кабель в эффективный дроссель. <em>Дифференциальная передача данных</em> также повышает устойчивость, так как помеха наводится одинаково на оба провода пары и вычитается на приемной стороне.</p>
+
+<p>Программные методы защиты включают использование протоколов с повторной передачей пакетов и кодами коррекции ошибок. Если помеха носит импульсный характер, буферизация данных позволяет сохранить целостность информации. Однако против мощного непрерывного шума (jamming) программные методы малоэффективны без физической защиты.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Полная защита от профессиональных средств подавления возможна только при комплексном подходе, сочетающем экранирование помещения, фильтрацию линий и использование защищенных протоколов связи.</p></aside>
+
+<p>Использование оптоволоконных линий связи вместо медных проводов полностью исключает наводки электромагнитных помех, так как свет не подвержен воздействию электрического поля. Это <strong>оптоизоляция</strong> является стандартом для критически важных каналов передачи данных в условиях высокого уровня электромагнитного шума.</p>
+
+<details>
+<summary>Можно ли изготовить генератор помех своими руками?</summary>
+<p>Теоретически простейший генератор шума можно собрать на основе шумящего транзистора и усилителя, однако его эффективность будет крайне низкой. Для создания реального воздействия требуются высокочастотные компоненты, точная настройка антенн и мощные источники питания. Кроме того, изготовление и использование таких устройств во многих странах запрещено законодательством.</p>
+</details>
+
+<details>
+<summary>Вреден ли генератор помех для бытовой техники?</summary>
+<p>Мощные генераторы могут вызывать сбои в работе незащищенной бытовой техники, находящейся в непосредственной близости. Возможны помехи в аудиосистемах, искажения изображения на аналоговых мониторах и потеря соединения Wi-Fi. Современные цифровые устройства обладают определенной степенью защиты, но длительное воздействие мощного поля может привести к перегреву или программным ошибкам.</p>
+</details>
+
+<details>
+<summary>Какова дальность действия типичного генератора помех?</summary>
+<p>Дальность действия сильно зависит от мощности устройства (обычно от 1 до 50 Вт) и условий местности. Карманные модели («джаммеры») эффективны на расстоянии 5-15 метров. Стационарные комплексы могут создавать зону пода радиусом до 50-100 метров и более. Прямая видимость и отсутствие экранирующих объектов значительно увеличивают радиус поражения.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/n/na/nasadka-dlya-nakachivaniya-koles.html" class="pb-related-card">
+                <span class="pb-related-title">Насадка для накачивания колес: виды, выбор и применение</span>
+                <span class="pb-related-desc">Полный гид по насадкам для компрессоров. Типы штуцеров, совместимость с велосипедами и авто, устране</span>
+            </a><a href="/articles/o/os/osnovnye-mekhanizmy-ak-47.html" class="pb-related-card">
+                <span class="pb-related-title">Основные механизмы АК 47: устройство, работа и характеристики</span>
+                <span class="pb-related-desc">Полный разбор основных механизмов АК 47. Устройство затвора, газового двигателя и ударно-спускового </span>
+            </a><a href="/articles/p/pu/pusko-zaryadnoe-ustrojstvo-carku-pro-60.html" class="pb-related-card">
+                <span class="pb-related-title">CARKU PRO 60: пуско-зарядное устройство для авто — обзор и инструкция</span>
+                <span class="pb-related-desc">Подробный обзор пуско-зарядного устройства CARKU PRO 60: характеристики, преимущества, инструкция по</span>
+            </a><a href="/articles/s/so/soedinitelnaya-detal-5-bukv.html" class="pb-related-card">
+                <span class="pb-related-title">Соединительная деталь 5 букв: ответы на кроссворды и виды фитингов</span>
+                <span class="pb-related-desc">Ищете, что такое соединительная деталь 5 букв? Ответы на сканворды, виды автомобильных фитингов, муф</span>
+            </a><a href="/articles/s/sk/skaner-obd-2-dlya-diagnostiki.html" class="pb-related-card">
+                <span class="pb-related-title">Сканер OBD2 для диагностики авто: выбор, подключение, ошибки</span>
+                <span class="pb-related-desc">Как выбрать сканер OBD2 для диагностики автомобиля? Обзор функций, сравнение моделей, расшифровка ош</span>
+            </a><a href="/articles/r/ry/rychazhnaya-lebedka-2-tonny.html" class="pb-related-card">
+                <span class="pb-related-title">Рычажная лебёдка 2 тонны: выбор, применение и ТОП-5 моделей 2026</span>
+                <span class="pb-related-desc">Как выбрать рычажную лебёдку на 2т для внедорожника, гаража или стройки? Сравнение характеристик, об</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>AleaDA: проверка аукционного листа и расшифровка — Авто Справочник</title>
+    <meta name="description" content="Подробный гайд по работе с сервисом AleaDA. Как проверить аукционный лист, расшифровать коды и избежать покупки проблемного авто.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/a/al/aleada-proverka-auktsionnogo-lista.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AleaDA: проверка аукционного листа и расшифровка">
+    <meta property="og:description" content="Подробный гайд по работе с сервисом AleaDA. Как проверить аукционный лист, расшифровать коды и избежать покупки проблемного авто.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/" class="pb-nav-active">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/pokupka-i-prodazha/">Покупка и Продажа</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">AleaDA: проверка аукционного листа и расшифровка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#значение-аукционного-листа-при-импорте-авто">Значение аукционного листа при импорте авто</a></li><li><a href="#как-работает-система-aleada-для-анализа">Как работает система AleaDA для анализа</a></li><li><a href="#пошаговая-инструкция-по-проверке-лота">Пошаговая инструкция по проверке лота</a></li><li><a href="#расшифровка-оценочных-баллов-и-grades">Расшифровка оценочных баллов и grades</a></li><li><a href="#анализ-схемы-кузова-и-кодов-дефектов">Анализ схемы кузова и кодов дефектов</a></li><li><a href="#частые-ошибки-при-самостоятельной-оценке">Частые ошибки при самостоятельной оценке</a></li><li><a href="#влияние-истории-ремонтов-на-стоимость-авто">Влияние истории ремонтов на стоимость авто</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/ma/marka-italyanskikh-avtomobilej-4-bukvy.html">Итальянские авто на 4 буквы: полный список марок и их особенности</a></li><li><a href="/articles/2/24/24-avto-ru-prodazha-avto.html">24 auto: продажа авто на Авито, цены, советы по сделке</a></li><li><a href="/articles/k/ka/kakoj-kitajskij-krossover-nadezhnee.html">Какой китайский кроссовер надежнее в 2026: рейтинг и советы</a></li><li><a href="/articles/k/ka/kak-kupit-novuyu-mashinu-vygodno.html">Как купить новую машину выгодно: стратегии и секреты</a></li><li><a href="/articles/7/7-/7-mestnyj-avtomobil-kitaets.html">7 местный китайский автомобиль: ТОП-6 лучших моделей 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>AleaDA: профессиональная проверка аукционного листа</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#значение-аукционного-листа-при-импорте-авто">Значение аукционного листа при импорте авто</a></li><li><a href="#как-работает-система-aleada-для-анализа">Как работает система AleaDA для анализа</a></li><li><a href="#пошаговая-инструкция-по-проверке-лота">Пошаговая инструкция по проверке лота</a></li><li><a href="#расшифровка-оценочных-баллов-и-grades">Расшифровка оценочных баллов и grades</a></li><li><a href="#анализ-схемы-кузова-и-кодов-дефектов">Анализ схемы кузова и кодов дефектов</a></li><li><a href="#частые-ошибки-при-самостоятельной-оценке">Частые ошибки при самостоятельной оценке</a></li><li><a href="#влияние-истории-ремонтов-на-стоимость-авто">Влияние истории ремонтов на стоимость авто</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Приобретение автомобиля с японского аукциона всегда сопряжено с определенными рисками, так как покупатель физически не может осмотреть транспортное средство перед торгами. Единственным объективным источником информации в этом случае становится аукционный лист, однако его чтение требует специфических знаний и опыта. Система <em>AleaDA</em> зарекомендовала себя как надежный инструмент для независимой оценки состояния лотов, позволяя избежать скрытых дефектов и некорректных оценок.</p>
+
+<p>В современном автобизнесе недостаточно просто знать японский язык, важно понимать логику работы аукционных домов и методы, которыми пользуются инспекторы. <strong>Проверка аукционного листа</strong> через специализированные сервисы позволяет выявить расхождения между декларируемым состоянием и реальностью. Это особенно актуально для автомобилей с пробегом, где каждый скрытый дефект может стоить владельцу значительных сумм при последующем ремонте.</p>
+
+<p>Использование цифровых инструментов анализа документации становится стандартом для профессиональных автодилеров и перекупщиков. <em>AleaDA</em> предоставляет структурированные данные, которые помогают принять взвешенное решение о покупке. В этой статье мы детально разберем функционал системы, научимся интерпретировать сложные обозначения и понимать, как именно формируется итоговая оценка транспортного средства.</p>
+
+<h2 id="значение-аукционного-листа-при-импорте-авто">Значение аукционного листа при импорте авто</h2>
+
+<p>Аукционный лист — это юридически значимый документ, который заполняется сертифицированным инспектором аукционного дома перед выставлением автомобиля на торги. В нем фиксируется текущее состояние кузова, салона, ходовой части и двигателя. <strong>Независимая проверка</strong> этого документа критически важна, так как человеческий фактор или спешка при осмотре могут привести к ошибкам в оценке, которые выгодны продавцу, но убыточны для покупателя.</p>
+
+<p>Документ содержит не только текстовое описание, но и графическую схему кузова с указанием мест повреждений. <mark>Цифровые коды в аукционном листе являются универсальным языком, понятным профессионалам во всех префектурах Японии.</mark> Однако даже опытные специалисты иногда трактуют одни и те же повреждения по-разному, поэтому перепроверка данных через систему <em>AleaDA</em> служит отличным фильтром для отсеивания некачественных лотов.</p>
+
+<p>Стоит отметить, что аукционные дома не несут ответственности за скрытые дефекты, если они не были отмечены в листе, но визуально определяемы при детальном осмотре. Именно поэтому <strong>детальная расшифровка</strong> каждого символа становится задачей номер один для импортера. Ошибки в определении степени коррозии или качества repaint (перекраса) могут изменить стоимость автомобиля на тысячи долларов.</p>
+
+<details class="pb-accordion"><summary>Почему инспекторы ошибаются?</summary><div class="pb-accordion-body"><p>Инспектор аукциона осматривает автомобиль в среднем за 3-5 минут. В условиях большого потока машин и плохого освещения на некоторых площадкахные дефекты, такие как микротрещины на стекле или начинающаяся коррозия под уплотнителями, могут быть упущены. Кроме того, существуют «серые» схемы, когда перекупщики специально скрывают дефекты перед подачей на аукцион, зная, что инспектор не будет разбирать пол салона.</p></div></details>
+
+<h2 id="как-работает-система-aleada-для-анализа">Как работает система AleaDA для анализа</h2>
+
+<p>Сервис <em>AleaDA</em> представляет собой сложную программную среду, которая агрегирует данные из множества японских источников и позволяет проводить глубокий анализ истории и состояния автомобиля. Принцип работы строится на сравнении заявленных характеристик с архивными данными и статистикой по конкретным моделям. <strong>Алгоритмы проверки</strong> способны выявлять несоответствия, которые не заметны при беглом взгляде на скан документа.</p>
+
+<p>Пользователь загружает номер лота или VIN-код, после чего система формирует подробный отчет. В отличие от простых переводчиков, <em>AleaDA</em> учитывает контекст и специфику различных аукционных домов (TAA, USS, JAA и другие). <strong>Точность данных</strong> обеспечивается за счет постоянного обновления базы знаний о методах оценки и новых типах повреждений, встречающихся на рынке.</p>
+
+<p>Одной из ключевых функций является возможность отслеживания истории участия автомобиля в торгах. Если машина выставлялась ранее и была забракована или продана, система может предоставить информацию о причинах. Это помогает избежать покупки «неликвида», который годами кочует по аукционам из-за скрытых проблем с документами или технической частью.</p>
+
+<div class="pb-poll" id="poll-53f027a9"><div class="pb-poll-question">📊 Как вы чаще всего проверяете авто перед покупкой?</div><div class="pb-poll-option" data-poll="53f027a9" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Личный осмотр</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="53f027a9" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Услуги автоподборщика</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="53f027a9" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Проверка по базам/сервисам</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="53f027a9" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Доверяю продавцу</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="53f027a9" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Не проверяю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="пошаговая-инструкция-по-проверке-лота">Пошаговая инструкция по проверке лота</h2>
+
+<p>Процесс верификации автомобиля через систему начинается с получения первичных данных. Вам необходимо иметь на руках скан аукционного листа или хотя бы номер лота и название аукциона. Введите эти данные в соответствующее поле поисковой системы <code>AleaDA Search</code>. После обработки запроса откроется карточка автомобиля с детализированной информацией.</p>
+
+<p>На следующем этапе необходимо сверить VIN-код, указанный в шапке документа, с кодом на кузове (если есть возможность) или в других базах данных. <strong>Идентификация автомобиля</strong> — это базовый уровень защиты от мошенничества. Система автоматически подсветит расхождения в комплектации или году выпуска, если они будут найдены в открытых источниках.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист первичной проверки</h4><label class="check-item"><input type="checkbox"><span>Сверить VIN-код на кузове и в документах</span></label><label class="check-item"><input type="checkbox"><span>Проверить соответствие года выпуска</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в читаемости всех штампов</span></label><label class="check-item"><input type="checkbox"><span>Сравнить цвет кузова с кодом в техпаспорте</span></label><label class="check-item"><input type="checkbox"><span>Проверить наличие дубликатов ПТС в истории</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Далее следует перейти к детальному анализу оценочных листов. Обратите внимание на дату осмотра: чем она свежее, тем актуальнее информация. Если с момента осмотра прошло более двух недель, состояние автомобиля могло измениться, особенно если он хранится на открытой площадке. <em>Своевременная проверка</em> позволяет зафиксировать состояние на конкретный момент времени.</p>
+
+<h2 id="расшифровка-оценочных-баллов-и-grades">Расшифровка оценочных баллов и grades</h2>
+
+<p>Японская система оценки автомобилей базируется на буквенно-цифровой градации, которая может быть непонятна неподготовленному человеку. <strong>Оценочный балл</strong> (Grade) является интегральным показателем состояния. Например, оценка «S» или «6» означает новый автомобиль без пробега или с минимальным пробегом в идеальном состоянии. Оценка «5» соответствует автомобилю в отличном состоянии, практически без следов эксплуатации.</p>
+
+<p>Автомобили с оценкой «4» и «4.5» являются наиболее распространенными на аукционах. Цифра «4» означает хорошее состояние с незначительными царапинами или потертостями, требующими полировки. <strong>Дробные значения</strong>, такие как 4.5, часто указывают на то, что дефекты минимальны и скорее всего будут устранены предпродажной подготовкой. Машины с оценкой «3» требуют внимания: это могут быть заметные вмятины, царапины до грунта или следы коррозии.</p>
+
+<p>Отдельно стоит рассмотреть оценки «R», «RA», «RB» и «A1». Буква «R» указывает на то, что автомобиль побывал в ДТП и имеет замененные или восстановленные элементы кузова. <em>Степень восстановления</em> может быть разной: от легкой замены бампера до серьезного ремонта силовых элементов. <strong>Проверка истории</strong> таких автомобилей через <em>AleaDA</em> обязательна, так как качество ремонта в Японии может сильно варьироваться.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Обратите внимание на suffix (дополнительные буквы) к оценке. Например, оценка 3.5A означает, что автомобиль в среднем состоянии, но салон оценен отдельно на «A» (хороший). Если стоит 3.5B, значит, салон требует химчистки или ремонта.</p></aside>
+
+<h2 id="анализ-схемы-кузова-и-кодов-дефектов">Анализ схемы кузова и кодов дефектов</h2>
+
+<p>Графическая схема кузова в аукционном листе — это карта повреждений автомобиля. Каждый квадрат или круг на схеме соответствует определенной детали: двери, крылу, капоту, крыше. Внутри этих фигур или рядом с ними располагаются коды, обозначающие тип и severity (тяжесть) повреждения. <strong>Умение читать схему</strong> позволяет визуально представить состояние машины еще до ее осмотра вживую.</p>
+
+<p>Основные обозначения включают: <code>W</code> (Wave/заметная вмятина), <code>U</code> (Uwame/вмятина), <code>XX</code> (замена детали), <code>Rep</code> (реставрация/шпатлевка). Цифры рядом с буквами (1, 2, 3) указывают на степень повреждения, где 3 — наиболее серьезное. Например, <code>W2</code> на двери означает заметную вмятину, требующую рихтовки, а <code>Rep3</code> говорит о том, что деталь была шпатлевана на большой площади.</p>
+
+<p>Особое внимание следует уделять обозначениям коррозии (<code>Cor</code> или <code>Wd</code>) и состоянию стекол (<code>G</code>). Трещины на стеклах обозначаются звездочкой или буквой в зависимости от аукциона. <strong>Система AleaDA</strong> часто подсвечивает критические зоны, где количество дефектов превышает допустимые нормы для заявленной оценки. Это помогает выявить случаи, когда инспектор «закрыл глаза» на серьезные проблемы.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Код дефекта</th>
+<th>Расшифровка</th>
+<th>Степень (1-3)</th>
+<th>Влияние на цену</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>U</code></td>
+<td>Вмятина (Dent)</td>
+<td>1-3 (от мелкой до глубокой)</td>
+<td>Низкое / Среднее</td>
+</tr>
+<tr>
+<td><code>W</code></td>
+<td>Большая вмятина (Wave)</td>
+<td>1-3</td>
+<td>Среднее</td>
+</tr>
+<tr>
+<td><code>Rep</code></td>
+<td>Реставрация (Repair)</td>
+<td>1-3 (площадь покрытия)</td>
+<td>Высокое (снижает оценку)</td>
+</tr>
+<tr>
+<td><code>Cor</code></td>
+<td>Коррозия (Corrosion)</td>
+<td>1-3</td>
+<td>Критическое</td>
+</tr>
+<tr>
+<td><code>XX</code></td>
+<td>Замена детали</td>
+<td>-</td>
+<td>Высокое (подозрение на ДТП)</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сочетание кода «XX» (замена) и «R» (восстановление) на одной детали почти всегда свидетельствует о серьезном ДТП в истории автомобиля. Будьте осторожны с такими лотами.</p></aside>
+
+<h2 id="частые-ошибки-при-самостоятельной-оценке">Частые ошибки при самостоятельной оценке</h2>
+
+<p>Новички часто совершают типичные ошибки, пытаясь сэкономить на услугах профессионалов или игнорируя. Одна из самых распространенных ошибок — игнорирование комментариев инспектора в текстовой части листа. Там могут быть указания на <strong>нестандартные modifications</strong>, замену двигателя или проблемы с документами, которые не отражены в баллах.</p>
+
+<p>Другая ошибка — недооценка влияния пробега на общую оценку. В Японии пробег является одним из ключевых факторов ценообразования. <em>Заниженный пробег</em> (что часто бывает при «своде» пробега перед аукционом) может быть выявлен только при сравнении с историей обслуживания или предыдущими аукционными листами, что умеет делать <em>AleaDA</em>.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не полагайтесь только на общую оценку (Grade). Автомобиль с оценкой 4.5 может иметь замененное лобовое стекло и перекрашенный бампер, что существенно снижает его реальную рыночную стоимость по сравнению с «честной» четверкой.</p>
+</blockquote>
+
+<p>Также часто упускается из виду состояние резины и дисков. Если в листе указано <code>Tire: 50%</code> или менее, это означает, что колеса требуют немедленной замены, что является дополнительными расходами. <strong>Комплектация</strong> также должна быть проверена: отсутствие оригинальных ковриков, навигации или ключей может быть неприятным сюрпризом.</p>
+
+<details class="pb-accordion"><summary>Скрытый смысл фразы «Smell</summary><div class="pb-accordion-body"><p> Tobacco» или «Smell: Pet»:Если в графе «Запах» указано «Табак» или «Животные», это серьезный сигнал. Вывести запах сигарет или шерсти из салона, особенно с тканевой обивкой, крайне сложно и дорого. Такие автомобили часто теряют до 10-15% стоимости на внутреннем рынке Японии и еще больше при экспорте в страны, где курящие машины не в почете.</p></div></details>
+
+<h2 id="влияние-истории-ремонтов-на-стоимость-авто">Влияние истории ремонтов на стоимость авто</h2>
+
+<p>История ремонтов — это скелет, на котором держится цена автомобиля. Машина, побывавшая в ДТП, всегда стоит дешевле аналогичной «чистой». Однако степень влияния зависит от характера повреждений. <strong>Косметический ремонт</strong> бампера или крыла практически не влияет на ликвидность, если выполнен качественно. В то же время, нарушение геометрии рамы или лонжеронов делает автомобиль опасным и трудным для продажи.</p>
+
+<p>Сервис <em>AleaDA</em> помогает отследить, менялись ли номера агрегатов. Если номер двигателя или рамы не совпадает с заявленным в базе или имеет следы вмешательства, это «красный флаг». <strong>Юридическая чистота</strong> в Японии строго контролируется, и проблемы с документами могут привести к невозможности регистрации автомобиля в стране-импортере.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если в аукционном листе стоит отметка о замене AIRBAG (подушек безопасности), это автоматически переводит автомобиль в категорию «после ДТП». Даже если визуально кузов цел, сработавшие подушки означают сильный удар, который мог нарушить скрытые элементы конструкции.</p>
+</blockquote>
+
+<p>При анализе истории ремонтов важно учитывать возраст автомобиля. Для машины 10-15 лет наличие перекрасов является нормой, так как лак выгорает и появляются сколы. Однако для трехлетнего автомобиля наличие <code>Rep</code> на нескольких элементах говорит о неаккуратной эксплуатации или скрытых проблемах. <em>Баланс между возра</div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/ma/marka-italyanskikh-avtomobilej-4-bukvy.html" class="pb-related-card">
+                <span class="pb-related-title">Итальянские авто на 4 буквы: полный список марок и их особенности</span>
+                <span class="pb-related-desc">Какие итальянские марки автомобилей состоят из 4 букв? Обзор всех брендов, их история, популярные мо</span>
+            </a><a href="/articles/2/24/24-avto-ru-prodazha-avto.html" class="pb-related-card">
+                <span class="pb-related-title">24 auto: продажа авто на Авито, цены, советы по сделке</span>
+                <span class="pb-related-desc">Как купить авто на 24auto.ru? Актуальные цены, проверка VIN, безопасность сделки и пошаговая инструк</span>
+            </a><a href="/articles/k/ka/kakoj-kitajskij-krossover-nadezhnee.html" class="pb-related-card">
+                <span class="pb-related-title">Какой китайский кроссовер надежнее в 2026: рейтинг и советы</span>
+                <span class="pb-related-desc">Сравниваем надежность китайских кроссоверов: Geely, Chery, Haval и других. Отзывы владельцев, статис</span>
+            </a><a href="/articles/k/ka/kak-kupit-novuyu-mashinu-vygodno.html" class="pb-related-card">
+                <span class="pb-related-title">Как купить новую машину выгодно: стратегии и секреты</span>
+                <span class="pb-related-desc">Узнайте, как купить новую машину выгодно: выбор времени, кредитные программы, трейд-ин, скидки от ди</span>
+            </a><a href="/articles/7/7-/7-mestnyj-avtomobil-kitaets.html" class="pb-related-card">
+                <span class="pb-related-title">7 местный китайский автомобиль: ТОП-6 лучших моделей 2026</span>
+                <span class="pb-related-desc">Обзор лучших 7-местных автомобилей из Китая. Сравнение характеристик, цены и надежности. Какой китае</span>
+            </a><a href="/articles/r/ra/rassrochka-na-avtomobil-podvodnye-kamni.html" class="pb-related-card">
+                <span class="pb-related-title">Рассрочка на автомобиль: 7 подводных камней, о которых молчат дилеры</span>
+                <span class="pb-related-desc">Что скрывают за красивыми условиями рассрочки на авто? Разбираем скрытые комиссии, штрафы и риски пе</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

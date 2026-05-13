@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Формула расчета сопротивления воздуха для автомобилей — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как рассчитать сопротивление воздуха автомобиля: формула, коэффициенты, примеры и практические советы для автовладельцев.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/f/fo/formula-rascheta-soprotivleniya-vozdukha.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Формула расчета сопротивления воздуха для автомобилей">
+    <meta property="og:description" content="Узнайте, как рассчитать сопротивление воздуха автомобиля: формула, коэффициенты, примеры и практические советы для автовладельцев.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Формула расчета сопротивления воздуха для автомобилей</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#основная-формула-сопротивления-воздуха">Основная формула сопротивления воздуха</a></li><li><a href="#коэффициент-лобового-сопротивления-c-d">Коэффициент лобового сопротивления (C_d)</a></li><li><a href="#лобовая-площадь-автомобиля-a">Лобовая площадь автомобиля (A)</a></li><li><a href="#плотность-воздуха-ρ">Плотность воздуха (ρ)</a></li><li><a href="#практический-пример-расчета">Практический пример расчета</a></li><li><a href="#влияние-сопротивления-воздуха-на-автомобиль">Влияние сопротивления воздуха на автомобиль</a></li><li><a href="#как-уменьшить-сопротивление-воздуха">Как уменьшить сопротивление воздуха</a></li><li><a href="#частые-вопросы-о-сопротивлении-воздуха">Частые вопросы о сопротивлении воздуха</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/cu/cummins-insite-skanmatik-2.html">Cummins INsite и SkanMatik 2: полное руководство по диагностике</a></li><li><a href="/articles/k/kl/klapan-evap-chto-eto.html">Клапан EVAP: что это, признаки неисправности и замена</a></li><li><a href="/articles/p/po/pokolenie-golfov-po-godam.html">Поколения Гольф по годам: полный список моделей</a></li><li><a href="/articles/v/v-/v-chem-izmeryaetsya-takhometr.html">В чем измеряется тахометр: Единицы, Погрешность и Диагностика</a></li><li><a href="/articles/k/k-/k-chemu-snitsya-ne-zavoditsya-mashina.html">К чему снится, что не заводится машина: толкование и советы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Расчет сопротивления воздуха автомобиля: формула и нюансы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#основная-формула-сопротивления-воздуха">Основная формула сопротивления воздуха</a></li><li><a href="#коэффициент-лобового-сопротивления-c-d">Коэффициент лобового сопротивления (C_d)</a></li><li><a href="#лобовая-площадь-автомобиля-a">Лобовая площадь автомобиля (A)</a></li><li><a href="#плотность-воздуха-ρ">Плотность воздуха (ρ)</a></li><li><a href="#практический-пример-расчета">Практический пример расчета</a></li><li><a href="#влияние-сопротивления-воздуха-на-автомобиль">Влияние сопротивления воздуха на автомобиль</a></li><li><a href="#как-уменьшить-сопротивление-воздуха">Как уменьшить сопротивление воздуха</a></li><li><a href="#частые-вопросы-о-сопротивлении-воздуха">Частые вопросы о сопротивлении воздуха</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Сопротивление воздуха — это сила, которая возникает при движении автомобиля и противодействует его перемещению. Она зависит от скорости, формы кузова, площади лобовой проекции и других параметров. Понимание того, как рассчитывается <strong>сопротивление воздуха</strong>, помогает оптимизировать расход топлива, улучшить аэродинамику и повысить максимальную скорость машины.</p>
+<p>В автомобильной индустрии аэродинамика играет ключевую роль. Производители тратят миллионы на испытания в аэродинамических трубах, чтобы уменьшить <em>коэффициент лобового сопротивления</em> (<code>Cx</code>). Однако даже рядовому автовладельцу полезно знать, как работает формула расчета, чтобы правильно интерпретировать технические характеристики транспортного средства.</p>
+
+<h2 id="основная-формула-сопротивления-воздуха">Основная формула сопротивления воздуха</h2>
+<p>Сила сопротивления воздуха (<code>F_d</code>) рассчитывается по формуле:</p>
+<p><strong><code>F_d = 0.5 × ρ × v² × C_d × A</code></strong>, где:</p>
+<ul>
+<li>🔹 <strong>ρ (ро)</strong> — плотность воздуха (кг/м³), обычно принимается как <code>1.225 кг/м³</code> при температуре <code>15°C</code> и атмосферном давлении на уровне моря;</li>
+<li>🔹 <strong>v</strong> — скорость автомобиля относительно воздуха (м/с);</li>
+<li>🔹 <strong>C_d</strong> — <em>коэффициент аэродинамического сопротивления</em> (безразмерная величина);</li>
+<li>🔹 <strong>A</strong> — лобовая площадь автомобиля (м²).</li>
+</ul>
+<p>Эта формула является основой для всех аэродинамических расчетов в автопроме. Например, при увеличении скорости в 2 раза сила сопротивления возрастает в <strong>4 раза</strong>, так как зависимость квадратичная.</p>
+
+<div class="pb-poll" id="poll-830c954e"><div class="pb-poll-question">📊 Как часто вы обращаете внимание на аэродинамику при выборе автомобиля?</div><div class="pb-poll-option" data-poll="830c954e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Всегда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="830c954e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Иногда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="830c954e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Рядко</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="830c954e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>В реальных условиях на сопротивление влияют и другие факторы: ветер, влажность, температура воздуха. Однако для большинства практических расчетов достаточно стандартных значений.</p>
+
+<h2 id="коэффициент-лобового-сопротивления-c-d">Коэффициент лобового сопротивления (<code>C_d</code>)</h2>
+<p><strong>Коэффициент аэродинамического сопротивления</strong> (<code>C_d</code> или <code>Cx</code>) показывает, насколько обтекаема форма автомобиля. Чем ниже это значение, тем лучше аэродинамика. Современные серийные автомобили имеют <code>C_d</code> в диапазоне от <code>0.25</code> до <code>0.45</code>.</p>
+<p>Например:</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr><th>Тип автомобиля</th><th>Примерная модель</th><th>Коэффициент <code>C_d</code></th></tr>
+</thead>
+<tbody>
+<tr><td>Спортивные автомобили</td><td><em>Tesla Model S</em></td><td>0.24</td></tr>
+<tr><td>Седаны</td><td><em>Toyota Camry</em></td><td>0.28</td></tr>
+<tr><td>Хэтчбеки</td><td><em>Volkswagen Golf</em></td><td>0.30</td></tr>
+<tr><td>Внедорожники</td><td><em>Jeep Wrangler</em></td><td>0.42</td></tr>
+<tr><td>Грузовики</td><td><em>Scania R450</em></td><td>0.60</td></tr>
+</tbody>
+</table></div>
+<p>Уменьшение <code>C_d</code> на <code>0.01</code> может сэкономить до <code>0.1 л/100 км</code> топлива при скорости <code>100 км/ч</code>. Производители добиваются этого за счет гладких форм кузова, спойлеров, дефлекторов и других элементов.</p>
+
+<blockquote>⚠️ Внимание: Коэффициент <code>C_d</code> может изменяться в зависимости от угла атаки ветра. Например, при боковом ветре аэродинамическое сопротивление возрастает на <code>10-15%</code>.</blockquote>
+
+<h2 id="лобовая-площадь-автомобиля-a">Лобовая площадь автомобиля (<code>A</code>)</h2>
+<p><strong>Лобовая площадь</strong> — это проекция автомобиля на плоскость, перпендикулярную направлению движения. Для легковых автомобилей она обычно составляет <code>2.0–2.5 м²</code>, для грузовиков — <code>5–10 м²</code>.</p>
+<p>Точное значение можно найти в технической документации или рассчитать самостоятельно. Для этого нужно:</p>
+<ol>
+<li>Сфотографировать автомобиль спереди;</li>
+<li>Измерить высоту и ширину на фото;</li>
+<li>Умножить эти значения и скорректировать с учетом масштаба.</li>
+</ol>
+<p>Некоторые производители указывают лобовую площадь в спецификациях. Например, у <em>BMW 3 Series</em> она составляет около <code>2.2 м²</code>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для точного расчета лобовой площади используйте лазерный дальномер — это устранит погрешности, связанные с перспективой на фото.</p></aside>
+
+<h2 id="плотность-воздуха-ρ">Плотность воздуха (ρ)</h2>
+<p>Плотность воздуха зависит от <strong>температуры, давления и влажности</strong>. В стандартных условиях (<code>15°C</code>, <code>1013.25 гПа</code>) она равна <code>1.225 кг/м³</code>. Однако в реальных условиях это значение может варьироваться:</p>
+<ul>
+<li>🌡️ При <code>0°C</code> плотность увеличивается до <code>1.293 кг/м³</code>;</li>
+<li>🌡️ При <code>30°C</code> плотность уменьшается до <code>1.165 кг/м³</code>;</li>
+<li>🏔️ На высоте <code>1000 м</code> над уровнем моря плотность падает до <code>1.112 кг/м³</code>.</li>
+</ul>
+<p>Для точных расчетов можно использовать формулу:</p>
+<pre><code>ρ = P / (R × T)</code></pre>
+<p>где <code>P</code> — давление (Па), <code>R</code> — удельная газовая постоянная для воздуха (<code>287.05 Дж/(кг·К)</code>), <code>T</code> — температура в Кельвинах (<code>°C + 273.15</code>).</p>
+
+<blockquote>⚠️ Внимание: При движении в горных районах сопротивление воздуха может снижаться на <code>20-30%</code> из-за разреженной атмосферы, но это также уменьшает подъемную силу, что может ухудшить сцепление с дорогой.</blockquote>
+
+<h2 id="практический-пример-расчета">Практический пример расчета</h2>
+<p>Рассчитаем силу сопротивления воздуха для <em>Toyota Corolla</em> при скорости <code>100 км/ч</code>:</p>
+<ul>
+<li>📌 <code>C_d = 0.29</code>;</li>
+<li>📌 <code>A = 2.1 м²</code>;</li>
+<li>📌 <code>ρ = 1.225 кг/м³</code>;</li>
+<li>📌 <code>v = 100 км/ч = 27.78 м/с</code>.</li>
+</ul>
+<p>Подставляем в формулу:</p>
+<pre><code>F_d = 0.5 × 1.225 × (27.78)² × 0.29 × 2.1 ≈ 258 Н</code></pre>
+<p>Это означает, что при скорости <code>100 км/ч</code> автомобиль должен преодолевать силу сопротивления воздуха около <code>258 Н</code> (или <code>26.3 кгс</code>).</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Что нужно для расчета сопротивления воздуха</h4><label class="check-item"><input type="checkbox"><span>Определить коэффициент Cx</span></label><label class="check-item"><input type="checkbox"><span>Измерить лобовую площадь A</span></label><label class="check-item"><input type="checkbox"><span>Уточнить плотность воздуха ρ</span></label><label class="check-item"><input type="checkbox"><span>Перевести скорость в м/с</span></label><label class="check-item"><input type="checkbox"><span>Подставить значения в формулу</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="влияние-сопротивления-воздуха-на-автомобиль">Влияние сопротивления воздуха на автомобиль</h2>
+<p>Сопротивление воздуха напрямую влияет на:</p>
+<ul>
+<li>🚗 <strong>Расход топлива</strong> — при скорости выше <code>80 км/ч</code> аэродинамическое сопротивление становится основным фактором, увеличивающим потребление топлива;</li>
+<li>🏎️ <strong>Максимальную скорость</strong> — автомобили с низким <code>C_d</code> могут развивать более высокую скорость при той же мощности двигателя;</li>
+<li>🎯 <strong>Устойчивость на дороге</strong> — правильная аэродинамика уменьшает подъемную силу и улучшает сцепление с дорогой.</li>
+</ul>
+<p>Например, <em>Bugatti Chiron</em> с <code>C_d = 0.38</code> и мощностью <code>1500 л.с.</code> может развивать скорость более <code>400 км/ч</code> именно благодаря оптимизированной аэродинамике.</p>
+
+<p>С другой стороны, грузовики с высоким <code>C_d</code> и большой лобовой площадью тратят до <code>30%</code> мощности двигателя только на преодоление сопротивления воздуха.</p>
+
+<details class="pb-accordion"><summary>Почему у грузовиков такой высокий коэффициент Cx?</summary><div class="pb-accordion-body"><p>Грузовики имеют прямоугольную форму кузова, которая плохо обтекается воздухом. Даже небольшие изменения в дизайне, например, добавление обтекателей на крышу кабины, могут снизить Cx на 5-10%.</p></div></details>
+
+<h2 id="как-уменьшить-сопротивление-воздуха">Как уменьшить сопротивление воздуха</h2>
+<p>Снизить сопротивление воздуха можно несколькими способами:</p>
+<ul>
+<li>🔧 Установить <strong>обтекаемые элементы</strong> (спойлеры, дефлекторы, юбки);</li>
+<li>🚘 Закрыть <strong>зазоры между кузовом и дорогой</strong> (нижние обвесы);</li>
+<li>🪟 Использовать <strong>затонированные стекла</strong> с аэродинамическим профилем;</li>
+<li>🛠️ Убрать <strong>лишние элементы</strong> (багажники, антенны, наружные зеркала);</li>
+<li>🎨 Применять <strong>гладкие покрытия</strong> и избегать шероховатостей на кузове.</li>
+</ul>
+<p>Даже небольшие изменения могут дать заметный эффект. Например, удаление багажника на крыше может снизить сопротивление на <code>5-10%</code>.</p>
+
+<blockquote>⚠️ Внимание: Не все аэродинамические доработки полезны. Например, слишком низкий клиренс может ухудшить управляемость на неровных дорогах.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сопротивление воздуха растет квадратично с увеличением скорости — это означает, что при удвоении скорости сила сопротивления увеличивается в 4 раза.</p></aside>
+
+<h2 id="частые-вопросы-о-сопротивлении-воздуха">Частые вопросы о сопротивлении воздуха</h2>
+
+<details>
+<summary>Чем отличается <code>C_d</code> от <code>C_x</code>?</summary>
+<p>На практике это одно и то же — <code>C_d</code> (drag coefficient) и <code>C_x</code> обозначения одного и того же коэффициента аэродинамического сопротивления. В Европейских странах чаще используется <code>C_x</code>, в США — <code>C_d</code>.</p>
+</details>
+
+<details>
+<summary>Почему у электромобилей часто более низкий <code>C_d</code>?</summary>
+<p>Электромобили оптимизированы для максимальной эффективности, так как запас хода напрямую зависит от энергопотребления. Например, <em>Tesla Model 3</em> имеет <code>C_d = 0.23</code>, что ниже, чем у большинства бензиновых автомобилей.</p>
+</details>
+
+<details>
+<summary>Можно ли рассчитать сопротивление воздуха без формулы?</summary>
+<p>Да, для этого используются аэродинамические трубы или компьютерное моделирование (CFD). Однако формула дает хорошее приближение для большинства практических задач.</p>
+</details>
+
+<details>
+<summary>Как сопротивление воздуха влияет на разгон?</summary>
+<p>При разгоне сопротивление воздуха увеличивается пропорционально квадрату скорости. На низких скоростях (до <code>60 км/ч</code>) его влияние минимально, но при разгоне до <code>100–200 км/ч</code> оно становится значительным.</p>
+</details>
+
+<details>
+<summary>Какие автомобили имеют самый низкий <code>C_d</code>?</summary>
+<p>Среди серийных автомобилей рекордсменом является <em>Mercedes-Benz EQXX</em> с <code>C_d = 0.17</code>. Среди серийных моделей лидируют <em>Lucid Air</em> (<code>0.19</code>) и <em>Tesla Model S</em> (<code>0.24</code>).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/cu/cummins-insite-skanmatik-2.html" class="pb-related-card">
+                <span class="pb-related-title">Cummins INsite и SkanMatik 2: полное руководство по диагностике</span>
+                <span class="pb-related-desc">Узнайте, как использовать Cummins INsite и SkanMatik 2 для диагностики дизельных двигателей. Инструк</span>
+            </a><a href="/articles/k/kl/klapan-evap-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Клапан EVAP: что это, признаки неисправности и замена</span>
+                <span class="pb-related-desc">Подробно о системе улавливания паров топлива. Что такое клапан EVAP, как он работает, симптомы полом</span>
+            </a><a href="/articles/p/po/pokolenie-golfov-po-godam.html" class="pb-related-card">
+                <span class="pb-related-title">Поколения Гольф по годам: полный список моделей</span>
+                <span class="pb-related-desc">Подробная таблица и обзор всех поколений VW Golf. Узнайте годы выпуска, отличия кузовов и технически</span>
+            </a><a href="/articles/v/v-/v-chem-izmeryaetsya-takhometr.html" class="pb-related-card">
+                <span class="pb-related-title">В чем измеряется тахометр: Единицы, Погрешность и Диагностика</span>
+                <span class="pb-related-desc">Узнайте, в чем измеряется тахометр, как читать показания и почему стрелка прыгает. Полный разбор еди</span>
+            </a><a href="/articles/k/k-/k-chemu-snitsya-ne-zavoditsya-mashina.html" class="pb-related-card">
+                <span class="pb-related-title">К чему снится, что не заводится машина: толкование и советы</span>
+                <span class="pb-related-desc">Почему в сновидении не заводится автомобиль? Разбираем толкования сонников, психологические причины </span>
+            </a><a href="/articles/l/la/lanos-ne-zavoditsya-starter-krutit-benzonasos-kachaet.html" class="pb-related-card">
+                <span class="pb-related-title">Ланос не заводится: стартер крутит, бензонасос работает</span>
+                <span class="pb-related-desc">Почему Daewoo Lanos не заводится, если стартер крутит, а насос качает? Полный разбор причин: свечи, </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

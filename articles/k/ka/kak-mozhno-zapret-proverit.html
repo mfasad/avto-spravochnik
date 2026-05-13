@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как запретить проверку ЭБУ: отключение диагностических тестов — Авто Справочник</title>
+    <meta name="description" content="Подробная инструкция, как запретить проверку контрольной суммы и тесты ЭБУ при перепрошивке. Методы отключения диагностики для тюнинга двигателя.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-mozhno-zapret-proverit.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как запретить проверку ЭБУ: отключение диагностических тестов">
+    <meta property="og:description" content="Подробная инструкция, как запретить проверку контрольной суммы и тесты ЭБУ при перепрошивке. Методы отключения диагностики для тюнинга двигателя.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как запретить проверку ЭБУ: отключение диагностических тестов</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принципы-работы-систем-самодиагностики-эбу">Принципы работы систем самодиагностики ЭБУ</a></li><li><a href="#методы-отключения-проверки-контрольных-сумм">Методы отключения проверки контрольных сумм</a></li><li><a href="#работа-с-bootloader-и-режимами-загрузки">Работа с Bootloader и режимами загрузки</a></li><li><a href="#использование-софта-для-редактирования-прошивок">Использование софта для редактирования прошивок</a></li><li><a href="#отключение-dtc-и-экологических-систем">Отключение DTC и экологических систем</a></li><li><a href="#диагностика-проблем-после-модификации">Диагностика проблем после модификации</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ch/chto-takoe-transmissiya-robot.html">Роботизированная трансмиссия: устройство, плюсы, минусы и ресурс</a></li><li><a href="/articles/s/sa/sapun-kak-pravilno-nazyvaetsya.html">Сапун двигателя: правильное название и функции</a></li><li><a href="/articles/p/po/podbor-svechej-po-vin.html">Подбор свечей по VIN: точный поиск кода и замена</a></li><li><a href="/articles/a/ae/aerodinamicheskie-sily-i-momenty.html">Аэродинамика авто: силы и моменты, влияющие на управляемость</a></li><li><a href="/articles/k/ka/kak-na-transpondere-proverit-balans.html">Как проверить баланс транспондера: 5 способов для авто</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как запретить проверку ЭБУ и отключить диагностические тесты при тюнинге</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принципы-работы-систем-самодиагностики-эбу">Принципы работы систем самодиагностики ЭБУ</a></li><li><a href="#методы-отключения-проверки-контрольных-сумм">Методы отключения проверки контрольных сумм</a></li><li><a href="#работа-с-bootloader-и-режимами-загрузки">Работа с Bootloader и режимами загрузки</a></li><li><a href="#использование-софта-для-редактирования-прошивок">Использование софта для редактирования прошивок</a></li><li><a href="#отключение-dtc-и-экологических-систем">Отключение DTC и экологических систем</a></li><li><a href="#диагностика-проблем-после-модификации">Диагностика проблем после модификации</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В процессе глубокого тюнинга электронных систем управления двигателем перед инженером часто встает задача, как запретить проверку контрольных сумм и диагностических алгоритмов внутри ЭБУ. Стандартные процедуры самодиагностики, заложенные производителем, могут препятствовать установке модифицированного программного обеспечения или вызывать аварийные режимы работы мотора. Игнорирование этих механизмов защиты приводит к тому, что блок управления просто отказывается запускать двигатель с измененным кодом.</p>
+<p>Понимание архитектуры работы <strong>Bootloader</strong> и штатного ПО необходимо для успешного обхода защит. В данной статье мы разберем технические аспекты отключения внутренних проверок, методы патчинга прошивки и программные способы деактивации нежелательных функций мониторинга. Это позволит вам безопасно модифицировать карты топливоподачи и зажигания без риска получить"кирпич" или постоянные ошибки по CAN-шине.</p>
+<p>Стоит отметить, что вмешательство в работу систем безопасности автомобиля требует высокой квалификации. Неправильное изменение битов конфигурации или удаление критических участков кода может привести к полной неработоспособности <em>Engine Control Unit</em>. Мы рассмотрим только легальные методы, применяемые в спортивном тюнинге, и уделим внимание сохранению базовой функциональности диагностических протоколов.</p>
+
+<h2 id="принципы-работы-систем-самодиагностики-эбу">Принципы работы систем самодиагностики ЭБУ</h2>
+<p>Современные блоки управления двигателем оснащены сложными системами самоконтроля, которые активируются при каждом включении зажигания. Основной целью этих механизмов является обеспечение экологической безопасности и предотвращение повреждения узлов силового агрегата. Когда вы пытаетесь изменить программный код, встроенный алгоритм вычисляет <strong>CRC-сумму</strong> и сравнивает её с эталонным значением, хранящимся в защищенной области памяти.</p>
+<p>Если вычисленная сумма не совпадает с записанной, ЭБУ переходит в аварийный режим или полностью блокирует запуск. Это стандартная защита от несанконированного вмешательства, которую необходимо обойти при чип-тюнинге. Процессоры, такие как <em>TriCore</em> от Infineon или <em>SH705x</em> от Renesas, имеют аппаратные механизмы защиты, которые также могут требовать программной деактивации.</p>
+<p>Кроме того, существуют периодические тесты целостности памяти и проверки датчиков, которые могут конфликтовать с измененными калибровками. Например, если вы расширили диапазон работы датчика кислорода, штатный алгоритм может расценить новые значения как неисправность. Поэтому важно понимать, какие именно проверки мешают работе модифицированного ПО.</p>
+<blockquote>
+<p>⚠️ Внимание: Отключение критических систем безопасности, таких как контроль детонации или температуры, может привести к разрушению двигателя. Используйте эти методы только на гоночных автомобилях или при наличии полного контроля над параметрами работы мотора.</p>
+</blockquote>
+<p>Для анализа структуры прошивки и поиска мест, где осуществляются проверки, тюнеры используют дизассемблеры и HEX-редакторы. Это позволяет найти конкретные байты, отвечающие за вызов функций верификации. Часто такие участки кода помечаются специальными флагами, которые процессор считывает в момент инициализации.</p>
+
+<h2 id="методы-отключения-проверки-контрольных-сумм">Методы отключения проверки контрольных сумм</h2>
+<p>Наиболее распространенным способом обхода защиты является патчинг бинарного файла прошивки перед её записью в ЭБУ. Суть метода заключается в изменении контрольной суммы так, чтобы она совпадала с вычисленной для модифицированного файла, либо в полном отключении алгоритма проверки. Для этого используются специализированные утилиты, такие как <em>Checksum Fixer</em> или встроенные модули в <em>WinOLS</em>.</p>
+<p>Процесс выглядит следующим образом: после внесения изменений в карты топливоподачи программа пересчитывает математическую модель блока и генерирует новые значения CRC. Затем эти значения записываются в соответствующие адреса памяти. Если просто изменить байты суммы без пересчета, ЭБУ не запустится.</p>
+<ul>
+<li>🔧 <strong>Автоматический пересчет:</strong> Использование плагинов, которые сами находят и исправляют суммы после редактирования.</li>
+<li>🔧 <strong>Ручной патчинг:</strong> Поиск адресов суммы в HEX-коде и замена их на рассчитанные значения (требует знания архитектуры).</li>
+<li>🔧 <strong>Отключение проверки:</strong> Замена инструкций проверки на команды пропуска (NOP), что полностью игнорирует сверку сумм.</li>
+</ul>
+<p>В некоторых случаях, особенно на старых блоках <em>Bosch Motronic</em>, достаточно просто записать новую сумму в отведенное место. Однако современные системы используют многоуровневую защиту, где сумма проверяется не только при старте, но и периодически в фоновом режиме. В таких ситуациях требуется более глубокое вмешательство в код.</p>
+<blockquote>
+<p>⚠️ Внимание: При ручном редактировании HEX-кода одна ошибка в адресе может сместить весь массив данных, что приведет к некорректной работе двигателя или невозможности запуска.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-c94db102"><div class="pb-poll-question">📊 Какой метод патча вы используете чаще?</div><div class="pb-poll-option" data-poll="c94db102" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Автоматический через софт</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c94db102" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Ручной расчет в HEX</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c94db102" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Отключение через отключение флага</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c94db102" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не патчу, работаю со стоком</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="работа-с-bootloader-и-режимами-загрузки">Работа с Bootloader и режимами загрузки</h2>
+<p>Загрузчик (Bootloader) — это небольшая программа, residing в защищенной области памяти, которая управляет процессом записи основного ПО. Чтобы запретить проверки или обновить прошивку нестандартным методом, часто требуется активировать режим <strong>Bootloader Mode</strong>. В этом режиме ЭБУ игнорирует основную прошивку и ждет команд извне через диагностический разъем.</p>
+<p>Вход в этот режим осуществляется разными способами: замыканием определенных контактов на плате, подачей напряжения на пин"Boot" или отправкой специальной последовательности команд (Key Sequence) по K-Line или CAN-шине. Например, для многих блоков <em>VAG</em> используется метод"K-Line wakeup" с байтом.</p>
+<p>В режиме загрузчика доступны функции чтения и записи памяти напрямую, минуя стандартные проверки целостности основной программы. Это позволяет"залить" даже поврежденную или несовместимую прошивку, если вы уверены в своих действиях. Однако после выхода из режима Bootloader запущенная программа снова пройдет все штатные проверки.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Протокол</th>
+<th>Тип подключения</th>
+<th>Скорость</th>
+<th>Применение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KWP2000</td>
+<td>K-Line</td>
+<td>Низкая (до 10 кбит/с)</td>
+<td>Старые авто (до 2005 г.)</td>
+</tr>
+<tr>
+<td>UDS</td>
+<td>CAN-Bus</td>
+<td>Высокая (500 кбит/с)</td>
+<td>Современные автомобили</td>
+</tr>
+<tr>
+<td>XCP</td>
+<td>CAN/ETH</td>
+<td>Очень высокая</td>
+<td>Гоночные ЭБУ и калибровка</td>
+</tr>
+<tr>
+<td>BDM</td>
+<td>Прямой доступ</td>
+<td>Зависит от адаптера</td>
+<td>Восстановление"кирпичей"</td>
+</tr>
+</tbody>
+</table></div>
+<p> Скачки напряжения во время перепрошивки могут повредить флеш-память. Поэтому использование <em>стабилизатора напряжения</em> является обязательным условием.</p>
+
+<h2 id="использование-софта-для-редактирования-прошивок">Использование софта для редактирования прошивок</h2>
+<p>Для профессиональной работы с прошивками недостаточно простых HEX-редакторов. Необходимы специализированные инструменты, которые знают структуру данных конкретного ЭБУ. Лидером в этой области является программа <em>WinOLS</em>, которая позволяет визуализировать карты, искать паттерны и автоматически применять патчи.</p>
+<p>Альтернативой может служить <em>TunerPro</em>, который работает с файлами описания (XDF), или <em>ECM Titanium</em>, использующая драйверы для автоматического распознавания типов ЭБУ. Эти программы имеют встроенные функции для отключения проверок, таких как <strong>DTCs</strong> (коды неисправностей) или <strong>EGR</strong> (рециркуляция выхлопных газов).</p>
+<pre><code>// Пример команды для WinOLS (псевдокод)
+<p>IF Checksum_Error THEN</p>
+<p>Calculate_New_CRC;</p>
+<p>Write_Memory(Address_CRC, New_Value);</p>
+<p>END IF</code></pre></p>
+<p>При использовании софта важно иметь актуальные модули (драйверы) для вашей версии ПО. Старые версии программ могут некорректно работать с новыми типами процессоров или алгоритмами шифрования. Регулярное обновление базы данных проектов — залог успешной работы.</p>
+<ul>
+<li>📂 <strong>Проекты:</strong> Сохраняйте оригинальную прошивку и все промежуточные версии в отдельных проектах.</li>
+<li>📂 <strong>Сравнение:</strong> Используйте функцию Compare для поиска отличий между стоком и тюнингом.</li>
+<li>📂 <strong>Бэкап:</strong> Всегда имейте полную копию EEPROM и Flash памяти перед началом редактирования.</li>
+</ul>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед началом работы создайте полную резервную копию не только Flash, но и EEPROM памяти, так как в EEPROM часто хранятся иммобилайзер и VIN-код автомобиля.</p></aside>
+
+<h2 id="отключение-dtc-и-экологических-систем">Отключение DTC и экологических систем</h2>
+<p>Часто под фразой"запретить проверку" владельцы подразумевают отключение контроля за экологическими системами, такими как катализатор (Евро-2), сажевый фильтр (DPF) или система AdBlue. Это делается программным удалением (Software Off) соответствующих участков кода.</p>
+<p>Процесс involves finding the code responsible for monitoring the oxygen sensors or pressure differential sensors and replacing it with code that simulates normal operation. For example, instead of reading the sensor, the program is forced to use a constant value that indicates"filter is clean".</p>
+<p>Это также требует отключения соответствующих ошибок (DTC), чтобы лампочка Check Engine не загоралась на приборной панели. В современных дизелях это сложный процесс, так как проверки дублируются в нескольких местах и связаны с расчетом крутящего момента.</p>
+<blockquote>
+<p>⚠️ Внимание: Программное удаление экологических систем делает автомобиль не соответствующим нормам выбросов. Эксплуатация таких автомобилей на дорогах общего пользования может быть запрещена законодательством вашей страны.</p>
+</blockquote>
+<p>Качественный"софт оф" не должен влиять на ресурс двигателя. Напротив, снижение противодавления в выхлопной системе часто положительно сказывается на турбине. Однако важно, чтобы алгоритмы регенерации (если они частично остаются) не конфликтовали с новыми настройками.</p>
+
+<details class="pb-accordion"><summary>Что такое DTC и как они влияют на работу?</summary><div class="pb-accordion-body"><p>DTC (Diagnostic Trouble Codes) — это коды ошибок, которые записываются в память ЭБУ при обнаружении неисправности. Наличие активных"Pending" или"Confirmed" ошибок может переводить двигатель в аварийный режим (Limp Mode), ограничивая мощность и обороты. Отключение диагностики предотвращает запись этих кодов.</p></div></details>
+
+<h2 id="диагностика-проблем-после-модификации">Диагностика проблем после модификации</h2>
+<p>После того как вы запретили стандартные проверки и залили новую прошивку, необходимо провести тщательную диагностику. Даже если двигатель запустился, могут присутствовать скрытые проблемы, такие как некорректный угол опережения зажигания или переобеднение смеси на высоких оборотах.</p>
+<p>Используйте сканеры реального времени для мониторинга параметров <strong>Long Term Fuel Trim</strong> и <strong>Short Term Fuel Trim</strong>. Если значения сильно отклоняются от нуля, это значит, что ЭБУ пытается компенсировать ошибки в вашей прошивке, что говорит о её некачественной настройке.</p>
+<p>Также следует проверить отсутствие"плавающих" ошибок, которые могут появляться только при определенных условиях (например, при нагреве выше 95 градусов). Для этого необходим тестовый заезд с подключенным ноутбуком или телеметрией.</p>
+<ul>
+<li>📉 <strong>Логирование:</strong> Записывайте все параметры работы двигателя во время тестовых заездов.</li>
+<li>📉 <strong>Температура:</strong> Следите за температурой выпускных газов (EGT), чтобы не оплавить поршни.</li>
+<li>📉 <strong>Детонация:</strong> Внимательно слушайте мотор и смотрите графики детонации.</li>
+</ul>
+<p>Если вы заметили нестабильную работу, немедленно верните оригинальную прошивку. Эксплуатация автомобиля с некорректным ПО может привести к дорогостоящему ремонту в считанные минуты. Безопасность всегда должна быть приоритетом.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка после чип-тюнинга</h4><label class="check-item"><input type="checkbox"><span>Запуск двигателя без ошибок</span></label><label class="check-item"><input type="checkbox"><span>Холостой ход стабилен</span></label><label class="check-item"><input type="checkbox"><span>Нет провалов при разгоне</span></label><label class="check-item"><input type="checkbox"><span>Температура в норме</span></label><label class="check-item"><input type="checkbox"><span>Отсутствие дыма из выхлопа</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+<details>
+<summary>Можно ли полностью отключить диагностику OBD2?</summary>
+<p>Полностью отключить физический порт OBD2 программно нельзя, так как он нужен для работы других систем (ABS, Airbag). Однако можно программно запретить запись ошибок двигателя или сделать порт неактивным для чтения, хотя это усложнит дальнейшее обслуживание.</p>
+</details>
+<details>
+<summary>Сбросится ли запрет на проверку после обновления у дилера?</summary>
+<p>Да, официальное обновление ПО у дилера заменит вашу модифицированную прошивку на заводскую, вернув все блокировки и проверки. Вам придется повторять процедуру чип-тюнинга заново.</p>
+</details>
+<details>
+<summary>Опасно ли отключать проверку катализатора?</summary>
+<p>Для двигателя это не опасно, а даже полезно (меньше сопротивление выхлопу). Опасность представляет только вдыхание выхлопных газов без фильтрации, поэтому такой автомобиль не должен использоваться в закрытых помещениях.</p>
+</details>
+<details>
+<summary>Какой адаптер лучше для работы с Bootloader?</summary>
+<p>Для профессиональной работы рекомендуются адаптеры Kess V2, K-Tag или MPPS. Для любительского использования часто хватает ELM327 (для старых авто) или специализированных кабелей типа OBDLink EX для конкретных марок.</p>
+</details>
+<details>
+<summary>Нужно ли сбрасывать адаптации после запрета проверок?</summary>
+<p>Да, после любой смены ПО или отключения систем необходимо делать сброс адаптаций (Reset Adaptations), чтобы ЭБУ заново обучился работе с новыми параметрами и"забыл" старые коррекции.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный вывод: Запрет проверок ЭБУ — это сложный технический процесс, требующий понимания работы микроконтроллеров. Безопаснее и надежнее использовать готовые, проверенные решения от профессиональных тюнинг-ателье, чем экспериментировать самостоятельно без глубоких знаний.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ch/chto-takoe-transmissiya-robot.html" class="pb-related-card">
+                <span class="pb-related-title">Роботизированная трансмиссия: устройство, плюсы, минусы и ресурс</span>
+                <span class="pb-related-desc">Полный разбор роботизированной КПП: как работает, почему дергается, стоит ли покупать авто с роботом</span>
+            </a><a href="/articles/s/sa/sapun-kak-pravilno-nazyvaetsya.html" class="pb-related-card">
+                <span class="pb-related-title">Сапун двигателя: правильное название и функции</span>
+                <span class="pb-related-desc">Узнайте, как правильно называется сапун, зачем он нужен и где находится. Полное руководство по систе</span>
+            </a><a href="/articles/p/po/podbor-svechej-po-vin.html" class="pb-related-card">
+                <span class="pb-related-title">Подбор свечей по VIN: точный поиск кода и замена</span>
+                <span class="pb-related-desc">Как правильно выполнить подбор свечей по VIN-коду. Таблицы совместимости, расшифровка артикулов, оши</span>
+            </a><a href="/articles/a/ae/aerodinamicheskie-sily-i-momenty.html" class="pb-related-card">
+                <span class="pb-related-title">Аэродинамика авто: силы и моменты, влияющие на управляемость</span>
+                <span class="pb-related-desc">Подробный разбор аэродинамических сил (подъёмная, лобовое сопротивление) и моментов, их влияние на а</span>
+            </a><a href="/articles/k/ka/kak-na-transpondere-proverit-balans.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить баланс транспондера: 5 способов для авто</span>
+                <span class="pb-related-desc">Пошаговая инструкция по проверке баланса транспондера для платных дорог (Платон, Т-Пасс, FreeFlow). </span>
+            </a><a href="/articles/t/tn/tnk-tssh-0229-2017.html" class="pb-related-card">
+                <span class="pb-related-title">ТНК ЦШ 0229-2017: расшифровка, применение и актуальность в 2026 году</span>
+                <span class="pb-related-desc">Что означает ТНК ЦШ 0229-2017? Где применяется этот технический норматив? Разбираем актуальность док</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

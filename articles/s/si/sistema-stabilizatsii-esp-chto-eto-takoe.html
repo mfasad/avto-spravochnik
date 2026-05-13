@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>ESP в автомобиле: что это и как работает система — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор системы курсовой устойчивости ESP. Принцип работы, устройство датчиков, отключение зимой и признаки неисправности ABS.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/si/sistema-stabilizatsii-esp-chto-eto-takoe.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ESP в автомобиле: что это и как работает система">
+    <meta property="og:description" content="Подробный разбор системы курсовой устойчивости ESP. Принцип работы, устройство датчиков, отключение зимой и признаки неисправности ABS.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">ESP в автомобиле: что это и как работает система</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-и-устройство-системы-курсовой-устойчивости">Принцип работы и устройство системы курсовой устойчивости</a></li><li><a href="#различия-между-esp-esc-dsc-и-другими-аббревиатурами">Различия между ESP, ESC, DSC и другими аббревиатурами</a></li><li><a href="#как-определить-работу-и-неисправность-системы-esp">Как определить работу и неисправность системы ESP</a></li><li><a href="#нужно-ли-отключать-esp-зимой-и-на-скользкой-дороге">Нужно ли отключать ESP зимой и на скользкой дороге</a></li><li><a href="#взаимодействие-esp-с-другими-системами-автомобиля">Взаимодействие ESP с другими системами автомобиля</a></li><li><a href="#перспективы-развития-и-будущее-систем-стабилизации">Перспективы развития и будущее систем стабилизации</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-smenit-filtr-barer.html">Замена фильтра Барьер в машине: пошаговая инструкция 2026</a></li><li><a href="/articles/k/ko/korotkie-poezdki-na-avtomobile-naskolko-vredny.html">Короткие поездки на авто: вред для двигателя и как его избежать</a></li><li><a href="/articles/m/mo/model-avtobusa-liaz-5292.html">ЛиАЗ 5292: Обзор, характеристики и неисправности автобуса</a></li><li><a href="/articles/s/sv/svist-remnya-generatora-pri-nagruzke.html">Свист ремня генератора под нагрузкой: причины и решения 2026</a></li><li><a href="/articles/c/ch/chto-znachit-mashina-sedan.html">Что значит машина седан: классификация, виды и отличия</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Система стабилизации ESP: что это такое и как она спасает жизни</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-и-устройство-системы-курсовой-устойчивости">Принцип работы и устройство системы курсовой устойчивости</a></li><li><a href="#различия-между-esp-esc-dsc-и-другими-аббревиатурами">Различия между ESP, ESC, DSC и другими аббревиатурами</a></li><li><a href="#как-определить-работу-и-неисправность-системы-esp">Как определить работу и неисправность системы ESP</a></li><li><a href="#нужно-ли-отключать-esp-зимой-и-на-скользкой-дороге">Нужно ли отключать ESP зимой и на скользкой дороге</a></li><li><a href="#взаимодействие-esp-с-другими-системами-автомобиля">Взаимодействие ESP с другими системами автомобиля</a></li><li><a href="#перспективы-развития-и-будущее-систем-стабилизации">Перспективы развития и будущее систем стабилизации</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие водители, садясь за руль современного автомобиля, даже не задумываются о том, какие сложные процессы происходят под капотом и в блоках управления в доли секунды. Аббревиатура <strong>ESP</strong> (Electronic Stability Program) хорошо знакома большинству автолюбителей, но далеко не все понимают реальный масштаб задач, которые выполняет эта электроника. Фактически, это сложнейший программно-аппаратный комплекс, который непрерывно анализирует траекторию движения машины и вмешивается в управление, чтобы предотвратить занос или опрокидывание.</p>
+
+<p>Представьте ситуацию: вы входите в поворот на скользкой дороге, и автомобиль вдруг начинает «плыть» носом наружу или, наоборот, разворачивать кормой. Именно в этот момент <em>Electronic Stability Program</em> берет управление на себя, выборочно подтормаживая нужные колеса и снижая тягу двигателя. Это не магия, а результат работы высокоточной математики и механики, которая часто остается незамеченной, пока не случится экстренная ситуация.</p>
+
+<p>Разбираясь в вопросе, <strong>что такое ESP</strong> в машине, важно понимать, что это не отдельная деталь, а надстройка над антиблокировочной системой тормозов (ABS) и системой антипробуксовки (ASR/TCS). Она объединяет данные с десятков датчиков, чтобы удержать автомобиль на заданной водителем траектории. Без этой системы вождение на высоких скоростях или в плохих погодных условиях стало бы смертельно опасным лотерейным билетом.</p>
+
+<h2 id="принцип-работы-и-устройство-системы-курсовой-устойчивости">Принцип работы и устройство системы курсовой устойчивости</h2>
+
+<p>Фундаментальный принцип работы <strong>системы курсовой устойчивости</strong> заключается в постоянном сравнении желаемой траектории движения с фактической. Компьютер считывает положение рулевого колеса, чтобы понять, куда водитель <em>хочет</em> повернуть, и сопоставляет это с данными о реальном повороте кузова и скорости вращения колес. Если векторы не совпадают, система мгновенно реагирует.</p>
+
+<p>Для реализации этого алгоритма используется целый набор сенсоров. Ключевым элементом является датчик угловой скорости вращения вокруг вертикальной оси (Yaw rate sensor), который фиксирует начало заноса. Дополнительно задействованы датчики поперечного ускорения, давления в тормозной магистрали и скорости вращения каждого колеса в отдельности. Вся эта информация обрабатывается блоком управления ESP, который принимает решение за миллисекунды.</p>
+
+<blockquote>⚠️ Внимание: Не пытайтесь проверять работу системы на закрытых площадках без профессионального инструктора. Искусственный вызов заноса может привести к потере контроля над автомобилем даже с работающей электроникой, если скорость будет превышена.</blockquote>
+
+<p>Механизм воздействия на автомобиль реализуется через гидравлический блок ABS. Система может независимо подтормаживать любое из четырех колес. Например, при начинающемся заносе задней оси (oversteer) электроника притормозит переднее внешнее колесо, создавая момент, возвращающий машину в курс. При сносе передней оси (understeer) подтормаживается заднее внутреннее колесо. Одновременно с этим <strong>блок управления двигателем</strong> получает команду снизить крутящий момент, независимо от положения педали газа.</p>
+
+<div class="pb-poll" id="poll-9d30cb0f"><div class="pb-poll-question">📊 Сталкивались ли вы с ситуацией, когда ESP спасала от аварии?</div><div class="pb-poll-option" data-poll="9d30cb0f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, чувствовал работу системы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9d30cb0f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, но индикатор моргал</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9d30cb0f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Индикатор загорался при неисправности</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9d30cb0f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">У меня нет кнопки ESP</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="различия-между-esp-esc-dsc-и-другими-аббревиатурами">Различия между ESP, ESC, DSC и другими аббревиатурами</h2>
+
+<p>На рынке автомобилей можно встретить множество различных названий для одной и той же по сути функции. Это связано с тем, что разные автопроизводители разрабатывали свои версии систем стабилизации и патентовали уникальные торговые марки. Однако физический принцип работы и набор датчиков у них практически идентичны.</p>
+
+<p>Наиболее распространенное название <strong>ESC</strong> (Electronic Stability Control) считается универсальным термином, который часто используется в технической документации и американских стандартах безопасности. Компания BMW и Land Rover используют обозначение <em>DSC</em> (Dynamic Stability Control), а Toyota и Lexus — <em>VSC</em> (Vehicle Stability Control). Honda называет свою систему VSA, а Volvo — DSTC.</p>
+
+<p>Несмотря на разные имена, все эти системы выполняют одну задачу. Различия могут заключаться лишь в алгоритмах настройки «характера» автомобиля. Например, спортивная версия настройки может позволять небольшой занос перед вмешательством, тогда как в семейном седане электроника будет работать более агрессивно и рано.</p>
+
+<p>Ниже приведена таблица основных обозначений систем динамической стабилизации у различных производителей:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Производитель</th>
+<th>Аббревиатура</th>
+<th>Расшифровка</th>
+<th>Особенности</th>
+</tr>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bosch (для многих марок)</td>
+<td>ESP</td>
+<td>Electronic Stability Program</td>
+<td>Базовая версия, самая распространенная</td>
+</tr>
+<tr>
+<td>BMW, Mini, Land Rover</td>
+<td>DSC</td>
+<td>Dynamic Stability Control</td>
+<td>Часто имеет режим Sport для частичного отключения</td>
+</tr>
+<tr>
+<td>Toyota, Lexus</td>
+<td>VSC</td>
+<td>Vehicle Stability Control</td>
+<td>Интеграция с полным приводом AWD</td>
+</tr>
+<tr>
+<td>Honda, Acura</td>
+<td>VSA</td>
+<td>Vehicle Stability Assist</td>
+<td>Акцент на помощь в стабилизации</td>
+</tr>
+<tr>
+<td>Volvo</td>
+<td>DSTC</td>
+<td>Dynamic Stability and Traction Control</td>
+<td>Расширенный контроль тяги</td>
+</tr>
+</tbody>
+</table></div>
+
+
+
+<h2 id="как-определить-работу-и-неисправность-системы-esp">Как определить работу и неисправность системы ESP</h2>
+
+<p>Понять, что система стабилизации активировалась, довольно просто. В момент потери сцепления с дорогой водитель ощущает характерные рывки педали тормоза и слышит стрекочущий звук работы гидравлического насоса. Одновременно на приборной панели начинает часто моргать индикатор <strong>ESP OFF</strong> или значок скользящей машины. Это означает, что система работает в аварийном режиме, удерживая автомобиль.</p>
+
+<p>Однако если индикатор горит постоянно ровным светом, это сигнал о неисправности. Чаще всего проблема кроется не в самом блоке управления, а в одном из датчиков. Выходят из строя датчики ABS (которые используются ESP), датчики угла поворота руля или просто окисляются контакты. Также причиной может быть критический износ тормозных колодок или низкий уровень тормозной жидкости.</p>
+
+<ul>
+<li>🚗 <strong>Мигающий индикатор</strong>: система активна и корректирует траекторию движения (нормальная работа).</li>
+<li>🔴 <strong>Горящий индикатор</strong>: система отключена водителем или обнаружена неисправность.</li>
+<li>🔧 <strong>Горит вместе с ABS</strong>: проблема в гидравлическом блоке или критическом датчике скорости.</li>
+</ul>
+
+<p>Для диагностики часто требуется подключение сканера OBDII. Самостоятельно можно попробовать выполнить калибровку датчика угла поворота руля, если она была сбита после снятия аккумулятора или замены деталей рулевого управления. Для этого на некоторых моделях <em>Mercedes</em> или <em>Volkswagen</em> нужно вывернуть руль до упора в одну сторону, затем в другую и вернуть в центр при включенном зажигании.</p>
+
+
+
+<h2 id="нужно-ли-отключать-esp-зимой-и-на-скользкой-дороге">Нужно ли отключать ESP зимой и на скользкой дороге</h2>
+
+<p>Вопрос отключения системы стабилизации зимой вызывает ожесточенные споры среди автолюбителей. С одной стороны, ESP душит двигатель и мешает раскрутить колеса, что необходимо для выезда из сугроба или движения по глубокой снежной каше. В таких ситуациях кратковременное отключение действительно оправдано и помогает «раскачать» автомобиль.</p>
+
+<p>С другой стороны, на обледенелой дороге или укатанном снегу <strong>система курсовой устойчивости</strong> является главным гарантом безопасности. Она предотвращает разворот автомобиля на дуге, который на льду происходит мгновенно и часто без возможности corrective steering (руления). Опытные водители могут чувствовать грань, но в стрессовой ситуации реакция человека всегда будет медленнее электроники.</p>
+
+<blockquote>⚠️ Внимание: Полное отключение ESP на зимней резине с шипами может привести к тому, что при разблокировке колес шипы потеряют сцепление с дорогой, и автомобиль станет неуправляемым снарядом.</blockquote>
+
+<p>Современные системы стали умнее. Многие автомобили имеют режим «Snow» или позволяют частичное отключение (режим Sport), когда электроника допускает небольшие скольжения, но вмешивается только при критической опасности. Если ваша цель — выбраться из сугроба, лучше использовать метод раскачки и кратковременно глушить систему, а не ехать с выключенной ESP по трассе.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Когда можно отключить ESP</h4><label class="check-item"><input type="checkbox"><span>Застревание в снегу или грязи</span></label><label class="check-item"><input type="checkbox"><span>Движение по глубокому рыхлому песку</span></label><label class="check-item"><input type="checkbox"><span>Использование цепей противоскольжения</span></label><label class="check-item"><input type="checkbox"><span>Тестирование автомобиля на треке</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="взаимодействие-esp-с-другими-системами-автомобиля">Взаимодействие ESP с другими системами автомобиля</h2>
+
+<p>ESP не работает в вакууме, она является центральным узлом, координирующим работу множества других систем. В первую очередь, это <strong>ABS</strong> (антиблокировочная система), без которой работа стабилизации невозможна. Также тесная связь прослеживается с EBD (распределение тормозных усилий) и TCS (антипробуксовочная система). Все они используют общий гидравлический модулятор.</p>
+
+<p>В современных автомобилях ESP также обменивается данными с коробкой передач (особенно роботизированной или вариатором), запрашивая изменение передаточного числа для лучшего торможения двигателем. В машинах с полным приводом (4WD/AWD) система может перераспределять крутящий момент между осями через муфту, помогая стабилизировать автомобиль без использования тормозов, что экономит ресурс колодок.</p>
+
+<p>Особый интерес представляет интеграция с системой помощи при спуске с горы (HDC) и старте в гору (HSA). Эти функции являются прямыми надстройками над логикой ESP. Например, при спуске система сама держит скорость на минимуме, подтормаживая колеса, что позволяет водителю сосредоточиться только на рулении.</p>
+
+
+
+<h2 id="перспективы-развития-и-будущее-систем-стабилизации">Перспективы развития и будущее систем стабилизации</h2>
+
+<p>Технологии не стоят на месте, и классическая ESP эволюционирует в более сложные комплексы. Современный тренд — это интеграция с системами автономного вождения и камерами. Если раньше ESP реагировала только на физические параметры (ускорение, вращение), то теперь она может «видеть» разметку и препятствия, начиная превентивное подтормаживание еще до потери сцепления.</p>
+
+<p>В электромобилях роль ESP трансформируется. Поскольку у таких машин нет классического гидравлического тормоза для каждого колеса (часто используется рекуперация и электромоторы), стабилизация осуществляется в первую очередь вектором тяги. Мгновенное изменение крутящего момента на каждом из четырех моторов позволяет стабилизировать автомобиль гораздо быстрее и точнее, чем традиционная гидравлика.</p>
+
+<p>Также развивается функция <em>Roll Mitigation</em> — предотвращение опрокидывания, что критически важно для высоких кроссоверов и внедорожников. Система отслеживает боковые перегрузки и при угрозе опрокидывания жестко тормозит внешние колеса, прижимая автомобиль к земле. Будущее за системами, которые будут предсказывать потерю устойчивости на основе картографии дороги и погодных условий.</p>
+
+<details>
+<summary>Что будет, если полностью удалить систему ESP из автомобиля?</summary>
+<p>Физическое удаление блока ESP возможно только с перепрошивкой ЭБУ двигателя и блока ABS. В противном случае автомобиль уйдет в аварийный режим, ограничит мощность двигателя и будет постоянно гореть ошибка. Более того, это незаконно во многих странах, так как снижает пассивную безопасность ТС.</p>
+</details>
+
+<details>
+<summary>Можно ли ездить, если горит лампа неисправности ESP?</summary>
+<p>Ехать можно, автомобиль сохранит базовую тормозную функцию. Однако вы лишитесь защиты от заносов и ABS (в большинстве случаев). Рекомендуется доехать до сервиса на низкой скорости, избегая резких маневров, так как риск ДТП значительно возрастает.</p>
+</details>
+
+<details>
+<summary>Почему ESP срабатывает на сухом асфальте?</summary>
+<p>Ложные срабатывания возможны при неисправности датчика скорости колеса (грязь, повреждение проводки) или после замены элементов подвески без последующей калибровки. Также причиной может быть сильная разница в износе протектора шин или установке колес разного размера.</p>
+</details>
+
+<details>
+<summary>Влияет ли разный рисунок шин на работу системы?</summary>
+<p>Да, влияет критически. ESP сравнивает скорость вращения колес. Если на осях стоят шины с разным диаметром (из-за износа или модели), система будет думать, что одно из колес буксует, и начнет постоянно вмешиваться, дергая машину и включая аварийный режим.</p>
+</details>
+
+<details>
+<summary>Как часто нужно проверять датчики ESP?</summary>
+<p>Специальной профилактики не требуется. Проверка осуществляется при плановом ТО или при загорании ошибки. Однако рекомендуется регулярно очищать тормозные механизмы и проверять состояние проводки датчиков ABS при замене тормозных колодок или дисков.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-smenit-filtr-barer.html" class="pb-related-card">
+                <span class="pb-related-title">Замена фильтра Барьер в машине: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Как правильно поменять фильтр Барьер в автомобиле: выбор модели, инструменты, ошибки и советы. Детал</span>
+            </a><a href="/articles/k/ko/korotkie-poezdki-na-avtomobile-naskolko-vredny.html" class="pb-related-card">
+                <span class="pb-related-title">Короткие поездки на авто: вред для двигателя и как его избежать</span>
+                <span class="pb-related-desc">Влияние коротких поездок на ресурс мотора, АКБ и выхлопную систему. Почему прогрев обязателен и как </span>
+            </a><a href="/articles/m/mo/model-avtobusa-liaz-5292.html" class="pb-related-card">
+                <span class="pb-related-title">ЛиАЗ 5292: Обзор, характеристики и неисправности автобуса</span>
+                <span class="pb-related-desc">Полный разбор модели ЛиАЗ 5292. Технические характеристики, модификации, устройство двигателя и ходо</span>
+            </a><a href="/articles/s/sv/svist-remnya-generatora-pri-nagruzke.html" class="pb-related-card">
+                <span class="pb-related-title">Свист ремня генератора под нагрузкой: причины и решения 2026</span>
+                <span class="pb-related-desc">Почему свистит ремень генератора при включении кондиционера или фар? Разбираем 7 основных причин, ди</span>
+            </a><a href="/articles/c/ch/chto-znachit-mashina-sedan.html" class="pb-related-card">
+                <span class="pb-related-title">Что значит машина седан: классификация, виды и отличия</span>
+                <span class="pb-related-desc">Подробный разбор кузова седан: что это такое, основные отличия от лифтбека и хэтчбека, плюсы и минус</span>
+            </a><a href="/articles/i/iz/iz-za-chego-migaet-chek.html" class="pb-related-card">
+                <span class="pb-related-title">Почему мигает чек: основные причины и диагностика</span>
+                <span class="pb-related-desc">Индикатор Check Engine мигает или горит? Разбираем причины, коды ошибок, последствия для двигателя и</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

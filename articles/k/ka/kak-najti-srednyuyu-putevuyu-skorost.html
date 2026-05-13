@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как найти среднюю путевую скорость автомобиля: формулы и примеры — Авто Справочник</title>
+    <meta name="description" content="Пошаговая инструкция по расчёту средней скорости движения с учётом остановок, пробок и маршрута. Формулы, онлайн-калькуляторы и практические советы для водителей.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-najti-srednyuyu-putevuyu-skorost.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как найти среднюю путевую скорость автомобиля: формулы и примеры">
+    <meta property="og:description" content="Пошаговая инструкция по расчёту средней скорости движения с учётом остановок, пробок и маршрута. Формулы, онлайн-калькуляторы и практические советы для водителей.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/obuchenie-i-testy/">Обучение и Тесты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как найти среднюю путевую скорость автомобиля: формулы и примеры</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-зачем-водителю-знать-среднюю-скорость">Введение: зачем водителю знать среднюю скорость?</a></li><li><a href="#что-такое-средняя-путевая-скорость-и-чем-она-отличается-от-других-видов-скорости">Что такое средняя путевая скорость и чем она отличается от других видов скорости</a></li><li><a href="#основная-формула-расчёта-проще-чем-кажется">Основная формула расчёта: проще, чем кажется</a></li><li><a href="#практические-примеры-как-считать-в-реальных-условиях">Практические примеры: как считать в реальных условиях</a></li><li><a href="#типичные-ошибки-при-расчёте-и-как-их-избежать">Типичные ошибки при расчёте и как их избежать</a></li><li><a href="#как-использовать-среднюю-скорость-для-экономии-времени-и-топлива">Как использовать среднюю скорость для экономии времени и топлива</a></li><li><a href="#инструменты-для-автоматизированного-расчёта">Инструменты для автоматизированного расчёта</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/sk/skolko-pedal-na-mekhanike.html">Сколько педалей на механике: подробный разбор для новичков</a></li><li><a href="/articles/k/ka/kak-dobavit-skill-test-v-gta-5-onlajn.html">Как добавить скилл-тест в GTA 5 онлайн: инструкция</a></li><li><a href="/articles/k/ka/kak-mozhno-narisovat-7.html">Как нарисовать цифру 7: пошаговая инструкция</a></li><li><a href="/articles/p/pr/pravilnoe-raspolozhenie-ruk-na-rule.html">Как правильно держать руки на руле: техника безопасности и комфорта</a></li><li><a href="/articles/1/15/15-km-chas-v-m-s.html">15 км/ч в м/с: точный перевод и формула расчета скорости</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Средняя путевая скорость: как рассчитать правильно и избежать ошибок</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-зачем-водителю-знать-среднюю-скорость">Введение: зачем водителю знать среднюю скорость?</a></li><li><a href="#что-такое-средняя-путевая-скорость-и-чем-она-отличается-от-других-видов-скорости">Что такое средняя путевая скорость и чем она отличается от других видов скорости</a></li><li><a href="#основная-формула-расчёта-проще-чем-кажется">Основная формула расчёта: проще, чем кажется</a></li><li><a href="#практические-примеры-как-считать-в-реальных-условиях">Практические примеры: как считать в реальных условиях</a></li><li><a href="#типичные-ошибки-при-расчёте-и-как-их-избежать">Типичные ошибки при расчёте и как их избежать</a></li><li><a href="#как-использовать-среднюю-скорость-для-экономии-времени-и-топлива">Как использовать среднюю скорость для экономии времени и топлива</a></li><li><a href="#инструменты-для-автоматизированного-расчёта">Инструменты для автоматизированного расчёта</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-зачем-водителю-знать-среднюю-скорость">Введение: зачем водителю знать среднюю скорость?</h2>
+
+<p>Средняя путевая скорость — это не просто абстрактное понятие из школьного курса физики. Для автомобилиста это <strong>ключевой показатель</strong>, который помогает планировать маршруты, экономить топливо и даже избегать штрафов. Представьте: вы едете из Москвы в Питер, навигатор обещает 7 часов в пути, но по факту тратите 9. Почему так происходит? Всё дело в разнице между <em>мгновенной скоростью</em> (которую показывает спидометр) и <em>средней путевой</em> (которая учитывает остановки, пробки и светофоры).</p>
+
+<p>В этой статье мы разберём не только <strong>формулы расчёта</strong>, но и <strong>практические нюансы</strong>: как учитывать время простоя, почему GPS иногда врёт, и как использовать среднюю скорость для оптимизации поездок. А ещё вы узнаете, почему <mark>средняя скорость на трассе с ограничением 90 км/ч редко превышает 70 км/ч — даже если вы не нарушаете ПДД</mark>. Готовы? Тогда поехали!</p>
+
+<h2 id="что-такое-средняя-путевая-скорость-и-чем-она-отличается-от-других-видов-скорости">Что такое средняя путевая скорость и чем она отличается от других видов скорости</h2>
+
+<p>В физике и автомобильной практике существует несколько видов скорости, и путать их — распространённая ошибка. Давайте чётко разберёмся в терминах:</p>
+
+<ul>
+  <li>📏 <strong>Мгновенная скорость</strong> — это значение, которое вы видите на спидометре <em>прямо сейчас</em>. Она меняется каждую секунду и зависит от нажатия на педаль газа.</li>
+  <li>⏱️ <strong>Средняя скорость по времени</strong> — усреднённое значение скорости за определённый <em>промежуток времени</em> (например, за час поездки). Но она не учитывает остановки!</li>
+  <li>🗺️ <strong>Средняя путевая скорость</strong> — это <strong>истинный показатель</strong>, который учитывает <em>весь пройденный путь</em> и <em>всё затраченное время</em>, включая стоянки, пробки и даже время на заправку.</li>
+</ul>
+
+<p>Пример: если вы проехали 100 км за 2 часа, но из них 30 минут простояли в пробке, ваша средняя путевая скорость будет <code>50 км/ч</code>, а не <code>66 км/ч</code>, как могло бы показаться на первый взгляд. Именно этот показатель важен для планирования маршрутов и расчёта времени в пути.</p>
+
+<blockquote>⚠️ Внимание: Многие навигаторы (например, <em>Яндекс.Навигатор</em> или <em>Google Maps</em>) показывают <strong>среднюю скорость движения</strong>, а не путевую. Чтобы получить точные данные, придётся учитывать время остановок вручную.</blockquote>
+
+<h2 id="основная-формула-расчёта-проще-чем-кажется">Основная формула расчёта: проще, чем кажется</h2>
+
+<p>Формула средней путевой скорости (<em>Vср</em>) выглядит так:</p>
+
+<pre><code>Vср = Sобщ / Tобщ</code></pre>
+
+<p>Где:</p>
+<ul>
+  <li><code>Sобщ</code> — <strong>общий пройденный путь</strong> (в километрах или метрах).</li>
+  <li><code>Tобщ</code> — <strong>общее время поездки</strong> (в часах или секундах), <em>включая все остановки</em>.</li>
+</ul>
+
+<p>Например, если вы проехали <code>300 км</code> за <code>5 часов</code> (из которых <code>45 минут</code> стояли на заправке и в пробках), то:</p>
+<pre><code>Vср = 300 км / 5 ч = 60 км/ч</code></pre>
+
+<p>Но что, если маршрут был сложным, с несколькими участками? Тогда используется <strong>взвешенная формула</strong>:</p>
+<pre><code>Vср = (S1 + S2 + ... + Sn) / (T1 + T2 + ... + Tn)</code></pre>
+
+<div class="pb-poll" id="poll-46069ae7"><div class="pb-poll-question">📊 Как вы обычно рассчитываете время поездки?</div><div class="pb-poll-option" data-poll="46069ae7" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Доверяю навигатору</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="46069ae7" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Считаю сам по формуле</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="46069ae7" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Ориентируюсь по опыту</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="46069ae7" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не рассчитываю заранее</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="практические-примеры-как-считать-в-реальных-условиях">Практические примеры: как считать в реальных условиях</h2>
+
+<p>Теория — это хорошо, но давайте разберём <strong>реальные кейсы</strong>, с которыми сталкивается каждый водитель.</p>
+
+<h3>Пример 1: Поездка с остановками</h3>
+<p>Вы едете из <em>Казани</em> в <em>Уфу</em> (расстояние <code>520 км</code>). По пути:</p>
+<ul>
+  <li>2 часа езды со скоростью <code>100 км/ч</code> (проехали <code>200 км</code>).</li>
+  <li>30 минут стоянка на заправке.</li>
+  <li>3 часа езды со скоростью <code>80 км/ч</code> (проехали <code>240 км</code>).</li>
+  <li>1 час простоя в пробке.</li>
+  <li>1 час езды со скоростью <code>60 км/ч</code> (проехали <code>60 км</code>).</li>
+  <li>15 минут остановка на кофе.</li>
+</ul>
+
+<p>Итого:</p>
+<ul>
+  <li>Общий путь: <code>200 + 240 + 60 = 500 км</code>.</li>
+  <li>Общее время: <code>2 + 0.5 + 3 + 1 + 1 + 0.25 = 7.75 ч</code>.</li>
+  <li>Средняя путевая скорость: <code>500 / 7.75 ≈ 64.5 км/ч</code>.</li>
+</ul>
+
+<h3>Пример 2: Городской маршрут с пробками</h3>
+<p>Вы ездите на работу: расстояние <code>20 км</code>, но из-за пробок тратите <code>1 час 20 минут</code>. Ваша средняя скорость:</p>
+<pre><code>Vср = 20 км / (1 + 20/60) ч ≈ 15 км/ч</code></pre>
+<p>Это типичная ситуация для мегаполисов, где <strong>средняя скорость в часы пик может падать до 10–12 км/ч</strong>.</p>
+
+
+<p>Общий километраж маршрута (с учётом объездов)</p>
+<p>Время всех остановок (светофоры, пробки, заправки)</p>
+<p>Время на парковку и поиск места</p>
+<p>Погодные условия (дождь, снег снижают скорость)</p>
+<p>Скоростные ограничения на трассе--></p>
+
+<h2 id="типичные-ошибки-при-расчёте-и-как-их-избежать">Типичные ошибки при расчёте и как их избежать</h2>
+
+<p>Даже опытные водители иногда ошибаются при вычислении средней скорости. Вот самые распространённые ловушки:</p>
+
+<ol>
+  <li><strong>Игнорирование времени остановок</strong>. Многие считают только время движения, забывая про пробки и стоянки. Результат: завышенная оценка скорости.</li>
+  <li><strong>Путаница в единицах измерения</strong>. Переводите всё в одни единицы: если путь в километрах, то время должно быть в часах (а не в минутах!).</li>
+  <li><strong>Неверный учёт расстояния</strong>. Навигатор может показывать <code>100 км</code> по прямой, но фактический путь с объездами будет <code>120 км</code>.</li>
+  <li><strong>Неучёт скоростных ограничений</strong>. Если на трассе ограничение <code>90 км/ч</code>, ваша средняя скорость вряд ли превысит <code>75–80 км/ч</code> (из-за обгонов, грузовиков и т. д.).</li>
+</ol>
+
+<blockquote>⚠️ Внимание: Если вы используете данные с бортового компьютера, помните, что он часто показывает <strong>среднюю скорость движения</strong> (без остановок). Чтобы получить путевую скорость, прибавьте время простоя!</blockquote>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Ошибка</th>
+      <th>Пример</th>
+      <th>Правильный расчёт</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Не учтено время на заправку</td>
+      <td>Проехали 200 км за 3 часа + 20 минут на АЗС. Считали: 200/3 = 66.7 км/ч</td>
+      <td>200 / (3 + 20/60) ≈ 61.5 км/ч</td>
+    </tr>
+    <tr>
+      <td>Путь посчитан по прямой</td>
+      <td>Навигатор показал 50 км, но ехали по объездной (65 км)</td>
+      <td>Использовать фактический километраж (65 км)</td>
+    </tr>
+    <tr>
+      <td>Единицы не совпадают</td>
+      <td>Путь в км, время в минутах: 100 км / 120 мин = ?</td>
+      <td>Перевести минуты в часы: 100 / (120/60) = 50 км/ч</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="как-использовать-среднюю-скорость-для-экономии-времени-и-топлива">Как использовать среднюю скорость для экономии времени и топлива</h2>
+
+<p>Знание средней путевой скорости помогает не только планировать время, но и <strong>экономить</strong>. Вот несколько практических советов:</p>
+
+<ul>
+  <li>⛽ <strong>Оптимизация расхода топлива</strong>. Чем ниже средняя скорость (из-за пробок), тем больше топлива тратится на холостой ход. Например, при скорости <code>20 км/ч</code> расход может вырасти на <code>30–40%</code> по сравнению с <code>60 км/ч</code>.</li>
+  <li>⏰ <strong>Выбор оптимального времени выезда</strong>. Если средняя скорость в городе днём — <code>30 км/ч</code>, а ночью — <code>50 км/ч</code>, то поездка в 2 часа ночи сэкономит вам <code>1.5 часа</code> на маршруте в <code>75 км</code>.</li>
+  <li>🗺️ <strong>Сравнение маршрутов</strong>. Иногда более длинный путь по объездной дороге бывает быстрее, если на основном маршруте пробки. Сравнивайте средние скорости, а не только километраж.</li>
+</ul>
+
+<p>Пример: вы едете из <em>Сочи</em> в <em>Краснодар</em> (расстояние <code>270 км</code>). Варианты:</p>
+<ol>
+  <li>Трасса М4: <code>270 км</code>, но средняя скорость <code>60 км/ч</code> (из-за грузовиков). Время: <code>4.5 часа</code>.</li>
+  <li>Объезд через <em>Туапсе</em>: <code>300 км</code>, но средняя скорость <code>80 км/ч</code>. Время: <code>3.75 часа</code>.</li>
+</ol>
+<p>Второй вариант длиннее на <code>30 км</code>, но быстрее на <code>45 минут</code>!</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если ваш бортовой компьютер показывает средний расход топлива, умножьте его на общий километраж — так вы получите точный расход топлива на поездку, включая остановки.</p></aside>
+
+<h2 id="инструменты-для-автоматизированного-расчёта">Инструменты для автоматизированного расчёта</h2>
+
+<p>Считать среднюю скорость вручную не всегда удобно. К счастью, есть инструменты, которые сделают это за вас:</p>
+
+<ul>
+  <li>📱 <strong>Мобильные приложения</strong>:
+    <ul>
+      <li><em>Google Maps</em> — показывает среднюю скорость на пройденном маршруте (в истории поездок).</li>
+      <li><em>Waze</em> — учитывает пробки и предлагает оптимальные маршруты.</li>
+      <li><em>Drivvo</em> — ведёт статистику поездок, расходу топлива и средней скорости.</li>
+    </ul>
+  </li>
+  <li>💻 <strong>Онлайн-калькуляторы</strong>:
+    <ul>
+      <li><a href="https://www.calculator.net/average-speed-calculator.html" target="_blank" rel="noopener">Calculator.net</a> — простой калькулятор средней скорости.</li>
+      <li><a href="https://planetcalc.ru/749/" target="_blank" rel="noopener">PlanetCalc</a> — поддерживает сложные маршруты с несколькими участками.</li>
+    </ul>
+  </li>
+  <li>🚗 <strong>Бортовые компьютеры</strong>:
+    <ul>
+      <li>Многие современные машины (например, <em>Volkswagen</em>, <em>Toyota</em>) показывают среднюю скорость за поездку в меню бортового компьютера.</li>
+      <li>Для старых авто можно установить <em>OBD2-сканер</em> (например, <em>ELM327</em>) и подключить его к смартфону.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Если вы предпочитаете ручной расчёт, вот шаблон для <em>Excel</em> или <em>Google Sheets</em>:</p>
+<pre><code>=СУММ(B2:B10)/СУММ(C2:C10)</code></pre>
+<p>Где <code>B2:B10</code> — ячейки с пройденными расстояниями, а <code>C2:C10</code> — с затраченным временем.</p>
+
+<details class="pb-accordion"><summary>Как обманывают навигаторы с средней скоростью?</summary><div class="pb-accordion-body"><p>
+<p>Многие навигаторы (например, <em>Яндекс.Навигатор</em>) показывают среднюю скорость <strong>только за время движения</strong>, исключая остановки. Например, если вы простояли 1 час в пробке, а ехали 2 часа со скоростью 60 км/ч, навигатор покажет 60 км/ч, хотя реальная средняя путевая скорость будет 40 км/ч (при условии, что проехали 120 км за 3 часа).</p></div></details></p>
+
+<h2 id="faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</h2>
+
+<details>
+  <summary>Может ли средняя путевая скорость быть выше максимальной разрешённой на трассе?</summary>
+  <p>Теоретически — да, но на практике это маловероятно. Например, если вы едете по трассе с ограничением <code>90 км/ч</code>, но часть пути проезжаете на скорости <code>110 км/ч</code>, а остальное время стоите в пробке, средняя может получиться <code>80–85 км/ч</code>. Однако такие ситуации редки, так как длительные остановки обычно снижают среднюю скорость.</p>
+</details>
+
+<details>
+  <summary>Как средняя скорость влияет на страховку ОСАГО?</summary>
+  <p>Прямого влияния нет, но некоторые страховые компании (например, <em>Ингосстрах</em> или <em>РЕСО-Гарантия</em>) учитывают <strong>пробег и стиль вождения</strong> при расчёте КБМ (коэффициента бонус-малус). Если ваша средняя скорость постоянно низкая (из-за частых поездок в пробках), это может косвенно указывать на повышенный риск ДТП, что влияет на стоимость полиса.</p>
+</details>
+
+<details>
+  <summary>Почему средняя скорость на трассе всегда ниже ограничения?</summary>
+  <p>Даже если вы едете строго <code>90 км/ч</code> по трассе с таким ограничением, ваша средняя скорость будет ниже из-за:</p>
+  <ul>
+    <li>Обгонов (разгон и торможение).</li>
+    <li>Грузовиков, которые едут медленнее.</li>
+    <li>Светофоров и перекрёстков.</li>
+    <li>Кратковременных остановок (например, на платных участках).</li>
+  </ul>
+  <p>В реальности средняя скорость на таких трассах обычно составляет <code>70–80 км/ч</code>.</p>
+</details>
+
+<details>
+  <summary>Можно ли рассчитать среднюю скорость по данным с тахографа?</summary>
+  <p>Да, <em>тахограф</em> фиксирует не только скорость, но и время движения/остановок. Для расчёта:</p>
+  <ol>
+    <li>Экспортируйте данные с тахографа (например, в формате <code>.ddd</code> или <code>.v1b</code>).</li>
+    <li>Используйте программу для анализа (например, <em>TachoScan</em> или <em>Digidown</em>).</li>
+    <li>Разделите общий километраж на общее время (включая остановки).</li>
+  </ol>
+  <p>Это особенно полезно для дальнобойщиков и логистических компаний.</p>
+</details>
+
+<details>
+  <summary>Как средняя скорость связана с износом автомобиля?</summary>
+  <p>Чем ниже средняя скорость (из-за частых разгонов/торможений в пробках), тем быстрее изнашиваются:</p>
+  <ul>
+    <li>Тормозные колодки и диски.</li>
+    <li>Сцепление (в городах с частыми светофорами).</li>
+    <li>Подвеска (из-за неровностей на низкой скорости).</li>
+    <li>Двигатель (работа на холостых оборотах увеличивает нагар).</li>
+  </ul>
+  <p>По статистике, автомобиль в городе изнашивается в <code>1.5–2 раза быстрее</code>, чем на трассе при той же пробеге.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Средняя путевая скорость — это не просто цифра, а инструмент для оптимизации поездок. Она помогает выбирать лучшие маршруты, экономить топливо и время, а также снижать износ автомобиля.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/sk/skolko-pedal-na-mekhanike.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько педалей на механике: подробный разбор для новичков</span>
+                <span class="pb-related-desc">Узнайте, сколько педалей в машине с механической коробкой передач, их назначение и как ими правильно</span>
+            </a><a href="/articles/k/ka/kak-dobavit-skill-test-v-gta-5-onlajn.html" class="pb-related-card">
+                <span class="pb-related-title">Как добавить скилл-тест в GTA 5 онлайн: инструкция</span>
+                <span class="pb-related-desc">Узнайте, как добавить скилл-тест в GTA 5 Online. Полное руководство по созданию проверочных испытани</span>
+            </a><a href="/articles/k/ka/kak-mozhno-narisovat-7.html" class="pb-related-card">
+                <span class="pb-related-title">Как нарисовать цифру 7: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как правильно и красиво нарисовать цифру 7. Простые техники рисования для детей и взрослых,</span>
+            </a><a href="/articles/p/pr/pravilnoe-raspolozhenie-ruk-na-rule.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно держать руки на руле: техника безопасности и комфорта</span>
+                <span class="pb-related-desc">Узнайте, как правильно располагать руки на руле автомобиля для безопасного вождения. Стандарты 9-3 и</span>
+            </a><a href="/articles/1/15/15-km-chas-v-m-s.html" class="pb-related-card">
+                <span class="pb-related-title">15 км/ч в м/с: точный перевод и формула расчета скорости</span>
+                <span class="pb-related-desc">Сколько будет 15 км/ч в м/с? Подробный разбор перевода единиц скорости, формула деления на 3.6, табл</span>
+            </a><a href="/articles/f/f-/f-1-chto-znachit.html" class="pb-related-card">
+                <span class="pb-related-title">F1 что значит: расшифровка, функции и настройки</span>
+                <span class="pb-related-desc">Полная расшифровка F1. Узнайте, что означает кнопка в авто, формула-1, режимы ЭБУ и как использовать</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как сделать голосовое управление своими руками: гайд — Авто Справочник</title>
+    <meta name="description" content="Полная инструкция: как настроить голосовое управление домом через умные колонки и Arduino. Создание умного дома с нуля без лишних затрат.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-sdelat-golosovoe-upravlenie.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сделать голосовое управление своими руками: гайд">
+    <meta property="og:description" content="Полная инструкция: как настроить голосовое управление домом через умные колонки и Arduino. Создание умного дома с нуля без лишних затрат.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сделать голосовое управление своими руками: гайд</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-платформы-и-экосистемы-для-умного-дома">Выбор платформы и экосистемы для умного дома</a></li><li><a href="#необходимое-оборудование-и-компоненты-системы">Необходимое оборудование и компоненты системы</a></li><li><a href="#инструкция-по-настройке-голосового-ассистента">Инструкция по настройке голосового ассистента</a></li><li><a href="#создание-сложных-сценариев-автоматизации">Создание сложных сценариев автоматизации</a></li><li><a href="#интеграция-с-arduino-и-diy-решения">Интеграция с Arduino и DIY решения</a></li><li><a href="#проблемы-безопасности-и-приватности-данных">Проблемы безопасности и приватности данных</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/karta-trassy-m4-don-s-kilometrami.html">Карта трассы М4 Дон с километрами: полный справочник 2026</a></li><li><a href="/articles/c/ch/chto-znachit-nejtralnyj-ph.html">Что значит нейтральный pH: почему это важно для здоровья и кожи</a></li><li><a href="/articles/m/mo/mozhno-li-zagorat-cherez-steklo-okna-v-kvartire.html">Можно ли загорать через стекло окна: мифы и реальность</a></li><li><a href="/articles/s/st/stiven-king-kristina-kratko.html">Кристина Стивена Кинга: краткий пересказ и анализ романа</a></li><li><a href="/articles/s/se/serial-pes-glavnyj-geroj.html">Сериал «Пёс»: кто главный герой, сюжет и персонажи</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как сделать голосовое управление домом: пошаговое руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-платформы-и-экосистемы-для-умного-дома">Выбор платформы и экосистемы для умного дома</a></li><li><a href="#необходимое-оборудование-и-компоненты-системы">Необходимое оборудование и компоненты системы</a></li><li><a href="#инструкция-по-настройке-голосового-ассистента">Инструкция по настройке голосового ассистента</a></li><li><a href="#создание-сложных-сценариев-автоматизации">Создание сложных сценариев автоматизации</a></li><li><a href="#интеграция-с-arduino-и-diy-решения">Интеграция с Arduino и DIY решения</a></li><li><a href="#проблемы-безопасности-и-приватности-данных">Проблемы безопасности и приватности данных</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Современные технологии позволяют превратить обычный дом в умное пространство, где свет, бытовая техника и климатические системы реагируют на голосовые команды. <strong>Голосовое управление</strong> перестало быть фантастикой и стало доступным инструментом для любого пользователя, желающего повысить уровень комфорта. Внедрение таких систем не требует глубоких знаний программирования, если следовать проверенным алгоритмам настройки.</p>
+
+<p>Внедрение автоматизации начинается с понимания архитектуры системы, которая будет связывать ваши команды с исполнительными устройствами. <em>Умная колонка</em> выступает в роли посредника, принимающего аудиосигнал и передающего его на сервер для обработки. После анализа запроса сигнал отправляется на <mark>локальный шлюз или облачный сервис</mark>, который и размыкает электрическую цепь необходимого прибора.</p>
+
+<p>Прежде чем приступать к закупке оборудования, необходимо четко определить, какие именно задачи должна решать система автоматизации в вашем жилище. <strong>Сценарии использования</strong> могут варьироваться от простого включения света до сложных цепочек действий, запускаемых одной фразой. Правильное планирование на этом этапе позволит избежать лишних трат и несовместимости протоколов в будущем.</p>
+
+<h2 id="выбор-платформы-и-экосистемы-для-умного-дома">Выбор платформы и экосистемы для умного дома</h2>
+<p>Первым шагом в создании системы является выбор базовой платформы, которая станет «мозгом» вашего жилища. На рынке доминируют несколько крупных игроков, таких как <em>Yandex</em>, <em>Google Home</em> и <em>Apple HomeKit</em>, каждый из которых предлагает свои уникальные возможности и ограничения. Выбор зависит от того, какими гаджетами вы пользуетесь ежедневно и насколько глубоко готовы погружаться в технические настройки.</p>
+
+<p>Если вы предпочитаете максимальную автономность и не хотите зависеть от облачных серверов китайских производителей, стоит обратить внимание на платформу <strong>Home Assistant</strong>. Это open-source решение требует установки на отдельный компьютер или одноплатник, например <em>Raspberry Pi</em>, но дает полный контроль над данными. Для тех, кто ищет простое решение «из коробки», оптимальным выбором станет связка умной колонки и совместимых розеток.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При выборе экосистемы учитывайте, что переход с одной платформы на другую в будущем может потребовать полной перенастройки всех устройств и сценариев.</p>
+</blockquote>
+
+<p>Важно также учитывать поддержку протоколов связи, так как разные устройства могут «говорить» на разных языках. Большинство современных гаджетов используют <strong>Wi-Fi</strong> или <em>Zigbee</em>, однако старые или специфические приборы могут требовать наличия <strong>ИК-пульта</strong> или радиоканала 433 МГц. Универсальность платформы часто определяется количеством поддерживаемых интеграций.</p>
+
+<div class="pb-poll" id="poll-d4008c83"><div class="pb-poll-question">📊 Какую экосистему вы планируете использовать?</div><div class="pb-poll-option" data-poll="d4008c83" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Яндекс Алиса</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d4008c83" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Google Home</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d4008c83" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Apple HomeKit</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d4008c83" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Home Assistant (Local)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d4008c83" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Мне все равно</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="необходимое-оборудование-и-компоненты-системы">Необходимое оборудование и компоненты системы</h2>
+<p>Для реализации проекта вам потребуется базовый набор hardware-компонентов, без которых физическое выполнение команд невозможно. Центральным элементом часто выступает <strong>умная колонка</strong> или специализированный хаб, который обеспечивает связь между интернетом и локальной сетью. Без этого устройства голосовые команды просто не будут распознаны и обработаны.</p>
+
+<p>Исполнительными механизмами служат умные розетки, реле и выключатели, которые непосредственно коммутируют электрическую цепь. Для управления телевизорами и кондиционерами, не имеющими собственного Wi-Fi модуля, необходимы <em>ИК-хабы</em> или универсальные пульты. Качество исполнения этих компонентов напрямую влияет на скорость отклика системы и надежность работы.</p>
+
+<ul>
+<li>🔌 <strong>Умные розетки</strong> — для управления бытовой техникой, работающей от сети 220В.</li>
+<li>💡 <strong>Умные лампы и выключатели</strong> — для регулировки освещения и создания световых сценариев.</li>
+<li>📡 <strong>Шлюзы и хабы</strong> — для объединения устройств, работающих по протоколам Zigbee или Z-Wave.</li>
+<li>📺 <strong>ИК-передатчики</strong> — для эмуляции сигналов пультов от старой техники.</li>
+</ul>
+
+<p>При подборе оборудования критически важно проверять заявленную мощность устройств, особенно если речь идет о нагревательных приборах. <strong>Реле</strong> должно выдерживать ток, потребляемый нагрузкой, с запасом не менее 20-30%. Пренебрежение этим правилом может привести к перегреву контактов и выходу умного устройства из строя.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Покупайте умные розетки с функцией мониторинга энергопотребления — это поможет отслеживать расход электричества и выявлять неисправные приборы.</p></aside>
+
+<h2 id="инструкция-по-настройке-голосового-ассистента">Инструкция по настройке голосового ассистента</h2>
+<p>Процесс настройки начинается с установки мобильного приложения выбранного производителя и регистрации учетной записи. После подключения устройства к сети Wi-Fi необходимо привязать его к аккаунту, следуя подсказкам на экране смартфона. На этом этапе формируется цифровой профиль, в котором будут храниться все сценарии и настройки.</p>
+
+<p>Далее следует этап обнаружения устройств, когда система сканирует сеть и предлагает добавить найденные гаджеты в общий список. Для каждого устройства рекомендуется задать понятное имя, которое будет использоваться в голосовых командах, например, «свет на кухне» или «торшер в гостиной». <strong>Логика именования</strong> должна быть естественной, чтобы не приходилось каждый раз вспоминать сложные технические названия.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Настройка системы</h4><label class="check-item"><input type="checkbox"><span>Зарегистрировать аккаунт</span></label><label class="check-item"><input type="checkbox"><span>Подключить хаб к роутеру</span></label><label class="check-item"><input type="checkbox"><span>Добавить устройства в приложение</span></label><label class="check-item"><input type="checkbox"><span>Присвоить имена комнатам</span></label><label class="check-item"><input type="checkbox"><span>Проверить работу команд</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Финальным шагом является создание сценариев, которые объединяют несколько действий в одну команду. Например, фраза «я дома» может одновременно включать свет в коридоре, запускать музыку и открывать шторы. Гибкость настройки позволяет адаптировать систему под любые, даже самые нестандартные потребности пользователя.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Устройство</th>
+<th>Протокол</th>
+<th>Сложность</th>
+<th>Цена</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Умная розетка</td>
+<td>Wi-Fi</td>
+<td>Низкая</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>Умная лампа</td>
+<td>Zigbee/Bluetooth</td>
+<td>Средняя</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>ИК-Хаб</td>
+<td>Wi-Fi + ИК</td>
+<td>Высокая</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Датчик движения</td>
+<td>Zigbee</td>
+<td>Средняя</td>
+<td>Низкая</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="создание-сложных-сценариев-автоматизации">Создание сложных сценариев автоматизации</h2>
+<p>Высший пилотаж в управлении домом — это создание сложных логических цепочек, реагирующих на различные триггеры. <strong>Триггером</strong> может выступать не только голосовая команда, но и время суток, показания датчиков или геолокация пользователя. Комбинирование условий позволяет сделать систему по-настоящему интеллектуальной и предугадывающей желания.</p>
+
+<p>Например, можно настроить сценарий, при котором открытие умного замка вечером автоматически включает свет в прихожей и отопление, если температура ниже заданной. Такие связки требуют более тонкой настройки в приложении, но результат того стоит. <em>Виртуальные переключатели</em> помогают объединять устройства разных производителей в единую логическую группу.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При создании сценариев с участием отопления или газового оборудования всегда оставляйте возможность ручного overrides для безопасности.</p>
+</blockquote>
+
+<p>Использование переменных и условий «Если-То» (IFTTT) открывает практически безграничные возможности. Вы можете настроить отправку уведомления на телефон, если датчик протечки зафиксирует воду, или выключение всех приборов при уходе из дома по геолокации. Главное — не переусложнить систему, чтобы она оставалась понятной для всех членов семьи.</p>
+
+<details class="pb-accordion"><summary>Пример сложного сценария "Кино"</summary><div class="pb-accordion-body"><p>При команде "Время кино" система выполняет следующие действия: 1. Опускает умные шторы. 2. Выключает основной свет. 3. Включает подсветку ТВ (Bias lighting). 4. Переводит телефон в режим "Не беспокоить". 5. Запускает медиаплеер на телевизоре.</p></div></details>
+
+<h2 id="интеграция-с-arduino-и-diy-решения">Интеграция с Arduino и DIY решения</h2>
+<p>Для энтузиастов, желающих создать уникальные устройства или управлять техникой, не имеющей smart-функций, идеально подходит платформа <strong>Arduino</strong> или <em>ESP8266</em>. Эти микроконтроллеры позволяют подключать практически любые датчики и исполнительные механизмы, управляя ими через голосовые команды, транслируемые через MQTT или HTTP запросы. Это путь для тех, кто любит паять и программировать.</p>
+
+<p>Процесс интеграции подразумевает прошивку контроллера кодом, который подключает его к Wi-Fi сети и регистрирует в системе умного дома как новое устройство. <code>ESPHome</code> или <em>Tasmota</em> — популярные прошивки, упрощающие этот процесс и делающие устройства совместимыми с Home Assistant. Такой подход позволяет превратить обычное реле в полноценный умный выключатель за копейки.</p>
+
+<pre><code>
+<p>// Пример простейшего кода для ESP8266</p>
+<p>#include <ESP8266WiFi.h></p>
+<p>void setup() {</p>
+<p>pinMode(LED_BUILTIN, OUTPUT);</p>
+<p>WiFi.begin("SSID", "PASSWORD");</p>
+<p>}</p>
+<p>void loop() {</p>
+<p>// Обработка команд</p>
+<p>}</p>
+</code></pre>
+
+<p>Использование самодельных устройств дает полную независимость от вендоров, но требует времени на отладку. <strong>Протокол MQTT</strong> является стандартом де-факто для обмена сообщениями между самодельными устройствами и сервером автоматизации. Он легкий, быстрый и идеально подходит для работы в локальной сети.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>DIY решения на базе ESP8266 позволяют создать умное устройство стоимостью менее 500 рублей, которое по функционалу не уступает заводским аналогам за 2000+ рублей.</p></aside>
+
+<h2 id="проблемы-безопасности-и-приватности-данных">Проблемы безопасности и приватности данных</h2>
+<p>Внедряя в дом устройства, которые постоянно слушают и передают данные, необходимо осознавать риски, связанные с <strong>кибербезопасностью</strong>. Уязвимости в прошивках или слабые пароли могут стать открытой дверью для злоумышленников. Регулярное обновление программного обеспечения всех компонентов системы — это первое и обязательное правило защиты.</p>
+
+<p>Рекомендуется сегментировать сеть, выделяя умные устройства в отдельный гостевой VLAN, чтобы в случае взлома лампочки хакер не получил доступ к вашему компьютеру с банковскими данными. <em>Двухфакторная аутентификация</em> должна быть включена во всех аккаунтах, имеющих доступ к управлению домом. Это значительно усложнит жизнь потенциальным attackers.</p>
+
+<ul>
+<li>🔒 Используйте сложные, уникальные пароли для каждого устройства и сервиса.</li>
+<li>🔄 Регулярно проверяйте и устанавливайте обновления прошивок.</li>
+<li>🚫 Отключайте неиспользуемые функции удаленного доступа, если в них нет необходимости.</li>
+<li>👁️ Заклеивайте камеры на устройствах, если они не используются постоянно.</li>
+</ul>
+
+<p>Также стоит внимательно читать политику конфиденциальности производителей, чтобы понимать, куда и как долго хранятся записи ваших голосовых команд. Некоторые компании позволяют автоматически удалять историю запросов через определенное время. <strong>Локальная обработка</strong> команд, которую предлагают некоторые системы, является наиболее безопасным вариантом, так как данные не покидают пределов вашей квартиры.</p>
+
+<details>
+<summary>Какие устройства нужны для голосового управления светом?</summary>
+<p>Для управления светом потребуются умные лампы (заменяющие обычные) или умные выключатели (устанавливаемые вместо обычных). Также необходим центр управления (хаб или умная колонка), который будет принимать голосовые команды.</p>
+</details>
+
+<details>
+<summary>Работает ли голосовое управление без интернета?</summary>
+<p>Полноценное голосовое управление через облачные ассистенты (Алиса, Siri, Google) требует интернета для распознавания речи. Однако локальные системы на базе Home Assistant могут выполнять сценарии без интернета, если используется локальное распознавание речи (например, через Whisper или Vosk).</p>
+</details>
+
+<details>
+<summary>Безопасно ли подключать мощные приборы к умным розеткам?</summary>
+<p>Да, если мощность прибора не превышает максимально допустимую нагрузку, указанную на корпусе розетки (обычно 10А или 16А, что составляет 2.2-3.5 кВт). Для мощных потребителей (электроплиты, котлы) лучше использовать умные реле, установленные в щиток, или контакторы.</p>
+</details>
+
+<details>
+<summary>Можно ли управлять голосом старым телевизором?</summary>
+<p>Да, для этого понадобится универсальный ИК-пульт или ИК-хаб (например, от Яндекс или Tuya), который обучается командам вашего старого пульта. После настройки вы сможете говорить колонке «включи телевизор» или «прибавить громкость».</p>
+</details>
+
+<details>
+<summary>Что делать, если команды выполняются с задержкой?</summary>
+<p>Задержки часто вызваны слабым сигналом Wi-Fi или перегрузкой роутера. Попробуйте переместить роутер ближе к устройствам, использовать Zigbee-хаб для разгрузки Wi-Fi сети или проверить скорость интернет-соединения.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/karta-trassy-m4-don-s-kilometrami.html" class="pb-related-card">
+                <span class="pb-related-title">Карта трассы М4 Дон с километрами: полный справочник 2026</span>
+                <span class="pb-related-desc">Актуальная карта трассы М4 Дон с километражем, камерами, платными участками и платными стоянками. По</span>
+            </a><a href="/articles/c/ch/chto-znachit-nejtralnyj-ph.html" class="pb-related-card">
+                <span class="pb-related-title">Что значит нейтральный pH: почему это важно для здоровья и кожи</span>
+                <span class="pb-related-desc">Узнайте, что такое нейтральный pH 7.0, как он влияет на кислотную мантию кожи и почему важен баланс </span>
+            </a><a href="/articles/m/mo/mozhno-li-zagorat-cherez-steklo-okna-v-kvartire.html" class="pb-related-card">
+                <span class="pb-related-title">Можно ли загорать через стекло окна: мифы и реальность</span>
+                <span class="pb-related-desc">Загар через оконное стекло: проникает ли UVB, риск ожогов и выцветания мебели. Экспертный разбор физ</span>
+            </a><a href="/articles/s/st/stiven-king-kristina-kratko.html" class="pb-related-card">
+                <span class="pb-related-title">Кристина Стивена Кинга: краткий пересказ и анализ романа</span>
+                <span class="pb-related-desc">Краткое содержание романа Стивена Кинга Кристина. Сюжет, главные герои, ключевые события и анализ од</span>
+            </a><a href="/articles/s/se/serial-pes-glavnyj-geroj.html" class="pb-related-card">
+                <span class="pb-related-title">Сериал «Пёс»: кто главный герой, сюжет и персонажи</span>
+                <span class="pb-related-desc">Полный разбор сериала «Пёс»: кто главный герой, роль актера Егора Бероева, описание сюжета и список </span>
+            </a><a href="/articles/l/lo/loshad-emblema-na-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Лошадь эмблема на машине: марки авто, история и значение символов</span>
+                <span class="pb-related-desc">Почему на машинах красуется лошадь? Узнайте, какие бренды используют этот символ: Ferrari, Ford, Por</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

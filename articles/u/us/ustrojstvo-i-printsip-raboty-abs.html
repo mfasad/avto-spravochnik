@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>ABS: Устройство и принцип работы антиблокировочной системы — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор конструкции ABS. Как работает антиблокировочная система тормозов, ее компоненты, режимы работы и особенности обслуживания.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/u/us/ustrojstvo-i-printsip-raboty-abs.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ABS: Устройство и принцип работы антиблокировочной системы">
+    <meta property="og:description" content="Подробный разбор конструкции ABS. Как работает антиблокировочная система тормозов, ее компоненты, режимы работы и особенности обслуживания.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">ABS: Устройство и принцип работы антиблокировочной системы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#конструкция-и-основные-компоненты-системы">Конструкция и основные компоненты системы</a></li><li><a href="#алгоритм-работы-и-циклы-торможения">Алгоритм работы и циклы торможения</a></li><li><a href="#режимы-работы-и-типы-систем-abs">Режимы работы и типы систем ABS</a></li><li><a href="#диагностика-неисправностей-и-симптомы">Диагностика неисправностей и симптомы</a></li><li><a href="#особенности-эксплуатации-и-обслуживания">Особенности эксплуатации и обслуживания</a></li><li><a href="#мифы-и-реальность-о-работе-abs">Мифы и реальность о работе ABS</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/n/nu/nuzhna-li-signalizatsiya-na-avtomobil-s-besklyuchevym-dostupom.html">Сигнализация на авто с бесключевым доступом: нужна ли?</a></li><li><a href="/articles/a/ak/akkumulyator-avtomobilnyj-akom-60-kupit.html">Аккумулятор АКОМ 60 купить: цены, характеристики, где лучше</a></li><li><a href="/articles/s/sa/samye-moshchnye-lampy-h4-galogenovye.html">Самые мощные галогеновые лампы H4: ТОП-10 рейтинг 2026</a></li><li><a href="/articles/k/ka/kak-izbavitsya-ot-kondensata-v-mashine.html">Конденсат в машине: 7 способов избавиться навсегда (2026)</a></li><li><a href="/articles/r/re/rele-40-amper-12-volt.html">Реле 40А 12В для авто: выбор, подключение и неисправности</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>ABS: устройство и принцип работы антиблокировочной системы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#конструкция-и-основные-компоненты-системы">Конструкция и основные компоненты системы</a></li><li><a href="#алгоритм-работы-и-циклы-торможения">Алгоритм работы и циклы торможения</a></li><li><a href="#режимы-работы-и-типы-систем-abs">Режимы работы и типы систем ABS</a></li><li><a href="#диагностика-неисправностей-и-симптомы">Диагностика неисправностей и симптомы</a></li><li><a href="#особенности-эксплуатации-и-обслуживания">Особенности эксплуатации и обслуживания</a></li><li><a href="#мифы-и-реальность-о-работе-abs">Мифы и реальность о работе ABS</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Внезапное торможение на скользкой дороге или асфальте, залитом дождем, часто превращается в неконтролируемый снос автомобиля, если водитель не владеет навыками экстремального вождения. Именно для предотвращения таких ситуаций инженеры внедрили <strong>антиблокировочную систему</strong>, которая стала обязательным стандартом безопасности для всех современных транспортных средств. Аббревиатура <em>ABS</em> (Anti-lock Braking System) знакома каждому автолюбителю, но мало кто задумывается о том, какая сложная электроника и гидравлика скрываются за миганием лампочки на приборной панели при запуске двигателя.</p>
+
+<p>Основная задача этой системы заключается в сохранении управляемости и курсовой устойчивости автомобиля в момент экстренного торможения. Если колеса заблокируются и начнут скользить по поверхности «юзом», автомобиль превращается в неуправляемую массу, летящую по инерции. <strong>Принцип работы ABS</strong> базируется на постоянном мониторинге скорости вращения каждого колеса и модуляции давления тормозной жидкости в контурах, предотвращая полную блокировку колес.</p>
+
+<p>Это позволяет водителю не только сократить тормозной путь на скользких покрытиях, но и совершить маневр объезда препятствия даже при полностью выжатой педали тормоза. Понимание того, как функционирует <em>электронный блок управления</em> и гидравлический модулятор, помогает владельцам автомобилей лучше чувствовать поведение машины и вовремя замечать признаки неисправности.</p>
+
+<h2 id="конструкция-и-основные-компоненты-системы">Конструкция и основные компоненты системы</h2>
+
+<p>Фундаментом всей системы является набор датчиков, установленных непосредственно на ступицах колес или в корпусе редуктора заднего моста. Эти элементы, известные как <strong>датчики скорости вращения</strong>, непрерывно считывают импульсы от зубчатых венцов (гребенок), закрепленных на вращающихся частях подвески. Сигнал передается в блок управления, где он анализируется с высокой частотой дискретизации, позволяя компьютеру точно определять момент начала проскальзывания.</p>
+
+<p>Центральным элементом, принимающим решения, выступает электронный блок управления (ЭБУ). Это «мозг» системы, который обрабатывает входящие данные и формирует управляющие команды для электромагнитных клапанов. В современных автомобилях ЭБУ ABS часто интегрирован с блоками управления двигателем и системой стабилизации <em>ESP</em>, создавая единую сеть обмена данными.</p>
+
+<p>Исполнительным механизмом служит гидравлический блок, который физически воздействует на тормозную жидкость. Внутри этого узла находятся электромагнитные клапаны и электронасос, возвращающий жидкость в главный тормозной цилиндр. Именно этот узел создает те самые пульации на педали тормоза, которые водитель ощущает при активации системы.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При замене тормозных колодок или дисков всегда очищайте зубчатый венец от металлической стружки, так как она может нарушить работу датчиков ABS.</p></aside>
+
+<h2 id="алгоритм-работы-и-циклы-торможения">Алгоритм работы и циклы торможения</h2>
+
+<p>Процесс торможения с участием антиблокировочной системы происходит в несколько этапов, которые сменяют друг друга за доли секунды. В обычном режиме, когда водитель плавно нажимает на педаль, клапаны открыты, и давление в тормозных суппортах растет прямо пропорционально усилию. Как только <strong>ЭБУ</strong> фиксирует резкое падение скорости вращения одного из колес (признак блокировки), система переходит в режим регулирования.</p>
+
+<p>Первым этапом является фаза сброса давления. Блок управления подает сигнал на впускной клапан, перекрывая подачу жидкости из главного цилиндра, а выпускной клапан открывается, стравливая часть давления в резервуар. Колесо, которое начало блокироваться, снова набирает скорость вращения, восстанавливая сцепление с дорогой.</p>
+
+<p>Следующим шагом идет фаза удержания давления. Если скорость вращения колеса восстановилась, система закрывает выпускной клапан, фиксируя текущее давление в контуре. Это позволяет автомобилю эффективно тормозить, не уходя в занос. Цикл повторяется многократно, пока водитель не отпустит педаль или опасность не минует.</p>
+
+<ul>
+<li>🚗 <strong>Мониторинг:</strong> Постоянное считывание сигналов с датчиков угловой скорости.</li>
+<li>🛑 <strong>Анализ:</strong> Сравнение скорости вращения колес и выявление тенденции к блокировке.</li>
+<li>💨 <strong>Коррекция:</strong> Быстрое открытие и закрытие клапанов для сброса и восстановления давления.</li>
+</ul>
+
+<p>Частота таких циклов может достигать нескольких раз в секунду, что и создает характерный стук и вибрацию педали. Важно понимать, что <em>гидравлический насос</em> в этот момент активно работает, возвращая жидкость обратно в магистраль, чтобы быть готовым к следующему циклу торможения.</p>
+
+<div class="pb-poll" id="poll-345fa07b"><div class="pb-poll-question">📊 Как часто вы чувствуете работу ABS при торможении?</div><div class="pb-poll-option" data-poll="345fa07b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Ежедневно в городе</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="345fa07b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Только зимой на льду</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="345fa07b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Почувствовал только на тест-драйве</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="345fa07b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Ни разу не ощущал</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="режимы-работы-и-типы-систем-abs">Режимы работы и типы систем ABS</h2>
+
+<p>В зависимости от типа привода автомобиля и количества каналов регулирования, системы делятся на несколько типов. Самой распространенной и эффективной является четырехканальная система, где каждое колесо контролируется индивидуально. Это обеспечивает максимальную курсовую устойчивость и позволяет реализовать функцию <strong>EBD</strong> (электронное распределение тормозных усилий).</p>
+
+<p>Для заднеприводных автомобилей прошлого поколения часто применялась трехканальная схема. В ней передние колеса имели индивидуальные контуры, а задние объединялись в один канал, управляемый по принципу «выбора наименьшего». Это означало, что если одно заднее колесо начинало скользить, давление сбрасывалось на обоих задних колесах, чтобы избежать заноса.</p>
+
+<p>Существуют также двухканальные и одноканальные системы, которые сейчас встречаются редко, в основном на легких коммерческих грузовиках или мотоциклах. В одноканальной версии регулирование происходит одновременно на всех колесах, что значительно снижает эффективность торможения на неоднородном покрытии, когда левые колеса находятся на асфальте, а правые на льду.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип системы</th>
+<th>Количество каналов</th>
+<th>Применение</th>
+<th>Эффективность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Четырехканальная</td>
+<td>4</td>
+<td>Современные легковые авто</td>
+<td>Максимальная</td>
+</tr>
+<tr>
+<td>Трехканальная</td>
+<td>3</td>
+<td>Заднеприводные авто (90-е)</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Двухканальная</td>
+<td>2</td>
+<td>Микроавтобусы, старые модели</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Одноканальная</td>
+<td>1</td>
+<td>Мотоциклы, грузовики</td>
+<td>Базовая</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Современные системы тесно интегрированы с другими помощниками водителя. Например, <em>система курсовой устойчивости</em> использует датчики ABS для подтормаживания отдельных колес при возникновении заноса, эффективно выравнивая траекторию движения автомобиля.</p>
+
+<details class="pb-accordion"><summary>Что такое функция "Dry Brake"?</summary><div class="pb-accordion-body"><p>Это вспомогательная функция, которая слегка прижимает колодки к дискам во время дождя, чтобы убрать водяную пленку и обеспечить мгновенный отклик тормозов при нажатии педали.</p></div></details>
+
+<h2 id="диагностика-неисправностей-и-симптомы">Диагностика неисправностей и симптомы</h2>
+
+<p>Система ABS обладает встроенной функцией самодиагностики, которая запускается при каждом включении зажигания. Лампочка на панели приборов загорается на несколько секунд, подтверждая исправность цепей и датчиков. Если индикатор горит постоянно или загорается в движении, это сигнал о том, что система отключена и торможение происходит в обычном режиме без антиблокировки.</p>
+
+<p>Одной из самых частых причин ошибок является загрязнение или повреждение датчиков скорости. Грязь, металлическая стружка или окислившиеся контакты могут искажать сигнал, заставляя ЭБУ думать, что колесо заблокировано или, наоборот, вращается с разной скоростью без причины. В таких случаях на приборной панели может загореться предупреждение.</p>
+
+<p>Также проблемы могут возникать с гидравлическим блоком. Если электронасос вышел из строя или клапаны заклинило, система потеряет способность модулировать давление. В некоторых случаях водитель может заметить, что педаль тормоза стала «ватной» или, наоборот, слишком тугой, а ход педали изменился.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если горит лампа ABS, тормозная система продолжает работать, но без защиты от блокировки колес. Будьте осторожны на скользкой дороге!</p>
+</blockquote>
+
+<p>Для точного определения неисправности необходимо подключение диагностического сканера, который считает коды ошибок из памяти блока управления. Коды могут указывать на обрыв цепи датчика, короткое замыкание, неисправность насоса или низкий уровень напряжения в бортовой сети.</p>
+
+<h2 id="особенности-эксплуатации-и-обслуживания">Особенности эксплуатации и обслуживания</h2>
+
+<p>Специфического планового обслуживания антиблокировочная система не требует, однако она чувствительна к состоянию других узлов автомобиля. В первую очередь, это касается тормозной жидкости. Гигроскопичность жидкости приводит к накоплению влаги, которая вызывает коррозию внутренних каналов гидроблока и клапанов. Замена жидкости должна производиться строго по регламенту завода-изготовителя.</p>
+
+<p>При замене шин важно устанавливать резину одинакового размера и степени износа на все оси. Разница в диаметре колес приводит к тому, что датчики фиксируют разную скорость вращения, что система воспринимает как пробуксовку или блокировку, вызывая ложные срабатывания.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка системы перед зимой</h4><label class="check-item"><input type="checkbox"><span>Диагностика сканером</span></label><label class="check-item"><input type="checkbox"><span>Проверка уровня тормозной жидкости</span></label><label class="check-item"><input type="checkbox"><span>Визуальный осмотр проводки датчиков</span></label><label class="check-item"><input type="checkbox"><span>Проверка давления в шинах</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Также стоит уделять внимание чистоте колесных арок. В зимний период salt (соль) и реагенты могут разъедать проводку датчиков, подходящую к ступицам. Регулярная мойка автомобиля, включая колесные ниши, продлит жизнь элементам системы.</p>
+
+<h2 id="мифы-и-реальность-о-работе-abs">Мифы и реальность о работе ABS</h2>
+
+<p>Существует распространенное заблуждение, что ABS всегда сокращает тормозной путь. На сухом и ровном асфальте это действительно так. Однако на рыхлых поверхностях, таких как глубокий снег, песок или гравий, заблокированное колесо зарывается в грунт, создавая перед собой вал, который останавливает автомобиль быстрее. На таких покрытиях <strong>тормозной путь</strong> с ABS может быть длиннее.</p>
+
+<p>Многие водители пугаются характерного хруста и вибрации педали при экстренном торможении и инстинктивно отпускают педаль. Этого делать категорически нельзя. Система работает именно тогда, когда педаль выжата в пол. Отпуская педаль, вы отключаете ABS и теряете контроль над автомобилем.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не применяйте прерывистое торможение («качку») на автомобилях с исправной ABS. Просто жмите на педаль до упора и держите!</p>
+</blockquote>
+
+<p>Еще один миф гласит, что система сама решает, когда начинать торможение. Это не так. ABS не является системой экстренного торможения (хотя может работать в паре с ней). Она лишь предотвращает блокировку колес, но инициирует процесс торможения исключительно водитель.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>ABS не делает машину «неубиваемой» и не отменяет законы физики, а лишь помогает реализовать максимальное сцепление шин с дорогой при торможении.</p></aside>
+
+<details>
+<summary>Почему педаль тормоза вибрирует при работе ABS?</summary>
+<p>Вибрация вызвана быстрым возвратно-поступательным движением поршней в главном тормозном цилиндре. Электромагнитные клапаны гидроблока открываются и закрываются с высокой частотой, создавая пульсацию давления в тормозной магистрали, которая передается на педаль. Это нормальный рабочий процесс, подтверждающий исправность системы.</p>
+</details>
+
+<details>
+<summary>Можно ли ездить, если горит лампочка ABS?</summary>
+<p>Ехать можно, так как штатная тормозная система продолжает функционировать. Однако автомобиль лишается защиты от блокировки колес. На скользкой дороге или при экстренном торможении возможен уход в занос или потеря управляемости. Рекомендуется как можно скорее обратиться в сервис для диагностики.</p>
+</details>
+
+<details>
+<summary>Влияет ли разный рисунок протектора на работу ABS?</summary>
+<p>Да, влияет. Разный рисунок протектора или степень износа шин на одной оси приводят к разному коэффициенту сцепления. Датчики фиксируют разницу в скорости вращения колес, что может быть расценено системой как начало блокировки, вызывая преждевременное срабатывание или ошибки в работе.</p>
+</details>
+
+<details>
+<summary>Как часто нужно менять датчики ABS?</summary>
+<p>Датчики ABS не имеют регламентного срока замены и служат до возникновения неисправности. Обычно они выходят из строя из-за механических повреждений, обрыва проводки или загрязнения. При появлении ошибок в системе проводится диагностика, и замена производится по факту неисправности.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/n/nu/nuzhna-li-signalizatsiya-na-avtomobil-s-besklyuchevym-dostupom.html" class="pb-related-card">
+                <span class="pb-related-title">Сигнализация на авто с бесключевым доступом: нужна ли?</span>
+                <span class="pb-related-desc">Нужна ли сигнализация на автомобиль с бесключевым доступом? Анализ уязвимостей Keyless, защита от ре</span>
+            </a><a href="/articles/a/ak/akkumulyator-avtomobilnyj-akom-60-kupit.html" class="pb-related-card">
+                <span class="pb-related-title">Аккумулятор АКОМ 60 купить: цены, характеристики, где лучше</span>
+                <span class="pb-related-desc">Планируете аккумулятор автомобильный АКОМ 60 купить? Подробный обзор моделей, расшифровка кодов, про</span>
+            </a><a href="/articles/s/sa/samye-moshchnye-lampy-h4-galogenovye.html" class="pb-related-card">
+                <span class="pb-related-title">Самые мощные галогеновые лампы H4: ТОП-10 рейтинг 2026</span>
+                <span class="pb-related-desc">Обзор самых мощных галогеновых ламп H4. Рейтинг, характеристики, срок службы и влияние на проводку а</span>
+            </a><a href="/articles/k/ka/kak-izbavitsya-ot-kondensata-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Конденсат в машине: 7 способов избавиться навсегда (2026)</span>
+                <span class="pb-related-desc">Почему потеют окна в авто и как убрать конденсат быстро? Причины запотевания, народные методы и проф</span>
+            </a><a href="/articles/r/re/rele-40-amper-12-volt.html" class="pb-related-card">
+                <span class="pb-related-title">Реле 40А 12В для авто: выбор, подключение и неисправности</span>
+                <span class="pb-related-desc">Как выбрать реле 40 ампер на 12 вольт для автомобиля? Схемы подключения, признаки неисправностей и Т</span>
+            </a><a href="/articles/k/kl/klej-dlya-vosstanovleniya-obogreva-zadnego-stekla.html" class="pb-related-card">
+                <span class="pb-related-title">Клей для восстановления обогрева заднего стекла: выбор и ремонт</span>
+                <span class="pb-related-desc">Как выбрать клей для ремонта нитей обогрева заднего стекла? Пошаговая инструкция, лучшие составы и о</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

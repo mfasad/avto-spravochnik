@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Калькулятор пробега по моточасам: как правильно рассчитать — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как перевести моточасы в километры пробега с помощью калькулятора. Формулы, таблицы соответствия и нюансы для разных типов автомобилей.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kalkulyator-probega-po-motochasam.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Калькулятор пробега по моточасам: как правильно рассчитать">
+    <meta property="og:description" content="Узнайте, как перевести моточасы в километры пробега с помощью калькулятора. Формулы, таблицы соответствия и нюансы для разных типов автомобилей.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Калькулятор пробега по моточасам: как правильно рассчитать</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-моточасы-и-зачем-их-переводить-в-пробег">Что такое моточасы и зачем их переводить в пробег</a></li><li><a href="#формулы-расчета-пробега-по-моточасам">Формулы расчета пробега по моточасам</a></li><li><a href="#калькулятор-пробега-по-моточасам-онлайн-и-оффлайн-варианты">Калькулятор пробега по моточасам: онлайн и оффлайн варианты</a></li><li><a href="#таблица-соответствия-моточасов-и-пробега">Таблица соответствия моточасов и пробега</a></li><li><a href="#как-проверить-моточасы-на-автомобиле">Как проверить моточасы на автомобиле</a></li><li><a href="#нюансы-расчета-для-разных-типов-двигателей">Нюансы расчета для разных типов двигателей</a></li><li><a href="#ошибки-при-расчете-пробега-по-моточасам">Ошибки при расчете пробега по моточасам</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ch/chem-promyt-mednyj-radiator-pechki-avtomobilya.html">Чем промыть медный радиатор печки авто: 5 эффективных способов</a></li><li><a href="/articles/c/ch/chto-znachit-knopka-a-s-v-avtomobile.html">Кнопка ASR в машине: что это и как работает (2026)</a></li><li><a href="/articles/z/zn/znachki-v-mashine-na-paneli-upravleniya-chto-oznachaet.html">Значки на панели приборов автомобиля: расшифровка 2026 года</a></li><li><a href="/articles/k/kr/krejserskaya-skorost-eto-prostymi-slovami.html">Крейсерская скорость: что это простыми словами и как её рассчитать</a></li><li><a href="/articles/c/ch/chto-takoe-kursovaya-ustojchivost.html">Курсовая устойчивость автомобиля: что это и как влияет на безопасность</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Калькулятор пробега по моточасам: точный расчет для автомобиля</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-моточасы-и-зачем-их-переводить-в-пробег">Что такое моточасы и зачем их переводить в пробег</a></li><li><a href="#формулы-расчета-пробега-по-моточасам">Формулы расчета пробега по моточасам</a></li><li><a href="#калькулятор-пробега-по-моточасам-онлайн-и-оффлайн-варианты">Калькулятор пробега по моточасам: онлайн и оффлайн варианты</a></li><li><a href="#таблица-соответствия-моточасов-и-пробега">Таблица соответствия моточасов и пробега</a></li><li><a href="#как-проверить-моточасы-на-автомобиле">Как проверить моточасы на автомобиле</a></li><li><a href="#нюансы-расчета-для-разных-типов-двигателей">Нюансы расчета для разных типов двигателей</a></li><li><a href="#ошибки-при-расчете-пробега-по-моточасам">Ошибки при расчете пробега по моточасам</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Владельцы автомобилей не всегда знают точный пробег машины, особенно если покупают подержанный авто с неисправным одометром. В таких случаях на помощь приходят <strong>моточасы</strong> — единица измерения времени работы двигателя. Но как перевести их в понятный километраж? Для этого нужен <em>калькулятор пробега по моточасам</em>, который учитывает среднюю скорость, тип двигателя и условия эксплуатации.</p>
+
+<p>Моточасы отображают суммарное время работы мотора, а не пройденное расстояние. Например, если автомобиль много стоит в пробках, моточасы будут расти быстрее, чем пробег. Поэтому простой конвертации не существует — необходимо учитывать среднюю скорость движения. В этой статье разберем, как правильно рассчитать пробег, какие формулы использовать и что влияет на точность результатов.</p>
+
+<h2 id="что-такое-моточасы-и-зачем-их-переводить-в-пробег">Что такое моточасы и зачем их переводить в пробег</h2>
+
+<p>Моточасы (<strong>МЧ</strong>) — это единица измерения времени работы двигателя, которая фиксирует, сколько часов мотор был включен. Этот параметр важен для:</p>
+
+<ul>
+<li>🔧 Планирования технического обслуживания (ТО) по фактическому износу, а не по пробегу.</li>
+<li>📊 Оценки реального состояния автомобиля при покупке б/у.</li>
+<li>⚡ Контроля ресурса двигателя в условиях интенсивной эксплуатации (такси, коммерческий транспорт).</li>
+<li>🛠️ Диагностики неисправностей, связанных с износом деталей.</li>
+</ul>
+
+<p>В отличие от пробега, моточасы учитывают <em>режим работы двигателя</em>. Например, если автомобиль часто стоит с заведенным мотором (например, в пробках или при прогреве зимой), моточасы будут накапливаться быстрее, чем километры. Поэтому для точной оценки состояния машины важно знать оба параметра.</p>
+
+<blockquote>⚠️ Внимание: На некоторых моделях <em>Японских и Корейских автомобилей</em> (например, <em>Toyota</em>, <em>Hyundai</em>) моточасы могут сбрасываться при замене аккумулятора или отключении питания. Перед покупкой уточните, сохранена ли история.</blockquote>
+
+<h2 id="формулы-расчета-пробега-по-моточасам">Формулы расчета пробега по моточасам</h2>
+
+<p>Самый простой способ конвертировать моточасы в километры — использовать <strong>среднюю скорость движения</strong>. Формула выглядит так:</p>
+
+<p><strong>Пробег (км) = Моточасы × Средняя скорость (км/ч)</strong></p>
+
+<p>Однако средняя скорость зависит от множества факторов:</p>
+
+<ul>
+<li>🏙️ Городской трафик: 20–30 км/ч.</li>
+<li>🛣️ Загородные трассы: 60–80 км/ч.</li>
+<li>🚜 Грузовые автомобили или спецтехника: 10–40 км/ч (зависит от нагрузки).</li>
+<li>🏁 Спортивный стиль езды: 40–60 км/ч (но моточасы накапливаются быстрее из-за высоких оборотов).</li>
+</ul>
+<p>
+
+<p>Для более точного расчета можно использовать <strong>коэффициент нагрузки</strong>. Например, если автомобиль часто эксплуатируется в тяжелых условиях (буксировка, бездорожье), среднюю скорость уменьшают на 10–20%.</p>
+
+<div class="pb-poll" id="poll-202d50c6"><div class="pb-poll-question">📊 Как вы чаще всего эксплуатируете автомобиль?</div><div class="pb-poll-option" data-poll="202d50c6" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Только в городе</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="202d50c6" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Преимущественно на трассе</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="202d50c6" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Смешанный режим</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="202d50c6" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">В тяжелых условиях</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="калькулятор-пробега-по-моточасам-онлайн-и-оффлайн-варианты">Калькулятор пробега по моточасам: онлайн и оффлайн варианты</h2>
+
+<p>Существует несколько способов рассчитать пробег по моточасам:</p>
+
+<ol>
+<li><strong>Онлайн-калькуляторы</strong>: Самый удобный способ. Достаточно ввести количество моточасов и среднюю скорость, чтобы получить примерный пробег. Примеры сервисов:
+   <ul>
+   <li>🌐 <em>AvtoProfi</em> (avtoprofi.ru)</li>
+   <li>🌐 <em>CalcSoft</em> (calcsoft.ru)</li>
+   <li>🌐 <em>AutoDoctor</em> (autodoctor.ru)</li>
+   </ol>
+</li>
+<li><strong>Эксель или Google Sheets</strong>: Можно создать свою таблицу с формулой <code>=Моточасы * Средняя_скорость</code>.</li>
+<li><strong>Мобильные приложения</strong>: Например, <em>Car Scanner ELM OBD2</em> (для android) или <em>OBD Car Doctor</em> (для iOS) позволяют считывать моточасы через OBD-II разъем и автоматически конвертировать их в пробег.</li>
+</ul>
+
+<p>Помните, что точность онлайн-калькуляторов зависит от корректности введенных данных. Если вы не знаете свою среднюю скорость, используйте усредненные значения из таблицы ниже.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для точного расчета средней скорости используйте данные с бортового компьютера автомобиля или трекера GPS за последние 1000–2000 км пробега.</p></aside>
+
+<h2 id="таблица-соответствия-моточасов-и-пробега">Таблица соответствия моточасов и пробега</h2>
+<p>Ниже представлена таблица с примерными данными для разных типов автомобилей и условий эксплуатации:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип автомобиля</th>
+<th>Средняя скорость (км/ч)</th>
+<th>Пробег за 100 моточасов (км)</th>
+<th>Пробег за 1000 моточасов (км)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Легковой (город)</td>
+<td>25</td>
+<td>2 500</td>
+<td>25 000</td>
+</tr>
+<tr>
+<td>Легковой (трасса)</td>
+<td>70</td>
+<td>7 000</td>
+<td>70 000</td>
+</tr>
+<tr>
+<td>Грузовой (город)</td>
+<td>15</td>
+<td>1 500</td>
+<td>15 000</td>
+</tr>
+<tr>
+<td>Грузовой (трасса)</td>
+<td>50</td>
+<td>5 000</td>
+<td>50 000</td>
+</tr>
+<tr>
+<td>Спецтехника</td>
+<td>10</td>
+<td>1 000</td>
+<td>10 000</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Эти данные носят ориентировочный характер. Для точного расчета учитывайте индивидуальные условия эксплуатации.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чем выше средняя скорость, тем больше пробег соответствует моточасам. В городе соотношение может отличаться в 2–3 раза по сравнению с трассой.</p></aside>
+
+<h2 id="как-проверить-моточасы-на-автомобиле">Как проверить моточасы на автомобиле</h2>
+
+<p>Способы получения данных о моточасах зависят от модели автомобиля:</p>
+
+<ul>
+<li>📱 <strong>Через OBD-II сканер</strong>: Подключите устройство к диагностическому разъему (обычно находится под рулем) и считайте данные через приложение. Поддерживаемые параметры: <code>PID 01 1F</code> (моточасы двигателя) или <code>PID 01 21</code> (моточасы на холостом ходу).</li>
+<li>🔌 <strong>Через бортовой компьютер</strong>: На некоторых автомобилях (например, <em>Volkswagen</em>, <em>Audi</em>, <em>Skoda</em>) моточасы отображаются в сервисном меню. Чтобы туда попасть, удерживайте кнопку сброса суточного пробега при включении зажигания.</li>
+<li>🛠️ <strong>Через диагностическое оборудование</strong>: На СТО могут считать моточасы с помощью профессиональных сканеров, таких как <em>Launch X431</em> или <em>Autel MaxiSys</em>.</li>
+<li>📊 <strong>Через данные ЭБУ</strong>: На старых автомобилях (до 2000-х) моточасы могут храниться в памяти электронного блока управления. Для их считывания требуется специализированное ПО.</li>
+</ul>
+
+<p>Если ваш автомобиль не поддерживает считывание моточасов, можно использовать <strong>косвенные методы</strong>:</p>
+<ul>
+<li>🕒 Записывайте время работы двигателя вручную (например, с помощью трекера времени или приложения).</li>
+<li>⛽ Рассчитывайте по расходу топлива: если знаете средний расход и объем бака, можно примерно оценить время работы мотора.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: На некоторых моделях <em>BMW</em> и <em>Mercedes-Benz</em> моточасы могут сбрасываться при замене аккумулятора или обновлении прошивки ЭБУ. Уточните этот момент у предыдущего владельца или на СТО.</blockquote>
+
+<h2 id="нюансы-расчета-для-разных-типов-двигателей">Нюансы расчета для разных типов двигателей</h2>
+
+<p>Тип двигателя существенно влияет на соотношение моточасов и пробега. Рассмотрим особенности:</p>
+
+<ul>
+<li>🔥 <strong>Бензиновые двигатели</strong>: Обычно работают на более высоких оборотах, что приводит к быстрому накоплению моточасов. Соотношение пробега к моточасам может быть ниже, чем у дизелей.</li>
+<li>⛽ <strong>Дизельные двигатели</strong>: Более экономичны и часто эксплуатируются на низких оборотах, поэтому моточасы накапливаются медленнее. Соотношение пробега к моточасам выше.</li>
+<li>⚡ <strong>Электродвигатели</strong>: В электромобилях моточасы не используются — вместо них учитывается количество циклов заряда-разряда аккумулятора.</li>
+<li>🚜 <strong>Турбированные двигатели</strong>: Из-за высокой нагрузки на турбину моточасы могут накапливаться быстрее, особенно при интенсивной эксплуатации.</li>
+</ul>
+
+<p>Для <em>турбированных бензиновых двигателей</em> (например, <em>Volkswagen TSI</em>, <em>Ford EcoBoost</em>) рекомендуется уменьшать среднюю скорость на 10–15% при расчете пробега, так как они чаще работают на высоких оборотах.</p>
+
+<details class="pb-accordion"><summary>Почему на дизельных двигателях моточасы накапливаются медленнее?</summary><div class="pb-accordion-body"><p>Дизельные двигатели обычно работают на более низких оборотах (1500–2500 об/мин) по сравнению с бензиновыми (2000–4000 об/мин). Это означает, что за тот же промежуток времени дизель совершает меньше оборотов, а значит, износ деталей происходит медленнее. Кроме того, дизельные двигатели часто используются для длительных поездок по трассе, где средняя скорость выше. </p></div></details>
+
+<h2 id="ошибки-при-расчете-пробега-по-моточасам">Ошибки при расчете пробега по моточасам</h2>
+
+<p>Даже с калькулятором можно допустить ошибки. Рассмотрим самые распространенные:</p>
+
+<ul>
+<li>❌ <strong>Использование фиксированного коэффициента</strong>: Некоторые автовладельцы умножают моточасы на фиксированное число (например, 50 км/ч), не учитывая реальные условия эксплуатации. Это приводит к значительным погрешностям.</li>
+<li>❌ <strong>Игнорирование режима работы двигателя</strong>: Если автомобиль часто работает на холостом ходу (например, в такси или при прогреве), моточасы будут накапливаться быстрее, чем пробег.</li>
+<li>❌ <strong>Неучет износа двигателя</strong>: Старые двигатели могут иметь другие характеристики, чем новые. Например, изношенный мотор может работать на более высоких оборотах для достижения той же мощности.</li>
+<li>❌ <strong>Некорректные данные о моточасах</strong>: Если моточасы были сброшены или неверно считаны, расчет пробега будет неточным. Всегда проверяйте источник данных.</li>
+</ul>
+
+<p>Чтобы минимизировать ошибки, используйте <mark>несколько методов расчета</mark> и сравнивайте результаты. Например, совместите данные моточасов с данными о расходе топлива и пробеге.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Как правильно рассчитать пробег по моточасам</h4><label class="check-item"><input type="checkbox"><span>Уточните среднюю скорость эксплуатации</span></label><label class="check-item"><input type="checkbox"><span>Проверьте корректность данных о моточасах</span></label><label class="check-item"><input type="checkbox"><span>Учтите тип двигателя и условия эксплуатации</span></label><label class="check-item"><input type="checkbox"><span>Сравните результаты с другими методами (например, по расходу топлива)</span></label><label class="check-item"><input type="checkbox"><span>Используйте онлайн-калькулятор или специализированное ПО</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли доверять моточасам при покупке подержанного автомобиля?</summary>
+<p>Моточасы — более объективный показатель износа двигателя, чем пробег, так как они учитывают реальное время работы мотора. Однако их можно сбросить (на некоторых моделях), поэтому toujours проверяйте историю автомобиля и данные с диагностического оборудования.</p>
+</details>
+
+<details>
+<summary>Как моточасы связаны с ресурсом двигателя?</summary>
+<p>Ресурс двигателя обычно измеряется в моточасах или километрах пробега. Например, если производитель заявляет ресурс в 300 000 км при средней скорости 50 км/ч, это соответствует 6 000 моточасам. Однако в реальных условиях этот показатель может варьироваться в зависимости от стиля езды и условий эксплуатации.</p>
+</details>
+
+<details>
+<summary>Можно ли сбросить моточасы на автомобиле?</summary>
+<p>На некоторых моделях моточасы можно сбросить через диагностический разъем с помощью специализированного оборудования. Однако на большинстве современных автомобилей этот параметр защищен от изменений, так как он важен для сервисного обслуживания.</p>
+</details>
+
+<details>
+<summary>Чем отличаются моточасы от реального времени работы двигателя?</summary>
+<p>Моточасы учитывают только время, когда двигатель был запущен. Реальное время работы может включать периоды простоя (например, когда автомобиль стоит с выключенным двигателем, но включенным зажиганием). Однако на практике эти понятия часто отождествляют.</p>
+</details>
+
+<details>
+<summary>Как часто нужно менять масло по моточасам?</summary>
+<p>Производители обычно рекомендуют менять масло каждые 15 000–20 000 км пробега или 200–300 моточасов (в зависимости от типа масла и условий эксплуатации). Для точного расчета используйте данные из руководства по эксплуатации автомобиля.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ch/chem-promyt-mednyj-radiator-pechki-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Чем промыть медный радиатор печки авто: 5 эффективных способов</span>
+                <span class="pb-related-desc">Подробная инструкция по промывке медного радиатора печки автомобиля: народные средства, профессионал</span>
+            </a><a href="/articles/c/ch/chto-znachit-knopka-a-s-v-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">Кнопка ASR в машине: что это и как работает (2026)</span>
+                <span class="pb-related-desc">Разбираемся, что означает кнопка ASR (A, S, R) в автомобиле, как она влияет на безопасность и когда </span>
+            </a><a href="/articles/z/zn/znachki-v-mashine-na-paneli-upravleniya-chto-oznachaet.html" class="pb-related-card">
+                <span class="pb-related-title">Значки на панели приборов автомобиля: расшифровка 2026 года</span>
+                <span class="pb-related-desc">Подробный справочник по индикаторам на приборной панели: от предупреждений до критических ошибок. Уз</span>
+            </a><a href="/articles/k/kr/krejserskaya-skorost-eto-prostymi-slovami.html" class="pb-related-card">
+                <span class="pb-related-title">Крейсерская скорость: что это простыми словами и как её рассчитать</span>
+                <span class="pb-related-desc">Узнайте, что такое крейсерская скорость автомобиля и двигателя. Как рассчитать экономичный режим езд</span>
+            </a><a href="/articles/c/ch/chto-takoe-kursovaya-ustojchivost.html" class="pb-related-card">
+                <span class="pb-related-title">Курсовая устойчивость автомобиля: что это и как влияет на безопасность</span>
+                <span class="pb-related-desc">Узнайте, что такое курсовая устойчивость автомобиля, как она работает и почему это важно для безопас</span>
+            </a><a href="/articles/k/ka/kak-pravilno-progrevat-avtomobil.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно прогревать автомобиль зимой и летом: советы эксперта</span>
+                <span class="pb-related-desc">Подробная инструкция по прогреву двигателя в разные сезоны: время, температура, ошибки и мифы. Узнай</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

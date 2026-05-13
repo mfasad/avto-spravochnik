@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Aleado проверка авто по номеру кузова: полный разбор сервиса — Авто Справочник</title>
+    <meta name="description" content="Детальный обзор Aleado: как пробить машину по VIN или номеру кузова. Анализ базы данных, скрытых дефектов и юридических ограничений перед покупкой.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/a/al/aleado-proverka-avto-po-nomeru-kuzova.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Aleado проверка авто по номеру кузова: полный разбор сервиса">
+    <meta property="og:description" content="Детальный обзор Aleado: как пробить машину по VIN или номеру кузова. Анализ базы данных, скрытых дефектов и юридических ограничений перед покупкой.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/" class="pb-nav-active">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/pokupka-i-prodazha/">Покупка и Продажа</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Aleado проверка авто по номеру кузова: полный разбор сервиса</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-aleado-и-как-работает-проверка-по-базе-данных">Что такое Aleado и как работает проверка по базе данных</a></li><li><a href="#какие-данные-можно-узнать-по-номеру-кузова-в-отчете">Какие данные можно узнать по номеру кузова в отчете</a></li><li><a href="#инструкция-как-правильно-пробить-автомобиль-через-сервис">Инструкция: как правильно пробить автомобиль через сервис</a></li><li><a href="#анализ-истории-дтп-и-расчет-стоимости-ремонта">Анализ истории ДТП и расчет стоимости ремонта</a></li><li><a href="#юридическая-чистота-залоги-ограничения-и-угон">Юридическая чистота: залоги, ограничения и угон</a></li><li><a href="#скрытые-проблемы-такси-лизинг-и-скрученный-пробег">Скрытые проблемы: такси, лизинг и скрученный пробег</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/sh/shvedskie-avtomobili-marki-legkovye.html">Шведские легковые автомобили: обзор моделей, цены и особенности 2026</a></li><li><a href="/articles/s/sh/shchuka-maj-sammer-kar.html">Щука Май Саммер Кар 2026: технические характеристики и отзывы владельцев</a></li><li><a href="/articles/m/ma/marki-novykh-kitajskikh-avtomobilej.html">Новые китайские автомобили 2026: марки, цены, особенности</a></li><li><a href="/articles/1/12/120000-rublej-v-evro-na-segodnya.html">120000 рублей в евро на сегодня: точный курс и расчет</a></li><li><a href="/articles/a/av/avto-plyus-telekanal-poderzhannye-avtomobili.html">Подержанные авто на телеканале Авто Плюс: отзывы, цены, советы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Проверка авто по номеру кузова через сервис Aleado: возможности и ограничения</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-aleado-и-как-работает-проверка-по-базе-данных">Что такое Aleado и как работает проверка по базе данных</a></li><li><a href="#какие-данные-можно-узнать-по-номеру-кузова-в-отчете">Какие данные можно узнать по номеру кузова в отчете</a></li><li><a href="#инструкция-как-правильно-пробить-автомобиль-через-сервис">Инструкция: как правильно пробить автомобиль через сервис</a></li><li><a href="#анализ-истории-дтп-и-расчет-стоимости-ремонта">Анализ истории ДТП и расчет стоимости ремонта</a></li><li><a href="#юридическая-чистота-залоги-ограничения-и-угон">Юридическая чистота: залоги, ограничения и угон</a></li><li><a href="#скрытые-проблемы-такси-лизинг-и-скрученный-пробег">Скрытые проблемы: такси, лизинг и скрученный пробег</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Рынок подержанных автомобилей переполнен предложениями, где за глянцевой фотографией часто скрывается сложный юридический анамнез или скрытые технические дефекты. Покупатель сегодня не может полагаться исключительно на честность продавца, так как мошеннические схемы становятся все более изощренными. Именно поэтому <strong>проверка авто по номеру кузова</strong> или VIN-коду стала обязательным этапом перед заключением сделки, позволяющим избежать покупки «кота в мешке».</p>
+
+<p>Сервис <em>Aleado</em> зарекомендовал себя как один из инструментов, помогающих собрать информацию о транспортном средстве из открытых и закрытых источников. Однако многие пользователи до сих пор путают функционал различных баз данных и не понимают, какую именно информацию можно получить, имея на руках только номер кузова. В этой статье мы разберем технические аспекты работы с базой данных, юридические нюансы и реальные возможности получения информации.</p>
+
+<p>Важно понимать, что номер кузова (VIN) — это уникальный идентификатор, который присваивается автомобилю при производстве и несет в себе закодированную информацию о заводе-изготовителе, году выпуска и комплектации. Использование специализированных агрегаторов позволяет структурировать разрозненные данные из ГИБДД, страховых компаний и сервисов такси в единый, понятный отчет. Но стоит ли слепо доверять первому попавшемуся отчету? Давайте разбираться.</p>
+
+<h2 id="что-такое-aleado-и-как-работает-проверка-по-базе-данных">Что такое Aleado и как работает проверка по базе данных</h2>
+
+<p>Сервис <em>Aleado</em> представляет собой информационный агрегатор, который собирает данные о транспортных средствах из множества государственных и коммерческих источников. Алгоритм работы системы построен на запросе к централизованным реестрам по уникальному идентификатору автомобиля. В отличие от ручного поиска по сайтам ведомств, такой подход экономит время и дает комплексную картину истории владения и эксплуатации машины.</p>
+
+<p>Основой для формирования отчета служит <strong>VIN-код</strong> (Vehicle Identification Number), который часто в обиходе называют номером кузова. В этом 17-значном коде зашифрована ключевая информация: регион производства, характеристики двигателя, тип кузова и контрольная цифра. Система сверяет введенные данные с миллионами записей, выявляя совпадения в базах данных о ДТП, залогах, угонных автомобилях и ограничениях регистрационных действий.</p>
+
+<details class="pb-accordion"><summary>В чем разница между VIN и номером кузова?</summary><div class="pb-accordion-body"><p>В современных автомобилях (после 1980-х годов) VIN-код и номер кузова — это, как правило, одно и то же. Однако на старых авто или некоторых моделях японского производства номер кузова мог быть отдельным. Для проверки в Aleado и других современных сервисах используется именно 17-значный VIN.</p></div></details>
+
+<p>Процесс генерации отчета занимает считанные минуты, так как автоматизированные скрипты опрашивают удаленные серверы практически мгновенно. Пользователь получает структурированный документ, где красным цветом выделены критические проблемы, а зеленым — подтвержденные факты чистой истории. Однако стоит помнить, что данные обновляются с определенной периодичностью, и самый свежий штраф может еще не отобразиться в системе.</p>
+
+<h2 id="какие-данные-можно-узнать-по-номеру-кузова-в-отчете">Какие данные можно узнать по номеру кузова в отчете</h2>
+
+<p>Полнота информации — главный аргумент в пользу использования платных сервисов проверки. Отчет, сформированный системой, обычно содержит несколько десятков пунктов, охватывающих юридический статус и техническое состояние автомобиля. Для потенциального покупателя наиболее ценными являются сведения о реальных пробегах, зафиксированных при прохождении ТО или оформлении страховки.</p>
+
+<p>Особое внимание следует уделить разделу, касающемуся <strong>дорожно-транспортных происшествий</strong>. Система показывает не только факт обращения в страховую, но и часто содержит фотографии поврежденных зон с указанием характера и силы удара. Это позволяет выявить перекрашенные элементы или замененные детали, которые продавец мог скрыть под слоем свежей шпатлевки.</p>
+
+<ul>
+<li>🚗 <strong>История владения:</strong> количество собственников, длительность владения, регион регистрации (помогает выявить перекупщиков).</li>
+<li>⚖️ <strong>Юридическая чистота:</strong> наличие запретов на регистрацию, нахождение в залоге у банка, участие в исполнительных производствах.</li>
+<li>🔧 <strong>Техническое состояние:</strong> данные о прохождении техосмотра, фиксация пробега, обращения в сервисные центры.</li>
+<li>🚓 <strong>Работа в такси:</strong> информация о выдаче лицензий на осуществление пассажирских перевозок, что критично для оценки ресурса двигателя.</li>
+</ul>
+
+<p>Отдельного внимания заслуживает информация о <strong>расчете ремонтной стоимости</strong>. На основе данных о поврежденных элементах алгоритм рассчитывает примерную сумму, необходимую для восстановления автомобиля после аварии. Это мощный инструмент для торга: если машина побывала в ДТП, но была восстановлена, вы можете аргументированно требовать снижения цены.</p>
+
+<h2 id="инструкция-как-правильно-пробить-автомобиль-через-сервис">Инструкция: как правильно пробить автомобиль через сервис</h2>
+
+<p>Процедура проверки максимально упрощена разработчиками и не требует специальных технических знаний. Все, что вам понадобится — это доступ в интернет и номер, выбитый на кузове автомобиля. Найти его можно в техническом паспорте (СТС), страховом полисе ОСАГО или непосредственно на металлической табличке в подкапотном пространстве.</p>
+
+<p>Для начала работы необходимо перейти на официальный сайт сервиса и locate поле ввода данных. Интерфейс выполнен в минималистичном стиле, чтобы пользователь не запутался. После ввода 17-значного кода система проведет первичную валидацию формата и запустит поиск по всем подключенным базам данных.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Алгоритм проверки автомобиля</h4><label class="check-item"><input type="checkbox"><span>Найти VIN-код в документах или на кузове</span></label><label class="check-item"><input type="checkbox"><span>Ввести код в поле на сайте Aleado</span></label><label class="check-item"><input type="checkbox"><span>Оплатить доступ к полному отчету</span></label><label class="check-item"><input type="checkbox"><span>Внимательно изучить разделы с ограничениями и ДТП</span></label><label class="check-item"><input type="checkbox"><span>Сравнить данные с реальным состоянием авто</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>После оплаты (если требуется полный доступ) вы получите ссылку на скачивание PDF-файла или доступ к онлайн-версии отчета. Рекомендуется сохранять этот документ, так как он может послужить доказательством вашей добросовестности как покупателя в случае возникновения судебных споров в будущем. Также удобно отправлять ссылку на отчет продавцу, чтобы показать серьезность ваших намерений.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Вводите VIN-код внимательно, без лишних пробелов и символов. Ошибка даже в одном символе (например, перепутать букву"O" и цифру"0") приведет к получению отчета о совершенно другом автомобиле, что может стать фатальной ошибкой при покупке.</p>
+</blockquote>
+
+<h2 id="анализ-истории-дтп-и-расчет-стоимости-ремонта">Анализ истории ДТП и расчет стоимости ремонта</h2>
+
+<p>Одной из самых востребованных функций сервиса является детализация аварийного прошлого. Система не просто пишет"было ДТП", а показывает схему повреждений. Вы можете увидеть, что удар пришелся в лонжерон или была сработана подушка безопасности, даже если внешне машина выглядит идеально. Это позволяет выявить машины после тотальных разрушений, которые восстановили кустарным способом.</p>
+
+<p>Расчет стоимости ремонта базируется на актуальных ценах на запчасти и нормо-часах работ в специализированных центрах. Алгоритм учитывает степень повреждения каждого элемента: от простой царапины на бампере до необходимости замены силового агрегата. <strong>Сумма ремонта</strong> часто становится решающим фактором при торге, позволяя сбросить цену на tens of thousands рублей.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип повреждения</th>
+<th>Влияние на цену авто</th>
+<th>Риск для покупателя</th>
+<th>Рекомендация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Косметический (царапины)</td>
+<td>Минимальное</td>
+<td>Низкий</td>
+<td>Торг уместен</td>
+</tr>
+<tr>
+<td>Замена бампера/крыла</td>
+<td>Среднее (5-10%)</td>
+<td>Средний</td>
+<td>Проверка геометрии</td>
+</tr>
+<tr>
+<td>Повреждение лонжеронов</td>
+<td>Высокое (15-25%)</td>
+<td>Высокий</td>
+<td>Отказ от покупки</td>
+</tr>
+<tr>
+<td>Тотальное разрушение</td>
+<td>Критическое</td>
+<td>Критический</td>
+<td>Категорически нельзя</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Важно понимать, что не все ДТП попадают в базу сразу. Если accident произошло недавно и страховая еще не передала данные, или если ремонт делали «в гаражах» без обращения в страховую, в отчете может быть чисто. Поэтому визуальный осмотр и проверка толщиномером остаются обязательными этапами.</p>
+
+<div class="pb-poll" id="poll-eede8f42"><div class="pb-poll-question">📊 Что для вас важнее при покупке б/у авто?</div><div class="pb-poll-option" data-poll="eede8f42" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Чистая юридическая история</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="eede8f42" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Отсутствие ДТП в прошлом</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="eede8f42" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Низкий реальный пробег</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="eede8f42" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Один владелец по ПТС</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="юридическая-чистота-залоги-ограничения-и-угон">Юридическая чистота: залоги, ограничения и угон</h2>
+
+<p>Покупка автомобиля, находящегося в залоге у банка, грозит потерей транспортного средства. Согласно законодательству, при невыплате кредита предыдущим владельцем банк имеет право изъять имущество, даже если оно было продано третьему лицу. Сервис <em>Aleado</em> проверяет базы Федеральной нотариальной палаты и реестры залогового имущества, минимизируя этот риск.</p>
+
+<p>Также система сканирует базы судебных приставов (ФССП) на предмет наличия исполнительных производств. Если у владельца есть крупные долги, на автомобиль может быть наложен <strong>запрет на регистрационные действия</strong>. Купив такую машину, вы не сможете поставить ее на учет в ГИБДД, пока продавец не решит свои финансовые проблемы, что часто бывает невозможно.</p>
+
+<p>Проверка на угон осуществляется по базам МВД и Интерпола. Покупка угнанного автомобиля, даже если вы не знали об этом, приведет к его изъятию и возбуждению уголовного дела против вас по статье о скупке краденого. Поэтому проверка по VIN-коду — это вопрос не только финансов, но и личной безопасности.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При покупке автомобиля обязательно сверьте VIN-код в отчете, в ПТС и на самом кузове автомобиля. Они должны совпадать буква в букву. Любые следы изменения номеров, сварки или коррозии в месте выбивки — повод немедленно прекратить сделку.</p></aside>
+
+<h2 id="скрытые-проблемы-такси-лизинг-и-скрученный-пробег">Скрытые проблемы: такси, лизинг и скрученный пробег</h2>
+
+<p>Многие покупатели боятся машин из-под такси, и rightly so. Эксплуатация в режиме 24/7 с постоянными посадками-высадками пассажиров убивает ресурс салона и двигателя быстрее, чем обычная езда. Сервисы проверки часто имеют доступ к реестрам лицензий на такси, позволяя выявить «замаскированные» таксомоторы, которые продаются как «возил жену в магазин».</p>
+
+<p>Анализ динамики пробега — еще один мощный инструмент. Система собирает показания одометра из разных источников: при каждом ТО, оформлении ОСАГО или прохождении техосмотра. Если вы видите, что в 2020 году пробег был 150 000 км, а в 2023 продается авто с пробегом 90 000 км — налицо факт <strong>скручивания пробега</strong>.</p>
+
+<p>Лизинговые автомобили также таят в себе риски. До момента полной выплаты лизинга собственником машины является лизинговая компания. Продажа такого авто без согласия лизингодателя незаконна. Проверка по базе помогает выявить такие случаи, так как данные о лизинге часто фигурируют в страховых базах и реестрах уведомлений.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Если в отчете указано, что автомобиль использовался в такси, но продавец утверждает обратное — это красный флаг. Ресурс таких машин часто исчерпан, а кузов может иметь скрытую коррозию из-за постоянных моек химикатами.</p>
+</blockquote>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли проверить автомобиль бесплатно по номеру кузова?</summary>
+<p>Базовую информацию (год выпуска, модель, объем двигателя) можно найти бесплатно на сайтах-агрегаторах или через официальный сайт ГИБДД. Однако полные отчеты с историей ДТП, пробегами и залогами формируются платно, так как сервисы несут расходы на получение данных из коммерческих и государственных источников.</p>
+</details>
+
+<details>
+<summary>Насколько актуальны данные в базе Aleado?</summary>
+<p>Обновление баз данных происходит с различной периодичностью. Информация из ГИБДД может обновляться в реальном времени или с задержкой в несколько дней, данные от партнеров могут поступать раз в неделю. Всегда есть небольшой лаг между событием и его отображением в отчете.</p>
+</details>
+
+<details>
+<summary>Что делать, если данные в отчете не совпадают с реальностью?</summary>
+<p>Если вы обнаружили ошибку (например, неверно указан цвет или комплектация), это может свидетельствовать о том, что автомобиль побывал в серьезном ремонте с заменой документов или узлов. В таком случае требуется дополнительная экспертиза у независимого технического специалиста.</p>
+</details>
+
+<details>
+<summary>Защищает ли проверка от покупки проблемного авто на 100%?</summary>
+<p>Ни один сервис не дает 100% гарантии. Данные могут не попасть в базу, если ремонт делали за наличные без обращения в страховую, или если автомобиль угнан недавно и еще не объявлен в розыск. Проверка по базе — это важный, но не единственный этап диагностики.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование сервисов проверки по VIN — это минимально необходимая инвестиция, которая может сэкономить вам сотни тысяч рублей и годы судебных разбирательств. Не экономьте на безопасности сделки.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/sh/shvedskie-avtomobili-marki-legkovye.html" class="pb-related-card">
+                <span class="pb-related-title">Шведские легковые автомобили: обзор моделей, цены и особенности 2026</span>
+                <span class="pb-related-desc">Все о шведских легковых авто: от Volvo до Saab. Сравнение моделей, технические характеристики, плюсы</span>
+            </a><a href="/articles/s/sh/shchuka-maj-sammer-kar.html" class="pb-related-card">
+                <span class="pb-related-title">Щука Май Саммер Кар 2026: технические характеристики и отзывы владельцев</span>
+                <span class="pb-related-desc">Подробный обзор Mai Summer Car от Scat: двигатель 1.5T, расход топлива, комплектации, цены и реальны</span>
+            </a><a href="/articles/m/ma/marki-novykh-kitajskikh-avtomobilej.html" class="pb-related-card">
+                <span class="pb-related-title">Новые китайские автомобили 2026: марки, цены, особенности</span>
+                <span class="pb-related-desc">Обзор новых китайских авто-брендов 2026 года: BYD, Geely, Changan и других. Технические характеристи</span>
+            </a><a href="/articles/1/12/120000-rublej-v-evro-na-segodnya.html" class="pb-related-card">
+                <span class="pb-related-title">120000 рублей в евро на сегодня: точный курс и расчет</span>
+                <span class="pb-related-desc">Сколько стоит 120000 рублей в евро на сегодня? Актуальный курс ЦБ РФ, биржевой котировки, комиссии б</span>
+            </a><a href="/articles/a/av/avto-plyus-telekanal-poderzhannye-avtomobili.html" class="pb-related-card">
+                <span class="pb-related-title">Подержанные авто на телеканале Авто Плюс: отзывы, цены, советы</span>
+                <span class="pb-related-desc">Обзор программ о б/у машинах на канале Авто Плюс. Экспертные тесты, реальная стоимость подержанных а</span>
+            </a><a href="/articles/f/fe/federalnoj-notarialnoj-palaty-proverit-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить авто через Федеральную нотариальную палату: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Узнайте, как бесплатно проверить историю автомобиля через ФНП: проверка на аресты, залоги, ДТП и юри</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

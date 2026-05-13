@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как проехать на автобусе с 2ГИС: инструкция — Авто Справочник</title>
+    <meta name="description" content="Подробный гид по построению маршрутов на общественном транспорте в 2ГИС. Разбор функций, офлайн-режима, оплат и скрытых возможностей навигатора.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/2/2-/2-gis-kak-proekhat-na-obshchestvennom-transporte.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как проехать на автобусе с 2ГИС: инструкция">
+    <meta property="og:description" content="Подробный гид по построению маршрутов на общественном транспорте в 2ГИС. Разбор функций, офлайн-режима, оплат и скрытых возможностей навигатора.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как проехать на автобусе с 2ГИС: инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#интерфейс-и-настройка-отображения-транспорта">Интерфейс и настройка отображения транспорта</a></li><li><a href="#построение-маршрута-пошаговый-алгоритм">Построение маршрута: пошаговый алгоритм</a></li><li><a href="#работа-с-расписанием-и-отслеживание-в-реальном-времени">Работа с расписанием и отслеживание в реальном времени</a></li><li><a href="#оплата-проезда-и-цифровые-билеты">Оплата проезда и цифровые билеты</a></li><li><a href="#офлайн-режим-и-экономия-трафика">Офлайн-режим и экономия трафика</a></li><li><a href="#дополнительные-возможности-и-лайфхаки">Дополнительные возможности и лайфхаки</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/r/ra/rabota-v-yandeks-pro-kurerom-na-lichnom-avto.html">Работа курьером в Яндекс на личном авто: условия, заработок, требования</a></li><li><a href="/articles/p/po/pokazat-na-karte-trassu-m4-don.html">Как показать трассу М4 Дон на карте: пошаговая инструкция</a></li><li><a href="/articles/d/du/dunkan-ajsedora-biografiya-prichina-smerti.html">Айседора Дункан: биография, причина смерти, факты</a></li><li><a href="/articles/e/ek/ekskursii-v-depo-avtovo.html">Экскурсии в депо Автово 2026: как попасть, цены, отзывы</a></li><li><a href="/articles/m/ma/mashiny-s-krepkim-kuzovom.html">Машины с крепким кузовом: рейтинг надежности и советы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>2ГИС: как проехать на общественном транспорте</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#интерфейс-и-настройка-отображения-транспорта">Интерфейс и настройка отображения транспорта</a></li><li><a href="#построение-маршрута-пошаговый-алгоритм">Построение маршрута: пошаговый алгоритм</a></li><li><a href="#работа-с-расписанием-и-отслеживание-в-реальном-времени">Работа с расписанием и отслеживание в реальном времени</a></li><li><a href="#оплата-проезда-и-цифровые-билеты">Оплата проезда и цифровые билеты</a></li><li><a href="#офлайн-режим-и-экономия-трафика">Офлайн-режим и экономия трафика</a></li><li><a href="#дополнительные-возможности-и-лайфхаки">Дополнительные возможности и лайфхаки</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный мегаполис невозможно представить без развитой сети общественного транспорта, однако ориентироваться в потоках автобусов, трамваев и маршруток без помощника становится всё сложнее. Именно здесь на помощь приходит <strong>2ГИС</strong> — цифровая карта города, которая давно переросла функционал простого справочника и превратилась в мощнейший навигационный инструмент. В отличие от конкурентов, этот сервис славится своей детализацией не только автомобильных дорог, но и пешеходных зон, входов в здания и, конечно, остановок.</p>
+
+<p>Для многих пользователей вопрос "как проехать" решается одним касанием экрана, но потенциал программы гораздо шире. Она умеет учитывать расписание, время пересадок, наличие турникетов и даже скорость эскалаторов в метро. <em>Офлайн-режим</em> карт позволяет планировать поездки даже там, где нет интернета, что делает приложение незаменимым в путешествиях или при плохом покрытии сети в подземке.</p>
+
+<p>В этой статье мы разберем все нюансы использования навигатора для пассажиров общественного транспорта. Вы узнаете, как настроить отображение нужных видов транспорта, как оплачивать проезд прямо через приложение и почему стоит обращать внимание на цвет линий маршрута. Понимание этих механизмов сэкономит вам время и нервы в час пик.</p>
+
+<h2 id="интерфейс-и-настройка-отображения-транспорта">Интерфейс и настройка отображения транспорта</h2>
+
+<p>Первое, с чем сталкивается пользователь после установки приложения, — это чистая карта с множеством кнопок. Чтобы построить маршрут, необходимо нажать на кнопку "Маршруты" (обычно это иконка ромба со стрелкой или кнопка "Куда едем?"). В открывшемся меню важно правильно задать точки А (откуда) и Б (куда). По умолчанию 2ГИС предлагает автомобильный маршрут, поэтому для поездки на автобусе или метро нужно переключиться на вкладку с изображением <strong>общественного транспорта</strong>.</p>
+
+<p>В верхней части экрана построения маршрута вы увидите ряд иконок, обозначающих виды транспорта: автобус, троллейбус, трамвай, метро, электричка и такси. Здесь кроется важный нюанс: если вы не хотите видеть маршруты, идущие через центр с пробками, или предпочитаете только метро, вы можете <mark>отключить лишние виды транспорта</mark>, нажав на соответствующие иконки. Это сузит выбор вариантов и покажет только релевантные пути.</p>
+
+<blockquote>⚠️ Внимание: Если вы отключили все виды транспорта, кроме одного (например, только трамваи), а в городе в это время трамваи не ходят или их маршрут изменен, приложение может показать сообщение "Маршрут не найден". Всегда оставляйте включенным хотя бы один резервный вид транспорта.</blockquote>
+
+<p>Интерфейс также позволяет сортировать варианты проезда. Обычно по умолчанию стоит сортировка "Рекомендуемые", которая балансирует между скоростью и количеством пересадок. Однако вы можете выбрать "Быстрые" (минимум времени в пути) или "Минимум пересадок". Для новичков в городе лучше использовать режим "Простые", который избегает сложных переходов между станциями.</p>
+
+<ul>
+<li>🚌 Иконка автобуса включает все наземные маршруты с ДВС и электробусы.</li>
+<li>🚇 Метро и монорельс отображаются фиолетовыми линиями и учитывают время на вход/выход.</li>
+<li>🚶 Пешая доступность показывает, сколько минут идти до остановки от точки назначения.</li>
+</ul>
+
+<div class="pb-poll" id="poll-3afea6c1"><div class="pb-poll-question">📊 Какой вид транспорта вы используете чаще всего?</div><div class="pb-poll-option" data-poll="3afea6c1" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Автобус/Маршрутка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3afea6c1" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Метро</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3afea6c1" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Трамвай/Троллейбус</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3afea6c1" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Электропоезд</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3afea6c1" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Такси</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="построение-маршрута-пошаговый-алгоритм">Построение маршрута: пошаговый алгоритм</h2>
+
+<p>Процесс создания пути следования в 2ГИС максимально логичен, но содержит несколько скрытых функций, о которых знают не все. После ввода адреса назначения и выбора вкладки "Общественный транспорт", система предложит несколько вариантов. Не спешите выбирать первый попавшийся — <strong>детализация</strong> каждого из них может кардинально отличаться.</p>
+
+<p>Нажмите на любой из предложенных вариантов, чтобы развернуть подробную информацию. Здесь вы увидите полную схему: во сколько нужно выйти, на каком автобусе ехать, где сделать пересадку и сколько времени займет пеший отрезок. Особое внимание стоит уделить времени отправления: приложение показывает не только "через 5 минут", но и точное время по расписанию или данным ГЛОНАСС/GPS.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед поездкой</h4><label class="check-item"><input type="checkbox"><span>Убедиться в актуальности расписания</span></label><label class="check-item"><input type="checkbox"><span>Проверить цвет линии (работает ли маршрут)</span></label><label class="check-item"><input type="checkbox"><span>Оценить пеший отрезок до остановки</span></label><label class="check-item"><input type="checkbox"><span>Проверить необходимость пересадки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Если ваш маршрут включает пересадку, 2ГИС укажет точное место стыковки. В крупных транспортных узлах (например, Киевский вокзал в Москве или площадь Трех вокзалов в Санкт-Петербурге) приложение может построить <em>внутридомовую навигацию</em>, показывая, через какой выход из метро лучше пройти к платформе электрички или остановке автобуса.</p>
+
+<p>Важной особенностью является цветовая кодировка линий на карте. Зеленая линия означает, что транспорт движется без опозданий. Желтая предупреждает о небольших задержках, а красная сигнализирует о серьезных проблемах на линии или изменении маршрута. Всегда обращайте внимание на цвет, прежде чем отправляться в путь.</p>
+
+<h2 id="работа-с-расписанием-и-отслеживание-в-реальном-времени">Работа с расписанием и отслеживание в реальном времени</h2>
+
+<p>Одной из сильнейших сторон 2ГИС является интеграция с системами мониторинга транспорта. Когда вы видите время "3 мин" под номером автобуса, это не среднее значение, а данные, полученные непосредственно с трекеров на бортах машин. Это позволяет планировать выход из дома с точностью до минуты, зная, что автобус уже подъезжает к соседней остановке.</p>
+
+<p>Однако стоит помнить, что не весь транспорт оснащен датчиками. В малых городах или для редких маршрутов (например, ночные автобусы или сезонные направления) приложение переходит на работу с <strong>статическим расписанием</strong>. В этом случае время прибытия рассчитывается теоретически, исходя из нормативов скорости и графика движения.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип данных</th>
+<th>Источник информации</th>
+<th>Точность</th>
+<th>Обозначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Онлайн-данные</td>
+<td>ГЛОНАСС/GPS трекеры</td>
+<td>Высокая (реальное время)</td>
+<td>Зеленый индикатор, таймер</td>
+</tr>
+<tr>
+<td>Расписание</td>
+<td>База данных перевозчика</td>
+<td>Средняя (плановое время)</td>
+<td>Серый индикатор, время по часам</td>
+</tr>
+<tr>
+<td>Прогноз</td>
+<td>Алгоритмы 2ГИС</td>
+<td>Низкая (вероятностное)</td>
+<td>Пунктирная линия</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Для остановки можно открыть отдельную карточку, просто нажав на её значок на карте. Там будет представлен полный список маршрутов, проходящих через эту точку, и время прибытия ближайших транспортных средств. Это удобно, когда вы находитесь на месте и выбираете, на чем быстрее доехать, если ваш пункт назначения обслуживают несколько разных автобусов.</p>
+
+<details class="pb-accordion"><summary>Что делать, если транспорт не приходит по расписанию?</summary><div class="pb-accordion-body"><p>Если онлайн-трекинг показывает, что автобус стоит на месте более 15 минут, скорее всего, он сломался или встал в "глухую" пробку. В этом случае 2ГИС может автоматически перестроить маршрут и предложить альтернативу, если вы обновите страницу поиска. Также стоит проверить раздел "Новости" в приложении — там часто публикуют информацию об изменении схем движения из-за ремонтов дорог или массовых мероприятий.</p></div></details>
+
+<h2 id="оплата-проезда-и-цифровые-билеты">Оплата проезда и цифровые билеты</h2>
+
+<p>Современный 2ГИС — это не только навигатор, но и платежный инструмент. Во многих городах России (Москва, Санкт-Петербург, Казань, Новосибирск и другие) приложение интегрировано с местными транспортными системами. Это позволяет оплачивать проезд <strong>QR-кодом</strong> или через NFC, не отвлекаясь на поиск мелочи или банковской карты.</p>
+
+<p>Чтобы воспользоваться этой функцией, нужно перейти в раздел "Оплата" (часто находится на главном экране или в профиле). Там вы выбираете город и вид транспорта. После оплаты на экране смартфона генерируется уникальный код, который нужно показать контролеру или приложить к валидатору. Система работает быстро и не требует постоянного подключения к интернету в момент предъявления билета.</p>
+
+<ul>
+<li>💳 Оплата банковской картой через Apple Pay/Google Pay/Samsung Pay (через NFC).</li>
+<li>📱 Оплата по QR-коду внутри приложения 2ГИС.</li>
+<li>🎫 Покупка и активация электронных проездных билетов.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: Электронный билет действителен только на экране того устройства, на котором он был куплен. Скриншоты билета часто не работают, так как код динамически обновляется для защиты от мошенничества. Не делайте скриншоты заранее, если у вас плохой интернет в транспорте.</blockquote>
+
+<p>Кроме того, в приложении можно найти информацию о тарифах, льготах и местах продажи бумажных проездных, если цифровая оплата по каким-то причинам вам не подходит. Раздел "Транспорт" содержит актуальные новости о повышении цен или изменении правил оплаты.</p>
+
+<h2 id="офлайн-режим-и-экономия-трафика">Офлайн-режим и экономия трафика</h2>
+
+<p>Главная "фишка", отличающая 2ГИС от многих конкурентов, — это полноценная работа без интернета. Карты городов можно скачать заранее через Wi-Fi, и они будут занимать место в памяти телефона, но не требовать подключения к сети для отображения и поиска. Это критически важно для метро, где связь часто пропадает, или для туристов, желающих сэкономить роуминг.</p>
+
+<p>В офлайн-режиме доступен поиск организаций, построение автомобильных и пешеходных маршрутов. Однако с общественным транспортом есть нюанс: <em>расписание и отслеживание транспорта</em> в реальном времени работать не будут, так как эти данные требуют постоянного обмена с сервером. Вы увидите схему маршрутов и остановки, но не узнаете, где прямо сейчас находится автобус.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Скачивайте карты заранее! Зайдите в меню → Загрузка карт → Выберите город. Если вы планируете поездку в другой город, убедитесь, что скачали карту до выезда из зоны Wi-Fi.</p></aside>
+
+<p>Тем не менее, даже без интернета приложение покажет, какие номера ходят до нужной вам точки. Это базовая информация, которая меняется редко. Поэтому, даже находясь в "воздушной яме" под землей, вы сможете сориентироваться, на какой станции выходить и куда двигаться дальше.</p>
+
+<h2 id="дополнительные-возможности-и-лайфхаки">Дополнительные возможности и лайфхаки</h2>
+
+<p>Функционал 2ГИС не ограничивается сухими цифрами и схемами. Приложение умеет предупреждать о выходе из транспорта. Если вы включите навигацию, телефон вибрацией или звуком сообщит, что приближается ваша остановка. Это особенно полезно, когда вы едете после тяжелой работы, читаете книгу или просто любите подремать в дороге и боитесь проспать свой район.</p>
+
+<p>Еще одна полезная функция — <strong>3D-модели городов</strong>. В крупных мегаполисах здания отрисованы в трехмерном формате. Это помогает визуально сориентироваться: "мне нужно то высокое здание с синим фасадом". Для пешеходных маршрутов это работает лучше, чем плоская схема, позволяя быстрее найти нужный вход.</p>
+
+<p>Пользователи могут оставлять отзывы об организациях, добавлять новые входы или сообщать об ошибках на карте. Система модерации 2ГИС работает достаточно быстро, и ваша правка может помочь тысячам других людей уже на следующий день. Например, если остановку перенесли на 50 метров, а на карте она осталась на старом месте, функция "Исправить" позволит быстро это поправить.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Использование функции "Предупреждать о выходе" превращает смартфон в надежного попутчика, позволяя расслабиться в пути и не следить постоянно за номерами остановок.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему 2ГИС показывает, что автобус приедет через 1 минуту, но его нет?</summary>
+<p>Это может происходить по нескольким причинам: транспортное средство встало в пробку, которую не учел алгоритм; датчик ГЛОНАСС на борту неисправен или отключен; либо автобус уже ушел, но сигнал об этом еще не дошел до сервера. Всегда оставляйте небольшой временной запас.</p>
+</details>
+
+<details>
+<summary>Можно ли пользоваться 2ГИС полностью бесплатно?</summary>
+<p>Да, само приложение, карты и построение маршрутов бесплатны. Монетизация происходит за счет рекламы организаций в поисковой выдаче и платных инструментов для бизнеса. Платной подписки для обычных пользователей не существует.</p>
+</details>
+
+<details>
+<summary>Работает ли навигатор без интернета в другом городе?</summary>
+<p>Да, но только если вы предварительно скачали карту этого города в разделе "Профиль" → "Загрузка карт". Без скачанной карты офлайн-режим работать не будет, даже если вы находитесь в этой локации.</p>
+</details>
+
+<details>
+<summary>Как сообщить об ошибке в расписании транспорта?</summary>
+<p>Нажмите на остановку или маршрут, выберите меню (три точки) и найдите пункт "Сообщить об ошибке" или "Исправить на карте". Опишите проблему, и редакторы проверят информацию.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/r/ra/rabota-v-yandeks-pro-kurerom-na-lichnom-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Работа курьером в Яндекс на личном авто: условия, заработок, требования</span>
+                <span class="pb-related-desc">Как работать курьером в Яндекс на своем автомобиле: требования к машине, доход, регистрация, плюсы и</span>
+            </a><a href="/articles/p/po/pokazat-na-karte-trassu-m4-don.html" class="pb-related-card">
+                <span class="pb-related-title">Как показать трассу М4 Дон на карте: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по поиску и отображению маршрута М4 Дон на картах Google, Яндекс, 2ГИС. Узнайт</span>
+            </a><a href="/articles/d/du/dunkan-ajsedora-biografiya-prichina-smerti.html" class="pb-related-card">
+                <span class="pb-related-title">Айседора Дункан: биография, причина смерти, факты</span>
+                <span class="pb-related-desc">Айседора Дункан: полная биография, тайна и причина смерти королевы танца. Анализ жизни, трагедии в Н</span>
+            </a><a href="/articles/e/ek/ekskursii-v-depo-avtovo.html" class="pb-related-card">
+                <span class="pb-related-title">Экскурсии в депо Автово 2026: как попасть, цены, отзывы</span>
+                <span class="pb-related-desc">Подробный гид по экскурсиям в трамвайно-троллейбусное депо Автово: расписание, стоимость билетов, чт</span>
+            </a><a href="/articles/m/ma/mashiny-s-krepkim-kuzovom.html" class="pb-related-card">
+                <span class="pb-related-title">Машины с крепким кузовом: рейтинг надежности и советы</span>
+                <span class="pb-related-desc">Обзор автомобилей с прочным кузовом. Узнайте, какие марки меньше всего ржавеют, технологии оцинковки</span>
+            </a><a href="/articles/p/pr/prosp-andropova-1-park-ostrov-mechty.html" class="pb-related-card">
+                <span class="pb-related-title">Проспект Андропова, 1: как добраться до парка «Остров Мечты» на авто</span>
+                <span class="pb-related-desc">Маршруты на машине до парка «Остров Мечты» с проспекта Андропова, 1: парковки, пробки, альтернативны</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

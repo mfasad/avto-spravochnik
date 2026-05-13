@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как рассчитать скорость по передаточным числам: формулы и примеры — Авто Справочник</title>
+    <meta name="description" content="Подробный гид по расчёту скорости автомобиля через передаточные числа КПП, главной пары и колёс. Формулы, таблицы, онлайн-калькуляторы и типичные ошибки.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/r/ra/raschet-skorosti-po-peredatochnym-chislam.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как рассчитать скорость по передаточным числам: формулы и примеры">
+    <meta property="og:description" content="Подробный гид по расчёту скорости автомобиля через передаточные числа КПП, главной пары и колёс. Формулы, таблицы, онлайн-калькуляторы и типичные ошибки.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как рассчитать скорость по передаточным числам: формулы и примеры</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#введение-почему-передаточные-числа-влияют-на-скорость">Введение: почему передаточные числа влияют на скорость</a></li><li><a href="#что-такое-передаточные-числа-и-где-их-искать">Что такое передаточные числа и где их искать</a></li><li><a href="#универсальная-формула-расчёта-скорости">Универсальная формула расчёта скорости</a></li><li><a href="#практические-примеры-расчётов">Практические примеры расчётов</a></li><li><a href="#типичные-ошибки-при-расчётах">Типичные ошибки при расчётах</a></li><li><a href="#как-использовать-расчёты-на-практике">Как использовать расчёты на практике</a></li><li><a href="#онлайн-калькуляторы-и-программы">Онлайн-калькуляторы и программы</a></li><li><a href="#faq-частые-вопросы-о-расчёте-скорости">FAQ: Частые вопросы о расчёте скорости</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/ma/mashina-ne-edet-bolshe-100.html">Машина не едет больше 100 км/ч: причины и решение</a></li><li><a href="/articles/c/ch/chast-mashiny-na-bukvu-i.html">Часть машины на букву И: от инжектора до иммобилайзера</a></li><li><a href="/articles/c/ch/chto-takoe-a-s-v-avtomobile.html">АБС в автомобиле: что это, как работает и зачем нужна система</a></li><li><a href="/articles/l/lo/loshadinye-sily-i-krutyashchij-moment.html">Лошадиные силы и крутящий момент: в чем разница?</a></li><li><a href="/articles/k/ka/kak-nazyvaetsya-rychag-pereklyucheniya.html">Рычаг переключения передач: как называется и где находится</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Расчёт скорости автомобиля по передаточным числам: от теории к практике</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#введение-почему-передаточные-числа-влияют-на-скорость">Введение: почему передаточные числа влияют на скорость</a></li><li><a href="#что-такое-передаточные-числа-и-где-их-искать">Что такое передаточные числа и где их искать</a></li><li><a href="#универсальная-формула-расчёта-скорости">Универсальная формула расчёта скорости</a></li><li><a href="#практические-примеры-расчётов">Практические примеры расчётов</a></li><li><a href="#типичные-ошибки-при-расчётах">Типичные ошибки при расчётах</a></li><li><a href="#как-использовать-расчёты-на-практике">Как использовать расчёты на практике</a></li><li><a href="#онлайн-калькуляторы-и-программы">Онлайн-калькуляторы и программы</a></li><li><a href="#faq-частые-вопросы-о-расчёте-скорости">FAQ: Частые вопросы о расчёте скорости</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="введение-почему-передаточные-числа-влияют-на-скорость">Введение: почему передаточные числа влияют на скорость</h2>
+
+<p>Вы когда-нибудь задумывались, почему на первой передаче машина разгоняется резко, но не может набрать высокую скорость, а на пятой — наоборот? Всё дело в <strong>передаточных числах</strong> коробки передач, главной пары и размере колёс. Эти параметры определяют, сколько оборотов двигателя преобразуется в один оборот колёс — а значит, и конечную скорость автомобиля при заданных оборотах мотора.</p>
+
+<p>Знание того, как рассчитать скорость по передаточным числам, пригодится не только тюнерам и гонщикам, но и обычным автовладельцам. Например, чтобы:</p>
+<ul>
+  <li>🔧 Подобрать оптимальные передаточные числа для экономии топлива или динамики;</li>
+  <li>📊 Понять, почему после замены колёс на больший диаметр спидометр врёт;</li>
+  <li>🚗 Проверить корректность показаний бортового компьютера;</li>
+  <li>💡 Спроектировать трансмиссию для самодельного автомобиля или мотоцикла.</li>
+</ul>
+
+<p>В этой статье мы разберём <em>физическую суть</em> передаточных чисел, выведем универсальную формулу расчёта скорости, рассмотрим практические примеры для разных типов трансмиссий и раскроем типичные ошибки, которые допускают даже опытные механики.</p>
+
+<h2 id="что-такое-передаточные-числа-и-где-их-искать">Что такое передаточные числа и где их искать</h2>
+
+<p><strong>Передаточное число</strong> — это отношение количества зубьев ведомой шестерни к ведущей (или наоборот, в зависимости от конструкции). Оно показывает, во сколько раз изменяется крутящий момент и частота вращения между валами. В автомобиле передаточные числа hiding в трёх ключевых узлах:</p>
+
+<ul>
+  <li>🔄 <em>Коробка передач (КПП)</em>: каждое положение рычага имеет своё число (например, 1-я передача — 3.5, 5-я — 0.8);</li>
+  <li>🔗 <em>Главная пара</em> (дифференциал): единое число для всех передач (например, 4.1 или 3.9);</li>
+  <li>🚲 <em>Колёса</em>: их диаметр влияет на конечное передаточное отношение (чем больше колесо, тем меньше оборотов нужно для преодоления того же расстояния).</li>
+</ul>
+
+<p>Где взять точные цифры для вашего автомобиля?</p>
+<ul>
+  <li>📄 В <em>руководстве по эксплуатации</em> (раздел "Трансмиссия");</li>
+  <li>🔍 На табличках под капотом или на корпусе КПП/дифференциала;</li>
+  <li>🌐 На специализированных форумах (например, <em>Drive2</em> или <em>Club-Turbo.ru</em>);</li>
+  <li>📊 В каталогах запчастей (например, <em>ETKA</em> для <em>Volkswagen</em> или <em>MITCHELL</em> для американских авто).</li>
+</ul>
+
+<blockquote>⚠️ Внимание: передаточные числа могут отличаться даже в рамках одной модели! Например, <em>VAZ 2107</em> с двигателем 1.5 и 1.6 литра имеют разные главные пары (4.1 vs 3.9). Всегда уточняйте данные для вашей модификации.</blockquote>
+
+<div class="pb-poll" id="poll-e5188d09"><div class="pb-poll-question">📊 Где вы обычно ищете технические данные по автомобилю?</div><div class="pb-poll-option" data-poll="e5188d09" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Руководство по эксплуатации</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e5188d09" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Интернет-форумы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e5188d09" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Каталоги запчастей</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e5188d09" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Спрашиваю у механиков</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e5188d09" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой источник</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="универсальная-формула-расчёта-скорости">Универсальная формула расчёта скорости</h2>
+
+<p>Скорость автомобиля (<code>V</code>) в км/ч рассчитывается по формуле:</p>
+
+<pre><code>V = (n × 60 × 2πR × 3.6) / (i_k × i_гп × 1000)</code></pre>
+
+<p>Где:</p>
+<ul>
+  <li><code>n</code> — обороты двигателя (об/мин);</li>
+  <li><code>R</code> — <strong>радиус колеса</strong> в метрах (не путать с диаметром!);</li>
+  <li><code>i_k</code> — передаточное число <em>текущей передачи</em> КПП;</li>
+  <li><code>i_гп</code> — передаточное число <em>главной пары</em>;</li>
+  <li><code>3.6</code> — коэффициент перевода м/с в км/ч.</li>
+</ul>
+
+<p>Упрощённая версия (если известен <em>диаметр колеса</em> в дюймах):</p>
+
+<pre><code>V = (n × D × π) / (i_k × i_гп × 1056)</code></pre>
+
+<p>Здесь <code>D</code> — диаметр колеса в дюймах (например, для шины <code>205/55 R16</code> реальный диаметр ≈ 25.9").</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чтобы быстро посчитать диаметр колеса в дюймах, используйте формулу: <code>D = (ширина × профиль / 100 × 2 + диаметр диска)</code>. Например, для <code>195/65 R15</code>: <code>(195 × 0.65 × 2 + 15) × 25.4 ≈ 63.3 см</code> или 24.9".</p></aside>
+
+<h2 id="практические-примеры-расчётов">Практические примеры расчётов</h2>
+
+<p>Рассмотрим два реальных кейса: <em>серийный автомобиль</em> и <em>тюнингованную машину</em> с изменёнными передаточными числами.</p>
+
+<h3>Пример 1: <em>Lada Vesta</em> с КПП 21807</h3>
+<p>Дано:</p>
+<ul>
+  <li>Двигатель: 1.6 л (106 л.с.), красная зона — 6000 об/мин;</li>
+  <li>КПП: передаточные числа — 3.636 (1-я), 1.95 (5-я);</li>
+  <li>Главная пара: 3.9;</li>
+  <li>Шины: <code>185/65 R15</code> (диаметр ≈ 24.5").</li>
+</ul>
+
+<p>Рассчитаем максимальную скорость на 5-й передаче при 6000 об/мин:</p>
+<pre><code>V = (6000 × 24.5 × 3.14) / (1.95 × 3.9 × 1056) ≈ 185 км/ч</code></pre>
+
+<h3>Пример 2: <em>Toyota Supra MK4</em> с тюнингом</h3>
+<p>Дано:</p>
+<ul>
+  <li>Двигатель: 2JZ-GTE (550 л.с.), красная зона — 7500 об/мин;</li>
+  <li>КПП: Getrag V160 (6-я передача — 0.78);</li>
+  <li>Главная пара: 4.1 (заменена на 3.73 для лучшего разгона);</li>
+  <li>Шины: <code>275/35 R18</code> (диаметр ≈ 26.7").</li>
+</ul>
+
+<p>Скорость на 6-й передаче при 7500 об/мин:</p>
+<pre><code>V = (7500 × 26.7 × 3.14) / (0.78 × 3.73 × 1056) ≈ 278 км/ч</code></pre>
+
+<p><mark>Критическая ошибка: если не учесть изменение диаметра колёс после замены шин, погрешность спидометра может достичь 10-15%!</mark> Например, переход с <code>205/55 R16</code> на <code>225/40 R18</code> увеличит реальную скорость на 5-7 км/ч при тех же показаниях спидометра.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th>Lada Vesta</th>
+      <th>Toyota Supra (тюнинг)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Макс. скорость на 5/6 передаче</td>
+      <td>185 км/ч</td>
+      <td>278 км/ч</td>
+    </tr>
+    <tr>
+      <td>Обороты при 100 км/ч</td>
+      <td>3200 об/мин</td>
+      <td>2700 об/мин</td>
+    </tr>
+    <tr>
+      <td>Передаточное число главной пары</td>
+      <td>3.9</td>
+      <td>3.73 (уменьшено)</td>
+    </tr>
+    <tr>
+      <td>Диаметр колёс</td>
+      <td>24.5"</td>
+      <td>26.7"</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="типичные-ошибки-при-расчётах">Типичные ошибки при расчётах</h2>
+
+<p>Даже опытные механики иногда ошибаются. Вот самые распространённые промахи:</p>
+
+<ol>
+  <li><strong>Игнорирование реального диаметра колёс</strong>. Многие берут данные с боковины шины, но забывают, что:
+  <ul>
+    <li>🔹 Профиль шины может "проседать" под весом автомобиля;</li>
+    <li>🔹 Диск может иметь вылет (ET), влияющий на положение колеса;</li>
+    <li>🔹 Давление в шинах меняет их высоту.</li>
+  </ol>
+  </li>
+  <li><strong>Путаница в передаточных числах</strong>. Например, берут число для 5-й передачи вместо 4-й или наоборот. Всегда сверяйтесь с официальными данными!</li>
+  <li><strong>Неучёт потерь в трансмиссии</strong>. Реальная скорость будет на 2-5% ниже расчётной из-за трения в КПП, дифференциале и подшипниках.</li>
+  <li><strong>Ошибки в единицах измерения</strong>. Например, подставляют диаметр в сантиметрах, а формула ожидает дюймы.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: если после замены главной пары или КПП автомобиль "не тянет" на высоких скоростях, проверьте совместимость передаточных чисел! Например, сочетание "короткой" главной пары (4.3) с "длинной" 6-й передачей (0.7) приведёт к тому, что двигатель будет выкручиваться до максимума уже при 160 км/ч.</blockquote>
+
+
+<p>Уточнил передаточные числа для своей модификации КПП|</p>
+<p>Измерил реальный диаметр колёс (с учётом профиля и давления)|</p>
+<p>Проверил красную зону оборотов двигателя|</p>
+<p>Учел потери в трансмиссии (2-5%)|</p>
+<p>Свёл все данные в одну систему единиц (метры/дюймы)</p>
+<p>--></p>
+
+<h2 id="как-использовать-расчёты-на-практике">Как использовать расчёты на практике</h2>
+
+<p>Теория хороша, но как применить её в жизни? Вот несколько сценариев:</p>
+
+<h3>1. Подбор оптимальных передаточных чисел</h3>
+<p>Допустим, вы хотите, чтобы двигатель на 5-й передаче крутился на 3000 об/мин при 120 км/ч (для экономии топлива). Используйте обратную формулу:</p>
+<pre><code>i_k × i_гп = (n × 60 × 2πR × 3.6) / (V × 1000)</code></pre>
+<p>Подставляем:</p>
+<pre><code>i_k × i_гп = (3000 × 60 × 2π × 0.328 × 3.6) / (120 × 1000) ≈ 3.31</code></pre>
+<p>Если главная пара у вас 3.9, то передаточное число 5-й передачи должно быть <code>3.31 / 3.9 ≈ 0.85</code>.</p>
+
+<h3>2. Корректировка спидометра после тюнинга</h3>
+<p>После замены колёс или главной пары спидометр будет врать. Чтобы его перекалибровать:</p>
+<ul>
+  <li>📱 Используйте <em>OBD2-сканер</em> (например, <em>ELM327</em>) с программой <em>Torque Pro</em>;</li>
+  <li>🔧 Перепрошейте блок управления спидометром (требуется диагностическое оборудование);</li>
+  <li>📊 Введите поправочный коэффициент в бортовой компьютер (если поддерживается).</li>
+</ul>
+
+<details class="pb-accordion"><summary>Как рассчитать поправочный коэффициент для спидометра</summary><div class="pb-accordion-body"><p>
+<p>Коэффициент = (Новый диаметр колеса / Старый диаметр колеса) × (Старая главная пара / Новая главная пара).</p>
+<p>Пример: если диаметр вырос на 5%, а главная пара уменьшилась на 10%, коэффициент = 1.05 × 1.1 ≈ 1.155.</p>
+<p></p></div></details></p>
+
+<h3>3. Оценка динамики разгона</h3>
+<p>Передаточные числа влияют не только на максимальную скорость, но и на ускорение. Чтобы оценить, как изменение главной пары повлияет на разгон до 100 км/ч:</p>
+<ul>
+  <li>📉 Уменьшение числа (например, с 4.1 до 3.7) улучшит максимальную скорость, но ухудшит разгон;</li>
+  <li>📈 Увеличение числа (например, с 3.9 до 4.3) улучшит разгон, но снизит "максималку".</li>
+</ul>
+
+<p>Для точного расчёта используйте <em>симуляторы динамики</em> (например, <em>Quarter Mile Pro</em> или <em>DragTimes Slip</em>).</p>
+
+<h2 id="онлайн-калькуляторы-и-программы">Онлайн-калькуляторы и программы</h2>
+
+<p>Если вам лень считать вручную, воспользуйтесь специализированными инструментами:</p>
+
+<ul>
+  <li>🌐 <a href="https://www.rpm-calc.com/" target="_blank">RPM-Calc</a> — расчёт скорости и оборотов для любых передаточных чисел;</li>
+  <li>📱 <em>Gear Ratio Calculator</em> (Android/iOS) — мобильное приложение с базой данных КПП;</li>
+  <li>💻 <em>GearCalc</em> — десктопная программа для глубокого анализа трансмиссии;</li>
+  <li>📊 <em>Excel-шаблоны</em> (можно найти на <em>Drive2</em> или <em>4PDA</em>).</li>
+</ul>
+
+<p>Пример работы с <em>RPM-Calc</em>:</p>
+<ol>
+  <li>Выбираете тип трансмиссии (МКПП/АКПП);</li>
+  <li>Вводите передаточные числа и диаметр колёс;</li>
+  <li>Указываете обороты двигателя;</li>
+  <li>Получаете таблицу скоростей для каждой передачи.</li>
+</ol>
+
+<blockquote>⚠️ Внимание: онлайн-калькуляторы часто используют упрощённые формулы и не учитывают потери в трансмиссии. Для точных расчётов (например, для гоночных автомобилей) лучше провести замеры на диностенде.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Самый точный способ проверить расчёты — замерить скорость GPS-навигатором и сравнить с показаниями спидометра. Разница более 5% говорит об ошибке в данных или формулах.</p></aside>
+
+<h2 id="faq-частые-вопросы-о-расчёте-скорости">FAQ: Частые вопросы о расчёте скорости</h2>
+
+<details>
+  <summary>Можно ли рассчитать скорость по передаточным числам для автоматической КПП?</summary>
+  <p>Да, но нужно учитывать, что в АКПП передаточные числа меняются плавно (в вариаторе) или ступенчато (в классическом "автомате"). Для расчёта берите текущее передаточное число, которое можно узнать через <em>OBD2-сканер</em> или специализированное ПО (например, <em>VCDS</em> для <em>Volkswagen</em>).</p>
+</details>
+
+<details>
+  <summary>Как учесть износ трансмиссии при расчётах?</summary>
+  <p>Износ подшипников, шестерён и сцепления увеличивает потери мощности. Чтобы компенсировать это:</p>
+  <ul>
+    <li>Добавьте 3-7% к расчётной скорости (например, если получилось 200 км/ч, реально будет 190-194 км/ч);</li>
+    <li>Проверьте люфт валов КПП — если он превышает 1-1.5 мм, передаточные числа фактически изменятся;</li>
+    <li>Замерьте реальные обороты двигателя при заданной скорости (например, с помощью <em>ELM327</em>).</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Почему после замены главной пары машина стала медленнее разгоняться?</summary>
+  <p>Скорее всего, вы установили главную пару с <strong>меньшим передаточным числом</strong> (например, вместо 4.1 поставили 3.7). Это уменьшает крутящий момент на колёсах, но увеличивает максимальную скорость. Для улучшения разгона нужно, наоборот, <strong>увеличить</strong> передаточное число главной пары (например, с 3.9 до 4.3).</p>
+</details>
+
+<details>
+  <summary>Как рассчитать скорость для полноприводного автомобиля?</summary>
+  <p>В полноприводных авто (например, <em>Subaru Impreza</em> или <em>Mitsubishi Lancer Evolution</em>) добавляется <strong>раздаточная коробка</strong> с собственным передаточным числом (обычно 1.0-1.2 для постоянного полного привода). Формула модифицируется так:</p>
+  <pre><code>V = (n × 60 × 2πR × 3.6) / (i_k × i_гп × i_рк × 1000)</code></pre>
+  <p>Где <code>i_рк</code> — передаточное число раздаточной коробки.</p>
+</details>
+
+<details>
+  <summary>Можно ли по скорости и оборотам определить передаточное число?</summary>
+  <p>Да! Если вы знаете скорость (<code>V</code>), обороты двигателя (<code>n</code>), диаметр колёс (<code>D</code>) и передаточное число главной пары (<code>i_гп</code>), то число текущей передачи КПП рассчитывается как:</p>
+  <pre><code>i_k = (n × D × π) / (V × i_гп × 1056)</code></pre>
+  <p>Этот метод полезен для диагностики КПП: если расчётное число сильно отличается от паспортного, возможен износ шестерён или сцепления.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/ma/mashina-ne-edet-bolshe-100.html" class="pb-related-card">
+                <span class="pb-related-title">Машина не едет больше 100 км/ч: причины и решение</span>
+                <span class="pb-related-desc">Автомобиль не разгоняется выше 100 км/ч? Разбираем причины: катализатор, лямбда-зонд, давление топли</span>
+            </a><a href="/articles/c/ch/chast-mashiny-na-bukvu-i.html" class="pb-related-card">
+                <span class="pb-related-title">Часть машины на букву И: от инжектора до иммобилайзера</span>
+                <span class="pb-related-desc">Полный гид по деталям авто на букву И: инжектор, индикаторы, износ. Разбор узлов, диагностика и сове</span>
+            </a><a href="/articles/c/ch/chto-takoe-a-s-v-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">АБС в автомобиле: что это, как работает и зачем нужна система</span>
+                <span class="pb-related-desc">Разбираем, что такое ABS в машине, принципы работы антиблокировочной системы, преимущества и недоста</span>
+            </a><a href="/articles/l/lo/loshadinye-sily-i-krutyashchij-moment.html" class="pb-related-card">
+                <span class="pb-related-title">Лошадиные силы и крутящий момент: в чем разница?</span>
+                <span class="pb-related-desc">Разбираем, что важнее для водителя: лошадиные силы или крутящий момент двигателя. Влияние на разгон,</span>
+            </a><a href="/articles/k/ka/kak-nazyvaetsya-rychag-pereklyucheniya.html" class="pb-related-card">
+                <span class="pb-related-title">Рычаг переключения передач: как называется и где находится</span>
+                <span class="pb-related-desc">Узнайте официальные названия рычага КПП в автомобиле, его расположение и особенности для МКПП, АКПП </span>
+            </a><a href="/articles/c/ch/chem-dsg-otlichaetsya-ot-avtomata.html" class="pb-related-card">
+                <span class="pb-related-title">Чем DSG отличается от автомата: сравнение, плюсы и минусы</span>
+                <span class="pb-related-desc">Подробный разбор отличий DSG от классического автомата. Узнайте, какая коробка надежнее, экономичнее</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

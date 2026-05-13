@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Проверка генератора на стенде: диагностика и тесты — Авто Справочник</title>
+    <meta name="description" content="Полная инструкция по проверке генератора на стенде. Нормы напряжения, токоскоростные характеристики и выявление скрытых дефектов в лаборатории.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pr/proverka-generatora-na-stende.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Проверка генератора на стенде: диагностика и тесты">
+    <meta property="og:description" content="Полная инструкция по проверке генератора на стенде. Нормы напряжения, токоскоростные характеристики и выявление скрытых дефектов в лаборатории.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Проверка генератора на стенде: диагностика и тесты</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#зачем-необходима-стендовая-диагностика">Зачем необходима стендовая диагностика</a></li><li><a href="#устройство-и-функционал-испытательного-стенда">Устройство и функционал испытательного стенда</a></li><li><a href="#подготовка-генератора-к-тестированию">Подготовка генератора к тестированию</a></li><li><a href="#процедура-снятия-токоскоростных-характеристик">Процедура снятия токоскоростных характеристик</a></li><li><a href="#диагностика-регулятора-напряжения-и-диодного-моста">Диагностика регулятора напряжения и диодного моста</a></li><li><a href="#интерпретация-результатов-иные-неисправности">Интерпретация результатов иные неисправности</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/preobrazovat-s-24-na-12-volt.html">Как преобразовать 24В в 12В в авто: схемы, ошибки, выбор оборудования</a></li><li><a href="/articles/k/ka/kak-k-avtomatu-podklyuchit-rozetku.html">Как подключить розетку к автомату в машине: пошаговая инструкция</a></li><li><a href="/articles/k/ka/kak-rabotaet-regulyator-napryazheniya.html">Как работает регулятор напряжения в авто: схема и неисправности</a></li><li><a href="/articles/a/ak/akkumulyator-zaryazhen-no-mashina-ne-zavoditsya.html">Аккумулятор заряжен, но машина не заводится: 7 причин и решения</a></li><li><a href="/articles/i/in/invertor-na-3000-vatt.html">Инвертор на 3000 ватт: выбор, схема подключения, расчет</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Проверка генератора на стенде: диагностика, нормы и методы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#зачем-необходима-стендовая-диагностика">Зачем необходима стендовая диагностика</a></li><li><a href="#устройство-и-функционал-испытательного-стенда">Устройство и функционал испытательного стенда</a></li><li><a href="#подготовка-генератора-к-тестированию">Подготовка генератора к тестированию</a></li><li><a href="#процедура-снятия-токоскоростных-характеристик">Процедура снятия токоскоростных характеристик</a></li><li><a href="#диагностика-регулятора-напряжения-и-диодного-моста">Диагностика регулятора напряжения и диодного моста</a></li><li><a href="#интерпретация-результатов-иные-неисправности">Интерпретация результатов иные неисправности</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный автомобиль представляет собой сложный комплекс электрических систем, где генераторная установка играет роль сердца, обеспечивающего энергией все потребители. Когда на приборной панели загорается индикатор разряда аккумулятора, это не всегда означает, что проблема кроется в самой батарее. Часто корень зла скрыт глубже, и выявить его способна только профессиональная <strong>диагностика</strong> оборудования в условиях специализированного сервиса.</p>
+
+<p>Визуальный осмотр и проверка мультиметром на автомобиле дают лишь приблизительное представление о состоянии узла. Они не позволяют оценить работу устройства под реальной нагрузкой или выявить пульсации, которые могут убить электронику за считанные месяцы. Именно поэтому <em>проверка генератора на стенде</em> является"золотым стандартом" для точного определения технического состояния агрегата перед его установкой или после ремонта.</p>
+
+<p>Специализированный стенд имитирует работу двигателя на различных оборотах и подключает к генератору мощную электрическую нагрузку. Это позволяет снять точные <strong>токоскоростные характеристики</strong>, проверить стабильность напряжения и выявить дефекты, невидимые глазу. В этой статье мы подробно разберем процесс тестирования, нормы показателей и методы интерпретации полученных данных.</p>
+
+<h2 id="зачем-необходима-стендовая-диагностика">Зачем необходима стендовая диагностика</h2>
+
+<p>Многие автолюбители полагают, что если мультиметр показывает 14 вольт на холостом ходу, то генератор исправен. Однако это опасное заблуждение. Под нагрузкой, когда включены фары, кондиционер и обогревы, напряжение может критически падать, а диодный мост — пропускать переменный ток. Стенд позволяет создать такие <strong>условия эксплуатации</strong>, которые невозможно воспроизвести в гараже.</p>
+
+<p>Основная цель использования испытательного оборудования — снятие полной внешней характеристики. Это график зависимости выходного тока от частоты вращения ротора при постоянном напряжении. Только так можно определить, способен ли генератор выдавать заявленный производителем ток, например, 120 Ампер, или его реальная мощность упала до 60-70 Ампер из-за износа обмоток.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Эксплуатация автомобиля с генератором, имеющим повышенную пульсацию напряжения, может привести к выходу из строя дорогостоящего блока управления двигателем (ЭБУ) и мультимедийной системы.</p>
+</blockquote>
+
+<p>Кроме того, стенд помогает выявить механические проблемы, такие как биение вала или неисправности подшипников, которые под нагрузкой проявляются характерным гулом или вибрацией. Комплексный подход гарантирует, что после замены или ремонта узел прослужит долго и не подведет в пути.</p>
+
+<div class="pb-poll" id="poll-1854747a"><div class="pb-poll-question">📊 Как часто вы проверяете состояние генератора?</div><div class="pb-poll-option" data-poll="1854747a" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Раз в год при плановом ТО</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1854747a" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Только при появлении проблем с запуском</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1854747a" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда не проверял</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1854747a" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Сразу после покупки б/у авто</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="устройство-и-функционал-испытательного-стенда">Устройство и функционал испытательного стенда</h2>
+
+<p>Современный испытательный стенд — это высокотехнологичный комплекс, состоящий из электродвигателя, системы управления частотой вращения, нагрузочных реостатов и измерительных приборов. Ключевым элементом является приводной вал, который через ременную передачу или муфту соединяется с ротором проверяемого генератора. Это позволяет плавно изменять <strong>скорость вращения</strong> от 0 до 6000 об/мин и выше.</p>
+
+<p>Система нагружения представляет собой набор мощных резисторов или электронных блоков, которые потребляют ток, вырабатываемый генератором. Оператор может ступенчато или плавно увеличивать нагрузку, наблюдая в реальном времени за поведением напряжения. Все данные выводятся на цифровой дисплей или передаются на компьютер для построения графиков.</p>
+
+<p>Важной частью стенда является модуль проверки регулятора напряжения и диодного моста. Он позволяет оценить качество выпрямления тока и стабильность работы <em>реле-регулятора</em> при изменении температуры и нагрузки. Некоторые продвинутые модели стендов имеют функцию осциллографа для визуализации формы сигнала.</p>
+
+<details class="pb-accordion"><summary>Секреты калибровки стендов</summary><div class="pb-accordion-body"><p>Профессиональные стенды требуют периодической поверки. Если датчики тока или напряжения"врут" даже на 5%, диагностика становится бессмысленной. В хороших сервисах калибровка проводится раз в полгода с использованием эталонных приборов, что гарантирует точность измерений до 0.1 Вольта и 1 Ампера.</p></div></details>
+
+<h2 id="подготовка-генератора-к-тестированию">Подготовка генератора к тестированию</h2>
+
+<p>Перед установкой на стенд генератор должен пройти предварительную подготовку. Это не просто формальность, а необходимость для получения достоверных результатов и безопасности оператора. В первую очередь проводится внешний осмотр на предмет механических повреждений корпуса, сколов шкива или следов попадания жидкости.</p>
+
+<p>Затем необходимо очистить контакты и проверить состояние щеточного узла. Если щетки изношены более чем на 50%, их лучше заменить перед тестом, чтобы исключить влияние этого фактора на результат. Также проверяется легкость вращения вала от руки — заедания указывают на проблемы с <strong>подшипниками</strong>.</p>
+
+<p>Следующий этап — правильная коммутация. Генератор надежно закрепляется в mounting-фланце стенда, шкив соединяется с приводом. Провода подключаются согласно схеме: выход"B+" на нагрузочный блок, вывод"D+" (или лампа контроля) на цепь возбуждения, а корпус ("масса") соединяется с общей шиной заземления стенда.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист подготовки к диагностике</h4><label class="check-item"><input type="checkbox"><span>Очистить корпус от грязи и масла</span></label><label class="check-item"><input type="checkbox"><span>Проверить натяжение и состояние щеток</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в легкости вращения вала</span></label><label class="check-item"><input type="checkbox"><span>Проверить надежность крепления клемм</span></label><label class="check-item"><input type="checkbox"><span>Соединить массу генератора с корпусом стенда</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="процедура-снятия-токоскоростных-характеристик">Процедура снятия токоскоростных характеристик</h2>
+
+<p>Процесс тестирования начинается с запуска приводного двигателя стенда. Обороты плавно поднимаются до момента, когда загорится контрольная лампа разряда или начнет расти напряжение на выходе. Это точка начала отдачи тока. Далее частота вращения доводится до нормативной, обычно это 6000 об/мин для легковых автомобилей.</p>
+
+<p>На этом этапе включается нагрузка. Оператор увеличивает ток потребления, следя за напряжением. Оно не должно опускаться ниже установленного порога (обычно 13.5–13.8 В для 12-вольтовых систем). Максимальный ток, который способен выдать генератор при сохранении нормального напряжения, фиксируется как <strong>номинальная мощность</strong>.</p>
+
+<p>Важно провести тест не только на высоких, но и на низких оборотах, имитируя работу двигателя на холостом ходу. Если в этом режиме генератор не справляется с базовой нагрузкой автомобиля, аккумулятор будет постоянно недозаряжаться, что приведет к его сульфатации.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Нормативное значение</th>
+<th>Критическое значение</th>
+<th>Единица измерения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Напряжение без нагрузки</td>
+<td>14.2 – 14.7</td>
+<td>&lt; 14.0 или &gt; 15.0</td>
+<td>Вольт (В)</td>
+</tr>
+<tr>
+<td>Пульсации напряжения</td>
+<td>&lt; 0.3</td>
+<td>&gt; 0.5</td>
+<td>Вольт (В)</td>
+</tr>
+<tr>
+<td>Ток утечки (покоя)</td>
+<td>0</td>
+<td>&gt; 0.05</td>
+<td>Ампер (А)</td>
+</tr>
+<tr>
+<td>Начало отдачи тока</td>
+<td>1000 – 1500</td>
+<td>&gt; 2000</td>
+<td>об/мин</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Полученные данные сравниваются с заводскими спецификациями для конкретной модели генератора. Отклонение номинального тока более чем на 15-20% в меньшую сторону свидетельствует о неисправности обмоток статора или ротора, либо о пробое диодов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если генератор выдает ток ниже номинального на высоких оборотах, но держит напряжение на низких — вероятен локальный перегрев или межвитковое замыкание в обмотках статора.</p></aside>
+
+<h2 id="диагностика-регулятора-напряжения-и-диодного-моста">Диагностика регулятора напряжения и диодного моста</h2>
+
+<p>Отдельного внимания заслуживает проверка <em>реле-регулятора</em>. Этот компонент отвечает за стабилизацию напряжения независимо от частоты вращения ротора и величины нагрузки. На стенде можно проверить, как быстро регулятор реагирует на скачки потребления тока. Хороший регулятор удерживает напряжение в коридоре ±0.2 В от номинала.</p>
+
+<p>Диодный мост проверяется на предмет пробоя или обрыва диодов. Неисправный диод пропускает переменный ток, создавая на выходе генератора пульсации. На осциллографе это выглядит как"лохматая" синусоида вместо ровной линии. Даже небольшие пульсации вредны для аккумулятора, вызывая его"кипение" и разрушение пластин.</p>
+
+<p>Также проводится тест на самовозбуждение. После остановки двигателя и снятия нагрузки, генератор не должен продолжать вырабатывать ток при выключенном зажигании. Если ток остается, значит, есть короткое замыкание в цепи возбуждения или пробит один из дополнительных диодов моста.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При проверке диодного моста запрещено использовать метод"прозвонки" мощными токовыми клещами без нагрузки, так как это может дать ложноположительный результат. Только нагрузка на стенде покажет реальную способность диодов держать ток.</p>
+</blockquote>
+
+<h2 id="интерпретация-результатов-иные-неисправности">Интерпретация результатов иные неисправности</h2>
+
+<p>Анализ полученных данных позволяет точно определить тип неисправности. Если напряжение низкое на всех режимах, но растет при добавлении газа, скорее всего, изношены щетки или контактные кольца. Если же напряжение скачет хаотично, проблема в регуляторе или плохом контакте в цепи"массы".</p>
+
+<p>Высокий уровень шума или вибрации при работе на стенде указывает на механические дефекты. Подшипники могут иметь выработку, а вал — искривление. В таких случаях даже электрически исправный генератор подлежит замене или серьезной переборке, так как ресурс его работы исчисляется часами.</p>
+
+<p>Частой проблемой является перегрев обмоток. Если после 10-15 минут работы под максимальной нагрузкой температура корпуса генератора превышает 100-110°C, это признак межвиткового замыкания. Изоляция проводов истончилась, и ток течет по пути наименьшего сопротивления, минуя часть витков, что снижает КПД и вызывает нагрев.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При покупке б/у генератора требуйте протокол испытаний со стенда. Если продавец отказывается показать работу под нагрузкой, вероятность покупки неисправного узла составляет более 80%.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли проверить генератор без снятия с автомобиля?</summary>
+<p>Частично — да. Можно измерить напряжение на аккумуляторе при работающем двигателе и под нагрузкой (включенные фары, печка). Однако это не даст полной картины о состоянии обмоток, диодов и реальной максимальной мощности. Точная диагностика возможна только на стенде.</p>
+</details>
+
+<details>
+<summary>Какая пульсация напряжения считается допустимой?</summary>
+<p>Для современных автомобилей с чувствительной электроникой пульсации не должны превышать 0.3 Вольта (амплитудное значение). Если осциллограф показывает более 0.5 В, диодный мост или конденсатор фильтра требуют замены.</p>
+</details>
+
+<details>
+<summary>Почему генератор греется на стенде?</summary>
+<p>Нагрев до 60-80°C под полной нагрузкой является нормой. Если температура быстро растет выше 100°C, это указывает на межвитковое замыкание в статоре, неправильную сборку (зажат подшипник) или слишком высокое натяжение ремня привода.</p>
+</details>
+
+<details>
+<summary>Как часто нужно проводить диагностику генератора?</summary>
+<p>Рекомендуется проводить проверку при каждом плановом техническом обслуживании (раз в 15-20 тысяч км) или при появлении первых признаков нестабильной работы электрооборудования. Также обязателен тест после покупки подержанного автомобиля.</p>
+</details>
+
+<details>
+<summary>Что дешевле: ремонт или замена на новый?</summary>
+<p>Если на стенде выявлен пробой диодного моста или износ щеток/регулятора — ремонт выгоден. Если же проблема в обмотках статора или ротора (межвитковое), стоимость восстановления часто достигает 70-80% цены нового качественного аналога, поэтому замена целесообразнее.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/preobrazovat-s-24-na-12-volt.html" class="pb-related-card">
+                <span class="pb-related-title">Как преобразовать 24В в 12В в авто: схемы, ошибки, выбор оборудования</span>
+                <span class="pb-related-desc">Пошаговое руководство по снижению напряжения с 24В до 12В в автомобиле: DC-DC преобразователи, делит</span>
+            </a><a href="/articles/k/ka/kak-k-avtomatu-podklyuchit-rozetku.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить розетку к автомату в машине: пошаговая инструкция</span>
+                <span class="pb-related-desc">Детальное руководство по подключению розетки 12В/220В к автомату в автомобиле: схемы, инструменты, о</span>
+            </a><a href="/articles/k/ka/kak-rabotaet-regulyator-napryazheniya.html" class="pb-related-card">
+                <span class="pb-related-title">Как работает регулятор напряжения в авто: схема и неисправности</span>
+                <span class="pb-related-desc">Принцип работы регулятора напряжения генератора: устройство, признаки поломки, проверка мультиметром</span>
+            </a><a href="/articles/a/ak/akkumulyator-zaryazhen-no-mashina-ne-zavoditsya.html" class="pb-related-card">
+                <span class="pb-related-title">Аккумулятор заряжен, но машина не заводится: 7 причин и решения</span>
+                <span class="pb-related-desc">Разбираемся, почему автомобиль не запускается при заряженном АКБ: от неисправного стартера до пробле</span>
+            </a><a href="/articles/i/in/invertor-na-3000-vatt.html" class="pb-related-card">
+                <span class="pb-related-title">Инвертор на 3000 ватт: выбор, схема подключения, расчет</span>
+                <span class="pb-related-desc">Полный гид по инверторам 3000 Вт. Как выбрать, подключить и обслуживать. Схемы, расчеты нагрузки и з</span>
+            </a><a href="/articles/p/pu/pusko-zaryadnoe-ustrojstvo-dlya-akb.html" class="pb-related-card">
+                <span class="pb-related-title">Пуско-зарядное устройство для АКБ: как выбрать и пользоваться правильно</span>
+                <span class="pb-related-desc">Подробный гайд по выбору пуско-зарядных устройств для автомобильных аккумуляторов: виды, параметры, </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

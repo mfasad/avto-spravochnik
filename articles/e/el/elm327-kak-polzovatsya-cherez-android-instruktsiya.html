@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>ELM327 через Андроид: полная инструкция по подключению — Авто Справочник</title>
+    <meta name="description" content="Как подключить автосканер ELM327 к телефону на Android. Выбор приложения, настройка Bluetooth, чтение ошибок и адаптация. Пошаговый гид.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/e/el/elm327-kak-polzovatsya-cherez-android-instruktsiya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ELM327 через Андроид: полная инструкция по подключению">
+    <meta property="og:description" content="Как подключить автосканер ELM327 к телефону на Android. Выбор приложения, настройка Bluetooth, чтение ошибок и адаптация. Пошаговый гид.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">ELM327 через Андроид: полная инструкция по подключению</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-совместимого-программного-обеспечения">Выбор совместимого программного обеспечения</a></li><li><a href="#подключение-и-сопряжение-устройства">Подключение и сопряжение устройства</a></li><li><a href="#настройка-параметров-связи-и-протоколов">Настройка параметров связи и протоколов</a></li><li><a href="#диагностика-и-чтение-кодов-неисправностей">Диагностика и чтение кодов неисправностей</a></li><li><a href="#мониторинг-параметров-в-реальном-времени">Мониторинг параметров в реальном времени</a></li><li><a href="#адаптация-и-скрытые-функции">Адаптация и скрытые функции</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-krepko-zavyazat-uzel.html">Как крепко завязать узел: инструкция и схемы</a></li><li><a href="/articles/k/ka/kak-zavyazat-uzel-odnoj-rukoj.html">Как завязать узел одной рукой: 5 проверенных способов для водителей</a></li><li><a href="/articles/p/pr/programma-diagnostiki-avtomobilej-dlya-android-na-russkom.html">Топ-7 программ диагностики авто для Android на русском языке</a></li><li><a href="/articles/b/bu/bumaga-protirochnaya-dlya-avtoservisa-v-rulonakh.html">Бумага протирочная для автосервиса в рулонах: выбор, типы, расход</a></li><li><a href="/articles/k/kh/khoroshij-avtomobilnyj-nasos-dlya-podkachki-shin.html">Хороший автомобильный насос: как выбрать и рейтинг</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>ELM327 через Андроид: полная инструкция по подключению и настройке</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-совместимого-программного-обеспечения">Выбор совместимого программного обеспечения</a></li><li><a href="#подключение-и-сопряжение-устройства">Подключение и сопряжение устройства</a></li><li><a href="#настройка-параметров-связи-и-протоколов">Настройка параметров связи и протоколов</a></li><li><a href="#диагностика-и-чтение-кодов-неисправностей">Диагностика и чтение кодов неисправностей</a></li><li><a href="#мониторинг-параметров-в-реальном-времени">Мониторинг параметров в реальном времени</a></li><li><a href="#адаптация-и-скрытые-функции">Адаптация и скрытые функции</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современная <strong>диагностика автомобиля</strong> перестала быть уделом специализированных сервисов с дорогим оборудованием. Теперь любой владелец смартфона может превратить свой гаджет в мощный бортовой компьютер, используя недорогой адаптер <em>ELM327</em>. Это устройство считывает коды ошибок, отображает параметры работы двигателя в реальном времени и позволяет выполнять скрытые настройки системы.</p>
+
+<p>Для работы связки <em>Android</em> и сканера не требуются глубокие знания программирования или схемотехники. Достаточно установить приложение, выполнить сопряжение и запустить сканирование. Однако, чтобы получить достоверные данные и не навредить электронике, необходимо строго соблюдать порядок действий и понимать специфику протоколов обмена данными.</p>
+
+<p>В этом материале мы разберем все нюансы подключения, выбора софта и интерпретации полученных данных. Вы узнаете, почему дешевые китайские копии могут не работать с программами, как правильно сбросить ошибки и какие параметры стоит мониторить в первую очередь для профилактики поломок.</p>
+
+<h2 id="выбор-совместимого-программного-обеспечения">Выбор совместимого программного обеспечения</h2>
+
+<p>Первым шагом после покупки адаптера становится поиск подходящего <strong>приложения</strong>. В Google Play Маркет представлены сотни вариантов, но далеко не все они обеспечивают стабильную связь с чипом <em>ELM327</em>. Выбор программы зависит от ваших целей: кому-то нужен просто сброс ошибки"Check Engine", а кому-то — построение графиков работы лямбда-зонда.</p>
+
+<p>Одним из самых популярных решений считается <em>Torque Pro</em>. Это приложение обладает гибкой настройкой интерфейса и поддерживает создание собственных датчиков. Для новичков отлично подойдет <em>Car Scanner ELM OBD2</em>, который имеет русифицированный интерфейс и понятную структуру меню. Владельцы автомобилей группы VAG часто выбирают <em>Carista</em> или <em>VAG mobile</em> для доступа к скрытым функциям.</p>
+
+<ul>
+<li>📱 <strong>Torque Pro</strong> — мощный инструмент для детальной диагностики и тюнинга отображения данных.</li>
+<li>🚗 <strong>Car Scanner</strong> — универсальное решение с готовыми профилями для многих марок авто.</li>
+<li>🔧 <strong>OpenDiag Mobile</strong> — специализированный софт, особенно эффективный для автомобилей российского производства.</li>
+<li>🛠️ <strong>HobDrive</strong> — отличный вариант для ведения бортового журнала и анализа расхода топлива.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Бесплатные версии программ часто имеют ограниченный функционал. Перед покупкой платной версии (обычно это разовый платеж) убедитесь, что приложение корректно подключается к вашему автомобилю в демо-режиме.</p>
+</blockquote>
+
+<p>Важно учитывать версию протокола, которую поддерживает ваш адаптер. Большинство современных устройств работают на протоколе <code>1.5</code>, тогда как старые версии <code>1.4</code> или <code>1.2</code> могут не поддерживать команду <code>ATSP0</code> для автоматического определения протокола. Это критически важный момент, так как <mark>адаптеры с чипом PIC18F25K80 обеспечивают наилучшую совместимость</mark> со сложным софтом, в то время как дешевые аналоги на базе STN1110 могут работать нестабильно с некоторыми приложениями.</p>
+
+<div class="pb-poll" id="poll-d745d6fe"><div class="pb-poll-question">📊 Какое приложение для диагностики вы используете чаще всего?</div><div class="pb-poll-option" data-poll="d745d6fe" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Torque Pro</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d745d6fe" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Car Scanner</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d745d6fe" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">OpenDiag</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d745d6fe" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">HobDrive</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d745d6fe" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="подключение-и-сопряжение-устройства">Подключение и сопряжение устройства</h2>
+
+<p>Процесс физической установки адаптера крайне прост. Найдите разъем <em>OBD-II</em> в салоне автомобиля. Обычно он расположен под рулевой колонкой, в районе педалей или возле блока предохранителей. Вставьте адаптер до упора, соблюдая ориентацию контактов. После включения зажигания на устройстве должны загореться индикаторы питания.</p>
+
+<p>Далее необходимо перейти в настройки Bluetooth вашего смартфона. Включите модуль беспроводной связи и запустите поиск новых устройств. В списке доступных гаджетов появится название вроде <code>OBDII</code>, <code>HC-05</code> или <code>Vgate</code>. Стандартный пин-код для большинства китайских адаптеров — <code>1234</code> или <code>0000</code>. Если код не подходит, проверьте инструкцию к конкретной модели.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Не пытайтесь подключиться к адаптеру напрямую через системное меню Bluetooth Android, если приложение требует создания пары внутри своего интерфейса. Некоторые программы, такие как <em>MotoData</em>, предпочитают собственное управление соединением.</p>
+</blockquote>
+
+<p>После успешного сопряжения откройте выбранное приложение. В разделе настроек (<code>Settings</code> или <code>Настройки</code>) найдите пункт выбора типа подключения. Убедитесь, что выбран метод <code>Bluetooth</code>, а не <code>Wi-Fi</code> или <code>USB</code>. Затем нажмите кнопку"Подключиться" или"Connect". Приложение попытается определить протокол связи ЭБУ (Электронного Блока Управления).</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка подключения</h4><label class="check-item"><input type="checkbox"><span>Адаптер вставлен в разъем OBD-II</span></label><label class="check-item"><input type="checkbox"><span>Загорелся красный индикатор питания</span></label><label class="check-item"><input type="checkbox"><span>Включен Bluetooth на телефоне</span></label><label class="check-item"><input type="checkbox"><span>Введен правильный PIN-код (1234)</span></label><label class="check-item"><input type="checkbox"><span>Приложение видит адаптер</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="настройка-параметров-связи-и-протоколов">Настройка параметров связи и протоколов</h2>
+
+<p>Корректная работа диагностической программы зависит от правильных настроек порта. В меню приложения часто требуется вручную указать тип адаптера. Для большинства случаев подходит стандартный <strong>ELM327</strong>. Если соединение обрывается или данные не читаются, попробуйте изменить настройки скорости порта (Baud rate). Оптимальным значением для Bluetooth часто является <code>38400</code> или <code>57600</code>.</p>
+
+<p>В продвинутых настройках можно встретить параметры задержек и таймаутов. Увеличение времени ожидания ответа от ЭБУ помогает при работе со старыми автомобилями, где обмен данными идет медленнее. Также стоит обратить внимание на галочку"Использовать протокол ISO" или"Автоматический выбор".</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр настройки</th>
+<th>Рекомендуемое значение</th>
+<th>Описание влияния</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Тип устройства</td>
+<td>ELM327</td>
+<td>Базовый стандарт для большинства сканеров</td>
+</tr>
+<tr>
+<td>Скорость (Baud)</td>
+<td>38400 / Авто</td>
+<td>Скорость передачи данных через Bluetooth</td>
+</tr>
+<tr>
+<td>Протокол</td>
+<td>Авто (ATSP0)</td>
+<td>Автоматическое определение протокола ЭБУ</td>
+</tr>
+<tr>
+<td>Интервал опроса</td>
+<td>200-500 мс</td>
+<td>Частота обновления данных на экране</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Если приложение пишет"Не удалось подключиться", попробуйте выполнить команду сброса адаптера. В некоторых программах есть функция <code>ATZ</code> (сброс) или <code>ATD</code> (сброс всех). Это возвращает адаптер к заводским настройкам и часто решает проблемы с"зависанием" связи.</p>
+
+
+
+<h2 id="диагностика-и-чтение-кодов-неисправностей">Диагностика и чтение кодов неисправностей</h2>
+
+<p>Основная функция, ради которой приобретается сканер — это чтение ошибок. В главном меню приложения выберите пункт"Коды неисправностей" или"Check Engine". Программа запросит у ЭБУ список сохраненных кодов. Ошибки делятся на текущие (активные в данный момент) и сохраненные (история).</p>
+
+<p>Каждый код имеет формат, например, <code>P0300</code>. Первая буква указывает на систему: <strong>P</strong> — двигатель и трансмиссия, <strong>B</strong> — кузов, <strong>C</strong> — шасси, <strong>U</strong> — сеть. Цифры уточняют конкретную проблему. После расшифровки кода приложение обычно дает краткое описание проблемы, например,"Пропуски воспламенения" или"Низкое напряжение датчика кислорода".</p>
+
+<ul>
+<li>🔴 <strong>Текущие ошибки</strong> — требуют немедленного внимания, горит лампа Check Engine.</li>
+<li>🟡 <strong>Сохраненные ошибки</strong> — были в прошлом, но сейчас система в норме.</li>
+<li>🟢 <strong>Ошибки готовности</strong> — показывают статус систем экологии (катализатор, испарительные потери).</li>
+</ul>
+
+<p>После устранения неисправности коды необходимо стереть. Нажмите кнопку"Стереть коды" или"Clear DTC". Лампа на панели приборов должна погаснуть. Если ошибка возвращается сразу или через короткое время, значит, физическая поломка никуда не делась и требуется ремонт.</p>
+
+
+
+<h2 id="мониторинг-параметров-в-реальном-времени">Мониторинг параметров в реальном времени</h2>
+
+<p>Режим"Приборная панель" или"Realtime Data" позволяет видеть работу систем автомобиля на ходу. Вы можете вывести на экран обороты двигателя, скорость, температуру охлаждающей жидкости, положение дроссельной заслонки и многое другое. Это полезно для оценки поведения мотора под нагрузкой.</p>
+
+<p>Особое внимание стоит уделить параметру <strong>LTFT</strong> (Long Term Fuel Trim) — долгосрочный корректор топливной смеси. Если значение сильно отклоняется от нуля (более ±10%), это говорит о проблемах с подачей воздуха или топлива. Также важен вольтаж бортовой сети: при работающем двигателе он должен быть в пределах 13.5–14.5 Вольт.</p>
+
+<p>Для любителей скорости и динамики полезным будет график разгона. Приложение строит кривую мощности и крутящего момента в зависимости от оборотов. Это позволяет оценить эффективность чип-тюнинга или состояние двигателя после ремонта.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Не устанавливайте слишком много одновременно обновляемых датчиков на экран. Это создает высокую нагрузку на канал Bluetooth и может привести к задержкам отображения данных или разрыву соединения.</p>
+</blockquote>
+
+<h2 id="адаптация-и-скрытые-функции">Адаптация и скрытые функции</h2>
+
+<p>Некоторые приложения позволяют не только читать данные, но и менять настройки автомобиля. С помощью <em>Carista</em> или <em>BimmerCode</em> (для BMW) можно активировать автоматическое запирание дверей при начале движения, отключить старт-стоп или изменить яркость подсветки. Эти функции называются"кодированием" или"адаптацией".</p>
+
+<p>Процесс адаптации требует особой осторожности. Перед внесением изменений в конфигурационные файлы ЭБУ настоятельно рекомендуется сохранить исходную конфигурацию (сделать бэкап). В случае сбоя вы сможете вернуть заводские настройки.</p>
+
+<p>Также через адаптер можно проводить тесты исполнительных механизмов. Например, включить вентилятор охлаждения принудительно, проверить работу форсунок или клапана рециркуляции газов. Это значительно упрощает поиск неисправности без разборки узлов.</p>
+
+
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему адаптер ELM327 не подключается к Android?</summary>
+<p>Наиболее частые причины: включен GPS на телефоне (конфликтует с Bluetooth модулем на некоторых моделях), разряжен аккумулятор автомобиля, или адаптер несовместим с версией Android (проблема версий 1.5 и выше с Android 10+). Попробуйте обновить прошивку адаптера или сменить приложение.</p>
+</details>
+
+<details>
+<summary>Можно ли оставить адаптер в разъеме постоянно?</summary>
+<p>Теоретически можно, но в режиме сна адаптер потребляет ток (обычно 10-50 мА). Если автомобиль стоит неделю и более, есть риск посадить аккумулятор. Лучше вынимать устройство при длительной стоянке.</p>
+</details>
+
+<details>
+<summary>Безопасно ли использовать ELM327 во время движения?</summary>
+<p>Использование смартфона за рулем запрещено во многих странах. Настраивать приложение и смотреть на графики можно только на остановленном автомобиле с включенным стояночным тормозом. Для постоянного мониторинга используйте голосовое озвучивание параметров, если приложение это поддерживает.</p>
+</details>
+
+<details>
+<summary>Работает ли ELM327 с гибридами и электрокарами?</summary>
+<p>С обычными гибридами (HEV) адаптер работает, показывая данные ДВС. С чистыми электрокарами (EV) функционал сильно ограничен, так как протоколы диагностики высоковольтной батареи часто закрыты и требуют специализированного оборудования.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-krepko-zavyazat-uzel.html" class="pb-related-card">
+                <span class="pb-related-title">Как крепко завязать узел: инструкция и схемы</span>
+                <span class="pb-related-desc">Узнайте, как правильно завязать крепкий узел для веревки, лески или троса. Схемы, пошаговые инструкц</span>
+            </a><a href="/articles/k/ka/kak-zavyazat-uzel-odnoj-rukoj.html" class="pb-related-card">
+                <span class="pb-related-title">Как завязать узел одной рукой: 5 проверенных способов для водителей</span>
+                <span class="pb-related-desc">Пошаговые инструкции, как завязать узел одной рукой в дороге: от крепления груза до экстренного ремо</span>
+            </a><a href="/articles/p/pr/programma-diagnostiki-avtomobilej-dlya-android-na-russkom.html" class="pb-related-card">
+                <span class="pb-related-title">Топ-7 программ диагностики авто для Android на русском языке</span>
+                <span class="pb-related-desc">Обзор лучших русскоязычных приложений для диагностики автомобилей через OBD2 на Android. Сравнение ф</span>
+            </a><a href="/articles/b/bu/bumaga-protirochnaya-dlya-avtoservisa-v-rulonakh.html" class="pb-related-card">
+                <span class="pb-related-title">Бумага протирочная для автосервиса в рулонах: выбор, типы, расход</span>
+                <span class="pb-related-desc">Всё о впитывающей бумаге для СТО: сравнение целлюлозных и синтетических полотен, расчет расхода, вли</span>
+            </a><a href="/articles/k/kh/khoroshij-avtomobilnyj-nasos-dlya-podkachki-shin.html" class="pb-related-card">
+                <span class="pb-related-title">Хороший автомобильный насос: как выбрать и рейтинг</span>
+                <span class="pb-related-desc">Какой автомобильный насос для подкачки шин выбрать? Обзор типов компрессоров, критерии мощности, про</span>
+            </a><a href="/articles/b/by/bystrosemnyj-nakonechnik-dlya-podkachki-koles.html" class="pb-related-card">
+                <span class="pb-related-title">Быстросъемный наконечник для подкачки колес: выбор и установка</span>
+                <span class="pb-related-desc">Как выбрать быстросъемный наконечник для компрессора? Виды зажимов, устранение утечек, сравнение мод</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

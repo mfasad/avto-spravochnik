@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Дрифт камера Assetto Corsa: лучшая настройка для треков — Авто Справочник</title>
+    <meta name="description" content="Как настроить дрифт камеру в Assetto Corsa? Полный гайд по FOV, расстоянию и углам обзора для идеального дрифта на трассе.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/d/dr/drift-kamera-assetto-corsa.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Дрифт камера Assetto Corsa: лучшая настройка для треков">
+    <meta property="og:description" content="Как настроить дрифт камеру в Assetto Corsa? Полный гайд по FOV, расстоянию и углам обзора для идеального дрифта на трассе.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Дрифт камера Assetto Corsa: лучшая настройка для треков</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовые-виды-камер-и-их-влияние-на-управление">Базовые виды камер и их влияние на управление</a></li><li><a href="#техническая-настройка-fov-и-дистанции">Техническая настройка FOV и дистанции</a></li><li><a href="#использование-плагина-custom-shaders-patch-csp">Использование плагина Custom Shaders Patch (CSP)</a></li><li><a href="#сравнение-статической-и-динамической-камеры">Сравнение статической и динамической камеры</a></li><li><a href="#оптимизация-для-vr-шлемов">Оптимизация для VR-шлемов</a></li><li><a href="#частые-ошибки-и-их-влияние-на-результат">Частые ошибки и их влияние на результат</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ko/korch-chto-eto-takoe.html">Корч что это такое: устройство, типы и применение в автоспорте</a></li><li><a href="/articles/p/pe/perekusy-v-dorogu-v-mashinu.html">Перекусы в дорогу в машину: что взять и как хранить</a></li><li><a href="/articles/c/ch/chto-za-mashina-v-kavkazskoj-plennitse.html">Что за машина в «Кавказской пленнице»: история и факты</a></li><li><a href="/articles/m/mo/mod-na-fs-19-na-zil.html">Лучший мод на ЗИЛ для Farming Simulator 19: обзор и установка</a></li><li><a href="/articles/k/ko/kovriki-v-mashinu-eva-s-bortami.html">Коврики EVA с бортами: полный гид по выбору и установке</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Идеальная дрифт камера в Assetto Corsa: настройка и секреты</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовые-виды-камер-и-их-влияние-на-управление">Базовые виды камер и их влияние на управление</a></li><li><a href="#техническая-настройка-fov-и-дистанции">Техническая настройка FOV и дистанции</a></li><li><a href="#использование-плагина-custom-shaders-patch-csp">Использование плагина Custom Shaders Patch (CSP)</a></li><li><a href="#сравнение-статической-и-динамической-камеры">Сравнение статической и динамической камеры</a></li><li><a href="#оптимизация-для-vr-шлемов">Оптимизация для VR-шлемов</a></li><li><a href="#частые-ошибки-и-их-влияние-на-результат">Частые ошибки и их влияние на результат</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Симуляторы гонок давно перестали быть просто развлечением для узкого круга энтузиастов, превратившись в сложную цифровую экосистему, где каждый пиксель на экране влияет на результат заезда. В <strong>Assetto Corsa</strong>, пожалуй, самом популярном симуляторе для дрифта, правильное позиционирование виртуальной камеры становится критически важным фактором успеха. Многие новички совершают ошибку, полагаясь на стандартные настройки, не понимая, что заводские параметры часто не учитывают специфику скольжения боком.</p>
+
+<p>Дрифт требует от пилота постоянного контроля над задней осью автомобиля, и если ваш обзор ограничен или искажен, поймать нужный угол заноса становится практически невозможно. Правильно подобранная <em>FOV (Field of View)</em> и дистанция до капота позволяют заранее видеть траекторию и корректировать работу рулем и газом. Именно поэтому профессиональные киберспортсмены уделяют калибровке камеры не меньше времени, чем настройке физики шин.</p>
+
+<p>В этой статье мы разберем все тонкости конфигурации видов, доступных в игре и через сторонние плагины. Вы узнаете, как избежать укачивания, улучшить периферийное зрение и найти тот самый баланс, когда автомобиль ощущается как продолжение ваших рук. Глубокое погружение в технические аспекты рендеринга поможет вам стать быстрее на треке.</p>
+
+<h2 id="базовые-виды-камер-и-их-влияние-на-управление">Базовые виды камер и их влияние на управление</h2>
+
+<p>В стандартном арсенале симулятора предусмотрено несколько основных режимов обзора, каждый из которых имеет свои преимущества и недостатки. Наиболее распространенным является вид из кабины (Cockpit), который обеспечивает максимальный уровень погружения. Однако для дрифта он может быть слишком узким, так как боковые стойки кузова часто перекрывают обзор на апекс поворота, заставляя игрока постоянно крутить головой.</p>
+
+<p>Второй популярный вариант — вид от третьего лица (Chase Cam), который многие игроки ошибочно считают"аркадным". В контексте дрифта этот ракурс позволяет лучше оценивать положение автомобиля относительно разметки и бордюров. Дистанция здесь играет ключевую роль: если камера слишком близко, теряется ощущение скорости, если далеко — сложно контролировать мелкие коррекции траектории.</p>
+
+<p>Существует также гибридный вариант, часто называемый"капотом" или"бампером", который отсекает салон, но сохраняет перспективу от первого лица. <strong>FOV</strong> в этом режиме обычно шире, что дает преимущество в оценке боковых интервалов. Для начинающих дрифтеров именно этот режим часто становится компромиссом между реализмом и игровой эффективностью.</p>
+
+<ul>
+<li>🚗 <strong>Вид из кабины:</strong> максимальный реализм, но ограниченный боковой обзор из-за стоек кузова.</li>
+<li>🏁 <strong>Вид от третьего лица:</strong> отличная оценка габаритов, но сниженное чувство скорости и контроля над передней осью.</li>
+<li>🔧 <strong>Вид на капот:</strong> баланс между детализацией и широким углом обзора, идеально для обучения.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Чрезмерное удаление камеры в режиме от третьего лица может вызвать эффект"рыбьего глаза", искажая реальную дистанцию до препятствий и делая оценку торможения крайне сложной.</p>
+</blockquote>
+
+<h2 id="техническая-настройка-fov-и-дистанции">Техническая настройка FOV и дистанции</h2>
+
+<p>Фундаментом правильной картинки является расчет поля обзора (Field of View). Неправильный <strong>FOV</strong> приводит к тому, что машина на экране кажется движущейся быстрее или медленнее, чем это есть на самом деле, что сбивает мышечную память. Для расчета идеальных значений необходимо знать диагональ вашего монитора и расстояние от глаз до экрана.</p>
+
+<p>В Assetto Corsa существует встроенный калькулятор, доступный через меню настроек графики или сторонние утилиты. Вводите реальные физические параметры, чтобы виртуальная камера соответствовала человеческому восприятию. Если FOV слишком велик, края изображения будут растянуты, создавая иллюзию более широкого обзора, но искажая пропорции объектов в центре.</p>
+
+<p>Дистанция камеры (Camera Distance) настраивается индивидуально под стиль вождения. Для дрифта характерно использование более широкого угла, чтобы видеть боковое скольжение колес. Некоторые пилоты предпочитают поднимать камеру выше, жертвуя реализмом ради тактического преимущества в обзоре трассы.</p>
+
+<pre><code>FOV_Calculation = 2 <em> arctan(Width_Monitor / (2 </em> Distance_Eyes)) * (180 / PI)</code></pre>
+
+<p>Использование ультра-широких мониторов (21:9 или 32:9) кардинально меняет подход к настройке. Здесь стандартные значения FOV могут быть недостаточны, и требуется увеличение горизонтального угла обзора до 110-120 градусов для полного заполнения экрана без черных полей.</p>
+
+<div class="pb-poll" id="poll-f48fd1ee"><div class="pb-poll-question">📊 Какой монитор вы используете для симулятора?</div><div class="pb-poll-option" data-poll="f48fd1ee" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Обычный 16:9</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f48fd1ee" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Ультра-широкий 21:9</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f48fd1ee" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Три монитора</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f48fd1ee" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">VR-шлем</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="использование-плагина-custom-shaders-patch-csp">Использование плагина Custom Shaders Patch (CSP)</h2>
+
+<p>Для продвинутых пользователейным инструментом становится плагин <em>Custom Shaders Patch</em>. Это расширение функционала игры позволяет настраивать камеру с точностью до миллиметра, создавая собственные пресеты для разных дисциплин. В разделе <code>Settings -> Camera</code> открываются возможности, недоступные в стоковой версии.</p>
+
+<p>Одной из ключевых функций CSP является возможность создания динамической камеры. Вы можете настроить поведение камеры в зависимости от скорости и угла поворота руля. Например, при резком контр-рулении камера может автоматически немного отдаляться или менять угол наклона, имитируя инерцию головы пилота.</p>
+
+<p>Также доступна функция"Camera Shake", которая добавляет тряску, характерную для реального автомобиля на пределе сцепления. Однако для чистого дрифта многие предпочитают минимизировать этот эффект, чтобы картинка оставалась стабной и не мешала концентрации. Настройка <strong>Smoothness</strong> позволяет сгладить рывки камеры при резких изменениях направления.</p>
+
+<ul>
+<li>🎥 <strong>Dynamic FOV:</strong> автоматическое сужение обзора на высоких скоростях для эффекта скорости.</li>
+<li>📐 <strong>Custom Position:</strong> ручная установка координат X, Y, Z для камеры независимо от модели авто.</li>
+<li>🌀 <strong>Rotation Lock:</strong> блокировка наклона камеры при крене кузова, что упрощает контроль горизонта.</li>
+</ul>
+
+<details class="pb-accordion"><summary>Секретная настройка CSP</summary><div class="pb-accordion-body"><p>В разделе Camera -> Advanced можно найти параметр"Force Horizon Lock". Его активация заставляет линию горизонта всегда оставаться горизонтальной, даже если автомобиль наклонен набок в заносе. Это значительно упрощает ориентацию в пространстве для новичков.</p></div></details>
+
+<h2 id="сравнение-статической-и-динамической-камеры">Сравнение статической и динамической камеры</h2>
+
+<p>Выбор между статической и динамической камерой — это выбор между чистотой картинки и реализмом ощущений. Статическая камера жестко зафиксирована относительно кузова автомобиля. Это означает, что при входе в занос ваш обзор наклоняется вместе с машиной, что может дезориентировать.</p>
+
+<p>Динамическая камера пытается компенсировать крены и ускорения, создавая эффект невесомости или инерции. В дрифте это может быть как плюсом, так и минусом. С одной стороны, горизонт остается ровным, с другой — добавляется задержка (lag) в реакции камеры на действия пилота.</p>
+
+<p>Профессионалы часто используют гибридные настройки, где камера имеет небольшую степень свободы, но быстро возвращается в исходное положение. Это позволяет чувствовать автомобиль, но не терять визуальный контроль над трассой. Важно найти баланс, чтобы"плавание" картинки не вызывало укачивания.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Статическая камера</th>
+<th>Динамическая камера</th>
+<th>Гибридная настройка</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Реализм</td>
+<td>Высокий</td>
+<td>Средний</td>
+<td>Настраиваемый</td>
+</tr>
+<tr>
+<td>Стабильность горизонта</td>
+<td>Низкая (наклоняется)</td>
+<td>Высокая</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Влияние на вестибулярный аппарат</td>
+<td>Сильное</td>
+<td>Слабое</td>
+<td>Умеренное</td>
+</tr>
+<tr>
+<td>Рекомендация</td>
+<td>Хардкор симуляторы</td>
+<td>Новички, VR</td>
+<td>Дрифт, Тайм-аттак</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вас укачивает при игре, попробуйте увеличить FOV и включить сглаживание движения камеры (Camera Smoothing) в настройках CSP. Это снизит нагрузку на вестибулярный аппарат.</p></aside>
+
+<h2 id="оптимизация-для-vr-шлемов">Оптимизация для VR-шлемов</h2>
+
+<p>Виртуальная реальность предлагает беспрецедентный уровень погружения, но требует особого подхода к настройке камеры. В VR понятие"камера" трансформируется в положение головы пользователя. Здесь критически важна правильная калибровка высоты глаз и расстояния до рулевого колеса.</p>
+
+<p>Основная проблема в VR при дрифте — это потеря ощущения скорости и глубины. Чтобы компенсировать это, необходимо использовать статичные элементы салона (виртуальный кокпит), которые создают точку опоры для взгляда. Движение головы должно быть ограничено программно, чтобы избежать"выпадения" из автомобиля при резких рывках.</p>
+
+<p><strong>Render Scale</strong> в VR должен быть настроен максимально точно под возможности видеокарты. Падение FPS ниже 90 кадров в секунду в шлеме не только портит картинку, но и вызывает мгновенное укачивание. Для дрифта, где важна каждая миллисекунда реакции, стабильность кадра важнее детализации текстур.</p>
+
+<p>Многие пилоты в VR предпочитают немного поднимать виртуальную голову выше крыши, получая обзор"сверху", что технически является читом, но значительно облегчает прохождение сложных связок. Однако для чистоты симуляции лучше оставаться в пределах габаритов салона.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист настройки VR для дрифта</h4><label class="check-item"><input type="checkbox"><span>Проверить Refresh Rate шлема (минимум 90 Гц)</span></label><label class="check-item"><input type="checkbox"><span>Настроить Static Render Scale</span></label><label class="check-item"><input type="checkbox"><span>Включить Supersampling для четкости</span></label><label class="check-item"><input type="checkbox"><span>Откалибровать высоту сиденья</span></label><label class="check-item"><input type="checkbox"><span>Проверить работу трекинга рук</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="частые-ошибки-и-их-влияние-на-результат">Частые ошибки и их влияние на результат</h2>
+
+<p>Одной из самых распространенных ошибок является использование слишком высокого значения FOV в попытке увеличить обзор. Это приводит к сильному искажению геометрии в центре экрана, из-за чего сложно точно оценить момент начала заноса и точку апекса. Машина кажется медленнее, чем есть на самом деле.</p>
+
+<p>Вторая ошибка — неправильное позиционирование камеры по вертикали. Если камера расположена слишком низко, капот перекрывает значительную часть обзора дороги впереди. Если слишком высоко — теряется связь с автомобилем и ощущение масштаба. Оптимальная высота — на уровне глаз среднего человека.</p>
+
+<p>Игнорирование частоты обновления монитора также является критичным. Игра на 60 Гц при активной дрифтовой физике может выглядеть дерганой, что мешает плавному контролю. <mark>Для комфортного дрифта минимально необходимым стандартом считается 144 Гц</mark>, что обеспечивает плавность картинки даже при высоких скоростях вращения.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Не копируйте слепо настройки камеры у профессиональных стримеров. Их параметры могут быть адаптированы под специфическое оборудование или личные предпочтения, которые не подойдут для вашей конфигурации монитора и стиля вождения.</p>
+</blockquote>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Как сбросить настройки камеры в Assetto Corsa по умолчанию?</summary>
+<p>Чтобы вернуть стандартные значения, перейдите в папку с игрой, найдите файл <code>document.ini</code> или <code>settings.ini</code> (в зависимости от версии и установленных патчей) и удалите секции, отвечающие за камеру, либо используйте кнопку"Reset" в меню настроек графики внутри игры. Для CSP потребуется сбросить пресеты в меню плагина.</p>
+</details>
+
+<details>
+<summary>Почему камера трясется при дрифте?</summary>
+<p>Тряска может быть вызвана настройками"Camera Shake" в симуляторе, которые имитируют работу подвески и двигателя. Также это может быть следствием низкого FPS или включенных эффектов движения (Motion Blur). Проверьте настройки CSP в разделе"Camera Effects".</p>
+</details>
+
+<details>
+<summary>Можно ли использовать вид от первого лица в VR для дрифта?</summary>
+<p>Да, это основной режим для VR. Однако для дрифта рекомендуется использовать статичный кокпит (виртуальную кабину), чтобы иметь постоянные визуальные ориентиры, так как в VR нет физического монитора, ограничивающего обзор.</p>
+</details>
+
+<details>
+<summary>Как настроить камеру для мульти-мониторной setup (три экрана)?</summary>
+<p>Для трех мониторов необходимо использовать режим Surround (NVIDIA) или Eyefinity (AMD) на уровне драйверов, а затем в игре выставить соответствующее разрешение и FOV (обычно около 130-150 градусов). CSP имеет специальный модуль для калибровки стыков между экранами.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ko/korch-chto-eto-takoe.html" class="pb-related-card">
+                <span class="pb-related-title">Корч что это такое: устройство, типы и применение в автоспорте</span>
+                <span class="pb-related-desc">Разбираем, что такое корч, как он устроен, чем отличается от багги и джип-триала. Технические особен</span>
+            </a><a href="/articles/p/pe/perekusy-v-dorogu-v-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Перекусы в дорогу в машину: что взять и как хранить</span>
+                <span class="pb-related-desc">Планируете поездку? Узнайте, какие перекусы в дорогу в машину лучше взять, как их правильно упаковат</span>
+            </a><a href="/articles/c/ch/chto-za-mashina-v-kavkazskoj-plennitse.html" class="pb-related-card">
+                <span class="pb-related-title">Что за машина в «Кавказской пленнице»: история и факты</span>
+                <span class="pb-related-desc">Узнайте, какой легендарный автомобиль снимался в фильме «Кавказская пленница». Детали съемок, характ</span>
+            </a><a href="/articles/m/mo/mod-na-fs-19-na-zil.html" class="pb-related-card">
+                <span class="pb-related-title">Лучший мод на ЗИЛ для Farming Simulator 19: обзор и установка</span>
+                <span class="pb-related-desc">Подробный гид по установке мода на ЗИЛ 130/4314 в FS 19. Обзор характеристик, совместимости с мульти</span>
+            </a><a href="/articles/k/ko/kovriki-v-mashinu-eva-s-bortami.html" class="pb-related-card">
+                <span class="pb-related-title">Коврики EVA с бортами: полный гид по выбору и установке</span>
+                <span class="pb-related-desc">Как выбрать коврики в машину EVA с бортами? Обзор преимуществ, сравнение с резиной, уход и установка</span>
+            </a><a href="/articles/m/ma/mashina-iz-dvojnogo-forsazha.html" class="pb-related-card">
+                <span class="pb-related-title">Машина из Двойного Форсажа: характеристики, тюнинг и история</span>
+                <span class="pb-related-desc">Полный разбор культового Nissan Skyline GT-R R34. Технические характеристики, история создания, спис</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

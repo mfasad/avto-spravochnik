@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Код номенклатуры: что это, где найти и как расшифровать — Авто Справочник</title>
+    <meta name="description" content="Полный гид по кодам номенклатуры: отличия от артикула и VIN, расшифровка структуры, применение в 1С и складском учете. Практические советы.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/c/ch/chto-takoe-kod-nomenklatury.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Код номенклатуры: что это, где найти и как расшифровать">
+    <meta property="og:description" content="Полный гид по кодам номенклатуры: отличия от артикула и VIN, расшифровка структуры, применение в 1С и складском учете. Практические советы.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Код номенклатуры: что это, где найти и как расшифровать</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#сущность-и-назначение-кода-номенклатуры">Сущность и назначение кода номенклатуры</a></li><li><a href="#отличия-кода-номенклатуры-от-артикула-и-vin">Отличия кода номенклатуры от артикула и VIN</a></li><li><a href="#структура-и-логика-построения-кодов">Структура и логика построения кодов</a></li><li><a href="#применение-кодов-в-системах-учета-1с-и-аналоги">Применение кодов в системах учета (1С и аналоги)</a></li><li><a href="#типичные-ошибки-при-ведении-справочника">Типичные ошибки при ведении справочника</a></li><li><a href="#перспективы-штрихкодирование-и-маркировка">Перспективы: штрихкодирование и маркировка</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/l/le/lentochnaya-shlifovalnaya-mashina-bosch.html">Ленточная шлифовальная машина Bosch: обзор, выбор и применение</a></li><li><a href="/articles/z/zh/zhidkij-klyuch-chto-eto-takoe-prostymi-slovami.html">Жидкий ключ: что это такое простыми словами и как применять</a></li><li><a href="/articles/p/pa/pasta-chistyashchaya-dlya-ruk.html">Чистящая паста для рук: как выбрать и правильно использовать в гараже</a></li><li><a href="/articles/k/ka/kakoj-avtomat-stavit-na-svarku.html">Какой автомат ставить на сварку: выбор по мощности и типу сети</a></li><li><a href="/articles/s/sh/shlifovalnaya-mashinka-s-pylesosom.html">Шлифовальная машинка с пылесосом: выбор и применение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Код номенклатуры: полная расшифровка и применение в учете</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#сущность-и-назначение-кода-номенклатуры">Сущность и назначение кода номенклатуры</a></li><li><a href="#отличия-кода-номенклатуры-от-артикула-и-vin">Отличия кода номенклатуры от артикула и VIN</a></li><li><a href="#структура-и-логика-построения-кодов">Структура и логика построения кодов</a></li><li><a href="#применение-кодов-в-системах-учета-1с-и-аналоги">Применение кодов в системах учета (1С и аналоги)</a></li><li><a href="#типичные-ошибки-при-ведении-справочника">Типичные ошибки при ведении справочника</a></li><li><a href="#перспективы-штрихкодирование-и-маркировка">Перспективы: штрихкодирование и маркировка</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В мире логистики, складского учета и бухгалтерии существует понятие, без которого невозможно представить эффективное управление запасами. <strong>Код номенклатуры</strong> — это уникальный цифровой или буквенно-цифровой идентификатор, присваиваемый каждой единице товара, сырья или готовой продукции в базе данных предприятия. В отличие от названия, которое может меняться или быть слишком длинным, этот код остается неизменным и служит ключом для быстрого доступа к информации.</p>
+
+<p>Для многих предпринимателей и менеджеров путаница между кодом номенклатуры, артикулом производителя и штрихкодом является распространенной проблемой, ведущей к ошибкам в накладных и сбоям в поставках. Понимание разницы между этими понятиями критически важно для автоматизации бизнеса. <em>Системы ERP</em> и программы учета, такие как 1С, строятся именно на внутренней нумерации позиций, а не на внешних маркировках.</p>
+
+<p>В этой статье мы детально разберем структуру кодов, методы их присвоения и причины, по которым нельзя полагаться исключительно на названия товаров. Вы узнаете, как правильно вести справочник, чтобы избежать хаоса на складе.</p>
+
+<h2 id="сущность-и-назначение-кода-номенклатуры">Сущность и назначение кода номенклатуры</h2>
+
+<p>Код номенклатуры представляет собой внутренний язык общения между отделами компании. Когда кладовщик видит код "100500-А", он мгновенно понимает, о какой позиции идет речь, не вчитываясь в длинное описание "Болт М12х40 ГОСТ 7798-70 оцинкованный класс 5.8". <strong>Уникальность</strong> — главное требование к такому идентификатору. В пределах одной базы данных не может существовать двух разных товаров с одинаковым кодом.</p>
+
+<p>Основная функция кода — ускорение обработки данных. Компьютерные системы оперируют числами гораздо быстрее, чем текстовыми строками. При сканировании штрихкода, который часто привязан именно к внутреннему коду номенклатуры, система мгновенно находит остаток, цену и местоположение. Использование <em>стандартизированных идентификаторов</em> позволяет исключить человеческий фактор при ручном вводе.</p>
+
+<p>Кроме того, код номенклатуры часто несет в себе логическую нагрузку, позволяя группировать товары. Например, первые цифры могут указывать на отдел или категорию, а последующие — на конкретную модель. Это делает навигацию по базе данных интуитивно понятной даже для новых сотрудников.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте префиксы в кодах номенклатуры для разделения товарных групп (например, ЭЛ- для электроники, МЕБ- для мебели), это упростит фильтрацию отчетов в будущем.</p></aside>
+
+<h2 id="отличия-кода-номенклатуры-от-артикула-и-vin">Отличия кода номенклатуры от артикула и VIN</h2>
+
+<p>Одна из самых частых ошибок — считать, что код номенклатуры и артикул производителя (SKU — Stock Keeping Unit) это одно и то же. Артиkul присваивается заводом-изготовителем и един для всех дилеров по всему миру. <strong>Код номенклатуры</strong> — это внутреннее изобретение конкретной компании, торгующей этим товаром. У одного и того же товара у разных продавцов будут разные внутренние коды.</p>
+
+<p>Ситуация усложняется, когда речь заходит об автомобилях и сложной технике. Здесь вступает в игру <em>VIN-код</em>. В отличие от кода номенклатуры, который может повторяться для тысяч одинаковых болтов или телефонов, VIN-код уникален для каждого конкретного экземпляра автомобиля. Он содержит информацию о годе выпуска, заводе сборки и комплектации.</p>
+
+<p>В учетной системе автомобилям часто присваивают внутренний код номенклатуры (например, "АВТ-001" для модели Toyota Camry), но для учета конкретного кузова привязывают VIN. Путаница возникает, когда пытаются использовать VIN как код номенклатуры для запчастей — это ошибка, так как запчасть подходит ко многим машинам, а не к одной.</p>
+
+<details class="pb-accordion"><summary>Можно ли использовать артикул поставщика как код номенклатуры?</summary><div class="pb-accordion-body"><p>Теоретически можно, но это рискованно. Поставщик может изменить артикул, прекратить производство или у вас появится второй поставщик с другим артикулом на тот же товар. Лучше вести свой внутренний справочник.</p></div></details>
+
+<p>Различия также касаются структуры. Артикулы часто хаотичны и зависят от фантазии технологов завода. Внутренний код номенклатуры вы строите сами, подстраивая его под свою логистику. Это дает вам контроль над структурой данных.</p>
+
+<h2 id="структура-и-логика-построения-кодов">Структура и логика построения кодов</h2>
+
+<p>Грамотно составленный код номенклатуры — это не просто случайный набор цифр. Существует несколько подходов к их формированию. Самый простой — <strong>серийный метод</strong>, где товары нумеруются по порядку (0001, 0002, 0003). Он удобен тем, что код короткий, но не несет никакой смысловой нагрузки.</p>
+
+<p>Более продвинутый вариант — <em>иерархический (разрядный) метод</em>. Здесь каждая группа цифр отвечает за определенный признак. Например, первые две цифры — категория, следующие две — подкатегория, затем бренд и модель. Такой подход позволяет "с ходу" считывать информацию о товаре, но требует тщательного планирования.</p>
+
+<ul>
+    <li>📦 <strong>Десятичная система:</strong> используется для широкого ассортимента, где каждый разряд уточняет характеристику.</li>
+    <li>🔢 <strong>Серийная нумерация:</strong> подходит для небольших складов, где важна простота, а не логика кода.</li>
+    <li>🏷️ <strong>Смешанная система:</strong> сочетание буквенных префиксов и цифровых обозначений для максимальной гибкости.</li>
+</ul>
+
+<p>Важно не перегружать код. Слишком длинная комбинация (более 10-12 знаков) неудобна для ввода и печати на этикетках. Оптимальная длина кода номенклатуры обычно составляет от 6 до 10 символов. При этом стоит избегать использования букв, которые можно перепутать с цифрами (например, "O" и "0", "I" и "1").</p>
+
+<div class="pb-poll" id="poll-205ea0d8"><div class="pb-poll-question">📊 Как вы формируете коды товаров сейчас?</div><div class="pb-poll-option" data-poll="205ea0d8" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Серийно (1, 2, 3...)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="205ea0d8" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">По категориям (01-001)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="205ea0d8" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Беру артикул поставщика</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="205ea0d8" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Хаотично, как получится</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="применение-кодов-в-системах-учета-1с-и-аналоги">Применение кодов в системах учета (1С и аналоги)</h2>
+
+<p>В популярных системах автоматизации, таких как <em>1С:Предприятие</em>, код номенклатуры является первичным ключом объекта. Именно по нему система связывает движения товара: приход, перемещение, реализацию. При создании новой карточки номенклатуры программа часто предлагает сгенерировать код автоматически.</p>
+
+<p>Однако автоматическая генерация не всегда учитывает специфику бизнеса. Опытные пользователи предпочитают настраивать шаблоны кодов вручную. В настройках можно задать маску, например, "ГруппаТовара_Бренд_Артикул". Это упрощает поиск и выгрузку данных в другие системы, например, на сайт или в маркетплейсы.</p>
+
+<p>Особое внимание следует уделить дубликатам. Система не позволит создать два товара с одинаковым кодом, но может пропустить создание двух карточек с разными кодами на один и тот же физический товар. Это приводит к тому, что остатки "размазываются" по разным ячейкам учета. <strong>Регулярная чистка справочника</strong> — обязательная процедура для бухгалтера.</p>
+
+<div class="pb-table-wrap"><table>
+    <thead>
+        <tr>
+            <th>Параметр</th>
+            <th>Код номенклатуры</th>
+            <th>Артикул производителя</th>
+            <th>Штрихкод (EAN-13)</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Уникальность</td>
+            <td>Внутри компании</td>
+            <td>Глобально (у производителя)</td>
+            <td>Глобально (GS1)</td>
+        </tr>
+        <tr>
+            <td>Изменяемость</td>
+            <td>Можно изменить</td>
+            <td>Постоянен</td>
+            <td>Постоянен</td>
+        </tr>
+        <tr>
+            <td>Длина</td>
+            <td>Произвольная</td>
+            <td>Произвольная</td>
+            <td>Строго 13 цифр</td>
+        </tr>
+        <tr>
+            <td>Назначение</td>
+            <td>Внутренний учет</td>
+            <td>Идентификация модели</td>
+            <td>Сканирование на кассе</td>
+        </tr>
+    </tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Код номенклатуры в 1С — это "паспорт" товара внутри вашей базы. Без него невозможна ни одна операция движения ценностей.</p></aside>
+
+<h2 id="типичные-ошибки-при-ведении-справочника">Типичные ошибки при ведении справочника</h2>
+
+<p>Самая грубая ошибка — использование названия товара в качестве кода. Названия могут быть длинными, содержать спецсимволы и меняться. Код должен быть лаконичным и стабильным. Если вы назовете код "Красная_футболка_лето_2023", то что вы будете делать, когда придет "Красная_футболка_осень_2023"?</p>
+
+<p>Вторая распространенная проблема — отсутствие системы. Сегодня вы кодируете товары цифрами, завтра — буквами, послезавтра — артикулами поставщика. Через год в базе возникнет "каша", разобраться в которой сможет только тот, кто ее создавал, да и то с трудом. <strong>Стандартизация</strong> правил кодирования должна быть прописана в регламенте компании.</p>
+
+<blockquote>
+    <p>⚠️ Внимание: Никогда не используйте зарезервированные символы операционной системы (такие как / \ : * ? " < > |) в кодах номенклатуры. Это может привести к ошибкам при выгрузке данных или работе с файловой системой.</p>
+</blockquote>
+
+<p>Также ошибкой является игнирование синонимов. Один и тот же товар может называться по-разному в разных отделах (например, "Монитор LG" и "Экран LG"). В карточке номенклатуры должно быть одно основное наименование, а все остальные варианты стоит прописать в поле "Наименование для печати" или в синонимах, но код остается единым.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Аудит вашего справочника номенклатуры</h4><label class="check-item"><input type="checkbox"><span>Проверить на дубликаты</span></label><label class="check-item"><input type="checkbox"><span>Убрать спецсимволы в кодах</span></label><label class="check-item"><input type="checkbox"><span>Проверить уникальность кодов</span></label><label class="check-item"><input type="checkbox"><span>Сверить коды с реальными остатками</span></label><label class="check-item"><input type="checkbox"><span>Удалить архивные позиции</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="перспективы-штрихкодирование-и-маркировка">Перспективы: штрихкодирование и маркировка</h2>
+
+<p>С развитием технологий роль простого числового кода трансформируется. Сейчас все больше внедряется система <em>Честный ЗНАК</em> и глобальная маркировка товаров. В этом случае код номенклатуры становится связующим звеном между внутренним учетом и государственной системой мониторинга.</p>
+
+<p>Внутренний код помогает быстро найти товар в базе, чтобы сформировать заказ на коды маркировки. Без правильно заполненного справочника номенклатуры автоматическая выгрузка данных в систему мониторинга невозможна. Ошибка в коде приведет к тому, что на этикетке будет напечатан неверный DataMatrix, что грозит штрафами.</p>
+
+<p>Будущее за радиочастотными метками (RFID), где код номенклатуры будет считываться дистанционно на расстоянии нескольких метров. Это позволит проводить инвентаризацию склада за минуты, просто проходя по проходам с считывателем. Но даже в этом случае логическая структура кода останется фундаментом учета.</p>
+
+<blockquote>
+    <p>⚠️ Внимание: При переходе на обязательную маркировку убедитесь, что длина ваших внутренних кодов номенклатуры совместима с форматами печати этикеток, чтобы штрихкод и служебная информация помещались на упаковку.</p>
+</blockquote>
+
+<p>Таким образом, код номенклатуры — это не просто формальность, а важный инструмент управления бизнесом. Правильно выстроенная система кодирования экономит время, снижает количество ошибок и облегчает масштабирование компании.</p>
+
+<details class="pb-accordion"><summary>Что делать, если коды уже перепутаны?</summary><div class="pb-accordion-body"><p>Создайте новую версию справочника. Проведите полную инвентаризацию, присвойте новые коды по единому стандарту и перенесите остатки. Старые коды заархивируйте, но не удаляйте, чтобы сохранить историю движений.</p></div></details>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+    <summary>Можно ли изменить код номенклатуры после проведения документов?</summary>
+    <p>В большинстве систем (например, 1С) изменение кода уже проведенного товара возможно, но требует осторожности. Это может нарушить ссылки в проведенных документах. Лучше создать новую карточку с правильным кодом, а старую закрыть для использования, перенеся остатки.</p>
+</details>
+
+<details>
+    <summary>Сколько знаков должно быть в коде номенклатуры?</summary>
+    <p>Оптимально использовать от 6 до 12 знаков. Меньше — не хватит комбинаций для большого ассортимента, больше — неудобно для визуального контроля и ручного ввода. Избегайте кодов длиной в 2-3 символа для складов с тысячами позиций.</p>
+</details>
+
+<details>
+    <summary>Нужно ли включать цену в код номенклатуры?</summary>
+    <p>Категорически нет. Цена — это динамический параметр, который меняется. Код номенклатуры должен быть статическим идентификатором. Включение цены в код приведет к необходимости менять код при каждом изменении прайс-листа, что уничтожит всю историю учета.</p>
+</details>
+
+<details>
+    <summary>Как кодировать товары, у которых нет артикула производителя?</summary>
+    <p>Для товаров без артикула (например, продукция местных производителей или уникальные услуги) используйте внутреннюю нумерацию. Можно использовать префикс "НЕТ" или "Б/А" (без артикула) в сочетании с серийным номером, например, Б/А-00154.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/l/le/lentochnaya-shlifovalnaya-mashina-bosch.html" class="pb-related-card">
+                <span class="pb-related-title">Ленточная шлифовальная машина Bosch: обзор, выбор и применение</span>
+                <span class="pb-related-desc">Как выбрать ленточную шлифмашину Bosch для авто и дома? Сравнение моделей, технические характеристик</span>
+            </a><a href="/articles/z/zh/zhidkij-klyuch-chto-eto-takoe-prostymi-slovami.html" class="pb-related-card">
+                <span class="pb-related-title">Жидкий ключ: что это такое простыми словами и как применять</span>
+                <span class="pb-related-desc">Жидкий ключ — что это такое простыми словами? Разбираем состав, принцип действия и лучшие марки WD-4</span>
+            </a><a href="/articles/p/pa/pasta-chistyashchaya-dlya-ruk.html" class="pb-related-card">
+                <span class="pb-related-title">Чистящая паста для рук: как выбрать и правильно использовать в гараже</span>
+                <span class="pb-related-desc">Обзор лучших чистящих паст для рук 2026 года: состав, эффективность, безопасность. Как удалить мазут</span>
+            </a><a href="/articles/k/ka/kakoj-avtomat-stavit-na-svarku.html" class="pb-related-card">
+                <span class="pb-related-title">Какой автомат ставить на сварку: выбор по мощности и типу сети</span>
+                <span class="pb-related-desc">Подробный гайд по выбору автоматического выключателя для сварочного аппарата: расчет по току, мощнос</span>
+            </a><a href="/articles/s/sh/shlifovalnaya-mashinka-s-pylesosom.html" class="pb-related-card">
+                <span class="pb-related-title">Шлифовальная машинка с пылесосом: выбор и применение</span>
+                <span class="pb-related-desc">Обзор шлифмашин с пылеудалением. Как выбрать, подключить пылесос и работать без пыли. Рейтинг моделе</span>
+            </a><a href="/articles/k/ka/kak-zapitat-avtomobilnyj-kompressor-ot-seti-220.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить автокомпрессор к розетке 220В: безопасные схемы</span>
+                <span class="pb-related-desc">Пошаговая инструкция по питанию автомобильного компрессора от бытовой сети 220В: выбор адаптеров, ра</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

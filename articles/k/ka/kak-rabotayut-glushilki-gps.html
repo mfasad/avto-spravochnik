@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как работают GPS-глушилки: принцип действия и защита — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор принципа работы GPS-глушилок. Виды устройств, зоны покрытия и методы защиты навигационного сигнала от подавления.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-rabotayut-glushilki-gps.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работают GPS-глушилки: принцип действия и защита">
+    <meta property="og:description" content="Подробный разбор принципа работы GPS-глушилок. Виды устройств, зоны покрытия и методы защиты навигационного сигнала от подавления.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работают GPS-глушилки: принцип действия и защита</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физические-основы-подавления-радиосигнала">Физические основы подавления радиосигнала</a></li><li><a href="#архитектура-и-компоненты-устройства">Архитектура и компоненты устройства</a></li><li><a href="#типология-глушилок-и-зоны-покрытия">Типология глушилок и зоны покрытия</a></li><li><a href="#многодиапазонное-подавление-и-умные-джаммеры">Многодиапазонное подавление и умные джаммеры</a></li><li><a href="#методы-обнаружения-работы-глушилок">Методы обнаружения работы глушилок</a></li><li><a href="#защита-систем-мониторинга-от-подавления">Защита систем мониторинга от подавления</a></li><li><a href="#частые-вопросы-faq">Частые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pi/pishchit-dinamik-v-mashine.html">Почему пищит динамик в машине: диагностика и устранение</a></li><li><a href="/articles/p/pa/pandora-ne-zavoditsya-mashina.html">Pandora не заводит машину: причины и решения 2026</a></li><li><a href="/articles/p/pr/prosedaet-napryazhenie-pod-nagruzkoj-v-mashine.html">Проседает напряжение под нагрузкой в машине: причины и решение</a></li><li><a href="/articles/a/av/avtomat-na-plitu-skolko-amper.html">Автомат на плиту: сколько ампер нужно для безопасного подключения</a></li><li><a href="/articles/e/el/elektronnye-sistemy-upravleniya-avtomobilem.html">Электронные системы управления автомобилем: устройство и диагностика</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Принцип работы GPS-глушилок: технический анализ</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физические-основы-подавления-радиосигнала">Физические основы подавления радиосигнала</a></li><li><a href="#архитектура-и-компоненты-устройства">Архитектура и компоненты устройства</a></li><li><a href="#типология-глушилок-и-зоны-покрытия">Типология глушилок и зоны покрытия</a></li><li><a href="#многодиапазонное-подавление-и-умные-джаммеры">Многодиапазонное подавление и умные джаммеры</a></li><li><a href="#методы-обнаружения-работы-глушилок">Методы обнаружения работы глушилок</a></li><li><a href="#защита-систем-мониторинга-от-подавления">Защита систем мониторинга от подавления</a></li><li><a href="#частые-вопросы-faq">Частые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современные системы спутниковой навигации стали неотъемлемой частью автомобильной индустрии, обеспечивая точное позиционирование и мониторинг транспорта. Однако параллельно с развитием технологий GPS и ГЛОНАСС развиваются и средства их подавления, известные как <strong>GPS-глушилки</strong> или джаммеры. Эти устройства создают радиочастотные помехи, блокируя прием сигналов спутников приемником, что делает невозможным определение координат.</p>
+
+<p>Механизм блокировки сигнала базируется на создании мощного шумового излучения на частотах, используемых навигационными спутниками. Когда мощность искусственного сигнала помехи превышает мощность полезного сигнала со спутника, приемник теряет синхронизацию и перестает вычислять местоположение. <em>Понимание физики этого процесса</em> необходимо для разработки эффективных методов защиты и обеспечения безопасности телематики.</p>
+
+<p>В данном материале мы детально разберем архитектуру таких устройств, частотные диапазоны и способы, которыми можно минимизировать влияние помех. Важно осознавать, что использование подобных средств в гражданском секторе во многих странах строго регламентировано законодательством.</p>
+
+<h2 id="физические-основы-подавления-радиосигнала">Физические основы подавления радиосигнала</h2>
+
+<p>Принцип действия глушилки базируется на фундаментальном свойстве радиоволн: более мощный сигнал на той же частоте всегда доминирует над слабым. Спутники GPS находятся на орбите высотой около 20 000 километров, и их сигнал к моменту достижения поверхности Земли становится чрезвычайно слабым. <strong>Джаммер</strong> генерирует сигнал той же частоты, но с мощностью, достаточной для перекрытия спутникового сигнала в локальной зоне.</p>
+
+<p>Процесс подавления часто называют"забиванием" канала. Приемник, будь то навигатор в телефоне или трекер на грузовике, просто не может выделить полезную информацию из общего радиошума. Это похоже на попытку услышать шепот человека во время громкого концерта — полезный звук физически присутствует, но он тонет в мощном фоновом шуме.</p>
+
+<p>Эффективность подавления зависит от соотношения сигнал/шум (SNR). Если уровень помехи значительно превышает уровень полезного сигнала, происходит срыв слежения. Современные приемники пытаются использовать сложные алгоритмы фильтрации, но против мощного широкополосного шума они часто оказываются бессильны.</p>
+
+<blockquote>⚠️ Внимание: Создание помех радиосвязи и навигации может нарушать работу экстренных служб и авиационных систем, что является серьезным правонарушением.</blockquote>
+
+<details class="pb-accordion"><summary>Техническая деталь</summary><div class="pb-accordion-body"><p> почему сигнал спутника такой слабый?:Спутники GPS передают сигнал с мощностью около 50 Вт, но проходя огромную дистанцию через атмосферу, сигнал рассеивается. К моменту попадания на антенну приемника его мощность составляет порядка -130 дБм (ватт), что сравнимо с мощностью лампочки, видимой с расстояния в несколько тысяч километров. Именно поэтому даже небольшая портативная глушилка может легко перекрыть этот сигнал.</p></div></details>
+
+<h2 id="архитектура-и-компоненты-устройства">Архитектура и компоненты устройства</h2>
+
+<p>Конструктивно типичная GPS-глушилка представляет собой компактное электронное устройство, состоящее из нескольких ключевых узлов. Основой служит генератор частоты, который создает несущую волну в диапазоне L1 (1575.42 МГц) или L2 для GPS, а также аналогичные частоты для ГЛОНАСС и Galileo. Этот генератор должен обладать высокой стаб-ильностью, чтобы не"уплывать" с рабочей частоты.</p>
+
+<p>Далее сигнал модулируется шумом. В простых моделях используется белый шум, в более сложных — псевдослучайные последовательности, имитирующие структуру реального сигнала, но несущие ложные данные. После модуляции сигнал проходит через усилитель мощности (RF Amplifier), который повышает его уровень до необходимых значений для создания зоны подавления.</p>
+
+<p>Финальным элементом является антенна. От ее типа и коэффициента усиления (КСВ) зависит форма и размер зоны"мертвой зоны". Часто используются всенаправленные антенны, но в специфических задачах могут применяться направленные излучатели.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При выборе антенного оборудования для защиты от глушения важно учитывать КСВ (коэффициент стоячей волны) — он показывает, насколько эффективно антенна излучает сигнал, а не отражает его обратно в передатчик.</p></aside>
+
+<p>Питание устройства обычно осуществляется от встроенного аккумулятора или бортовой сети автомобиля (12/24 В). Тепловыделение компонентов требует наличия радиаторов или активного охлаждения, так как работа на предельных мощностях вызывает нагрев.</p>
+
+<h2 id="типология-глушилок-и-зоны-покрытия">Типология глушилок и зоны покрытия</h2>
+
+<p>Устройства подавления сигнала классифицируются по мощности, диапазону частот и мобильности. От этих параметров напрямую зависит радиус действия и эффективность блокировки. Понимание различий помогает идентифицировать тип угрозы в конкретной ситуации.</p>
+
+<p>Наиболее распространенные типы устройств:</p>
+<ul>
+<li>📱 <strong>Портативные карманные джаммеры</strong> — компактные устройства с автономным питанием, радиус действия которых составляет от 5 до 20 метров. Часто используются для скрытой блокировки трекеров.</li>
+<li>🚗 <strong>Автомобильные стационарные блоки</strong> — мощные системы, подключаемые к бортовой сети, способные создавать зону подавления радиусом до 50-70 метров. Часто устанавливаются в спецтехнике или грузовиках.</li>
+<li>🏢 <strong>Стационарные комплексы</strong> — высокомощные системы для защиты периметра объектов, радиус действия которых может достигать нескольких сотен метров.</li>
+</ul>
+
+<p>Важно отметить, что заявленный производителем радиус действия часто является теоретическим максимумом в условиях прямой видимости. В городской застройке, лесах или внутри зданий эффективная зона может быть значительно меньше из-за отражений и поглощения сигнала.</p>
+
+<div class="pb-poll" id="poll-deeb499b"><div class="pb-poll-question">📊 С какой целью чаще всего используют глушилки в логистике?</div><div class="pb-poll-option" data-poll="deeb499b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Скрыть местоположение груза</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="deeb499b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Защитить личные данные</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="deeb499b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Провести тестирование систем</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="deeb499b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Просто ради эксперимента</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="многодиапазонное-подавление-и-умные-джаммеры">Многодиапазонное подавление и умные джаммеры</h2>
+
+<p>С развитием технологий навигациичастотные глушилки становятся менее эффективными, так как современные приемники используют многодиапазонную обработку. В ответ на это появились <strong>многодиапазонные джаммеры</strong>, которые одновременно атакуют сигналы GPS, ГЛОНАСС, Beidou, Galileo и даже сотовые сети (GSM/3G/4G), через которые трекеры передают данные.</p>
+
+<p>Особую категорию составляют так называемые"умные" глушилки (Smart Jammers). Эти устройства не просто шумят в эфире постоянно, а активируются только при обнаружении сигнала трекера. Они сканируют эфир, находят частоту передачи телеметрии или навигации и включают подавление именно в этот момент.</p>
+
+<p>Такой подход имеет два преимущества: он экономит энергию и делает обнаружение глушилки более сложным, так как излучение идет импульсами. Обнаружить такой прибор стандартными детекторами поля практически невозможно без специализированного оборудования.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип устройства</th>
+<th>Подавляемые частоты</th>
+<th>Средний радиус действия</th>
+<th>Сложность обнаружения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Базовый джаммер</td>
+<td>GPS L1</td>
+<td>5-15 м</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>Многодиапазонный</td>
+<td>GPS, GLONASS, GSM</td>
+<td>15-40 м</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td>Умный (Smart)</td>
+<td>Выборочно по триггеру</td>
+<td>До 30 м</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td>Стационарный комплекс</td>
+<td>Все диапазоны + ДЗ</td>
+<td>100+ м</td>
+<td>Очень высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="методы-обнаружения-работы-глушилок">Методы обнаружения работы глушилок</h2>
+
+<p>Определить наличие работающей глушилки можно по косвенным и прямым признакам. Косвенные методы базируются на поведении навигационного оборудования. Если GPS-трекер или навигатор внезапно теряет сигнал спутников (<em>Loss of Lock</em>) в месте, где ранее уверенно держал спутники, и при этом индикатор уровня сигнала показывает полный шум, это первый признак атаки.</p>
+
+<p>Прямые методы требуют использования специализированных детекторов поля (RF Detectors). Эти приборы сканируют эфир в диапазонах GNSS и GSM. При обнаружении мощного излучения в этих частотах детектор подает звуковой или световой сигнал. Профессиональные системы мониторинга могут также анализировать уровень шумовой пола (Noise Floor) — его резкий скачок указывает на включение подавителя.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Признаки работы глушилки в автомобиле</h4><label class="check-item"><input type="checkbox"><span>Резкая потеря спутников на трекере</span></label><label class="check-item"><input type="checkbox"><span>Индикатор уровня сигнала показывает"шум"</span></label><label class="check-item"><input type="checkbox"><span>Телефон теряет сеть в зоне видимости авто</span></label><label class="check-item"><input type="checkbox"><span>Детектор поля реагирует у колес или багажника</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Важно отличать глушение от естественного пропадания сигнала в тоннелях или"бетонных каньонах" городов. В случае естественного пропадания уровень шума остается низким, просто нет видимых спутников. При глушении уровень шума резко возрастает.</p>
+
+<h2 id="защита-систем-мониторинга-от-подавления">Защита систем мониторинга от подавления</h2>
+
+<p>Борьба с глушением сигнала — это постоянная гонка вооружений. Одним из эффективных методов защиты является использование антенн с адаптивной диаграммой направленности (CRPA — Controlled Reception Pattern Antenna). Такие антенны способны определять направление прихода сигнала помехи и формировать"нуль" в диаграмме направленности в эту сторону, игнорируя глушилку.</p>
+
+<p>Другой подход — использование инерциальных навигационных систем (ИНС) в связке с GPS. Когда сигнал спутников пропадает, система переключается на расчет координат по акселерометрам и гироскопам, продолжая трекинг движения даже в условиях глушения. Это позволяет зафиксировать факт потери сигнала и примерный путь.</p>
+
+<blockquote>⚠️ Внимание: Установка активных систем противодействия глушению может требовать лицензирования, так как они также являются излучающими устройствами.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Комбинирование GNSS-приемников с инерциальными датчиками и использование антенн CRPA наиболее эффективный способ защиты телематики от подавления.</p></aside>
+
+<h2 id="частые-вопросы-faq">Частые вопросы (FAQ)</h2>
+
+<details>
+<summary>Может ли глушилка повредить электронику автомобиля?</summary>
+<p>Само по себе излучение в диапазонах GPS/GSM не представляет опасности для электронных блоков управления (ЭБУ) автомобиля, так как мощность сигнала недостаточна для пробоя изоляции или сгорания микросхем. Однако некачественные устройства могут создавать помехи в бортовой сети при подключении.</p>
+</details>
+
+<details>
+<summary>Работает ли глушилка, если телефон выключен?</summary>
+<p>Если под"глушилкой" подразумевается устройство, блокирующее сигнал GPS, то выключение телефона не спасет трекер, если он встроен в автомобиль и имеет свое питание. Если же речь о блокировке звонков, то выключенный телефон не излучает и не принимает сигналов, поэтому блокировать нечего.</p>
+</details>
+
+<details>
+<summary>Какой радиус действия у карманной глушилки?</summary>
+<p>Реальный радиус действия компактных устройств обычно не превышает 10-15 метров на открытой местности. В условиях городской застройки или внутри металлического кузова автомобиля зона эффективного подавления может быть еще меньше.</p>
+</details>
+
+<details>
+<summary>Законно ли использование GPS-глушилок?</summary>
+<p>В большинстве стран, включая РФ, использование устройств для подавления радиосигналов гражданскими лицами запрещено и влечет за собой административную или уголовную ответственность, а также конфискацию оборудования.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pi/pishchit-dinamik-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Почему пищит динамик в машине: диагностика и устранение</span>
+                <span class="pb-related-desc">Динамик в машине издает писк? Узнайте, как найти причину звука в проводке, магнитоле или аккумулятор</span>
+            </a><a href="/articles/p/pa/pandora-ne-zavoditsya-mashina.html" class="pb-related-card">
+                <span class="pb-related-title">Pandora не заводит машину: причины и решения 2026</span>
+                <span class="pb-related-desc">Разбираемся, почему автозапуск Pandora не работает: от севшего аккумулятора до ошибок прошивки. Поша</span>
+            </a><a href="/articles/p/pr/prosedaet-napryazhenie-pod-nagruzkoj-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Проседает напряжение под нагрузкой в машине: причины и решение</span>
+                <span class="pb-related-desc">Узнайте, почему проседает напряжение под нагрузкой в машине. Диагностика генератора, аккумулятора, о</span>
+            </a><a href="/articles/a/av/avtomat-na-plitu-skolko-amper.html" class="pb-related-card">
+                <span class="pb-related-title">Автомат на плиту: сколько ампер нужно для безопасного подключения</span>
+                <span class="pb-related-desc">Разбираемся, какой автомат ставить на электроплиту (16А, 25А, 32А или 40А), как рассчитать ток по мо</span>
+            </a><a href="/articles/e/el/elektronnye-sistemy-upravleniya-avtomobilem.html" class="pb-related-card">
+                <span class="pb-related-title">Электронные системы управления автомобилем: устройство и диагностика</span>
+                <span class="pb-related-desc">Полный обзор электронных систем управления современным авто. Устройство ЭБУ, датчиков и исполнительн</span>
+            </a><a href="/articles/t/tk/tkanevaya-izolenta-dlya-provodki.html" class="pb-related-card">
+                <span class="pb-related-title">Тканевая изолента для проводки: применение, свойства и выбор</span>
+                <span class="pb-related-desc">Обзор тканевой изоленты для электропроводки. Температура плавления, классы изоляции, сравнение с ПВХ</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Звуки ходьбы по песку: создание и запись для кино и игр — Авто Справочник</title>
+    <meta name="description" content="Как создать реалистичные звуки шагов по песку? Разбор техник записи, Foley-эффектов и настройки синтезаторов для саунд-дизайна.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/z/zv/zvuki-khodby-po-pesku.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Звуки ходьбы по песку: создание и запись для кино и игр">
+    <meta property="og:description" content="Как создать реалистичные звуки шагов по песку? Разбор техник записи, Foley-эффектов и настройки синтезаторов для саунд-дизайна.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Звуки ходьбы по песку: создание и запись для кино и игр</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физика-звука-и-типы-песчаных-поверхностей">Физика звука и типы песчаных поверхностей</a></li><li><a href="#методы-записи-foley-создание-библиотеки-в-студии">Методы записи Foley: создание библиотеки в студии</a></li><li><a href="#синтез-и-обработка-звука-в-daw">Синтез и обработка звука в DAW</a></li><li><a href="#настройка-параметров-для-игровых-движков">Настройка параметров для игровых движков</a></li><li><a href="#сравнительная-таблица-характеристик-материалов">Сравнительная таблица характеристик материалов</a></li><li><a href="#типичные-ошибки-при-создании-звуков-шагов">Типичные ошибки при создании звуков шагов</a></li><li><a href="#использование-специализированных-плагинов-и-библиотек">Использование специализированных плагинов и библиотек</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pl/plyusy-puteshestviya-na-mashine.html">Плюсы путешествий на машине: 10 причин выбрать автотур</a></li><li><a href="/articles/k/ka/karta-trassy-m4-don-s-kilometrami.html">Карта трассы М4 Дон с километрами: полный справочник 2026</a></li><li><a href="/articles/s/sk/skolko-ekhat-1000-km-po-vremeni-na-mashine.html">Сколько ехать 1000 км на машине: расчет времени, скорость и расход</a></li><li><a href="/articles/m/mo/molitva-kto-v-doroge.html">Молитва в дорогу: текст, правила чтения и обереги для водителей</a></li><li><a href="/articles/k/ko/korob-dlya-sushilnoj-mashiny.html">Короб для сушильной машины: виды, материалы и монтаж своими руками</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Звуки ходьбы по песку: профессиональный саунд-дизайн</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физика-звука-и-типы-песчаных-поверхностей">Физика звука и типы песчаных поверхностей</a></li><li><a href="#методы-записи-foley-создание-библиотеки-в-студии">Методы записи Foley: создание библиотеки в студии</a></li><li><a href="#синтез-и-обработка-звука-в-daw">Синтез и обработка звука в DAW</a></li><li><a href="#настройка-параметров-для-игровых-движков">Настройка параметров для игровых движков</a></li><li><a href="#сравнительная-таблица-характеристик-материалов">Сравнительная таблица характеристик материалов</a></li><li><a href="#типичные-ошибки-при-создании-звуков-шагов">Типичные ошибки при создании звуков шагов</a></li><li><a href="#использование-специализированных-плагинов-и-библиотек">Использование специализированных плагинов и библиотек</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Шуршание под ногами, едва слышный скрип зерен или глухой стук — все это создает атмосферу места, где ступает персонаж. <strong>Звуки ходьбы по песку</strong> являются одним из самых востребованных элементов в библиотеках саунд-эффектов, так как они мгновенно погружают слушателя в контекст пустыни, пляжа или строительной площадки. Умение правильно воссоздать эту текстуру отличает любительский монтаж от профессионального продакшена.</p>
+
+<p>В отличие от шагов по асфальту или дереву, песок обладает уникальной акустической характеристикой: он поглощает высокие частоты, но добавляет специфический "воздушный" шум трения. Для саунд-дизайнера важно понимать, что не существует одного универсального звука "песка", ведь влажный прибрежный грунт звучит совершенно иначе, чем раскаленная сухая дюна. Именно детализация этих нюансов делает аудиоряд живым.</p>
+
+<p>В этой статье мы разберем физические свойства звука шагов, методы их записи в студии (Foley) и способы синтеза с помощью программных инструментов. Вы узнаете, как правильно настроить эквалайзер и компрессию, чтобы шаг не сливался с фоновым шумом ветра, но при этом оставался естественным. <mark>Ключевой особенностью звука шагов по сухому песку является наличие широкого спектра высокочастотного шипения (friction noise) в диапазоне от 2 кГц до 8 кГц.</mark></p>
+
+<h2 id="физика-звука-и-типы-песчаных-поверхностей">Физика звука и типы песчаных поверхностей</h2>
+
+<p>Чтобы качественно синтезировать или подобрать семпл, необходимо понимать источник звука. Звук шага складывается из удара (impact), трения (friction) и движения материала (movement). В случае с песком доминирующим фактором становится именно трение множества мелких частиц друг о друга и о подошву обуви. Это создает характерный шумовой хвост, который длится дольше, чем сам удар.</p>
+
+<p>Важно различать типы поверхностей, так как они требуют принципиально разного подхода к обработке. Сухой рыхлый песок создает мягкий, шуршащий звук с низким уровнем отражений. Влажный, утрамбованный песок у воды дает более звонкий, короткий и четкий отпечаток, напоминающий удар по плотному грунту. <em>Гипсовый песок</em> в пустыне Уайт-Сэндс, например, издает звук, похожий на скрип снега, что является редким акустическим феноменом.</p>
+
+<p>При работе с библиотеками звуков всегда обращайте внимание на описание текстуры. Часто файлы называют просто "sand_walk", но внутри может быть записан gravel (гравий) или dirt (земля). Гравий добавит характерный "хруст" и звонкость, которых нет у чистого песка. Для максимальной реалистичности в проекте лучше использовать отдельные слои для удара и для проскальзывания grains.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При записи или синтезе не переусердствуйте с низкими частотами. Песок — легкий материал, и избыток "баса" в звуке шага сделает его похожим на ходьбу по грязи или снегу, разрушив иллюзию сухости среды.</p>
+</blockquote>
+
+<h2 id="методы-записи-foley-создание-библиотеки-в-студии">Методы записи Foley: создание библиотеки в студии</h2>
+
+<p>Профессиональные фоли-артисты rarely используют настоящий песок в студии из-за его свойства проникать всюду и портить оборудование. Вместо этого они создают имитации, которые звучат даже лучше оригинала. Классическим приемом является использование подноса, заполненного различными сыпучими материалами. Для имитации крупного песка часто используют манную крупу, смешанную с мелкой солью или молотым рисом.</p>
+
+<p>Процесс записи требует тщательного подбора микрофона. Динамические микрофоны могут не уловить тончайшие нюансы шуршания, поэтому стандартом являются конденсаторные микрофоны с малой диафрагмой, такие как <em>Sennheiser MKH 50</em> или <em>Neumann KM 184>. Они обладают высокой чувств-ительностью в верхнем регистре, что критично для передачи текстуры песка. Расстояние до источника звука обычно составляет от 30 до 50 см.</em></p>
+
+<p>Для записи движения (scuff) часто используют специальные ботинки с прикрепленными мешочками с песком или просто насыпают имитирующий материал внутрь обуви. Это позволяет контролировать громкость и характер звука силой давления ноги. Важно записывать шаги с разной интенсивностью: от легкой крадущейся походки до тяжелого марша, так как динамика давления меняет спектральную картину трения.</p>
+
+<ul>
+<li>🎙️ Используйте ветрозащиту даже в студии, так как поток воздуха от движений артиста может создать низкочастотный гул, который сложно убрать эквалайзером.</li>
+<li>👟 Записывайте несколько типов обуви отдельно: кроссовки дают мягкий шорох, а тяжелые ботинки — более выраженный удар и скрип.</li>
+<li>🌊 Для имитации влажного песка добавляйте в поднос небольшое количество воды или используйте влажную губку, прижимаемую к поверхности.</li>
+</ul>
+
+<div class="pb-poll" id="poll-8cf49a51"><div class="pb-poll-question">📊 Какой метод записи Foley вы предпочитаете?</div><div class="pb-poll-option" data-poll="8cf49a51" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Запись реальных материалов в студии</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8cf49a51" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Использование готовых библиотек семплов</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8cf49a51" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Полный синтез в плагинах</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8cf49a51" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Запись на локации (Field Recording)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="синтез-и-обработка-звука-в-daw">Синтез и обработка звука в DAW</h2>
+
+<p>Если запись невозможна, звук можно синтезировать. Основа синтеза шагов по песку — это <strong>розовый шум</em> (Pink Noise) или коричневый шум, пропущенный через модулятор огибающей. В отличие от белого шума, розовый имеет равномерное распределение энергии по октавам, что ближе к натуральным звукам природы. Коричневый шум добавит необходимую "тяжесть" и низкочастотное гудение.</p>
+
+<p>Ключевым этапом является фильтрация. Необходимо срезать низкие частоты (High-Pass Filter) примерно до 200-300 Гц, чтобы убрать гулкость, и аккуратно прибрать самые высокие частоты выше 10-12 кГц, чтобы избежать цифрового "песка" (зернистости). Основное внимание уделите полосе 2-5 кГц, где живет характерное шуршание. Использование модуляционного эффекта, такого как легкий <em>Chorus</em> или <em>Flanger</em>, может добавить движению ног естественной нестабильности.</p>
+
+<p>Для оживления статичного семпла используйте автоматизацию громкости и панорамирования. Реальный человек никогда не ступает с абсолютно одинаковой силой и ритмом. Небольшие вариации в громкости (humanize) и микросдвиги во времени сделают цикл ходьбы (loop) неотличимым от живой записи. Также полезно добавить слой очень тихого, протяжного шума для имитации поднятой пыли.</p>
+
+<details class="pb-accordion"><summary>Секретный прием обработки</summary><div class="pb-accordion-body"><p>Попробуйте добавить очень короткую реверберацию (room) с временем затухания менее 0.3 секунды. Это не создаст эха, но "склеит" частоты, сделав звук шага более плотным и присутствующим в пространстве, а не "сухим" и вырезанным.</p></div></details>
+
+<h2 id="настройка-параметров-для-игровых-движков">Настройка параметров для игровых движков</h2>
+
+<p>В игровой индустрии звуки шагов реализуются через системы middleware, такие как <em>Wwise</em> или <em>Fabric</strong>, либо нативными средствами движков вроде Unreal Engine и Unity. Здесь критически важна рандомизация. Нельзя просто зациклить один файл. Необходимо создать контейнер с 10-20 вариациями семплов, которые будут проигрываться в случайном порядке при каждом шаге.</p>
+
+<p>Важным параметром является <strong>RTPC</em> (Real Time Parameter Control) или переменная скорости. Звук шага должен менять питч (высоту тона) в зависимости от скорости движения персонажа. При беге шаги становятся чаще и, как правило, немного выше по тону из-за увеличения силы удара. При крадущейся походке (stealth) звук должен быть тише и иметь обрезанные высокие частоты, так как персонаж старается ступать мягче.</p>
+
+<p>Также необходимо учитывать материал поверхности под ногами в реальном времени. Движок должен переключать звуковой банк с "asphalt" на "sand" мгновенно, когда коллизия персонажа касается соответствующего текстурированного полигона. Резкий переход может вызвать "щелчок" или артефакт, поэтому используйте кроссфейды (crossfade) между материалами длиной 50-100 мс.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист настройки шагов в движке</h4><label class="check-item"><input type="checkbox"><span>Создать Random Container с 15+ семплами</span></label><label class="check-item"><input type="checkbox"><span>Настроить RTPC для скорости (Walk/Run)</span></label><label class="check-item"><input type="checkbox"><span>Добавить кроссфейд при смене поверхности</span></label><label class="check-item"><input type="checkbox"><span>Проверить громкость относительно музыки</span></label><label class="check-item"><input type="checkbox"><span>Тест на разных типах динамиков</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="сравнительная-таблица-характеристик-материалов">Сравнительная таблица характеристик материалов</h2>
+
+<p>Понимание различий между материалами помогает быстрее подобрать или создать нужный пресет. Ниже приведена таблица, сравнивающая акустические свойства песка с другими распространенными поверхностями.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Сухой песок</th>
+<th>Влажный песок</th>
+<th>Гравий/Галька</th>
+<th>Асфальт</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Длительность звука</td>
+<td>Длинный хвост (шуршание)</td>
+<td>Короткий, резкий</td>
+<td>Средний, прерывистый</td>
+<td>Очень короткий (стук)</td>
+</tr>
+<tr>
+<td>Частотный диапазон</td>
+<td>2 кГц - 8 кГц (шипение)</td>
+<td>500 Гц - 4 кГц</td>
+<td>1 кГц - 10 кГц (звон)</td>
+<td>200 Гц - 3 кГц</td>
+</tr>
+<tr>
+<td>Динамика</td>
+<td>Мягкая, сжатая</td>
+<td>Высокая, звонкая</td>
+<td>Хаотичная</td>
+<td>Резкая, четкая</td>
+</tr>
+<tr>
+<td>Основной источник</td>
+<td>Трение частиц</td>
+<td>Удар + трение</td>
+<td>Столкновение камней</td>
+<td>Удар подошвы</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="типичные-ошибки-при-создании-звуков-шагов">Типичные ошибки при создании звуков шагов</h2>
+
+<p>Одной из самых распространенных ошибок является игнорирование контекста окружающей среды. Звук шагов по песку в тихой комнате и на ветреном пляже должен обрабатываться по-разному. На открытом пространстве высокие частоты быстро затухают, и звук становится более "телесным" и низким. Если оставить студийную яркость, шаг будет звучать как "в голове" у слушателя, нарушая immersion.</p>
+
+<p>Еще одна ошибка — ритмическая монотонность. В играх и кино персонажи часто ходят с идеальным метрономным ритмом, что неестественно для человека. Добавляйте микро-паузы, изменения длины шага и даже звуки поправки обуви или ссыпания песка с подошвы. Эти "мусорные" звуки добавляют невероятную долю реализма.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не используйте один и тот же семпл шага для левой и правой ноги без изменения питча или тембра. Даже минимальное различие (например, питч +2 цента для правой ноги) предотвратит возникновение раздражающего фазового эффекта и механического повторения.</p>
+</blockquote>
+
+<p>Также часто забывают про слой "подвижности". Когда нога отрывается от песка, часть зерен может сыпаться обратно в лунку или скатываться с обуви. Этот звук часто тише самого шага, но его отсутствие делает передвижение персонажа "приклеенным" к земле. Добавьте отдельный, очень тихий слой сыпучего звука с задержкой в 0.1-0.2 секунды после основного удара.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Совет: Для проверки качества сведения выведите звук шагов в моно-режим. Если в моно звук теряет свою текстуру или становится глухим, значит, в стерео-базе есть фазовые проблемы, которые нужно исправить перед финальным рендером.</p></aside>
+
+<h2 id="использование-специализированных-плагинов-и-библиотек">Использование специализированных плагинов и библиотек</h2>
+
+<p>Современный саунд-дизайнер не обязан записывать каждый звук с нуля. Существует множество высококачественных библиотек, таких как <em>SoundMorph Dust</em> или <em>Pro Sound Effects</em>, которые предлагают детально записанные сэмплы. Однако их ценность не в готовом файле, а в возможности манипулировать слоями. Разделяйте удар, скрежет и движение материала на разные треки для максимального контроля.</p>
+
+<p>Для синтеза в реальном времени отлично подходят гранулярные синтезаторы, такие как <em>Output Portal</em> или <em>Granulator II</em>. Они позволяют взять один короткий семпл песка и растянуть его, изменить текстуру, создавая бесконечные вариации шагов. Это особенно полезно для процедурной генерации звука в VR-проектах, где предсказать действия пользователя невозможно.</p>
+
+<p>Не забывайте о пост-обработке всей дорожки шагов. Легкая компрессия (ratio 2:1 или 3:1) поможет "усадить" звук в микс, чтобы тихие шуршания были слышны, а громкие удары не клипповали. Эквализация должна быть направлена на освобождение места для диалогов, обычно это диапазон 1-3 кГц, поэтому звук шагов иногда приходится слегка "проваливать" в этой области.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный вывод: Реализм звуков ходьбы достигается не качеством одного семпла, а вариативностью, правильной обработкой частот и учетом физического контекста поверхности и обуви.</p></aside>
+
+<details>
+<summary>Как сделать звук шагов более "далеким" или "близким"?</summary>
+<p>Для имитации удаления используйте эквалайзер для среза высоких частот (Low-Pass Filter) и уменьшите общую громкость. Также добавьте реверберацию с более длинным хвостом. Для приближения, наоборот, подчеркните транзиенты (атаку) и добавьте присутствия в районе 5 кГц.</p>
+</details>
+
+<details>
+<summary>Какой формат файлов лучше использовать для игр?</summary>
+<p>Стандартом де-факто является формат <code>.wav</code> с частотой дискретизации 48 кГц и глубиной 16 или 24 бита. Для мобильных платформ часто используют сжатие <code>.ogg</code> или <code>.adpcm</code> для экономии памяти, но исходники всегда храните в несжатом виде.</p>
+</details>
+
+<details>
+<summary>Нужно ли записывать шаги в тишине?</summary>
+<p>Да, абсолютно необходимо. Фоновый шум (кондиционер, улицы) практически невозможно полностью убрать без потери качества самого звука шага. Любую атмосферу (ветер, шум моря) нужно добавлять отдельно на этапе сведения.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pl/plyusy-puteshestviya-na-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Плюсы путешествий на машине: 10 причин выбрать автотур</span>
+                <span class="pb-related-desc">Почему поездка на автомобиле лучше поезда или самолёта? Сравнение стоимости, свободы и комфорта. Пра</span>
+            </a><a href="/articles/k/ka/karta-trassy-m4-don-s-kilometrami.html" class="pb-related-card">
+                <span class="pb-related-title">Карта трассы М4 Дон с километрами: полный справочник 2026</span>
+                <span class="pb-related-desc">Актуальная карта трассы М4 Дон с километражем, камерами, платными участками и платными стоянками. По</span>
+            </a><a href="/articles/s/sk/skolko-ekhat-1000-km-po-vremeni-na-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько ехать 1000 км на машине: расчет времени, скорость и расход</span>
+                <span class="pb-related-desc">Точный расчет времени в пути на 1000 км. Влияние средней скорости, трассы и остановок. Реальные цифр</span>
+            </a><a href="/articles/m/mo/molitva-kto-v-doroge.html" class="pb-related-card">
+                <span class="pb-related-title">Молитва в дорогу: текст, правила чтения и обереги для водителей</span>
+                <span class="pb-related-desc">Какие молитвы читать перед поездкой? Сильные тексты для водителя и пассажира, правила чтения, правос</span>
+            </a><a href="/articles/k/ko/korob-dlya-sushilnoj-mashiny.html" class="pb-related-card">
+                <span class="pb-related-title">Короб для сушильной машины: виды, материалы и монтаж своими руками</span>
+                <span class="pb-related-desc">Как выбрать короб для сушильной машины? Обзор материалов, чертежи, инструкция по сборке шкафа и сове</span>
+            </a><a href="/articles/r/ra/raznitsa-vo-vremeni-vladivostok-spb.html" class="pb-related-card">
+                <span class="pb-related-title">Разница во времени Владивосток СПБ: точное время и расчет</span>
+                <span class="pb-related-desc">Какая разница во времени между Владивостоком и Санкт-Петербургом? Узнайте, сколько часов разница, ка</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

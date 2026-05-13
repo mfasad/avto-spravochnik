@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Принцип работы пуско-зарядного устройства: устройство и схема — Авто Справочник</title>
+    <meta name="description" content="Как работает пуско-зарядное устройство для автомобиля? Разбор схемы, режимов работы, отличий от зарядки и правила безопасного запуска двигателя.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pr/printsip-raboty-pusko-zaryadnogo-ustrojstva-dlya-avtomobilya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Принцип работы пуско-зарядного устройства: устройство и схема">
+    <meta property="og:description" content="Как работает пуско-зарядное устройство для автомобиля? Разбор схемы, режимов работы, отличий от зарядки и правила безопасного запуска двигателя.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Принцип работы пуско-зарядного устройства: устройство и схема</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовая-схема-и-преобразование-тока">Базовая схема и преобразование тока</a></li><li><a href="#режимы-работы-зарядка-против-пуска">Режимы работы: Зарядка против Пуска</a></li><li><a href="#алгоритм-умной-зарядки-и-защита">Алгоритм умной зарядки и защита</a></li><li><a href="#особенности-работы-с-разными-типами-акб">Особенности работы с разными типами АКБ</a></li><li><a href="#инструкция-по-безопасному-запуску-двигателя">Инструкция по безопасному запуску двигателя</a></li><li><a href="#типичные-ошибки-и-обслуживание-устройства">Типичные ошибки и обслуживание устройства</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-proverit-utechku-toka-avto.html">Как проверить утечку тока в авто: полная инструкция</a></li><li><a href="/articles/n/na/nabor-pinov-dlya-razemov-avto.html">Наборы пинов для разъемов авто: как выбрать и использовать правильно</a></li><li><a href="/articles/b/bl/blower-motor-perevod-na-russkij.html">Blower motor — перевод на русский и применение в авто</a></li><li><a href="/articles/k/ka/kak-podklyuchit-podsvetku-salona-avtomobilya.html">Подключение подсветки салона автомобиля: пошаговый гайд 2026</a></li><li><a href="/articles/p/po/pochemu-proiskhodit-prosadka-napryazheniya.html">Просадка напряжения в авто: причины и решения 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Принцип работы пуско-зарядного устройства: полная схема и алгоритмы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовая-схема-и-преобразование-тока">Базовая схема и преобразование тока</a></li><li><a href="#режимы-работы-зарядка-против-пуска">Режимы работы: Зарядка против Пуска</a></li><li><a href="#алгоритм-умной-зарядки-и-защита">Алгоритм умной зарядки и защита</a></li><li><a href="#особенности-работы-с-разными-типами-акб">Особенности работы с разными типами АКБ</a></li><li><a href="#инструкция-по-безопасному-запуску-двигателя">Инструкция по безопасному запуску двигателя</a></li><li><a href="#типичные-ошибки-и-обслуживание-устройства">Типичные ошибки и обслуживание устройства</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Ситуация, когда автомобиль отказывается заводиться из-за севшего аккумулятора, знакома каждому водителю, особенно в зимний период. В такие моменты на помощь приходят специальные агрегаты, способные не только восстановить заряд батареи, но и отдать мощный импульс для старта двигателя. Понимание того, как именно функционирует этот прибор, позволяет не только эффективно его использовать, но и избежать критических ошибок, способных вывести из строя электронику современного автомобиля.</p>
+
+<p>В основе работы любого <strong>пуско-зарядного устройства</strong> (ПЗУ) лежит процесс преобразования переменного тока из бытовой сети в постоянный ток необходимой величины. Этот ток подается на клеммы аккумуляторной батареи, восстанавливая химические процессы внутри нее. Однако, в отличие от обычной зарядки, ПЗУ способно выдавать ток огромной силы в кратковременном режиме, что и отличает его от простых зарядных устройств.</p>
+
+<p>Современные модели оснащаются сложной электроникой, которая контролирует параметры напряжения и силы тока в реальном времени. Это необходимо, чтобы <mark>предотвратить закипание электролита и разрушение пластин аккумулятора</mark> при форсированной зарядке. Далее мы подробно разберем внутреннее устройство, алгоритмы работы и нюансы эксплуатации этого важного автомобильного гаджета.</p>
+
+<h2 id="базовая-схема-и-преобразование-тока">Базовая схема и преобразование тока</h2>
+
+<p>Фундаментальный принцип действия любого ПЗУ базируется на трансформации электрической энергии. На вход устройства подается переменный ток с напряжением 220 Вольт и частотой 50 Герц. Первой ступенью обработки является трансформатор, который понижает напряжение до рабочих значений, необходимых для зарядки свинцово-кислотных или литиевых батарей, обычно в диапазоне от 12 до 24 Вольт.</p>
+
+<p>После трансформатора ток проходит через выпрямительный блок, чаще всего собранный на основе диодного моста. Здесь происходит выпрямление синусоиды переменного тока, превращение ее в пульсирующий постоянный ток. Для сглаживания этих пульсаций и получения ровной линии тока используются конденсаторы большой емкости и дроссели. Именно качество этой фильтрации влияет на стабильность заряда и долговечность <em>аккумуляторной батареи (АКБ)</em>.</p>
+
+<p>Важнейшим элементом современной схемы является блок управления. Он регулирует работу силовых транзисторов или тиристоров, изменяя скважность импульсов. Это позволяет поддерживать заданный ток заряда независимо от текущего напряжения на клеммах аккумулятора. Без этого компонента процесс зарядки был бы хаотичным и потенциально опасным для бортовой сети.</p>
+
+<ul>
+<li>🔌 <strong>Трансформатор:</strong> понижает сетевое напряжение до безопасного уровня.</li>
+<li>⚡ <strong>Выпрямитель:</strong> преобразует переменный ток в постоянный.</li>
+<li>🎛️ <strong>Регулятор:</strong> стабилизирует выходные параметры и защищает от перегрузок.</li>
+</ul>
+
+<p>Стоит отметить, что в инверторных моделях процесс преобразования происходит в два этапа: сначала переменный ток превращается в постоянный высокой частоты, а затем снова трансформируется. Такая схема позволяет сделать устройство компактным и легким, сохранив высокую мощность.</p>
+
+<div class="pb-poll" id="poll-f642939c"><div class="pb-poll-question">📊 Какой тип ПЗУ вы предпочитаете?</div><div class="pb-poll-option" data-poll="f642939c" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Трансформаторное (тяжелое)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f642939c" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Импульсное (легкое)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f642939c" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Бустер (Power Bank)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f642939c" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Пока не знаю разницы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="режимы-работы-зарядка-против-пуска">Режимы работы: Зарядка против Пуска</h2>
+
+<p>Многие пользователи ошибочно полагают, что пуско-зарядное устройство работает в одном постоянном режиме. На самом деле, функционал делится на два принципиально разных алгоритма: режимной зарядки (Charge) и режим запуска (Boost/Start). В первом случае устройство работает как классическая зарядка, выдавая ток силой от 1 до 10 Ампер в зависимости от емкости батареи.</p>
+
+<p>Режим <strong>пуска</strong> кардинально отличается по своим параметрам. Здесь устройство кратковременно выдает ток силой в 100, 200 и даже 500 Ампер. Такой огромный ток необходим для прокрутки стартера, который в момент запуска потребляет колоссальную энергию. Длительность работы в этом режиме ограничена несколькими секундами или минутами, чтобы не перегреть внутреннюю проводку самого ПЗУ.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не оставляйте устройство в режиме"Пуск" подключенным к аккумулятору на длительное время. Это может привести к вскипанию электролита и повреждению пластин АКБ из-за чрезмерного тока.</p>
+</blockquote>
+
+<p>Переключение между режимами обычно осуществляется тумблером или выбирается автоматически умной электроникой. При автоматическом переключении устройство сначала пытается запустить двигатель. Если стартер не справляется, электроника переходит в режим щадящей подзарядки, чтобы немного восстановить потенциал батареи перед повторной попыткой.</p>
+
+<details class="pb-accordion"><summary>Почему нельзя долго держать режим Boost?</summary><div class="pb-accordion-body"><p>При длительной работе в режиме пуска внутренние компоненты устройства (диоды, транзисторы) нагреваются до критических температур. Даже наличие вентилятора не всегда спасает от теплового пробоя. Кроме того, тонкие провода внутри слабого аккумулятора могут не выдержать такого тока и расплавиться.</p></div></details>
+
+<h2 id="алгоритм-умной-зарядки-и-защита">Алгоритм умной зарядки и защита</h2>
+
+<p>Современные <em>автоматические зарядные устройства</em> оснащаются микропроцессорами, которые управляют процессом по сложному алгоритму. Сначала идет этап десульфатации, если он предусмотрен, затем основной заряд постоянным током, followed by абсорбция и финальная стадия поддержания напряжения. Такой подход позволяет восстановить батарею, которая долго находилась в разряженном состоянии.</p>
+
+<p>Ключевой функцией умных устройств является защита от переполюсовки. Если вы перепутаете плюс и минус при подключении крокодилов, электроника просто не подаст напряжение на клеммы. Это спасает и устройство, и автомобиль от короткого замыкания. Также реализована защита от искрения при подключении, что критически важно для автомобилей с чувствительной электроникой.</p>
+
+<p>В таблице ниже приведено сравнение характеристик обычного зарядного устройства и полноценного пуско-зарядного:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Зарядное устройство</th>
+<th>Пуско-зарядное устройство</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Максимальный ток</td>
+<td>До 10-15 А</td>
+<td>До 300-500 А (в режиме пуска)</td>
+</tr>
+<tr>
+<td>Вес и габариты</td>
+<td>Компактные, легкие</td>
+<td>Крупные, тяжелые (трансформаторные)</td>
+</tr>
+<tr>
+<td>Назначение</td>
+<td>Восстановление заряда</td>
+<td>Запуск двигателя + зарядка</td>
+</tr>
+<tr>
+<td>Цена</td>
+<td>Низкая</td>
+<td>Высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Интеллектуальные системы также контролируют температуру корпуса. При перегреве устройство может снизить ток или полностью отключиться до остывания. Это особенно актуально при работе в режиме мощного буста в летнюю жару.</p>
+
+<h2 id="особенности-работы-с-разными-типами-акб">Особенности работы с разными типами АКБ</h2>
+
+<p>Принцип работы ПЗУ должен адаптироваться под тип аккумулятора. Для классических свинцово-кислотных батарей (WET, EFB, AGM, GEL) требуются разные профили напряжения. Например, для <strong>AGM</strong> и <strong>GEL</strong> батарей критически важно не превышать напряжение 14.4-14.7 Вольта, иначе газы не успеют рекомбинировать и клапаны сброса давления откроются, что приведет к необратимой порче батареи.</p>
+
+<p>Литий-железо-фосфатные (LiFePO4) аккумуляторы, которые становятся популярными в качестве стартерных, требуют совершенно иного подхода. Им нужен специальный алгоритм заряда, который обычные свинцовые ПЗУ обеспечить не могут. Использование неподходящего режима может привести к возгоранию литиевого элемента.</p>
+
+<ul>
+<li>🔋 <strong>WET/EFB:</strong> стандартный цикл заряда с возможностью десульфатации.</li>
+<li>❄️ <strong>AGM/GEL:</strong> строгий контроль напряжения, отсутствие режима десульфатации высоким током.</li>
+<li>🚀 <strong>LiFePO4:</strong> специфический профиль, требующий активации перед зарядом.</li>
+</ul>
+
+<p>Многие продвинутые модели имеют переключатель режимов или автоматическое определение типа батареи. Если вы планируете обслуживать разные типы АКБ, наличие такой функции в ПЗУ является обязательным требованием.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед покупкой ПЗУ обязательно уточните в инструкции, поддерживает ли оно режим зарядки для AGM/GEL батарей, если у вас именно такой тип аккумулятора. Обычный режим"Зима" или"Boost" может убить дорогую батарею.</p></aside>
+
+<h2 id="инструкция-по-безопасному-запуску-двигателя">Инструкция по безопасному запуску двигателя</h2>
+
+<p>Правильное подключение пуско-зарядного устройства — залог успеха и безопасности. Сначала убедитесь, что само устройство выключено или находится в режиме ожидания. Подключите красный зажим ("крокодил") к положительной клемме аккумулятора (+), а черный — к отрицательной (-) или к массе двигателя, если доступ к клемме затруднен окислением.</p>
+
+<p>После подключения проверьте надежность контакта. Только теперь можно включать устройство в сеть или активировать режим работы. Если используется трансформаторное ПЗУ, дайте ему несколько минут поработать в режиме зарядки, чтобы"оживить" батарею, прежде чем пытаться крутить стартер.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Порядок запуска двигателя</h4><label class="check-item"><input type="checkbox"><span>Выключить все потребители в авто</span></label><label class="check-item"><input type="checkbox"><span>Подключить красный крокодил к плюсу</span></label><label class="check-item"><input type="checkbox"><span>Подключить черный крокодил к минусу/массе</span></label><label class="check-item"><input type="checkbox"><span>Включить режим"Пуск" или"Boost"</span></label><label class="check-item"><input type="checkbox"><span>Попытаться завести двигатель (не более 5 сек)</span></label><label class="check-item"><input type="checkbox"><span>Отключить устройство в обратном порядке</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 6</div></div>
+
+<p>Попытка запуска должна длиться не более 5-10 секунд. Если двигатель не схватывает, сделайте паузу на минуту, чтобы дать аккумулятору и стартеру остыть. Повторение циклов без перерыва может привести к перегреву стартера или повреждению бендикса.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При использовании мощных пусковых устройств провода могут сильно нагреваться. Не касайтесь металлических частей зажимов во время работы и сразу после запуска.</p>
+</blockquote>
+
+<h2 id="типичные-ошибки-и-обслуживание-устройства">Типичные ошибки и обслуживание устройства</h2>
+
+<p>Одной из самых распространенных ошибок является попытка запустить двигатель, когда ПЗУ подключено к сети, но не настроено правильно. Некоторые водители забывают переключить тумблер в режим"Пуск" и удивляются, почему машина не заводится от seemingly мощного аппарата. В режиме обычной зарядки тока просто не хватает для прокрутки холодного двигателя.</p>
+
+<p>Также часто игнорируется состояние самих зажимов. Окисленные или слабые"крокодилы" создают высокое сопротивление, из-за чего весь мощный ток превращается в тепло в точке контакта, а до стартера доходит лишь малая часть энергии. Регулярная зачистка контактов и проверка целостности проводов — обязательная процедура.</p>
+
+<p>Для продления срока службы устройства храните его в сухом месте. Внутренняя пыль, смешанная с влагой, может создать токопроводящие дорожки на плате управления, что приведет к короткому замыканию. Периодически проверяйте работу вентилятора охлаждения, если он предусмотрен конструкцией.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный секрет долгой жизни ПЗУ — не перегревать его в режиме Boost и всегда давать остыть между попытками запуска. Тепловой пробой диодов — причина 80% поломок.</p></aside>
+
+<p>Соблюдение этих простых правил позволит вашему устройству служить годами, выручая в самые неподходящие моменты. Помните, что качественное пуско-зарядное устройство — это инвестиция в спокойствие и уверенность в любом путешествии.</p>
+
+<details>
+<summary>Можно ли оставить ПЗУ подключенным на ночь?</summary>
+<p>Если устройство автоматическое и имеет режим десульфатации или хранения (Storage), то можно. Оно само перейдет в режим поддержания заряда. Обычные трансформаторные устройства без автоматики лучше не оставлять без присмотра на долгий срок, так как возможен перезаряд и выкипание электролита.</p>
+</details>
+
+<details>
+<summary>Почему ПЗУ гудит при работе?</summary>
+<p>Гудение характерно для трансформаторных моделей. Это звук вибрации пластин сердечника трансформатора под действием переменного магнитного поля. Это нормально, если гул не сопровождается запахом гари или дымом. Импульсные устройства работают практически бесшумно.</p>
+</details>
+
+<details>
+<summary>Нужно ли снимать аккумулятор с машины при зарядке?</summary>
+<p>Современные автоматические ПЗУ позволяют заряжать батарею, не снимая ее с автомобиля, предварительно отключив клеммы от бортовой сети (минусовую). Однако, если аккумулятор сильно разряжен ("в ноль"), лучше снять его и зарядить в теплом помещении малым током для первичной активации.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-proverit-utechku-toka-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить утечку тока в авто: полная инструкция</span>
+                <span class="pb-related-desc">Подробный гид по диагностике утечки тока мультиметром. Нормы потребления, поиск неисправностей и таб</span>
+            </a><a href="/articles/n/na/nabor-pinov-dlya-razemov-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Наборы пинов для разъемов авто: как выбрать и использовать правильно</span>
+                <span class="pb-related-desc">Подробный гайд по наборам пинов для диагностики и ремонта автоэлектрики: виды, совместимость, инстру</span>
+            </a><a href="/articles/b/bl/blower-motor-perevod-na-russkij.html" class="pb-related-card">
+                <span class="pb-related-title">Blower motor — перевод на русский и применение в авто</span>
+                <span class="pb-related-desc">Что такое blower motor: перевод термина, назначение в автомобиле, виды, неисправности и как проверит</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-podsvetku-salona-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Подключение подсветки салона автомобиля: пошаговый гайд 2026</span>
+                <span class="pb-related-desc">Как правильно установить LED-подсветку в салоне авто: схемы подключения, выбор оборудования и ошибки</span>
+            </a><a href="/articles/p/po/pochemu-proiskhodit-prosadka-napryazheniya.html" class="pb-related-card">
+                <span class="pb-related-title">Просадка напряжения в авто: причины и решения 2026</span>
+                <span class="pb-related-desc">Почему падает напряжение в бортовой сети автомобиля? Разбираем 7 основных причин, диагностику и спос</span>
+            </a><a href="/articles/k/ka/kak-otregulirovat-fary-na-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Как отрегулировать фары на авто: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Правильная регулировка фар: схемы, инструменты и ошибки. Подробное руководство для самостоятельной н</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

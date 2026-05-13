@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как работает Apple CarPlay: полное руководство для водителя — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор работы Apple CarPlay: от проводного подключения до беспроводных протоколов. Настройка, совместимость и советы по устранению неполадок.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/a/ap/apple-carplay-kak-rabotaet.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работает Apple CarPlay: полное руководство для водителя">
+    <meta property="og:description" content="Подробный разбор работы Apple CarPlay: от проводного подключения до беспроводных протоколов. Настройка, совместимость и советы по устранению неполадок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работает Apple CarPlay: полное руководство для водителя</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#технические-аспекты-соединения-и-протоколы-передачи-данных">Технические аспекты соединения и протоколы передачи данных</a></li><li><a href="#процесс-первичной-настройки-и-сопряжения-устройств">Процесс первичной настройки и сопряжения устройств</a></li><li><a href="#интерфейс-и-управление-через-экран-и-голос">Интерфейс и управление через экран и голос</a></li><li><a href="#совместимость-автомобилей-и-версий-ios">Совместимость автомобилей и версий iOS</a></li><li><a href="#расширенные-возможности-и-работа-с-мультимедиа">Расширенные возможности и работа с мультимедиа</a></li><li><a href="#диагностика-проблем-и-устранение-неполадок">Диагностика проблем и устранение неполадок</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-rabotaet-besprovodnaya-zaryadka-v-mashine.html">Как работает беспроводная зарядка в машине: устройство и установка</a></li><li><a href="/articles/a/av/avtokurer-yandeks-lavka-otzyvy.html">Автокурьер Яндекс Лавка: отзывы, зарплата и условия 2026</a></li><li><a href="/articles/f/fl/flag-my-russkie-i-s-nami-bog.html">Флаг «Мы русские и с нами Бог»: история и значение</a></li><li><a href="/articles/e/es/est-li-slovo-ezdiyu.html">Пишется ли слово «ездЮт» или «ездЯт»? Правила спряжения глаголов</a></li><li><a href="/articles/t/ts/tsitaty-pro-puteshestviya-so-smyslom-korotkie.html">Короткие цитаты про путешествия со смыслом: вдохновение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как работает Apple CarPlay: технологии, настройка и скрытые функции</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#технические-аспекты-соединения-и-протоколы-передачи-данных">Технические аспекты соединения и протоколы передачи данных</a></li><li><a href="#процесс-первичной-настройки-и-сопряжения-устройств">Процесс первичной настройки и сопряжения устройств</a></li><li><a href="#интерфейс-и-управление-через-экран-и-голос">Интерфейс и управление через экран и голос</a></li><li><a href="#совместимость-автомобилей-и-версий-ios">Совместимость автомобилей и версий iOS</a></li><li><a href="#расширенные-возможности-и-работа-с-мультимедиа">Расширенные возможности и работа с мультимедиа</a></li><li><a href="#диагностика-проблем-и-устранение-неполадок">Диагностика проблем и устранение неполадок</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный автомобиль уже сложно представить без интеграции со смартфоном, и <strong>Apple CarPlay</strong> стала настоящим стандартом в этой области. Эта технология позволяет водителю безопасно использовать ключевые функции iPhone прямо через экран мультимедийной системы, минимизируя отвлечение от дороги. Принцип действия системы строится на передаче видеосигнала и звука с телефона на дисплей "головного устройства" (Head Unit), превращая штатную магнитолу в удобный интерфейс iOS.</p>
+<p>В основе работы CarPlay лежит сложное взаимодействие операционных систем iOS и автомобильной ОС. Когда вы подключаете устройство, происходит не просто зеркальное отображение, а создание отдельной графической среды, оптимизированной для управления на ходу. Крупные иконки, голосовое управление и упрощенная навигация — это результат работы протоколов, которые <em>Apple</em> разрабатывала годами для обеспечения максимальной безопасности.</p>
+
+<p>Многие водители ошибочно полагают, что CarPlay просто "выводит картинку" с телефона. На самом деле, система работает гораздо глубже, используя вычислительные мощности процессора iPhone для рендеринга интерфейса, в то время как автомобильный экран служит лишь окном вывода. Это обеспечивает плавную работу карт и музыки даже на не самых мощных штатных системах. Понимание того, <strong>как работает Apple CarPlay</strong> технически, поможет вам избежать типичных ошибок подключения и наслаждаться стабильной работой системы.</p>
+
+<p>Существует два основных способа соединения: проводной и беспроводной. Проводной вариант, использующий кабель Lightning или USB-C, обеспечивает наиболее стабильную передачу данных и одновременную зарядку устройства. Беспроводной CarPlay, появившийся позже, использует комбинацию Wi-Fi и Bluetooth для передачи тяжелого видеопотока и управления соединением соответственно, что требует более мощного железа в автомобиле.</p>
+
+<h2 id="технические-аспекты-соединения-и-протоколы-передачи-данных">Технические аспекты соединения и протоколы передачи данных</h2>
+
+<p>Фундаментальным отличием CarPlay от обычного Bluetooth-соединения является использование протокола <strong>Wi-Fi</strong> для передачи видеопотока высокой четкости. Стандартный Bluetooth имеет слишком низкую пропускную способность для передачи динамического изображения интерфейса в реальном времени. Именно поэтому при беспроводном подключении автомобиль и телефон создают собственную локальную сеть, по которой передаются видеоданные, аудио и сигналы тачскрина.</p>
+
+<p>В проводном режиме все данные передаются через USB-кабель, который также обеспечивает питание смартфона. Это более надежный метод, так как он исключает помехи от других беспроводных сетей и гарантирует, что батарея телефона не разрядится в пути. Важно использовать сертифицированные кабели <em>MFi (Made for iPhone)</em>, так как дешевые аналоги могут не поддерживать необходимую скорость передачи данных, что приведет к нестабильной работе или полному отказу системы.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При использовании длинных USB-кабелей (более 1.5 метров) может наблюдаться падение качества сигнала. Для стабильной работы CarPlay рекомендуется использовать оригинальные кабели Apple или сертифицированные аналоги длиной до 1 метра.</p>
+</blockquote>
+
+<p>Протокол связи также предусматривает постоянный "рукопожатие" (handshake) между устройствами. Если автомобильная система не получает ответ от iPhone в течение определенного времени, соединение разрывается. Это часто случается при использовании старых версий iOS или при наличии физических повреждений порта зарядки.</p>
+
+<details class="pb-accordion"><summary>Технические детали протокола</summary><div class="pb-accordion-body"><p>Протокол CarPlay использует зашифрованное соединение для защиты личных данных пользователя. Даже если злоумышленник перехватит сигнал, он не сможет получить доступ к вашим сообщениям или контактам без физического доступа к разблокированному телефону.>
+
+<h2 id="процесс-первичной-настройки-и-сопряжения-устройств">Процесс первичной настройки и сопряжения устройств</h2>
+
+<p>Первое включение CarPlay требует выполнения ряда последовательных действий. В отличие от Bluetooth, где достаточно просто найти устройство, здесь важна правильная последовательность шагов. Сначала необходимо убедиться, что функция CarPlay разрешена в настройках ограничений iPhone, если таковые установлены. Затем следует подключить кабель к порту USB в автомобиле, который часто помечен специальным значком смартфона или надписью.</p>
+
+<p>После физического соединения на экране iPhone появится запрос на разрешение использования CarPlay. Необходимо нажать "Разрешить" и согласиться с условиями использования. На этом этапе происходит обмен ключами шифрования и первичная синхронизация контактов и календаря. Если вы используете беспроводной вариант, процесс начнется после включения Bluetooth и Wi-Fi на телефоне и выбора автомобиля в списке доступных устройств.</p>
+
+
+
+<p>В некоторых автомобилях требуется ручная активация CarPlay в меню штатной мультимедиа. Это может быть отдельное приложение в лаунчере или скрытая опция в настройках подключения. Если после подключения ничего не происходит, попробуйте переключить источник сигнала (Source) на режим "Smartphone Connection" или аналогичный.</p>
+
+<h2 id="интерфейс-и-управление-через-экран-и-голос">Интерфейс и управление через экран и голос</h2>
+
+<p>Интерфейс CarPlay разработан с учетом минимизации визуального отвлечения. Крупные элементы управления, контрастные цвета и упрощенная структура меню позволяют водителю бросать беглый взгляд на экран, не теряя концентрации на дороге. Система автоматически адаптирует тему оформления (светлую или темную) в зависимости от времени суток и настроек автомобиля, что особенно важно для ночных поездок.</p>
+
+<p>Однако главным инструментом взаимодействия является голосовой помощник <strong>Siri</strong>. Нажатие и удержание кнопки голосового управления на руле или на экране активирует ассистента, позволяя диктовать сообщения, прокладывать маршруты и выбирать музыку без касания экрана. Это не просто удобство, а критически важная функция безопасности, которую стоит использовать максимально часто.</p>
+
+<ul>
+    <li>🎙️ <strong>Голосовые команды:</strong> Позволяют управлять навигацией, звонками и медиа без рук.</li>
+    <li>🖐️ <strong>Сенсорное управление:</strong> Поддерживает мультитач, свайпы и тапы, адаптированные под перчатки.</li>
+    <li>🎚️ <strong>Физические кнопки:</strong> Многие авто позволяют переключать треки и регулировать громкость кнопками на руле.</li>
+    <li>🔊 <strong>Аудио-уведомления:</strong> Звуковые сигналы о входящих сообщениях и навигационных поворотах.</li>
+</ul>
+
+<p>Навигация в CarPlay работает в режиме реального времени, используя данные о трафике и дорожной ситуации. Приложения карт (Apple Maps, Яндекс.Навигатор, Google Maps) занимают значительную часть экрана, предоставляя детальную информацию о полосах движения и камерах. Важно отметить, что видеопоток с карт рендерится на телефоне, а на экран автомобиля передается уже готовое изображение.</p>
+
+
+
+<h2 id="совместимость-автомобилей-и-версий-ios">Совместимость автомобилей и версий iOS</h2>
+
+<p>Для корректной работы системы необходимо соответствие требованиям как со стороны автомобиля, так и со стороны смартфона. <em>Apple</em> регулярно обновляет требования к минимальной версии iOS, и старые версии операционной системы могут не поддерживать новые функции CarPlay или не работать с новыми моделями авто.</p>
+
+<p>Большинство автомобилей, выпущенных после 2016 года, поддерживают CarPlay, однако функционал может отличаться. Базовые комплектации часто предлагают только проводное соединение, тогда как беспроводное доступно в более дорогих версиях или как опция. Также существуют сторонние Android-магнитолы, которые эмулируют работу CarPlay, но их стабильность часто уступает штатным решениям.</p>
+
+<div class="pb-table-wrap"><table>
+    <thead>
+        <tr>
+            <th>Параметр</th>
+            <th>Проводной CarPlay</th>
+            <th>Беспроводной CarPlay</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Тип подключения</td>
+            <td>USB-кабель (Lightning/Type-C)</td>
+            <td>Wi-Fi + Bluetooth</td>
+        </tr>
+        <tr>
+            <td>Зарядка телефона</td>
+            <td>Происходит автоматически</td>
+            <td>Требуется отдельная зарядка (Wireless/USB)</td>
+        </tr>
+        <tr>
+            <td>Задержка аудио</td>
+            <td>Минимальная</td>
+            <td>Возможна небольшая задержка</td>
+        </tr>
+        <tr>
+            <td>Требования к авто</td>
+            <td>Базовая поддержка USB</td>
+            <td>Специальный Wi-Fi модуль в ГУ</td>
+        </tr>
+    </tbody>
+</table></div>
+
+<p>Проверить совместимость вашего автомобиля можно на официальном сайте Apple или в инструкции по эксплуатации транспортного средства. Часто производители выпускают обновления прошивки головного устройства, которые добавляют поддержку CarPlay или улучшают стабильность существующей версии.</p>
+
+
+
+<h2 id="расширенные-возможности-и-работа-с-мультимедиа">Расширенные возможности и работа с мультимедиа</h2>
+
+<p>CarPlay не ограничивается только навигацией и звонками. Система глубоко интегрирована с аудиоприложениями, такими как <em>Apple Music</em>, <em>Spotify</em>, <em>Яндекс.Музыка</em> и подкастами. Управление воспроизведением доступно через интерфейс на экране, кнопки на руле и голосовые команды. Алгоритмы системы позволяют предугадывать желания пользователя, предлагая продолжить прослушивание подкаста с места остановки или включить привычный плейлист.</p>
+
+<p>Одной из ключевых особенностей является поддержка сторонних приложений для аудио и общения. Вы можете отправлять голосовые сообщения в WhatsApp или Telegram, диктовать ответы, которые система преобразует в текст. Однако просмотр видео или использование браузеров запрещен программными ограничениями Apple в целях безопасности, пока автомобиль движется.</p>
+
+<p>Для пользователей электромобилей, таких как <em>Tesla</em> (через сторонние решения) или новых моделей BMW и Mercedes, CarPlay может занимать весь экран или его значительную часть, предоставляя доступ к виджетам погоды, календаря и напоминаний. В последних версиях iOS функционал расширен возможностью отображения нескольких приложений одновременно на широких экранах.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Попытки установки неофициальных приложений (твиків) для просмотра YouTube или Netflix через CarPlay могут привести к блокировке аккаунта или нестабильной работе системы. Используйте только приложения из App Store.</p>
+</blockquote>
+
+<h2 id="диагностика-проблем-и-устранение-неполадок">Диагностика проблем и устранение неполадок</h2>
+
+<p>Несмотря на отлаженность технологии, пользователи могут сталкиваться с проблемами подключения. Наиболее частая причина — неисправный кабель или загрязнение порта зарядки. Перед обращением в сервис рекомендуется тщательно осмотреть разъем Lightning на предмет пыли и ворса, аккуратно очистив его неметаллическим инструментом.</p>
+
+<p>Если CarPlay подключается, но постоянно отключается, попробуйте перезагрузить оба устройства: и iPhone, и мультимедийную систему автомобиля (часто долгим нажатием кнопки включения громкости). Также помогает удаление автомобиля из списка Bluetooth на телефоне и повторное сопряжение "с нуля".</p>
+
+<ul>
+    <li>🔌 <strong>Проблема с кабелем:</strong> Замените провод на заведомо исправный оригинальный.</li>
+    <li>📶 <strong>Конфликт Wi-Fi:</strong> Для беспроводного CarPlay отключите другие активные Wi-Fi сети на телефоне.</li>
+    <li>🔄 <strong>Обновление ПО:</strong> Убедитесь, что на iPhone установлена последняя версия iOS.</li>
+    <li>🚗 <strong>Сброс настроек авто:</strong> В меню автомобиля найдите опцию сброса настроек подключения смартфона.</li>
+</ul>
+
+<p>В редких случаях проблема может крыться в перегреве смартфона. При интенсивной навигации и зарядке телефон может нагреваться, и система iOS принудительно снижает производительность или отключает энергоемкие функции, включая CarPlay. В этом случае стоит убрать телефон из зоны прямых солнечных лучей или снять чехол.</p>
+
+
+
+<details>
+<summary>Почему CarPlay не работает через Bluetooth?</summary>
+<p>CarPlay не использует Bluetooth для передачи изображения из-за низкой скорости этого протокола. Bluetooth служит только для первичного рукопожатия и передачи аудиопотока в обычных режимах. Для работы интерфейса необходим USB-кабель или Wi-Fi соединение.</p>
+</details>
+
+<details>
+<summary>Можно ли смотреть видео в CarPlay?</summary>
+<p>Официально Apple блокирует воспроизведение видео на экране автомобиля во время движения для безопасности водителя. Существуют обходные пути через джейлбрейк или специальные хабы, но их использование не рекомендуется и может быть незаконным в вашем регионе.</p>
+</details>
+
+<details>
+<summary>Тратит ли CarPlay много трафика?</summary>
+<p>Сам интерфейс CarPlay трафик не расходует, так как передается локально. Трафик потребляют приложения: навигация (загрузка карт и пробок), музыкальные стриминговые сервисы и мессенджеры. При активном использовании навигации и музыки расход может составлять 50-100 МБ в час.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-rabotaet-besprovodnaya-zaryadka-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Как работает беспроводная зарядка в машине: устройство и установка</span>
+                <span class="pb-related-desc">Полный разбор технологии Qi в авто: принцип индукции, совместимость телефонов, правильная установка </span>
+            </a><a href="/articles/a/av/avtokurer-yandeks-lavka-otzyvy.html" class="pb-related-card">
+                <span class="pb-related-title">Автокурьер Яндекс Лавка: отзывы, зарплата и условия 2026</span>
+                <span class="pb-related-desc">Полный разбор вакансии автокурьера Яндекс Лавки. Реальные отзывы сотрудников, условия аренды авто, р</span>
+            </a><a href="/articles/f/fl/flag-my-russkie-i-s-nami-bog.html" class="pb-related-card">
+                <span class="pb-related-title">Флаг «Мы русские и с нами Бог»: история и значение</span>
+                <span class="pb-related-desc">История создания, символика и значение флага «Мы русские и с нами Бог». Разбор исторических фактов, </span>
+            </a><a href="/articles/e/es/est-li-slovo-ezdiyu.html" class="pb-related-card">
+                <span class="pb-related-title">Пишется ли слово «ездЮт» или «ездЯт»? Правила спряжения глаголов</span>
+                <span class="pb-related-desc">Разбираем вечный вопрос: есть ли слово «ездЮт»? Узнайте правила спряжения глаголов, исключения и зап</span>
+            </a><a href="/articles/t/ts/tsitaty-pro-puteshestviya-so-smyslom-korotkie.html" class="pb-related-card">
+                <span class="pb-related-title">Короткие цитаты про путешествия со смыслом: вдохновение</span>
+                <span class="pb-related-desc">Сборник глубоких и коротких цитат про путешествия со смыслом. Вдохновляющие фразы для статусов, подп</span>
+            </a><a href="/articles/c/ch/chto-za-mashina-solyaris.html" class="pb-related-card">
+                <span class="pb-related-title">Что за машина Солярис: полный обзор Hyundai Solaris</span>
+                <span class="pb-related-desc">Узнайте, что за машина Солярис: история модели, технические характеристики, двигатели, плюсы и минус</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

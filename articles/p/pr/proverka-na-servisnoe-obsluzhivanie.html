@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Проверка на сервисное обслуживание: как узнать историю авто — Авто Справочник</title>
+    <meta name="description" content="Как выполняется проверка на сервисное обслуживание по VIN. Способы получения истории, расшифровка записей в базе и нюансы диагностики авто.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pr/proverka-na-servisnoe-obsluzhivanie.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Проверка на сервисное обслуживание: как узнать историю авто">
+    <meta property="og:description" content="Как выполняется проверка на сервисное обслуживание по VIN. Способы получения истории, расшифровка записей в базе и нюансы диагностики авто.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Проверка на сервисное обслуживание: как узнать историю авто</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-скрывает-база-данных-официальных-дилеров">Что скрывает база данных официальных дилеров</a></li><li><a href="#ключевые-параметры-для-анализа-при-проверке">Ключевые параметры для анализа при проверке</a></li><li><a href="#интерпретация-кодов-работ-и-запчастей">Интерпретация кодов работ и запчастей</a></li><li><a href="#сравнение-с-данными-независимых-диагностов">Сравнение с данными независимых диагностов</a></li><li><a href="#влияние-истории-то-на-стоимость-автомобиля">Влияние истории ТО на стоимость автомобиля</a></li><li><a href="#риски-покупки-авто-со-скрытой-историей">Риски покупки авто со скрытой историей</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-zvuchit-neispravnaya-pompa.html">Как звучит неисправная помпа: признаки и диагностика</a></li><li><a href="/articles/k/ka/kak-nazyvayutsya-chasti-vykhlopnoj-sistemy.html">Как называются части выхлопной системы: полный гид по устройству</a></li><li><a href="/articles/v/va/val-v-dvigatele-eto.html">Вал в двигателе — устройство, виды и неисправности (2026)</a></li><li><a href="/articles/c/ch/chto-takoe-proizvodstvo-polnogo-tsikla.html">Производство полного цикла: что это и как работает в автопроме</a></li><li><a href="/articles/r/ra/radiator-v-mashine-zhidkost.html">Жидкость в радиаторе автомобиля: виды, проверка, замена и устранение неисправностей</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Проверка на сервисное обслуживание: полная история вашего авто</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-скрывает-база-данных-официальных-дилеров">Что скрывает база данных официальных дилеров</a></li><li><a href="#ключевые-параметры-для-анализа-при-проверке">Ключевые параметры для анализа при проверке</a></li><li><a href="#интерпретация-кодов-работ-и-запчастей">Интерпретация кодов работ и запчастей</a></li><li><a href="#сравнение-с-данными-независимых-диагностов">Сравнение с данными независимых диагностов</a></li><li><a href="#влияние-истории-то-на-стоимость-автомобиля">Влияние истории ТО на стоимость автомобиля</a></li><li><a href="#риски-покупки-авто-со-скрытой-историей">Риски покупки авто со скрытой историей</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Приобретение подержанного автомобиля — это всегда риск, связанный с неизвестностью технического состояния машины. Даже если кузов выглядит идеально, а двигатель работает ровно, скрытые дефекты могут проявиться спустя месяцы эксплуатации. Одним из самых надежных способов заглянуть в прошлое «железного коня» является проверка на сервисное обслуживание. Этот процесс позволяет получить объективные данные о том, как часто менялось масло, ремонтировалась ли трансмиссия и проводились ли кузовные работы в официальных дилерских центрах.</p>
+
+<p>Современные цифровые базы данных хранят информацию годами, и игнорировать этот ресурс — значит покупать «кота в мешке». Многие покупатели ошибочно полагают, что сервисная книжка, лежащая в бардачке, является истиной в последней инстанции. Однако бумажный носитель легко подделать, потерять или испортить, тогда как электронный след в системе дилера <strong>остается навсегда</strong>. Именно цифровая история становится ключевым аргументом при торге или окончательном принятии решения о покупке.</p>
+
+<p>В этой статье мы подробно разберем, что именно скрывается за записями в сервисных базах, как самостоятельно расшифровать сложные коды работ и почему наличие регулярных записей о ТО <mark>существенно повышает ликвидность автомобиля</mark> при последующей продаже. Понимание этих нюансов поможет вам избежать покупки проблемного экземпляра.</p>
+
+<h2 id="что-скрывает-база-данных-официальных-дилеров">Что скрывает база данных официальных дилеров</h2>
+
+<p>Официальные дилерские центры обязаны вносить информацию о каждом обращении клиента в единую информационную систему производителя. Это касается не только плановых замен технических жидкостей, но и гарантийных ремонтов, обращения по отзывным кампаниям и даже простых визитов для диагностики. <strong>Сервисная история</strong> формируется автоматически, и изменить задним числом эти данные практически невозможно без следов вмешательства.</p>
+
+<p>В базе данных отражается пробег автомобиля на момент каждого визита. Это критически важный параметр, позволяющий выявить «скрученный» пробег. Если в 2020 году машина была на обслуживании с показанием 120 000 км, а сегодня продавец утверждает, что проехал всего 90 000 км, то discrepancies (несоответствия) очевидны. <em>Электронные журналы</em> дилеров хранят данные десятилетиями, что делает их надежным источником правды.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Не все работы, выполненные в дилерском центре, могут быть помечены как «гарантийные». Часто клиенты оплачивают ремонт из своего кармана, и такие записи могут иметь специфические коды, требующие расшифровки специалистом.</p>
+</blockquote>
+
+<p>Кроме того, система фиксирует замену крупноузловых агрегатов. Если автомобилю меняли двигатель или коробку передач, об этом обязательно останется запись с указанием серийных номеров новых деталей. Это особенно важно при проверке юридической чистоты и технической целостности машины. Наличие таких записей позволяет сверить номера на агрегатах с документами.</p>
+
+<div class="pb-poll" id="poll-8d930e41"><div class="pb-poll-question">📊 Как вы чаще всего проверяете историю авто?</div><div class="pb-poll-option" data-poll="8d930e41" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Покупаю отчет у перекупщиков</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8d930e41" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Смотрю только сервисную книжку</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8d930e41" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Проверяю через онлайн-сервисы по VIN</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="8d930e41" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Вообще не проверяю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="ключевые-параметры-для-анализа-при-проверке">Ключевые параметры для анализа при проверке</h2>
+
+<p>Когда вы получаете отчет о сервисном обслуживании, важно обращать внимание не только на даты, но и на характер выполненных работ. Регулярное ТО — это хорошо, но хаотичные ремонты одних и тех же узлов могут указывать на хронические проблемы модели или конкретного экземпляра. <strong>Аналитика записей</strong> требует внимательности к деталям.</p>
+
+<p>Особого внимания заслуживают записи о кузовном ремонте. Если автомобиль побывал в ДТП и восстанавливался у «официалов», в системе это будет отражено как заказ нормо-часов на покраску элементов или их замену. Отсутствие таких записей при наличии крашеных деталей говорит о том, что ремонт проводился в «гаражных» условиях, что часто означает нарушение технологий.</p>
+
+<p>Также стоит проанализировать интервалы между обслуживаниями. Для современных двигателей <em>интервальное ТО</em> строго регламентировано производителем. Если вы видите gaps (разрывы) в обслуживании более 15-20 тысяч километров или полутора лет, это может свидетельствовать о том, что в эти периоды автомобиль эксплуатировался с нарушением регламента, что могло привести к скрытому износу.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Что искать в отчете</h4><label class="check-item"><input type="checkbox"><span>Совпадение пробега в разных записях</span></label><label class="check-item"><input type="checkbox"><span>Наличие записей о замене масла</span></label><label class="check-item"><input type="checkbox"><span>Отметки о кузовных работах</span></label><label class="check-item"><input type="checkbox"><span>Записи о замене крупных агрегатов</span></label><label class="check-item"><input type="checkbox"><span>Статус отзывных кампаний</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="интерпретация-кодов-работ-и-запчастей">Интерпретация кодов работ и запчастей</h2>
+
+<p>Сервисные отчеты часто выглядят как набор непонятных аббревиатур и цифр. Дилеры используют внутренние коды для обозначения операций, чтобы стандартизировать учет. Например, код «INS» обычно означает инспекционный осмотр, а «OIL» — замену масла. Понимание базовой <strong>кодировки операций</strong> поможет вам быстрее сориентироваться в документе.</p>
+
+<p>Запчасти также имеют свои артикулы. Если в отчете значится замена детали с артикулом, отличным от заводского, это может говорить о использовании аналогов или восстановленных компонентов, даже если ремонт проводился у дилера (хотя официалы редко ставят неоригинал на гарантийные машины). <em>Каталожные номера</em> позволяют точно идентифицировать, что именно было установлено на автомобиль.</p>
+
+<p>Важно различать коды «плановое ТО» и «ремонт по жалобе». Если машина регулярно приезжала с одной и той же проблемой, которую дилер пытался устранить несколько раз, это «красный флаг». Такая история указывает на то, что дефект мог быть не устранен до конца, а лишь законсервирован.</p>
+
+<details class="pb-accordion"><summary>Что означают статусы в базе?</summary><div class="pb-accordion-body"><p>Статус "Закрыто" означает, что работа выполнена и оплачена (или принята по гарантии). Статус "Открыто" может указывать на то, что автомобиль находится в ремонте или ожидает заказа запчастей. Статус "Отменено" говорит о том, что запись была создана, но работа не проводилась.</p></div></details>
+
+<h2 id="сравнение-с-данными-независимых-диагностов">Сравнение с данными независимых диагностов</h2>
+
+<p>Данные официальной сервисной истории — это только одна сторона медали. Они показывают, что происходило с машиной «на людях». Однако между визитами к дилеру автомобиль мог обслуживаться в сторонних сервисах или силами владельца. <strong>Независимая диагностика</strong> позволяет выявить расхождения между «бумажной» историей и реальным техническим состоянием.</p>
+
+<p>Например, в сервисной книге может быть запись о замене тормозных дисков, но при замере толщины выяснится, что стоят старые, изношенные детали. Это классический признак «рисования» записей недобросовестными сервисами ради галочки или для перепродажи. Только физическая <em>дефектовка узлов</em> дает полную картину.</p>
+
+<p>Компьютерная диагностика также может выявить ошибки, которые не были устранены или были сброшены без ремонта. Если в дилерской базе нет записей о серьезных ремонтах двигателя, но сканер показывает критический износ или ошибки по системе смазки, доверять нужно сканеру. Реальное состояние всегда приоритетнее записей.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Официальный сервис</th>
+<th>Независимая диагностика</th>
+<th>Визуальный осмотр</th>
+</tr>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Достоверность пробега</td>
+<td>Высокая (фиксируется при каждом ТО)</td>
+<td>Средняя (зависит от честности мастера)</td>
+<td>Низкая (косвенные признаки)</td>
+</tr>
+<tr>
+<td>Качество запчастей</td>
+<td>Оригинал (гарантированно)</td>
+<td>Вариативно (от оригинала до аналогов)</td>
+<td>Не определяется</td>
+</tr>
+<tr>
+<td>Стоимость проверки</td>
+<td>Часто бесплатно или дешево</td>
+<td>Платно (3-10 тыс. руб.)</td>
+<td>Бесплатно</td>
+</tr>
+<tr>
+<td>Выявление скрытых дефектов</td>
+<td>Только если обращались с проблемой</td>
+<td>Высокая вероятность выявления</td>
+<td>Только явные повреждения</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При заказе платного отчета по VIN у сторонних агрегаторов, сравнивайте фото автомобиля из базы страховых или ГИБДД с текущим состоянием. Несоответствие цвета или наличие новых повреждений на старых фото — признак проблем.</p></aside>
+
+<h2 id="влияние-истории-то-на-стоимость-автомобиля">Влияние истории ТО на стоимость автомобиля</h2>
+
+<p>Наличие подтвержденной сервисной истории — это мощный инструмент маркетинга при продаже. Автомобиль с полной историей обслуживания у «официалов» всегда стоит дороже аналогов без документов. Покупатели готовы переплачивать за <strong>предсказуемость</strong> и уверенность в том, что за машиной следили.</p>
+
+<p>Разница в цене может составлять от 5% до 15% от рыночной стоимости. Это плата за сниженный риск. Инвесторы и компании, обновляющие автопарки, часто вообще не рассматривают варианты без прозрачной истории, независимо от внешней привлекательности предложения. <em>Ликвидность актива</em> напрямую зависит от его прозрачности.</p>
+
+<p>С другой стороны, отсутствие записей не всегда означает плохое состояние. Частные владельцы могли обслуживать машину у проверенных мастеров, используя качественные материалы, но не оставляя следов в базах. Однако доказать это при продаже сложнее, и цена неизбежно будет ниже.</p>
+
+<h2 id="риски-покупки-авто-со-скрытой-историей">Риски покупки авто со скрытой историей</h2>
+
+<p>Покупка автомобиля, чья история обслуживания скрыта или прерывиста, несет в себе финансовые риски. Вы можете столкнуться с необходимостью дорогостоящего ремонта сразу после приобретения. Например, если предыдущий владелец пропускал замены масла, ресурс двигателя мог сократиться на 30-40%.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Автомобили, побывавшие в серьезных ДТП и восстановленные не у дилера, могут иметь скрытые нарушения геометрии кузова. Отсутствие записей о кузовном ремонте в официальной базе — частый признак таких случаев.</p>
+</blockquote>
+
+<p>Также существуют риски, связанные с юридическим статусом запчастей. Если на машине стоят агрегаты, числящиеся в угоне или снятые с битых авто, у нового владельца могут возникнуть проблемы при постановке на учет или прохождении техосмотра. Проверка на сервисное обслуживание помогает минимизировать эти риски, но не гарантирует их полное отсутствие.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Отсутствие записей в сервисной базе не является приговором, но требует более тщательной технической проверки у независимых экспертов перед покупкой.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли удалить запись из сервисной базы дилера?</summary>
+<p>Теоретически доступ к редактированию имеют только авторизованные сотрудники дилерского центра с соответствующими правами доступа. Удаление записей «задним числом» крайне затруднено и оставляет цифровые следы в логах системы. Для обычного пользователя или даже владельца авто доступ к удалению закрыт.</p>
+</details>
+
+<details>
+<summary>Видно ли в базе обслуживание у неофициалов?</summary>
+<p>Нет, в единую базу производителя (OEM) попадают данные только от официальных дилерских центров. Ремонт в сторонних СТО, даже крупных сетях, в эту базу не вносится, если только они не являются сертифицированными партнерами бренда с доступом к закрытой сети.</p>
+</details>
+
+<details>
+<summary>Что делать, если пробег в базе отличается от реального?</summary>
+<p>Небольшие расхождения (до 500 км) могут быть вызваны человеческим фактором при вводе данных мастером-приемщиком. Если же разница составляет тысячи километров, это повод для серьезного беспокойства и проверки автомобиля на предмет скрученного пробега через другие источники.</p>
+</details>
+
+<details>
+<summary>Сколько лет хранится сервисная история?</summary>
+<p>Срок хранения данных зависит от политики конкретного автопроизводителя и законодательства страны. В среднем, базы данных позволяют отследить историю за последние 10-15 лет. Для очень старых автомобилей информация может быть частично утеряна или не оцифрована.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-zvuchit-neispravnaya-pompa.html" class="pb-related-card">
+                <span class="pb-related-title">Как звучит неисправная помпа: признаки и диагностика</span>
+                <span class="pb-related-desc">Подробно о том, как звучит неисправная помпа. Разбираем звуки гула, воя и стука, методы проверки и р</span>
+            </a><a href="/articles/k/ka/kak-nazyvayutsya-chasti-vykhlopnoj-sistemy.html" class="pb-related-card">
+                <span class="pb-related-title">Как называются части выхлопной системы: полный гид по устройству</span>
+                <span class="pb-related-desc">Подробный разбор всех узлов выхлопной системы автомобиля. Узнайте, как называются глушитель, катализ</span>
+            </a><a href="/articles/v/va/val-v-dvigatele-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Вал в двигателе — устройство, виды и неисправности (2026)</span>
+                <span class="pb-related-desc">Что такое вал в двигателе автомобиля: коленвал, распредвал, балансирный и промежуточный. Принцип раб</span>
+            </a><a href="/articles/c/ch/chto-takoe-proizvodstvo-polnogo-tsikla.html" class="pb-related-card">
+                <span class="pb-related-title">Производство полного цикла: что это и как работает в автопроме</span>
+                <span class="pb-related-desc">Разбираемся, что такое полный производственный цикл в автомобильной индустрии: плюсы, минусы, пример</span>
+            </a><a href="/articles/r/ra/radiator-v-mashine-zhidkost.html" class="pb-related-card">
+                <span class="pb-related-title">Жидкость в радиаторе автомобиля: виды, проверка, замена и устранение неисправностей</span>
+                <span class="pb-related-desc">Какую жидкость заливать в радиатор машины? Как проверить уровень и состояние антифриза? Признаки неи</span>
+            </a><a href="/articles/n/na/na-avtopilote-eto-kak.html" class="pb-related-card">
+                <span class="pb-related-title">«На автопилоте» — как это работает в машине и жизни: разбираемся в деталях</span>
+                <span class="pb-related-desc">Что значит «на автопилоте» в автомобилях и повседневной жизни? Разбираем технологии, уровни автомати</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

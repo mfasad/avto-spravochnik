@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как измеряют лошадиные силы: методы и формулы — Авто Справочник</title>
+    <meta name="description" content="Полный гид по измерению мощности ДВС. Разница между DIN, SAE, PS. Как считают л.с. на стенде и в двигателе.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-izmeryayutsya-loshadinye-sily-v-avtomobile.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как измеряют лошадиные силы: методы и формулы">
+    <meta property="og:description" content="Полный гид по измерению мощности ДВС. Разница между DIN, SAE, PS. Как считают л.с. на стенде и в двигателе.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как измеряют лошадиные силы: методы и формулы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#исторический-контекст-и-физическая-сущность-мощности">Исторический контекст и физическая сущность мощности</a></li><li><a href="#различия-стандартов-din-sae-ece-и-гост">Различия стандартов: DIN, SAE, ECE и ГОСТ</a></li><li><a href="#методы-измерения-стендовые-испытания-двигателя">Методы измерения: Стендовые испытания двигателя</a></li><li><a href="#измерение-на-колесном-стенде-chassis-dyno">Измерение на колесном стенде (Chassis Dyno)</a></li><li><a href="#расчетные-методы-и-программное-моделирование">Расчетные методы и программное моделирование</a></li><li><a href="#факторы-искажающие-реальные-показатели">Факторы, искажающие реальные показатели</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-rabotaet-klapan-adsorbera.html">Клапан адсорбера: принцип работы, неисправности и диагностика</a></li><li><a href="/articles/l/lo/loshadinye-sily-i-krutyashchij-moment.html">Лошадиные силы и крутящий момент: в чем разница?</a></li><li><a href="/articles/p/po/posadka-burana-v-avtomaticheskom-rezhime.html">Посадка Бурана в автоматическом режиме: как это работало в 1988 году</a></li><li><a href="/articles/p/pe/perevod-motochasov-v-probeg.html">Перевод моточасов в пробег: точная формула и коэффициенты</a></li><li><a href="/articles/r/re/rekuperatsiya-chto-eto-takoe-prostymi.html">Рекуперация в машине: что это простыми словами и как работает</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как измеряют лошадиные силы в автомобиле: от физики до стенда</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#исторический-контекст-и-физическая-сущность-мощности">Исторический контекст и физическая сущность мощности</a></li><li><a href="#различия-стандартов-din-sae-ece-и-гост">Различия стандартов: DIN, SAE, ECE и ГОСТ</a></li><li><a href="#методы-измерения-стендовые-испытания-двигателя">Методы измерения: Стендовые испытания двигателя</a></li><li><a href="#измерение-на-колесном-стенде-chassis-dyno">Измерение на колесном стенде (Chassis Dyno)</a></li><li><a href="#расчетные-методы-и-программное-моделирование">Расчетные методы и программное моделирование</a></li><li><a href="#факторы-искажающие-реальные-показатели">Факторы, искажающие реальные показатели</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Каждый раз, когда вы смотрите в спецификацию нового автомобиля, взгляд невольно цепляется за цифру, обозначающую мощность двигателя. Это может быть скромное значение для городского хэтчбека или внушительная цифра для спорткара, но в обоих случаях мы говорим о <strong>лошадиных силах</strong>. Этот термин стал настолько привычным, что мало кто задумывается о том, что стоит за этими цифрами и каким образом инженеры получают точные значения.</p>
+
+<p>На самом деле, процесс определения мощности — это сложнейшая цепочка физических расчетов и практических замеров, которые могут существенно различаться в зависимости от страны-производителя и применяемого стандарта. Понимание того, <em>как измеряются лошадиные силы</em>, поможет вам лучше ориентироваться в технических характеристиках и объективно сравнивать разные модели между собой, не попадаясь на маркетинговые уловки.</p>
+
+<p>В этой статье мы разберем исторический контекст появления единицы измерения, рассмотрим различия между метрической и механической лошадиной силой, а также детально изучим методы снятия показаний с реальных двигателей. Вы узнаете, почему один и тот же мотор может иметь разную мощность в документах разных стран.</p>
+
+<h2 id="исторический-контекст-и-физическая-сущность-мощности">Исторический контекст и физическая сущность мощности</h2>
+
+<p>Термин «лошадиная сила» был введен Джеймсом Уаттом в конце XVIII века, и сделано это было вовсе не ради удобства автомобилистов, которых тогда еще не существовало. Уатт, совершенствуя паровые машины, нуждался в понятном способе объяснить шахтерам и владельцам мельниц, насколько эффективнее его изобретение по сравнению с живой тягловой силой. Он провел серию экспериментов, наблюдая за работой лошадей на вороту, и вывел среднее значение работы, которую может совершить животное за единицу времени.</p>
+
+<p>С физической точки зрения, <strong>мощность</strong> — это скорость выполнения работы. В контексте двигателя внутреннего сгорания это означает, насколько быстро мотор может преобразовать химическую энергию топлива в механическое движение. Важно понимать, что лошадиная сила не является статичной величиной, она напрямую зависит от <strong>крутящего момента</strong> и оборотов двигателя в конкретный момент времени.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Запомните формулу связи: Мощность = (Крутящий момент × Обороты) / Константа. Это означает, что двигатель может выдавать высокую мощность как за счет огромного крутящего момента на низких оборотах, так и за счет вращения на высоких скоростях.</p></aside>
+
+<p>Сегодня мы сталкиваемся с путаницей, так как исторически сложились разные системы измерения. В Европе и России чаще всего используют метрическую лошадиную силу (обозначается как л.с. или PS), которая математически чуть меньше, чем британская механическая лошадиная сила (hp), популярная в США и Великобритании. Разница составляет около 1.4%, что может показаться negligible, но для точных инженерных расчетов и налоговой отчетности это критически важно.</p>
+
+<h2 id="различия-стандартов-din-sae-ece-и-гост">Различия стандартов: DIN, SAE, ECE и ГОСТ</h2>
+
+<p>Когда производители указывают технические характеристики, они обязаны опираться на определенные стандарты, которые регламентируют условия проведения испытаний. Без унификации этих условий сравнение автомобилей было бы невозможным, так как каждый завод мог бы замерять мощность в «тепличных» условиях, снимая все навесное оборудование.</p>
+
+<p>Наиболее распространенным стандартом в Европе является <strong>DIN</strong> (Deutsches Institut für Normung), который сейчас гармонизирован с общеевропейскими нормами <strong>ECE</strong>. Согласно этим правилам, двигатель тестируется со всем необходимым для его работы навесным оборудованием: генератором, водяным насосом, системой выпуска отработавших газов и воздушным фильтром. Это дает так называемую «чистую» мощность, которую автомобиль реально выдает на колеса (с учетом потерь).</p>
+
+<p>В США исторически использовался стандарт <strong>SAE</strong> (Society of Automotive Engineers). Долгое время существовало разделение на «брутто» и «нетто». Мощность «брутто» замерялась на голом двигателе без генератора, насосов и глушителя, что позволяло получать завышенные цифры, популярные в рекламных буклетах muscle cars 60-х годов. Современные стандарты SAE J1349 требуют наличия всех систем, что приближает американские цифры к европейским, но небольшие расхождения в методике все еще сохраняются.</p>
+
+<details class="pb-accordion"><summary>Почему мощность падает с годами?</summary><div class="pb-accordion-body"><p>В 70-е годы мощность многих двигателей резко упала в спецификациях. Это произошло не из-за ухудшения конструкции, а из-за перехода на стандарт «нетто», который учитывает потери на привод всех вспомогательных агрегатов, ранее игнорируемых при замерах «брутто».</p></div></details>
+
+<p>В России и странах СНГ применяется <strong>ГОСТ</strong>, который в большинстве своих аспектов повторяет европейские нормы ECE, но имеет свои особенности в части условий проведения испытаний и требований к топливу. Именно данные, полученные по ГОСТу, чаще всего попадают в ПТС и используются для расчета транспортного налога.</p>
+
+<h2 id="методы-измерения-стендовые-испытания-двигателя">Методы измерения: Стендовые испытания двигателя</h2>
+
+<p>Основным инструментом для определения мощности двигателя является моторный стенд. Это сложное инженерное сооружение, позволяющее зафиксировать двигатель и нагрузить его с высокой точностью. Существует два основных типа тормозных устройств, используемых для создания нагрузки: водяные и электрические тормоза.</p>
+
+<p>В процессе испытания двигатель запускается и прогревается до рабочей температуры, после чего начинается серия замеров. Инженеры фиксируют показания при полностью открытой дроссельной заслонке, плавно повышая обороты от минимальных до максимальных. В этот момент <strong>тормозной механизм</strong> создает сопротивление вращению коленчатого вала, имитируя нагрузку, аналогичную движению автомобиля.</p>
+
+<ul>
+    <li>🔧 <strong>Водяной тормоз:</strong> использует сопротивление воды, протекающей через ротор, позволяя плавно регулировать нагрузку и эффективно отводить тепло.</li>
+    <li>⚡ <strong>Электрический тормоз:</strong> представляет собой генератор, который преобразует механическую энергию вращения в электрическую, рассеивая её в реостатах или возвращая в сеть.</li>
+    <li>📉 <strong>Система сбора данных:</strong> высокоточные датчики фиксируют крутящий момент, частоту вращения, расход топлива и температуру в реальном времени.</li>
+</ul>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Параметры идеального стендового теста</h4><label class="check-item"><input type="checkbox"><span>Калибровка датчиков перед стартом</span></label><label class="check-item"><input type="checkbox"><span>Прогрев масла до 90-100°C</span></label><label class="check-item"><input type="checkbox"><span>Стабильное атмосферное давление</span></label><label class="check-item"><input type="checkbox"><span>Использование эталонного топлива</span></label><label class="check-item"><input type="checkbox"><span>Проверка системы охлаждения</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Результатом таких испытаний становится построение <strong>внешней скоростной характеристики</strong> (ВСХ) двигателя. На графике видно, как меняется крутящий момент и мощность в зависимости от оборотов. Пиковое значение мощности, зафиксированное на этом графике, и становится той самой цифрой, которая указывается в паспорте транспортного средства.</p>
+
+<h2 id="измерение-на-колесном-стенде-chassis-dyno">Измерение на колесном стенде (Chassis Dyno)</h2>
+
+<p>В отличие от моторного стенда, где двигатель снимается с автомобиля, колесный стенд (Chassis Dyno) позволяет измерить мощность, передаваемую непосредственно на колеса. Этот метод особенно популярен среди тюнеров и автолюбителей, желающих оценить реальные потери в трансмиссии или эффект от доработок.</p>
+
+<p>Автомобиль заезжает на ролики, которые имитируют дорожное покрытие. При разгоне на стенде система измеряет усилие, с которым колеса крутят барабаны. Однако здесь есть важный нюанс: до колес мощность доходит с потерями. Механическая коробка передач, карданный вал, дифференциалы и подшипники «съедают» часть энергии, превращая её в тепло.</p>
+
+<p>Обычно потери в трансмиссии составляют от 10% до 25% в зависимости от типа привода. Для переднеприводных автомобилей этот процент ниже, а для полноприводных — выше, так как крутящий момент проходит более длинный путь и через большее количество узлов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Мощность на колесах всегда ниже мощности двигателя. Чтобы получить примерную мощность мотора по показаниям колесного стенда, нужно добавить к результату 15-20% (для переднего привода) или 25% (для полного).</p></aside>
+
+<p>Существует также метод измерения с помощью <strong>мобильного динамометра</strong>, который крепится непосредственно к ступице колеса или колесному диску. Этот способ менее точен из-за возможных пробуксовок и влияния сцепления с покрытием, но позволяет проводить замеры в полевых условиях без загона автомобиля на стационарную платформу.</p>
+
+<h2 id="расчетные-методы-и-программное-моделирование">Расчетные методы и программное моделирование</h2>
+
+<p>С развитием компьютерных технологий инженеры получили возможность прогнозировать мощность двигателя еще до создания первого физического прототипа. Используется сложное программное обеспечение для CFD-моделирования (Computational Fluid Dynamics), которое рассчитывает процессы сгорания, газообмена и теплопередачи внутри цилиндров.</p>
+
+<p>Такие расчеты позволяют оптимизировать форму впускных и выпускных каналов, профиль кулачков распредвала и степень сжатия. Компьютер может просчитать тысячи вариантов конфигурации за время, которое потребовалось бы для изготовления и тестирования одного опытного образца.</p>
+
+<div class="pb-table-wrap"><table>
+    <thead>
+        <tr>
+            <th>Параметр</th>
+            <th>Влияние на мощность</th>
+            <th>Метод оптимизации</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Объем двигателя</td>
+            <td>Прямая зависимость</td>
+            <td>Увеличение диаметра цилиндра или хода поршня</td>
+        </tr>
+        <tr>
+            <td>Эффективность сгорания</td>
+            <td>Критическое</td>
+            <td>Турбонаддув, непосредственный впрыск</td>
+        </tr>
+        <tr>
+            <td>Механические потери</td>
+            <td>Снижает выход</td>
+            <td>Использование легких материалов, снижение трения</td>
+        </tr>
+        <tr>
+            <td>Обороты (RPM)</td>
+            <td>Рост до предела</td>
+            <td>Укороченный ход поршня, балансировка</td>
+        </tr>
+    </tbody>
+</table></div>
+
+<p>Несмотря на высокую точность современных симуляций, финальное утверждение характеристик всегда происходит на реальном двигателе. Компьютерные модели служат отличным ориентиром, но живая физика вносит свои коррективы, которые необходимо учитывать при финальной калибровке.</p>
+
+<h2 id="факторы-искажающие-реальные-показатели">Факторы, искажающие реальные показатели</h2>
+
+<p>Даже если двигатель спроектирован идеально, в реальной эксплуатации его мощность может отличаться от паспортной. На это влияет множество факторов, которые в лабораторных условиях строго контролируются, но на дороге становятся переменными величинами.</p>
+
+<p>Одним из главных факторов является <strong>атмосферное давление</strong> и температура воздуха. В жаркий день или высоко в горах плотность воздуха падает, в цилиндры попадает меньше кислорода, и сгорание становится менее эффективным. Стандарты предусматривают приведение результатов к нормальным условиям (обычно 25°C и 100 кПа), но фактическая отдача будет ниже.</p>
+
+<blockquote>
+    <p>⚠️ Внимание: Эксплуатация автомобиля в высокогорье может привести к потере до 30% мощности атмосферного двигателя. Для турбированных моторов этот эффект менее выражен благодаря коррекции давления наддува.</p>
+</blockquote>
+
+<p>Также стоит учитывать состояние двигателя. Нагар на клапанах, загрязненный воздушный фильтр, износ свечей зажигания или низкое качество топлива — все это «ворует» лошадиные силы. Старый, но исправный мотор может выдавать на 10-15% меньше мощности, чем новый агрегат той же модели.</p>
+
+<div class="pb-poll" id="poll-4999cb05"><div class="pb-poll-question">📊 Что для вас важнее в двигателе?</div><div class="pb-poll-option" data-poll="4999cb05" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Максимальная мощность (л.с.)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="4999cb05" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Высокий крутящий момент</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="4999cb05" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Низкий расход топлива</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="4999cb05" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Надежность и ресурс</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+    <summary>Почему в разных странах одна и та же модель имеет разную мощность?</summary>
+    <p>Это связано с различиями в экологических нормах и методах калибровки двигателя для конкретного рынка. Иногда производители искусственно «душат» мотор программно для соблюдения местных законов или из-за качества доступного топлива.</p>
+</details>
+
+<details>
+    <summary>Можно ли увеличить лошадиные силы без вмешательства в «железо»?</summary>
+    <p>Да, с помощью чип-тюнинга (перепрограммирования ЭБУ) можно изменить параметры зажигания и топливоподачи. Однако прирост на атмосферных двигателях будет modest (5-10%), тогда как турбомоторы могут добавить 20-30% мощности.</p>
+</details>
+
+<details>
+    <summary>Что такое «налоговая» лошадиная сила?</summary>
+    <p>В России для расчета транспортного налога используется мощность, указанная в ПТС. Она округляется по правилам математики. Если в техпаспорте написано 149.5 л.с., налог будет считаться как за 150 л.с., что попадает в другую налоговую ставку.</p>
+</details>
+
+<details>
+    <summary>Влияет ли октановое число бензина на измеренную мощность?</summary>
+    <p>Безусловно. Двигатели с высокой степенью сжатия или турбиной рассчитаны на высокооктановое топливо. При использовании низкооктанового бензина система управления двигателем корректирует угол опережения зажигания, чтобы избежать детонации, что приводит к снижению мощности.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-rabotaet-klapan-adsorbera.html" class="pb-related-card">
+                <span class="pb-related-title">Клапан адсорбера: принцип работы, неисправности и диагностика</span>
+                <span class="pb-related-desc">Как работает клапан адсорбера? Симптомы неисправности, причины поломки и методы проверки электромагн</span>
+            </a><a href="/articles/l/lo/loshadinye-sily-i-krutyashchij-moment.html" class="pb-related-card">
+                <span class="pb-related-title">Лошадиные силы и крутящий момент: в чем разница?</span>
+                <span class="pb-related-desc">Разбираем, что важнее для водителя: лошадиные силы или крутящий момент двигателя. Влияние на разгон,</span>
+            </a><a href="/articles/p/po/posadka-burana-v-avtomaticheskom-rezhime.html" class="pb-related-card">
+                <span class="pb-related-title">Посадка Бурана в автоматическом режиме: как это работало в 1988 году</span>
+                <span class="pb-related-desc">Технические детали первой и единственной автоматической посадки орбитального корабля Буран в 1988 го</span>
+            </a><a href="/articles/p/pe/perevod-motochasov-v-probeg.html" class="pb-related-card">
+                <span class="pb-related-title">Перевод моточасов в пробег: точная формула и коэффициенты</span>
+                <span class="pb-related-desc">Как правильно перевести моточасы в километры пробега? Таблица коэффициентов, формула расчета ресурса</span>
+            </a><a href="/articles/r/re/rekuperatsiya-chto-eto-takoe-prostymi.html" class="pb-related-card">
+                <span class="pb-related-title">Рекуперация в машине: что это простыми словами и как работает</span>
+                <span class="pb-related-desc">Разбираемся, что такое рекуперация энергии в автомобиле, как она экономит топливо и продлевает срок </span>
+            </a><a href="/articles/m/ma/maslyanyj-filtr-kakoj-firmy-luchshe-vybrat.html" class="pb-related-card">
+                <span class="pb-related-title">Масляный фильтр какой фирмы лучше выбрать в 2026 году: ТОП-10 брендов</span>
+                <span class="pb-related-desc">Рейтинг лучших производителей масляных фильтров для авто: сравнение Mann, Bosch, Fram, Mahle и други</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

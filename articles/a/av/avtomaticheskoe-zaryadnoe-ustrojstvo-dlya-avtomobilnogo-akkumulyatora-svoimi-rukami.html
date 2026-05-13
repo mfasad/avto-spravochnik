@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Автоматическое зарядное устройство своими руками: схема и сборка — Авто Справочник</title>
+    <meta name="description" content="Подробная инструкция по сборке зарядного устройства для АКБ своими руками. Схемы, выбор компонентов, настройка и автоматизация процесса заряда.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/a/av/avtomaticheskoe-zaryadnoe-ustrojstvo-dlya-avtomobilnogo-akkumulyatora-svoimi-rukami.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Автоматическое зарядное устройство своими руками: схема и сборка">
+    <meta property="og:description" content="Подробная инструкция по сборке зарядного устройства для АКБ своими руками. Схемы, выбор компонентов, настройка и автоматизация процесса заряда.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Автоматическое зарядное устройство своими руками: схема и сборка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-и-основные-требования-к-самодельному-зу">Принцип работы и основные требования к самодельному ЗУ</a></li><li><a href="#необходимые-компоненты-и-инструменты-для-сборки">Необходимые компоненты и инструменты для сборки</a></li><li><a href="#схема-автоматического-регулятора-заряда">Схема автоматического регулятора заряда</a></li><li><a href="#процесс-сборки-и-пайки-устройства">Процесс сборки и пайки устройства</a></li><li><a href="#настройка-и-калибровка-параметров-заряда">Настройка и калибровка параметров заряда</a></li><li><a href="#эксплуатация-и-меры-безопасности">Эксплуатация и меры безопасности</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/t/tr/transponder-chto-eto-takoe-v-mashine.html">Транспондер в машине: что это, виды и как работает</a></li><li><a href="/articles/c/ch/chto-budet-esli-na-dinamikakh-pereputat-plyus-s-minusom.html">Что будет если перепутать плюс и минус на динамиках: последствия</a></li><li><a href="/articles/k/ko/kontakty-na-lampe-h4.html">Контакты на лампе H4: схема, ремонт и замена в авто 2026</a></li><li><a href="/articles/b/bu/buster-70mai-jump-starter.html">Бустер 70mai Jump Starter: Обзор и инструкция</a></li><li><a href="/articles/k/ka/kak-rabotayut-klemmy-vago.html">Клеммы Ваго: устройство, виды, схема подключения и ошибки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Сборка автоматического зарядного устройства для АКБ своими руками</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-и-основные-требования-к-самодельному-зу">Принцип работы и основные требования к самодельному ЗУ</a></li><li><a href="#необходимые-компоненты-и-инструменты-для-сборки">Необходимые компоненты и инструменты для сборки</a></li><li><a href="#схема-автоматического-регулятора-заряда">Схема автоматического регулятора заряда</a></li><li><a href="#процесс-сборки-и-пайки-устройства">Процесс сборки и пайки устройства</a></li><li><a href="#настройка-и-калибровка-параметров-заряда">Настройка и калибровка параметров заряда</a></li><li><a href="#эксплуатация-и-меры-безопасности">Эксплуатация и меры безопасности</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Эксплуатация автомобиля в зимний период или длительные простои часто приводят к разряду аккумуляторной батареи, что делает наличие надежного источника питания для её восстановления критически важным. Заводские модели зарядных устройств (ЗУ) часто либо слишком дороги, либо обладают излишне сложным функционалом, который рядовому автолюбителю не требуется. Самостоятельное изготовление <strong>автоматического зарядного устройства</strong> позволяет создать прибор, идеально адаптированный под ваши нужды, с полным контролем над качеством используемых компонентов.</p>
+
+<p>Создание такого устройства своими руками — это не только способ сэкономить бюджет, но и отличная возможность глубже понять принципы работы автомобильной электрики. Грамотно спроектированная схема обеспечит правильный режим заряда, продлит жизнь вашей <em>кислотной</em> или <em>гелевой</em> батарее и обезопасит от перезаряда, который губителен для свинцовых пластин.</p>
+
+<p>В отличие от простых "кипятильников", автоматическое ЗУ само отключит подачу тока при достижении полного заряда, что позволяет оставлять процесс без присмотра на длительное время. В этой статье мы рассмотрим проверенную схему сборки, подбор необходимых радиодеталей и тонкости настройки, которые превратят набор элементов в надежного помощника в гараже.</p>
+
+<h2 id="принцип-работы-и-основные-требования-к-самодельному-зу">Принцип работы и основные требования к самодельному ЗУ</h2>
+
+<p>Основная задача любого зарядного устройства заключается в преобразовании переменного напряжения бытовой сети 220 Вольт в постоянное напряжение, необходимое для химической реакции внутри аккумулятора. Для стандартной 12-вольтовой батареи рабочее напряжение на клеммах в конце заряда должно составлять от 13.8 до 14.4 Вольта, что выше номинального напряжения самой АКБ. <strong>Автоматика</strong> в схеме играет роль контроллера, который следит за этими параметрами и регулирует силу тока.</p>
+
+<p>Ключевым элементом здесь является узел ограничения тока и напряжения. Простейшие схемы без стабилизации могут "закипятить" электролит, если вовремя не снизить силу тока. В самодельных конструкциях часто используют тиристорные или транзисторные регуляторы, которые плавно уменьшают ток по мере роста напряжения на клеммах батареи. Это обеспечивает так называемый <em>IU-режим</em> (ток-напряжение), считающийся наиболее щадящим.</p>
+
+<p>Важно также учитывать габариты и охлаждение. Даже при КПД в 80-90% часть энергии уходит в тепло, поэтому радиаторы для силовых элементов обязательны. Надежность пайки и качество изоляции напрямую влияют на безопасность эксплуатации, так как работа идет с высокими токами и опасным сетевым напряжением.</p>
+
+<ul>
+<li>⚡ <strong>Стабильность выходного напряжения:</strong> отсутствие пульсаций, губительных для электроники авто.</li>
+<li>🛡️ <strong>Защита от переполюсовки:</strong> предотвращение выхода из строя при ошибочном подключении клемм.</li>
+<li>🌡️ <strong>Термостабильность:</strong> способность схемы не уходить в разнос при нагреве компонентов.</li>
+<li>🔌 <strong>Универсальность:</strong> возможность заряда АКБ разной емкости (от 40 до 100 Ач).</li>
+</ul>
+
+<blockquote>
+<p>⚠️ Внимание: Использование неисправных или кустарно собранных устройств с нарушением технологии может привести к возгоранию электролита или взрыву аккумулятора из-за выделения гремучего газа.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-beca5326"><div class="pb-poll-question">📊 Какой тип аккумулятора вы планируете заряжать чаще всего?</div><div class="pb-poll-option" data-poll="beca5326" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Свинцово-кислотный (WET)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="beca5326" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Гелевый (GEL)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="beca5326" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">AGM</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="beca5326" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Щелочной</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="beca5326" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю точно</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="необходимые-компоненты-и-инструменты-для-сборки">Необходимые компоненты и инструменты для сборки</h2>
+
+<p>Для сборки качественного зарядного устройства потребуется подобрать трансформатор с достаточным запасом мощности. Оптимальным выбором станет тороидальный трансформатор от старой советской аппаратуры (например, <em>ТС-180</em>) или специализированный <strong>ТН</strong>-серии, который обеспечит ток заряда не менее 5-6 Ампер. Мощность трансформатора должна быть не менее 150 Ватт, чтобы обеспечить стабильную работу под нагрузкой без перегрева обмоток.</p>
+
+<p>Выпрямительный мост собирают на мощных диодах, таких как <em>Д242</em> или импортных аналогах серии <strong>10A10</strong>. Эти диоды способны выдерживать прямой ток до 10 Ампер, но их обязательно нужно устанавливать на алюминиевые радиаторы. Для регулировки напряжения и тока часто используют составной транзистор или тиристор (например, <em>КУ202Н</em>), управляемый через потенциометр.</p>
+
+<p>Измерительные приборы — амперметр и вольтметр — необходимы для визуального контроля процесса. В современных реалиях их часто заменяют цифровыми модулями <em>DSN-VC288</em> или аналогичными, которые компактны и точны. Также потребуется корпус, который может быть изготовлен из текстолита, металла или прочного пластика, обеспечивающий вентиляцию.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Список основных компонентов</h4><label class="check-item"><input type="checkbox"><span>Трансформатор (минимум 150 Вт)</span></label><label class="check-item"><input type="checkbox"><span>Диодный мост или 4 диода (10А+)</span></label><label class="check-item"><input type="checkbox"><span>Регулирующий транзистор/тиристор</span></label><label class="check-item"><input type="checkbox"><span>Радиаторы охлаждения</span></label><label class="check-item"><input type="checkbox"><span>Амперметр и вольтметр</span></label><label class="check-item"><input type="checkbox"><span>Предохранитель на 10А</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 6</div></div>
+
+<p>При пайке мощных соединений используйте припой с высоким содержанием олова и флюс, не требующий промывки, чтобы избежать коррозии контактов в будущем. Толщина соединительных проводов должна соответствовать току нагрузки: для 6 Ампер минимальное сечение медного провода — 1.5 мм², но лучше взять 2.5 мм² для снижения потерь.</p>
+
+<h2 id="схема-автоматического-регулятора-заряда">Схема автоматического регулятора заряда</h2>
+
+<p>Сердцем нашей конструкции будет схема на базе операционного усилителя или компаратора напряжения, который сравнивает текущее напряжение на аккумуляторе с эталонным. Когда напряжение на клеммах АКБ достигает порога отсечки (например, 14.4 В), компаратор переключает состояние и через реле или транзисторный ключ разрывает цепь заряда. Это и есть принцип <strong>автоматического отключения</strong>.</p>
+
+<p>В качестве эталона напряжения часто используют стабилитроны с температурной компенсацией, например, <em>КС175</em> или прецизионные источники опорного напряжения <strong>TL431</strong>. Использование TL431 предпочтительнее, так как этот компонент обеспечивает высокую точность срабатывания и стабильность пороговых значений в широком диапазоне температур.</p>
+
+<p>Схема также должна включать узел гистерезиса, чтобы реле не щелкало постоянно при достижении порогового значения. Гистерезис создает небольшой коридор напряжения (например, включение при 12.5В, выключение при 14.4В), что продлевает жизнь коммутационным элементам и самому аккумулятору.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Компонент</th>
+<th>Тип/Маркировка</th>
+<th>Назначение</th>
+<th>Кол-во</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Операционный усилитель</td>
+<td>LM358 / КР1446УД1</td>
+<td>Сравнение напряжений</td>
+<td>1 шт</td>
+</tr>
+<tr>
+<td>Транзистор ключа</td>
+<td>IRFZ44N / КТ819</td>
+<td>Коммутация цепи</td>
+<td>1 шт</td>
+</tr>
+<tr>
+<td>Стабилизатор</td>
+<td>TL431</td>
+<td>Опорное напряжение</td>
+<td>1 шт</td>
+</tr>
+<tr>
+<td>Реле</td>
+<td>12В / 10А</td>
+<td>Разрыв цепи заряда</td>
+<td>1 шт</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ Внимание: При настройке схемы без подключенного аккумулятора выходное напряжение холостого хода может быть выше 14.4В. Не подключайте чувствительную электронику автомобиля напрямую к незавершенному устройству.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Как рассчитать сопротивление резисторов для настройки порога?</summary><div class="pb-accordion-body"><p>Для расчета используется формула делителя напряжения. Если опорное напряжение TL431 составляет 2.5В, а нужно получить порог 14.4В, то соотношение резисторов в цепи обратной связи должно быть подобрано так, чтобы на входе компаратора было 2.5В при 14.4В на входе. Точный расчет зависит от конкретной схемы включения.>
+
+<h2 id="процесс-сборки-и-пайки-устройства">Процесс сборки и пайки устройства</h2>
+
+<p>Сборку начинают с установки силовых элементов на радиаторы. Транзисторы и диоды необходимо изолировать от алюминиевого корпуса радиатора слюдяными прокладками, чтобы избежать короткого замыкания. Теплопроводящая паста обязательна для эффективного отвода тепла, иначе <strong>термический пробой</strong> наступит через несколько минут работы.</p>
+
+<p>Монтаж платы управления лучше производить на печатной плате, травленой в хлорном железе или перхлориде меди. Дорожки, по которым течет ток заряда, следует усилить лужением или припаять поверх медную проволоку. Это снизит сопротивление и нагрев платы в процессе длительной эксплуатации.</p>
+
+<p>Подключение переменного резистора (потенциометра) для регулировки тока или напряжения должно осуществляться экранированным проводом или короткими дорожками, чтобы минимизировать наводки и шум, которые могут дестабилизировать работу <em>операционного усилителя</em>.</p>
+
+<p>После пайки всех компонентов плату необходимо очистить от остатков флюса спиртом или специальным очистителем. Это предотвратит образование токопроводящих мостиков из-за влаги и пыли, которые могут возникнуть в условиях гаража.</p>
+
+<ul>
+<li>🔧 <strong>Проверка соединений:</strong> "прозвоните" все дорожки мультиметром перед подачей питания.</li>
+<li>🧹 <strong>Удаление стружки:</strong> убедитесь, что между контактами нет медной стружки от сверления.</li>
+<li>🔩 <strong>Фиксация:</strong> все крупные элементы должны быть надежно закреплены, чтобы вибрация не нарушила контакт.</li>
+</ul>
+
+
+
+<h2 id="настройка-и-калибровка-параметров-заряда">Настройка и калибровка параметров заряда</h2>
+
+<p>Первый запуск устройства производите через предохранитель и, желательно, через лабораторный блок питания с ограничением тока, чтобы в случае ошибки монтажа не сжечь компоненты. Если такой возможности нет, подключайте к сети кратковременно, контролируя нагрев элементов.</p>
+
+<p>Настройка начинается с установки порога отсечки. Для этого соберите имитатор разряженного аккумулятора или используйте заряженную АКБ и регулируемый источник напряжения. Вращая подстроечный резистор, добейтесь переключения реле или изменения состояния светодиода индикации ровно при 14.4 Вольта. Это значение является <mark>критически важным</mark> для современных кальциевых аккумуляторов.</p>
+
+<p>Далее калибруют ток заряда. Подключив нагрузку (например, мощную лампу) и амперметр, выставите максимальный ток, который выдает трансформатор, и проверьте, не уходит ли схема в насыщение. Регулировка обычно осуществляется подбором номинала резистора в эмиттерной цепи или изменением положения движка потенциометра.</p>
+
+<p>Обязательно проверьте работу защиты от переполюсовки, если она предусмотрена схемой. При неправильном подключении клемм индикатор должен сигнализировать об ошибке, а ток заряда — отсутствовать. Это спасет ваше самодельное устройство и аккумулятор от фатальных последствий.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не производите настройку токоведущих частей устройства, подключенного к сети 220В, без использования разделительного трансформатора или диэлектрических перчаток.</p>
+</blockquote>
+
+<h2 id="эксплуатация-и-меры-безопасности">Эксплуатация и меры безопасности</h2>
+
+<p>Готовое зарядное устройство готово к работе, но требует соблюдения правил эксплуатации. При зарядке аккумулятор выделяет водород, поэтому процесс должен проходить в хорошо проветриваемом помещении. Искрообразование в реле или при плохом контакте клемм может воспламенить смесь газов, поэтому надежность соединений — приоритет номер один.</p>
+
+<p>В процессе работы следите за температурой корпуса трансформатора и радиаторов. Если рука не терпит прикосновения (выше 60-70°C), значит, перегрев. В этом случае необходимо либо уменьшить ток заряда, либо организовать принудительное охлаждение с помощью <strong>компьютерного кулера</strong>, запитанного от выхода самого ЗУ.</p>
+
+<p>Хранить устройство следует в сухом месте, отсоединив сетевой шнур. Периодически, раз в полгода, рекомендуется проводить профилактический осмотр на предмет окисления контактов и целостности изоляции проводов, особенно в местах их выхода из корпуса.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильно собранное и настроенное зарядное устройство служит десятилетиями, в отличие от дешевых китайских аналогов, где часто экономят на меди в обмотках и толщине проводов.</p></aside>
+
+<details>
+<summary>Можно ли заряжать этим устройством гелевые аккумуляторы?</summary>
+<p>Да, но только если вы точно выставите напряжение отсечки. Для гелевых АКБ (GEL) оно не должно превышать 14.2-14.4 Вольта. Превышение этого значения приведет к необратимому вспучиванию геля и выходу батареи из строя. Убедитесь, что ваш вольтметр имеет минимальную погрешность.</p>
+</details>
+
+<details>
+<summary>Почему греется трансформатор при работе?</summary>
+<p>Нагрев трансформатора — это нормальный физический процесс, связанный с потерями в меди и магнитопроводе. Однако если температура превышает 80 градусов, возможно, вы превысили расчетный ток нагрузки или у трансформатора недостаточная мощность для выбранного режима заряда.</p>
+</details>
+
+<details>
+<summary>Нужно ли снимать аккумулятор с автомобиля для зарядки?</summary>
+<p>Для самодельных устройств, особенно без сложных фильтров пульсаций, рекомендуется снимать АКБ с автомобиля. Это гарантирует, что скачки напряжения или ошибки в работе схемы не повредят штатную электронику (ЭБУ, магнитолу) вашего транспортного средства.</p>
+</details>
+
+<details>
+<summary>Как понять, что аккумулятор полностью заряжен?</summary>
+<p>Основной признак — падение тока заряда до минимальных значений (0.5-1 Ампер) при неизменном напряжении 14.4В. Также признаком полного заряда является "кипение" электролита (обильное газовыделение) во всех банках, но для современных необслуживаемых АКБ лучше ориентироваться на показания вольтметра и амперметра.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/t/tr/transponder-chto-eto-takoe-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Транспондер в машине: что это, виды и как работает</span>
+                <span class="pb-related-desc">Подробный гид по транспондерам в автомобиле: от ETC до иммобилайзера. Узнайте, как работает RFID, за</span>
+            </a><a href="/articles/c/ch/chto-budet-esli-na-dinamikakh-pereputat-plyus-s-minusom.html" class="pb-related-card">
+                <span class="pb-related-title">Что будет если перепутать плюс и минус на динамиках: последствия</span>
+                <span class="pb-related-desc">Разбор последствий переполюсовки динамиков в автомобиле. Узнайте, сгорит ли магнитола, как проверить</span>
+            </a><a href="/articles/k/ko/kontakty-na-lampe-h4.html" class="pb-related-card">
+                <span class="pb-related-title">Контакты на лампе H4: схема, ремонт и замена в авто 2026</span>
+                <span class="pb-related-desc">Разбираемся в контактах лампы H4: распиновка, типичные неисправности, как проверить и заменить. Схем</span>
+            </a><a href="/articles/b/bu/buster-70mai-jump-starter.html" class="pb-related-card">
+                <span class="pb-related-title">Бустер 70mai Jump Starter: Обзор и инструкция</span>
+                <span class="pb-related-desc">Пусковое устройство 70mai: характеристики, инструкция по запуску двигателя, зарядка и тесты в мороз.</span>
+            </a><a href="/articles/k/ka/kak-rabotayut-klemmy-vago.html" class="pb-related-card">
+                <span class="pb-related-title">Клеммы Ваго: устройство, виды, схема подключения и ошибки</span>
+                <span class="pb-related-desc">Подробный разбор клемм Wago: как они работают, в чем отличие серий 773 и 222, правильный монтаж и ти</span>
+            </a><a href="/articles/m/ma/mashina-ne-zavoditsya-tresk-pri-zapuske.html" class="pb-related-card">
+                <span class="pb-related-title">Треск при запуске двигателя: причины и что делать если машина не заводится</span>
+                <span class="pb-related-desc">Разбираем 7 основных причин треска стартера при запуске двигателя, почему машина не заводится и как </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

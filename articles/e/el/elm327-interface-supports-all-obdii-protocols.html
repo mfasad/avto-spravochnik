@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Интерфейс ELM327: Поддержка всех протоколов OBDII — Авто Справочник</title>
+    <meta name="description" content="Полный разбор чипов ELM327. Какие протоколы OBDII поддерживает адаптер? Отличия версий 1.5 и 2.1, таблица совместимости с авто.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/e/el/elm327-interface-supports-all-obdii-protocols.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Интерфейс ELM327: Поддержка всех протоколов OBDII">
+    <meta property="og:description" content="Полный разбор чипов ELM327. Какие протоколы OBDII поддерживает адаптер? Отличия версий 1.5 и 2.1, таблица совместимости с авто.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Интерфейс ELM327: Поддержка всех протоколов OBDII</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#архитектура-чипа-и-эмуляция-протоколов">Архитектура чипа и эмуляция протоколов</a></li><li><a href="#основные-поддерживаемые-протоколы-obdii">Основные поддерживаемые протоколы OBDII</a></li><li><a href="#таблица-совместимости-протоколов-и-автомобилей">Таблица совместимости протоколов и автомобилей</a></li><li><a href="#проблемы-совместимости-версии-15-против-21">Проблемы совместимости: Версии 1.5 против 2.1</a></li><li><a href="#настройка-соединения-и-команды-at">Настройка соединения и команды AT</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/ma/massa-snaryazhennogo-avtomata-kalashnikova.html">Масса снаряженного автомата Калашникова: вес и ТТХ</a></li><li><a href="/articles/s/sk/skaner-fcar-f7s-d.html">Сканер FCAR F7S-D: характеристики, функции и возможности</a></li><li><a href="/articles/k/ka/kakie-instrumenty-dolzhny-byt-v-mashine.html">Какие инструменты должны быть в машине: полный список 2026</a></li><li><a href="/articles/c/ch/chem-stetoskop-otlichaetsya-ot-stetofonendoskopa.html">Чем стетоскоп отличается от стетофонендоскопа: полный разбор</a></li><li><a href="/articles/l/li/light-detection-and-ranging.html">Light Detection and Ranging (LiDAR): Как лазерный радар работает в авто</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Интерфейс ELM327: Поддержка всех протоколов OBDII</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#архитектура-чипа-и-эмуляция-протоколов">Архитектура чипа и эмуляция протоколов</a></li><li><a href="#основные-поддерживаемые-протоколы-obdii">Основные поддерживаемые протоколы OBDII</a></li><li><a href="#таблица-совместимости-протоколов-и-автомобилей">Таблица совместимости протоколов и автомобилей</a></li><li><a href="#проблемы-совместимости-версии-15-против-21">Проблемы совместимости: Версии 1.5 против 2.1</a></li><li><a href="#настройка-соединения-и-команды-at">Настройка соединения и команды AT</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современная автомобильная диагностика стала доступной не только для сотрудников автосервисов, но и для обычных автолюбителей благодаря массовому распространению адаптеров на базе чипа <strong>ELM327</strong>. Этот компактный интерфейс служит мостом между электронным блоком управления (ЭБУ) вашего автомобиля и персональным компьютером или смартфоном. Основная задача устройства заключается в преобразовании сложных сигналов бортовой сети в понятный для компьютера формат, позволяя считывать коды ошибок, параметры работы двигателя и другую телеметрию.</p>
+
+<p>Утверждение о том, что <em>ELM327</em> поддерживает все протоколы OBDII, является ключевым маркетинговым тезисом, но оно требует детального рассмотрения с технической точки зрения. Действительно, микроконтроллеры серии 327, разработанные компанией ELM Electronics, были спроектированы с целью универсализации доступа к диагностическим данным. Однако реальная поддержка зависит от конкретной ревизии чипа, качества исполнения платы и версии прошивки, что часто становится причиной путаницы у начинающих пользователей.</p>
+
+<p>В этой статье мы разберем, как именно происходит взаимодействие с различными протоколами, почему дешевые китайские копии могут не видеть некоторые автомобили и на что обратить внимание при выборе оборудования. Понимание принципов работы <strong>протоколов связи</strong> поможет вам избежать покупки нерабочего гаджета и правильно настроить диагностическое программное обеспечение.</p>
+
+<h2 id="архитектура-чипа-и-эмуляция-протоколов">Архитектура чипа и эмуляция протоколов</h2>
+
+<p>Фундаментальной основой любого адаптера является сам микроконтроллер. Оригинальный чип <em>ELM327</em> представляет собой программируемое устройство, которое берет на себя всю тяжелую работу по кодированию и декодированию сигналов. Вместо того чтобы заставлять компьютер пользователя генерировать сложные временные диаграммы для каждого типа связи, адаптер берет на себя роль переводчика. Вы отправляете ему простые ASCII-команды, а он транслирует их в язык, понятный конкретному автомобилю.</p>
+
+<p>Важно понимать, что поддержка всех протоколов реализуется не магическим образом, а благодаря встроенному программному обеспечению самого чипа. Внутри микросхемы зашиты алгоритмы для работы с различными физическими уровнями и логическими стандартами. Когда диагностическая программа на смартфоне отправляет команду автоматического поиска, адаптер последовательно перебирает известные ему конфигурации, пытаясь получить ответ от ЭБУ.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Дешевые копии чипов (часто маркируемые как v2.1) могут иметь урезанную внутреннюю память, что физически не позволяет им хранить полные алгоритмы для всех 5 основных протоколов OBDII, заявленных в спецификации.</p>
+</blockquote>
+
+<p>Процесс согласования параметров связи занимает от нескольких секунд до минуты. В это время адаптер проверяет скорость baud rate, тип битрейта и структуру кадра. Если автомобиль использует, например, протокол <strong>ISO 9141-2</strong>, чип переключает свои порты в соответствующий режим и начинает прослушивать K-линию. Если же автомобиль работает по CAN-шине, алгоритм будет искать активные домены с определенной частотой кадров.</p>
+
+<ul>
+<li>🔹 Адаптер берет на себя функции физического уровня, избавляя ПК от необходимости иметь специфические порты.</li>
+<li>🔹 Встроенная буферизация данных позволяет сглаживать скачки напряжения и помехи в бортовой сети.</li>
+<li>🔹 Поддержка команд стандарта SAE J1979 обеспечивает совместимость с большинством сканеров.</li>
+</ul>
+
+<div class="pb-poll" id="poll-c5cd04f9"><div class="pb-poll-question">📊 С каким типом адаптера ELM327 вы сталкивались?</div><div class="pb-poll-option" data-poll="c5cd04f9" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Оригинальный ELM327 v1.5</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c5cd04f9" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Китайская копия v2.1</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c5cd04f9" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Профессиональный сканер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c5cd04f9" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не пользовался</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="основные-поддерживаемые-протоколы-obdii">Основные поддерживаемые протоколы OBDII</h2>
+
+<p>Стандарт OBDII (On-Board Diagnostics II) не является единым протоколом, а представляет собой набор требований, допускающий использование различных физических и логических интерфейсов. Чип <em>ELM327</em> разработан для работы с пятью основными протоколами, которые охватывают подавляющее большинство легковых автомобилей, выпущенных после 1996 года в США и после 2001 года в Европе.</p>
+
+<p>Первым и одним из самых распространенных в старых автомобилях является протокол <strong>SAE J1850 PWM</strong>. Он использовался преимущественно в автомобилях марки Ford до 2003 года. Этот протокол характеризуется высокой скоростью передачи данных и использует двухпроводную схему подключения. Адаптер должен уметь генерировать сигналы с точным соблюдением временных интервалов, что критично для стабильного соединения.</p>
+
+<p>Второй важный стандарт — <strong>SAE J1850 VPW</strong>, который применялся в автомобилях General Motors. В отличие от PWM, здесь используется однопроводная схема, и скорость передачи данных ниже. Несмотря на простоту физической реализации, логика обмена данными требует точной синхронизации, которую обеспечивает микроконтроллер адаптера.</p>
+
+<details class="pb-accordion"><summary>Технические детали реализации протоколов</summary><div class="pb-accordion-body"><p>Внутри чипа ELM327 каждый протокол реализуется отдельным модулем прошивки. При переключении режимов меняются настройки таймеров и прерываний микроконтроллера. Например, для PWM требуется генерация импульсов строгой длительности, тогда как для ISO 9141-2 важна точная задержка между байтами (P3 timing).</p></div></details>
+
+<p>Европейские и азиатские автомобили часто используют стандарт <strong>ISO 9141-2</strong> и <strong>ISO 14230-4 (KWP2000)</strong>. Эти протоколы базируются на K-линии и требуют инициализации перед началом передачи данных. Сложность заключается в том, что разные производители автомобилей могут использовать разные байты инициализации, и адаптер должен уметь подстраиваться под них автоматически или по команде пользователя.</p>
+
+<p>Современные автомобили, выпущенные после 2003-2004 годов, практически поголовно оснащаются шиной <strong>CAN (Controller Area Network)</strong>. Это самый быстрый и надежный протокол из поддерживаемых. <em>ELM327</em> поддерживает как стандартный CAN (11-bit ID), так и расширенный (29-bit ID), а также различные скорости (125 kbps, 250 kbps, 500 kbps, 1 Mbps).</p>
+
+<h2 id="таблица-совместимости-протоколов-и-автомобилей">Таблица совместимости протоколов и автомобилей</h2>
+
+<p>Для удобства понимания того, какой протокол используется в вашем автомобиле, и поддерживает ли его конкретная версия адаптера, составлена следующая таблица. Она демонстрирует зависимость между годом выпуска, регионом производства и требуемым стандартом связи.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Протокол</th>
+<th>Типичные автомобили</th>
+<th>Годы выпуска</th>
+<th>Поддержка ELM327</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SAE J1850 PWM</td>
+<td>Ford, Lincoln, Mercury</td>
+<td>1996 – 2003</td>
+<td>Полная (v1.5)</td>
+</tr>
+<tr>
+<td>SAE J1850 VPW</td>
+<td>GM, Chevrolet, Cadillac</td>
+<td>1996 – 2003</td>
+<td>Полная (v1.5)</td>
+</tr>
+<tr>
+<td>ISO 9141-2</td>
+<td>Chrysler, Europe, Asia</td>
+<td>1996 – 2003+</td>
+<td>Полная</td>
+</tr>
+<tr>
+<td>ISO 14230-4 (KWP)</td>
+<td>Europe, Asia (K-Line)</td>
+<td>2003+</td>
+<td>Полная</td>
+</tr>
+<tr>
+<td>ISO 15765-4 (CAN)</td>
+<td>Все современные авто</td>
+<td>2004+</td>
+<td>Полная</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Как видно из таблицы, адаптеры на базе <strong>ELM327</strong> теоретически способны покрыть весь спектр автомобильной электроники последних десятилетий. Однако на практике владельцы старых Ford или GM могут столкнуться с проблемами, если используют упрощенные версии клонов, которые часто лишены поддержки протоколов J1850.</p>
+
+<p>Особое внимание стоит уделить автомобилям с гибридной системой питания или сложной электроникой. Иногда для доступа к определенным блокам (например, ABS или Airbag) может потребоваться специфическая настройка скорости CAN-шины, которую стандартный алгоритм автоопределения может не угадать с первого раза. В таких случаях требуется ручное вмешательство в настройки программного обеспечения.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Наличие поддержки всех 5 протоколов в спецификации чипа не гарантирует их работоспособность в конкретной копии адаптера из-за различий в элементной базе.</p></aside>
+
+<h2 id="проблемы-совместимости-версии-15-против-21">Проблемы совместимости: Версии 1.5 против 2.1</h2>
+
+<p>На рынке диагностического оборудования сложилась парадоксальная ситуация, когда более новая версия чипа (маркируемая как 2.1) работает хуже, чем старая (1.5). Это связано с тем, что оригинальный чип <em>ELM327 v1.5</em> был снят с производства, и его место заняли китайские клоны. Версия 2.1 — это попытка удешевить производство за счет использования менее мощных микроконтроллеров (часто PIC18F25K80 вместо PIC18F25K80 с полной прошивкой или аналогов).</p>
+
+<p>Основная проблема версий 2.1 заключается в урезанном функционале. Чтобы сэкономить на стоимости кристалла, производители прошивок удаляют поддержку "редких" протоколов, таких как <strong>J1850 PWM/VPW</strong>. Кроме того, в версии 2.1 часто нарушена работа с CAN-шиной: могут наблюдаться потери пакетов, невозможность работы на высоких скоростях (500 кбит/с) или проблемы с инициализацией в автомобилях группы VAG (Volkswagen, Audi).</p>
+
+<ul>
+<li>🔸 Адаптеры v1.5 обычно имеют более качественный PCB и полноценную поддержку всех команд AT.</li>
+<li>🔸 Версии v2.1 часто не могут работать с программами, требующими точного тайминга.</li>
+<li>🔸 Визуально отличить версии можно по маркировке на чипе, но надежнее — тестовым подключением.</li>
+</ul>
+
+<p>Если вы владелец автомобиля Ford начала 2000-х годов, покупка адаптера версии 2.1 с высокой долей вероятности приведет к тому, что вы не сможете подключиться к автомобилю. Для таких случаев <mark>единственным надежным решением остается поиск адаптеров с маркировкой v1.5 и чипом PIC</mark>, которые сохраняют полную совместимость со legacy-протоколами.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Маркировка "v2.1" на корпусе адаптера не всегда означает, что внутри стоит именно этот чип. Производители могут писать любую версию. Всегда проверяйте реальный VID/PID устройства через программу типа "ELM Identifier".</p>
+</blockquote>
+
+<h2 id="настройка-соединения-и-команды-at">Настройка соединения и команды AT</h2>
+
+<p>Для успешной работы с адаптером недостаточно просто подключить его в разъем OBDII. Часто требуется ручная настройка параметров связи, особенно если автоматическое определение не сработало. Управление адаптером осуществляется через набор так называемых <strong>AT-команд</strong>, которые отправляются в терминальном режиме или через специализированное ПО.</p>
+
+<p>Одной из самых важных команд является <code>AT SP 0</code>, которая заставляет адаптер автоматически искать протокол. Однако в сложных случаях, когда в машине установлено несколько ЭБУ с разными протоколами, автоматика может запутаться. Тогда полезно знать конкретный протокол вашего авто и задавать его принудительно, например, <code>AT SP 6</code> для CAN (500 kbps).</p>
+
+<pre><code>AT Z ; Сброс адаптера к заводским настройкам
+<p>AT SP 0 ; Автоматический поиск протокола</p>
+<p>AT MA ; Мониторинг активности (для анализа трафика)</p>
+<p>AT ST 62 ; Установка задержки ответа (таймаута)</code></pre></p>
+
+<p>Еще один критический параметр — это скорость соединения самого адаптера с компьютером или телефоном. По умолчанию она составляет 9600 бод, но для работы с CAN-шиной и передачи больших объемов данных в реальном времени (графики, логирование) ее рекомендуется повышать до 115200 или 57600 бод командой <code>AT BR 115200</code> (если прошивка поддерживает).</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка работоспособности адаптера</h4><label class="check-item"><input type="checkbox"><span>Подключить адаптер в OBD разъем автомобиля</span></label><label class="check-item"><input type="checkbox"><span>Включить зажигание (не заводить мотор)</span></label><label class="check-item"><input type="checkbox"><span>Запустить приложение (Torque Pro / OpenDiag)</span></label><label class="check-item"><input type="checkbox"><span>Проверить статус подключения "Connected"</span></label><label class="check-item"><input type="checkbox"><span>Считать VIN-код автомобиля</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Почему адаптер ELM327 не подключается к автомобилю?</summary>
+<p>Причин может быть несколько: несовместимость версии чипа (v2.1 вместо v1.5), отсутствие питания в разъеме OBD (сгорел предохранитель), неправильный выбор протокола в приложении или использование пиратского ПО с ошибками. Также проверьте, включено ли зажигание.</p>
+</details>
+
+<details>
+<summary>Поддерживает ли ELM327 чтение кодов Airbag и ABS?</summary>
+<p>Стандарт OBDII, который реализует ELM327, в первую очередь заточен под двигатель (Engine). Чтение систем безопасности (Airbag, ABS, ESP) возможно только если эти блоки поддерживают стандартные PID-параметры или если приложение умеет отправлять специфические запросы, но полноценная диагностика этих систем требует более сложных сканеров.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать ELM327 для чип-тюнинга?</summary>
+<p>Нет. Интерфейс ELM327 предназначен только для диагностики и считывания данных в режиме реального времени. Он не имеет функций для записи новых калибровок в ЭБУ, так как это требует других протоколов безопасности и алгоритмов, недоступных через стандартный OBDII интерфейс.</p>
+</details>
+
+<details>
+<summary>Какое приложение лучше использовать для Android и iOS?</summary>
+<p>Для Android золотым стандартом считается <em>Torque Pro</em> или <em>OpenDiag</em> (для отечественных авто). Для iOS (iPhone) лучше всего подходят <em>Car Scanner ELM OBD2</em> или <em>DashCommand</em>. Важно выбирать приложения, которые позволяют вручную настраивать протоколы связи.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы планируете заниматься диагностикой постоянно, приобретите адаптер с переключателем питания или разрывателем цепи, чтобы не сажать аккумулятор автомобиля при длительных простоях.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/ma/massa-snaryazhennogo-avtomata-kalashnikova.html" class="pb-related-card">
+                <span class="pb-related-title">Масса снаряженного автомата Калашникова: вес и ТТХ</span>
+                <span class="pb-related-desc">Точный вес автомата Калашникова: масса снаряженного и неснаряженного оружия. Характеристики АК-74, А</span>
+            </a><a href="/articles/s/sk/skaner-fcar-f7s-d.html" class="pb-related-card">
+                <span class="pb-related-title">Сканер FCAR F7S-D: характеристики, функции и возможности</span>
+                <span class="pb-related-desc">Подробный обзор профессионального автосканера FCAR F7S-D. Диагностика легковых и грузовых авто, функ</span>
+            </a><a href="/articles/k/ka/kakie-instrumenty-dolzhny-byt-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Какие инструменты должны быть в машине: полный список 2026</span>
+                <span class="pb-related-desc">Обязательный набор инструментов для авто: от домкрата до мультиметра. Что взять в дорогу, а без чего</span>
+            </a><a href="/articles/c/ch/chem-stetoskop-otlichaetsya-ot-stetofonendoskopa.html" class="pb-related-card">
+                <span class="pb-related-title">Чем стетоскоп отличается от стетофонендоскопа: полный разбор</span>
+                <span class="pb-related-desc">В чем разница между стетоскопом и стетофонендоскопом? Подробное сравнение конструкций, акустических </span>
+            </a><a href="/articles/l/li/light-detection-and-ranging.html" class="pb-related-card">
+                <span class="pb-related-title">Light Detection and Ranging (LiDAR): Как лазерный радар работает в авто</span>
+                <span class="pb-related-desc">Подробный разбор технологии Light Detection and Ranging. Применение LiDAR в автомобилях, робомобилях</span>
+            </a><a href="/articles/m/my/myasorubka-gajkovert-ruchnoj-dlya-gruzovikov.html" class="pb-related-card">
+                <span class="pb-related-title">Мясорубка гайковерт ручной для грузовиков: выбор и применение</span>
+                <span class="pb-related-desc">Подробный обзор ручных гайковертов для грузовиков. Как выбрать надежный инструмент для замены колес?</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

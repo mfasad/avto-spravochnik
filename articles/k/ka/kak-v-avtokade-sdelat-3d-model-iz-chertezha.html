@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как в AutoCAD сделать 3D модель из чертежа: полная инструкция — Авто Справочник</title>
+    <meta name="description" content="Подробный гайд: как в Автокаде сделать 3д модель из чертежа. Методы выдавливания, вращения и построения по сечениям для 2D-основы.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-v-avtokade-sdelat-3d-model-iz-chertezha.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как в AutoCAD сделать 3D модель из чертежа: полная инструкция">
+    <meta property="og:description" content="Подробный гайд: как в Автокаде сделать 3д модель из чертежа. Методы выдавливания, вращения и построения по сечениям для 2D-основы.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как в AutoCAD сделать 3D модель из чертежа: полная инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#подготовка-двумерного-основания-для-моделирования">Подготовка двумерного основания для моделирования</a></li><li><a href="#метод-выдавливания-extrude-для-простых-форм">Метод выдавливания (Extrude) для простых форм</a></li><li><a href="#построение-тел-вращения-revolve-и-по-траектории">Построение тел вращения (Revolve) и по траектории</a></li><li><a href="#сравнение-методов-создания-3d-объектов">Сравнение методов создания 3D-объектов</a></li><li><a href="#редактирование-и-булевы-операции">Редактирование и булевы операции</a></li><li><a href="#визуализация-и-навигация-в-3d-пространстве">Визуализация и навигация в 3D-пространстве</a></li><li><a href="#частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-zakrepit-klemmu-na-provode.html">Как закрепить клемму на проводе: полная инструкция</a></li><li><a href="/articles/k/ka/kak-polzovatsya-obd-skanerom.html">Как пользоваться OBD-сканером: пошаговая инструкция для автовладельцев</a></li><li><a href="/articles/k/kl/klipsy-zakladnye-pod-samorez.html">Клипсы закладные под саморез: виды, применение и монтаж</a></li><li><a href="/articles/m/ma/mashina-raspil-chto-eto.html">Машина распил: что это такое и как работает в 2026 году</a></li><li><a href="/articles/n/na/nasos-dlya-koles-avtomobilya.html">Насос для колес автомобиля: как выбрать и правильно использовать</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как в AutoCAD сделать 3D модель из чертежа: пошаговый алгоритм</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#подготовка-двумерного-основания-для-моделирования">Подготовка двумерного основания для моделирования</a></li><li><a href="#метод-выдавливания-extrude-для-простых-форм">Метод выдавливания (Extrude) для простых форм</a></li><li><a href="#построение-тел-вращения-revolve-и-по-траектории">Построение тел вращения (Revolve) и по траектории</a></li><li><a href="#сравнение-методов-создания-3d-объектов">Сравнение методов создания 3D-объектов</a></li><li><a href="#редактирование-и-булевы-операции">Редактирование и булевы операции</a></li><li><a href="#визуализация-и-навигация-в-3d-пространстве">Визуализация и навигация в 3D-пространстве</a></li><li><a href="#частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Современное проектирование невозможно представить без объемного моделирования, которое позволяет увидеть объект со всех сторон еще до начала производства. Инженеры и архитекторы часто сталкиваются с необходимостью трансформировать плоские <strong>двумерные схемы</strong>, накопленные годами, в полноценные пространственные объекты для визуализации или расчетов. Процесс этот требует понимания логики построения твердых тел и владения специфическим набором инструментов программы.</p>
+<p>Многие пользователи ошибочно полагают, что переход от плоского рисунка к объему требует полной перерисовки проекта с нуля. На самом деле, программный комплекс предлагает мощные механизмы конвертации, позволяющие использовать уже готовую <strong>графическую базу</strong> как фундамент для создания 3D-геометрии. Это экономит колоссальное количество времени и снижает риск возникновения ошибок при повторном вводе размеров.</p>
+<p>В данном материале мы детально разберем, как в Автокаде сделать 3д модель из чертежа, используя стандартные команды редактирования и моделирования. Вы узнаете о нюансах подготовки исходных данных, методах создания тел и способах проверки результата. Глубокое погружение в тему поможет вам автоматизировать рутинные операции и повысить качество проектной документации.</p>
+
+<h2 id="подготовка-двумерного-основания-для-моделирования">Подготовка двумерного основания для моделирования</h2>
+<p>Прежде чем приступать к созданию объема, необходимо убедиться, что исходный чертеж технически пригоден для конвертации. Часто старые проекты содержат разрывы в контурах, лишние линии или пересекающиеся отрезки, которые программа воспринимает как ошибку при попытке создания твердого тела. Идеальная <strong>2D-основа</strong> должна представлять собой замкнутый контур без внутренних пересечений.</p>
+<p>Первым шагом станет очистка рабочего пространства от размерных линий, штриховок и текстовых пояснений, которые не несут геометрической нагрузки для объема. Рекомендуется скопировать необходимые виды на отдельный слой или в новое окно документа, чтобы не повредить исходный файл. После этого следует использовать команду <code>JOIN</code> (Объединить) или <code>PEDIT</code> для сведения разрозненных отрезков в единую полилинию.</p>
+<p>Особое внимание уделите точности сопряжений: если линии не сходятся в узлах, команда выдавливания просто не сработает, выдав сообщение об ошибке. Для проверки замкнутости контура можно использовать команду <code>BOUNDARY</code>, которая создаст новую полилинию по внутреннему периметру области. Если команда выполняется успешно, значит, геометрия готова к дальнейшей работе.</p>
+<blockquote>
+<p>⚠️ Внимание: Если ваш чертеж содержит дублирующиеся линии (одна поверх другой), команда создания тела может не сработать или создать артефакты. Используйте команду <code>OVERKILL</code> для удаления наложений перед началом моделирования.</p>
+</blockquote>
+<p>Важно также проверить масштаб исходного чертежа. Часто бывает, что <strong>геометрия</strong> нарисована в миллиметрах, а проект требуется в метрах, или наоборот. Несоответствие реальных размеров может привести к проблема при 3D-печати или экспорте в другие CAD-системы.</p>
+
+<h2 id="метод-выдавливания-extrude-для-простых-форм">Метод выдавливания (Extrude) для простых форм</h2>
+<p>Самым распространенным и интуитивно понятным способом получения объема является метод выдавливания плоской фигуры по нормали. Этот подход идеально подходит для деталей, имеющих постоянную <strong>толщину</strong> по всей высоте, таких как фланцы, плиты, стены или корпуса приборов. Для запуска процесса необходимо выделить подготовленную замкнутую область.</p>
+<p>Активировать инструмент можно через ленту меню в вкладке "Моделирование" или введя в командную строку название <code>EXTRUDE</code> (или сокращенно <code>EXT</code>). После выбора объекта программа запросит высоту выдавливания. Вы можете ввести числовое значение с клавиатуры или указать две точки мышью в графическом пространстве.</p>
+<p>Существует возможность создания не только прямого, но и конического выдавливания, что позволяет получать усеченные пирамиды или конусы. Для этого в параметрах команды выбирается опция "Угол сужения" (Taper), после чего задается градус отклонения стенок от вертикали. Это полезно при проектировании <strong>литейных форм</strong> или элементов, требующих уклона для извлечения.</p>
+<ul>
+<li>🔹 Выберите замкнутый контур полилинии или_region.</li>
+<li>🔹 Введите команду <code>EXT</code> и нажмите Enter.</li>
+<li>🔹 Укажите высоту или введите параметр в командной строке.</li>
+<li>🔹 При необходимости задайте угол конусности для стенок.</li>
+</ul>
+<p>Результатом операции станет твердое тело (Solid), свойства которого можно редактировать. В отличие от поверхностного моделирования, твердое тело имеет массу, объем и центр тяжести, что критично для инженерных <strong>расчетов</strong>.</p>
+
+<div class="pb-poll" id="poll-7f2aa5d1"><div class="pb-poll-question">📊 Какой метод 3D-моделирования вы используете чаще всего?</div><div class="pb-poll-option" data-poll="7f2aa5d1" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Выдавливание (Extrude)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7f2aa5d1" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Вращение (Revolve)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7f2aa5d1" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">По сечениям (Loft)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7f2aa5d1" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Импорт из других программ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="построение-тел-вращения-revolve-и-по-траектории">Построение тел вращения (Revolve) и по траектории</h2>
+<p>Когда деталь имеет осевую симметрию, например, валы, втулки, диски или декоративные элементы, наиболее эффективным методом является вращение профиля вокруг оси. Для реализации этого метода достаточно нарисовать половину сечения детали и <strong>ось вращения</strong>, которая не должна пересекать сам профиль (если не требуется полое тело с перемычкой).</p>
+<p>Команда <code>REVOLVE</code> (Вращать) позволяет создать полный оборот на 360 градусов или частичный сектор. В процессе работы важно правильно указать ось: это может быть отдельная линия, отрезок или даже воображаемая линия, заданная координатами X и Y. Ошибка в выборе оси приведет к искажению геометрии и смещению центра масс.</p>
+<p>Более сложным, но гибким инструментом является построение по траектории (Path). Если вам нужно создать изогнутую трубу, кабель-канал или архитектурный карниз, метод выдавливания не подойдет, так как он работает только перпендикулярно плоскости. В этом случае создается <strong>направляющая кривая</strong>, вдоль которой будет двигаться сечение.</p>
+<p>Алгоритм действий при построении по пути выглядит следующим образом: сначала рисуется или копируется сечение (профиль), затем строится траектория. Профиль должен быть замкнутым, а траектория может быть разомкнутой. При выборе команды выдавливания указывается опция "Путь" (Path), после чего курсором выбирается направляющая линия.</p>
+<pre><code>Command: EXTRUDE
+<p>Current wireframe density: ISOLINES=4, Closed profiles creation mode = Solid</p>
+<p>Select objects to extrude or [MOde/SOlid/SUrface/EXpression]: 1 found</p>
+<p>Select objects to extrude or [MOde/SOlid/SUrface/EXpression]:</p>
+<p>Specify height of extrusion or [Direction/Path/Taper angle/Elevation]: P</p>
+<p>Select extrusion path or [Taper angle]: (Выберите линию пути)</p>
+</code></pre>
+<p>Такой подход позволяет создавать сложнейшие пространственные конструкции, которые невозможно получить стандартными методами. Главное требование — траектория не должна иметь резких изломов, радиус которых меньше радиуса самого сечения, иначе программа выдаст ошибку самопересечения.</p>
+
+<h2 id="сравнение-методов-создания-3d-объектов">Сравнение методов создания 3D-объектов</h2>
+<p>Выбор конкретного метода моделирования напрямую зависит от геометры исходного чертежа и требуемого конечного результата. Ниже приведена таблица, помогающая определиться с оптальным инструментом для различных типов задач в <strong>проектировании</strong>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Метод</th>
+<th>Тип геометрии</th>
+<th>Сложность подготовки</th>
+<th>Применение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Выдавливание (Extrude)</td>
+<td>Призматическая, плоская</td>
+<td>Низкая</td>
+<td>Стены, плиты, корпуса</td>
+</tr>
+<tr>
+<td>Вращение (Revolve)</td>
+<td>Осимметричная</td>
+<td>Средняя</td>
+<td>Валы, емкости, диски</td>
+</tr>
+<tr>
+<td>По пути (Path)</td>
+<td>Изогнутая, трубчатая</td>
+<td>Высокая</td>
+<td>Трубопроводы, каркасы</td>
+</tr>
+<tr>
+<td>По сечениям (Loft)</td>
+<td>Переходная, сложная</td>
+<td>Очень высокая</td>
+<td>Кузова, обтекатели</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Использование неподходящего метода может значительно усложнить последующее редактирование модели. Например, попытка сделать изогнутую трубу методом выдавливания с последующим изгибом (Bend) часто приводит к деформации сечения и потере круглой формы.</p>
+<p>Для сложных объектов, таких как кузов автомобиля или обтекатель самолета, используется метод <strong>Loft</strong> (По сечениям). Он требует построения нескольких поперечных профилей в разных плоскостях, которые программа затем "натягивает" как кожу, создавая плавный переход. Это наиболее трудоемкий, но и самый мощный инструмент в арсенале дизайнера.</p>
+
+<details class="pb-accordion"><summary>Секрет гладких переходов</summary><div class="pb-accordion-body"><p>Для получения идеальной поверхности при использовании метода Loft, убедитесь, что все сечения имеют одинаковое количество узлов (точек построения). Если контуры отличаются, добавьте точки редактирования вручную.</p></div></details>
+
+<h2 id="редактирование-и-булевы-операции">Редактирование и булевы операции</h2>
+<p>Создание базовой формы — это только половина задачи. Реальные детали редко представляют собой монолитные блоки; они содержат отверстия, вырезы, пазы и сложные сочленения. Для работы с объемом в AutoCAD применяются булевы операции, позволяющие комбинировать несколько твердых тел.</p>
+<p>Основных операций три: объединение (<code>UNION</code>), вычитание (<code>SUBTRACT</code>) и пересечение (<code>INTERSECT</code>). Объединение сливает несколько объектов в единый монолит, убирая внутренние грани. Вычитание позволяет использовать одно тело как "резак" для другого, что идеально для создания отверстий под болты или сложных ниш.</p>
+<p>Процесс вычитания выглядит так: сначала выбирается тело, из которого нужно удалить материал (основа), а затем — тело-инструмент. После подтверждения операции второе тело исчезает, оставляя после себя пустоту соответствующей формы. Важно, чтобы тела хотя бы частично <strong>пересекались</strong> в пространстве, иначе операция будет невозможна.</p>
+<ul>
+<li>🔸 Создайте основное тело и тело-инструмент (например, цилиндр для отверстия).</li>
+<li>🔸 Введите команду <code>SUBTRACT</code> (или <code>SU</code>).</li>
+<li>🔸 Выберите объекты для вычитания (основу) и нажмите Enter.</li>
+<li>🔸 Выберите вычитаемые объекты (резак) и снова нажмите Enter.</li>
+</ul>
+<p>Пересечение используется реже и оставляет только ту часть объема, которая была общей для всех выбранных объектов. Это полезно при создании сложных узлов сопряжения или при анализе коллизий в <strong>инженерных системах</strong>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед булевой операцией</h4><label class="check-item"><input type="checkbox"><span>Объекты являются твердыми телами (Solid)</span></label><label class="check-item"><input type="checkbox"><span>Объекты пространственно пересекаются</span></label><label class="check-item"><input type="checkbox"><span>Нет дублирующей геометрии в зоне контакта</span></label><label class="check-item"><input type="checkbox"><span>Сохранена копия исходных файлов</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="визуализация-и-навигация-в-3d-пространстве">Визуализация и навигация в 3D-пространстве</h2>
+<p>После создания модели необходимо правильно ее отобразить, чтобы оценить результат. По умолчанию AutoCAD работает в режиме 2D-черчения, поэтому для комфортной работы с объемом нужно переключиться в пространство <strong>3D-моделирования</strong>. Это меняет набор доступных панелей инструментов и активирует навигационные кубы.</p>
+<p>Для изменения точки обзора используйте навигационный куб в правом верхнем углу экрана или зажмите клавишу Shift и колесо мыши. Вращение, панорамирование и зуммирование позволяют осмотреть объект со всех сторон. Особое внимание стоит уделить стилям визуализации: от каркасного (<code>Wireframe</code>) до реалистичного (<code>Realistic</code>).</p>
+<p>В каркасном режиме видны все ребра и внутренние линии, что удобно для редактирования, но мешает восприятию формы. Режимы "Скрытые линии" или "Концептуальный" убирают лишнюю визуальную информацию, показывая только видимые грани. Для презентации результатов заказчику лучше всего подходит режим <em>Realistic</em> с наложением материалов.</p>
+<blockquote>
+<p>⚠️ Внимание: В режиме каркаса (Wireframe) сложно понять, где находится передняя грань, а где задняя. Всегда переключайтесь на режим со скрытыми линиями перед проверкой размеров или экспортном в другие форматы.</p>
+</blockquote>
+<p>Также полезно настроить сечения. Инструмент <code>SECTIONPLANE</code> позволяет "разрезать" модель плоскостью в реальном времени, чтобы заглянуть внутрь конструкции, не разрушая её. Это незаменимый инструмент для проверки внутренних полостей и сборки сложных узлов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте команду 3DORBIT для свободного вращения модели вокруг центра. Зажмите левую кнопку мыши внутри орбиты для вращения, а за пределами — для панорамирования.</p></aside>
+
+<h2 id="частые-ошибки-и-способы-их-устранения">Частые ошибки и способы их устранения</h2>
+<p>Даже опытные пользователи сталкиваются с проблемами при переходе от 2D к 3D. Одна из самых распространенных ошибок — попытка выдавить незамкнутый контур. Программа в этом случае либо выдаст ошибку, либо создаст поверхность (Surface) вместо твердого тела (Solid), что ограничит возможности дальнейшего <strong>редактирования</strong>.</p>
+<p>Еще одна проблема связана с масштабом. Если чертеж выполнен в миллиметрах, а вы попытаетесь выдавить стену высотой 3 метра, введя число 3, вы получите тончайшую пленку толщиной 3 мм. Всегда проверяйте единицы измерения и масштаб исходного <strong>проекта</strong> перед началом работы.</p>
+<p>Наконец, частой ошибкой является игнорирование привязок. При построении сложных составных объектов вручную, без точных привязок (<code>OSNAP</code>), между элементами могут оставаться микроскопические зазоры. При объединении таких тел булевы операции могут пройти некорректно, оставив "дыры" в модели.</p>
+<p>Для исправления ситуации используйте команду <code>FILLET</code> с нулевым радиусом для соединения разорванных линий или перерисуйте узловые точки с включенными привязками. Чистота геометрии — залог успешного 3D-моделирования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный секрет успеха в 3D-моделировании — это идеально подготовленный 2D-контур. 90% ошибок при выдавливании связаны с разрывами линий или несовпадением узлов.</p></aside>
+
+<details>
+<summary>Можно ли автоматически конвертировать любой 2D чертеж в 3D?</summary>
+<p>Полностью автоматическая конвертация возможна только для очень простых объектов. Сложные чертежи требуют ручной доработки контуров, удаления лишних линий и построения замкнутых областей, так как программа не "понимает" инженерный замысел без участия оператора.</p>
+</details>
+
+<details>
+<summary>В чем разница между Mesh и Solid в AutoCAD?</summary>
+<p>Solid (Твердое тело) — это математически точная геометрия с объемом и массой, пригодная для расчетов. Mesh (Сетка) — это оболочка из полигонов, используемая для визуализации и рендеринга, но не имеющая физических свойств реального материала.</p>
+</details>
+
+<details>
+<summary>Как вернуть 3D модель обратно в 2D чертеж?</summary>
+<p>Для этого используется команда <code>FLATSHOT</code> (Плоское изображение), которая создает 2D-проекцию 3D-объекта на текущую плоскость. Также можно использовать команду <code>SOLDRAW</code> для создания видовых экранов с видами и разрезами.</p>
+</details>
+
+<details>
+<summary>Почему команда выдавливания не работает?</summary>
+<p>Чаще всего причина в том, что контур не замкнут (есть разрывы), линии пересекают друг друга в ненужных местах или выбранный объект уже является блоком/группой, а не единой полилинией. Проверьте контур командой <code>BOUNDARY</code>.</p>
+</details>
+
+<details>
+<summary>Нужен ли отдельный модуль для 3D в AutoCAD?</summary>
+<p>В современных версиях AutoCAD функционал 3D-моделирования встроен в базовую комплектацию. Однако существуют специализированные надстройки (например, AutoCAD Architecture или Mechanical), которые расширяют возможности для конкретных отраслей.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-zakrepit-klemmu-na-provode.html" class="pb-related-card">
+                <span class="pb-related-title">Как закрепить клемму на проводе: полная инструкция</span>
+                <span class="pb-related-desc">Подробное руководство по фиксации клемм на проводах. Выбор инструмента, методы обжима, типы соединен</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-obd-skanerom.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться OBD-сканером: пошаговая инструкция для автовладельцев</span>
+                <span class="pb-related-desc">Узнайте, как правильно подключить и использовать OBD-сканер для диагностики автомобиля. Пошаговые ин</span>
+            </a><a href="/articles/k/kl/klipsy-zakladnye-pod-samorez.html" class="pb-related-card">
+                <span class="pb-related-title">Клипсы закладные под саморез: виды, применение и монтаж</span>
+                <span class="pb-related-desc">Полный гид по закладным клипсам для саморезов. Выбор крепежа для гипсокартона, пластика и дерева. Ин</span>
+            </a><a href="/articles/m/ma/mashina-raspil-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Машина распил: что это такое и как работает в 2026 году</span>
+                <span class="pb-related-desc">Подробный разбор понятия «машина распил»: виды, назначение, как выбрать и использовать. Полезные сов</span>
+            </a><a href="/articles/n/na/nasos-dlya-koles-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Насос для колес автомобиля: как выбрать и правильно использовать</span>
+                <span class="pb-related-desc">Полный гид по автомобильным насосам: виды, выбор компрессора, рейтинг характеристик и советы по безо</span>
+            </a><a href="/articles/k/ka/kak-nazyvaetsya-shtuka-kotoroj-moyut-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Чем моют машину: названия аппаратов и химии</span>
+                <span class="pb-related-desc">Узнайте, как называется оборудование для мойки авто. Обзор аппаратов высокого давления, пеногенерато</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

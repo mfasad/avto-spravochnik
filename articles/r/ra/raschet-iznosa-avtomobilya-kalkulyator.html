@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Расчет износа автомобиля: калькулятор, формулы и методы — Авто Справочник</title>
+    <meta name="description" content="Как работает калькулятор износа авто? Подробный разбор формул ЦБ РФ, амортизации для ОСАГО и реальной рыночной стоимости.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/r/ra/raschet-iznosa-avtomobilya-kalkulyator.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Расчет износа автомобиля: калькулятор, формулы и методы">
+    <meta property="og:description" content="Как работает калькулятор износа авто? Подробный разбор формул ЦБ РФ, амортизации для ОСАГО и реальной рыночной стоимости.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/" class="pb-nav-active">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/pokupka-i-prodazha/">Покупка и Продажа</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Расчет износа автомобиля: калькулятор, формулы и методы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-износ-автомобиля-и-зачем-его-рассчитывать">Что такое износ автомобиля и зачем его рассчитывать</a></li><li><a href="#формула-расчета-износа-по-методике-центробанка-рф">Формула расчета износа по методике Центробанка РФ</a></li><li><a href="#факторы-влияющие-на-степень-амортизации">Факторы, влияющие на степень амортизации</a></li><li><a href="#различия-между-страховым-и-рыночным-износом">Различия между страховым и рыночным износом</a></li><li><a href="#инструкция-как-пользоваться-калькулятором-износа">Инструкция: как пользоваться калькулятором износа</a></li><li><a href="#как-снизить-влияние-износа-при-продаже-авто">Как снизить влияние износа при продаже авто</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/g/gd/gde-mozhno-oformit-kredit-pod-zalog-pts.html">Где оформить кредит под залог ПТС в 2026 году: ТОП-10 проверенных мест</a></li><li><a href="/articles/a/ak/aktsent-chto-za-mashina.html">Акцент что за машина: характеристики, двигатели и модификации</a></li><li><a href="/articles/k/ka/kak-prodat-v-lizing.html">Как продать в лизинг: инструкции для бизнеса и автодилеров</a></li><li><a href="/articles/d/dr/drom-ru-arkhiv-obyavlenij.html">Дром ру архив: поиск и анализ старых объявлений</a></li><li><a href="/articles/s/sa/samaya-luchshaya-mashina-dlya-bezdorozhya.html">Лучшая машина для бездорожья: ТОП внедорожников 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Точный расчет износа автомобиля: от формул до онлайн-калькулятора</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-износ-автомобиля-и-зачем-его-рассчитывать">Что такое износ автомобиля и зачем его рассчитывать</a></li><li><a href="#формула-расчета-износа-по-методике-центробанка-рф">Формула расчета износа по методике Центробанка РФ</a></li><li><a href="#факторы-влияющие-на-степень-амортизации">Факторы, влияющие на степень амортизации</a></li><li><a href="#различия-между-страховым-и-рыночным-износом">Различия между страховым и рыночным износом</a></li><li><a href="#инструкция-как-пользоваться-калькулятором-износа">Инструкция: как пользоваться калькулятором износа</a></li><li><a href="#как-снизить-влияние-износа-при-продаже-авто">Как снизить влияние износа при продаже авто</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Владение транспортным средством неизбежно сопряжено с постепенной потерей его стоимости, и этот процесс называется амортизацией. Когда вы планируете продать подержанный автомобиль, купить новую машину взамен старой или получить страховую выплату, перед вами встает вопрос о реальной цене вашего имущества. Именно здесь на помощь приходит <strong>калькулятор износа автомобиля</strong>, позволяющий перевести абстрактное понятие"старости" машины в конкретные денежные суммы.</p>
+
+<p>Многие владельцы ошибочно полагают, что цена падает только из-за пробега, однако профессиональный <em>расчет износа</em> учитывает десятки параметров, включая возраст деталей, условия эксплуатации и даже регион регистрации. Понимание того, как именно вычисляется этот показатель, поможет вам не стать жертвой заниженных оценок со стороны перекупщиков или страховых компаний, стремящихся минимизировать расходы.</p>
+
+<p>В этой статье мы подробно разберем методики вычисления, рассмотрим официальные формулы Центрального Банка РФ и научимся отличать реальную амортизацию от маркетинговых уловок. Вы узнаете, какие факторы сильнее всего влияют на конечную цифру и почему <strong>рыночная стоимость</strong> может существенно отличаться от балансовой остаточной цены.</p>
+
+<h2 id="что-такое-износ-автомобиля-и-зачем-его-рассчитывать">Что такое износ автомобиля и зачем его рассчитывать</h2>
+
+<p>Износ автомобиля — это объективный процесс снижения потребительских свойств и стоимости транспортного средства под воздействием времени и эксплуатации. В отличие от простого старения, которое зависит только от даты выпуска, износ напрямую коррелирует с интенсивностью использования. Для потенциального покупателя или оценщика <strong>амортизация</strong> является ключевым индикатором, показывающим, сколько ресурса осталось у узлов и агрегатов.</p>
+
+<p>Расчет этого параметра необходим в нескольких критических ситуациях. Прежде всего, он требуется при оформлении полиса <em>ОСАГО</em> или <em>КАСКО</em>, когда страховая компания выплачивает возмещение с учетом износа заменяемых деталей. Также калькуляция обязательна при разделе имущества, вступлении в наследство или судебных спорах, где требуется независимая оценка ущерба.</p>
+
+<blockquote>⚠️ Внимание: Страховые компании часто используют собственные методики расчета, которые могут занижать реальный износ для уменьшения выплаты. Всегда проверяйте, по какой формуле произведены вычисления.</blockquote>
+
+<p>Существует два основных подхода к оценке: бухгалтерский (линейный) и рыночный. Бухгалтерский метод используется для балансодержателей и юридических лиц, тогда как рыночный учитывает спрос и предложение. Для частного владельца наиболее важен именно <strong>реальный износ</strong>, который определяет, за сколько он сможет продать машину"здесь и сейчас".</p>
+
+<div class="pb-poll" id="poll-c94c497f"><div class="pb-poll-question">📊 Что для вас важнее при оценке авто?</div><div class="pb-poll-option" data-poll="c94c497f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Реальная рыночная цена</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c94c497f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Страховая выплата</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c94c497f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Налоговая стоимость</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c94c497f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Балансовая стоимость для бухгалтерии</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="формула-расчета-износа-по-методике-центробанка-рф">Формула расчета износа по методике Центробанка РФ</h2>
+
+<p>Официальной методикой, которой руководствуются страховщики и судебные эксперты в России, является Положение Банка России № 432-П. Эта норма регулирует порядок расчета износа комплектующих частей при определении размера страхового возмещения по <em>ОСАГО</em>. Формула выглядит пугающе сложной, но калькулятор износа автомобиля берет всю математическую нагрузку на себя.</p>
+
+<p>Основное уравнение выглядит следующим образом: <strong>И = (1 - е^(-ω×(τ×Δ + L×1000))) × 100%</strong>. Здесь <em>И</em> — искомый процент износа, <em>е</em> — основание натурального логарифма, а <em>ω</em> — коэффициент, зависящий от типа транспортного средства. Переменные <em>τ</em> и <em>L</em> обозначают срок службы и пробег соответственно.</p>
+
+<pre><code>И = (1 - е^(-0.05×(1×3 + 10×1000))) × 100%</code></pre>
+
+<p>Главная сложность для обычного человека кроется в коэффициентах, которые меняются в зависимости от марки и типа детали. Например, для кузовных элементов и стекол износ может не начисляться вовсе или начисляться поной схеме, тогда как для <strong>механических узлов</strong> применяются стандартные значения. Именно поэтому использование автоматизированных систем предпочтительнее ручных вычислений.</p>
+
+<details class="pb-accordion"><summary>Почему используется натуральный логарифм?</summary><div class="pb-accordion-body"><p>Использование экспоненты в формуле позволяет учесть нелинейный характер старения. Детали изнашиваются не равномерно, а ускоряются со временем, что и отражает математическая модель ЦБ РФ.</p></div></details>
+
+<h2 id="факторы-влияющие-на-степень-амортизации">Факторы, влияющие на степень амортизации</h2>
+
+<p>При вводе данных в любой калькулятор износа вы столкнетесь с требованием указать множество параметров. Это не бюрократия, а необходимость, так как на скорость потери стоимости влияет совокупность факторов. <strong>Возраст автомобиля</strong> является базовым показателем, но он не дает полной картины без учета других переменных.</p>
+
+<p>Критически важным фактором является пробег. Однако 100 000 км, пройденные по трассе, и 100 000 км городской езды в режиме"старт-стоп" — это две большие разницы. Для двигателя и трансмиссии моточасы часто важнее километража, хотя в стандартных формулах используется именно <em>пробег</em>.</p>
+
+<ul>
+ <li>🚗 <strong>Марка и модель:</strong> Японские и немецкие бренды традиционно теряют в цене медленнее благодаря высокой надежности и ликвидности.</li>
+ <li>🌍 <strong>Регион эксплуатации:</strong> Автомобили из регионов с холодным климатом и реагентами на дорогах имеют более высокий износ кузова.</li>
+ <li>🛠️ <strong>Техническое состояние:</strong> Наличие сервисной истории и своевременная замена расходников снижают фактический износ узлов.</li>
+</ul>
+
+<p>Отдельно стоит упомянуть <strong>условия хранения</strong>. Гаражное хранение значительно продлевает жизнь лакокрасочному покрытию и салону, в то время как постоянная стоянка под открытым небом ускоряет выцветание пластика и коррозию металла. Эти нюансы редко учитываются в сухих формулах, но важны при реальной продаже.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сохраняйте все чеки и заказ-наряды из сервисов. Документально подтвержденное обслуживание может повысить реальную стоимость авто при продаже, даже если расчетный износ высок.</p></aside>
+
+<h2 id="различия-между-страховым-и-рыночным-износом">Различия между страховым и рыночным износом</h2>
+
+<p>Одна из самых частых ошибок — путать стоимость восстановления по страховке и реальную цену продажи. <strong>Страховой износ</strong> рассчитывается строго по регламенту ЦБ РФ и часто достигает 50% и более для старых автомобилей. Это означает, что при тотале вы получите лишь половину от стоимости новой аналогичной машины за вычетом износа, но не рыночную цену вашего"ведро".</p>
+
+<p>Рыночная стоимость формируется (спросом и предложением). На нее влияют мода, экономическая ситуация, курс валют и даже цвет кузова. Калькулятор рыночной стоимости (например, на агрегаторах объявлений) использует большие данные о проданных объявлениях, а не формулы амортизации.</p>
+
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Параметр</th>
+ <th>Страховой расчет</th>
+ <th>Рыночная оценка</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Основа</td>
+ <td>Формула ЦБ РФ</td>
+ <td>Аналоги на рынке</td>
+ </tr>
+ <tr>
+ <td>Макс. износ</td>
+ <td>До 50-80%</td>
+ <td>Зависит от спроса</td>
+ </tr>
+ <tr>
+ <td>Цель</td>
+ <td>Восстановление</td>
+ <td>Продажа/Покупка</td>
+ </tr>
+ <tr>
+ <td>Учет тюнинга</td>
+ <td>Обычно нет</td>
+ <td>Частично</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<p>Понимание этой разницы позволяет владельцам авто грамотно вести переговоры. Если страховая насчитала 60% износа, это не значит, что ваша машина стоит 40% от новой. Она может стоить 70% благодаря низкому пробегу и отличному состоянию кузова.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Страховая выплата покрывает восстановление функциональности, а не покупку аналогичного б/у автомобиля, поэтому суммы часто не совпадают с рыночными ожиданиями.</p></aside>
+
+<h2 id="инструкция-как-пользоваться-калькулятором-износа">Инструкция: как пользоваться калькулятором износа</h2>
+
+<p>Для получения точного результата необходимо правильно заполнить все поля формы. Ошибка в дате выпуска или пробеге может исказить результат на 10-15%, что в денежном эквиваленте составит десятки тысяч рублей. Процесс ввода данных требует внимательности и подготовки документов.</p>
+
+<p>Сначала определитесь с целью расчета: для суда, для продажи или просто для себя. От этого зависит выбор методики в калькуляторе. Затем соберите данные из ПТС и свидетельства о регистрации. Особое внимание уделите комплектации, так как наличие дополнительных опций может влиять на начальный коэффициент стоимости.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка данных перед расчетом</h4><label class="check-item"><input type="checkbox"><span>Точная дата выпуска (месяц/год)</span></label><label class="check-item"><input type="checkbox"><span>Реальный пробег на момент оценки</span></label><label class="check-item"><input type="checkbox"><span>Регион регистрации ТС</span></label><label class="check-item"><input type="checkbox"><span>Категория транспортного средства</span></label><label class="check-item"><input type="checkbox"><span>Тип деталей (кузов, механика, электрика)</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>После ввода данных нажмите кнопку"Рассчитать". Система выдаст процент износа и, в некоторых продвинутых калькуляторах, итоговую сумму. Если результат кажется вам необъективно низким, попробуйте изменить параметры (например, уточнить пробег) или использовать <strong>альтернативный метод</strong> оценки.</p>
+
+<blockquote>⚠️ Внимание: Не округляйте пробег при вводе данных. Разница в 1000 км может изменить процент износа, особенно если автомобиль находится на границе годовых интервалов.</blockquote>
+
+<h2 id="как-снизить-влияние-износа-при-продаже-авто">Как снизить влияние износа при продаже авто</h2>
+
+<p>Хотя физический износ необратим, его влияние на цену можно минимизировать грамотной предпродажной подготовкой. Покупатели часто смотрят на общее состояние, а не на цифры в калькуляторе. <strong>Визальная составляющая</strong> играет решающую роль в формировании первого впечатления.</p>
+
+<p>В первую очередь займитесь кузовом. Полировка фар, удаление мелких царапин и химчистка салона создают ощущение ухоженности. Даже если пробег большой, опрятный салон сигнализирует о том, что за машиной следили. Это позволяет обосновать более высокую цену, игнорируя стандартные таблицы амортизации.</p>
+
+<ul>
+ <li>📄 <strong>Документальное подтверждение:</strong> Папка с чеками о замене масла и фильтров работает лучше любых слов.</li>
+ <li>🔧 <strong>Мелкий ремонт:</strong> Замените перегоревшие лампочки, дворники и дешевые пластиковые элементы.</li>
+ <li>🧼 <strong>Детейлинг:</strong> Профессиональная мойка двигателя и полировка кузова возвращают товарный вид.</li>
+</ul>
+
+<p>Помните, что <em>рыночная стоимость</em> — это договорная категория. Если вы сможете доказать покупателю, что конкретный экземпляр сохранился лучше среднестатистического, вы продадите его дороже, чем показывает любой онлайн-калькулятор. Технически исправный автомобиль с высоким пробегом ценится больше, чем"кот в мешке" с малым пробегом, но с проблемами.</p>
+
+<details>
+<summary>Как рассчитывается износ для такси?</summary>
+<p>Для автомобилей, использовавшихся в такси, применяется повышенный коэффициент износа. Обычно он рассчитывается исходя из интенсивности эксплуатации (24/7) и может достигать предельных значений за 2-3 года. Страховые компании требуют справку о неиспользовании в коммерческих целях или применяют максимальные ставки амортизации.</p>
+</details>
+
+<details>
+<summary>Можно ли оспорить расчет износа страховой?</summary>
+<p>Да, вы имеете право заказать независимую экспертизу. Если расчет независимого оценщика отличается от страхового более чем на 10-15%, вы можете подать претензию или иск в суд, приложив отчет лицензированного специалиста.</p>
+</details>
+
+<details>
+<summary>Влияет ли цвет машины на износ?</summary>
+<p>На технический износ цвет не влияет. Однако на рыночную ликвидность — да. Черные и белые автомобили теряют в цене медленнее, так как пользуются стабильным спросом. Яркие или редкие цвета могут сужать круг покупателей, что косвенно увеличивает"экономический износ".</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/g/gd/gde-mozhno-oformit-kredit-pod-zalog-pts.html" class="pb-related-card">
+                <span class="pb-related-title">Где оформить кредит под залог ПТС в 2026 году: ТОП-10 проверенных мест</span>
+                <span class="pb-related-desc">Актуальный список банков, МФО и ломбардов, выдающих кредиты под залог ПТС автомобиля. Сравнение став</span>
+            </a><a href="/articles/a/ak/aktsent-chto-za-mashina.html" class="pb-related-card">
+                <span class="pb-related-title">Акцент что за машина: характеристики, двигатели и модификации</span>
+                <span class="pb-related-desc">Подробный разбор Hyundai Accent: история модели, технические характеристики, популярные версии седан</span>
+            </a><a href="/articles/k/ka/kak-prodat-v-lizing.html" class="pb-related-card">
+                <span class="pb-related-title">Как продать в лизинг: инструкции для бизнеса и автодилеров</span>
+                <span class="pb-related-desc">Полное руководство, как продать в лизинг технику или авто. Схемы работы, требования к сделке и пошаг</span>
+            </a><a href="/articles/d/dr/drom-ru-arkhiv-obyavlenij.html" class="pb-related-card">
+                <span class="pb-related-title">Дром ру архив: поиск и анализ старых объявлений</span>
+                <span class="pb-related-desc">Как найти удаленные объявления на Дром ру архив. Проверка истории автомобиля, анализ цен и статистик</span>
+            </a><a href="/articles/s/sa/samaya-luchshaya-mashina-dlya-bezdorozhya.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшая машина для бездорожья: ТОП внедорожников 2026</span>
+                <span class="pb-related-desc">Выбираем лучшую машину для бездорожья. Сравнение рамных SUV, характеристик и надежности. Рейтинг вне</span>
+            </a><a href="/articles/d/de/detali-mashiny-na-k.html" class="pb-related-card">
+                <span class="pb-related-title">Запчасти на букву К: каталог, цены и советы по выбору</span>
+                <span class="pb-related-desc">Полный справочник деталей автомобиля на букву К. Как выбрать качественный клапан, карбюратор, кузовн</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

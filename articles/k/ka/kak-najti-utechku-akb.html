@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как найти утечку тока в автомобиле: инструкция и нормы — Авто Справочник</title>
+    <meta name="description" content="Подробное руководство, как найти утечку тока в АКБ. Методы диагностики мультиметром, поиск потребителей и таблица нормальных значений.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-najti-utechku-akb.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как найти утечку тока в автомобиле: инструкция и нормы">
+    <meta property="og:description" content="Подробное руководство, как найти утечку тока в АКБ. Методы диагностики мультиметром, поиск потребителей и таблица нормальных значений.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как найти утечку тока в автомобиле: инструкция и нормы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физика-процесса-и-допустимые-нормы-потребления">Физика процесса и допустимые нормы потребления</a></li><li><a href="#необходимый-инструментарий-и-подготовка">Необходимый инструментарий и подготовка</a></li><li><a href="#алгоритм-измерения-тока-утечки-мультиметром">Алгоритм измерения тока утечки мультиметром</a></li><li><a href="#метод-исключения-поиск-виновника">Метод исключения: поиск виновника</a></li><li><a href="#типичные-места-утечек-и-скрытые-потребители">Типичные места утечек и скрытые потребители</a></li><li><a href="#специфика-поиска-на-современных-автомобилях">Специфика поиска на современных автомобилях</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ch/chek-vosklitsatelnyj-znak-v-skobkakh-chto-znachit.html">Восклицательный знак в скобках: что значит на экране авто</a></li><li><a href="/articles/k/ka/kak-vrezatsya-v-provodku-avtomobilya.html">Как врезаться в проводку автомобиля: безопасные схемы и ошибки</a></li><li><a href="/articles/r/re/rele-regulyator-napryazheniya-12-volt.html">Реле регулятор напряжения 12 вольт: выбор и схема подключения</a></li><li><a href="/articles/z/za/zaryadnoe-ustrojstvo-kedr-avto-10-turbo.html">Зарядное устройство Кедр Авто 10 Turbo: полный обзор</a></li><li><a href="/articles/p/po/poteyut-stekla-v-mashine-v-dozhd-chto-delat.html">Потеют стекла в машине в дождь: 7 способов устранить проблему</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как найти утечку тока в автомобиле: пошаговая инструкция</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физика-процесса-и-допустимые-нормы-потребления">Физика процесса и допустимые нормы потребления</a></li><li><a href="#необходимый-инструментарий-и-подготовка">Необходимый инструментарий и подготовка</a></li><li><a href="#алгоритм-измерения-тока-утечки-мультиметром">Алгоритм измерения тока утечки мультиметром</a></li><li><a href="#метод-исключения-поиск-виновника">Метод исключения: поиск виновника</a></li><li><a href="#типичные-места-утечек-и-скрытые-потребители">Типичные места утечек и скрытые потребители</a></li><li><a href="#специфика-поиска-на-современных-автомобилях">Специфика поиска на современных автомобилях</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Ситуация, когда вы подходите к автомобилю с разряженным аккумулятором после ночной стоянки, знакома многим водителям. Если генератор исправен, а новая батарея «садится» за одну ночь, значит, в электрической цепи присутствует <strong>паразитный ток</strong>. Это явление не только доставляет неудобства, но и может привести к глубокому разряду и выходу из строя дорогостоящей <em>AGM</em> или <em>GEL</em> батареи.</p>
+
+<p>Поиск источника утечки требует системного подхода и минимального набора инструментов. В отличие от внезапного отказа двигателя, утечка тока часто носит скрытый характер, постепенно истощая ресурсы электрооборудования. Важно понимать, что полностью обесточенный автомобиль невозможен, так как некоторые системы должны работать постоянно.</p>
+
+<p>В данной статье мы разберем физические причины явления, методы точной диагностики с помощью мультиметра и способы устранения неисправности. Вы научитесь отличать нормальный энергопотребление от критической утечки и безопасно проведете все необходимые замеры.</p>
+
+<h2 id="физика-процесса-и-допустимые-нормы-потребления">Физика процесса и допустимые нормы потребления</h2>
+
+<p>Прежде чем хвататься за инструменты, необходимо понять, что ток потребляется всегда. Современный автомобиль — это сложный комплекс электроники, где даже в выключенном состоянии работают охранные системы, память ЭБУ (электронного блока управления) и часы. <strong>Нормальная утечка</strong> — это естественный процесс работы этих устройств в спящем режиме.</p>
+
+<p>Однако, когда суммарный ток превышает допустимые значения, начинается быстрый разряд. Критическим порогом для большинства легковых автомобилей считается значение выше 50-70 мА (миллиампер). Если ваш мультиметр показывает 0.3 А или 0.5 А, это явный признак неисправности, который требует немедленного вмешательства.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Значение тока утечки зависит от комплектации автомобиля. Машины с телематическими системами (например, <em>OnStar</em> или <em>BMW ConnectedDrive</em>) могут потреблять больше энергии в режиме ожидания, чем старые модели без электроники.</p>
+</blockquote>
+
+<p>Для точной диагностики важно знать предельные значения. Ниже приведена таблица, помогающая классифицировать состояние электрической сети автомобиля.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип автомобиля</th>
+<th>Нормальный ток (мА)</th>
+<th>Критический ток (мА)</th>
+<th>Вероятная причина</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Старые модели (карбюратор)</td>
+<td>10 - 20</td>
+<td>> 40</td>
+<td>Грязь в замке зажигания</td>
+</tr>
+<tr>
+<td>Современный инжектор</td>
+<td>20 - 40</td>
+<td>> 60</td>
+<td>Неисправность блока комфорта</td>
+</tr>
+<tr>
+<td>Премиум класс (много электроники)</td>
+<td>40 - 70</td>
+<td>> 100</td>
+<td>Сбой в модуле телематики</td>
+</tr>
+<tr>
+<td>Автомобиль после установки сигнализации</td>
+<td>30 - 50</td>
+<td>> 80</td>
+<td>Некорректное подключение сигнализации</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-7f63abc7"><div class="pb-poll-question">📊 Какой у вас разрядился аккумулятор?</div><div class="pb-poll-option" data-poll="7f63abc7" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Обычный свинцовый (WET)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7f63abc7" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Гелевый (GEL)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7f63abc7" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">AGM (Start-Stop)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="7f63abc7" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Щелочной</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="необходимый-инструментарий-и-подготовка">Необходимый инструментарий и подготовка</h2>
+
+<p>Для проведения качественной диагностики вам понадобится минимальный набор. Основным прибором является цифровой <strong>мультиметр</strong> (тестер). Важно, чтобы он имел предел измерения постоянного тока (DC) не менее 10 Ампер, так как стартовые токи могут быть высокими, хотя для поиска утечки нам понадобятся малые значения.</p>
+
+<p>Также потребуются ключи для снятия клеммы аккумулятора (обычно рожковый ключ на 10 или 13 мм) и, возможно, удлиненные провода с «крокодилами» для удобства подключения щупов. Перед началом работ убедитесь, что все двери, капот и багажник плотно закрыты, а сигнализация не находится в режиме тревоги.</p>
+
+<p>Не забудьте подготовить блокнот для записи показаний. Процесс поиска может занять время, и фиксация изменений показаний поможет выявить закономерность. Если у вас есть помощник, это значительно ускорит процесс, так как одному человеку придется одновременно держать щупы и открывать двери.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте мультиметр с функцией HOLD (фиксация показаний), это позволит видеть значение тока, даже если вы уберете прибор из поля зрения.</p></aside>
+
+<h2 id="алгоритм-измерения-тока-утечки-мультиметром">Алгоритм измерения тока утечки мультиметром</h2>
+
+<p>Самый важный этап — правильное подключение измерительного прибора. Никогда не подключайте щупы мультиметра параллельно клеммам аккумулятора в режиме измерения тока — это приведет к короткому замыканию и сгоранию предохранителя тестера. Ток измеряется только в <strong>разрыве цепи</strong>.</p>
+
+<p>Сначала переведите мультиметр в режим измерения постоянного тока (DC Amperes) на пределе 10А или 20А. Отсоедините минусовую клемму от аккумулятора. Один щуп прижмите к минусовой клемме батареи, а второй — к снятому проводу (массе автомобиля). Таким образом, весь ток, уходящий в кузов, пройдет через ваш прибор.</p>
+
+<p>После подключения вы увидите скачок тока, затем он начнет снижаться. Это засыпают блоки управления. Вам нужно дождаться момента, когда показания стабилизируются. Обычно это занимает от 1 до 5 минут. Если стрелка или цифры продолжают «плавать», значит, какая-то система не переходит в спящий режим.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к замерам</h4><label class="check-item"><input type="checkbox"><span>Выключить все потребители (свет, магнитола)</span></label><label class="check-item"><input type="checkbox"><span>Закрыть все двери и капот</span></label><label class="check-item"><input type="checkbox"><span>Отключить сигнализацию (если возможно)</span></label><label class="check-item"><input type="checkbox"><span>Перевести мультиметр в режим 10А DC</span></label><label class="check-item"><input type="checkbox"><span>Разомкнуть цепь минусовой клеммы</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<blockquote>
+<p>⚠️ Внимание: При переключении пределов измерения на мультиметре (например, с 10А на мА) обязательно разрывайте цепь. Переключение диапазона в замкнутой цепи может вызвать искрение и повреждение прибора.</p>
+</blockquote>
+
+<h2 id="метод-исключения-поиск-виновника">Метод исключения: поиск виновника</h2>
+
+<p>Если зафиксированная величина тока превышает норму, начинается процесс исключения. Суть метода проста: мы поочередно вынимаем предохранители из монтажного блока и наблюдаем за показаниями мультиметра. Если после извлечения конкретного предохранителя ток упал до нормы, значит, неисправность находится в цепи, которую он защищает.</p>
+
+<p>Важно проверять не только основной блок предохранителей в салоне, но и дополнительные блоки под капотом и в багажнике. Часто нештатное оборудование (сигнализации, видеорегистраторы, музыка) подключается напрямую к аккумулятору или через отдельный предохранитель, который легко упустить из виду.</p>
+
+<p>Особое внимание следует уделить генератору. В некоторых случаях пробой диодного моста генератора создает цепь для протекания тока даже при выключенном зажигании. Для проверки этого узла можно временно скинуть провод с клеммы генератора (обычно это толстый провод зарядки), не снимая его с автомобиля полностью, и посмотреть на изменение показаний.</p>
+
+<details class="pb-accordion"><summary>Почему нельзя просто выдергивать предохранители?</summary><div class="pb-accordion-body"><p>Выдергивание предохранителей под нагрузкой (когда ток уже течет) может вызвать микро-дугу и окисление контактов. Правильнее сначала найти цепь визуально или по схеме, но в экстренной диагностике аккуратное извлечение допустимо.</p></div></details>
+
+<p>Если перебор всех предохранителей не дал результата, возможно, проблема в самом аккумуляторе (внутреннее короткое замыкание) или в скрытой проводке, перетершейся о кузов. В последнем случае ток может уходить на массу в обход предохранителей, если поврежден силовой кабель.</p>
+
+<h2 id="типичные-места-утечек-и-скрытые-потребители">Типичные места утечек и скрытые потребители</h2>
+
+<p>Статистика ремонтов показывает, что чаще всего «виновниками» торжества становятся определенные узлы. Лидируют здесь нештатно установленные устройства. Дешевые китайские сигнализации, магнитолы и GPS-трекеры часто не имеют качественной схемы энергосбережения и продолжают потреблять энергию даже в выключенном состоянии.</p>
+
+<p>Второе место занимает стареющая проводка. В местах перегибов (например, в гофре между дверью и кузовом) изоляция со временем трескается. Влага и реагенты создают токопроводящий мостик, через который уходит заряд. Визуально такую утечку найти сложно, требуется прозвонка каждого провода.</p>
+
+<p>Третья причина — неисправность самого генератора или стартера. Как упоминалось выше, диодный мост генератора может пропускать ток в обратном направлении. Также стоит проверить кнопку включения подсветки багажника: если она залипла, лампочка может гореть постоянно, быстро сажая батарею.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>90% всех утечек тока вызваны нештатным оборудованием или ошибками при его установке. Всегда проверяйте точки подключения «допов» в первую очередь.</p></aside>
+
+<h2 id="специфика-поиска-на-современных-автомобилях">Специфика поиска на современных автомобилях</h2>
+
+<p>Владельцы современных авто (особенно марок <em>VAG</em>, <em>BMW</em>, <em>Mercedes</em>) сталкиваются с дополнительной сложностью. В этих машинах множество блоков управления, которые «будят» друг друга через CAN-шину. Попытка открыть дверь для проверки может запустить таймер активности всей сети, и ток не упадет часами.</p>
+
+<p>Для таких случаев существует метод измерения через предохранитель. Вместо того чтобы размыкать клемму АКБ, можно использовать специальный переходник или аккуратно измерить падение напряжения на ножках предохранителей (метод требует знания закона Ома и таблицы значений). Это позволяет не будить автомобиль снятием клеммы.</p>
+
+<p>Также на многих авто есть сервисный режим. Например, в <em>VAG</em> можно заблокировать двери, затем разблокировать их ключом, но не открывать дверь, и подождать 15 минут. В <em>BMW</em> иногда требуется отключить минусовую клемму, подождать, пока погаснут все лампы, и только потом подключать мультиметр, чтобы не сбросить адаптации.</p>
+
+<details>
+<summary>Как влияет состояние клемм на утечку?</summary>
+<p>Окисленные клеммы создают высокое переходное сопротивление, но сами по себе редко являются причиной утечки тока. Однако грязь и электролит на поверхности аккумулятора могут создать токопроводящую пленку между плюсом и минусом. Протрите корпус батареи раствором соды и насухо вытрите — это часто устраняет поверхностную утечку.</p>
+</details>
+
+<details>
+<summary>Может ли севший аккумулятор сам себя разряжать?</summary>
+<p>Да, это называется саморазряд. У новой исправной батареи он составляет около 1-3% в месяц. У старой или поврежденной (с осыпавшимися пластинами) саморазряд может быть огромным. Если вы сняли клеммы, а аккумулятор все равно сел за пару дней — проблема внутри него, а не в проводке авто.</p>
+</details>
+
+<details>
+<summary>Нужно ли смазывать клеммы после проверки?</summary>
+<p>Да, после завершения диагностики обязательно обработайте клеммы специальной смазкой (например, <em>Lithium Grease</em> или техническим вазелином). Это предотвратит окисление контактов и снизит риск появления блуждающих токов из-за влаги в будущем.</p>
+</details>
+
+<blockquote>
+<p>⚠️ Внимание: При работе с электроникой современных авто избегайте использования «прикуривания» от другого автомобиля в процессе диагностики, если в этом нет острой необходимости. Скачки напряжения могут повредить чувствительные блоки управления.</p>
+</blockquote>
+
+<p>Поиск утечки тока — задача, требующая терпения, но вполне решаемая в гаражных условиях. Главное — последовательность действий и понимание того, что вы измеряете. Если самостоятельные действия не принесли результата, а аккумулятор продолжает разряжаться, стоит обратиться к профессиональному автоэлектрику с осциллографом, который сможет увидеть помехи в сети, невидимые для обычного мультиметра.</p>
+
+<details class="pb-accordion"><summary>Что делать, если утечка найдена, но устранить её прямо сейчас нельзя?</summary><div class="pb-accordion-body"><p>Если вы нашли цепь с утечкой (например, сгорела лампа в багажнике или коротит проводка), но времени на ремонт нет, можно временно вынуть соответствующий предохранитель. Обязательно пометьте этот предохранитель и не забудьте восстановить цепь после ремонта, так как могут перестать работать важные системы (например, центральный замок).</p></div></details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ch/chek-vosklitsatelnyj-znak-v-skobkakh-chto-znachit.html" class="pb-related-card">
+                <span class="pb-related-title">Восклицательный знак в скобках: что значит на экране авто</span>
+                <span class="pb-related-desc">Разбираем значение восклицательного знака в скобках на приборной панели. Причины горения индикатора </span>
+            </a><a href="/articles/k/ka/kak-vrezatsya-v-provodku-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Как врезаться в проводку автомобиля: безопасные схемы и ошибки</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению к штатной электропроводке авто без ошибок. Схемы, инструменты и </span>
+            </a><a href="/articles/r/re/rele-regulyator-napryazheniya-12-volt.html" class="pb-related-card">
+                <span class="pb-related-title">Реле регулятор напряжения 12 вольт: выбор и схема подключения</span>
+                <span class="pb-related-desc">Как работает реле-регулятор 12 вольт? Проверка генератора, симптомы поломки и замена. Подробная инст</span>
+            </a><a href="/articles/z/za/zaryadnoe-ustrojstvo-kedr-avto-10-turbo.html" class="pb-related-card">
+                <span class="pb-related-title">Зарядное устройство Кедр Авто 10 Turbo: полный обзор</span>
+                <span class="pb-related-desc">Подробный обзор, инструкция и характеристики зарядного устройства Кедр Авто 10 Turbo. Как заряжать д</span>
+            </a><a href="/articles/p/po/poteyut-stekla-v-mashine-v-dozhd-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Потеют стекла в машине в дождь: 7 способов устранить проблему</span>
+                <span class="pb-related-desc">Почему запотевают окна в авто при дожде и как быстро избавиться от конденсата? Экспертные советы, пр</span>
+            </a><a href="/articles/n/ne/net-iskry-avtomobil-oka.html" class="pb-related-card">
+                <span class="pb-related-title">Нет искры на Оке: причины и поиск неисправности</span>
+                <span class="pb-related-desc">Почему нет искры на Оке? Полный гид по диагностике системы зажигания: проверка катушки, коммутатора,</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

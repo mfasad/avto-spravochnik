@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как работает ГЛОНАСС в машине: устройство, функции и защита — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор принципов работы системы ГЛОНАСС в автомобиле. От спутниковой навигации до экстренного вызова ЭРА-ГЛОНАСС и защиты от глушилок.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-rabotaet-glonass-v-mashine.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работает ГЛОНАСС в машине: устройство, функции и защита">
+    <meta property="og:description" content="Подробный разбор принципов работы системы ГЛОНАСС в автомобиле. От спутниковой навигации до экстренного вызова ЭРА-ГЛОНАСС и защиты от глушилок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работает ГЛОНАСС в машине: устройство, функции и защита</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физические-основы-спутниковой-навигации">Физические основы спутниковой навигации</a></li><li><a href="#архитектура-бортового-оборудования">Архитектура бортового оборудования</a></li><li><a href="#принцип-работы-системы-эра-глонасс">Принцип работы системы ЭРА-ГЛОНАСС</a></li><li><a href="#факторы-влияющие-на-точность-сигнала">Факторы, влияющие на точность сигнала</a></li><li><a href="#защита-от-глушения-и-спуфинга">Защита от глушения и спуфинга</a></li><li><a href="#диагностика-и-обслуживание-системы">Диагностика и обслуживание системы</a></li><li><a href="#будущее-навигационных-систем-в-автопроме">Будущее навигационных систем в автопроме</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/o/ob/oboznachenie-rezistorov-po-moshchnosti.html">Обозначение резисторов по мощности: стандарты, размеры и выбор</a></li><li><a href="/articles/m/ma/magikar-7-kak-vklyuchit-avtozapusk.html">Magikar 7: как включить автозапуск — полная инструкция</a></li><li><a href="/articles/v/vo/vosklitsatelnyj-znak-v-treugolnike-na-priborke.html">Восклицательный знак в треугольнике на приборке: причины и решение</a></li><li><a href="/articles/k/ko/kontakty-na-lampe-h4.html">Контакты на лампе H4: схема, ремонт и замена в авто 2026</a></li><li><a href="/articles/r/ro/rozetka-220-v-mashinu.html">Розетка 220 в машину: установка инвертора и инверторной розетки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как работает ГЛОНАСС в машине: от навигации до экстренного вызова</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физические-основы-спутниковой-навигации">Физические основы спутниковой навигации</a></li><li><a href="#архитектура-бортового-оборудования">Архитектура бортового оборудования</a></li><li><a href="#принцип-работы-системы-эра-глонасс">Принцип работы системы ЭРА-ГЛОНАСС</a></li><li><a href="#факторы-влияющие-на-точность-сигнала">Факторы, влияющие на точность сигнала</a></li><li><a href="#защита-от-глушения-и-спуфинга">Защита от глушения и спуфинга</a></li><li><a href="#диагностика-и-обслуживание-системы">Диагностика и обслуживание системы</a></li><li><a href="#будущее-навигационных-систем-в-автопроме">Будущее навигационных систем в автопроме</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Современный автомобиль сложно представить без спутниковой навигации. Система <strong>ГЛОНАСС</strong> (Глобальная навигационная спутниковая система) стала неотъемлемой частью не только мультимедийных комплексов, но и систем безопасности, таких как <em>ЭРА-ГЛОНАСС</em>. Многие водители воспринимают наличие антенны на крыше как данность, не задумываясь о сложных процессах, происходящих внутри электронного блока управления.</p>
+<p>Принцип действия основан на обмене радиосигналами между космическими аппаратами и приемником в вашем автомобиле. <strong>Точность позиционирования</strong> зависит от множества факторов: количества видимых спутников, качества антенны и отсутствия радиопомех. Понимание того, как именно система определяет координаты, поможет лучше ориентироваться в настройках бортового компьютера и эффективнее использовать навигационные возможности.</p>
+<p>В этой статье мы детально разберем архитектуру системы, методы вычисления координат и особенности работы аварийного модуля. Вы узнаете, почему в туннелях связь пропадает, как защитить сигнал от глушилок и что происходит в момент нажатия кнопки SOS. <mark>Критически важно понимать: штатная навигация и система экстренного реагирования используют разные каналы передачи данных, несмотря на общую спутниковую базу.</mark></p>
+
+<h2 id="физические-основы-спутниковой-навигации">Физические основы спутниковой навигации</h2>
+<p>Фундамент работы любой GNSS-системы, включая российскую <em>ГЛОНАСС</em>, лежит в плоскости точнейшего измерения времени. Спутники, находящиеся на орбите высотой около 19 000 километров, непрерывно транслируют сигналы, содержащие информацию о своем местоположении и точном времени. Приемник в автомобиле получает эти сигналы от минимум четырех спутников одновременно.</p>
+<p>Зная скорость распространения радиоволн (скорость света) и время задержки сигнала, бортовой компьютер вычисляет расстояние до каждого спутника. Этот метод называется <strong>трилатерация</strong>. Если представить себе сферу вокруг каждого спутника с радиусом, равным вычисленному расстоянию, то точка пересечения этих сфер и будет местоположением вашего автомобиля.</p>
+<p>Однако в реальности все сложнее из-за погрешностей часов приемника. Четвертый спутник необходим именно для синхронизации времени и устранения этой ошибки. Без корректного времени координаты будут иметь огромную погрешность, делая навигацию бесполезной. Именно поэтому первичное включение системы после долгого простоя может занимать до нескольких минут — устройство собирает актуальные альманахи орбит.</p>
+
+<h2 id="архитектура-бортового-оборудования">Архитектура бортового оборудования</h2>
+<p>Аппаратная часть системы в автомобиле состоит из нескольких ключевых компонентов, работающих в связке. Центральным элементом является <strong>навигационный модуль</strong> (приемник), который обрабатывает сигналы. Он подключен к внешней антенне, установленной, как правило, на крыше или лобовом стекле, чтобы обеспечить прямую видимость неба.</p>
+<p>В системах типа <em>ЭРА-ГЛОНАСС</em> добавляется GSM-модем для передачи данных оператору. Антенны для GPS/ГЛОНАСС и GSM часто объединены в один корпус, но внутри имеют разные чувствительные элементы. Качество кабеля и разъема SMA играет важную роль: окисление контактов приводит к потере сигнала даже при исправной антенне.</p>
+<p>Современные мультимодовые приемники способны одновременно принимать сигналы нескольких систем: ГЛОНАСС, GPS, Galileo и BeiDou. Это значительно повышает надежность позиционирования в сложных городских условиях, когда сигнал от спутников одной системы может быть перекрыт зданиями, а другой — доступен.</p>
+<ul>
+<li>📡 <strong>Антенна:</strong> принимает слабые радиосигналы со спутников, требует прямой видимости неба.</li>
+<li>💾 <strong>Навигационный процессор:</strong> декодирует сигнал, вычисляет координаты, скорость и время.</li>
+<li>📶 <strong>GSM-модем:</strong> передает пакет данных (координаты, VIN, статус удара) в центр обработки вызовов.</li>
+<li>🔋 <strong>Резервное питание:</strong> автономный аккумулятор, позволяющий системе работать при обрыве бортовой сети.</li>
+</ul>
+
+<div class="pb-poll" id="poll-ff69ab6e"><div class="pb-poll-question">📊 Насколько вы доверяете точности навигатора в незнакомом городе?</div><div class="pb-poll-option" data-poll="ff69ab6e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Полностью доверяю, он знает лучше</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ff69ab6e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Иногда ошибается, но в целом нормально</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ff69ab6e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Постоянно путает, предпочитаю бумажные карты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ff69ab6e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Вообще не пользуюсь навигацией</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="принцип-работы-системы-эра-глонасс">Принцип работы системы ЭРА-ГЛОНАСС</h2>
+<p>Отдельного внимания заслуживает система экстренного реагирования. В отличие от обычной навигации, которая просто показывает карту, <strong>ЭРА-ГЛОНАСС</strong> является активным средством безопасности. Она постоянно мониторит состояние автомобиля через датчики, подключенные к CAN-шине, такие как акселерометры (датчики удара) и датчики раскрытия подушек безопасности.</p>
+<p>При обнаружении критического события (ДТП, переворот, сильный удар) система автоматически формирует пакет данных. В него входят координаты, время происшествия, VIN-код, тип топлива и количество пристегнутых пассажиров. Этот пакет передается через GSM-сеть в ближайший центр обработки вызовов (ЦОВ).</p>
+<blockquote>⚠️ <strong>Внимание:</strong> После серьезного ДТП, даже если автомобиль визуально цел, не пытайтесь самостоятельно отключать систему ЭРА-ГЛОНАСС — это может заблокировать передачу данных спасателям и нарушить логику работы других электронных блоков.</blockquote>
+<p>Если автоматический сигнал не прошел (например, при ударе в бок, где нет датчиков, или при опрокидывании), водитель может нажать красную кнопку SOS вручную. Оператор свяжется с салоном через громкую связь и, в случае отсутствия ответа или подтверждения опасности, отправит бригады скорой помощи, полиции и МЧС по точным координатам.</p>
+
+
+
+<h2 id="факторы-влияющие-на-точность-сигнала">Факторы, влияющие на точность сигнала</h2>
+<p>Почему навигатор иногда "ведет" не туда или теряет спутники? На качество сигнала влияет множество внешних и внутренних факторов. <strong>Многолучевость</strong> — явление, когда сигнал отражается от стен высотных зданий ("городские каньоны"), создавая ложные данные о расстоянии до спутника. Это главная проблема в центрах мегаполисов.</p>
+<p>Погодные условия также вносят свои коррективы. Густая облачность, сильный дождь или снегопад могут ослаблять сигнал, хотя современные приемники научились компенсировать эти потери. Магнитные бури и солнечная активность способны временно нарушать работу спутниковой группировки в глобальном масштабе.</p>
+<p>Внутри автомобиля помехи могут создавать неправильно установленные видеорегистраторы, радар-детекторы или некачественные зарядные устройства, генерирующие электромагнитный шум в частотном диапазоне навигации. Даже тонировка с металлизированным слоем может экранировать сигнал, если антенна встроена в лобовое стекло.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка качества приема сигнала</h4><label class="check-item"><input type="checkbox"><span>Машина стоит на открытой парковке без навесов</span></label><label class="check-item"><input type="checkbox"><span>Антенна не закрыта металлическими предметами</span></label><label class="check-item"><input type="checkbox"><span>В салоне нет мощных источников помех рядом с антенной</span></label><label class="check-item"><input type="checkbox"><span>Программное обеспечение навигатора обновлено</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="защита-от-глушения-и-спуфинга">Защита от глушения и спуфинга</h2>
+<p>С развитием технологий появились и методы противодействия навигации. <strong>Глушилки (Jammer)</strong> создают мощный шум в частотном диапазоне ГЛОНАСС/GPS, полностью блокируя прием сигнала. Использовать их на автомобиле запрещено законом, так как это нарушает работу не только вашей навигации, но и систем безопасности окружающих машин.</p>
+<p>Более изощренный метод — <em>спуфинг</em> (Spoofing). В этом случае генератор создает ложный сигнал, который "обманывает" приемник, заставляя его думать, что он находится в другом месте или движется с другой скоростью. Для обычных водителей это редкость, но коммерческий транспорт и системы мониторинга часто становятся мишенями.</p>
+<p>Современные приемники ГЛОНАСС оснащаются алгоритмами защиты. Они анализируют уровень сигнала, его частотные характеристики и согласованность данных от разных спутников. Если параметры выходят за пределы физически возможных (например, мгновенное перемещение на 100 км), система помечает данные как подозрительные.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип воздействия</th>
+<th>Принцип действия</th>
+<th>Последствия для авто</th>
+<th>Метод защиты</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Джаммер (Jamming)</td>
+<td>Создание белого шума в диапазоне частот</td>
+<td>Полная потеря координат</td>
+<td>Фильтрация частот, многодиапазонность</td>
+</tr>
+<tr>
+<td>Спуфинг (Spoofing)</td>
+<td>Имитация легитимного сигнала спутника</td>
+<td>Неверные координаты, снос трека</td>
+<td>Анализ криптографии сигнала (ГЛОНАСС P-код)</td>
+</tr>
+<tr>
+<td>Меандровая модуляция</td>
+<td>Специфический сигнал ГЛОНАСС</td>
+<td>Повышенная помехоустойчивость</td>
+<td>Использование нативных приемников ГЛОНАСС</td>
+</tr>
+</tbody>
+</table></div>
+
+
+
+<h2 id="диагностика-и-обслуживание-системы">Диагностика и обслуживание системы</h2>
+<p>Как понять, что система работает некорректно? Первым признаком является длительное определение местоположения ("холодный старт" более 2-3 минут на открытом месте) или постоянный снос метки автомобиля на 50-100 метров от реального положения. Также о проблемах может свидетельствовать отсутствие голосовых подсказок о камерах или маневрах.</p>
+<p>Для диагностики можно использовать специальные приложения на смартфоне или встроенные инженерные меню головных устройств. Они показывают количество видимых спутников и уровень сигнала (SNR) от каждого из них. В норме на открытом пространстве должно быть видно от 8 до 12 спутников с уровнем сигнала выше 35-40 dBHz.</p>
+<p>Если уровень сигнала низкий у всех спутников, скорее всего, проблема в антенне или кабеле. Окисление разъема под крышей — частая причина неисправности. Замена антенны обычно решает проблему, так как активные элементы внутри "таблетки" со временем деградируют.</p>
+<blockquote>⚠️ <strong>Внимание:</strong> При установке дополнительного оборудования (сигнализации, камер) следите, чтобы провода не пережимали кабель антенны ГЛОНАСС. Повреждение центральной жилы коаксиального кабеля приводит к полному отказу навигации.</blockquote>
+
+
+
+<h2 id="будущее-навигационных-систем-в-автопроме">Будущее навигационных систем в автопроме</h2>
+<p>Технологии не стоят на месте. Будущее за интеграцией спутниковой навигации с инерциальными системами и данными камер технического зрения. Машины научатся "понимать" свое положение даже в тоннелях, сверяя картинку с камер с картой местности, когда спутников нет.</p>
+<p>Развивается стандарт высокоточного позиционирования, который позволит определять полосу движения с точностью до нескольких сантиметров. Это критически важно для внедрения систем автономного вождения, где ошибка в метр может стоить жизни. <strong>ГЛОНАСС К2</strong> — новое поколение спутников — уже предоставляет сигналы повышенной точности для таких задач.</p>
+<p>Водителям стоит следить за обновлениями программного обеспечения мультимедийных систем. Производители часто выпускают патчи, улучшающие алгоритмы фильтрации шумов и ускоряющие поиск спутников. Игнорирование обновлений может привести к тому, что ваш автомобиль будет работать менее эффективно, чем мог бы.</p>
+
+<details>
+<summary>Почему навигатор показывает неверную скорость?</summary>
+<p>Обычно это связано с плохим сигналом или использованием только 2D-режима (без учета высоты). Также скорость может рассчитываться на основе вращения колес, если датчик скорости автомобиля передает неверные данные, но спутниковая скорость всегда точнее на прямой дороге.</p>
+</details>
+
+<details>
+<summary>Можно ли отключить ЭРА-ГЛОНАСС legally?</summary>
+<p>Самостоятельное отключение или удаление системы ЭРА-ГЛОНАСС на автомобилях, сертифицированных с ней, запрещено законодательством РФ. Это приравнивается к внесению изменений в конструкцию ТС, не прошедших сертификацию, что влечет отказ в регистрации или снятие с учета.</p>
+</details>
+
+<details>
+<summary>Как работает ГЛОНАСС без интернета?</summary>
+<p>Сам прием спутникового сигнала происходит без интернета. Интернет (GSM/LTE) нужен только для быстрой загрузки альманаха (A-Glonass) для холодного старта и для передачи координат в сервисы мониторинга или навигационные приложения (Яндекс.Навигатор). Оффлайн-навигация работает только по спутникам.</p>
+</details>
+
+<details>
+<summary>Влияет ли магнитная буря на навигацию?</summary>
+<p>Да, сильные геомагнитные возмущения могут вызывать сбои в радиосигнале, проходящем через ионосферу. Это может привести к временному снижению точности или потере сигнала, особенно в высоких широтах.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/o/ob/oboznachenie-rezistorov-po-moshchnosti.html" class="pb-related-card">
+                <span class="pb-related-title">Обозначение резисторов по мощности: стандарты, размеры и выбор</span>
+                <span class="pb-related-desc">Полный гид по маркировке мощности резисторов. Размеры корпусов, таблицы ваттности, визуальное опреде</span>
+            </a><a href="/articles/m/ma/magikar-7-kak-vklyuchit-avtozapusk.html" class="pb-related-card">
+                <span class="pb-related-title">Magikar 7: как включить автозапуск — полная инструкция</span>
+                <span class="pb-related-desc">Подробный гид по настройке автозапуска на сигнализации Magikar 7. Схемы подключения, программировани</span>
+            </a><a href="/articles/v/vo/vosklitsatelnyj-znak-v-treugolnike-na-priborke.html" class="pb-related-card">
+                <span class="pb-related-title">Восклицательный знак в треугольнике на приборке: причины и решение</span>
+                <span class="pb-related-desc">Горит восклицательный знак в треугольнике на панели приборов? Узнайте точные причины, коды ошибок и </span>
+            </a><a href="/articles/k/ko/kontakty-na-lampe-h4.html" class="pb-related-card">
+                <span class="pb-related-title">Контакты на лампе H4: схема, ремонт и замена в авто 2026</span>
+                <span class="pb-related-desc">Разбираемся в контактах лампы H4: распиновка, типичные неисправности, как проверить и заменить. Схем</span>
+            </a><a href="/articles/r/ro/rozetka-220-v-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Розетка 220 в машину: установка инвертора и инверторной розетки</span>
+                <span class="pb-related-desc">Как сделать розетку 220 вольт в автомобиле. Выбор инвертора, схема подключения, сечение проводов и з</span>
+            </a><a href="/articles/z/za/zaryadnoe-puskovoe-ustrojstvo-dlya-akkumulyatora-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Зарядное пусковое устройство для авто: как выбрать и пользоваться</span>
+                <span class="pb-related-desc">Как правильно выбрать пускозарядное устройство для аккумулятора автомобиля? Обзор типов, характерист</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

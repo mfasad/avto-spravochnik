@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>ESR конденсатора: что это и как измерить мультиметром — Авто Справочник</title>
+    <meta name="description" content="Узнайте, что такое ESR конденсатора, как он влияет на работу электроники авто и ПК. Таблица норм, методика измерения и причины роста сопротивления.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ko/kondensator-esr-chto-eto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ESR конденсатора: что это и как измерить мультиметром">
+    <meta property="og:description" content="Узнайте, что такое ESR конденсатора, как он влияет на работу электроники авто и ПК. Таблица норм, методика измерения и причины роста сопротивления.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">ESR конденсатора: что это и как измерить мультиметром</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физическая-сущность-параметра-esr">Физическая сущность параметра ESR</a></li><li><a href="#влияние-esr-на-работу-автомобильной-электроники">Влияние ESR на работу автомобильной электроники</a></li><li><a href="#методы-измерения-и-используемые-приборы">Методы измерения и используемые приборы</a></li><li><a href="#таблица-допустимых-значений-и-нормативы">Таблица допустимых значений и нормативы</a></li><li><a href="#причины-деградации-и-роста-сопротивления">Причины деградации и роста сопротивления</a></li><li><a href="#практические-рекомендации-по-замене">Практические рекомендации по замене</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/d/dl/dlya-chego-nuzhen-rezistor-v-skheme.html">Зачем нужен резистор в автомобильной электрике: 5 ключевых функций</a></li><li><a href="/articles/k/ka/kakoj-kabel-na-vvod-v-kvartiru.html">Какой кабель нужен для ввода в квартиру: выбираем правильно</a></li><li><a href="/articles/k/ka/kak-zavesti-mashinu-start-stop.html">Как завести машину с системой Start-Stop: пошаговая инструкция 2026</a></li><li><a href="/articles/y/ya/yajtsa-v-mashine-chto.html">Яйца в машине: что это, как проверить и почему не разбиваются</a></li><li><a href="/articles/k/ka/kak-otkryt-mashinu-cherez-podsvetku-nomera.html">Как открыть машину через подсветку номера: секреты и риски</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Конденсатор ESR: что это, нормы и проверка</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физическая-сущность-параметра-esr">Физическая сущность параметра ESR</a></li><li><a href="#влияние-esr-на-работу-автомобильной-электроники">Влияние ESR на работу автомобильной электроники</a></li><li><a href="#методы-измерения-и-используемые-приборы">Методы измерения и используемые приборы</a></li><li><a href="#таблица-допустимых-значений-и-нормативы">Таблица допустимых значений и нормативы</a></li><li><a href="#причины-деградации-и-роста-сопротивления">Причины деградации и роста сопротивления</a></li><li><a href="#практические-рекомендации-по-замене">Практические рекомендации по замене</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В современной электронике, будь то бортовой компьютер автомобиля или блок управления двигателем, критически важную роль играет стабильность питающего напряжения. Многие автолюбители и даже опытные мастера часто сталкиваются с ситуацией, когда визуальный осмотр электролитических конденсаторов не выявляет вздутий или потеков электролита, а устройство работает некорректно или не включается вовсе. В таких случаях «виновником» торжества часто становится параметр, который невозможно определить глазом — <strong>эквивалентное последовательное сопротивление</strong>, или сокращенно ESR.</p>
+
+<p>Именно этот скрытый дефект приводит к тому, что фильтр перестает выполнять свои функции, пропуская высокочастотные пульсации и создавая помехи в цепи. Понимание природы этого явления позволяет диагностировать неисправности, которые стандартный тест емкости может пропустить. В данной статье мы разберем физический смысл параметра, его влияние на работу схем и способы точной диагностики.</p>
+
+<h2 id="физическая-сущность-параметра-esr">Физическая сущность параметра ESR</h2>
+
+<p>Любой реальный конденсатор, в отличие от идеальной математической модели, обладает собственным внутренним сопротивлением. <strong>ESR (Equivalent Series Resistance)</strong> представляет собой сумму всех активных сопротивлений, которые последовательно включены в цепь конденсатора. Сюда входит сопротивление обкладок, выводов, а также сопротивление электролита и диэлектрика. В идеальном мире этот показатель стремился бы к нулю, но в реальности он всегда присутствует.</p>
+
+<p>Особое значение этот параметр приобретает в импульсных блоках питания и высокочастотных цепях, где конденсаторы работают в режимах быстрой зарядки и разрядки. При протекании тока через <em>ESR</em> происходит нагрев компонента, что в долгосрочной перспективе ведет к испарению электролита и деградации устройства. Чем выше частота тока, тем сильнее сказывается влияние реактивной составляющей, но активное сопротивление остается постоянной величиной, генерирующей тепло.</p>
+
+<blockquote>⚠️ Внимание: Высокий ESR является основной причиной саморазогрева конденсатора в импульсных схемах, что может привести к его взрыву даже без видимого вздутия корпуса.</blockquote>
+
+<p>Стоит отметить, что для разных типов компонентов нормальные значения этого параметра существенно отличаются. Например, твердотельные полимерные конденсаторы обладают крайне низким сопротивлением, в то время как обычные алюминиевые электролиты имеют более высокие показатели. При проектировании или ремонте узлов <code>Engine Control Unit</code> необходимо строго придерживаться спецификаций производителя.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При замене конденсаторов в автомобильной электронике всегда выбирайте модели с низким ESR, если оригинал работал в импульсном режиме, иначе новый элемент быстро выйдет из строя.</p></aside>
+
+<h2 id="влияние-esr-на-работу-автомобильной-электроники">Влияние ESR на работу автомобильной электроники</h2>
+
+<p>В условиях автомобиля электрические цепи подвержены значительным нагрузкам и вибрациям. Конденсаторы в блоках управления, магнитолах и системах зажигания работают в жестком температурном режиме. Когда <strong>эквивалное сопротивление</strong> выходит за пределы допустимого, начинается деградация сигнала. Это может проявляться в виде помех в аудиосистеме, сбросов настроек головного устройства или нестабильной работы датчиков.</p>
+
+<p>Наиболее критично влияние этого параметра в цепях питания процессоров и микросхем. Если фильтр по питанию имеет высокий ESR, он не успевает сглаживать резкие скачки потребления тока. В результате на плате возникают просадки напряжения, которые могут привести к зависанию системы или ошибочным показаниям приборов. Часто мастера грешат на сами микросхемы, не подозревая, что проблема кроется в окружающем их <em>обвязке</em>.</p>
+
+<p>Существует прямая зависимость между температурой внутри подкапотного пространства и скоростью роста сопротивления. Летний перегрев ускоряет высыхание электролита, что является необратимым процессом. Даже если емкость конденсатора остается в пределах 10-15% от номинала, его <strong>ESR</strong> может вырасти в десятки раз, делая компонент бесполезным для фильтрации высокочастотных шумов.</p>
+
+<div class="pb-poll" id="poll-0bc3b655"><div class="pb-poll-question">📊 Сталкивались ли вы с ремонтом автомобильной электроники?</div><div class="pb-poll-option" data-poll="0bc3b655" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, менял конденсаторы в магнитоле</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0bc3b655" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Были проблемы с блоком управления двигателем</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0bc3b655" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Ремонтировал приборную панель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0bc3b655" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, только покупал новое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="методы-измерения-и-используемые-приборы">Методы измерения и используемые приборы</h2>
+
+<p>Для точной диагностики состояния компонентов недостаточно обычного мультиметра в режиме измерения емкости. Стандартные тестеры работают на низких частотах (обычно 50-100 Гц), тогда как <strong>ESR</strong> manifests себя на высоких частотах (от 40 кГц до 100 кГц и выше). Поэтому для профессионального ремонта необходим специализированный прибор — ESR-метр, который подает тестовый сигнал высокой частоты и измеряет активную составляющую сопротивления.</p>
+
+<p>Процесс измерения требует соблюдения определенных правил безопасности и точности. Во-первых, конденсатор должен быть полностью разряжен, иначе можно повредить измерительный прибор. Во-вторых, в некоторых случаях требуется выпаивание одного из выводов, чтобы исключить влияние параллельных цепей схемы, хотя современные приборы с низким тестовым напряжением часто позволяют проводить измерения прямо на плате.</p>
+
+<p>При работе с сложными многослойными платами автомобилей важно учитывать наличие параллельно соединенных компонентов. Если измеритель показывает значение, близкое к нулю, это может означать либо исправность конденсатора с очень низким сопротивлением, либо наличие короткого замыкания в параллельной цепи. В таких случаях помогает визуальный анализ схемы или аккуратное выпаивание компонента.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка конденсатора ESR-метром</h4><label class="check-item"><input type="checkbox"><span>Полностью разрядить конденсатор</span></label><label class="check-item"><input type="checkbox"><span>Выпаять один вывод (желательно)</span></label><label class="check-item"><input type="checkbox"><span>Подключить щупы прибора</span></label><label class="check-item"><input type="checkbox"><span>Считать показания на дисплее</span></label><label class="check-item"><input type="checkbox"><span>Сравнить с таблицей норм</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="таблица-допустимых-значений-и-нормативы">Таблица допустимых значений и нормативы</h2>
+
+<p>Не существует единой универсальной цифры, которая подходила бы всем конденсаторам. Нормальное значение <strong>ESR</strong> напрямую зависит от емкости, номинального напряжения и серии компонента. Как правило, чем больше емкость и выше напряжение, тем ниже должно быть сопротивление. Для автомобильной электроники характерно использование компонентов с пониженным сопротивлением.</p>
+
+<p>Ниже приведена справочная таблица ориентировочных значений для исправных алюминиевых электролитических конденсаторов при частоте измерения 100 кГц. Превышение этих значений в 2-3 раза уже считается признаком неисправности, даже если емкость в норме.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Емкость (мкФ)</th>
+<th>Напряжение (В)</th>
+<th>Типичный ESR (Ом)</th>
+<th>Критический предел (Ом)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.0 - 4.7</td>
+<td>16 - 50</td>
+<td>2.0 - 5.0</td>
+<td>> 10.0</td>
+</tr>
+<tr>
+<td>10 - 22</td>
+<td>16 - 50</td>
+<td>0.5 - 1.5</td>
+<td>> 3.0</td>
+</tr>
+<tr>
+<td>47 - 100</td>
+<td>16 - 50</td>
+<td>0.2 - 0.6</td>
+<td>> 1.2</td>
+</tr>
+<tr>
+<td>220 - 470</td>
+<td>16 - 50</td>
+<td>0.05 - 0.15</td>
+<td>> 0.4</td>
+</tr>
+<tr>
+<td>1000 и выше</td>
+<td>16 - 50</td>
+<td>0.02 - 0.08</td>
+<td>> 0.2</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Важно понимать, что данные в таблице являются усредненными. Для прецизионной техники или специфических автомобильных систем (например, <em>ABS</em> или <em>Airbag</em>) допуски могут быть значительно уже. Всегда старайтесь найти даташит на конкретную серию конденсаторов, если требуется максимальная точность ремонта.</p>
+
+<details class="pb-accordion"><summary>Почему новые конденсаторы могут иметь разброс параметров?</summary><div class="pb-accordion-body"><p>Производственный процесс допускает вариативность. Два конденсатора из одной партии могут отличаться по ESR на 20-30%, что считается нормой. Критичным является именно рост сопротивления относительно начального значения в процессе эксплуатации.</p></div></details>
+
+<h2 id="причины-деградации-и-роста-сопротивления">Причины деградации и роста сопротивления</h2>
+
+<p>Основным врагом электролитических конденсаторов является температура. В подкапотном пространстве автомобиля, где температура может достигать экстремальных значений, электролит постепенно высыхает через уплотнение вывода или резиновую пробку. Уменьшение объема электролита приводит к снижению площади контакта с обкладками, что напрямую увеличивает <strong>ESR</strong>.</p>
+
+<p>Вторым фактором является качество самих компонентов. Дешевые аналоги, часто используемые при неквалифицированном ремонте, могут иметь изначально высокое сопротивление или низкую термостаб!ильность. Использование таких деталей в цепях питания автомобильных усилителей или блоков управления приводит к повторным поломкам через короткий промежуток времени.</p>
+
+<p>Также (нельзя игнорировать) влияние пульсирующего тока. В импульсных преобразователях через конденсатор протекает ток высокой частоты. Если <em>ESR</em> изначально высок или начал расти, выделяемая тепловая мощность ($P = I^2 \cdot ESR$) увеличивается, запуская лавинообразный процесс разрушения. Конденсатор греется сам от себя, даже если окружающая среда холодная.</p>
+
+<blockquote>⚠️ Внимание: Никогда не устанавливайте конденсаторы с рабочим напряжением ниже, чем у оригинала. Запас по напряжению должен быть минимум 20-30%, иначе риск пробоя и роста ESR многократно возрастает.</blockquote>
+
+<h2 id="практические-рекомендации-по-замене">Практические рекомендации по замене</h2>
+
+<p>При обнаружении неисправного элемента необходимо подобрать качественную замену. Для автомобильной электроники предпочтительно использовать конденсаторы серий <em>Low ESR</em> или <em>High Ripple Current</em> от зарекомендовавших себя брендов, таких как Rubycon, Nichicon или Panasonic. Обычные бытовые конденсаторы могут не выдержать условий эксплуатации в автомобиле.</p>
+
+<p>В процессе пайки важно не перегревать выводы нового компонента. Длительное воздействие паяльника может повредить внутреннюю структуру и сразу же ухудшить параметры только что установленного элемента. Используйте паяльники с регулировкой температуры и не держите жало на контакте дольше 2-3 секунд.</p>
+
+<p>После замены рекомендуется провести повторное измерение уже собранного узла, чтобы убедиться в отсутствии ошибок монтажа. Иногда причиной высокого сопротивления оказывается не сам конденсатор, а плохой контакт в месте пайки или микротрещина в дорожке печатной платы, возникшая от вибрации.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Качество пайки и температурный режим при установке нового конденсатора так же важны, как и правильный выбор номинала. Перегрев при монтаже может instantly испортить новый компонент.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли проверить ESR обычным мультиметром?</summary>
+<p>Нет, обычный мультиметр в режиме омметра или тестера конденсаторов измеряет сопротивление постоянному току или емкость на низкой частоте. Он не покажет реальный <strong>ESR</strong>, который проявляется на высоких частотах. Для этого нужен специализированный прибор.</p>
+</details>
+
+<details>
+<summary>Влияет ли полярность на измерение ESR?</summary>
+<p>Для большинства современных ESR-метров полярность подключения щупов к электролитическому конденсатору не имеет значения, так как измерительный сигнал очень мал (менее 0.6В) и не открывает p-n переходы внутри. Однако соблюдать полярность при установке нового компонента в схему — строго обязательно.</p>
+</details>
+
+<details>
+<summary>Какой ESR считается нормальным для конденсатора 1000 мкФ?</summary>
+<p>Для емкости 1000 мкФ нормальным считается значение в диапазоне <code>0.02 - 0.08 Ом</code>. Если прибор показывает значения выше 0.2 Ом, такой конденсатор считается неисправным для использования в импульсных цепях, даже если его емкость в норме.</p>
+</details>
+
+<details>
+<summary>Почему конденсатор греется при работе?</summary>
+<p>Нагрев происходит из-за протекания тока через внутреннее сопротивление (<strong>ESR</strong>). Чем выше сопротивление и чем больше ток пульсаций, тем сильнее нагрев. Это основной признак деградации электролита и потери свойств фильтрации.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/d/dl/dlya-chego-nuzhen-rezistor-v-skheme.html" class="pb-related-card">
+                <span class="pb-related-title">Зачем нужен резистор в автомобильной электрике: 5 ключевых функций</span>
+                <span class="pb-related-desc">Разбираемся, как резисторы защищают автоэлектронику от перегрузок, стабилизируют напряжение и почему</span>
+            </a><a href="/articles/k/ka/kakoj-kabel-na-vvod-v-kvartiru.html" class="pb-related-card">
+                <span class="pb-related-title">Какой кабель нужен для ввода в квартиру: выбираем правильно</span>
+                <span class="pb-related-desc">Узнайте, какой кабель использовать для ввода электричества в квартиру: типы, сечения, материалы и но</span>
+            </a><a href="/articles/k/ka/kak-zavesti-mashinu-start-stop.html" class="pb-related-card">
+                <span class="pb-related-title">Как завести машину с системой Start-Stop: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Разбираемся, как правильно запускать двигатель с системой Start-Stop, избегая ошибок. Подробная инст</span>
+            </a><a href="/articles/y/ya/yajtsa-v-mashine-chto.html" class="pb-related-card">
+                <span class="pb-related-title">Яйца в машине: что это, как проверить и почему не разбиваются</span>
+                <span class="pb-related-desc">Яйца в машине — что это такое? Полный разбор системы безопасности подушек, причин ложных срабатывани</span>
+            </a><a href="/articles/k/ka/kak-otkryt-mashinu-cherez-podsvetku-nomera.html" class="pb-related-card">
+                <span class="pb-related-title">Как открыть машину через подсветку номера: секреты и риски</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как открыть автомобиль через лампочку подсветки номера: схемы, инструменты, ме</span>
+            </a><a href="/articles/k/ka/kak-razobrat-razem-avtomobilnyj-elektricheskij.html" class="pb-related-card">
+                <span class="pb-related-title">Как разобрать автомобильный электрический разъем: пошаговое руководство</span>
+                <span class="pb-related-desc">Узнайте, как правильно разобрать электрический разъем в автомобиле без повреждений. Инструкции, инст</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

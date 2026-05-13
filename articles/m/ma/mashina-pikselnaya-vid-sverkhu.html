@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Пиксельная машина вид сверху: ретро-спрайты и рендеры — Авто Справочник</title>
+    <meta name="description" content="Пиксельная машина вид сверху: полное руководство по созданию спрайтов, изометрии и выбору ракурса для игр. Разбор техник, палитр и инструментов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/m/ma/mashina-pikselnaya-vid-sverkhu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Пиксельная машина вид сверху: ретро-спрайты и рендеры">
+    <meta property="og:description" content="Пиксельная машина вид сверху: полное руководство по созданию спрайтов, изометрии и выбору ракурса для игр. Разбор техник, палитр и инструментов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Пиксельная машина вид сверху: ретро-спрайты и рендеры</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-правильного-ракурса-строго-сверху-или-изометрия">Выбор правильного ракурса: строго сверху или изометрия?</a></li><li><a href="#техники-рисования-от-силуэта-до-детализации">Техники рисования: от силуэта до детализации</a></li><li><a href="#детализация-элементов-кузова-в-малом-разрешении">Детализация элементов кузова в малом разрешении</a></li><li><a href="#работа-с-цветом-и-освещением-shading">Работа с цветом и освещением (Shading)</a></li><li><a href="#анимация-движения-и-поворотов">Анимация движения и поворотов</a></li><li><a href="#инструменты-и-экспорт-для-разработчиков">Инструменты и экспорт для разработчиков</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kakoj-samyj-luchshij-radar-detektor.html">Какой лучший радар-детектор 2026: выбор эксперта</a></li><li><a href="/articles/m/ma/mashiny-iz-filma-perevozchik.html">Машины из фильма Перевозчик: модели BMW и технические детали</a></li><li><a href="/articles/k/ka/kak-ubrat-tsarapiny-na-kozhzame.html">Как убрать царапины на кожзаме: полная инструкция по ремонту</a></li><li><a href="/articles/s/sk/skachat-samyj-moshchnyj-bass-v-mire.html">Как скачать мощный басс для авто: топ-5 систем 2026 года</a></li><li><a href="/articles/l/la/lazernye-moduli-v-fary.html">Лазерные модули в автомобильные фары: плюсы, минусы, установка</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Пиксельная машина вид сверху: от спрайта до рендера</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-правильного-ракурса-строго-сверху-или-изометрия">Выбор правильного ракурса: строго сверху или изометрия?</a></li><li><a href="#техники-рисования-от-силуэта-до-детализации">Техники рисования: от силуэта до детализации</a></li><li><a href="#детализация-элементов-кузова-в-малом-разрешении">Детализация элементов кузова в малом разрешении</a></li><li><a href="#работа-с-цветом-и-освещением-shading">Работа с цветом и освещением (Shading)</a></li><li><a href="#анимация-движения-и-поворотов">Анимация движения и поворотов</a></li><li><a href="#инструменты-и-экспорт-для-разработчиков">Инструменты и экспорт для разработчиков</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Визуализация транспортных средств в формате <strong>пиксель-арт</strong> требует особого подхода к композиции и детализации. Когда речь заходит о ракурсе «вид сверху» (top-down), художник сталкивается с уникальным набором технических ограничений и художественных задач. <em>Top-down</em> часто используется в гоночных симуляторах старых консолей, стратегиях в реальном времени и современных инди-проектах, имитирующих ретро-стилистику.</p>
+<p>Главная сложность заключается в том, чтобы передать динамику, форму кузова и характер автомобиля, используя минимальное количество пикселей. В отличие от боковой проекции, где четко виден профиль колес и окон, верхняя проекция превращает машину в геометрическую фигуру, где каждый цветной точкой имеет значение. Именно поэтому <strong>пиксельная машина вид сверху</strong> становится отличным полигоном для оттачивания навыков работы с цветом и светотенью.</p>
+<p>Создание качественного спрайта или рендера начинается не с рисования, а с понимания того, как работает <strong>перспектива</strong> в двухмерном пространстве. Даже при виде строго сверху (90 градусов) или в изометрии, необходимо учитывать объем. Без правильного распределения светлых и темных тонов автомобиль будет выглядеть плоским, напоминая наклейку, а не физический объект. В этой статье мы разберем ключевые аспекты создания таких изображений, от выбора палитры до финального шейдинга.</p>
+
+<h2 id="выбор-правильного-ракурса-строго-сверху-или-изометрия">Выбор правильного ракурса: строго сверху или изометрия?</h2>
+<p>Первое решение, которое должен принять разработчик или художник, касается угла обзора. Существует два основных типа верхней проекции: ортогональная (строго 90 градусов) и изометрическая (обычно около 26,5 или 30 градусов). <strong>Ортогональный вид</strong> идеален для классических аркад вроде ранних частей GTA или гонок на выживание, где важна четкость позиционирования на плоскости.</p>
+<p>В этом ракурсе крыша автомобиля занимает большую часть площади спрайта. Окна, капот и багажник видны как отдельные плоскости. Однако, такой вид может быть скучным, если не добавить динамики через повороты колес или эффекты движения. <em>Изометрия</em>, в свою очередь, добавляет объем, позволяя увидеть боковины кузова, что делает <strong>пиксельную машину</strong> более узнаваемой и «живой».</p>
+<blockquote>⚠️ <strong>Внимание:</strong> При переключении между ортогональным видом и изометрией в одном проекте обязательно соблюдайте единую систему координат. Смешение разных углов перспективы приведет к визуальной рассинхронизации объектов на карте.</blockquote>
+<p>Для новичков проще начать со строго вертикального вида, так как здесь меньше искажений пропорций. Вы рисуете прямоугольник кузова и добавляете детали. В изометрии же необходимо строго следить за линиями осей, иначе <strong>машина</strong> будет выглядеть перекошенной или «плывущей» по земле.</p>
+
+<div class="pb-poll" id="poll-6f5f49f5"><div class="pb-poll-question">📊 Какой ракурс вам ближе для ретро-проекта?</div><div class="pb-poll-option" data-poll="6f5f49f5" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Строго сверху (90°)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6f5f49f5" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Изометрия (2.5D)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6f5f49f5" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Псевдо-3D (Mode 7)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6f5f49f5" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Только боковой вид</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="техники-рисования-от-силуэта-до-детализации">Техники рисования: от силуэта до детализации</h2>
+<p>Процесс создания спрайта всегда начинается с <strong>силуэта</strong>. На этом этапе неважны цвета или тени, важна только форма. Пиксельная графика не прощает ошибок в пропорциях, так как низкое разрешение моментально выявляет любые несоответствия. Нарисуйте базовый прямоугольник, скруглите углы там, где должны быть арки или фары.</p>
+<p>После утверждения формы наступает этап <strong>цветового кодирования</strong>. Разделите машину на логические зоны: кузов, стекла, крыша, колеса. В пиксель-арте часто используется метод «селекта» (selective outlining), когда контуры рисуются не черным цветом, а более темным оттенком основного цвета объекта. Это помогает избежать эффекта «грязи» и делает изображение чище.</p>
+<ul>
+ <li>🎨 <strong>Палитра:</strong> Ограничьте количество цветов. Для одного автомобиля достаточно 4-8 оттенков для основного цвета, плюс цвета стекол и шин.</li>
+ <li>💡 <strong>Свет:</strong> Определите источник света до начала рисования. Обычно свет падает сверху-слева, создавая тени снизу-справа.</li>
+ <li>🔍 <strong>Масштаб:</strong> Решите, сколько пикселей будет занимать машина. Стандарт для ретро — 16x16 или 32x32 пикселя, для HD-ретро — 64x64 и выше.</li>
+</ul>
+<p>Важно помнить о <strong>anti-aliasing</strong> (сглаживании). В пиксель-арте его используют осторожно, добавляя промежуточные цвета на стыках контрастных областей, чтобы убрать «лесенку». Однако чрезмерное сглаживание может размыть четкость <strong>пиксельной машины</strong>, сделав её мутной.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте метод «шахматной доски» при проверке прозрачности фона. Нарисуйте яркий контрастный слой под вашим спрайтом, чтобы увидеть stray-пиксели (одиночные лишние точки) по краям.</p></aside>
+
+<h2 id="детализация-элементов-кузова-в-малом-разрешении">Детализация элементов кузова в малом разрешении</h2>
+<p>Когда базовая форма готова, наступает время для деталей. В ракурсе <strong>вид сверху</strong> главными элементами становятся крыша, капот и багажник. Именно здесь располагаются люки, вентиляционные отверстия и декоративные полосы. Даже в разрешении 32 пикселя можно обозначить дворники или антенну, используя всего 1-2 пикселя контрастного цвета.</p>
+<p>Окна требуют особого внимания. В верхней проекции они часто выглядят как темные пятна или градиенты. Чтобы добавить реализма, добавьте <strong>блик</strong> на лобовое стекло или крышу. Это мгновенно придаст поверхности свойства стекла или глянцевого металла. Без блика машина будет выглядеть матовой и пластиковой.</p>
+<p>Колеса в верхней проекции часто скрыты под арками или видны лишь частично. Если колеса видны, важно правильно передать <strong>поворот</strong>. Передние колеса должны поворачиваться синхронно с направлением движения в анимации. В статике их часто рисуют повернутыми немного влево или вправо, чтобы показать готовность к действию.</p>
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Элемент</th>
+ <th>Количество пикселей (при 32px ширине)</th>
+ <th>Цветовая схема</th>
+ <th>Важность детали</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Кузов (основа)</td>
+ <td>~60% площади</td>
+ <td>Основной + 2 оттенка</td>
+ <td>Высокая</td>
+ </tr>
+ <tr>
+ <td>Стекла</td>
+ <td>~15% площади</td>
+ <td>Темно-синий/Серый + Блик</td>
+ <td>Средняя</td>
+ </tr>
+ <tr>
+ <td>Колеса</td>
+ <td>4 точки по углам</td>
+ <td>Черный + Серый диск</td>
+ <td>Высокая</td>
+ </tr>
+ <tr>
+ <td>Фары/Стопы</td>
+ <td>2-4 пикселя</td>
+ <td>Ярко-желтый/Красный</td>
+ <td>Низкая (но заметная)</td>
+ </tr>
+ </tbody>
+</table></div>
+<p>Не перегружайте спрайт мелкими деталями. На расстоянии <strong>пиксельная машина</strong> должна считываться мгновенно. Если вы рисуете для мобильной игры, где объект будет маленьким, лучше пожертвовать ручками дверей, но четко выделить форму кузова.</p>
+
+<details class="pb-accordion"><summary>Секрет «живого» металла</summary><div class="pb-accordion-body"><p>Чтобы металл выглядел как металл, используйте жесткие переходы между светом и тенью (hard shading), а не плавный градиент. Добавьте одну яркую точку (specular highlight) на самой выступающей части крыши.</p></div></details>
+
+<h2 id="работа-с-цветом-и-освещением-shading">Работа с цветом и освещением (Shading)</h2>
+<p>Освещение — это то, что превращает плоскую цветную массу в объемный объект. Для <strong>машины вид сверху</strong> критически важно правильно расположить тени. Представьте, что солнце находится высоко и слева. Тогда правая сторона автомобиля и нижняя часть (если есть изометрия) будут в тени.</p>
+<p>Используйте технику <strong>Cluster Shading</strong> (кластерное затенение). Вместо того чтобы закрашивать каждый пиксель отдельно, группируйте пиксели одного тона в кластеры. Это создает приятную текстуру и избегает «шума». Тени должны быть четкими и читаемыми.</p>
+<ul>
+ <li>🌑 <strong>Амбиент:</strong> Добавьте легкий оттенок окружающего света (например, голубоватый от неба или оранжевый от заката) в самые темные тени, чтобы они не были чисто черными.</li>
+ <li>✨ <strong>Отражения:</strong> На глянцевых крышах можно нарисовать отражение окружающей среды упрощенно — парой полосок другого оттенка.</li>
+ <li>🔥 <strong>Контраст:</strong> Увеличьте контраст между светом и тенью для спортивных авто и уменьшите для старых, матовых машин.</li>
+</ul>
+<blockquote>⚠️ <strong>Внимание:</strong> Избегайте использования чистого черного цвета (#000000) для теней, если только вы не работаете в строго ограниченном стиле GameBoy. Черный цвет «выжигает» пиксели и делает картинку плоской. Используйте темно-синий, темно-фиолетовый или темно-коричневый.</blockquote>
+<p>Для создания эффекта ночной поездки можно добавить свечение фар на «асфальт» под машиной. Это делается полупрозрачным слоем или пикселями меньшей яркости того же цвета, что и фары. Такая деталь значительно повышает качество <strong>рендера</strong>.</p>
+
+<h2 id="анимация-движения-и-поворотов">Анимация движения и поворотов</h2>
+<p>Статичная <strong>пиксельная машина</strong> хороша для иконок, но в игре она должна двигаться. Базовая анимация вида сверху включает в себя покачивание кузова при движении и работу колес. Даже минимальное смещение кузова вверх-вниз (bounce) создает иллюзию работы подвески.</p>
+<p>При повороте колеса должны вращаться вокруг своей оси. В пиксель-арте это часто реализуется через 2-4 кадра вращения диска. Важно, чтобы при повороте самого автомобиля (изменении направления движения) менялась и тень под ним. Тень — это отдельный слой (sprite), который должен масштабироваться и поворачиваться независимо от машины.</p>
+<pre><code>// Пример логики смещения спрайта при ускорении
+<p>if (speed > 0) {</p>
+<p>sprite.y -= 1; // Машина чуть приподнимается или сдвигается</p>
+<p>shadow.scale(1.1); // Тень уменьшается, так как машина «выше»</p>
+<p>} else {</p>
+<p>sprite.y = 0;</p>
+<p>shadow.scale(1.0);</p>
+<p>}</code></pre></p>
+<p>Также стоит анимировать выхлоп. Клубы дыма, вырывающиеся из выхлопной трубы (которая видна сверху как маленькая точка сзади), добавляют динамики. Дым должен быть полупрозрачным и быстро рассеиваться.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист анимации</h4><label class="check-item"><input type="checkbox"><span>Отрисовать 4 кадра вращения колес</span></label><label class="check-item"><input type="checkbox"><span>Сделать покачивание кузова (2 кадра)</span></label><label class="check-item"><input type="checkbox"><span>Нарисовать отдельный слой тени</span></label><label class="check-item"><input type="checkbox"><span>Добавить эффект пыли/дыма сзади</span></label><label class="check-item"><input type="checkbox"><span>Проверить синхронизацию звука мотора</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="инструменты-и-экспорт-для-разработчиков">Инструменты и экспорт для разработчиков</h2>
+<p>Для создания качественной <strong>пиксельной графики</strong> существует ряд специализированных инструментов. Лидером рынка остается <em>Aseprite</em>, который предлагает идеальные инструменты для работы с пикселями, анимацией и палитрами. Бесплатной альтернативой может служить <em>Piskel</em> или <em>GIMP</em> с включенным режимом карандаша 1px.</p>
+<p>При экспорте графики для движков (Unity, Godot, Unreal) важно соблюдать правила масштабирования. Пиксель-арт всегда должен масштабироваться кратно (200%, 300%, 400%), иначе включится интерполяция, и четкие края превратятся в кашу. Формат <strong>PNG</strong> с поддержкой прозрачности (Alpha channel) является стандартом.</p>
+<p>Организация спрайт-листов (sprite sheets) также важна. Все кадры анимации машины (движение прямо, поворот влево, поворот вправо, стоп) должны быть собраны в один файл или набор файлов с одинаковыми размерами. Это оптимизирует работу движка и потребление памяти.</p>
+<blockquote>⚠️ <strong>Внимание:</strong> При экспорте из графического редактора убедитесь, что вы не добавили лишние пустые поля (padding) вокруг спрайта, если ваш движок не требует этого специально. Лишние поля могут сместить точку привязки (anchor point) машины.</blockquote>
+<p>Для современных проектов, имитирующих ретро, часто используют шейдеры CRT (эффект старого телевизора) уже на этапе рендеринга в движке, поэтому исходный спрайт должен быть максимально чистым, без встроенных полос сканирования.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный секрет успеха — ограничение палитры. Чем меньше цветов вы используете, тем целостнее и стильнее будет выглядеть ваша пиксельная машина.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+<details>
+ <summary>Какой размер спрайта оптимален для мобильной игры?</summary>
+ <p>Для мобильных устройств с высокими экранами рекомендуется начинать с базового размера 64x64 или 128x128 пикселей. Это позволит машине выглядеть детально даже на больших мониторах. Однако, если стиль требует «настоящего» ретро, можно использовать 32x32, но масштабировать его программно без сглаживания.</p>
+</details>
+<details>
+ <summary>Как сделать так, чтобы машина не сливалась с дорогой?</summary>
+ <p>Используйте контрастные цвета для обводки (outline) или добавьте «обводку тенью» (drop shadow) под всем контуром автомобиля. Также помогает добавление яркого блика на крышу, который будет выделяться на фоне серого асфальта.</p>
+</details>
+<details>
+ <summary>Нужно ли рисовать машину для каждого угла поворота?</summary>
+ <p>В классическом 2D — да, обычно рисуется 8 или 16 направлений (спрайты поворота). В современных движках часто используют 3D-модель, которая рендерится в спрайт-лист, или же применяют технику «2.5D», где 2D-спрайт просто наклоняется, что выглядит менее качественно, но экономит ресурсы.</p>
+</details>
+<details>
+ <summary>Можно ли использовать 3D-модель для получения пиксель-арта?</summary>
+ <p>Да, это распространенная практика. Вы можете создать лоу-поли модель машины, настроить ортогональную камеру и рендерить кадры в низком разрешении, затем дорисовывать детали вручную. Это ускоряет процесс получения правильных перспектив.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kakoj-samyj-luchshij-radar-detektor.html" class="pb-related-card">
+                <span class="pb-related-title">Какой лучший радар-детектор 2026: выбор эксперта</span>
+                <span class="pb-related-desc">Ищете лучший радар-детектор? Экспертный обзор технологий, дальности и настроек. Узнайте, как выбрать</span>
+            </a><a href="/articles/m/ma/mashiny-iz-filma-perevozchik.html" class="pb-related-card">
+                <span class="pb-related-title">Машины из фильма Перевозчик: модели BMW и технические детали</span>
+                <span class="pb-related-desc">Полный обзор автомобилей из трилогии Перевозчик. Технические характеристики BMW E38, Audi A8 и други</span>
+            </a><a href="/articles/k/ka/kak-ubrat-tsarapiny-na-kozhzame.html" class="pb-related-card">
+                <span class="pb-related-title">Как убрать царапины на кожзаме: полная инструкция по ремонту</span>
+                <span class="pb-related-desc">Проверенные способы, как убрать царапины на кожзаме. Эффективные методы реставрации диванов, салонов</span>
+            </a><a href="/articles/s/sk/skachat-samyj-moshchnyj-bass-v-mire.html" class="pb-related-card">
+                <span class="pb-related-title">Как скачать мощный басс для авто: топ-5 систем 2026 года</span>
+                <span class="pb-related-desc">Где бесплатно скачать прошивки для самых мощных сабвуферов в мире? Обзор топовых моделей, настройки </span>
+            </a><a href="/articles/l/la/lazernye-moduli-v-fary.html" class="pb-related-card">
+                <span class="pb-related-title">Лазерные модули в автомобильные фары: плюсы, минусы, установка</span>
+                <span class="pb-related-desc">Лазерные фары для авто: что это, как работают, преимущества и недостатки, совместимость с моделями, </span>
+            </a><a href="/articles/s/sk/skachat-albom-muzyki-v-mashinu-besplatno-v-khoroshem-kachestve.html" class="pb-related-card">
+                <span class="pb-related-title">Скачать альбом в машину бесплатно в хорошем качестве: способы и советы</span>
+                <span class="pb-related-desc">Как скачать музыку для авто в высоком качестве легально и бесплатно. Обзор сервисов, форматов и нюан</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

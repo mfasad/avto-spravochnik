@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Диоды для зарядного устройства: выбор, расчет и схемы — Авто Справочник</title>
+    <meta name="description" content="Как выбрать диоды для зарядного устройства аккумуляторов? Расчет выпрямителя, схемы подключения, защита от перегрева и обратного тока.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/d/di/diody-dlya-zaryadnogo-ustrojstva-avtomobilnykh-akkumulyatorov.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Диоды для зарядного устройства: выбор, расчет и схемы">
+    <meta property="og:description" content="Как выбрать диоды для зарядного устройства аккумуляторов? Расчет выпрямителя, схемы подключения, защита от перегрева и обратного тока.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Диоды для зарядного устройства: выбор, расчет и схемы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-диода-в-зарядном-устройстве">Принцип работы диода в зарядном устройстве</a></li><li><a href="#ключевые-параметры-для-выбора-диодов">Ключевые параметры для выбора диодов</a></li><li><a href="#популярные-марки-диодов-для-самодельных-зу">Популярные марки диодов для самодельных ЗУ</a></li><li><a href="#организация-эффективного-теплоотвода">Организация эффективного теплоотвода</a></li><li><a href="#защита-от-обратного-тока-и-переполюсовки">Защита от обратного тока и переполюсовки</a></li><li><a href="#сборка-и-тестирование-выпрямителя">Сборка и тестирование выпрямителя</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/provoda-krasnyj-i-chernyj-gde-plyus-gde-minus.html">Красный и черный провод: где плюс, где минус в авто</a></li><li><a href="/articles/p/pr/propali-basy-na-kolonkakh-v-mashine.html">Пропали басы на колонках в машине: 10 причин и как исправить</a></li><li><a href="/articles/p/pr/prichiny-neispravnoj-katushki-zazhiganiya.html">Причины неисправной катушки зажигания: диагностика и симптомы</a></li><li><a href="/articles/r/re/regulyator-temperatury-12-volt.html">Регулятор температуры 12 Вольт: выбор, подключение и отзывы</a></li><li><a href="/articles/k/ka/kak-soedinyat-provoda-v-avtomobile.html">Как правильно соединять провода в авто: методы и ошибки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Диоды для зарядного устройства автомобильных аккумуляторов: Выбор и схемы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-диода-в-зарядном-устройстве">Принцип работы диода в зарядном устройстве</a></li><li><a href="#ключевые-параметры-для-выбора-диодов">Ключевые параметры для выбора диодов</a></li><li><a href="#популярные-марки-диодов-для-самодельных-зу">Популярные марки диодов для самодельных ЗУ</a></li><li><a href="#организация-эффективного-теплоотвода">Организация эффективного теплоотвода</a></li><li><a href="#защита-от-обратного-тока-и-переполюсовки">Защита от обратного тока и переполюсовки</a></li><li><a href="#сборка-и-тестирование-выпрямителя">Сборка и тестирование выпрямителя</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Создание или ремонт самодельного зарядного устройства (ЗУ) для автомобильного аккумулятора невозможно без понимания роли полупроводниковых элементов. Именно <strong>диоды</strong> выполняют критически важную функцию выпрямления тока, преобразуя переменное напряжение сети в постоянный ток, необходимый для химической реакции внутри свинцово-кислотной батареи. Ошибка в выборе этих компонентов может привести не только к выходу из строя самого выпрямителя, но и к повреждению дорогостоящего аккумулятора или даже к пожароопасной ситуации в гараже.</p>
+
+<p>В этой статье мы детально разберем технические параметры, на которые нужно обращать внимание при подборе диодной сборки, рассмотрим популярные схемы включения и обсудим вопросы теплоотвода. Вы узнаете, почему для мощных зарядных устройств недостаточно просто спаять любые четыре диода в мост, и как правильно рассчитать запас прочности по току и напряжению. Понимание этих процессов позволит вам собрать надежный агрегат, который прослужит долгие годы.</p>
+
+<h2 id="принцип-работы-диода-в-зарядном-устройстве">Принцип работы диода в зарядном устройстве</h2>
+
+<p>Основная задача диода в цепи зарядного устройства — пропускать электрический ток только в одном направлении. Когда переменный ток из трансформатора подходит к диоду, он «срезает» отрицательную полуволну синусоиды (или разворачивает её, в зависимости от схемы моста), обеспечивая на выходе пульсирующее напряжение одной полярности. <strong>Обратное сопротивление</strong> диода в этот момент велико, что блокирует протекание тока в обратную сторону, защищая трансформатор и саму батарею.</p>
+
+<p>Важно понимать, что идеальный выпрямитель должен иметь нулевое падение напряжения при прямом включении и бесконечное сопротивление при обратном. В реальности же полупроводниковые приборы, такие как <em>1N5408</em> или <em>Д242</em>, обладают внутренним сопротивлением, которое приводит к нагреву элемента. Чем выше ток зарядки, тем сильнее греется диод. Это фундаментальный закон физики, игнорирование которого ведет к тепловому пробою.</p>
+
+<p>Существует два основных типа схем выпрямления, используемых в автомобильных ЗУ: однополупериодная и двухполупериодная (мостовая). В первом случае используется только одна половина синусоиды, что снижает КПД и увеличивает пульсации. Мостовая схема, состоящая из четырех диодов, использует обе полуволны, обеспечивая более стабильный ток заряда. Именно мостовые схемы являются стандартом для современных и эффективных зарядных устройств.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При сборке мостовой схемы обязательно проверяйте полярность подключения каждого диода. Ошибка в монтаже даже одного элемента приведет к короткому замыканию во вторичной обмотке трансформатора в момент включения в сеть.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Почему диоды греются?</summary><div class="pb-accordion-body"><p>В процессе работы через диод проходит ток, и на p-n переходе возникает падение напряжения (обычно 0.7-1.1 В для кремниевых диодов). Произведение тока на падение напряжения дает тепловую мощность, которая должна рассеиваться в окружающую среду. Если тепло не отводить, кристалл разрушается.</p></div></details>
+
+<h2 id="ключевые-параметры-для-выбора-диодов">Ключевые параметры для выбора диодов</h2>
+
+<p>Подбор компонентов для зарядного устройства начинается с анализа характеристик аккумулятора и трансформатора. Главным параметром является <strong>максимальный прямой ток</strong> (If или Imax). Для зарядки стандартного автомобильного аккумулятора емкостью 55-60 А·ч обычно требуются токи в диапазоне 5-10 Ампер. Однако выбирать диоды «впритык» нельзя — необходим запас.</p>
+
+<p>Второй критический параметр — <strong>максимальное обратное напряжение</strong> (Vrrm или Uобр). Оно должно превышать амплитудное напряжение на вторичной обмотке трансформатора. Поскольку стандартное напряжение в сети 220В может колебаться, а трансформаторы часто дают выбросы, запас по напряжению должен быть двукратным. Для 12-вольтовых систем обычно выбирают диоды на 50-100 Вольт и выше.</p>
+
+<p>Также следует учитывать падение напряжения на диоде. Для кремниевых диодов оно составляет около 0.7-1.0 В, что при токе 10 А дает потерю мощности до 10 Ватт на каждый диод в мосту. Использование диодов Шоттки позволяет снизить это падение до 0.3-0.4 В, что повышает КПД устройства и снижает нагрев, но такие компоненты чувствительны к превышению обратного напряжения.</p>
+
+<ul>
+<li>🔌 <strong>Ток:</strong> Выбирайте диоды с номинальным током минимум в 1.5-2 раза выше планируемого тока заряда.</li>
+<li>⚡ <strong>Напряжение:</strong> Обратное напряжение должно быть не менее 50 В для 12-вольтовых систем.</li>
+<li>🌡️ <strong>Температура:</strong> Учитывайте рабочую температуру корпуса, особенно если устройство будет работать в закрытом боксе.</li>
+</ul>
+
+<div class="pb-poll" id="poll-5b777f90"><div class="pb-poll-question">📊 Какой ток заряда вы планируете использовать?</div><div class="pb-poll-option" data-poll="5b777f90" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">1-3 Ампера (малый ток)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5b777f90" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">3-6 Ампер (станд)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5b777f90" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">6-10 Ампер (ускоренный)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="5b777f90" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Более 10 Ампер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="популярные-марки-диодов-для-самодельных-зу">Популярные марки диодов для самодельных ЗУ</h2>
+
+<p>На рынке электронных компонентов представлен широкий ассортимент полупроводников, подходящих для сборки выпрямителей. Наиболее распространенной серией для токов до 3 Ампер являются диоды <em>1N4007</em>. Они дешевы, доступны и выдерживают обратное напряжение до 1000 В, однако их токовая нагрузка ограничена. Для более мощных устройств они не подходят без параллельного включения, что не всегда эффективно.</p>
+
+<p>Для токов от 3 до 10 Ампер идеально подходят диоды серии <em>1N5408</em> или отечественные аналоги <em>Д242</em>, <em>Д243</em>, <em>Д245</em>. Эти компоненты часто имеют металлический корпус с резьбой, что позволяет накручивать их непосредственно на радиатор или использовать гайку для крепления к алюминиевой пластине. Это значительно упрощает конструкцию теплоотвода.</p>
+
+<p>В мощных промышленных и полупрофессиональных зарядных устройствах часто применяются диодные сборки (диодные мосты) серии <em>KBPC</em> или <em>RS</em>. Они представляют собой четыре диода, уже спаянных в единую пластиковую коробку с выводами. Такие сборки удобны в монтаже, но требуют качественного прижатия к радиатору через термопасту, так как пластиковый корпус плохо проводит тепло.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Маркировка</th>
+<th>Макс. ток (А)</th>
+<th>Обратное напр. (В)</th>
+<th>Тип корпуса</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1N4007</td>
+<td>1.0</td>
+<td>1000</td>
+<td>Цилиндрический</td>
+</tr>
+<tr>
+<td>1N5408</td>
+<td>3.0</td>
+<td>1000</td>
+<td>Цилиндрический</td>
+</tr>
+<tr>
+<td>Д242А</td>
+<td>10.0</td>
+<td>100</td>
+<td>Металлический</td>
+</tr>
+<tr>
+<td>KBPC3510</td>
+<td>35.0</td>
+<td>1000</td>
+<td>Мост (пластик)</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При использовании диодов в металлическом корпусе (серии Д242, Д245) обязательно изолируйте слюдяной прокладкой место крепления диода к общему радиатору, если на радиаторе есть другие элементы под напряжением.</p></aside>
+
+<h2 id="организация-эффективного-теплоотвода">Организация эффективного теплоотвода</h2>
+
+<p>Как упоминалось ранее, значительная часть энергии при выпрямлении превращается в тепло. Если не обеспечить отвод тепла, температура кристалла превысит допустимый предел (обычно +150°C), и произойдет необратимый <strong>тепловой пробой**. Диод начнет пропускать ток в обоих направлениях, что приведет к короткому замыканию. Поэтому наличие радиатора — это не опция, а необходимость.</strong></p>
+
+<p>Для диодов с током более 1 Ампера рекомендуется использовать алюминиевые пластины или профили. Площадь поверхности радиатора рассчитывается исходя из рассеиваемой мощности. Простое правило: на каждый 1 Ампер тока требуется примерно 10-15 кв. см площади эффективного охлаждения. Для мощных сборок, таких как <em>KBPC5010</em>, часто используют корпус самого зарядного устройства как радиатор, прикручивая сборку напрямую к металлической стенке через термопасту.</p>
+
+<p>Важно обеспечить циркуляцию воздуха вокруг теплоотводящих элементов. Если зарядное устройство работает в закрытом корпусе, необходимо предусмотреть вентиляционные отверстия снизу и сверху для создания тяги. В особо мощных моделях (более 20 Ампер) может потребоваться активное охлаждение с помощью компьютерного кулера, запитанного от выхода самого ЗУ.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не оставляйте работающее зарядное устройство на легковоспламеняющихся поверхностях (дерево, ткань, пластик) без надежного теплоотвода. Нагрев диодов и трансформатора может достигать 80-90 градусов Цельсия.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка системы охлаждения</h4><label class="check-item"><input type="checkbox"><span>Диод плотно прижат к радиатору</span></label><label class="check-item"><input type="checkbox"><span>Использована термопаста</span></label><label class="check-item"><input type="checkbox"><span>Есть зазор для циркуляции воздуха</span></label><label class="check-item"><input type="checkbox"><span>Радиатор не касается других деталей под напряжением</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="защита-от-обратного-тока-и-переполюсовки">Защита от обратного тока и переполюсовки</h2>
+
+<p>Одной из функций диодов в зарядном устройстве является предотвращение разряда аккумулятора через трансформатор при отсутствии напряжения в сети. Без диодов батарея могла бы работать как источник питания для первичной цепи, что недопустимо. Однако даже выпрямленный ток может быть опасен, если перепутать полярность подключения клемм.</p>
+
+<p>Для защиты от переполюсовки (когда «плюс» ЗУ подключают к «минусу» АКБ) в схему добавляют дополнительный мощный диод или используют реле. Диод ставится последовательно с выходом «плюс». Если вы перепутаете клеммы, диод закроется, и ток не потечет. Минус такого метода — дополнительное падение напряжения и нагрев. Более продвинутые схемы используют электронные ключи на полевых транзисторах, которые действуют как идеальные диоды с минимальным сопротивлением.</p>
+
+<p>Также стоит упомянуть о пробое диода. Если один из диодов в мосту выйдет из строя (замкнется), на аккумулятор пойдет переменное ток или пульсирующий ток с большой амплитудой. Это может вызвать закипание электролита и разрушение пластин. Поэтому установка плавкого предохранителя в цепь первичной или вторичной обмотки является обязательным требованием безопасности.</p>
+
+<p>В современных автоматических зарядных устройствах функции диодов дополняются микроконтроллерами, которые отслеживают форму сигнала. Однако в простых схемах именно качество диодной сборки определяет надежность всей системы. Использование быстродействующих диодов (например, <em>UF</em> серии) в низкочастотных ЗУ (50 Гц) не имеет смысла, так как они дороже, а их быстродействие не будет использовано.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Диод в цепи заряда — это односторонний клапан. Его исправность гарантирует, что аккумулятор получит энергию, но не отдаст её обратно в сеть, и не закипит от переменного тока.</p></aside>
+
+<h2 id="сборка-и-тестирование-выпрямителя">Сборка и тестирование выпрямителя</h2>
+
+<p>Процесс сборки начинается с проверки каждого диода мультиметром в режиме прозвонки. В прямом направлении прибор должен показывать падение напряжения (0.5-0.7 В), а в обратном — единицу (бесконечность). Если диод звонится в обе стороны или не звонится ни в одну — он бракованный. После проверки компоненты спаиваются согласно схеме моста.</p>
+
+<p>При пайке мощных диодов с длинными выводами старайтесь не перегревать их. Используйте паяльник мощностью не менее 60-80 Вт, чтобы соединение происходило быстро. Длинный нагрев может повредить внутреннюю структуру полупроводника. Для соединения с трансформатором используйте медный провод сечением, соответствующим току нагрузки (не менее 1 кв. мм на 10 Ампер).</p>
+
+<p>После сборки проведите предварительное тестирование без подключения аккумулятора. Подключите ЗУ к сети и измерьте напряжение на выходе мультиметром в режиме DC. Оно должно быть примерно на 1.4 В меньше, чем напряжение переменного тока на выходе трансформатора (из-за падения на двух диодах моста). Если напряжение близко к нулю или сильно отличается от расчетного, проверьте схему подключения.</p>
+
+<details>
+<summary>Как проверить диодный мост под нагрузкой?</summary>
+<p>Для проверки под нагрузкой можно использовать автомобильную лампу накаливания (например, 21 Вт) в качестве эквивалента нагрузки. Подключите лампу к выходу выпрямителя. Если при включении в сеть лампа загорается, а напряжение под нагрузкой падает не более чем на 10-15%, значит, диоды справляются с током. Резкое падение напряжения или нагрев диодов до дымления свидетельствует о недостаточном токе диодов или плохом контакте.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать диоды от генератора?</summary>
+<p>Да, диоды от автомобильного генератора (например, серии Д104, Д242) отлично подходят для зарядных устройств. Они рассчитаны на высокие токи и вибрации. Однако у них часто нестандартная форма корпуса, и их сложнее закрепить на радиаторе в условиях гаража без специального инструмента. Кроме того, они могут быть запрессованы в общую плату генератора, откуда их трудно извлечь без повреждений.</p>
+</details>
+
+<details>
+<summary>Что делать, если диод постоянно сгорает?</summary>
+<p>Если диоды регулярно выходят из строя, проверьте: 1) Наличие короткого замыкания в аккумуляторе (он может потреблять огромный ток). 2) Достаточность площади радиатора (диодам может быть просто жарко). 3) Скачки напряжения в сети. 4) Правильность подбора диодов по току (возможно, вы пытаетесь зарядить 100Ач батарею диодом на 3 Ампера).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/provoda-krasnyj-i-chernyj-gde-plyus-gde-minus.html" class="pb-related-card">
+                <span class="pb-related-title">Красный и черный провод: где плюс, где минус в авто</span>
+                <span class="pb-related-desc">Как определить полярность проводов: красный плюс или минус? Разбор цветовой маркировки, ошибки при п</span>
+            </a><a href="/articles/p/pr/propali-basy-na-kolonkakh-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Пропали басы на колонках в машине: 10 причин и как исправить</span>
+                <span class="pb-related-desc">Исчезли низкие частоты в автозвуке? Разбираем причины — от настроек магнитолы до поломки сабвуфера. </span>
+            </a><a href="/articles/p/pr/prichiny-neispravnoj-katushki-zazhiganiya.html" class="pb-related-card">
+                <span class="pb-related-title">Причины неисправной катушки зажигания: диагностика и симптомы</span>
+                <span class="pb-related-desc">Почему выходит из строя катушка зажигания? Разбираем основные причины, симптомы пробоя, влияние свеч</span>
+            </a><a href="/articles/r/re/regulyator-temperatury-12-volt.html" class="pb-related-card">
+                <span class="pb-related-title">Регулятор температуры 12 Вольт: выбор, подключение и отзывы</span>
+                <span class="pb-related-desc">Как выбрать и подключить регулятор температуры на 12В для авто, бытовой техники и систем отопления. </span>
+            </a><a href="/articles/k/ka/kak-soedinyat-provoda-v-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно соединять провода в авто: методы и ошибки</span>
+                <span class="pb-related-desc">Полный гид по соединению проводов в автомобиле. Пайка, скрутка, клеммы. Как избежать окисления и пож</span>
+            </a><a href="/articles/k/ka/kak-rabotat-s-ampermetrom.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться амперметром: пошаговое руководство для авто</span>
+                <span class="pb-related-desc">Узнайте, как правильно подключить амперметром в машине, измерить ток и избежать ошибок. Инструкция с</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

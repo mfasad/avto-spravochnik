@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>База данных ввезенного автотранспорта: проверка по ЭПТС и СБКТУ — Авто Справочник</title>
+    <meta name="description" content="Полный гид по базе данных ввезенного автотранспорта. Как проверить ЭПТС, статус утильсбора и ограничения на регистрацию через СБКТУ.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/b/ba/baza-dannykh-vvezennogo-avtotransporta.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="База данных ввезенного автотранспорта: проверка по ЭПТС и СБКТУ">
+    <meta property="og:description" content="Полный гид по базе данных ввезенного автотранспорта. Как проверить ЭПТС, статус утильсбора и ограничения на регистрацию через СБКТУ.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-nav-active">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/registratsiya-v-gibdd/">Регистрация в ГИБДД</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">База данных ввезенного автотранспорта: проверка по ЭПТС и СБКТУ</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#структура-учета-импортированных-автомобилей">Структура учета импортированных автомобилей</a></li><li><a href="#электронный-птс-как-индикатор-статуса">Электронный ПТС как индикатор статуса</a></li><li><a href="#проверка-уплаты-утилизационного-сбора">Проверка уплаты утилизационного сбора</a></li><li><a href="#сбктс-и-технический-регламент">СБКТС и технический регламент</a></li><li><a href="#ограничения-на-регистрацию-в-гибдд">Ограничения на регистрацию в ГИБДД</a></li><li><a href="#частые-ошибки-и-проблемы-при-проверке">Частые ошибки и проблемы при проверке</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-oformit-mashinu-bez-pts.html">Как оформить машину без ПТС в 2026: законные способы и риски</a></li><li><a href="/articles/v/vz/vzyat-talon-v-gai-cherez-gosuslugi.html">Как взять талон в ГИБДД через Госуслуги: пошаговая инструкция 2026</a></li><li><a href="/articles/d/do/dokumenty-podtverzhdayushchie-pravo-sobstvennosti-na-transportnoe-sredstvo.html">Документы на автомобиль: подтверждение права собственности</a></li><li><a href="/articles/k/ka/kak-snyat-s-ucheta-mashinu-esli-ee-net.html">Как снять с учета машину если ее нет: инструкция 2026</a></li><li><a href="/articles/k/ka/kak-ostavit-nomera-na-sokhranenii.html">Как оставить номера на сохранении в ГИБДД: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>База данных ввезенного автотранспорта: проверка и реестры</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#структура-учета-импортированных-автомобилей">Структура учета импортированных автомобилей</a></li><li><a href="#электронный-птс-как-индикатор-статуса">Электронный ПТС как индикатор статуса</a></li><li><a href="#проверка-уплаты-утилизационного-сбора">Проверка уплаты утилизационного сбора</a></li><li><a href="#сбктс-и-технический-регламент">СБКТС и технический регламент</a></li><li><a href="#ограничения-на-регистрацию-в-гибдд">Ограничения на регистрацию в ГИБДД</a></li><li><a href="#частые-ошибки-и-проблемы-при-проверке">Частые ошибки и проблемы при проверке</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Покупка автомобиля, ввезенного из-за границы, всегда сопряжена с рисками, связанными с юридической чистотой и техническим соответствием. <strong>База данных ввезенного автотранспорта</strong> — это не единый документ, а сложный комплекс информационных систем, объединяющий данные таможенной службы, аккредитованных испытательных лабораторий и ГИБДД. Именно сверка с этими источниками позволяет будущему владельцу избежать покупки машины, которую невозможно поставить на учет.</p>
+
+<p>С введением обязательной <em>СБКТС</em> (Свидетельство о безопасности конструкции транспортного средства) и переходом на электронные ПТС, прозрачность истории импорта значительно возросла. Однако, несмотря на цифровизацию, тысячи автомобилей ежегодно застревают на таможне или в портах из-за ошибок в декларациях или несоответствия экологическим нормам. Понимание того, как работают эти реестры, является критически важным навыком для любого импортера.</p>
+
+<p>В этой статье мы детально разберем структуру учета иностранных транспортных средств, научимся читать статусы в ЭПТС и поймем, где искать информацию об утилизационном сборе. <mark>Ключевым моментом является проверка статуса "Выпуск в свободное обращение", без которого любые дальнейшие действия с автомобилем невозможны.</mark> Разберем каждый аспект проверки, чтобы вы могли действовать уверенно.</p>
+
+<h2 id="структура-учета-импортированных-автомобилей">Структура учета импортированных автомобилей</h2>
+
+<p>Фундаментом легальности любого ввезенного автомобиля является таможенная декларация. Именно на её основе формируется первичная запись в <strong>базе данных ФТС</strong> (Федеральной таможенной службы). Если автомобиль не прошел таможенную очистку или был растаможен с нарушениями, он не попадет в реестры, доступные для регистрации в ГИБДД. Это первый и самый важный фильтр.</p>
+
+<p>Параллельно с таможней работает система аккредитованных испытательных лабораторий (АИЛ). Именно они выдают СБКТС — документ, подтверждающий, что конкретный экземпляр автомобиля соответствует техническим регламентам Таможенного союза. Без действующего СБКТС получение ЭПТС невозможно.</p>
+
+<ul>
+<li>🚗 <strong>Таможенный реестр:</strong> содержит данные о декларации на товары (ДТ), датах выпуска и уплаченных пошлинах.</li>
+<li>📜 <strong>Реестр СБКТС:</strong> база данных выданных свидетельств о безопасности конструкции, привязанная к VIN-номеру.</li>
+<li>📄 <strong>Система ЭПТС:</strong> оператор электронного паспорта (АО «Электронный паспорт») агрегирует данные из двух предыдущих источников для выдачи статуса.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ Внимание: Наличие бумажного ПТС на ввезенный автомобиль не гарантирует его чистоту. В 2026-2026 годах приоритет отдается электронным паспортам, и бумажные документы часто требуют дополнительной верификации через базу таможни.</p>
+</blockquote>
+
+<div class="pb-poll" id="poll-3abada05"><div class="pb-poll-question">📊 Откуда вы планируете ввозить автомобиль?</div><div class="pb-poll-option" data-poll="3abada05" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Япония</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3abada05" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Китай</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3abada05" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Европа</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3abada05" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Корея</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3abada05" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">СНГ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="электронный-птс-как-индикатор-статуса">Электронный ПТС как индикатор статуса</h2>
+
+<p>Основным инструментом проверки для конечного пользователя сегодня является <strong>ЭПТС</strong>. В отличие от бумажного аналога, электронный паспорт содержит полную историю автомобиля, включая данные о собственниках, залогах и, что самое важное, статусы согласования. Статусы ЭПТС меняются по мере прохождения автомобилем различных этапов легализации.</p>
+
+<p>Для ввезенных автомобилей критически важен статус "Действующий". Если вы видите статус "Незавершенный", это означает, что процесс оформления еще идет, и автомобиль, скорее всего, находится на таможне или в лаборатории. Статус "Архивный" может указывать на утилизацию или вывоз машины за пределы страны.</p>
+
+<p>Проверка осуществляется через специализированные сервисы, такие как <code>elpts.ru</code> или коммерческие агрегаторы. Вам потребуется ввести VIN-номер или номер шасси. Система покажет не только текущий статус, но и организацию-изготовителя (в случае импорта это будет "Импортер" или "Владелец"), а также год выпуска и модель.</p>
+
+<details class="pb-accordion"><summary>Что означает статус "Незавершенный" в ЭПТС?</summary><div class="pb-accordion-body"><p>Статус "Незавершенный" означает, что паспорт транспортного средства находится в процессе оформления. Это может быть связано с ожиданием данных от таможни, оплатой утилизационного сбора или проверкой документов лабораторией. Покупать автомобиль с таким статусом рискованно, так как процесс может затянуться на месяцы или быть заблокирован из-за ошибок в документах.</p></div></details>
+
+<h2 id="проверка-уплаты-утилизационного-сбора">Проверка уплаты утилизационного сбора</h2>
+
+<p>Одной из самых болезненных тем для импортеров является <strong>утилизационный сбор</strong>. С 2023 года правила его расчета и уплаты были существенно изменены, что привело к появлению огромных доначислений. База данных ФТС содержит информацию о том, была ли уплачена сумма сбора при ввозе.</p>
+
+<p>Если автомобиль ввезен по льготной ставке (например, для личного пользования), но впоследствии будет продан ранее срока в 12 месяцев, владелец обязан доплатить разницу до коммерческой ставки. Эта информация также отражается в системе. Проверить наличие задолженности можно, запросив выписку из ДТ (Декларации на товары) через личный кабинет участника ВЭД или обратившись к таможенному брокеру.</p>
+
+<p>Отсутствие информации об уплате утильсбора в базе данных делает невозможным получение отметки "Выпуск в свободное обращение". Это фактический запрет на продажу и регистрацию автомобиля в ГИБДД на территории РФ.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При покупке свежеввезенного автомобиля обязательно требуйте у продавца копию ДТ (Декларации на товары) с отметкой таможни. Сверьте VIN-номер в декларации с номером на кузове автомобиля — любая опечатка в базе может стоить вам месяцев разбирательств.</p></aside>
+
+<h2 id="сбктс-и-технический-регламент">СБКТС и технический регламент</h2>
+
+<p>Свидетельство о безопасности конструкции транспортного средства (<em>СБКТС</em>) — это документ, подтверждающий, что автомобиль безопасен для эксплуатации на дорогах стран ЕАЭС. Данные о выданных СБКТС вносятся в единую базу, доступную для проверяющих органов.</p>
+
+<p>При проверке ввезенного транспорта важно убедиться, что номер СБКТС, указанный в ЭПТС, действителен и не отозван. Иногда недобросовестные лаборатории выдают сертификаты на автомобили, не соответствующие нормам (например, отсутствие системы ЭРА-ГЛОНАСС или несоответствие экологическому классу <strong>Евро-5</strong>). Такие СБКТС могут быть аннулированы, что автоматически делает ЭПТС недействительным.</p>
+
+<p>Особое внимание следует уделять автомобилям, прошедшим процедуру "Single Vehicle Approval" (единичное certification). В базе данных должно быть четкое указание на то, что автомобиль прошел необходимые испытания. Отсутствие записей в реестре Росаккредитации по номеру СБКТС — красный флаг для покупателя.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр проверки</th>
+<th>Где смотреть</th>
+<th>Нормальное значение</th>
+<th>Риски</th>
+</tr>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Статус ЭПТС</td>
+<td>Сайт оператора ЭПТС</td>
+<td>Действующий</td>
+<td>Незавершенный, Архивный</td>
+</tr>
+<tr>
+<td>Утильсбор</td>
+<td>Графа 24 ДТ</td>
+<td>Оплачен / Льгота</td>
+<td>Не уплачен, Требует пересчета</td>
+</tr>
+<tr>
+<td>СБКТС</td>
+<td>Реестр Росаккредитации</td>
+<td>Действует</td>
+<td>Отозван, Не найден</td>
+</tr>
+<tr>
+<td>Эко-класс</td>
+<td>Пункт 14 СБКТС</td>
+<td>Евро-5 и выше</td>
+<td>Ниже Евро-5 (запрет ввоза)</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="ограничения-на-регистрацию-в-гибдд">Ограничения на регистрацию в ГИБДД</h2>
+
+<p>Даже при наличии всех документов, автомобиль может не попасть в базу ГИБДД для регистрации. Это происходит, если данные из ЭПТС не синхронизировались с внутренней системой МВД или если на автомобиль наложены ограничения со стороны таможни. <strong>База данных ГИБДД</strong> получает информацию об автомобилях в автоматическом режиме, но задержки могут составлять от нескольких дней до недель.</p>
+
+<p>Частой проблемой является несоответствие конструкции автомобиля заявленной в документах. Если при осмотре в ГИБДД инспектор обнаружит изменения (тонировка, нештатный свет, двигатель), не отраженные в СБКТС и ЭПТС, в регистрации будет отказано. Для ввезенных авто это особенно актуально, так как западные спецификации часто отличаются от российских требований.</p>
+
+<p>Перед покупкой рекомендуется пробить автомобиль по базе розыска и залогов, а также проверить наличие ограничений на регистрационные действия. Это можно сделать на официальном сайте ГИБДД или через портал Госуслуг, используя VIN-код.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед покупкой ввезенного авто</h4><label class="check-item"><input type="checkbox"><span>Проверить статус ЭПТС (Действующий)</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в уплате утильсбора</span></label><label class="check-item"><input type="checkbox"><span>Сверить VIN в ДТ и на кузове</span></label><label class="check-item"><input type="checkbox"><span>Проверить СБКТС в реестре Росаккредитации</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии ограничений ГИБДД</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="частые-ошибки-и-проблемы-при-проверке">Частые ошибки и проблемы при проверке</h2>
+
+<p>В процессе работы с базой данных ввезенного автотранспорта пользователи часто сталкиваются с техническими и бюрократическими сложностями. Одна из распространенных ошибок — попытка проверить автомобиль по старым базам данных, которые не обновлялись после реформы 2023 года. Информация должна быть актуальной.</p>
+
+<p>Также встречается проблема "двойников". Мошенники могут клонировать документы с реально существующего и легально ввезенного автомобиля на контрафактный или угнанный. Поэтому проверка VIN-кода должна включать не только сверку с базой, но и физический осмотр маркировок на кузове.</p>
+
+<p>Еще один нюанс — ошибки операторов при внесении данных в ЭПТС. Опечатка в одной цифре VIN-кода или номера двигателя может заблокировать всю систему. В таких случаях требуется обращение в организацию, выдавшую ЭПТС, для внесения исправлений, что может занять длительное время.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не полагайтесь только на скриншоты ЭПТС, предоставленные продавцом. Статус документа мог измениться за время между созданием скриншота и сделкой. Всегда проводите самостоятельную онлайн-проверку по VIN-коду непосредственно перед оплатой.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Самостоятельная проверка по VIN-коду через официальные реестры (ЭПТС, ГИБДД, ФТС) — единственный способ гарантировать юридическую чистоту ввезенного автомобиля. Доверие к словам продавца или брокера без документального подтверждения недопустимо.</p></aside>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли зарегистрировать автомобиль в ГИБДД без ЭПТС?</summary>
+<p>В 2026-2026 годах регистрация автомобиля без Электронного ПТС практически невозможна, за исключением некоторых переходных периодов для очень старых бумажных ПТС, выданных до 2020 года, если они не были заменены. Для ввезенных автомобилей наличие действующего ЭПТС со статусом "Действующий" является обязательным требованием.</p>
+</details>
+
+<details>
+<summary>Что делать, если в базе данных нет информации об уплате утильсбора?</summary>
+<p>Если в декларации на товары (ДТ) в графе 47 "Исчисление платежей" не указан код вида платежа для утилизационного сбора или стоит отметка об освобождении, которое вам не положено, вам придется оплатить сбор самостоятельно. Без этого таможня не даст команду на выпуск автомобиля в свободное обращение, и ГИБДД откажет в регистрации.</p>
+</details>
+
+<details>
+<summary>Как проверить подлинность СБКТС?</summary>
+<p>Проверка подлинности СБКТС осуществляется через реестр Росаккредитации на их официальном сайте. Вам нужно ввести номер свидетельства. Если система выдает информацию о лаборатории, сроке действия и модели автомобиля, совпадающую с вашим авто, документ, скорее всего, легитимен. Отсутствие записи в реестре говорит о фальсификате.</p>
+</details>
+
+<details>
+<summary>Сколько времени данные о ввезенном автомобиле идут до базы ГИБДД?</summary>
+<p>В идеальных условиях синхронизация между таможней, системой ЭПТС и базой ГИБДД занимает от 1 до 3 рабочих дней после получения статуса "Действующий". Однако на практике из-за технических сбоев или ручных проверок этот срок может растянуться до 2 недель. Рекомендуется подождать появления автомобиля в базе ГИБДД перед заключением договора купли-продажи.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-oformit-mashinu-bez-pts.html" class="pb-related-card">
+                <span class="pb-related-title">Как оформить машину без ПТС в 2026: законные способы и риски</span>
+                <span class="pb-related-desc">Пошаговая инструкция по оформлению автомобиля без ПТС: через ГИБДД, суд или дубликат. Разбираем зако</span>
+            </a><a href="/articles/v/vz/vzyat-talon-v-gai-cherez-gosuslugi.html" class="pb-related-card">
+                <span class="pb-related-title">Как взять талон в ГИБДД через Госуслуги: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Узнайте, как быстро записаться на приём в ГАИ через портал Госуслуг: регистрация, выбор услуги, опла</span>
+            </a><a href="/articles/d/do/dokumenty-podtverzhdayushchie-pravo-sobstvennosti-na-transportnoe-sredstvo.html" class="pb-related-card">
+                <span class="pb-related-title">Документы на автомобиль: подтверждение права собственности</span>
+                <span class="pb-related-desc">Какие документы подтверждают право собственности на ТС в 2026 году? Список обязательных бумаг для ГИ</span>
+            </a><a href="/articles/k/ka/kak-snyat-s-ucheta-mashinu-esli-ee-net.html" class="pb-related-card">
+                <span class="pb-related-title">Как снять с учета машину если ее нет: инструкция 2026</span>
+                <span class="pb-related-desc">Полный гайд: как снять авто с учета без машины при угоне, утилизации или вывозе за границу. Документ</span>
+            </a><a href="/articles/k/ka/kak-ostavit-nomera-na-sokhranenii.html" class="pb-related-card">
+                <span class="pb-related-title">Как оставить номера на сохранении в ГИБДД: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полный гайд: как оставить номера на сохранении в 2026 году. Сроки, госпошлины, необходимые документы</span>
+            </a><a href="/articles/p/po/postanovka-mashiny-na-uchet-posle-pokupki.html" class="pb-related-card">
+                <span class="pb-related-title">Постановка машины на учет в ГИБДД 2026: пошаговая инструкция</span>
+                <span class="pb-related-desc">Как поставить машину на учет после покупки: документы, сроки, стоимость и пошаговый алгоритм регистр</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Что такое K-Line: диагностика авто, распиновка и схемы — Авто Справочник</title>
+    <meta name="description" content="Полный разбор протокола K-Line: как работает, схемы подключения, отличие от CAN-bus, распиновка OBD2 и настройка адаптеров для диагностики.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/c/ch/chto-takoe-k-line.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Что такое K-Line: диагностика авто, распиновка и схемы">
+    <meta property="og:description" content="Полный разбор протокола K-Line: как работает, схемы подключения, отличие от CAN-bus, распиновка OBD2 и настройка адаптеров для диагностики.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Что такое K-Line: диагностика авто, распиновка и схемы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физический-уровень-и-принцип-передачи-данных">Физический уровень и принцип передачи данных</a></li><li><a href="#архитектура-сети-и-топология-подключения">Архитектура сети и топология подключения</a></li><li><a href="#протоколы-верхнего-уровня-kwp2000-и-iso-14230">Протоколы верхнего уровня: KWP2000 и ISO 14230</a></li><li><a href="#сравнение-k-line-и-can-bus-эволюция-диагностики">Сравнение K-Line и CAN-bus: эволюция диагностики</a></li><li><a href="#распиновка-obd2-и-схемы-подключения">Распиновка OBD2 и схемы подключения</a></li><li><a href="#типичные-неисправности-и-методы-их-устранения">Типичные неисправности и методы их устранения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-polzovatsya-klemmnikami-vago.html">Как пользоваться клеммниками Ваго: инструкция и схемы</a></li><li><a href="/articles/s/sr/sredstva-diagnostirovaniya-elektricheskikh-i-elektronnykh-sistem.html">Диагностика электроники авто: приборы и методы 2026</a></li><li><a href="/articles/m/ma/mashina-ne-pokazyvaet-skorost.html">Машина не показывает скорость: 12 причин и как устранить неисправность</a></li><li><a href="/articles/z/za/zapusk-s-knopki-start-stop.html">Запуск двигателя кнопкой: Ремонт и диагностика системы Start-Stop</a></li><li><a href="/articles/k/ka/kakoj-svet-far-byvaet.html">Какой свет фар бывает: типы ламп и их особенности</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Протокол K-Line: устройство, схемы подключения и диагностика</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физический-уровень-и-принцип-передачи-данных">Физический уровень и принцип передачи данных</a></li><li><a href="#архитектура-сети-и-топология-подключения">Архитектура сети и топология подключения</a></li><li><a href="#протоколы-верхнего-уровня-kwp2000-и-iso-14230">Протоколы верхнего уровня: KWP2000 и ISO 14230</a></li><li><a href="#сравнение-k-line-и-can-bus-эволюция-диагностики">Сравнение K-Line и CAN-bus: эволюция диагностики</a></li><li><a href="#распиновка-obd2-и-схемы-подключения">Распиновка OBD2 и схемы подключения</a></li><li><a href="#типичные-неисправности-и-методы-их-устранения">Типичные неисправности и методы их устранения</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современная автомобильная диагностика базируется на обмене данными между бортовым компьютером и внешним сканером, но мало кто задумывается о физической основе этого процесса. <strong>K-Line</strong> представляет собой асинхронный последовательный интерфейс, который десятилетиями служит стандартом для передачи диагностических данных в транспортных средствах. Понимание принципов его работы необходимо не только инженерам-разработчикам, но и каждому автоэлектрику, желающему грамотно настроить оборудование.</p>
+
+<p>Исторически сложилось так, что именно этот протокол стал мостом между аналоговыми системами управления двигателем и цифровыми диагностическими приборами. В отличие от более современных высокоскоростных сетей, <em>KWP2000</em> на базе K-Line отличается высокой надежностью и устойчивостью к помехам, что критически важно для условий реальной эксплуатации автомобиля. Сегодня мы разберем, как именно происходит этот обмен и почему старые автомобили до сих пор используют технологии прошлого века.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При работе с диагностическими линиями замыкать контакты на массу или питание без соответствующего адаптера, так как это может привести к сгоранию контроллера ЭБУ.</p>
+</blockquote>
+
+<h2 id="физический-уровень-и-принцип-передачи-данных">Физический уровень и принцип передачи данных</h2>
+
+<p>Физический уровень реализации K-Line базируется на стандарте <strong>ISO 9141-2</strong> и <strong>ISO 14230</strong>, что подразумевает использование однопроводной или двухпроводной схемы передачи сигналов. В базовой конфигурации используется один провод дляной связи, где мастер-устройство (сканер) и слейв-устройство (ЭБУ) передают данные по очереди, не допуская коллизий. Скорость передачи в стандартном режиме варьируется от 9600 до 10400 бит в секунду, что достаточно для передачи текстовых кодов ошибок и параметров работы датчиков.</p>
+
+<p>Ключевой особенностью является то, что линия находится в состоянии логической единицы (высокий уровень напряжения) в режиме ожидания. <em>Инициализация</em> начинается с того, что диагностический прибор принудительно переводит линию в логический ноль на определенное время, после чего следует серия байтов синхронизации. Этот процесс называется"Fast Init" или"Slow Init" в зависимости от алгоритма, требуемого конкретным производителем автомобиля.</p>
+
+<p>Электрические параметры сигнала строго регламентированы: напряжение в состоянии логической единицы обычно составляет около 12 вольт (бортовая сеть), а логический ноль формируется путем подтягивания линии к земле через резистор. Для согласования уровней между интерфейсом компьютера (обычно RS-232 или USB) и автомобильной линией используются специальные микросхемы-драйверы, такие как <strong>L9637D</strong> или <strong>VAG1551</strong>. Без правильного согласования уровней напряжения корректный обмен данными невозможен.</p>
+
+<details class="pb-accordion"><summary>Почему скорость такая низкая?</summary><div class="pb-accordion-body"><p>Низкая скорость K-Line (около 10 кбит/с) обусловлена требованиями надежности и помехозащищенности. В условиях сильных электромагнитных наводок от системы зажигания и генератора, медленная передача позволяет фильтровать кратковременные импульсные помехи, обеспечивая целостность диагностических пакетов.</p></div></details>
+
+<h2 id="архитектура-сети-и-топология-подключения">Архитектура сети и топология подключения</h2>
+
+<p>В автомобильной электронике K-Line часто используется в составе более сложных сетей, где она выступает в роли диагностического канала поверх существующей шины. Топология подключения, как правило, представляет собой мультиплексорную схему, где к одной линии могут быть подключены несколько блоков управления. Однако, в любой момент времени говорить может только один блок, что требует четкой адресации и арбитража.</p>
+
+<p>Для организации связи часто применяется дополнительный провод <strong>L-Line</strong> (Line), который служит исключительно для инициализации связи. Наличие L-Line позволяет ЭБУ находиться в"спящем" режиме и не нагружать диагностическую шину, пока не поступит запрос на пробуждение. После установления соединения L-Line может перестать использоваться, и вся коммуникация переходит на K-Line.</p>
+
+<p>Распределение ролей в сети четко определено:
+<ul>
+ <li>🚗 <strong>Master:</strong> Диагностический сканер или мультиметр, который инициирует запросы.</li>
+ <li>🖥️ <strong>Slave:</strong> Электронные блоки управления (двигатель, КПП, ABS), отвечающие на запросы.</li>
+ <li>🔌 <strong>Interface:</strong> Адаптер, преобразующий уровни напряжения и протоколы.</li>
+</ul>
+</p>
+
+<p>Важно понимать, что в современных автомобилях K-Line часто дублирует функции CAN-шины или служит резервным каналом для доступа к специфическим блокам, не подключенным к высокоскоростной магистрали. Например, подушки безопасности или иммобилайзеры могут быть доступны только через этот интерфейс.</p>
+
+<div class="pb-poll" id="poll-09d5133c"><div class="pb-poll-question">📊 С каким протоколом вам чаще приходится сталкиваться?</div><div class="pb-poll-option" data-poll="09d5133c" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">K-Line (ISO 9141)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="09d5133c" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">CAN-Bus</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="09d5133c" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">LIN-Bus</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="09d5133c" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">J1850 PWM</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="протоколы-верхнего-уровня-kwp2000-и-iso-14230">Протоколы верхнего уровня: KWP2000 и ISO 14230</h2>
+
+<p>Сам по себе физический уровень K-Line является лишь средством транспортировки битов. Для того чтобы ЭБУ и сканер"понимали" друг друга, используется протокол более высокого уровня, чаще всего <strong>KWP2000</strong> (Keyword Protocol 2000). Этот стандарт описывает формат кадров, структуру заголовков, контрольные суммы и последовательность команд.</p>
+
+<p>Стандарт <em>ISO 14230</em> определяет два метода инициализации:
+<ol>
+ <li><strong>5-baud Init:</strong> Медленная инициализация, при которой сканер посылает последовательность из пяти байтов с определенной скоростью, чтобы разбудить ЭБУ.</li>
+ <li><strong>Fast Init:</strong> Быстрая инициализация, требующая точного временного интервала прерывания линии, после чего сразу начинается обмен данными.</li>
+</ol>
+</p>
+
+<p>Каждое сообщение в KWP2000 имеет четкую структуру: байт формата, байт адреса получателя, байт адреса отправителя, данные и контрольная сумма. <strong>Контрольная сумма</strong> вычисляется путем сложения всех байтов сообщения и отбрасывания переполнения, что позволяет принимающей стороне убедиться в целостности полученных данных. Если сумма не сходится, запрос повторяется.</p>
+
+<p>Ошибки в протоколе могут возникать по различным причинам, от плохого контакта в разъеме до программных сбоев в блоке управления. Диагностика таких ошибок требует анализа временных диаграмм сигнала, что возможно только с использованием осциллографа или специализированного логического анализатора.</p>
+
+<h2 id="сравнение-k-line-и-can-bus-эволюция-диагностики">Сравнение K-Line и CAN-bus: эволюция диагностики</h2>
+
+<p>С развитием автомобильной электроники пропускной способности K-Line стало не хватать. На смену пришел протокол <strong>CAN-bus</strong> (Controller Area Network), который предлагает принципиально иную архитектуру. Если K-Line работает по принципу"один говорит, все молчат", то CAN использует дифференциальную передачу и позволяет устройствам передавать данные одновременно, приоритизируя сообщения.</p>
+
+<p>Таблица ниже демонстрирует ключевые различия между этими технологиями:
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>K-Line (ISO 9141/14230)</th>
+<th>CAN-bus (ISO 11898)</th>
+</tr>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Скорость передачи</td>
+<td>до 10.4 кбит/с</td>
+<td>до 1 Мбит/с</td>
+</tr>
+<tr>
+<td>Количество проводов</td>
+<td>1 или 2 (K и L)</td>
+<td>2 (CAN High, CAN Low)</td>
+</tr>
+<tr>
+<td>Топология</td>
+<td>Звезда или шина с мастером</td>
+<td>Шина без центрального мастера</td>
+</tr>
+<tr>
+<td>Напряжение сигнала</td>
+<td>0В / 12В (относительно массы)</td>
+<td>Дифференциальное (2.5В +/-)</td>
+</tr>
+<tr>
+<td>Применение</td>
+<td>Старые авто, простые системы</td>
+<td>Современные авто, сложные системы</td>
+</tr>
+</tbody>
+</table></div>
+</p>
+
+<p>Несмотря на доминирование CAN, K-Line не исчезла полностью. Во многих автомобилях переходного периода (2000-2010 годов) диагностический разъем OBD2 имеет контакты для обоих протоколов. Это позволяет использовать универсальные сканеры для работы с любым автомобилем, автоматически переключаясь между режимами.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главная причина сохранения K-Line в новых авто — совместимость с огромным парком старых диагностических приборов и простота реализации в бюджетных модулях.</p></aside>
+
+<h2 id="распиновка-obd2-и-схемы-подключения">Распиновка OBD2 и схемы подключения</h2>
+
+<p>Для физического подключения к K-Line в современных автомобилях используется стандартизированный 16-контактный разъем <strong>OBD2</strong>. Знание распиновки этого разъема необходимо для изготовления переходников или проверки целостности линий мультиметром.</p>
+
+<p>Основные контакты, отвечающие за работу K-Line в разъеме OBD2:
+<ul>
+ <li>📍 <strong>Контакт 4:</strong> Масса автомобиля (GND).</li>
+ <li>📍 <strong>Контакт 7:</strong> Линия K (ISO 9141-2 / ISO 14230-4).</li>
+ <li>📍 <strong>Контакт 15:</strong> Линия L (ISO 9141-2 / ISO 14230-4) — используется не всегда.</li>
+ <li>📍 <strong>Контакт 16:</strong> Питание +12В от аккумулятора.</li>
+</ul>
+</p>
+
+<p>При самостоятельном изготовлении диагностического кабеля (например, для адаптера VAG-COM на базе <em>FT232</em>), важно правильно подключить сигнальные провода. Обычно используется схема, где TX (передача) компьютера через резистор и диод подключается к K-Line, а RX (прием) напрямую. Резистор (обычно 510 Ом - 1 кОм) необходим для ограничения тока и формирования правильного уровня логического нуля.</p>
+
+<pre><code>Схема простейшего согласования:
+<p>Компьютер (TX) --> Резистор 1кОм --> Диод --> K-Line</p>
+<p>Компьютер (GND) ----------------------> GND Авто</p>
+<p>K-Line --------------> Резистор 1кОм --> Компьютер (RX)</p>
+</code></pre>
+
+<p>Неправильная распайка может привести к тому, что компьютер будет видеть"мусор" вместо диагностических данных, или же линия будет постоянно находиться в состоянии логического нуля, блокируя работу ЭБУ.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте ферритовые кольца на диагностическом кабеле, чтобы снизить уровень высокочастотных помех, особенно если кабель длиннее 1 метра.</p></aside>
+
+<h2 id="типичные-неисправности-и-методы-их-устранения">Типичные неисправности и методы их устранения</h2>
+
+<p>Диагностика неисправностей в цепи K-Line часто сводится к проверке целостности проводов и наличия коротких замыканий. Самая распространенная проблема — обрыв линии K или замыкание на массу, что делает невозможным подключение сканера. В таких случаях прибор пишет"Нет связи с ЭБУ" или"Ошибка инициализации".</p>
+
+<p>Для поиска неисправности выполните следующие действия:
+<ol>
+ <li>Проверьте наличие питания (+12В) на 16 пине разъема OBD2 при включенном зажигании.</li>
+ <li>Прозвоните цепь между 7 пином OBD2 и соответствующим контактом на ЭБУ (согласно электросхеме автомобиля).</li>
+ <li>Измерьте сопротивление между K-Line и массой — оно не должно быть нулевым (если только ЭБУ не замкнут внутри).</li>
+ <li>Проверьте состояние предохранителя, питающего диагностическую цепь (часто обозначается как"Diagnostic" или"OBD").</li>
+</ol>
+</p>
+
+<p>Еще одной причиной сбоев может быть"кривое" программное обеспечение самого ЭБУ или конфликт адресов в сети. Иногда помогает сброс адаптаций или перепрошивка блока управления. Также стоит учитывать, что некоторые китайские адаптеры ELM327 некорректно работают с протоколом K-Line на низких скоростях, требуя замены чипа на оригинальный.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При прозвонке цепей используйте только цифровой мультиметр с высоким входным сопротивлением, чтобы не повредить чувствительную электронику блоков управления.</p>
+</blockquote>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Диагностика проблем K-Line</h4><label class="check-item"><input type="checkbox"><span>Проверить предохранитель OBD</span></label><label class="check-item"><input type="checkbox"><span>Замерить напряжение на пине 16</span></label><label class="check-item"><input type="checkbox"><span>Прозвонить пин 7 на обрыв</span></label><label class="check-item"><input type="checkbox"><span>Проверить отсутствие КЗ на массу</span></label><label class="check-item"><input type="checkbox"><span>Тест с другим адаптером</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли подключить K-Line напрямую к ноутбуку без адаптера?</summary>
+<p>Теоретически можно, если использовать COM-порт и схему согласования на транзисторах или готовой микросхеме (например, L9637D). Однако подключать ноутбук напрямую к бортовой сети 12В категорически нельзя — вы сгорите порт. Нужен преобразователь уровней RS-232/USB в K-Line.</p>
+</details>
+
+<details>
+<summary>Почему сканер видит двигатель, но не видит ABS?</summary>
+<p>Скорее всего, блок ABS в вашем автомобиле не подключен к K-Line, а использует CAN-шину или отдельный диагностический провод. Также возможно, что используемый софт не поддерживает протокол конкретного производителя ABS.</p>
+</details>
+
+<details>
+<summary>В чем разница между K-Line и L-Line?</summary>
+<p>K-Line — это основной провод для передачи данных (дуплексный). L-Line — вспомогательный провод, используемый только для первичной инициализации (пробуждения) ЭБУ в некоторых протоколах ISO 9141. После старта L-Line может отключаться.</p>
+</details>
+
+<details>
+<summary>Подойдет ли дешевый адаптер ELM327 для работы с K-Line?</summary>
+<p>Да, большинство версий ELM327 (особенно на чипах PIC) поддерживают протоколы ISO 9141-2 и ISO 14230-4 (KWP2000). Однако китайские клоны на дешевых чипах могут работать нестабильно с марками авто (например, старые Mercedes или VAG).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-polzovatsya-klemmnikami-vago.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться клеммниками Ваго: инструкция и схемы</span>
+                <span class="pb-related-desc">Полное руководство по монтажу клемм WAGO. Виды, схемы подключения, технические характеристики и прав</span>
+            </a><a href="/articles/s/sr/sredstva-diagnostirovaniya-elektricheskikh-i-elektronnykh-sistem.html" class="pb-related-card">
+                <span class="pb-related-title">Диагностика электроники авто: приборы и методы 2026</span>
+                <span class="pb-related-desc">Обзор современных средств диагностики электрических и электронных систем автомобиля: от мультиметров</span>
+            </a><a href="/articles/m/ma/mashina-ne-pokazyvaet-skorost.html" class="pb-related-card">
+                <span class="pb-related-title">Машина не показывает скорость: 12 причин и как устранить неисправность</span>
+                <span class="pb-related-desc">Спидометр не работает? Разбираем почему машина не показывает скорость: от датчика до электроники. По</span>
+            </a><a href="/articles/z/za/zapusk-s-knopki-start-stop.html" class="pb-related-card">
+                <span class="pb-related-title">Запуск двигателя кнопкой: Ремонт и диагностика системы Start-Stop</span>
+                <span class="pb-related-desc">Почему не заводится машина с кнопки? Диагностика иммоблайзера, стартера и педали тормоза. Полное рук</span>
+            </a><a href="/articles/k/ka/kakoj-svet-far-byvaet.html" class="pb-related-card">
+                <span class="pb-related-title">Какой свет фар бывает: типы ламп и их особенности</span>
+                <span class="pb-related-desc">Подробный обзор видов автомобильных фар: галоген, ксенон, LED и лазер. Сравнение яркости, срока служ</span>
+            </a><a href="/articles/r/r2/r21-5w-lampa-stop-signala.html" class="pb-related-card">
+                <span class="pb-related-title">Лампа стоп-сигнала Р21 5W: характеристики, замена и выбор</span>
+                <span class="pb-related-desc">Подробный гид по лампам стоп-сигнала Р21 5W. Технические характеристики, отличия от аналогов, пошаго</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

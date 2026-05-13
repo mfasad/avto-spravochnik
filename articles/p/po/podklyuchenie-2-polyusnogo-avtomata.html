@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Подключение 2-полюсного автомата: схема, ошибки, правила ПУЭ — Авто Справочник</title>
+    <meta name="description" content="Полная инструкция по монтажу двухполюсного автоматического выключателя. Схемы подключения, выбор номинала, защита от КЗ и пошаговый алгоритм работ.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/po/podklyuchenie-2-polyusnogo-avtomata.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подключение 2-полюсного автомата: схема, ошибки, правила ПУЭ">
+    <meta property="og:description" content="Полная инструкция по монтажу двухполюсного автоматического выключателя. Схемы подключения, выбор номинала, защита от КЗ и пошаговый алгоритм работ.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/garazh-i-strojka/">Гараж и Стройка</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подключение 2-полюсного автомата: схема, ошибки, правила ПУЭ</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#конструктивные-особенности-и-принцип-работы">Конструктивные особенности и принцип работы</a></li><li><a href="#выбор-номинала-и-характеристики-расцепителей">Выбор номинала и характеристики расцепителей</a></li><li><a href="#необходимый-инструмент-и-подготовка-к-монтажу">Необходимый инструмент и подготовка к монтажу</a></li><li><a href="#пошаговая-схема-подключения-в-щитке">Пошаговая схема подключения в щитке</a></li><li><a href="#типичные-ошибки-при-установке-и-эксплуатации">Типичные ошибки при установке и эксплуатации</a></li><li><a href="#таблица-соответствия-сечения-кабеля-и-номинала-автомата">Таблица соответствия сечения кабеля и номинала автомата</a></li><li><a href="#проверка-работоспособности-и-обслуживание">Проверка работоспособности и обслуживание</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/a/av/avtomaticheskie-dveri-v-garazh.html">Автоматические двери в гараж: выбор, монтаж и настройки</a></li><li><a href="/articles/k/ka/kak-postroit-vtoroj-etazh-na-garazh.html">Как построить второй этаж на гараж: технологии и этапы</a></li><li><a href="/articles/g/ga/garazh-razbornyj-metallicheskij-kupit-b-u.html">Гараж разборный металлический б/у: как купить выгодно и безопасно</a></li><li><a href="/articles/k/ka/kak-podklyuchit-elektroschetchik-v-garazhe.html">Как подключить электросчетчик в гараже: пошаговая инструкция</a></li><li><a href="/articles/b/bi/biznes-plan-avtoservisa-s-raschetami.html">Бизнес-план автосервиса с расчетами 2026: шаблон + финансовая модель</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как правильно выполнить подключение 2-полюсного автомата: схемы и нюансы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#конструктивные-особенности-и-принцип-работы">Конструктивные особенности и принцип работы</a></li><li><a href="#выбор-номинала-и-характеристики-расцепителей">Выбор номинала и характеристики расцепителей</a></li><li><a href="#необходимый-инструмент-и-подготовка-к-монтажу">Необходимый инструмент и подготовка к монтажу</a></li><li><a href="#пошаговая-схема-подключения-в-щитке">Пошаговая схема подключения в щитке</a></li><li><a href="#типичные-ошибки-при-установке-и-эксплуатации">Типичные ошибки при установке и эксплуатации</a></li><li><a href="#таблица-соответствия-сечения-кабеля-и-номинала-автомата">Таблица соответствия сечения кабеля и номинала автомата</a></li><li><a href="#проверка-работоспособности-и-обслуживание">Проверка работоспособности и обслуживание</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Обеспечение безопасности в домашней электросети невозможно представить без качественной защитной автоматики, и центральное место здесь занимает <strong>двухполюсный автоматический выключатель</strong>. В отличие от однополюсных аналогов, это устройство разрывает цепь одновременно по фазе и нулю, что исключает опасные ситуации при скачках напряжения или коротких замыканиях. Грамотная установка такого оборудования является обязательным требованием ПУЭ для вводных групп и мощных потребителей.</p>
+<p>Многие домашние мастера ошибочно полагают, что достаточно разорвать только фазный провод, но практика показывает, что <em>двухполюсная защита</em> критически важна для сложных приборов и старых проводок. Неправильный монтаж может привести к выходу из строя дорогостоящей техники или даже стать причиной пожара. Именно поэтому важно понимать физические принципы работы устройства и строго соблюдать последовательность операций при его установке в щитке.</p>
+<p>В этой статье мы детально разберем конструктивные особенности, схемы коммутации и типичные ошибки, которые допускают даже опытные электрики. Вы узнаете, почему <strong>нулевой провод</strong> нельзя оставлять без защиты в определенных схемах, и как правильно рассчитать токовую нагрузку. Соблюдение этих правил гарантирует долговечность вашей электросети.</p>
+
+<h2 id="конструктивные-особенности-и-принцип-работы">Конструктивные особенности и принцип работы</h2>
+<p>Двухполюсный автомат конструктивно представляет собой два однополюсных модуля, объединенных общим механическим рычагом и внутренней системой взвода. Внутри корпуса расположены <strong>тепловой</strong> и <strong>электромагнитный расцепители</strong>, которые реагируют на перегрузку по току и короткое замыкание соответственно. Главная особенность заключается в синхронном разрыве обоих полюсов: если один из них срабатывает, второй отключается автоматически, обеспечивая полное обесточивание линии.</p>
+<p>Внутри устройства находятся дугогасительные камеры, которые предотвращают выгорание контактов при разрыве цепи под нагрузкой. Современные модели, такие как <em>ABB</em> или <em>Legrand</em>, используют системы двойного разрыва контакта, что значительно повышает их коммутационную способность. Это означает, что автомат может выдержать многократные включения и выключения без потери качества контакта.</p>
+<blockquote>⚠️ Внимание: Использование двух однополюсных автоматов, скрепленных самодельной перемычкой, категорически запрещено! Только заводской двухполюсный механизм гарантирует одновременное размыкание.</blockquote>
+<p>Важнейшим параметром является <strong>отключающая способность</strong>, которая указывается на корпусе (обычно 4.5 кА или 6 кА). Она определяет максимальный ток короткого замыкания, который автомат способен разорвать без разрушения. Для бытовых щитков в многоквартирных домах стандартом считается 6 кА, а для частного сектора с длинными линиями — 4.5 кА.</p>
+
+<h2 id="выбор-номинала-и-характеристики-расцепителей">Выбор номинала и характеристики расцепителей</h2>
+<p>Перед покупкой оборудования необходимо точно рассчитать суммарную мощность всех потребителей, которые будут запитаны через этот автомат. Номинальный ток <strong>автоматического выключателя</strong> должен быть меньше или равен максимально допустимому току для используемого сечения кабеля. Например, для медного провода сечением 2.5 мм² номинал автомата не должен превышать 16-20 Ампер.</p>
+<p>Ключевую роль играет время-токовая характеристика, обозначаемая латинскими буквами B, C или D. Для бытовых нужд чаще всего применяются устройства с характеристикой <strong>"C"</strong>, которые выдерживают кратковременные пусковые токи (например, при включении холодильника) без ложного срабатывания. Характеристика"B" более чувствительна и подходит для линий освещения, а"D" — для мощных электродвигателей.</p>
+<ul>
+<li>🔌 <strong>Характеристика B:</strong> срабатывает при превышении номинала в 3-5 раз, идеальна для активной нагрузки без пусковых токов.</li>
+<li>⚡ <strong>Характеристика C:</strong> универсальный вариант для розеточных групп и смешанной нагрузки, выдерживает пуски до 5-10 номиналов.</li>
+<li>🏭 <strong>Характеристика D:</strong> предназначена для промышленного оборудования с высокими пусковыми токами (трансформаторы, двигатели).</li>
+</ul>
+<p>При выборе также стоит обращать внимание на класс токоограничения, который указан в квадратике под значением отключающей способности. Цифра"3" означает, что автомат ограничивает ток КЗ за 1/3 полупериода (3-6 мс), что является наилучшим показателем для защиты чувствительной электроники.</p>
+
+<div class="pb-poll" id="poll-1f096990"><div class="pb-poll-question">📊 Какой бренд автоматики вы предпочитаете?</div><div class="pb-poll-option" data-poll="1f096990" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">ABB</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1f096990" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Schneider Electric</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1f096990" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">IEK</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1f096990" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">EKF</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1f096990" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="необходимый-инструмент-и-подготовка-к-монтажу">Необходимый инструмент и подготовка к монтажу</h2>
+<p>Качественное подключение невозможно без правильного инструмента. Основным инструментом для работы с модульной автоматикой является <strong>динамометрическая отвертка</strong> или обычная отвертка с плоским шлицем, подобранная точно по размеру винтов клемм. Использование слишком большой или маленькой отвертки может привести к слизыванию шлица или повреждению пластикового корпуса автомата.</p>
+<p>Для зачистки жил проводов необходимо использовать специализированный стриппер, который снимает изоляцию, не повреждая медную жилу. Повреждение даже одного волокна многожильного провода может привести к его перегреву и оплавлению изоляции в месте контакта. Для многожильных проводов обязательно использование <strong>наконечников НШВИ</strong>.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка к монтажу</h4><label class="check-item"><input type="checkbox"><span>Отключить вводной рубильник</span></label><label class="check-item"><input type="checkbox"><span>Проверить отсутствие напряжения индикатором</span></label><label class="check-item"><input type="checkbox"><span>Зачистить концы проводов</span></label><label class="check-item"><input type="checkbox"><span>Установить гребенку или перемычки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<p>Перед началом работ убедитесь, что напряжение полностью снято. Используйте индикатор напряжения для проверки отсутствия потенциала на всех контактах вводного кабеля. Не полагайтесь только на положение рубильника, так как он может быть неисправен.</p>
+
+<h2 id="пошаговая-схема-подключения-в-щитке">Пошаговая схема подключения в щитке</h2>
+<p>Монтаж двухполюсного автомата производится на DIN-рейку размером 35 мм. Устройство фиксируется простым защелкиванием верхней части и легким оттягиванием нижней лапки. Подключение проводов осуществляется согласно стандартной схеме: фазный провод (L) подключается к одному полюсу, а нулевой (N) — к другому.</p>
+<p>Существует устоявшееся правило, что ввод питания осуществляется сверху (на неподвижные контакты), а отвод нагрузки — снизу. Хотя современные автоматы позволяют подавать питание и снизу, соблюдение этого правила упрощает обслуживание щитка и снижает риск ошибок при ремонте. Для соединения нескольких автоматов удобнее использовать <strong>гребенчатую шину</strong>, которая обеспечивает надежный контакт и эстетичный вид.</p>
+<pre><code>Схема подключения:
+<p>Ввод L (Фаза) -> Клемма 1 (Верх)</p>
+<p>Ввод N (Ноль) -> Клемма 3 (Верх)</p>
+<p>Выход L (Фаза) -> Клемма 2 (Низ) -> УЗО/Нагрузка</p>
+<p>Выход N (Ноль) -> Клемма 4 (Низ) -> Нулевая шина</code></pre></p>
+<p>При затяжке винтов важно соблюдать усилие, указанное производителем (обычно 2-3.5 Нм). Недотянутый контакт будет греться, а перетянутый может повредить корпус клеммы. После установки всех проводов необходимо проверить надежность фиксации, слегка потянув за кабель.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте провод разных цветов для фазы (белый, красный, черный) и нуля (синий), чтобы избежать путаницы при будущем обслуживании щитка.</p></aside>
+
+<h2 id="типичные-ошибки-при-установке-и-эксплуатации">Типичные ошибки при установке и эксплуатации</h2>
+<p>Одной из самых распространенных ошибок является подключение разноименных фаз на входе двухполюсного автомата в трехфазной сети. Это приводит к короткому замыканию при включении устройства. Всегда проверяйте, что на входные клеммы приходят фаза и ноль <strong>одной и той же группы</strong> или две фазы, если автомат используется как межфазный.</p>
+<p>Частой проблемой становится попадание изоляции под контакт. Если провод зачищен недостаточно, изоляция попадает между жилой и контактной площадкой, что резко увеличивает переходное сопротивление. В результате место контакта начинает нагреваться, оплавлять корпус и может стать причиной возгорания.</p>
+<blockquote>⚠️ Внимание: Никогда не используйте алюминиевые провода напрямую в клеммах автомата без переходных клемм или специальной смазки. Алюминий течет под давлением, контакт ослабевает и искрит.</blockquote>
+<p>Еще одна ошибка — игнорирование селективности. Если на вводе стоит автомат на 50А, а на линии 16А, при коротком замыкании может выбить оба устройства. Для правильной работы необходимо соблюдать разницу в номиналах минимум в 2-3 ступени (например, ввод 40А, линия 16А).</p>
+
+<h2 id="таблица-соответствия-сечения-кабеля-и-номинала-автомата">Таблица соответствия сечения кабеля и номинала автомата</h2>
+<p>Для безопасной эксплуатации необходимо строго согласовывать сечение проводника с номиналом защитного устройства. Кабель должен выдерживать ток, при котором автомат еще не отключается, но при этом защита должна сработать раньше, чем провод начнет перегреваться.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Сечение меди (мм²)</th>
+<th>Допустимый ток (А)</th>
+<th>Номинал автомата (А)</th>
+<th>Макс. мощность (220В)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.5</td>
+<td>19</td>
+<td>10</td>
+<td>2.2 кВт</td>
+</tr>
+<tr>
+<td>2.5</td>
+<td>27</td>
+<td>16</td>
+<td>3.5 кВт</td>
+</tr>
+<tr>
+<td>4.0</td>
+<td>38</td>
+<td>25</td>
+<td>5.5 кВт</td>
+</tr>
+<tr>
+<td>6.0</td>
+<td>50</td>
+<td>32</td>
+<td>7.0 кВт</td>
+</tr>
+<tr>
+<td>10.0</td>
+<td>70</td>
+<td>40-50</td>
+<td>8.8-11 кВт</td>
+</tr>
+</tbody>
+</table></div>
+<p>Данная таблица актуальна для медных кабелей с изоляцией из ПВХ, проложенных открыто или в коробах. При скрытой прокладке в штукатурке или использовании алюминиевых проводов значения допустимого тока необходимо корректировать в меньшую сторону.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильно подобранный номинал автомата защищает не прибор, а саму проводку в стенах, предотвращая пожар при перегрузке линии.</p></aside>
+
+<h2 id="проверка-работоспособности-и-обслуживание">Проверка работоспособности и обслуживание</h2>
+<p>После завершения монтажных работ и перед подачей напряжения необходимо провести визуальный осмотр. Убедитесь, что все винты затянуты, провода не натянуты, а лишняя изоляция убрана. Первый запуск лучше производить под контролем, держа руку на вводном рубильнике для быстрого отключения в случае искрения.</p>
+<p>Регулярное обслуживание подразумевает периодическую (раз в год) подтяжку контактов, так как медь имеет свойство расширяться и сжиматься при изменении температуры, что может ослабить соединение. Также рекомендуется проверять работоспособность механизма путем тестового включения и выключения рычага.</p>
+<details class="pb-accordion"><summary>Как часто нужно менять автоматы?</summary><div class="pb-accordion-body"><p>Срок службы качественных автоматов составляет 10-15 лет, но если устройство часто выбивает или греется, его следует заменить немедленно, независимо от срока эксплуатации.</p></div></details>
+<p>Если автомат начал самопроизвольно отключаться без видимой перегрузки, это может свидетельствовать о неисправности теплового расцепителя или ослаблении контактов внутри самого устройства. В таких случаях <strong>замена модуля</strong> является единственным безопасным решением.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+<details>
+<summary>Можно ли использовать двухполюсный автомат как однополюсный?</summary>
+<p>Технически это возможно, задействовав только один полюс, но экономически нецелесообразно из-за высокой цены и занимаемого места. Кроме того, в некоторых схемах это может нарушить логику работы щитка.</p>
+</details>
+<details>
+<summary>Что делать, если автомат гудит или трещит?</summary>
+<p>Гудение указывает на плохой контакт или перегрузку, близкую к предельной. Треск свидетельствует о проскакивании искры внутри. Необходимо срочно обесточить линию, подтянуть контакты или заменить устройство.</p>
+</details>
+<details>
+<summary>Обязательно ли ставить двухполюсный автомат на ввод в квартиру?</summary>
+<p>Согласно ПУЭ, разрываться должен и фазный, и нулевой провод. Это обеспечивает полную безопасность при ремонте проводки, так как исключает возможность появления потенциала на нулевом проводе от соседей.</p>
+</details>
+<details>
+<summary>Какой фирмы лучше покупать автоматы?</summary>
+<p>Лидерами рынка считаются <em>ABB</em>, <em>Schneider Electric</em> и <em>Legrand</em>. Среди бюджетных, но надежных вариантов выделяют <em>IEK</em> и <em>EKF</em>. Главное — избегать неизвестных китайских брендов без сертификатов.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/a/av/avtomaticheskie-dveri-v-garazh.html" class="pb-related-card">
+                <span class="pb-related-title">Автоматические двери в гараж: выбор, монтаж и настройки</span>
+                <span class="pb-related-desc">Полный гид по автоматическим воротам: секционные и рулонные системы. Сравнение приводов, советы по у</span>
+            </a><a href="/articles/k/ka/kak-postroit-vtoroj-etazh-na-garazh.html" class="pb-related-card">
+                <span class="pb-related-title">Как построить второй этаж на гараж: технологии и этапы</span>
+                <span class="pb-related-desc">Полная инструкция: как построить второй этаж на гараж. Расчеты нагрузки, выбор материалов, технологи</span>
+            </a><a href="/articles/g/ga/garazh-razbornyj-metallicheskij-kupit-b-u.html" class="pb-related-card">
+                <span class="pb-related-title">Гараж разборный металлический б/у: как купить выгодно и безопасно</span>
+                <span class="pb-related-desc">Пошаговая инструкция по выбору б/у разборного металлического гаража: где искать, на что обратить вни</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-elektroschetchik-v-garazhe.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить электросчетчик в гараже: пошаговая инструкция</span>
+                <span class="pb-related-desc">Полное руководство по установке счетчика электроэнергии в гараже. Схемы, выбор оборудования, правила</span>
+            </a><a href="/articles/b/bi/biznes-plan-avtoservisa-s-raschetami.html" class="pb-related-card">
+                <span class="pb-related-title">Бизнес-план автосервиса с расчетами 2026: шаблон + финансовая модель</span>
+                <span class="pb-related-desc">Готовый бизнес-план автосервиса с актуальными расчетами 2026: инвестиции, окупаемость, оборудование </span>
+            </a><a href="/articles/a/av/avtomat-na-vvod-v-dom-220.html" class="pb-related-card">
+                <span class="pb-related-title">Автомат на ввод в дом 220В: выбор, расчет и схема подключения</span>
+                <span class="pb-related-desc">Какой автомат ставить на ввод в частный дом 220В? Расчет мощности, выбор номинала (16А, 25А, 32А, 50</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

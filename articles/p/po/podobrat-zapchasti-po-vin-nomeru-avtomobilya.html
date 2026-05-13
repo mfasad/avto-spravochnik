@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Подбор запчастей по VIN-коду: как найти оригинал за 5 минут — Авто Справочник</title>
+    <meta name="description" content="Пошаговая инструкция, как подобрать автозапчасти по VIN-номеру автомобиля: бесплатные сервисы, расшифровка кода, проверка оригинальности и ошибки, которых стоит избегать.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/po/podobrat-zapchasti-po-vin-nomeru-avtomobilya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Подбор запчастей по VIN-коду: как найти оригинал за 5 минут">
+    <meta property="og:description" content="Пошаговая инструкция, как подобрать автозапчасти по VIN-номеру автомобиля: бесплатные сервисы, расшифровка кода, проверка оригинальности и ошибки, которых стоит избегать.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Подбор запчастей по VIN-коду: как найти оригинал за 5 минут</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-vin-номер-и-где-его-найти-в-машине">Что такое VIN-номер и где его найти в машине</a></li><li><a href="#как-расшифровать-vin-номер-самостоятельно">Как расшифровать VIN-номер самостоятельно</a></li><li><a href="#почему-подбор-по-vin-точнее-чем-по-модели-и-году">Почему подбор по VIN точнее, чем по модели и году</a></li><li><a href="#топ-5-сервисов-для-подбора-запчастей-по-vin">Топ-5 сервисов для подбора запчастей по VIN</a></li><li><a href="#7-запчастей-которые-чаще-всего-покупают-неподходящие">7 запчастей, которые чаще всего покупают неподходящие</a></li><li><a href="#ошибки-при-подборе-запчастей-по-vin-и-как-их-избежать">Ошибки при подборе запчастей по VIN и как их избежать</a></li><li><a href="#как-проверить-оригинальность-запчасти-по-vin">Как проверить оригинальность запчасти по VIN</a></li><li><a href="#faq-частые-вопросы-о-подборе-запчастей-по-vin">FAQ: Частые вопросы о подборе запчастей по VIN</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/printsip-raboty-adsorbera-avtomobilya.html">Принцип работы адсорбера авто: устройство, неисправности, ремонт</a></li><li><a href="/articles/c/ch/chto-takoe-trekshn-kontrol.html">Трекшн контроль в автомобиле: что это и как работает?</a></li><li><a href="/articles/m/ma/mashina-dergaetsya-pri-troganii-s-mesta-prichiny.html">Машина дергается при трогании: причины и способы устранения</a></li><li><a href="/articles/d/da/davlenie-v-metanovom-ballone.html">Давление в метановом баллоне: нормы, проверка, безопасность для ГБО</a></li><li><a href="/articles/s/so/solaris-chto-za-mashina.html">Solaris что за машина: обзор, характеристики и выбор модели</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подобрать запчасти по VIN-номеру автомобиля: полное руководство 2026</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-vin-номер-и-где-его-найти-в-машине">Что такое VIN-номер и где его найти в машине</a></li><li><a href="#как-расшифровать-vin-номер-самостоятельно">Как расшифровать VIN-номер самостоятельно</a></li><li><a href="#почему-подбор-по-vin-точнее-чем-по-модели-и-году">Почему подбор по VIN точнее, чем по модели и году</a></li><li><a href="#топ-5-сервисов-для-подбора-запчастей-по-vin">Топ-5 сервисов для подбора запчастей по VIN</a></li><li><a href="#7-запчастей-которые-чаще-всего-покупают-неподходящие">7 запчастей, которые чаще всего покупают неподходящие</a></li><li><a href="#ошибки-при-подборе-запчастей-по-vin-и-как-их-избежать">Ошибки при подборе запчастей по VIN и как их избежать</a></li><li><a href="#как-проверить-оригинальность-запчасти-по-vin">Как проверить оригинальность запчасти по VIN</a></li><li><a href="#faq-частые-вопросы-о-подборе-запчастей-по-vin">FAQ: Частые вопросы о подборе запчастей по VIN</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Поиск запчастей по <strong>VIN-коду</strong> — самый точный способ избежать ошибок при покупке деталей для автомобиля. Даже опытные автовладельцы сталкиваются с проблемами: кузов одной модели может иметь три варианта крепления амортизаторов, а двигатель — пять модификаций поршневых колец. Ошибка в выборе обходится дорого: неподходящая деталь не только не встанет на место, но и может повредить смежные узлы.</p>
+
+<p>В этой статье разберём, как <em>правильно расшифровать VIN</em>, где бесплатно проверить его историю, какие сервисы дают 100% совместимость с вашим авто, и почему даже оригинальные запчасти иногда не подходят. А ещё — <mark>список из 7 популярных деталей, которые чаще всего покупают «на глаз» и потом возвращают в магазин</mark>.</p>
+
+<h2 id="что-такое-vin-номер-и-где-его-найти-в-машине">Что такое VIN-номер и где его найти в машине</h2>
+
+<p><strong>VIN (Vehicle Identification Number)</strong> — уникальный 17-значный код автомобиля, который содержит информацию о производителе, модели, году выпуска, типе кузова и даже комплектации. Его присваивают на заводе, и он остаётся неизменным на протяжении всего срока службы машины.</p>
+
+<p>Где искать VIN:</p>
+<ul>
+  <li>🚗 На табличке под лобовым стеклом (со стороны водителя) — самое доступное место.</li>
+  <li>🔧 На шильдике в дверном проёме (обычно на стойке со стороны водителя).</li>
+  <li>📄 В ПТС (паспорт транспортного средства) и СТС (свидетельство о регистрации).</li>
+  <li>🔩 На раме или лонжероне (для внедорожников и грузовиков).</li>
+  <li>💻 В электронном виде — в бортовом компьютере (можно считать диагностическим сканером).</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Если VIN на кузове и в документах не совпадают — это признак <em>перебитого номера</em> (машина могла побывать в серьёзном ДТП или угоне). Проверьте историю через <code>ГИБДД.РФ</code> или <code>Автокод</code> перед покупкой запчастей.</p>
+
+<div class="pb-poll" id="poll-895a2c0d"><div class="pb-poll-question">📊 Где вы обычно ищете VIN-номер?</div><div class="pb-poll-option" data-poll="895a2c0d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Под лобовым стеклом</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="895a2c0d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">В документах (ПТС/СТС)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="895a2c0d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">На дверной стойке</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="895a2c0d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, где он находится</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="как-расшифровать-vin-номер-самостоятельно">Как расшифровать VIN-номер самостоятельно</h2>
+
+<p>VIN состоит из трёх частей:</p>
+<ol>
+  <li><strong>WMI (World Manufacturer Identifier)</strong> — первые 3 символа (код производителя). Например, <code>XTA</code> — <em>Toyota</em>, <code>WDB</code> — <em>Mercedes-Benz</code>.</li>
+  <li><strong>VDS (Vehicle Descriptor Section)</em> — символы с 4 по 9 (описание модели, типа кузова, двигателя).</li>
+  <li><strong>VIS (Vehicle Identifier Section)</em> — символы с 10 по 17 (год выпуска, завод, серийный номер).</li>
+</ol>
+
+<p>Пример расшифровки для <em>Volkswagen Golf 2018</em> с VIN <code>WVWZZZAUZJW012345</code>:</p>
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr><th>Символы</th><th>Значение</th><th>Пример</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>1–3</td><td>Производитель</td><td><em>WVW</em> — Volkswagen (Германия)</td></tr>
+    <tr><td>4–6</td><td>Модель и тип кузова</td><td><em>ZZA</em> — Golf хэтчбек</td></tr>
+    <tr><td>7</td><td>Тип двигателя</td><td><em>U</em> — 1.4 TSI (150 л.с.)</td></tr>
+    <tr><td>10</td><td>Год выпуска</td><td><em>J</em> — 2018</td></tr>
+    <tr><td>11</td><td>Завод-сборщик</td><td><em>W</strong> — Wolfsburg (Германия)</td></tr>
+  </tbody>
+</table></div>
+
+<p>🔍 <strong>Полную расшифровку</em> можно сделать на сайтах:
+<ul>
+  <li>🌍 <a href="https://vin-decoder.zr.ru" target="_blank">VIN-декодер «За рулём»</a> — бесплатно, с поддержкой российских моделей.</li>
+  <li>🔧 <a href="https://www.decodethis.com" target="_blank">Decode This</a> — англоязычный сервис с базой европейских и азиатских авто.</li>
+  <li>📊 <a href="https://auto.kombat.com/vin" target="_blank">Kombat Auto</a> — показывает оригинальные каталожные номера запчастей.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если в VIN есть буква <code>O</code> или <code>I</code> — это не ошибка! Производители никогда не используют эти символы (их легко спутать с цифрами <code>0</code> и <code>1</code>).</p></aside>
+
+<h2 id="почему-подбор-по-vin-точнее-чем-по-модели-и-году">Почему подбор по VIN точнее, чем по модели и году</h2>
+
+<p>Многие автовладельцы ошибочно считают, что достаточно знать марку, модель и год выпуска. На практике это работает только для <em>базовых деталей</em> (например, дворников или ламп). Для критичных узлов — двигателя, трансмиссии, подвески — такой подход чреват ошибками.</p>
+
+<p>Причины, почему VIN надёжнее:</p>
+<ul>
+  <li>🔄 <strong>Рестайлинг:</strong> <em>Toyota Camry</em> 2018 года могла выпускаться в двух кузовах (до и после рестайлинга), с разными креплениями бампера.</li>
+  <li>⚙️ <strong>Модификации двигателя:</strong> <em>BMW 320d</em> одного года мог оснащаться дизелями <code>B47</code> или <code>N47</code> — поршни и турбины у них не взаимозаменяемы.</li>
+  <li>🌍 <strong>Рынки сбыта:</strong> <em>Ford Focus</em> для Европы и США имеют разные нормы выхлопа — соответственно, отличаются катализаторы и лямбда-зонды.</li>
+  <li>🏭 <strong>Заводы-сборщики:</strong> <em>Hyundai Solaris</em>, собранный в России и Корее, может иметь разные генераторы и стартеры.</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Даже если вы нашли запчасть по VIN, проверьте её <em>каталожный номер</em> (OEM) на совместимость с вашей модификацией. Например, для <em>Audi A4 B9</em> существуют три варианта передних тормозных дисков — в зависимости от типа двигателя и наличия системы <code>quattro</code>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Подбор по VIN исключает ошибки с комплектацией, но не гарантирует 100% совместимость — всегда сверяйте каталожные номера с оригинальными!</p></aside>
+
+<h2 id="топ-5-сервисов-для-подбора-запчастей-по-vin">Топ-5 сервисов для подбора запчастей по VIN</h2>
+
+<p>Не все онлайн-каталоги одинаково полезны. Мы протестировали 12 сервисов и отобрали те, которые дают максимально точные данные для российского рынка.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr><th>Сервис</th><th>Плюсы</th><th>Минусы</th><th>Ссылка</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Exist.ru</strong></td>
+      <td>База из 50 млн запчастей, фильтр по брендам, цены от дилеров</td>
+      <td>Нет истории цен, иногда отсутствуют редкие модели</td>
+      <td><a href="https://exist.ru" target="_blank">exist.ru</a></td>
+    </tr>
+    <tr>
+      <td><strong>Autodoc</strong></td>
+      <td>Удобный интерфейс, сравнение аналогов, доставка по РФ</td>
+      <td>Цены выше, чем у местных поставщиков</td>
+      <td><a href="https://www.autodoc.ru" target="_blank">autodoc.ru</a></td>
+    </tr>
+    <tr>
+      <td><strong>Emex</strong></td>
+      <td>Оригинальные запчасти с гарантией, поддержка редких марок</td>
+      <td>Дорого, долгое ожидание (3–7 дней)</td>
+      <td><a href="https://emex.ru" target="_blank">emex.ru</a></td>
+    </tr>
+    <tr>
+      <td><strong>Kia/Hyundai Parts</strong></td>
+      <td>Официальные каталоги для корейских авто с схемами узлов</td>
+      <td>Только для <em>Kia</em> и <em>Hyundai</em></td>
+      <td><a href="https://parts.hyundai.ru" target="_blank">parts.hyundai.ru</a></td>
+    </tr>
+    <tr>
+      <td><strong>ETKA (VW Group)</strong></td>
+      <td>Точные данные для <em>Volkswagen</em>, <em>Audi</em>, <em>Skoda</em></td>
+      <td>Сложный интерфейс, требует регистрации</td>
+      <td><a href="https://etka.volkswagen.de" target="_blank">etka.volkswagen.de</a></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>💡 <strong>Совет:</strong> Если вы ищете <em>б/у запчасти</em>, используйте <a href="https://bamper.by" target="_blank">Bamper.by</a> или <a href="https://avito.ru" target="_blank">Авито</a> с фильтром по VIN. Так вы найдёте детали с разборок, подходящие именно вашей машине.</p>
+
+
+<p>Указан ли VIN в карточке товара?|Есть ли фото оригинальной упаковки?|Совпадает ли каталожный номер с вашим?|Проверены ли отзывы о продавце?--></p>
+
+<h2 id="7-запчастей-которые-чаще-всего-покупают-неподходящие">7 запчастей, которые чаще всего покупают неподходящие</h2>
+
+<p>По статистике авторазборок и магазинов, эти детали возвращают в 30–50% случаев из-за несовместимости. Даже если вы подбираете их по VIN, уточняйте дополнительные параметры!</p>
+
+<ul>
+  <li>🔥 <strong>Тормозные колодки:</strong> Размер, материал (керамика/металл), наличие датчика износа. Например, для <em>Mercedes W204</em> есть 4 варианта передних колодок.</li>
+  <li>⚡ <strong>Стартеры и генераторы:</strong> Мощность, расположение креплений, тип разъёма. <em>Bosch</em> и <em>Valeo</em> могут поставлять разные модели для одной машины.</li>
+  <li>🛞 <strong>Ступичные подшипники:</strong> Диаметр, количество болтов, наличие ABS-датчика. На <em>Renault Duster</em> их три вида!</li>
+  <li>🔧 <strong>Ремни ГРМ:</strong> Длина, количество зубьев, наличие натяжителя. Ошибка приведёт к обрыву и капитальному ремонту.</li>
+  <li>💨 <strong>Турбины:</strong> Модель, калибровка, совместимость с ЭБУ. Турбина от <em>Garrett</em> для <em>VW 2.0 TDI</em> бывает в 5 модификациях.</li>
+  <li>🔋 <strong>Аккумуляторы:</strong> Ёмкость, полярность, размер клемм. Например, <em>Toyota RAV4</em> 2020 года требует АКБ с обратной полярностью.</li>
+  <li>🚗 <strong>Бампера и оптику:</strong> Форма, крепления, тип ламп (галоген/LED). Бампер от рестайлинговой <em>Mazda 3</em> не встанет на дорестайл.</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Если вы покупаете <em>б/у запчасть</em>, обязательно сверьте её каталожный номер с оригиналом. Например, блоки ABS от <em>Bosch</em> для <em>Ford Focus 3</em> визуально идентичны, но имеют разное программное обеспечение!</p>
+
+<details class="pb-accordion"><summary>Как проверить подшипник ступицы на совместимость?</summary><div class="pb-accordion-body"><p>
+<p>1. Снимите старый подшипник и замерьте его диаметр штангенциркулем.</p>
+<p>2. Посчитайте количество болтов на фланце.</p>
+<p>3. Проверьте, есть ли отверстие под датчик ABS (если да — нужна модель с магнитным кольцом).</p>
+<p>4. Сравните каталожный номер на корпусе подшипника с тем, что выдаёт сервис по VIN.</p>
+<p></p></div></details></p>
+
+<h2 id="ошибки-при-подборе-запчастей-по-vin-и-как-их-избежать">Ошибки при подборе запчастей по VIN и как их избежать</h2>
+
+<p>Даже опытные автовладельцы допускают ошибки, которые ведут к покупке неподходящих деталей. Вот самые распространённые:</p>
+
+<ol>
+  <li><strong>Использование неполного VIN:</strong> Некоторые сервисы работают с последними 7 символами, но это даёт только информацию о годе и серийном номере. Всегда вводите <em>полный 17-значный код</em>.</li>
+  <li><strong>Игнорирование модификаций:</strong> Например, <em>Volkswagen Passat B6</em> с двигателем <code>1.8 TSI</code> имеет два варианта цепи ГРМ — для моторов до и после 2010 года.</li>
+  <li><strong>Доверье «универсальным» аналогам:</strong> Детали с пометкой «подходит для 10 моделей» редко обеспечивают идеальную посадку. Лучше брать запчасти, предназначенные конкретно для вашего VIN.</li>
+  <li><strong>Покупка без проверки поставщика:</strong> На <em>AliExpress</em> и <em>eBay</em> часто продают подделки под оригинальные номера. Проверяйте отзывы и сертификаты.</li>
+  <li><strong>Неучёт «доработок» авто:</strong> Если предыдущий владелец менял двигатель или коробку, VIN покажет заводскую комплектацию, а не текущую.</li>
+</ol>
+
+<p>📌 <strong>Как минимизировать риски:</strong></p>
+<ul>
+  <li>🔍 Сверяйте каталожный номер с оригинальной деталью (если она ещё стоит на машине).</li>
+  <li>📏 Замеряйте габариты критичных деталей (например, тормозных дисков).</li>
+  <li>💬 Консультируйтесь с менеджерами магазинов, присылая фото старой запчасти.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если сервис по VIN выдаёт несколько вариантов одной запчасти — это сигнал, что нужно уточнять модификацию вашего авто у официального дилера.</p></aside>
+
+<h2 id="как-проверить-оригинальность-запчасти-по-vin">Как проверить оригинальность запчасти по VIN</h2>
+
+<p>Подделки под оригинальные запчасти — бич рынка. По данным <em>НИИАТ</em>, до 40% деталей для иномарок в России — контрафакт. Вот как отсеять некачественные детали:</p>
+
+<p><strong>Шаг 1. Проверка упаковки:</strong></p>
+<ul>
+  <li>📦 Оригинальные запчасти <em>Bosch</em>, <em>ZF</em>, <em>Sachs</em> упакованы в фирменные коробки с голограммами.</li>
+  <li>🏷️ На наклейке должен быть <code>QR-код</code>, который ведёт на сайт производителя.</li>
+  <li>🖨️ Штрихкод на упаковке должен совпадать с номером детали в каталоге.</li>
+</ul>
+
+<p><strong>Шаг 2. Визуальный осмотр:</strong></p>
+<ul>
+  <li>🔍 На оригинальных деталях нет следов литья, заусенцев или неровной окраски.</li>
+  <li>🔧 Логотип бренда выгравирован, а не наклеен.</li>
+  <li>📏 Размеры и вес должны совпадать с оригиналом (сверяйте по каталогу).</li>
+</ul>
+
+<p><strong>Шаг 3. Проверка по базе производителя:</strong></p>
+<p>Некоторые бренды позволяют проверить подлинность по серийному номеру:</p>
+<ul>
+  <li><em>Bosch</em>: <a href="https://www.bosch-automotive.com/ru/ru/original-bosch" target="_blank">сервис проверки</a>.</li>
+  <li><em>ZF</em>: Отправьте фото детали и упаковки на <code>check@zf.com</code>.</li>
+  <li><em>NGK</em> (свечи): Введите номер на <a href="https://www.ngk.de/ru/under-the-hood/check-your-parts" target="_blank">сайте NGK</a>.</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Если продавец отказывается предоставить фото упаковки или сертификат — это повод усомниться в оригинальности. Особенно это касается дорогостоящих деталей: турбин, форсунок, ЭБУ.</p>
+
+<h2 id="faq-частые-вопросы-о-подборе-запчастей-по-vin">FAQ: Частые вопросы о подборе запчастей по VIN</h2>
+
+<details>
+  <summary>Можно ли подобрать запчасти по VIN для автомобиля старше 20 лет?</summary>
+  <p>Да, но с оговорками. Для старых машин (до 2000 года) VIN может содержать меньше данных о комплектации. В этом случае:</p>
+  <ol>
+    <li>Используйте специализированные каталоги (например, <a href="https://www.oldcarmanuals.com" target="_blank">Old Car Manuals</a>).</li>
+    <li>Сверяйтесь с бумажными каталогами запчастей (их можно найти на форумах марок).</li>
+    <li>Обращайтесь к дилерам ретро-авто (например, <em>Classic Car Parts</em>).</li>
+  </ol>
+</details>
+
+<details>
+  <summary>Что делать, если VIN не распознаётся сервисами?</summary>
+  <p>Причины и решения:</p>
+  <ul>
+    <li>🔤 <strong>Опечатка:</strong> Проверьте символы — часто путают <code>B</code> и <code>8</code>, <code>D</code> и <code>0</code>.</li>
+    <li>🚗 <strong>Редкая модель:</strong> Попробуйте сервисы для конкретного бренда (например, <a href="https://partsouq.com" target="_blank">Partsouq</a> для арабских и азиатских авто).</li>
+    <li>📄 <strong>VIN не из базы:</strong> Для китайских машин (например, <em>Chery</em>, <em>Geely</em>) используйте <a href="https://vin.chinacarhistory.com" target="_blank">китайский декодер</a>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Как подобрать запчасти по VIN для автомобиля с ГБО?</summary>
+  <p>VIN не содержит информации о газобаллонном оборудовании, так как оно устанавливается постфактум. В этом случае:</p>
+  <ol>
+    <li>Уточните модель ГБО (например, <em>Lovato</em>, <em>BRC</em>, <em>Stag</em>).</li>
+    <li>Найдите запчасти по каталожному номеру оборудования (он указан на редукторе или блоке управления).</li>
+    <li>Обратитесь в сервис, где устанавливали ГБО — у них должны быть данные по вашей системе.</li>
+  </ol>
+</details>
+
+<details>
+  <summary>Можно ли по VIN узнать, какие запчасти уже менялись?</summary>
+  <p>Нет, VIN содержит только заводские данные. Однако историю ремонтов можно проверить через:</p>
+  <ul>
+    <li>📄 <a href="https://гибдд.рф" target="_blank">ГИБДД</a> — данные о ДТП.</li>
+    <li>🔧 <a href="https://avtocod.ru" target="_blank">Автокод</a> — история сервисных работ (если они фиксировались).</li>
+    <li>📱 Мобильные приложения (например, <em>CarVertical</em>) — показывают пробег и замены по данным дилеров.</li>
+  </ul>
+  <p>Если машина побывала в серьёзном ДТП, некоторые узлы (например, лонжероны) могли быть заменены на неоригинальные — это не отразится в VIN.</p>
+</details>
+
+<details>
+  <summary>Какие запчасти нельзя подбирать по VIN?</summary>
+  <p>VIN не поможет с:</p>
+  <ul>
+    <li>🔑 <strong>Ключами и замками:</strong> Их коды привязаны к иммобилайзеру, а не к VIN.</li>
+    <li>🎨 <strong>Тюнинговыми деталями:</strong> Спойлеры, диски, обвесы подбираются по модели и году, а не по VIN.</li>
+    <li>🔋 <strong>Аксессуарами:</strong> Чехлы, коврики, видеорегистраторы универсальны.</li>
+    <li>🛠️ <strong>Расходниками:</strong> Масла, фильтры, свечи подбираются по параметрам (вязкость, размер), а не по VIN.</li>
+  </ul>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/printsip-raboty-adsorbera-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Принцип работы адсорбера авто: устройство, неисправности, ремонт</span>
+                <span class="pb-related-desc">Подробно разберем принцип работы адсорбера автомобиля. Узнайте, как работает система улавливания пар</span>
+            </a><a href="/articles/c/ch/chto-takoe-trekshn-kontrol.html" class="pb-related-card">
+                <span class="pb-related-title">Трекшн контроль в автомобиле: что это и как работает?</span>
+                <span class="pb-related-desc">Узнайте, что такое трекшн контроль (TCS), как он работает, чем отличается от ESP и почему важен для </span>
+            </a><a href="/articles/m/ma/mashina-dergaetsya-pri-troganii-s-mesta-prichiny.html" class="pb-related-card">
+                <span class="pb-related-title">Машина дергается при трогании: причины и способы устранения</span>
+                <span class="pb-related-desc">Автомобиль дергается при старте? Разбираем основные причины: от сцепления и форсунок до датчиков. Ди</span>
+            </a><a href="/articles/d/da/davlenie-v-metanovom-ballone.html" class="pb-related-card">
+                <span class="pb-related-title">Давление в метановом баллоне: нормы, проверка, безопасность для ГБО</span>
+                <span class="pb-related-desc">Какое давление должно быть в метановом баллоне для авто? Нормы, как проверить, почему падает или рас</span>
+            </a><a href="/articles/s/so/solaris-chto-za-mashina.html" class="pb-related-card">
+                <span class="pb-related-title">Solaris что за машина: обзор, характеристики и выбор модели</span>
+                <span class="pb-related-desc">Полный разбор модели Solaris: история, технические характеристики, надежность двигателей, плюсы и ми</span>
+            </a><a href="/articles/c/ch/chem-zakleit-plastik-radiatora-okhlazhdeniya.html" class="pb-related-card">
+                <span class="pb-related-title">Чем заклеить пластик радиатора охлаждения: 7 проверенных способов</span>
+                <span class="pb-related-desc">Починить трещину в пластиковом радиаторе авто можно самостоятельно! Сравниваем клеи, герметики и хол</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

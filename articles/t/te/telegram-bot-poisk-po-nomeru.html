@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Поиск по номеру в Telegram: методы и боты для авто — Авто Справочник</title>
+    <meta name="description" content="Как найти владельца авто по номеру через Telegram-бот. Обзор сервисов поиска, риски утечек и защита личных данных автомобилиста.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/t/te/telegram-bot-poisk-po-nomeru.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Поиск по номеру в Telegram: методы и боты для авто">
+    <meta property="og:description" content="Как найти владельца авто по номеру через Telegram-бот. Обзор сервисов поиска, риски утечек и защита личных данных автомобилиста.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-nav-active">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/zakony-i-shtrafy/">Законы и Штрафы</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Поиск по номеру в Telegram: методы и боты для авто</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#механизм-работы-популярных-telegram-ботов">Механизм работы популярных Telegram-ботов</a></li><li><a href="#законность-поиска-информации-по-госномеру">Законность поиска информации по госномеру</a></li><li><a href="#риски-использования-сомнительных-сервисов">Риски использования сомнительных сервисов</a></li><li><a href="#альтернативные-способы-связи-с-водителем">Альтернативные способы связи с водителем</a></li><li><a href="#как-проверить-автомобиль-перед-покупкой-легально">Как проверить автомобиль перед покупкой легально</a></li><li><a href="#защита-своих-данных-от-поиска">Защита своих данных от поиска</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/mo/mozhno-li-ezdit-bez-strakhovki-esli-vladelets-ryadom.html">Можно ли ездить без страховки, если владелец рядом? Разбор закона 2026</a></li><li><a href="/articles/0/0-/0-45-promille-eto.html">0 45 промилле это: допустимая норма алкоголя в крови</a></li><li><a href="/articles/k/ka/kakoj-koeffitsient-kbm-u-novichka.html">КБМ для новичка: какой коэффициент ОСАГО в 2026 году</a></li><li><a href="/articles/s/sk/skolko-stoyat-nomera-na-mashinu-ekkh.html">Сколько стоят номера ЕКХ на машину: цена, история, законность</a></li><li><a href="/articles/e/es/esli-ne-platit-kredit-za-mashinu-chto-budet.html">Что будет, если не платить кредит за машину в 2026 году: последствия и выходы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Поиск по номеру через Telegram-бот: возможности и риски</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#механизм-работы-популярных-telegram-ботов">Механизм работы популярных Telegram-ботов</a></li><li><a href="#законность-поиска-информации-по-госномеру">Законность поиска информации по госномеру</a></li><li><a href="#риски-использования-сомнительных-сервисов">Риски использования сомнительных сервисов</a></li><li><a href="#альтернативные-способы-связи-с-водителем">Альтернативные способы связи с водителем</a></li><li><a href="#как-проверить-автомобиль-перед-покупкой-легально">Как проверить автомобиль перед покупкой легально</a></li><li><a href="#защита-своих-данных-от-поиска">Защита своих данных от поиска</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В современном цифровом мире границы приватности становятся все более размытыми, особенно когда речь заходит о <strong>персональных данных</strong> участников дорожного движения. Владельцы автомобилей часто сталкиваются с ситуацией, когда необходимо срочно связаться с водителем, перегородившим выезд, или же, наоборот, желают скрыть свою личность после инцидента. Именно этот спрос породил огромное количество сервисов и скриптов, обещающих мгновенный результат.</p>
+<p>Особую популярность в последнее время набрали <em>Telegram-боты</em>, позиционируемые как универсальные инструменты для пробива информации. Пользователи ищут способ мгновенно получить ФИО, адрес и модель автомобиля, введя лишь государственный номерной знак. Однако реальность работы таких систем часто скрыта за завесой мифов, мошеннических схем и полулегальных баз данных, о которых следует знать каждому.</p>
+<p>В этой статье мы детально разберем, как на самом деле работает поиск по номеру через мессенджер, какие существуют законные альтернативы и почему использование сомнительных ботов может привести к серьезным юридическим последствиям для самого инициатора запроса.</p>
+
+<h2 id="механизм-работы-популярных-telegram-ботов">Механизм работы популярных Telegram-ботов</h2>
+<p>Большинство пользователей ошибочно полагают, что <strong>Telegram-бот</strong> имеет прямой доступ к закрытым серверам государственных служб или базам данных страховых компаний. На самом деле, техническая реализация этих инструментов куда проще и одновременно опаснее. Бот представляет собой программный скрипт, который выступает посредником между пользователем и массивом уже украденной или слитой информации.</p>
+<p>Принцип действия таких систем строится на агрегации данных из различных источников утечек. Это могут быть старые базы ГИБДД, данные телеком-операторов, сведения от доставок еды или служб такси. Когда вы отправляете боту номер автомобиля, он делает запрос в свою локальную или удаленную базу, ищет совпадение и выдает результат. Важно понимать, что <em>актуальность</em> такой информации часто оставляет желать лучшего.</p>
+<p>Разработчики подобных сервисов часто меняют адреса ботов, так как их блокируют за нарушение правил платформы и законодательства о персональных данных. Поэтому поиск конкретного бота по названию часто приводит к фейковым каналам, цель которых — собрать подписчиков или украсть данные самого ищущего.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Использование ботов, предоставляющих доступ к персональным данным без согласия субъекта, может расцениваться как нарушение закона о защите информации. Вы не только рискуете своими деньгами, но и оставляете цифровой след.</p>
+</blockquote>
+
+<p>Существует три основных типа таких ботов, встречающихся в сети:</p>
+<ul>
+<li>🤖 <strong>Агрегаторы утечек:</strong> собирают данные из открытых и закрытых источников, предоставляя платный доступ к поиску.</li>
+<li>💸 <strong>Фишинговые проекты:</strong> боты, которые требуют предоплату, но после перевода средств просто исчезают или присылают случайный набор данных.</li>
+<li>🕵️ <strong>Социальная инженерия:</strong> боты, имитирующие диалог для выуживания дополнительной информации о владельце номера под видом «уточнения данных».</li>
+</ul>
+
+<h2 id="законность-поиска-информации-по-госномеру">Законность поиска информации по госномеру</h2>
+<p>Вопрос легальности получения данных о владельце автомобиля по его номеру регулируется строгими нормативными актами. В большинстве стран СНГ, включая Россию, персональные данные (ФИО, адрес, телефон) охраняются законом. Доступ к базам данных <strong>ГИБДД</strong> имеют только уполномоченные сотрудники правоохранительных органов и определенные госструктуры.</p>
+<p>Для обычного гражданина поиск такой информации через сторонние, неавторизованные источники является серой или даже черной зоной. Даже если бот работает и выдает верные данные, сам факт приобретения и использования (информации) из нелегальных источников может повлечь за собой ответственность. Закон не делает скидку на то, что данные были получены «просто ради интереса» или «чтобы наказать нахала».</p>
+<p>Существуют легальные способы получения информации, которые не требуют использования сомнительных ботов. Например, при оформлении ДТП или покупке автомобиля используются официальные процедуры проверки. Однако они не дают полного досье на человека, а лишь подтверждают технические и юридические аспекты владения транспортным средством.</p>
+
+<div class="pb-poll" id="poll-60ebee56"><div class="pb-poll-question">📊 Пользовались ли вы когда-нибудь платными ботами для поиска людей?</div><div class="pb-poll-option" data-poll="60ebee56" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, и данные были верные</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="60ebee56" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Да, но меня обманули</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="60ebee56" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, считаю это незаконным</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="60ebee56" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Нет, не было необходимости</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Ниже приведена таблица, сравнивающая легальные и нелегальные методы получения информации:</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Критерий</th>
+<th>Официальные источники (Госуслуги, ГИБДД)</th>
+<th>Telegram-боты (Нелегальные базы)</th>
+<th>Сервисы проверки авто (Автотека и др.)</th>
+</tr>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Доступ к ФИО владельца</td>
+<td>Только по запросу органов или при оформлении ДТП</td>
+<td>Часто предоставляется (из утечек)</td>
+<td>Скрыто (только история авто)</td>
+</tr>
+<tr>
+<td>Телефон владельца</td>
+<td>Не предоставляется</td>
+<td>Часто предоставляется</td>
+<td>Не предоставляется</td>
+</tr>
+<tr>
+<td>История штрафов</td>
+<td>Полная (для владельца)</td>
+<td>Частичная или устаревшая</td>
+<td>Только привязанные к VIN</td>
+</tr>
+<tr>
+<td>Юридический статус</td>
+<td>Полностью законно</td>
+<td>Нарушение закона о ПД</td>
+<td>Полностью законно</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="риски-использования-сомнительных-сервисов">Риски использования сомнительных сервисов</h2>
+<p>Используя <strong>Telegram-ботов</strong> для поиска людей, вы подвергаете себя значительному риску. В первую очередь, это финансовая безопасность. Большинство таких сервисов требуют оплаты в криптовалюте или предоплаты на карту, что не дает никаких гарантий возврата средств в случае невыполнения обязательств.</p>
+<p>Во-вторых, существует высокий риск заражения устройства вредоносным ПО. Ссылки, ведущие на ботов или их расширенные версии в виде приложений, могут содержать трояны, ворующие пароли от банковских приложений и самих аккаунтов мессенджеров. <em>Киберпреступники</em> часто используют тему «пробива» как приманку для неосторожных пользователей.</p>
+
+<details class="pb-accordion"><summary>Что делать, если бот требует доступ к контактам?</summary><div class="pb-accordion-body"><p>Никогда не предоставляйте доступ к своей телефонной книге. Это позволяет боту скопировать все ваши контакты и добавить их в свою базу для дальнейшей продажи или спама. Отключите бота немедленно.</p></div></details>
+
+<p>Также стоит помнить о «зеркальном» эффекте. Регистрируясь в таком боте, вы часто оставляете свой ID в Telegram и номер телефона. Это означает, что вы сами становитесь легкой мишенью для <strong>социальной инженерии</strong> и мошенников, которые теперь знают, что вы интересуетесь подобными темами.</p>
+<ul>
+<li>🔒 <strong>Утечка личных данных:</strong> ваш номер и профиль могут быть проданы в те же базы, которыми пользуются боты.</li>
+<li>💰 <strong>Финансовые потери:</strong> высокая вероятность столкнуться с мошенниками, требующими оплату за «разблокировку» данных.</li>
+<li>⚖️ <strong>Юридическая ответственность:</strong> в случае расследования киберпреступлений, ваши логи могут быть изучены правоохранительными органами.</li>
+</ul>
+
+<h2 id="альтернативные-способы-связи-с-водителем">Альтернативные способы связи с водителем</h2>
+<p>Если ваша цель — не сбор досье, а решение бытовой проблемы, например, просьба убрать машину, существуют более простые и законные методы. Часто водители оставляют номер телефона под лобовым стеклом. Если его нет, можно воспользоваться сервисами, которые помогают связаться с владельцем, не раскрывая личных данных ни одной из сторон.</p>
+<p>Один из эффективных способов — вызов специалиста по эвакуации или службы контроля парковки (если машина стоит с нарушениями). Операторы этих служб имеют доступ к базам данных и могут самостоятельно связаться с владельцем, чтобы тот переставил автомобиль. Это занимает больше времени, но является абсолютно легальным.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Попробуйте осмотреть припаркованный автомобиль внимательнее: иногда визитка с номером лежит на торпеде, скрытая бликами, или номер напечатан на бумажке, прикрепленной скотчем к боковому стеклу с внутренней стороны.</p></aside>
+
+<p>В некоторых случаях помогает обращение в службу поддержки каршеринга, если автомобиль принадлежит к парку арендных машин. На кузовах таких авто всегда есть маркировка и телефон горячей линии. Оператор свяжется с клиентом, который арендовал машину в данный момент.</p>
+<p>Также можно оставить записку под дворником с просьбой связаться, указав свой номер. Это пассивный, но часто работающий метод, который не нарушает никаких законов и не требует использования <strong>сомнительного софта</strong>.</p>
+
+<h2 id="как-проверить-автомобиль-перед-покупкой-легально">Как проверить автомобиль перед покупкой легально</h2>
+<p>Ситуация с покупкой автомобиля кардинально отличается от поиска соседа по парковке. Здесь проверка истории машины — необходимость. Для этого существуют официальные и коммерческие сервисы, которые агрегируют данные из открытых источников, баз страховых компаний и отчетов ГИБДД.</p>
+<p>Для проверки вам понадобится <strong>VIN-код</strong> автомобиля или государственный номерной знак. Зная номер, можно получить VIN через некоторые открытые источники или просто спросить его у продавца. С VIN-кодом работа становится гораздо эффективнее.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист проверки авто перед покупкой</h4><label class="check-item"><input type="checkbox"><span>Проверить VIN через базу ГИБДД</span></label><label class="check-item"><input type="checkbox"><span>Запросить отчет о залогах в реестре нотариусов</span></label><label class="check-item"><input type="checkbox"><span>Проверить историю ДТП через страховые базы</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии ограничений на регистрацию</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Используйте следующие ресурсы для получения достоверной информации:</p>
+<ul>
+<li>🚔 <strong>Сайт ГИБДД:</strong> проверка на участие в ДТП, нахождение в розыске и наличие ограничений на регистрационные действия.</li>
+<li>📄 <strong>Реестр залогов:</strong> позволяет узнать, не находится ли автомобиль в залоге у банка (критично важно при покупке).</li>
+<li>🛡️ <strong>Коммерческие сервисы:</strong> предоставляют расширенную историю, включая данные о пробеге, количестве владельцев и использовании в такси.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ Внимание: Если продавец категорически отказывается предоставить VIN-код для проверки до момента внесения задатка, это верный признак проблем с автомобилем. От такой сделки лучше отказаться.</p>
+</blockquote>
+
+<h2 id="защита-своих-данных-от-поиска">Защита своих данных от поиска</h2>
+<p>Понимая, как работают базы данных, каждый владелец автомобиля может принять меры для минимизации рисков утечки информации. Полностью исчезнуть из цифрового пространства сложно, но сократить количество доступных о вас сведений реально. Основная масса данных попадает в сеть из-за халатности самих пользователей или сотрудников организаций.</p>
+<p>Первое правило — осторожность при размещении фото автомобиля в социальных сетях. Номерной знак на фотографии — это ключ к вашей личности для злоумышленников. Перед публикацией фото в открытых источниках обязательно скрывайте номер графическим редактором.</p>
+<p>Второе правило — проверка своих данных в сервисах-агрегаторах утечек. Существуют ресурсы, позволяющие проверить, не «светится» ли ваш номер телефона или email в известных базах. Если данные найдены, рекомендуется сменить номер телефона или усилить защиту аккаунтов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Полная анонимность владения автомобилем невозможна при активном использовании дорог, но минимизация цифрового следа снижает риск стать жертвой мошенников или сталкеров.</p></aside>
+
+<p>Также стоит быть внимательным при заполнении различных анкет, участии в розыгрышах и регистрациях на сомнительных сайтах. Часто именно эти данные впоследствии продаются создателями сайтов владельцам <em>Telegram-ботов</em>.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли найти человека по номеру машины через ГИБДД?</summary>
+<p>Самостоятельно — нет. Сотрудники ГИБДД не имеют права предоставлять персональные данные владельцев третьим лицам. Информация может быть выдана только в рамках официального запроса от правоохранительных органов или по запросу адвоката/суда при ведении дела.</p>
+</details>
+
+<details>
+<summary>Бесплатны ли боты для поиска по номеру?</summary>
+<p>Полностью бесплатных и рабочих ботов практически не существует. Те, что работают бесплатно, обычно либо показывают случайные данные, либо являются временными проектами для сбора аудитории. Серьезный доступ к базам требует затрат на поддержку серверов и покупку данных, поэтому он почти всегда платный.</p>
+</details>
+
+<details>
+<summary>Что делать, если бот требует код из СМС?</summary>
+<p>Ни в коем случае не вводите код! Это классическая схема кражи аккаунта Telegram. Бот пытается авторизоваться на вашем номере, а код нужен для подтверждения входа. Введя его, вы потеряете доступ к своему аккаунту.</p>
+</details>
+
+<details>
+<summary>Есть ли разница между поиском по VIN и по госномеру?</summary>
+<p>Да. Поиск по VIN-коду более надежен для проверки истории автомобиля (ДТП, ремонты, залоги), так как VIN не меняется. Поиск по госномеру чаще используется для поиска текущего владельца, но номер можно перевесить на другую машину, что делает информацию менее стабильной.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/mo/mozhno-li-ezdit-bez-strakhovki-esli-vladelets-ryadom.html" class="pb-related-card">
+                <span class="pb-related-title">Можно ли ездить без страховки, если владелец рядом? Разбор закона 2026</span>
+                <span class="pb-related-desc">Разбираемся, разрешает ли закон ездить без полиса ОСАГО при наличии владельца в машине. Штрафы, искл</span>
+            </a><a href="/articles/0/0-/0-45-promille-eto.html" class="pb-related-card">
+                <span class="pb-related-title">0 45 промилле это: допустимая норма алкоголя в крови</span>
+                <span class="pb-related-desc">Что значит 0.45 промилле? Разбор допуска в 0.3 промилле, погрешности алкотестеров и ответственность </span>
+            </a><a href="/articles/k/ka/kakoj-koeffitsient-kbm-u-novichka.html" class="pb-related-card">
+                <span class="pb-related-title">КБМ для новичка: какой коэффициент ОСАГО в 2026 году</span>
+                <span class="pb-related-desc">Какой КБМ у новичка при первом страховании? Реальные цифры, как проверить базу РСА и почему полис мо</span>
+            </a><a href="/articles/s/sk/skolko-stoyat-nomera-na-mashinu-ekkh.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько стоят номера ЕКХ на машину: цена, история, законность</span>
+                <span class="pb-related-desc">Узнайте реальную стоимость номеров серии ЕКХ в 2026-2026 годах. История возникновения, юридический с</span>
+            </a><a href="/articles/e/es/esli-ne-platit-kredit-za-mashinu-chto-budet.html" class="pb-related-card">
+                <span class="pb-related-title">Что будет, если не платить кредит за машину в 2026 году: последствия и выходы</span>
+                <span class="pb-related-desc">Не платите автокредит? Узнайте, что ждёт вас через 1-3 месяца просрочки: штрафы, арест машины, суды </span>
+            </a><a href="/articles/m/mo/mozhno-li-ezdit-na-mashine-v-areste.html" class="pb-related-card">
+                <span class="pb-related-title">Можно ли ездить на машине в аресте: риски и последствия</span>
+                <span class="pb-related-desc">Узнайте, разрешено ли управлять авто с ограничениями регистрации. Последствия езды на арестованном Т</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

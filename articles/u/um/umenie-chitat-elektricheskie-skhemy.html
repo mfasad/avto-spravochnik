@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как читать электрические схемы: полное руководство для автоэлектрика — Авто Справочник</title>
+    <meta name="description" content="Научитесь читать электрические схемы автомобиля: обозначения проводов, датчиков и блоков. Практические советы по поиску неисправностей в проводке.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/u/um/umenie-chitat-elektricheskie-skhemy.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как читать электрические схемы: полное руководство для автоэлектрика">
+    <meta property="og:description" content="Научитесь читать электрические схемы автомобиля: обозначения проводов, датчиков и блоков. Практические советы по поиску неисправностей в проводке.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как читать электрические схемы: полное руководство для автоэлектрика</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовые-элементы-и-условные-обозначения">Базовые элементы и условные обозначения</a></li><li><a href="#принципы-трассировки-и-чтение-соединений">Принципы трассировки и чтение соединений</a></li><li><a href="#работа-с-источниками-питания-и-заземлением">Работа с источниками питания и заземлением</a></li><li><a href="#анализ-цепей-управления-и-сигнальных-линий">Анализ цепей управления и сигнальных линий</a></li><li><a href="#поиск-неисправностей-с-помощью-схемы">Поиск неисправностей с помощью схемы</a></li><li><a href="#особенности-чтения-схем-разных-производителей">Особенности чтения схем разных производителей</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-dolzhen-svetit-dalnij-svet.html">Как должен светить дальний свет: нормы, регулировка и ГОСТ</a></li><li><a href="/articles/e/el/elektronika-i-elektrika-v-chem-raznitsa.html">Электроника и электрика в авто: ключевые различия и применение</a></li><li><a href="/articles/c/ch/chto-delat-esli-svistit-remen-generatora-na-mashine.html">Свистит ремень генератора: причины и решения проблемы</a></li><li><a href="/articles/e/es/esp-zagorelas-v-mashine.html">Загорелась лампочка ESP в машине: причины и что делать в 2026 году</a></li><li><a href="/articles/r/re/rele-12-volt-avtomobilnoe.html">Реле 12В для авто: выбор, подключение и ремонт (2026)</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Умение читать электрические схемы: от новичка до профи</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовые-элементы-и-условные-обозначения">Базовые элементы и условные обозначения</a></li><li><a href="#принципы-трассировки-и-чтение-соединений">Принципы трассировки и чтение соединений</a></li><li><a href="#работа-с-источниками-питания-и-заземлением">Работа с источниками питания и заземлением</a></li><li><a href="#анализ-цепей-управления-и-сигнальных-линий">Анализ цепей управления и сигнальных линий</a></li><li><a href="#поиск-неисправностей-с-помощью-схемы">Поиск неисправностей с помощью схемы</a></li><li><a href="#особенности-чтения-схем-разных-производителей">Особенности чтения схем разных производителей</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Современный автомобиль представляет собой сложнейший электронный организм, где каждая система завязана на единую сеть управления. Без способности грамотно расшифровывать <strong>электрические принципиальные схемы</strong> диагностика превращается в хаотичное тыкание щупом мультиметра наугад. Понимание логики построения чертежа позволяет инженеру или мастеру видеть не просто набор линий, а путь прохождения тока и взаимодействия блоков.</p>
+<p>Ошибки в чтении документации часто приводят к ложным диагнозам, когда исправные узлы меняются из-за неверной интерпретации разрывов цепи или заземления. Навык чтения схем — это фундамент, на котором строится профессиональная диагностика любой сложности, от простой замены лампочки до поиска обрыва в CAN-шине.</p>
+<p>В этой статье мы разберем основные условные обозначения, принципы трассировки и алгоритмы поиска неисправностей. Вы научитесь ориентироваться в лабиринтах проводки и понимать, что именно хотел сказать разработчик, рисуя конкретный узел на странице мануала.</p>
+
+<h2 id="базовые-элементы-и-условные-обозначения">Базовые элементы и условные обозначения</h2>
+<p>Любая схема начинается с понимания языка символов, который един для всех автопроизводителей, хотя стиль рисовки может отличаться. <strong>Источники питания</strong> обычно изображаются в верхней части листа, а «земля» или масса — в нижней, что создает визуальный поток энергии сверху вниз. Это правило помогает быстро оценивать направление тока без лишних вычислений.</p>
+<p>Важнейшим элементом является <em>коннектор</em>, который на чертеже часто показан как разрыв линии с буквенно-цифровым индексом. Разъемы могут быть обозначены различными фигурами, но их главная функция — указать точку физического соединения двух жгутов проводки. Если вы видите разрыв линии с подписью «C203», это означает, что физически провод уходит в другой отсек автомобиля.</p>
+<blockquote>⚠️ Внимание: Никогда не игнорируйте цветовую маркировку проводов, указанную в легенде схемы, так как реальный цвет изоляции в жгуте может выгореть или отличаться от заводского стандарта из-за предыдущих ремонтов.</blockquote>
+<p>Для обозначения коммутационных устройств используются стандартные графические символы, которые необходимо знать наизусть. <strong>Реле</strong> часто рисуют в виде прямоугольника с обмоткой внутри, а <strong>предохранители</strong> — как линия с утолщением или зигзагом. Понимание состояния контактов в покоящемся режиме (нормально разомкнут или замкнут) критически важно для анализа логики работы цепи.</p>
+
+<h2 id="принципы-трассировки-и-чтение-соединений">Принципы трассировки и чтение соединений</h2>
+<p>Процесс чтения схемы, или трассировка, требует системного подхода, чтобы не запутаться в переплетениях линий. Двигаться следует от источника питания к потребителю, проверяя каждый промежуточный элемент на предмет целостности и наличия сигнала. Особое внимание стоит уделять точкам соединения, где несколько проводов объединяются в один узел.</p>
+<ul>
+<li>🔌 <strong>Точка соединения:</strong> место, где сходятся три и более проводника, часто обозначается жирной точкой на пересечении линий.</li>
+<li>🚧 <strong>Пересечение без связи:</strong> если линии просто пересекаются без точки, это означает, что электрического контакта между ними нет.</li>
+<li>🔄 <strong>Переходный контакт:</strong> обозначает переход провода из одного листа схемы на другой или в другой блок управления.</li>
+</ul>
+<p>Часто на схемах можно встретить обозначения <em>скруток</em> или распределительных блоков, которые служат для разветвления питания на несколько потребителей. В современных автомобилях роль таких распределителей берут на себя интеллектуальные блоки коммутации, управляемые программно. Понимание того, как сигнал проходит через эти узлы, помогает локализовать проблему в конкретном сегменте проводки.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте линейку или лист бумаги, чтобы закрывать неиспользуемые части схемы при трассировке сложных цепей — это поможет не сбиться с пути и не потерять нить соединения.</p></aside>
+<p>При анализе соединений важно учитывать сечение проводов, которое иногда указывается рядом с линией. Толщина линии на чертеже не всегда соответствует реальному сечению, поэтому нужно смотреть на цифровые обозначения, например, <code>1.5 мм²</code> или <code>0.75 мм²</code>. Это поможет понять, выдержит ли проводка нагрузку при установке дополнительного оборудования.</p>
+
+<h2 id="работа-с-источниками-питания-и-заземлением">Работа с источниками питания и заземлением</h2>
+<p>Центром любой электрической схемы автомобиля является аккумуляторная батарея и генератор, от которых запитаны все системы. На чертежах они могут быть вынесены в отдельный раздел или показаны схематично в виде символов с указанием полярности. <strong>Плюсовая шина</strong> часто идет через главный предохранитель, защищающий всю бортовую сеть от короткого замыкания.</p>
+<p>Не менее важна система заземления, которая в автомобилях реализована через кузов. На схемах масса обозначается специальным символом, указывающим на подключение к металлической части chassis. Плохой контакт массы часто приводит к парадоксальным неисправностям, когда ток ищет обходные пути через чувствительную электронику.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип питания</th>
+<th>Обозначение</th>
+<th>Описание</th>
+<th>Напряжение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Постоянный ток</td>
+<td>B+</td>
+<td>Прямое питание от АКБ</td>
+<td>12-14 В</td>
+</tr>
+<tr>
+<td>Зажигание</td>
+<td>IG1 / IG2</td>
+<td>Питание только при ключа</td>
+<td>12-14 В</td>
+</tr>
+<tr>
+<td>Заземление</td>
+<td>GND / E</td>
+<td>Подключение к кузову</td>
+<td>0 В</td>
+</tr>
+<tr>
+<td>Аксессуар</td>
+<td>ACC</td>
+<td>Питание в положении ACC</td>
+<td>12-14 В</td>
+</tr>
+</tbody>
+</table></div>
+<p>Существуют также линии постоянного питания, которые активны всегда, независимо от положения ключа зажигания. К ним подключаются системы, требующие сохранения памяти, такие как часы, сигнализация и блок управления двигателем. Потеря питания на этих линиях приводит к сбросу адаптаций и необходимости повторного обучения системы.</p>
+<details class="pb-accordion"><summary>Почему важна чистота контактов массы?</summary><div class="pb-accordion-body"><p>Окисление точки заземления увеличивает сопротивление, что вызывает падение напряжения на потребителе. В результате лампа горит тускло, а блок управления может уходить в ошибку по низкому напряжению бортовой сети.</p></div></details>
+
+<h2 id="анализ-цепей-управления-и-сигнальных-линий">Анализ цепей управления и сигнальных линий</h2>
+<p>Современные автомобили насыщены электроникой, где слаботочные сигналы управляют мощными исполнительными механизмами. <strong>Сигнальные линии</strong> часто имеют сложную модуляцию и несут в себе цифровые данные, а не просто наличие напряжения. Для их чтения требуются специальные знания о протоколах обмена данными.</p>
+<p>Датчики и исполнительные механизмы подключаются к блокам управления (ECU) через строго определенные пины разъемов. На схеме всегда указывается номер контакта в разъеме блока и номер контакта в разъеме самого устройства. Ошибка в нумерации при прозвонке может привести к повреждению дорогостоящего контроллера.</p>
+<ul>
+<li>📡 <strong>Аналоговый сигнал:</strong> напряжение плавно меняется в зависимости от параметра (например, датчик температуры).</li>
+<li>💻 <strong>Цифровой сигнал:</strong> передача данных в виде последовательности импульсов (CAN, LIN, K-Line).</li>
+<li>⚡ <strong>ШИМ-сигнал:</strong> широтно-импульсная модуляция для управления яркостью или скоростью.</li>
+</ul>
+<p>При диагностике сигнальных цепей важно понимать их логический уровень: «высокий» (High) обычно означает наличие напряжения, а «низкий» (Low) — его отсутствие или замыкание на массу. Однако в некоторых системах логика может быть инвертированной, что нужно учитывать при проверке осциллографом.</p>
+<blockquote>⚠️ Внимание: При проверке сигнальных линий обычным мультиметром вы можете не увидеть реальных проблем, так как прибор показывает усредненное значение, а не форму сигнала.</blockquote>
+
+<div class="pb-poll" id="poll-b4b46126"><div class="pb-poll-question">📊 Какой инструмент вы чаще всего используете для диагностики?</div><div class="pb-poll-option" data-poll="b4b46126" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Мультиметр</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b4b46126" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Осциллограф</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b4b46126" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Диагностический сканер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b4b46126" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Пробник (контролька)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b4b46126" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="поиск-неисправностей-с-помощью-схемы">Поиск неисправностей с помощью схемы</h2>
+<p>Алгоритм поиска неисправности строится на последовательном исключении исправных участков цепи. Начинать всегда следует с проверки предохранителя, так как это самая частая причина отказа. Если предохранитель цел, движение идет дальше по схеме к разъемам и конечному потребителю.</p>
+<p>Эффективным методом является деление цепи пополам: проверяется сигнал в середине пути, что позволяет сразу отсечь 50% возможных мест поломки. Этот метод особенно полезен при поиске обрывов в длинных жгутах проводки, проходящих через весь кузов автомобиля.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Алгоритм поиска обрыва</h4><label class="check-item"><input type="checkbox"><span>Изучить схему цепи</span></label><label class="check-item"><input type="checkbox"><span>Проверить предохранитель</span></label><label class="check-item"><input type="checkbox"><span>Прозвонить участок до середины</span></label><label class="check-item"><input type="checkbox"><span>Локализовать неисправный сегмент</span></label><label class="check-item"><input type="checkbox"><span>Восстановить проводку</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+<p>При обнаружении короткого замыкания важно не просто заменить сгоревший элемент, а найти причину. Часто провода перетираются о металлический кузов в местах вибрации или перегиба жгута. Схема поможет определить, какие еще потребители завязаны на эту же ветку, и могут ли они быть причиной перегрузки.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Грамотное чтение схемы позволяет найти неисправность за 15 минут, тогда как метод тыня занимает часы и часто приводит к замене исправных деталей.</p></aside>
+
+<h2 id="особенности-чтения-схем-разных-производителей">Особенности чтения схем разных производителей</h2>
+<p>Каждый автопроизводитель имеет свои стандарты оформления документации, что может сбить с толку неподготовленного мастера. Например, в схемах <em>VAG</em> (Volkswagen, Audi) используется нумерация дорожек на печатной плате блока комфорта, а в <em>Toyota</em> принят цветовой код проводов, максимально приближенный к реальности.</p>
+<p>Европейские производители часто используют более детализированные схемы с указанием сечений каждого провода, в то время как азиатские могут группировать цепи по функциональному признаку. Американские схемы отличаются простотой и крупным шрифтом, но иногда детализации в области заземления.</p>
+<p>Важно обращать внимание на легенду, расположенную на первом или последнем листе мануала. Там расшифровываются все аббревиатуры, цветовые коды и специфические символы, используемые именно в этом документе. Без изучения легенды чтение схемы конкретного автомобиля может быть невозможным.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+<details>
+<summary>Нужно ли знать английский язык для чтения схем?</summary>
+<p>Базовые технические термины (Ground, Power, Switch, Sensor) желательно знать, так как они международные. Однако большинство современных сервисных программ имеют перевод или используют универсальные графические символы, понятные без глубокого знания языка.</p>
+</details>
+<details>
+<summary>Чем принципиальная схема отличается от монтажной?</summary>
+<p>Принципиальная схема показывает логические связи между элементами и не отражает их физического расположения. Монтажная схема (или жгутовая) показывает, как провода проложены в кузове, где находятся разъемы и как они выглядят в реальности.</p>
+</details>
+<details>
+<summary>Как научиться быстро находить нужный провод на схеме?</summary>
+<p>Ключ к скорости — практика и использование поисковых функций в электронных мануалах. Ищите по номеру предохранителя, коду ошибки или названию компонента. Со временем глаз привыкает к стандартным обозначениям, и поиск становится автоматическим.</p>
+</details>
+<details>
+<summary>Можно ли диагностировать CAN-шину обычным тестером?</summary>
+<p>Обычным мультиметром можно лишь проверить наличие напряжения и отсутствие короткого замыкания. Для полноценной диагностики формы сигнала, наличия шумов и пакетов данных необходим осциллограф или специализированный анализатор шин.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-dolzhen-svetit-dalnij-svet.html" class="pb-related-card">
+                <span class="pb-related-title">Как должен светить дальний свет: нормы, регулировка и ГОСТ</span>
+                <span class="pb-related-desc">Подробный гид по правильной работе дальнего света. Нормы ГОСТ, пошаговая инструкция регулировки пучк</span>
+            </a><a href="/articles/e/el/elektronika-i-elektrika-v-chem-raznitsa.html" class="pb-related-card">
+                <span class="pb-related-title">Электроника и электрика в авто: ключевые различия и применение</span>
+                <span class="pb-related-desc">Чем отличается электроника от электрики в автомобиле? Разбираемся в основах, компонентах и особеннос</span>
+            </a><a href="/articles/c/ch/chto-delat-esli-svistit-remen-generatora-na-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Свистит ремень генератора: причины и решения проблемы</span>
+                <span class="pb-related-desc">Узнайте, почему свистит ремень генератора на авто и как устранить неисправность. Пошаговые инструкци</span>
+            </a><a href="/articles/e/es/esp-zagorelas-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Загорелась лампочка ESP в машине: причины и что делать в 2026 году</span>
+                <span class="pb-related-desc">Почему загорается ESP на панели приборов? Разбираем причины, диагностику и способы устранения неиспр</span>
+            </a><a href="/articles/r/re/rele-12-volt-avtomobilnoe.html" class="pb-related-card">
+                <span class="pb-related-title">Реле 12В для авто: выбор, подключение и ремонт (2026)</span>
+                <span class="pb-related-desc">Как выбрать автомобильное реле 12 вольт: типы, схемы подключения, неисправности и ТОП-5 моделей для </span>
+            </a><a href="/articles/k/ka/kak-ponyat-chto-ne-rabotaet-generator-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Признаки неисправного генератора: как проверить в машине</span>
+                <span class="pb-related-desc">12 явных симптомов поломки генератора автомобиля: от тусклого света до ошибок на панели. Пошаговая д</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

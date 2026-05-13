@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Настройка рации Viking: частоты, CTCSS, мощность — Авто Справочник</title>
+    <meta name="description" content="Полная инструкция по настройке рации Viking: каналы, CTCSS/DCS, сканирование. Как прошить и проверить параметры для стабильной связи.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/r/ra/ratsiya-optim-viking-nastrojka.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Настройка рации Viking: частоты, CTCSS, мощность">
+    <meta property="og:description" content="Полная инструкция по настройке рации Viking: каналы, CTCSS/DCS, сканирование. Как прошить и проверить параметры для стабильной связи.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Настройка рации Viking: частоты, CTCSS, мощность</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#первичная-подготовка-и-сброс-настроек">Первичная подготовка и сброс настроек</a></li><li><a href="#работа-с-частотами-и-шагами-сетки">Работа с частотами и шагами сетки</a></li><li><a href="#использование-кодов-ctcss-и-dcs">Использование кодов CTCSS и DCS</a></li><li><a href="#регулировка-мощности-и-чувствительности">Регулировка мощности и чувствительности</a></li><li><a href="#функции-сканирования-и-приоритетные-каналы">Функции сканирования и приоритетные каналы</a></li><li><a href="#программирование-через-компьютер-и-клонирование">Программирование через компьютер и клонирование</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-otkryt-mashinu-esli-ona-zakhlopnulas.html">Захлопнулась машина: как открыть без ключа и не повредить</a></li><li><a href="/articles/k/ku/kuda-sezdit-otdokhnut-na-yug.html">Куда съездить отдохнуть на юг: лучшие направления 2026</a></li><li><a href="/articles/c/ch/chem-mozhno-protirat-vinilovye-plastinki.html">Чем протирать виниловые пластинки: средства и методы</a></li><li><a href="/articles/b/bo/boty-dlya-probiva-po-nomeru-telefona.html">Боты для пробива по номеру: риски, законы и защита данных</a></li><li><a href="/articles/k/ka/kak-vyglyadit-nomer-a-4.html">Как выглядит формат А4: точные размеры, пропорции и отличия</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Настройка рации Viking: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#первичная-подготовка-и-сброс-настроек">Первичная подготовка и сброс настроек</a></li><li><a href="#работа-с-частотами-и-шагами-сетки">Работа с частотами и шагами сетки</a></li><li><a href="#использование-кодов-ctcss-и-dcs">Использование кодов CTCSS и DCS</a></li><li><a href="#регулировка-мощности-и-чувствительности">Регулировка мощности и чувствительности</a></li><li><a href="#функции-сканирования-и-приоритетные-каналы">Функции сканирования и приоритетные каналы</a></li><li><a href="#программирование-через-компьютер-и-клонирование">Программирование через компьютер и клонирование</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Мобильные и носимые радиостанции марки <em>Viking</em> заслужили популярность среди дальнобойщиков, сотрудников служб безопасности и охранных предприятий благодаря своей надежности и доступности. Однако, чтобы устройство работало эффективно в реальных условиях, стандартных заводских параметров часто бывает недостаточно. Грамотная конфигурация позволяет отсечь лишние шумы, настроить приоритетные каналы и адаптировать работу передатчика под конкретные условия местности.</p>
+
+<p>Процесс настройки не является сложным, но требует понимания базовых принципов радиосвязи. Владелец должен знать, как изменять частоты, устанавливать коды доступа и корректировать выходную мощность. Неправильные действия могут привести к тому, что связь будет прерывистой или, наоборот, устройство будет создавать помехи другим участникам эфира.</p>
+
+<p>В этом материале мы разберем все этапы конфигурации радиостанции. Вы узнаете, как правильно выставить частотный шаг, зачем нужны субтона и как защитить важные каналы от прослушивания. <strong>Внимательное изучение инструкции</strong> поможет вам выжать максимум из возможностей вашего оборудования.</p>
+
+<h2 id="первичная-подготовка-и-сброс-настроек">Первичная подготовка и сброс настроек</h2>
+
+<p>Прежде чем вносить изменения в программное обеспечение радиостанции, необходимо убедиться в исправности аккумулятора и кабеля для программирования. Часто проблемы с записью частот возникают из-за плохого контакта или нестабильного напряжения. Рекомендуется использовать оригинальный кабель-программатор или проверенный аналог с качественным преобразователем USB-UART.</p>
+
+<p>Если устройство работало в разных сетях или было куплено с рук, лучше всего выполнить сброс до заводских настроек. Это удалит старые, возможно, некорректные параметры и вернет стабильность работе микропрограммы. Для этого обычно используется комбинация клавиш при включении или специальный пункт в меню, доступный через компьютер.</p>
+
+<p> Вам придется заново вносить рабочие частоты. Поэтому, если у вас есть возможность, предварительно сохраните текущую конфигурацию в файл на компьютере. Это создаст резервную копию, к которой можно будет вернуться в случае ошибки.</p>
+
+<blockquote>
+<p>⚠️ Внимание! Перед началом любых работ с программным обеспечением убедитесь, что радиостанция выключена при подключении к компьютеру. Включение и выключение устройства в подключенном состоянии может повредить порт или саму радиостанцию.</p>
+</blockquote>
+
+<p>Проверьте версию прошивки, если такая функция доступна в меню или через софт. Производители периодически выпускают обновления, улучшающие стабильность работы и добавляющие новые функции. Использование актуальной версии ПО — залог корректной работы всех систем устройства.</p>
+
+<h2 id="работа-с-частотами-и-шагами-сетки">Работа с частотами и шагами сетки</h2>
+
+<p>Основой настройки любой радиостанции является правильный выбор частоты. Рации <em>Viking</em> работают в различных диапазонах, чаще всего в VHF (136-174 МГц) или UHF (400-520 МГц). Ошибка в выборе диапазона приведет к тому, что вы либо не услышите собеседника, либо будете вещать "в никуда".</p>
+
+<p>Критически важным параметром является <strong>частотный шаг</strong> (Step). Это минимальное изменение частоты, которое может выполнить радиостанция. В зависимости от региона и выделенных частот, шаг может составлять 6.25, 12.5 или 25 кГц. Если шаг установлен неверно, вы не сможете точно попасть на нужную частоту, и связь будет невозможна.</p>
+
+<p>Настройка осуществляется через компьютерное программное обеспечение. В соответствующем поле выбирается требуемое значение. Для профессионального использования в России стандартом де-факто является шаг 12.5 кГц, хотя в некоторых служебных сетях может применяться и 6.25 кГц для увеличения количества каналов.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение</th>
+<th>Описание влияния на связь</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Step 6.25 кГц</td>
+<td>Узкий</td>
+<td>Максимальное количество каналов, требуется точная настройка</td>
+</tr>
+<tr>
+<td>Step 12.5 кГц</td>
+<td>Стандарт</td>
+<td>Оптимальный баланс между качеством и количеством каналов</td>
+</tr>
+<tr>
+<td>Step 25.0 кГц</td>
+<td>Широкий</td>
+<td>Используется в старых сетях, больше помех, меньше каналов</td>
+</tr>
+<tr>
+<td>Shift (Сдвиг)</td>
+<td>+/- МГц</td>
+<td>Необходим для работы через ретрансляторы (репитеры)</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>При использовании репитеров необходимо также настроить сдвиг частоты (Shift) и направление сдвига. Это позволяет радиостанции принимать сигнал на одной частоте, а передавать на другой, обеспечивая связь на больших расстояниях через возвышенности или в условиях плотной застройки.</p>
+
+<h2 id="использование-кодов-ctcss-и-dcs">Использование кодов CTCSS и DCS</h2>
+
+<p>Одной из самых важных функций для комфортной работы в эфире является использование субтонов. В условиях города, где на одной частоте могут работать несколько разных групп (такси, охрана, строители), постоянный шум чужих разговоров сильно раздражает. Коды <strong>CTCSS</strong> (аналоговые) и <strong>DCS</strong> (цифровые) решают эту проблему.</p>
+
+<p>Принцип работы прост: радиостанция открывает динамик только тогда, когда принимает сигнал с определенным кодовым словом (тоном). Если тон не совпадает или отсутствует, динамик остается закрытым, и вы не слышите чужих разговоров, хотя физически принимаете их сигнал. Это часто называют "закрытым каналом".</p>
+
+<div class="pb-poll" id="poll-929fbadb"><div class="pb-poll-question">📊 Какой тип кодировки вы используете чаще?</div><div class="pb-poll-option" data-poll="929fbadb" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">CTCSS (аналоговый тон)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="929fbadb" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">DCS (цифровой код)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="929fbadb" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Без кодировки (открытый канал)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="929fbadb" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, что это такое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Настройка субтонов производится для каждого канала отдельно. В программном обеспечении <em>Viking</em> есть два поля: Tone (для передачи) и CTCSS/DCS (для приема). Для полноценной защиты канала необходимо устанавливать код и на передачу, и на прием. Если поставить код только на прием, вы не будете слышать тех, у кого код не установлен, но они будут слышать вас.</p>
+
+<p>Выбор конкретного кода (например, 88.5 Гц для CTCSS или 023 для DCS) не имеет технического значения для качества связи, главное — чтобы он совпадал у всех участников группы. Рекомендуется выбирать коды, которые реже используются другими службами в вашем районе, чтобы избежать случайных открытий шумодава.</p>
+
+<blockquote>
+<p>⚠️ Внимание! Установка субтонов не шифрует ваш разговор. Любой человек, знающий частоту и отключивший шумодав (или сканирующий тоны), сможет вас услышать. Это защита от шума, а не от прослушивания.</p>
+</blockquote>
+
+<h2 id="регулировка-мощности-и-чувствительности">Регулировка мощности и чувствительности</h2>
+
+<p>Многие пользователи ошибочно полагают, что максимальная мощность передатчика — это всегда хорошо. Однако работа на полной мощности (обычно 4-5 Вт для портативных раций и до 25-50 Вт для мобильных) вблизи корреспондента приводит к перегрузке приемного тракта собеседника и появлению хрипов. Кроме того, это быстрее сажает аккумулятор.</p>
+
+<p>Рекомендуется использовать низкую мощность (Low Power, 1-2 Вт) для связи на коротких расстояниях (до 1-2 км в городе). Это обеспечит чистый звук и сохранит заряд батареи. Высокую мощность следует включать только при работе на пределе дальности или через репитер.</p>
+
+<p>Параметр <strong>Squelch</strong> (шумодав) регулирует порог чувствительности приемника. Если его выкрутить слишком сильно, радиостанция будет игнорировать слабые, но полезные сигналы. Если поставить слишком слабо — динамик будет постоянно шипеть в паузах между передачами. Оптимальная настройка достигается экспериментальным путем: крутите регулятор до тех пор, пока шумы не исчезнут, но слабые сигналы еще будут приниматься.</p>
+
+<p>В мобильных рациях <em>Viking</em> также может быть доступна настройка уровня микрофона. Если собеседники жалуются, что вас плохо слышно или голос искажен, проверьте этот параметр. Слишком высокий уровень приведет к перегрузке и "каше" в эфире, слишком низкий — к тихой и неразборчивой речи.</p>
+
+<h2 id="функции-сканирования-и-приоритетные-каналы">Функции сканирования и приоритетные каналы</h2>
+
+<p>Функция сканирования позволяет автоматически перебирать все запрограммированные каналы в поисках активного сигнала. Это полезно для диспетчеров или координаторов, которые должны контролировать несколько групп одновременно. Настройка сканирования включает в себя определение списка каналов и времени задержки.</p>
+
+<p>Время задержки (Hold Time) определяет, как долго радиостанция будет оставаться на найденном активном канале после прекращения передачи. Если время слишком короткое, вы можете не успеть среагировать на вызов. Если слишком длинное — пропустите важные сообщения на других частотах.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка настроек сканирования</h4><label class="check-item"><input type="checkbox"><span>Сформирован список сканируемых каналов</span></label><label class="check-item"><input type="checkbox"><span>Установлено время задержки 2-5 сек</span></label><label class="check-item"><input type="checkbox"><span>Назначена кнопка запуска сканирования</span></label><label class="check-item"><input type="checkbox"><span>Проверена работа приоритетного канала</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Приоритетный канал — это особая частота, которая проверяется радиостанцией в первую очередь, даже если идет сканирование других каналов. Обычно на приоритетный канал выводят диспетчера или аварийную частоту. Настройка этой функции гарантирует, что вы не пропустите критически важный вызов, занимаясь своими делами на рабочей частоте.</p>
+
+<p>Некоторые модели позволяют настраивать тип сканирования: сканировать только каналы с активным сигналом (Carrier) или только каналы с правильным субтоном (Tone). Второй вариант предпочтителен в загруженном эфире, так как исключает ложные остановки на чужих разговорах без нужного кода.</p>
+
+<h2 id="программирование-через-компьютер-и-клонирование">Программирование через компьютер и клонирование</h2>
+
+<p>Для массовой настройки парка радиостанций или сложной конфигурации каналов удобнее всего использовать ПК. Программное обеспечение для <em>Viking</em> (часто универсальное для чипсетов RDA или аналогичных) позволяет видеть всю структуру частот в виде таблицы, что гораздо удобнее, чем вводить данные через меню самой рации.</p>
+
+<p>Процесс клонирования позволяет скопировать все настройки с одной, уже настроенной радиостанции, на другие. Это идеальный способ быстро подготовить группу устройств к работе. Для этого используется специальный кабель-клонер или режим, когда одна рация выступает в роли мастера, а другие — ведомых.</p>
+
+<p>При работе с ПО важно правильно выбрать модель устройства и порт COM. Ошибка в выборе модели может привести к тому, что чтение данных пройдет успешно, но запись вызовет ошибку или, в худшем случае, "положит" прошивку. Всегда перепроверяйте, что в программе выбрана именно ваша модификация рации.</p>
+
+<details class="pb-accordion"><summary>Что делать, если программа не видит рацию?</summary><div class="pb-accordion-body"><p>Часто проблема кроется в драйверах USB-кабеля. Установите драйверы CH340 или PL2303 (в зависимости от кабеля). Также попробуйте изменить номер COM-порта в диспетчере устройств на более низкий (например, COM1 или COM2), так как старые версии программ могут не видеть порты с высокими номерами.</p></div></details>
+
+<p>После успешной записи конфигурации обязательно проведите тестовые испытания. Пройдитесь по всем каналам, проверьте работу субтонов и мощность сигнала. Только практическая проверка гарантирует, что настройка прошла успешно и радиостанция готова к эксплуатации.</p>
+
+<blockquote>
+<p>⚠️ Внимание! Не прерывайте процесс записи прошивки или конфигурации. Отключение питания или кабеля во время записи может привести к необратимому повреждению памяти радиостанции, после чего она перестанет включаться.</p>
+</blockquote>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Как сбросить рацию Viking к заводским настройкам без компьютера?</summary>
+<p>Обычно для этого нужно зажать определенную комбинацию клавиш (часто это кнопка включения вместе с кнопкой вызова или боковой кнопкой PTT) в момент включения устройства. Точная комбинация зависит от модели, информацию стоит искать в инструкции к конкретному аппарату. Сброс удалит все частоты и вернет стандартный шаг сетки.</p>
+</details>
+
+<details>
+<summary>Почему рация передает, но ее не слышно?</summary>
+<p>Наиболее вероятная причина — несовпадение частотного шага (Step) или субтона (CTCSS/DCS) у корреспондента. Также проверьте, не сбилась ли частота на несколько герц, и убедитесь, что антенна надежно прикручена. Работа без антенны может повредить передатчик.</p>
+</details>
+
+<details>
+<summary>Можно ли прошить рацию Viking частотами полицейских или спасателей?</summary>
+<p>Технически многие рации позволяют ввести любые частоты в их диапазоне. Однако использование частот специальных служб (полиция, МЧС, ФСБ) гражданскими лицами запрещено законом и преследуется по статье о нарушении порядка использования радиочастотного спектра. Кроме того, современные служебные сети часто используют шифрование, и вы услышите только цифровой шум.</p>
+</details>
+
+<details>
+<summary>Какой кабель нужен для программирования Viking?</summary>
+<p>Вам понадобится кабель-программатор с разъемом, соответствующим гнезду вашей рации (обычно Kenwood 2-pin или Motorola GP328/628 совместимый), и USB-коннектором. Внутри кабеля должен быть преобразователь интерфейсов (чаще всего на чипе CH340, PL2303 или CP2102), так как современные компьютеры не имеют физических COM-портов.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильная настройка субтонов и шага частоты — это 90% успеха в организации качественной радиосвязи. Не игнорируйте эти параметры, даже если рация работает "как-то".</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-otkryt-mashinu-esli-ona-zakhlopnulas.html" class="pb-related-card">
+                <span class="pb-related-title">Захлопнулась машина: как открыть без ключа и не повредить</span>
+                <span class="pb-related-desc">Забыли ключи в салоне или захлопнулась дверь? Узнайте все способы открыть машину без ключа: от прово</span>
+            </a><a href="/articles/k/ku/kuda-sezdit-otdokhnut-na-yug.html" class="pb-related-card">
+                <span class="pb-related-title">Куда съездить отдохнуть на юг: лучшие направления 2026</span>
+                <span class="pb-related-desc">Куда съездить отдохнуть на юг этим летом? Обзор курортов, советы по поездке на авто, выбор жилья и б</span>
+            </a><a href="/articles/c/ch/chem-mozhno-protirat-vinilovye-plastinki.html" class="pb-related-card">
+                <span class="pb-related-title">Чем протирать виниловые пластинки: средства и методы</span>
+                <span class="pb-related-desc">Полный гид по уходу за винилом. Узнайте, чем протирать пластинки, какие жидкости использовать и как </span>
+            </a><a href="/articles/b/bo/boty-dlya-probiva-po-nomeru-telefona.html" class="pb-related-card">
+                <span class="pb-related-title">Боты для пробива по номеру: риски, законы и защита данных</span>
+                <span class="pb-related-desc">Опасность использования ботов для пробива по номеру телефона. Как работают Telegram-боты, угрозы уте</span>
+            </a><a href="/articles/k/ka/kak-vyglyadit-nomer-a-4.html" class="pb-related-card">
+                <span class="pb-related-title">Как выглядит формат А4: точные размеры, пропорции и отличия</span>
+                <span class="pb-related-desc">Подробное описание формата А4: размеры в мм, см и дюймах, история стандарта, сравнение с Letter и А3</span>
+            </a><a href="/articles/v/v-/v-kakikh-stranakh-zheltye-nomera-na-mashinakh.html" class="pb-related-card">
+                <span class="pb-related-title">Желтые номера на авто: в каких странах они действуют</span>
+                <span class="pb-related-desc">Полный обзор стран с желтыми номерными знаками. Великобритания, Люксембург, Нидерланды: отличия, зак</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

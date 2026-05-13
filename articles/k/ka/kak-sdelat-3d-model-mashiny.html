@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как сделать 3D-модель машины: пошаговое руководство для новичков — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как создать 3D-модель автомобиля с нуля: выбор ПО, сканирование, моделирование и оптимизация для печати или рендера. Пошаговые инструкции + советы экспертов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-sdelat-3d-model-mashiny.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как сделать 3D-модель машины: пошаговое руководство для новичков">
+    <meta property="og:description" content="Узнайте, как создать 3D-модель автомобиля с нуля: выбор ПО, сканирование, моделирование и оптимизация для печати или рендера. Пошаговые инструкции + советы экспертов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как сделать 3D-модель машины: пошаговое руководство для новичков</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-подготовка-сбор-референсов-и-выбор-концепции">1. Подготовка: сбор референсов и выбор концепции</a></li><li><a href="#2-выбор-программы-для-3d-моделирования">2. Выбор программы для 3D-моделирования</a></li><li><a href="#3-способы-создания-3d-модели-с-нуля-или-со-скана">3. Способы создания 3D-модели: с нуля или со скана?</a></li><li><a href="#4-пошаговое-моделирование-кузова-в-blender">4. Пошаговое моделирование кузова в Blender</a></li><li><a href="#5-моделирование-деталей-колёса-салон-двигатель">5. Моделирование деталей: колёса, салон, двигатель</a></li><li><a href="#6-оптимизация-модели-для-3d-печати-или-рендера">6. Оптимизация модели для 3D-печати или рендера</a></li><li><a href="#7-экспорт-и-использование-модели">7. Экспорт и использование модели</a></li><li><a href="#8-полезные-ресурсы-и-сообщества">8. Полезные ресурсы и сообщества</a></li><li><a href="#faq-частые-вопросы-о-3d-моделировании-машин">FAQ: Частые вопросы о 3D-моделировании машин</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/a/av/avto-plyus-telekanal-smotret.html">Авто Плюс телеканал: как смотреть онлайн и в приложении</a></li><li><a href="/articles/g/gr/gromkaya-muzyka-iz-mashiny.html">Громкая музыка из машины: как сделать и не получить штраф</a></li><li><a href="/articles/k/kl/klassnaya-muzyka-s-basami.html">Классная музыка с басами: как выбрать и настроить автозвук</a></li><li><a href="/articles/o/oc/ochki-protivoblikovye-dlya-voditelej.html">Очки противобликовые для водителей: как выбрать и зачем нужны</a></li><li><a href="/articles/l/lu/luchshie-aromatizatory-dlya-avtomobilya.html">Лучшие ароматизаторы для автомобиля: рейтинг и обзоры 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как сделать 3D-модель машины: от эскиза до готовой модели</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-подготовка-сбор-референсов-и-выбор-концепции">1. Подготовка: сбор референсов и выбор концепции</a></li><li><a href="#2-выбор-программы-для-3d-моделирования">2. Выбор программы для 3D-моделирования</a></li><li><a href="#3-способы-создания-3d-модели-с-нуля-или-со-скана">3. Способы создания 3D-модели: с нуля или со скана?</a></li><li><a href="#4-пошаговое-моделирование-кузова-в-blender">4. Пошаговое моделирование кузова в Blender</a></li><li><a href="#5-моделирование-деталей-колёса-салон-двигатель">5. Моделирование деталей: колёса, салон, двигатель</a></li><li><a href="#6-оптимизация-модели-для-3d-печати-или-рендера">6. Оптимизация модели для 3D-печати или рендера</a></li><li><a href="#7-экспорт-и-использование-модели">7. Экспорт и использование модели</a></li><li><a href="#8-полезные-ресурсы-и-сообщества">8. Полезные ресурсы и сообщества</a></li><li><a href="#faq-частые-вопросы-о-3d-моделировании-машин">FAQ: Частые вопросы о 3D-моделировании машин</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Создание 3D-модели автомобиля — задача, которая кажется недостижимой для новичков, но на деле доступна каждому при правильном подходе. Безусловно, профессиональные студии используют дорогостоящее оборудование и годы опыта, однако современные технологии позволяют моделировать машины даже на домашнем компьютере. Главное — понимать этапы работы, выбрать подходящие инструменты и избегать типичных ошибок.</p>
+
+<p>Эта статья поможет разобраться в процессе от идеи до готовой модели: вы узнаете, как подготовить референсы, какие программы использовать для моделирования (от бесплатных до профессиональных), как оптимизировать геометрию для 3D-печати или визуализации, и даже как анимировать детали. Мы не будем углубляться в сложные технические детали, но дадим чёткие инструкции для начинающих и полезные лайфхаки для тех, кто хочет улучшить свои навыки.</p>
+
+<h2 id="1-подготовка-сбор-референсов-и-выбор-концепции">1. Подготовка: сбор референсов и выбор концепции</h2>
+
+<p>Прежде чем приступить к моделированию, необходимо <strong>собрать максимально полную референсную базу</strong>. Без качественных изображений автомобиля с разных ракурсов вы рискуете получить модель с искажёнными пропорциями или анатомическими ошибками. Где искать материалы?</p>
+
+<ul>
+  <li>📸 <em>Фотосессии автомобилей</em> на сайтах вроде <em>NetCarShow</em>, <em>CarPixel</em> или <em>Flickr</em> (ищите альбомы с пометкой "360°" или "studio shoot").</li>
+  <li>🎥 <em>Видеообзоры</em> на <em>YouTube</em> — особенно полезны ролики с демонстрацией интерьера и подкапотного пространства.</li>
+  <li>📐 <em>Чертёжные схемы</em> (blueprints) — их можно найти на <em>The-Blueprints.com</em> или купить у независимых художников на <em>Gumroad</em>.</li>
+  <li>🔍 <em>3D-сканы реальных машин</em> — например, на платформе <em>Sketchfab</em> (ищите модели с лицензией <code>CC-BY</code> для легального использования).</li>
+</ul>
+
+<p>Совет: если вы моделируете конкретную марку (например, <em>Toyota Supra A80</em> или <em>Tesla Cybertruck</em>), обратите внимание на <strong>характерные детали</strong> — форму фар, линию капота, дизайн колёсных арок. Эти элементы делают модель узнаваемой. Для упрощения задачи можно распечатать боковой вид машины в натуральную величину и повесить на стену рядом с монитором.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Использование защищённых авторским правом логотипов (например, эмблемы <em>Mercedes-Benz</em> или <em>Ferrari</em>) в коммерческих проектах без разрешения может привести к юридическим проблемам. Для личных работ это допустимо, но для продажи модели потребуется удалить фирменные знаки.</blockquote>
+
+<div class="pb-poll" id="poll-72677804"><div class="pb-poll-question">📊 Какой тип автомобиля вы хотите смоделировать?</div><div class="pb-poll-option" data-poll="72677804" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Классический (до 1990 г.)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="72677804" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Современный седан/хэтчбек</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="72677804" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Спортивный/гоночный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="72677804" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Концепт-кар</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="72677804" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Грузовик/спецтехника</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="2-выбор-программы-для-3d-моделирования">2. Выбор программы для 3D-моделирования</h2>
+
+<p>Рынок программ для 3D-моделирования огромен, и выбор зависит от ваших целей, бюджета и уровня подготовки. Ниже — сравнительная таблица популярных инструментов с учётом их применимости для автомобильного дизайна:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Программа</th>
+      <th>Тип лицензии</th>
+      <th>Сложность</th>
+      <th>Лучше подходит для</th>
+      <th>Плюсы</th>
+      <th>Минусы</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Blender</em></td>
+      <td>Бесплатная</td>
+      <td>Средняя</td>
+      <td>Полный цикл (моделирование, текстурирование, рендер)</td>
+      <td>Открытый исходный код, поддержка аддонов, мощный рендерер <em>Cycles</em></td>
+      <td>Неинтуитивный интерфейс для новичков, слабая поддержка NURBS</td>
+    </tr>
+    <tr>
+      <td><em>Fusion 360</em></td>
+      <td>Бесплатная для личного использования</td>
+      <td>Низкая</td>
+      <td>Параметрическое моделирование, прототипирование</td>
+      <td>Идеальна для 3D-печати, облачная синхронизация, встроенный CAM</td>
+      <td>Ограниченные инструменты для органического моделирования</td>
+    </tr>
+    <tr>
+      <td><em>3ds Max</em></td>
+      <td>Платная (~$1,800/год)</td>
+      <td>Высокая</td>
+      <td>Профессиональный автодизайн, визуализация</td>
+      <td>Индустрийный стандарт, мощные инструменты для полигонального моделирования</td>
+      <td>Дорогая, требует мощного ПК</td>
+    </tr>
+    <tr>
+      <td><em>Maya</em></td>
+      <td>Платная (~$200/месяц)</td>
+      <td>Очень высокая</td>
+      <td>Анимация, сложные поверхности</td>
+      <td>Лучшая для анимации деталей (двери, подвеска)</td>
+      <td>Избыточна для статичных моделей, крутая кривая обучения</td>
+    </tr>
+    <tr>
+      <td><em>ZBrush</em></td>
+      <td>Платная (~$900 разово)</td>
+      <td>Средняя</td>
+      <td>Скульптинг, детализация</td>
+      <td>Уникальные инструменты для создания реалистичных текстур</td>
+      <td>Не подходит для точного моделирования, высокие требования к железу</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Для новичков мы рекомендуем начинать с <em>Blender</em> или <em>Fusion 360</em>. Первая подойдёт, если вы планируете заниматься визуализацией или анимацией, вторая — если цель <strong>напечатать модель на 3D-принтере</strong>. Профессионалы часто комбинируют программы: например, создают базовую геометрию в <em>3ds Max</em>, а детализируют в <em>ZBrush</em>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы выбираете <em>Blender</em>, установите аддон <strong>Hard Ops</strong> и <strong>BoxCutter</strong> — они значительно ускоряют создание жёстких поверхностей (идеально для кузовных панелей).</p></aside>
+
+<h2 id="3-способы-создания-3d-модели-с-нуля-или-со-скана">3. Способы создания 3D-модели: с нуля или со скана?</h2>
+
+<p>Есть два основных подхода к созданию 3D-модели автомобиля: <strong>моделирование с нуля</strong> (по референсам) и <strong>цифровое сканирование</strong> реального объекта с последующей обработкой. Давайте разберём плюсы и минусы каждого метода.</p>
+
+<h3>Моделирование с нуля (Manual Modeling)</h3>
+<p>Это классический метод, который требует терпения и внимания к деталям. Подходит для:</p>
+<ul>
+  <li>🚗 Создания концепт-каров или модифицированных версий существующих машин.</li>
+  <li>🎨 Художников, которые хотят полностью контролировать процесс.</li>
+  <li>🖨️ Моделей для 3D-печати (так как геометрия изначально оптимизирована).</li>
+</ul>
+<p>Процесс обычно начинается с <strong>блоута</strong> (blockout) — упрощённой заготовки из примитивов (кубов, цилиндров), которая затем детализируется. Например, сначала создаётся общий силуэт кузова, затем прорабатываются арки колёс, бамперы, решётка радиатора.</p>
+
+<h3>3D-сканирование (Photogrammetry или LiDAR)</h3>
+<p>Сканирование ускоряет процесс, но требует специального оборудования или программ для фотограмметрии. Популярные инструменты:</p>
+<ul>
+  <li>📷 <em>RealityCapture</em> или <em>Meshroom</em> — для создания модели по фотографиям.</li>
+  <li>🔦 <em>Artec Eva</em> или <em>EinScan</em> — портативные 3D-сканеры.</li>
+  <li>📱 <em>Polycam</em> или <em>Kiri Engine</em> — мобильные приложения для сканирования (качество хуже, но достаточно для прототипов).</li>
+</ul>
+
+<p>Сканирование подходит для:</p>
+<ul>
+  <li>🔧 Воссоздания реально существующих автомобилей с высокой точностью.</li>
+  <li>⚡ Быстрого получения базовой геометрии для дальнейшей доработки.</li>
+  <li>🛠️ Реверс-инжиниринга деталей (например, для восстановления редких запчастей).</li>
+</ul>
+
+<blockquote>⚠️ <strong>Внимание:</strong> При сканировании автомобиля на улице учитывайте освещение — прямые солнечные лучи создают артефакты на отражающих поверхностях (стёкла, хром). Лучше сканировать в пасмурную погоду или в гараже с рассеянным светом.</blockquote>
+
+<details class="pb-accordion"><summary>Как сканировать машину с помощью смартфона?</summary><div class="pb-accordion-body"><p>
+<p>Для сканирования автомобиля телефоном (например, iPhone с <em>LiDAR</em> или Android с <em>ARCore</em>) следуйте алгоритму:</p>
+<p>1. Сделайте 50–100 фото со всех ракурсов, перекрывая кадр на 60–70%.</p>
+<p>2. Используйте приложение <em>Polycam</em> или <em>Scandy Pro</em> для обработки.</p>
+<p>3. Экспортируйте модель в <code>.obj</code> или <code>.fbx</code> и импортируйте в <em>Blender</em> для очистки от шумов.</p>
+<p>4. Удалите лишнюю геометрию (фон, землю) инструментом <code>Knife Tool</code> или модификатором <code>Decimate</code>.</p>
+<p></p></div></details></p>
+
+<h2 id="4-пошаговое-моделирование-кузова-в-blender">4. Пошаговое моделирование кузова в Blender</h2>
+
+<p>Рассмотрим базовый процесс создания кузова на примере <em>Blender</em> (версия 3.6+). Этот метод подойдёт для большинства легковых автомобилей. Если вы новичок, начните с простой модели (например, <em>Volkswagen Beetle</em> или <em>Lada 2101</em>).</p>
+
+<h3>Шаг 1: Настройка рабочей области</h3>
+<p>1. Откройте <em>Blender</em> и удалите стандартный куб (<code>X → Delete</code>).
+<p>2. Импортируйте референсы: перейдите в <code>Add → Image → Reference</code> и загрузите боковой и фронтальный виды машины.</p>
+<p>3. Настройте вид сверху (<code>Numpad 7</code>) и включите отображение фоновых изображений в <code>Sidebar (N) → View → Background Images</code>.</p></p>
+
+<h3>Шаг 2: Создание базовой заготовки</h3>
+<p>1. Добавьте плоскость (<code>Shift+A → Mesh → Plane</code>) и масштабируйте её до размеров машины на референсе.
+<p>2. Преобразуйте плоскость в редактируемую сетку (<code>Tab</code>) и экструдируйте (<code>E</code>) вершины, формируя силуэт кузова.</p>
+<p>3. Используйте модификатор <code>Subdivision Surface</code> (2–3 уровня) для сглаживания.</p></p>
+
+<h3>Шаг 3: Детализация</h3>
+<p>1. Проработайте ключевые линии: капот, крышу, багажник. Для этого выделите рёбра (<code>Shift+RMB</code>) и перемещайте их вдоль осей (<code>G → X/Y/Z</code>).
+<p>2. Создайте колёсные арки с помощью инструмента <code>Loop Cut</code> (<code>Ctrl+R</code>).</p>
+<p>3. Для фар и решётки радиатора используйте отдельные объекты (например, <code>Cylinder</code> для круглых фар).</p></p>
+
+
+<p>Соблюдены пропорции (длина/ширина/высота) по референсу</p>
+<p>Колёсные арки симметричны (проверьте в <code>Front Ortho View</code>)</p>
+<p>Нет "дырок" в геометрии (используйте <code>3D-Print Toolbox</code> для проверки)</p>
+<p>Все рёбра сглажены (примените <code>Shade Smooth</code>)</p>
+<p>Двери и капот — отдельные объекты для будущей анимации--></p>
+
+<p>Для ускорения работы используйте аддоны:</p>
+<ul>
+  <li>🔧 <strong>Hard Ops</strong> — для быстрого создания жёстких поверхностей (идеально для бамперов).</li>
+  <li>✂️ <strong>BoxCutter</strong> — для "вырезания" отверстий под фары или воздухозаборники.</li>
+  <li>🔄 <strong>MeshMachine</strong> — для работы с топологией (перераспределение полигонов).</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Топология — ключ к реалистичной модели. Избегайте треугольников и н-гонов (многоугольников с 5+ вершинами) в видимых зонах. Используйте квады (четырёхугольники) для равномерного сглаживания.</p></aside>
+
+<h2 id="5-моделирование-деталей-колёса-салон-двигатель">5. Моделирование деталей: колёса, салон, двигатель</h2>
+
+<p>Кузов — это только начало. Реалистичная модель требует проработки <strong>колёс</strong>, <strong>салона</strong> и <strong>подкапотного пространства</strong>. Рассмотрим каждый элемент отдельно.</p>
+
+<h3>Колёса и шины</h3>
+<p>1. <strong>Диск:</strong> Начните с цилиндра (<code>Add → Cylinder</code>), затем прорежьте отверстия для болтов инструментом <code>Boolean</code> (используйте сферы в качестве "вычитаемых" объектов).
+<p>2. <strong>Шина:</strong> Создайте тор (<code>Add → Torus</code>) и деформируйте его модификатором <code>Simple Deform</code> для имитации протектора.</p>
+<p>3. <strong>Подвеска:</strong> Для упрощённой модели достаточно цилиндров (амортизаторы) и сфер (шаровые опоры).</p></p>
+
+<p>Совет: для реалистичного протектора скачайте текстуру шин с <em>TextureHaven</em> и наложите её через <code>UV-развёртку</code>.</p>
+
+<h3>Салон</h3>
+<p>Моделирование интерьера — трудоёмкий процесс, но его можно упростить:</p>
+<ul>
+  <li>🪑 <strong>Сиденья:</strong> Используйте модификатор <code>Subdivision Surface</code> для мягких форм.</li>
+  <li>📻 <strong>Приборная панель:</strong> Начните с плоскости, экструдируйте кнопки и экраны.</li>
+  <li>🚪 <strong>Двери:</strong> Смоделируйте отдельно, затем привяжите к кузову с помощью <code>Parenting</code> (<code>Ctrl+P</code>).</li>
+</ul>
+
+<h3>Двигатель</h3>
+<p>Для большинства проектов достаточно <strong>low-poly</strong> версии двигателя. Основные элементы:</p>
+<ul>
+  <li>🔋 <strong>Блок цилиндров:</strong> Прямоугольный параллелепипед с трубками (впуск/выпуск).</li>
+  <li>⚙️ <strong>Детали:</strong> Шкивы, ремни, патрубки — их можно создать из торов и цилиндров.</li>
+  <li>🔥 <strong>Текстуры:</strong> Металлические материалы с шероховатостью (используйте <em>Principled BSDF</em> в <em>Blender</em>).</li>
+</ul>
+
+<p><mark>Критическая ошибка новичков: попытка смоделировать каждый болтик двигателя. В 90% случаев достаточно упрощённой версии — детали будут неразличимы на конечном рендере или в 3D-печати.</mark></p>
+
+<h2 id="6-оптимизация-модели-для-3d-печати-или-рендера">6. Оптимизация модели для 3D-печати или рендера</h2>
+
+<p>Готовая модель требует финальной обработки в зависимости от цели использования. Рассмотрим два сценария: <strong>подготовка к 3D-печати</strong> и <strong>оптимизация для визуализации</strong>.</p>
+
+<h3>Для 3D-печати</h3>
+<p>1. <strong>Проверка геометрии:</strong> Используйте аддон <code>3D-Print Toolbox</code> в <em>Blender</em> для поиска:</p>
+   <ul>
+     <li>🔴 Незамкнутых краёв (<code>Non-Manifold Edges</code>).</li>
+     <li>🔴 Пересекающихся полигонов.</li>
+     <li>🔴 Слишком тонких стенок (менее 1–2 мм).</li>
+   </ul>
+<p>2. <strong>Разделение на части:</strong> Крупные модели (например, 1:10) нужно разбить на секции, которые поместятся на платформе принтера. Используйте инструмент <code>Bisect</code>.</p>
+<p>3. <strong>Добавление поддерживающих структур:</strong> Для свесов более 45° сгенерируйте опоры в слайсере (<em>PrusaSlicer</em>, <em>Cura</em>).</p>
+
+<h3>Для рендера</h3>
+<p>1. <strong>Упрощение геометрии:</strong> Примените модификатор <code>Decimate</code> (сохраните оригинал!). Цель — уменьшить количество полигонов без потери визуального качества.</p>
+<p>2. <strong>Настройка материалов:</strong> Используйте <em>PBR-текстуры</em> (металличность, шероховатость) для реалистичного вида. Хорошие бесплатные текстуры можно найти на <em>CC0Textures.com</em>.</p>
+<p>3. <strong>Освещение:</strong> Для автомобильных рендеров подходит <em>HDRI-освещение</em> (скачайте бесплатные <em>HDRI</em> на <em>Poly Haven</em>). Добавьте <code>Glossy</code> шейдер для лаковых поверхностей.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th>Для 3D-печати</th>
+      <th>Для рендера</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Количество полигонов</td>
+      <td>Менее 500 000 (для FDM-принтеров)</td>
+      <td>1–5 млн (зависит от близкого плана)</td>
+    </tr>
+    <tr>
+      <td>Толщина стенок</td>
+      <td>1–2 мм (минимум)</td>
+      <td>Не важна</td>
+    </tr>
+    <tr>
+      <td>Закрытая геометрия</td>
+      <td>Обязательно</td>
+      <td>Не обязательно</td>
+    </tr>
+    <tr>
+      <td>UV-развёртка</td>
+      <td>Не нужна</td>
+      <td>Обязательна для текстур</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="7-экспорт-и-использование-модели">7. Экспорт и использование модели</h2>
+
+<p>Когда модель готова, её нужно правильно экспортировать в зависимости от дальнейшего применения. Рассмотрим основные форматы и их особенности:</p>
+
+<ul>
+  <li>🖨️ <code>.STL</code> — стандарт для 3D-печати. Экспортируйте с настройками: <code>Selection Only</code> (если нужна часть модели), <code>Triangulate Faces</code> (обязательно!).</li>
+  <li>🎮 <code>.FBX</code> или <code>.OBJ</code> — универсальные форматы для игровых движков (<em>Unreal Engine</em>, <em>Unity</em>). Включите опцию <code>Apply Modifiers</code>.</li>
+  <li>📸 <code>.GLTF</code> — оптимизирован для веб (например, для загрузки на <em>Sketchfab</em>). Поддерживает текстуры и анимации.</li>
+  <li>🔧 <code>.STEP</code> или <code>.IGES</code> — для инженерных целей (например, импорт в <em>AutoCAD</em>).</li>
+</ul>
+
+<p>При экспорте в <code>.FBX</code> для <em>Unreal Engine</em> учитывайте:</p>
+<ul>
+  <li>Масштаб модели должен быть 1:1 (1 юнита в <em>Blender</em> = 1 см).</li>
+  <li>Имена материалов не должны содержать спецсимволов.</li>
+  <li>Анимации (например, открытие дверей) экспортируйте отдельно в <code>.ABC</code> (Alembic).</li>
+</ul>
+
+<blockquote>⚠️ <strong>Внимание:</strong> При экспорте в <code>.STL</code> для 3D-печати отключите модификатор <code>Subdivision Surface</code> — он создаёт избыточную геометрию. Вместо этого примените его (<code>Apply</code>) перед экспортом.</blockquote>
+
+<h2 id="8-полезные-ресурсы-и-сообщества">8. Полезные ресурсы и сообщества</h2>
+
+<p>Даже опытные 3D-художники постоянно учатся новому. Вот список ресурсов, которые помогут улучшить навыки моделирования автомобилей:</p>
+
+<ul>
+  <li>🎓 <strong>Обучение:</strong>
+    <ul>
+      <li><em>Blender Guru</em> (YouTube) — уроки по <em>Blender</em> для новичков.</li>
+      <li><em>CG Fast Track</em> — платные курсы по автодизайну в <em>3ds Max</em>.</li>
+      <li><em>Domestika</em> — курсы по скульптингу в <em>ZBrush</em>.</li>
+    </ul>
+  </li>
+  <li>🤝 <strong>Сообщества:</strong>
+    <ul>
+      <li><em>Polycount</em> (форум) — обсуждение низкополигонального моделирования.</li>
+      <li><em>r/3Dmodeling</em> (Reddit) — советы и фидбек.</li>
+      <li><em>ArtStation</em> — портфолио профессионалов для вдохновения.</li>
+    </ul>
+  </li>
+  <li>📚 <strong>Референсы и ассеты:</strong>
+    <ul>
+      <li><em>Sketchfab</em> — готовые 3D-модели для изучения топологии.</li>
+      <li><em>TurboSquid</em> — платные и бесплатные модели (фильтруйте по лицензии!).</li>
+      <li><em>GrabCAD</em> — инженерные модели деталей (подвеска, двигатели).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Совет: если вы хотите монетизовать свои навыки, изучите платформы для продажи 3D-моделей:</p>
+<ul>
+  <li>💰 <em>TurboSquid</em> — самая крупная биржа, но высокая конкуренция.</li>
+  <li>💰 <em>CGTrader</em> — подходит для начинающих (низкий порог входа).</li>
+  <li>💰 <em>Gumroad</em> — можно продавать модели напрямую (без комиссии платформе).</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чтобы выделиться на рынке, специализируйтесь на нишевых моделях: редкие концепт-кары, военная техника или детали для тюнинга (спойлеры, диски).</p></aside>
+
+<h2 id="faq-частые-вопросы-о-3d-моделировании-машин">FAQ: Частые вопросы о 3D-моделировании машин</h2>
+
+<details>
+  <summary>🔹 Сколько времени занимает создание 3D-модели автомобиля?</summary>
+  <p>Время зависит от сложности и опыта:</p>
+  <ul>
+    <li><strong>Low-poly модель</strong> (для игры): 5–20 часов.</li>
+    <li><strong>High-poly модель</strong> (для рендера): 30–100 часов.</li>
+    <li><strong>Детализированный интерьер + двигатель</strong>: 100–300 часов.</li>
+  </ul>
+  <p>Сканирование ускоряет процесс в 2–3 раза, но требует доработки.</p>
+</details>
+
+<details>
+  <summary>🔹 Можно ли создать 3D-модель машины на телефоне?</summary>
+  <p>Да, но с ограничениями:</p>
+  <ul>
+    <li>Для <strong>сканирования</strong> подойдут <em>Polycam</em> (iOS) или <em>Qlone</em> (Android).</li>
+    <li>Для <strong>моделирования</strong> используйте <em>Nomad Sculpt</em> (скульптинг) или <em>Shapr3D</em> (CAD).</li>
+    <li>Для <strong>рендера</strong> — <em>Blender для Android</em> (экспериментальная версия).</li>
+  </ul>
+  <p>Однако для серьёзных проектов телефон не заменит ПК.</p>
+</details>
+
+<details>
+  <summary>🔹 Как сделать модель совместимой с <em>Forza Horizon</em> или <em>GTA V</em>?</summary>
+  <p>Для импорта в игры требуется:</p>
+  <ol>
+    <li>Соблюдать <strong>лимиты полигонов</strong> (обычно 50–150 тыс. для машин).</li>
+    <li>Использовать <strong>специфичные шейдеры</strong> (например, <code>Car Paint</code> в <em>Unreal Engine</code>).</li>
+    <li>Экспортировать в <code>.FBX</code> с корректной иерархией костей (для анимации колёс).</li>
+  </ol>
+  <p>Для <em>GTA V</em> дополнительно нужны файлы <code>.ydr</code> и <code>.ytyp</code>, которые создаются через <em>OpenIV</em>.</p>
+</details>
+
+<details>
+  <summary>🔹 Какие ошибки портят реалистичность модели?</summary>
+  <p>Топ-5 ошибок новичков:</p>
+  <ol>
+    <li><strong>Неправильные пропорции</strong> (например, слишком длинный капот).</li>
+    <li><strong>Отсутствие зазоров</strong> между дверями и кузовом (в реальности они есть!).</li>
+    <li><strong>Идеально гладкие поверхности</strong> — добавьте лёгкие вмятины или царапины для реализма.</li>
+    <li><strong>Неправильное освещение</strong> в рендере (автомобили смотрятся лучше при <em>студийном освещении</em> с отражениями).</li>
+    <li><strong>Игнорирование топологии</strong> — хаотичное расположение полигонов портит сглаживание.</li>
+  </ol>
+</details>
+
+<details>
+  <summary>🔹 Где заказать 3D-модель машины, если не хочется делать самому?</summary>
+  <p>Варианты заказа:</p>
+  <ul>
+    <li><em>Fiverr</em> — фрилансеры за $50–$500 (качество варьируется).</li>
+    <li><em>Upwork</em> — профессиональные студии ($1,000–$5,000).</li>
+    <li><em>3DExport</em> — готовые модели (от $20).</li>
+    <li>Локальные студии — ищите по запросу "3D-моделирование [ваш город]".</li>
+  </ul>
+  <p>При заказе уточняйте:</p>
+  <ul>
+    <li>Формат файла (<code>.FBX</code>, <code>.STL</code> и т. д.).</li>
+    <li>Уровень детализации (low-poly/high-poly).</li>
+    <li>Наличие прав на коммерческое использование.</li>
+  </ul>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/a/av/avto-plyus-telekanal-smotret.html" class="pb-related-card">
+                <span class="pb-related-title">Авто Плюс телеканал: как смотреть онлайн и в приложении</span>
+                <span class="pb-related-desc">Где и как смотреть телеканал Авто Плюс онлайн. Обзор официальных приложений, тарифов и качества тран</span>
+            </a><a href="/articles/g/gr/gromkaya-muzyka-iz-mashiny.html" class="pb-related-card">
+                <span class="pb-related-title">Громкая музыка из машины: как сделать и не получить штраф</span>
+                <span class="pb-related-desc">Всё о громкой музыке в авто: установка сабвуфера, законы РФ, штрафы за нарушение тишины и советы по </span>
+            </a><a href="/articles/k/kl/klassnaya-muzyka-s-basami.html" class="pb-related-card">
+                <span class="pb-related-title">Классная музыка с басами: как выбрать и настроить автозвук</span>
+                <span class="pb-related-desc">Экспертный гид по выбору сабвуферов, усилителей и акустики для мощного баса в машине. Схемы подключе</span>
+            </a><a href="/articles/o/oc/ochki-protivoblikovye-dlya-voditelej.html" class="pb-related-card">
+                <span class="pb-related-title">Очки противобликовые для водителей: как выбрать и зачем нужны</span>
+                <span class="pb-related-desc">Полный гид по очкам для вождения. Обзор поляризационных, антифар и желтых линз. Как снизить утомляем</span>
+            </a><a href="/articles/l/lu/luchshie-aromatizatory-dlya-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшие ароматизаторы для автомобиля: рейтинг и обзоры 2026</span>
+                <span class="pb-related-desc">Топ-10 ароматизаторов в авто 2026 года. Обзор гелевых, спреев и диффузоров. Как выбрать стойкий запа</span>
+            </a><a href="/articles/c/ch/chem-ochistit-salon-avtomobilya-svoimi-rukami.html" class="pb-related-card">
+                <span class="pb-related-title">Чем очистить салон автомобиля своими руками: средства и методы</span>
+                <span class="pb-related-desc">Полный гид по чистке салона авто. Обзор химии, народные методы, удаление пятен с ткани и кожи. Совет</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

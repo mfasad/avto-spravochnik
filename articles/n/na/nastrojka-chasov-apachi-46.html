@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Настройка часов Apache 46: параметры таймаута и производительность — Авто Справочник</title>
+    <meta name="description" content="Полное руководство по настройке таймаутов в Apache 4.6. Оптимизация Timeout, KeepAlive и ProxyTimeout для ускорения работы веб-сервера.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/n/na/nastrojka-chasov-apachi-46.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Настройка часов Apache 46: параметры таймаута и производительность">
+    <meta property="og:description" content="Полное руководство по настройке таймаутов в Apache 4.6. Оптимизация Timeout, KeepAlive и ProxyTimeout для ускорения работы веб-сервера.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Настройка часов Apache 46: параметры таймаута и производительность</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#пример-настройки-proxytimeout-для-конкретного-location">Пример настройки ProxyTimeout для конкретного location</a></li><li><a href="#пример-настройки-fcgitimeout-для-php">Пример настройки FCGITimeout для PHP</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/sk/skolko-vremeni-vyvetrivaetsya-alkogol-iz-organizma.html">Сколько времени выветривается алкоголь: таблица и калькулятор</a></li><li><a href="/articles/c/ch/chto-znachit-chernaya-liniya-v-prilozhenii-parkovka.html">Черная линия в приложении Парковки: что означает?</a></li><li><a href="/articles/c/ch/chto-zalivayut-v-sistemu-okhlazhdeniya-avtomobilya.html">Что заливают в систему охлаждения автомобиля: антифриз или тосол</a></li><li><a href="/articles/3/30/30-km-v-chas-skolko-metrov-v-sekundu-veter.html">30 км/ч в м/с: как перевести скорость ветра и зачем это нужно</a></li><li><a href="/articles/k/ka/kak-rabotaet-avtopodzavod-v-chasakh.html">Как работает автоподзавод в часах: устройство и уход</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Настройка часов (таймаутов) Apache 4.6: оптимизация сервера</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#пример-настройки-proxytimeout-для-конкретного-location">Пример настройки ProxyTimeout для конкретного location</a></li><li><a href="#пример-настройки-fcgitimeout-для-php">Пример настройки FCGITimeout для PHP</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Управление временными интервалами ожидания является критически важным аспектом администрирования любого веб-сервера, и Apache HTTP Server не является исключением. Когда говорят о"часах" в контексте конфигурации Apache, чаще всего подразумевают директивы таймаута, которые определяют, сколько времени сервер будет ожидать завершения операций до разрыва соединения. Правильная калибровка этих параметров напрямую влияет на стабильность работы ресурса и его способность выдерживать пиковые нагрузки без зависаний.</p>
+
+<p>Некорректные настройки временных лимитов могут привести к двум крайним ситуациям: либо сервер будет слишком долго держать"мертвые" соединения, расходуя ресурсы, либо будет обрывать медленные, но валидные запросы от клиентов с плохим интернетом. В современных версиях, включая ветку 4.6, механизмы обработки таймаутов стали более гибкими, требуя от администратора глубокого понимания процессов взаимодействия клиента и сервера. Ниже мы детально разберем ключевые директивы и методы их тонкой настройки.</p>
+
+<p>Для начала работы необходимо получить доступ к основному конфигурационному файлу, который обычно называется <code>httpd.conf</code> или <code>apache2.conf</code>, в зависимости от дистрибутива операционной системы. Изменения вступают в силу только после перезагрузки службы, что требует осторожности при редактировании параметров в боевой среде. <strong>Базовая настройка</strong> таймаутов часто является первым шагом при устранении ошибок 504 Gateway Timeout или 408 Request Timeout.</p>
+
+<div class="pb-poll" id="poll-563e65ec"><div class="pb-poll-question">📊 Какой тип таймаута вызывает у вас больше всего проблем?</div><div class="pb-poll-option" data-poll="563e65ec" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Timeout соединения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="563e65ec" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">ProxyTimeout</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="563e65ec" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Время выполнения CGI</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="563e65ec" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">KeepAlive таймаут</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Центральным элементом управления временем ожидания является директива <code>Timeout</code>, которая задает общее количество секунд, в течение которых сервер ожидает получения данных от клиента или передачи данных клиенту. По умолчанию в Apache это значение часто установлено на 300 секунд, что может быть избыточно для статических сайтов, но недостаточно для тяжелых операций импорта данных. Снижение этого параметра позволяет быстрее освобождать занятые воркеры (процессы или потоки), повышая общую пропускную способность сервера.</p>
+
+<p>Однако слепое уменьшение значения <code>Timeout</code> может привести к обрыву соединений у пользователей с нестабильным каналом связи или при загрузке объемных файлов. Важно найти баланс, при котором сервер не будет"держать" зависшие сокеты, но и не будет проявлять излишней агрессии к легитимным запросам. Для скриптов, выполняющихся долгое время, таких как обработка видео или генерация больших отчетов, лучше использовать асинхронные механизмы, чем просто увеличивать глобальный таймаут.</p>
+
+<ul>
+<li>⏱️ <strong>Глобальный таймаут</strong> влияет на все этапы обработки запроса, включая чтение заголовков и тела запроса.</li>
+<li>📉 Уменьшение значения помогает быстрее очищать очередь соединений при DDoS-атаках типа Slowloris.</li>
+<li>🛠️ Для PHP-скриптов часто требуется отдельная настройка <code>max_execution_time</code> в <code>php.ini</code>, которая не зависит напрямую от Apache.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте директиву Timeout с осторожностью: значение меньше 60 секунд может вызвать ошибки при загрузке файлов пользователями с мобильных сетей.</p></aside>
+
+<p>Стоит отметить, что директива <code>Timeout</code> в Apache 2.4 и новее (к которым относится и гипотетическая 4.6) имеет более сложную логику работы, чем просто таймер общего времени. Она контролирует время, отведенное на получение запроса, время между передачами TCP-пакетов в ответе и время на получение ACK-пакета. Понимание этой <strong>механики</strong> позволяет точнее диагностировать проблемы сети.</p>
+
+<blockquote>⚠️ Внимание: Установка значения Timeout ниже 10 секунд может привести к массовым ошибкам 408 для клиентов, использующих прокси-серверы или имеющих высокую задержку (high latency).</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Оптимальное значение Timeout для большинства современных веб-приложений находится в диапазоне от 60 до 120 секунд, что балансирует между удержанием ресурсов и удобством пользователей.</p></aside>
+
+<p>При использовании Apache в качестве обратного прокси (reverse proxy) перед серверами приложений (например, Tomcat, Node.js или Python Gunicorn), вступают в силу специфические таймауты проксирования. Директива <code>ProxyTimeout</code> переопределяет глобальный таймаут именно для соединений с бэкендом. Это критически важный параметр, так как медленный ответ от приложения не должен"вешать" весь веб-сервер, ожидая ответа от upstream-сервера.</p>
+
+<p>Если ваше приложение выполняет сложные вычисления, стандартного времени может не хватить, и Apache разорвет соединение с клиентом, даже если бэкенд в итоге успешно завершит задачу. В таких случаях необходимо либо оптимизировать код приложения, либо увеличить <code>ProxyTimeout</code> для конкретных location-блоков. Также важно учитывать параметр <code>ProxyPass</code>, где можно задавать индивидуальные таймауты для разных путей.</p>
+
+<ul>
+<li>🔗 <strong>ProxyTimeout</strong> определяет время ожидания ответа от удаленного сервера, к которому Apache обращается как прокси.</li>
+<li>⚙️ Для микросервисной архитектуры часто требуется настраивать разные таймауты для разных сервисов.</li>
+<li>🚀 Использование <code>connectiontimeout</code> в строке ProxyPass позволяет отдельно регулировать время установки соединения.</li>
+</ul>
+
+<pre><code>
+<h2 id="пример-настройки-proxytimeout-для-конкретного-location">Пример настройки ProxyTimeout для конкретного location</h2>
+<Location"/slow-api">
+<p>ProxyPass http://backend:8080/</p>
+<p>ProxyTimeout 300</p>
+</Location>
+</code></pre>
+
+<p>Частой ошибкой является игнирование различий между временем соединения и временем чтения данных. Если бэкенд-сервер принимает соединение, но долго не отдает данные, сработает именно <code>ProxyTimeout</code>. В логах это часто отражается как ошибка"Timeout waiting for input from remote server". Для отладки таких ситуаций полезно включать логирование уровня <code>debug</code> для модуля <code>mod_proxy</code>.</p>
+
+<details class="pb-accordion"><summary>Как диагностировать медленный бэкенд?</summary><div class="pb-accordion-body"><p>Используйте утилиту curl с флагом -w для замера времени ответа: curl -w"@curl-format.txt" -o /dev/null -s"http://ваш-сайт/api". Формат файла curl-format.txt: time_namelookup: %{time_namelookup}\n time_connect: %{time_connect}\n time_appconnect: %{time_appconnect}\n time_pretransfer: %{time_pretransfer}\n time_redirect: %{time_redirect}\n time_starttransfer: %{time_starttransfer}\n ----------\n time_total: %{time_total}\n</p></div></details>
+
+<p>Механизм KeepAlive позволяет клиенту и серверу поддерживать постоянное соединение для передачи нескольких запросов, что значительно ускоряет загрузку страниц с множеством элементов (картинки, стили, скрипты). Однако у этой функции есть свои"часы": <code>KeepAliveTimeout</code> определяет, как долго сервер будет ждать следующий запрос от клиента на уже открытом соединении. В Apache 2.4+ появилась возможность задавать этот параметр в миллисекундах для большей точности.</p>
+
+<p>Слишком высокое значение <code>KeepAliveTimeout</code> приводит к тому, что воркеры Apache простаивают, ожидая новых запросов от клиентов, которые, возможно, уже ушли со страницы. Это классическая проблема, ведущая к ошибке"MaxRequestWorkers reached", когда сервер перестает принимать новые соединения, потому что все слоты заняты"спящими" сокетами. Рекомендуется ставить это значение низким, например, 2-5 секунд.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Рекомендуемое значение</th>
+<th>Влияние на сервер</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>KeepAlive</td>
+<td>On</td>
+<td>Снижает нагрузку на CPU за счет количества рукопожатий TCP.</td>
+</tr>
+<tr>
+<td>KeepAliveTimeout</td>
+<td>2-5 сек</td>
+<td>Высокие значения расходуют память и слоты воркеров.</td>
+</tr>
+<tr>
+<td>MaxKeepAliveRequests</td>
+<td>100-200</td>
+<td>Ограничивает кол-во запросов на одно соединение.</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Оптимизация KeepAlive</h4><label class="check-item"><input type="checkbox"><span>Включить KeepAlive On</span></label><label class="check-item"><input type="checkbox"><span>Установить KeepAliveTimeout 3 сек</span></label><label class="check-item"><input type="checkbox"><span>Проверить MaxKeepAliveRequests</span></label><label class="check-item"><input type="checkbox"><span>Перезагрузить Apache</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Современные браузеры отлично справляются с повторным установлением соединений, поэтому экономия ресурсов на удержании старых каналов связи приоритетнее, чем теоретическое ускорение за счет KeepAlive. Если вы используете HTTP/2 (протокол h2), концепция KeepAlive меняется, так как протокол мультиплексирует потоки в рамках одного соединения, и таймауты работают несколько иначе, управляясь фреймами Ping.</p>
+
+<blockquote>⚠️ Внимание: При использовании HTTP/2 параметр KeepAliveTimeout может игнорироваться в пользу настроек протокола, но контроль за простыми соединениями остается актуальным для совместимости.</blockquote>
+
+<p>Для динамического контента, генерируемого скриптовыми языками (PHP, Python, Perl), существуют собственные таймауты исполнения, которые работают параллельно с таймаутами Apache. Например, в PHP есть директива <code>max_execution_time</code>, а в Python (Gunicorn/uWSGI) — свои лимиты на время работы воркера. Если скрипт выполняется дольше, чем разрешено интерпретатором, он будет прерван, но Apache может все еще ждать завершения процесса, если не настроена правильная коммуникация.</p>
+
+<p>Часто возникает рассинхронизация: Apache ждет ответа от CGI/FPM, а тот уже упал по таймауту или наоборот. В конфигурации PHP-FPM параметр <code>request_terminate_timeout</code> должен быть согласован с <code>ProxyTimeout</code> или <code>FCGITimeout</code> в Apache. Несогласованность этих"часов" приводит к появлению в логах ошибок 502 Bad Gateway или 504 Gateway Timeout.</p>
+
+<ul>
+<li>🐘 <strong>PHP-FPM</strong> имеет собственные настройки таймаутов, которые могут переопределять настройки веб-сервера.</li>
+<li>⏳ Длинная обработка запроса должна быть вынесена в фоновые задачи (очереди), а не выполняться в HTTP-контексте.</li>
+<li>🔌 При использовании FastCGI параметр <code>-idle-timeout</code> управляет временем простоя процесса.</li>
+</ul>
+
+<pre><code>
+<h2 id="пример-настройки-fcgitimeout-для-php">Пример настройки FCGITimeout для PHP</h2>
+<FilesMatch \.php$>
+<p>SetHandler"proxy:fcgi://127.0.0.1:9000"</p>
+<p>FCGITimeout 300</p>
+</FilesMatch>
+</code></pre>
+
+<p>Важно понимать, что увеличение таймаутов на уровне Apache не решит проблему медленного кода. Если ваше приложение работает медленно, просто"добавление времени" лишь отодвинет момент появления ошибки, но не улучшит пользовательский опыт. <strong>Оптимизация кода</strong> и базы данных всегда эффективнее, чем настройка таймаутов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Таймауты Apache и таймауты интерпретатора (PHP/Python) должны быть согласованы: таймаут веб-сервера должен быть немного больше, чем лимит времени выполнения скрипта.</p></aside>
+
+<p>После внесения изменений в конфигурацию необходимо проверить синтаксис командой <code>apachectl configtest</code> или <code>apache2ctl configtest</code>. Это предотвратит ситуацию, когда сервер не запустится после перезагрузки из-за опечатки в имени директивы или значении. Только после успешной проверки синтаксиса следует применять изменения командой reload или restart.</p>
+
+<p>Мониторинг логов после применения настроек — обязательный этап. Следите за файлами <code>error_log</code> на предмет появления новых таймаутов. Если вы уменьшили значения, количество ошибок может временно вырасти, пока вы не найдете оптимальный баланс. Используйте инструменты вроде <code>mod_status</code> для наблюдения за текущим состоянием воркеров в реальном времени.</p>
+
+<details>
+<summary>Как сбросить таймауты к значениям по умолчанию?</summary>
+<p>Чтобы вернуть настройки к заводским, удалите или закомментируйте (добавив символ # в начале строки) соответствующие директивы в файле конфигурации. Apache автоматически применит дефолтные значения, определенные в исходном коде или стандартном конфиге дистрибутива. Для большинства версий это 300 секунд для Timeout и 5 секунд для KeepAliveTimeout.</p>
+</details>
+
+<details>
+<summary>Влияет ли настройка таймаутов на SSL/TLS рукопожатие?</summary>
+<p>Да, параметр <code>Timeout</code> также охватывает время, отводимое на завершение SSL-рукопожатия. Если клиенты испытывают проблемы с подключением по HTTPS из-за сетевых задержек, может потребоваться увеличение этого значения, хотя чаще проблема кроется в конфигурации SSL-модуля или сетевом оборудовании.</p>
+</details>
+
+<details>
+<summary>Можно ли задать разные таймауты для разных виртуальных хостов?</summary>
+<p>Да, директивы таймаутов можно прописывать внутри блоков <code>&lt;VirtualHost&gt;</code>. Это позволяет задать более строгие лимиты для публичных сайтов и более мягкие — для внутренних административных панелей или API, используемых серверными приложениями.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/sk/skolko-vremeni-vyvetrivaetsya-alkogol-iz-organizma.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько времени выветривается алкоголь: таблица и калькулятор</span>
+                <span class="pb-related-desc">Узнайте точное время выведения алкоголя из организма. Таблица промилле, факторы влияния и советы для</span>
+            </a><a href="/articles/c/ch/chto-znachit-chernaya-liniya-v-prilozhenii-parkovka.html" class="pb-related-card">
+                <span class="pb-related-title">Черная линия в приложении Парковки: что означает?</span>
+                <span class="pb-related-desc">Разбираем значение черной линии и зон в приложении Парковки России. Почему парковка не доступна и ка</span>
+            </a><a href="/articles/c/ch/chto-zalivayut-v-sistemu-okhlazhdeniya-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Что заливают в систему охлаждения автомобиля: антифриз или тосол</span>
+                <span class="pb-related-desc">Подробный гид по охлаждающим жидкостям. Разбираем состав, различия антифриза и тосола, правила смеши</span>
+            </a><a href="/articles/3/30/30-km-v-chas-skolko-metrov-v-sekundu-veter.html" class="pb-related-card">
+                <span class="pb-related-title">30 км/ч в м/с: как перевести скорость ветра и зачем это нужно</span>
+                <span class="pb-related-desc">Узнайте, сколько метров в секунду в 30 км/ч ветра, как правильно переводить единицы и почему это важ</span>
+            </a><a href="/articles/k/ka/kak-rabotaet-avtopodzavod-v-chasakh.html" class="pb-related-card">
+                <span class="pb-related-title">Как работает автоподзавод в часах: устройство и уход</span>
+                <span class="pb-related-desc">Подробный гид по механике автоподзавода. Узнайте, как работает ротор, сколько часов нужно носить для</span>
+            </a><a href="/articles/c/ch/chto-delat-esli-ostavil-klyuchi-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Забыл ключи в машине: что делать и как открыть без повреждений</span>
+                <span class="pb-related-desc">Заперлись в машине? Узнайте, как открыть дверь без ключей, какие инструменты использовать и как избе</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

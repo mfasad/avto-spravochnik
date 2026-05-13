@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как подключить Car Scanner к автомобилю: пошаговая инструкция — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как подключить Car Scanner к авто через OBD2. Инструкция по Bluetooth-подключению, настройке ELM327 и расшифровке кодов ошибок для диагностики.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-podklyuchit-car-scanner-k-avtomobilyu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как подключить Car Scanner к автомобилю: пошаговая инструкция">
+    <meta property="og:description" content="Узнайте, как подключить Car Scanner к авто через OBD2. Инструкция по Bluetooth-подключению, настройке ELM327 и расшифровке кодов ошибок для диагностики.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как подключить Car Scanner к автомобилю: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-подходящего-obd2-адаптера">Выбор подходящего OBD2-адаптера</a></li><li><a href="#поиск-диагностического-разъема-в-автомобиле">Поиск диагностического разъема в автомобиле</a></li><li><a href="#подготовка-смартфона-и-установка-приложения">Подготовка смартфона и установка приложения</a></li><li><a href="#процесс-сопряжения-и-настройки-соединения">Процесс сопряжения и настройки соединения</a></li><li><a href="#выбор-профиля-подключения-и-диагностика">Выбор профиля подключения и диагностика</a></li><li><a href="#расширенные-функции-и-мониторинг-в-реальном-времени">Расширенные функции и мониторинг в реальном времени</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/n/na/nasos-avtomobilnyj-elektricheskij-220v.html">Автомобильный электрический насос 220В: выбор и применение</a></li><li><a href="/articles/p/pe/perekhodnik-dlya-avtomobilnogo-kompressora-na-220-volt.html">Переходник для автокомпрессора на 220В: как выбрать и подключить</a></li><li><a href="/articles/c/ch/chto-nuzhno-dlya-shitya-na-shvejnoj-mashinke.html">Что нужно для шитья на швейной машинке: полный список</a></li><li><a href="/articles/a/ap/apparat-nail-drill-otzyvy.html">Аппарат nail drill: отзывы, рейтинг и выбор для профи</a></li><li><a href="/articles/d/di/dinamometricheskij-klyuch-dlya-vysokoprochnykh-boltov.html">Динамометрический ключ для высокопрочных болтов: выбор и применение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить Car Scanner к автомобилю: полная инструкция</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-подходящего-obd2-адаптера">Выбор подходящего OBD2-адаптера</a></li><li><a href="#поиск-диагностического-разъема-в-автомобиле">Поиск диагностического разъема в автомобиле</a></li><li><a href="#подготовка-смартфона-и-установка-приложения">Подготовка смартфона и установка приложения</a></li><li><a href="#процесс-сопряжения-и-настройки-соединения">Процесс сопряжения и настройки соединения</a></li><li><a href="#выбор-профиля-подключения-и-диагностика">Выбор профиля подключения и диагностика</a></li><li><a href="#расширенные-функции-и-мониторинг-в-реальном-времени">Расширенные функции и мониторинг в реальном времени</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современная диагностика автомобиля перестала быть привилегией специализированных сервисов и перекочевала в карманы обычных водителей благодаря смартфонам и доступным адаптерам. Использование приложения <em>Car Scanner ELM OBD2</em> позволяет в реальном времени отслеживать параметры работы двигателя, считывать и сбрасывать ошибки, а также проводить тесты исполнительных механизмов. <strong>Подключение</strong> устройства к машине — это первый и самый важный шаг, от которого зависит корректность получаемых данных и безопасность бортовой электросети.</p>
+
+<p>Многие автовладельцы сталкиваются с трудностями уже на этапе выбора адаптера или поиска разъема в салоне, не говоря о проблемах с сопряжением Bluetooth-канала. Понимание принципов работы протокола <strong>OBD-II</strong> и правильной последовательности действий поможет избежать распространенных ошибок. В этой статье мы подробно разберем процесс подключения, начиная от покупки оборудования и заканчивая первым запуском диагностики.</p>
+
+<p>Важно отметить, что хотя процедура кажется простой, она требует внимательности к деталям, особенно когда речь заходит о совместимости версий адаптеров и операционных систем смартфонов. Неправильные действия могут привести к разряду аккумулятора или некорректной работе электроники. Поэтому перед началом работ необходимо изучить теоретические основы и подготовить весь необходимый инструментарий.</p>
+
+<h2 id="выбор-подходящего-obd2-адаптера">Выбор подходящего OBD2-адаптера</h2>
+
+<p>Первым этапом становится приобретение диагностического сканера, который будет выступать посредником между электронным блоком управления (ЭБУ) вашего автомобиля и мобильным устройством. На рынке представлено множество вариантов, но наиболее популярным стандартом де-факто является чип <em>ELM327</strong>. Именно этот микроконтроллер обеспечивает передачу данных по стандартным протоколам, поддерживаемым большинством автомобилей, выпущенных после 1996 года.</p>
+
+<p>При выборе устройства стоит обращать внимание на версию прошивки чипа, так как от этого зависит стабильность соединения и поддерживаемые протоколы. Для Android-устройств часто рекомендуются адаптеры с версией 1.5, тогда как для iOS (протокол iOBD) лучше подходят версии 2.1, которые лишены ряда аппаратных ошибок ранних ревизий. Дешевые китайские аналоги могут иметь нестабильный <strong>Bluetooth-модуль</em>, что приведет к постоянным разрывам связи во время диагностики.</p>
+
+<p>Также следует учитывать тип подключения: существуют модели, работающие исключительно через Bluetooth, и более продвинутые версии с поддержкой Wi-Fi. Wi-Fi адаптеры, как правило, обеспечивают более высокую скорость передачи данных, что критично для построения графиков в реальном времени, но они потребляют больше энергии. Для большинства задач по чтению ошибок и базовому мониторингу вполне достаточно стандартного Bluetooth Low Energy (BLE) соединения.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Покупая адаптер, избегайте моделей без указания версии чипа или с подозрительно низкой ценой. Дешевые копии часто имеют перепаянную микросхему, которая не поддерживает расширенные команды диагностики и может вызвать сбои в работе штатной мультимедийной системы автомобиля.</p>
+</blockquote>
+
+<p>Для удобства выбора рассмотрим основные характеристики популярных типов адаптеров в сравнительной таблице:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип адаптера</th>
+<th>Совместимость</th>
+<th>Скорость передачи</th>
+<th>Энергопотребление</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ELM327 Bluetooth 2.0/3.0</td>
+<td>Android, старые iOS</td>
+<td>Средняя</td>
+<td>Низкое</td>
+</tr>
+<tr>
+<td>ELM327 Bluetooth 4.0 (BLE)</td>
+<td>Android, iOS 10+</td>
+<td>Высокая</td>
+<td>Очень низкое</td>
+</tr>
+<tr>
+<td>ELM327 Wi-Fi</td>
+<td>Все платформы</td>
+<td>Очень высокая</td>
+<td>Высокое</td>
+</tr>
+<tr>
+<td>Профессиональные сканеры</td>
+<td>Специфичные марки</td>
+<td>Максимальная</td>
+<td>Зависит от модели</td>
+</tr>
+</tbody>
+</table></div>
+
+<div class="pb-poll" id="poll-9b5d4bac"><div class="pb-poll-question">📊 Какой тип подключения адаптера вы предпочитаете?</div><div class="pb-poll-option" data-poll="9b5d4bac" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Bluetooth 2.0/3.0</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9b5d4bac" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Bluetooth 4.0 (BLE)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9b5d4bac" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Wi-Fi</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9b5d4bac" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">У меня нет адаптера</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="поиск-диагностического-разъема-в-автомобиле">Поиск диагностического разъема в автомобиле</h2>
+
+<p>Прежде чем пытаться соединить гаджет с машиной, необходимо физически найти диагностический разъем, который в современных автомобилях стандартизирован под формат <strong>OBD-II</em>. Согласно международным стандартам, этот 16-контактный порт должен располагаться в зоне досягаемости водителя, обычно в пределах 50-70 см от рулевого колеса. Однако производители часто прячут его за декоративными панелями или в труднодоступных нишах.</p>
+
+<p>Наиболее распространенное местоположение — под торпедой со стороны водителя, чуть ниже уровня коленей, иногда закрытое пластиковой заглушкой. В некоторых моделях, например, у <em>Volkswagen</em> или <em>Skoda</em>, разъем может находиться за декоративной крышкой в нише для мелочей или даже возле прикуривателя. В редких случаях, характерных для старых или специфических моделей, порт может быть скрыт за бардачком или в центральной консоли.</p>
+
+<p>Если визуальный поиск не дает результатов, рекомендуется воспользоваться справочной литературой или техническими мануалами для конкретной марки и модели авто. Иногда разъем окрашен в яркий цвет (синий, красный) или имеет характерную трапециевидную форму, что облегчает его обнаружение в темное время суток при подсветке фонарем. Важно убедиться, что контакты внутри разъема чистые и не окисленные.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте фонарик телефона для осмотра пространства под рулевой колонкой — часто разъем OBD2 расположен в глубине ниши и плохо освещен штатным светом салона.</p></aside>
+
+<h2 id="подготовка-смартфона-и-установка-приложения">Подготовка смартфона и установка приложения</h2>
+
+<p>Следующим шагом является подготовка мобильного устройства, которое будет выполнять роль диагностического экрана. Для работы с адаптером <em>Car Scanner</em> потребуется установить соответствующее приложение из официальных магазинов <em>Google Play</em> или <em>App Store</em>. Существует бесплатная версия с ограниченным функционалом и платная Pro-версия, открывающая доступ к полному спектру возможностей, включая настройку панелей приборов и расширенные логи.</p>
+
+<p>Перед установкой приложения необходимо убедиться, что на смартфоне включены службы геолокации (GPS). Это требование операционной системы Android (начиная с версии 6.0) и iOS необходимо для разрешения сканирования Bluetooth-устройств. Без включенного GPS приложение просто не увидит доступные адаптеры, что часто ставит пользователей в тупик.</p>
+
+<p>Также стоит проверить версию операционной системы и наличие последних обновлений безопасности. Приложение запрашивает ряд разрешений: доступ к Bluetooth, местоположению и, в некоторых случаях, к файловой системе для сохранения отчетов. Отказ в предоставлении этих прав сделает работу программы невозможной, поэтому все запросы необходимо подтвердить.</p>
+
+<p>После установки рекомендуется сразу же проверить наличие обновлений самого приложения, так как разработчики регулярно выпускают патчи, улучшающие совместимость с новыми версиями Android и iOS. Старые версии ПО могут некорректно работать с современными протоколами шифрования Bluetooth, что приведет к ошибкам подключения.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Подготовка смартфона</h4><label class="check-item"><input type="checkbox"><span>Включить GPS/Геолокацию</span></label><label class="check-item"><input type="checkbox"><span>Включить Bluetooth</span></label><label class="check-item"><input type="checkbox"><span>Установить приложение Car Scanner</span></label><label class="check-item"><input type="checkbox"><span>Разрешить доступ к файлам</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="процесс-сопряжения-и-настройки-соединения">Процесс сопряжения и настройки соединения</h2>
+
+<p>Сам процесс подключения зависит от типа операционной системы вашего смартфона. Для пользователей Android процедура обычно начинается с включения адаптера в разъем OBD2 автомобиля. После этого необходимо зайти в настройки Bluetooth телефона, найти новое устройство (обычно оно называется <em>OBDII</em>, <em>CHXXXX</em> или <em>Vgate</em>) и выполнить сопряжение. Стандартный пин-код чаще всего равен <code>1234</code> или <code>0000</code>.</p>
+
+<p>В отличие от Android, устройства на базе iOS (iPhone, iPad) не требуют предварительного сопряжения в системных настройках. Здесь все действия выполняются непосредственно внутри приложения <em>Car Scanner</em>. Вам нужно запустить программу, перейти в меню подключения, нажать «Подключиться» и выбрать свой адаптер из списка найденных устройств. Система сама запросит необходимые разрешения.</p>
+
+<p>После успешного соединения индикатор на адаптере (если он есть) должен замигать с определенной периодичностью, а в приложении появится информация о подключенном ЭБУ. Если подключение не удается с первого раза, попробуйте перезагрузить приложение или вынуть и вставить адаптер заново. Иногда помогает удаление устройства из списка сохраненных Bluetooth-гаджетов и повторная попытка.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не оставляйте адаптер в разъеме OBD2 на длительное время, когда автомобиль не эксплуатируется. Многие устройства не имеют глубокого режима сна и могут полностью разрядить аккумулятор автомобиля за несколько дней простоя.</p>
+</blockquote>
+
+<details class="pb-accordion"><summary>Что делать, если телефон не видит адаптер?</summary><div class="pb-accordion-body"><p>Если смартфон не обнаруживает адаптер, убедитесь, что он не подключен к другому устройству. Bluetooth-канал может обслуживать только одно соединение. Также проверьте, не сел ли аккумулятор в самом адаптере (если он автономный) и не отошел ли контакт в разъеме автомобиля. Попробуйте включить и выключить авиарежим на телефоне для перезагрузки модуля связи.</p></div></details>
+
+<h2 id="выбор-профиля-подключения-и-диагностика">Выбор профиля подключения и диагностика</h2>
+
+<p>После установления физического соединения приложение может предложить выбрать профиль подключения или тип адаптера. В большинстве случаев <em>Car Scanner</em> автоматически определяет параметры, но для специфических автомобилей (например, <em>Toyota</em>, <em>VAG</strong> группа) может потребоваться ручной выбор протокола. Правильный выбор профиля обеспечивает корректное чтение данных со всех блоков управления, а не только двигателя.</p>
+
+<p>Когда профиль выбран, открывается главная панель приборов. Здесь вы увидите список доступных параметров: обороты двигателя, температура охлаждающей жидкости, положение дроссельной заслонки, напряжение бортовой сети. Для начала диагностики следует перейти в раздел «Коды неисправностей» (DTC). Приложение считает все сохраненные в памяти ЭБУ ошибки и предложит их расшифровку.</p>
+
+<p>Важно понимать разницу между активными и сохраненными ошибками. Активные ошибки горят постоянно и влияют на работу двигателя прямо сейчас, тогда как сохраненные могли возникнуть в прошлом и быть следствием кратковременного сбоя. Перед сбросом ошибок (<strong>Clear DTC</em>) рекомендуется зафиксировать их коды, чтобы при повторном появлении знать, в каком направлении искать неисправность.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Автоматический выбор профиля подключения работает в 90% случаев, но для глубокой диагностики конкретных марок лучше вручную выбрать профиль производителя в настройках соединения.</p></aside>
+
+<h2 id="расширенные-функции-и-мониторинг-в-реальном-времени">Расширенные функции и мониторинг в реальном времени</h2>
+
+<p>Помимо чтения ошибок, <em>Car Scanner</em> предлагает мощные инструменты для мониторинга. Вы можете настроить отображение любых параметров в виде цифровых значений, графиков или аналоговых приборов. Это особенно полезно при поиске плавающих неисправностей, когда ошибка не загорается постоянно, но поведение автомобиля меняется.</p>
+
+<p>Функция «Панель приборов» позволяет вывести на экран до четырех-шести параметров одновременно. Например, можно контролировать обороты, скорость, температуру и нагрузку на двигатель во время движения. Для энтузиастов доступна функция построения графиков, где можно отследить, как менялся параметр во времени, и экспортировать эти данные для дальнейшего анализа.</p>
+
+<p>Также в приложении реализована возможность тестирования исполнительных механизмов (актуаторов). Вы можете принудительно включить вентилятор охлаждения, проверить работу форсунок или клапана рециркуляции газов прямо с экрана смартфона. Это значительно упрощает поиск неисправностей без необходимости разбирать полмашины для прозвонки проводов.</p>
+
+<p>Особого внимания заслуживает функция мониторинга напряжения. Резкие скачки или просадки напряжения при запуске стартера могут указывать на проблемы с аккумулятором или генератором. Регулярное использование этого инструмента помогает предотвратить внезапную разрядку батареи в зимний период.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Безопасно ли оставлять адаптер в машине постоянно?</summary>
+<p>Нет, это не рекомендуется. Даже в спящем режиме адаптер потребляет ток, что может привести к глубокому разряду аккумулятора при длительном простое автомобиля (более 3-5 дней). Лучше вынимать устройство после использования.</p>
+</details>
+
+<details>
+<summary>Почему приложение показывает «Ошибка подключения к ЭБУ»?</summary>
+<p>Это может происходить по нескольким причинам: несовместимость протокола, плохой контакт в разъеме OBD2, включенный режим полета на телефоне или блокировка антивирусом. Попробуйте выбрать другой профиль подключения в настройках приложения.</p>
+</details>
+
+<details>
+<summary>Можно ли через Car Scanner изменить настройки автомобиля?</summary>
+<p>Базовая версия позволяет только считывать данные и сбрасывать ошибки. Для программирования скрытых функций (например, активация автозакрытия окон) часто требуются платные расширения или специализированное ПО, зависящее от марки авто.</p>
+</details>
+
+<details>
+<summary>Работает ли приложение без интернета?</summary>
+<p>Да, после первоначальной установки и загрузки профилей автомобилей приложение может работать в офлайн-режиме. Расшифровка кодов ошибок также производится локально, без обращения к серверу.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/n/na/nasos-avtomobilnyj-elektricheskij-220v.html" class="pb-related-card">
+                <span class="pb-related-title">Автомобильный электрический насос 220В: выбор и применение</span>
+                <span class="pb-related-desc">Как выбрать электрический насос для авто от розетки 220В. Обзор моделей, советы по эксплуатации и бе</span>
+            </a><a href="/articles/p/pe/perekhodnik-dlya-avtomobilnogo-kompressora-na-220-volt.html" class="pb-related-card">
+                <span class="pb-related-title">Переходник для автокомпрессора на 220В: как выбрать и подключить</span>
+                <span class="pb-related-desc">Нужно накачать колеса от розетки? Разбираем виды переходников для автомобильных компрессоров на 220В</span>
+            </a><a href="/articles/c/ch/chto-nuzhno-dlya-shitya-na-shvejnoj-mashinke.html" class="pb-related-card">
+                <span class="pb-related-title">Что нужно для шитья на швейной машинке: полный список</span>
+                <span class="pb-related-desc">Подробный гид: что нужно для шитья на швейной машинке. Список инструментов, выбор игл, ниток и аксес</span>
+            </a><a href="/articles/a/ap/apparat-nail-drill-otzyvy.html" class="pb-related-card">
+                <span class="pb-related-title">Аппарат nail drill: отзывы, рейтинг и выбор для профи</span>
+                <span class="pb-related-desc">Честные отзывы об аппаратах nail drill. Как выбрать машинку для маникюра, сравнение характеристик, т</span>
+            </a><a href="/articles/d/di/dinamometricheskij-klyuch-dlya-vysokoprochnykh-boltov.html" class="pb-related-card">
+                <span class="pb-related-title">Динамометрический ключ для высокопрочных болтов: выбор и применение</span>
+                <span class="pb-related-desc">Как выбрать динамометрический ключ для высокопрочных болтов? Таблицы усилий, типы ключей, ошибки зат</span>
+            </a><a href="/articles/k/ko/kompressor-dlya-podkachki-shin-berkut.html" class="pb-related-card">
+                <span class="pb-related-title">Компрессор для подкачки шин Беркут: обзор, модели, выбор</span>
+                <span class="pb-related-desc">Полный гид по компрессорам Беркут. Рейтинг моделей, советы по эксплуатации, расшифровка маркировки и</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

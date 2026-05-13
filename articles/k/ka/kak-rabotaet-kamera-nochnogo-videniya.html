@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как работает камера ночного видения: технологии ИК и тепловизоров — Авто Справочник</title>
+    <meta name="description" content="Узнайте принцип работы камеры ночного видения. Разбор ИК-подсветки, тепловизионных матриц и цифрового усиления света для систем безопасности.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-rabotaet-kamera-nochnogo-videniya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работает камера ночного видения: технологии ИК и тепловизоров">
+    <meta property="og:description" content="Узнайте принцип работы камеры ночного видения. Разбор ИК-подсветки, тепловизионных матриц и цифрового усиления света для систем безопасности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работает камера ночного видения: технологии ИК и тепловизоров</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физические-основы-видимости-в-темноте">Физические основы видимости в темноте</a></li><li><a href="#технология-усиления-света-image-intensification">Технология усиления света (Image Intensification)</a></li><li><a href="#принцип-работы-тепловизионных-камер">Принцип работы тепловизионных камер</a></li><li><a href="#роль-инфракрасной-подсветки-в-системах-безопасности">Роль инфракрасной подсветки в системах безопасности</a></li><li><a href="#цифровая-обработка-и-алгоритмы-улучшения">Цифровая обработка и алгоритмы улучшения</a></li><li><a href="#сравнение-типов-ночного-видения">Сравнение типов ночного видения</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/b/be/bezalkogolnoe-pivo-s-pokhmelya.html">Безалкогольное пиво с похмелья: польза или вред?</a></li><li><a href="/articles/p/pr/proverit-istoriyu-registratsii-avto.html">Проверить историю регистрации авто: полная инструкция</a></li><li><a href="/articles/r/ra/ratsiya-optim-viking-nastrojka.html">Настройка рации Viking: частоты, CTCSS, мощность</a></li><li><a href="/articles/i/iz/iza-chego-umer-viktor-tsoj.html">Как умер Виктор Цой: официальная версия и детали трагедии</a></li><li><a href="/articles/p/pa/pakhan-eto-prostymi-slovami.html">Кто такой пахан: простыми словами о значении слова</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как работает камера ночного видения: полный разбор технологий</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физические-основы-видимости-в-темноте">Физические основы видимости в темноте</a></li><li><a href="#технология-усиления-света-image-intensification">Технология усиления света (Image Intensification)</a></li><li><a href="#принцип-работы-тепловизионных-камер">Принцип работы тепловизионных камер</a></li><li><a href="#роль-инфракрасной-подсветки-в-системах-безопасности">Роль инфракрасной подсветки в системах безопасности</a></li><li><a href="#цифровая-обработка-и-алгоритмы-улучшения">Цифровая обработка и алгоритмы улучшения</a></li><li><a href="#сравнение-типов-ночного-видения">Сравнение типов ночного видения</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Тьма перестала быть абсолютным препятствием для наблюдения благодаря стремительному развитию оптических и электронных технологий. Когда естественного света недостаточно, в дело вступают специализированные устройства, способные формировать изображение в условиях практически полного отсутствия видимости. Принцип их действия кардинально отличается от работы обычного человеческого глаза или стандартной видеокамеры, используемой днем.</p>
+
+<p>В основе всех современных систем ночного видения лежит способность улавливать излучение, невидимое для человека, или многократно усиливать имеющиеся фотоны. <strong>Инфракрасный спектр</strong> и тепловое излучение объектов становятся главными источниками информации для сенсоров. Понимание физических процессов, лежащих в основе этих технологий, позволяет правильно выбирать оборудование для охраны периметра, охоты или военных нужд.</p>
+
+<p>Существует заблуждение, что любая камера с"ночным режимом" видит в полной темноте одинаково хорошо. На самом деле, рынок предлагает принципиально разные решения: от доступных цифровых приборов до сложнейших тепловизионных систем. Выбор конкретного типа устройства напрямую зависит от поставленных задач и условий эксплуатации.</p>
+
+<h2 id="физические-основы-видимости-в-темноте">Физические основы видимости в темноте</h2>
+<p>Человеческий глаз способен воспринимать лишь узкий диапазон электромагнитного излучения, который мы называем видимым светом. Однако окружающие нас объекты постоянно испускают или отражают другие виды излучения, которые также можно преобразовать в визуальную картинку. <em>Камера ночного видения</em> работает не как магический прибор, а как сложный конвертер энергий.</p>
+
+<p>Ключевым моментом является наличие хотя бы минимального количества света или тепла. Если объект имеет температуру выше абсолютного нуля, он излучает тепло. Если же есть хотя бы слабый источник света (луна, звезды), его можно усилить тысячи раз. Именно на этих двух физических явлениях базируется вся индустрия приборов ночного видения (ПНВ).</p>
+
+<blockquote>⚠️ Внимание: Полная темнота — это миф. Даже в закрытом помещении без ламп присутствует фоновое излучение, которое могут уловить чувствительные сенсоры, но для качественной картинки часто требуется активная подсветка.</blockquote>
+
+<p>Технологии делятся на две большие группы: активные и пассивные. Активные системы сами генерируют свет в невидимом для человека диапазоне, освещая объект наблюдения. Пассивные же только принимают и обрабатывают существующее излучение, не выдавая своего присутствия свечением.</p>
+
+<div class="pb-poll" id="poll-d44bb528"><div class="pb-poll-question">📊 Какой параметр для вас важнее при выборе камеры?</div><div class="pb-poll-option" data-poll="d44bb528" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Дальность обнаружения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d44bb528" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Четкость изображения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d44bb528" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Цена устройства</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d44bb528" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Автономность работы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="технология-усиления-света-image-intensification">Технология усиления света (Image Intensification)</h2>
+<p>Самый распространенный тип приборов, часто называемый просто ПНВ, использует технологию усиления остаточного света. Такие устройства собирают доступные фотоны через объектив и направляют их на специальную электронно-оптический преобразователь (ЭОП). Внутри вакуумной трубки происходит чудо физики: фотоны выбивают электроны, которые затем ускоряются и умножаются.</p>
+
+<p>Усиленный поток электронов попадает на люминофорный экран, где снова превращается в видимый свет, создавая яркое зеленое изображение. <strong>Коэффициент усиления</strong> таких приборов может достигать 50 000 раз, что позволяет видеть отчетливую картинку даже в лунную ночь. Однако при полном отсутствии света (в погребе или глухом лесу без звезд) такие приборы слепы без дополнительной подсветки.</p>
+
+<p>Современные цифровые ПНВ работают по схожему принципу, но вместо ЭОП используют высокочувствительные CMOS или CCD матрицы. Они фиксируют свет, преобразуют его в цифровой сигнал и выводят на экран. Цифровые приборы дешевле, не боятся яркого света, но часто уступают классическим аналоговым в детализации и скорости отклика.</p>
+
+<ul>
+<li>🌑 Классические ПНВ требуют наличия минимального внешнего света для работы.</li>
+<li>🔋 ЭОП-трубки имеют ограниченный ресурс работы и чувствительны к перегрузкам.</li>
+<li>💻 Цифровые матрицы позволяют записывать видео и передавать сигнал по Wi-Fi.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При выборе прибора с ЭОП обращайте внимание на поколение трубки (Gen 1, Gen 2, Gen 3). Чем выше поколение, тем лучше разрешение и меньше энергопотребление, но выше цена.</p></aside>
+
+<h2 id="принцип-работы-тепловизионных-камер">Принцип работы тепловизионных камер</h2>
+<p>Тепловизоры представляют собой вершину эволюции систем наблюдения, так как им вообще не нужен свет. Они регистрируют тепловое излучение объектов в длинноволновом инфракрасном диапазоне. Любое тело, температура которого выше абсолютного нуля, испускает ИК-лучи, интенсивность которых зависит от температуры объекта.</p>
+
+<p>Внутри тепловизора установлена матрица из микроскопических терморезисторов ( болометров ). Каждый пиксель такой матрицы измеряет температуру точки, на которую он направлен. Процессор анализирует данные и присваивает каждой температуре определенный цвет или оттенок серого. В результате на экране возникает <strong>термограмма</strong> — карта распределения температур.</p>
+
+<p>Главное преимущество тепловизоров — способность видеть сквозь дым, легкий туман, листву и некоторые виды маскировочных сетей. Живой объект будет ярко выделяться на фоне остывшей за ночь травы или стен здания. Это делает их незаменимыми для поисково-спасательных операций и охраны критически важных объектов.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>ПНВ (Усиление света)</th>
+<th>Тепловизор</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Нужен ли свет</td>
+<td>Да (хотя бы минимальный)</td>
+<td>Нет (работает в полной темноте)</td>
+</tr>
+<tr>
+<td>Реакция на маскировку</td>
+<td>Маскировка видна</td>
+<td>Тепло под маскировкой видно</td>
+</tr>
+<tr>
+<td>Детализация картинки</td>
+<td>Высокая (похожа на фото)</td>
+<td>Низкая (силуэты и пятна)</td>
+</tr>
+<tr>
+<td>Стоимость</td>
+<td>Средняя / Высокая</td>
+<td>Очень высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Стоит отметить, что тепловизоры не показывают цвета в привычном понимании. Они отображают разницу температур. Теплые объекты могут быть белыми или красными, холодные — черными или синими, в зависимости от выбранной <em>палитры</em> (White Hot, Black Hot, Rainbow).</p>
+
+<h2 id="роль-инфракрасной-подсветки-в-системах-безопасности">Роль инфракрасной подсветки в системах безопасности</h2>
+<p>Большинство камер видеонаблюдения, которые мы видим на фасадах зданий, оснащены ИК-подсветкой. Это классический пример активной системы ночного видения. Вокруг объектива такой камеры расположены светодиоды, излучающие свет в инфракрасном спектре (обычно с длиной волны 850 нм или 940 нм).</p>
+
+<p>Для человеческого глаза этот свет невидим (или едва заметен как тусклое красное свечение у диодов 850 нм), но матрица камеры видит его отлично. Камера автоматически переключается в черно-белый режим ночью, отключая ИК-фильтр, и освещает пространство перед собой невидимым фонарем. Дальность такой подсветки варьируется от 10 до 100 метров и более.</p>
+
+<blockquote>⚠️ Внимание: Использование ИК-подсветки 850 нм может демаскировать камеру, так как излучение видно в виде красного свечения. Для скрытого наблюдения используют диоды 940 нм, которые полностью невидимы, но имеют меньшую эффективность.</blockquote>
+
+<p>Существует проблема засветки объектов, находящихся слишком близко к камере. Если объект подойдет вплотную, он может оказаться в зоне пересвета, и камера его"не увидит". Современные системы используют <strong>умную ИК-подсветку</strong>, которая регулирует мощность излучения в зависимости от расстояния до объекта.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка ИК-подсветки камеры</h4><label class="check-item"><input type="checkbox"><span>Осмотреть объектив на наличие красных точек</span></label><label class="check-item"><input type="checkbox"><span>Накрыть ладонью датчик света (должен щелкнуть)</span></label><label class="check-item"><input type="checkbox"><span>Проверить наличие засветки вблизи</span></label><label class="check-item"><input type="checkbox"><span>Оценить угол охвата подсветки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="цифровая-обработка-и-алгоритмы-улучшения">Цифровая обработка и алгоритмы улучшения</h2>
+<p>Современная камера ночного видения — это не просто оптика и сенсор, это мощный компьютер. Полученное сырое изображение часто содержит шумы, особенно при высоком ISO или сильном усилении сигнала. Для борьбы с этим применяются сложные алгоритмы шумоподавления (DNR — Digital Noise Reduction).</p>
+
+<p>Технология WDR (Wide Dynamic Range) позволяет камере корректно отображать сцены с резкими перепадами яркости, что часто встречается ночью (например, фары автомобиля на темной дороге). Без этой функции яркие объекты превращались бы в белые пятна, скрывающие детали.</p>
+
+<p>Отдельного внимания заслуживает технология <mark>ColorVu</mark> и её аналоги от разных производителей. Эти камеры оснащены сверхсветосильной оптикой и большими матрицами, что позволяет им получать цветное изображение ночью при освещенности всего 0.0001 Люкс. Если света совсем нет, они мягко включают теплую подсветку, сохраняя цветопередачу, что критично для идентификации, например, цвета одежды или автомобиля.</p>
+
+<ul>
+<li>🎨 Алгоритмы AI позволяют отличать людей и автомобили от ложных тревог (ветер, животные).</li>
+<li>📉 Шумоподавление 3D-DNR очищает картинку от"снега" в темных участках.</li>
+<li>🚗 WDR балансирует экспозицию при встречном свете фар.</li>
+</ul>
+
+<h2 id="сравнение-типов-ночного-видения">Сравнение типов ночного видения</h2>
+<p>Выбор между различными технологиями зависит от бюджета и конкретных требований. Военные и спецслужбы часто используют приборы generations Gen 3, которые обеспечивают наилучшее качество, но стоят тысячи долларов. Для бытового использования, охраны дачи или охоты вполне достаточно цифровых ПНВ или качественных камер с ИК-подсветкой.</p>
+
+<p>Тепловизоры остаются нишевым, но rapidly growing сегментом. Они незаменимы, когда нужно обнаружить объект, который прячется в кустах или находится в условиях задымления. Однако для распознавания лиц (кто именно идет) тепловизор подходит плохо из-за низкого разрешения и отсутствия деталей.</p>
+
+<details class="pb-accordion"><summary>Почему изображение в ПНВ зеленое?</summary><div class="pb-accordion-body"><p>Зеленый цвет выбран не случайно. Человеческий глаз способен различать больше всего оттенков именно в зеленом спектре. Это снижает утомляемость оператора при длительном наблюдении и позволяет быстрее замечать детали.</p></div></details>
+
+<p>При интеграции систем безопасности важно учитывать, что ИК-подсветка может привлекать насекомых, которые, роясь перед объективом, создают ложное ощущение движения. В таких случаях помогает выносная ИК-подсветка, установленная рядом с камерой, но не на её корпусе.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Идеальной технологии не существует: для распознавания лиц лучше подходит ИК-камера, а для обнаружения вторжения в темном лесу — тепловизор.</p></aside>
+
+<details>
+<summary>Может ли камера ночного видения видеть сквозь стены?</summary>
+<p>Нет, ни одна гражданская камера не видит сквозь твердые непрозрачные стены. Тепловизор может показать, что стена нагрета с одной стороны, если там, например, идет горячая труба или работает камин, но он не покажет картинку комнаты по ту сторону. Инфракрасный свет также отражается от стекла, поэтому через окно тепловизором смотреть бесполезно — вы увидите лишь свое отражение.</p>
+</details>
+
+<details>
+<summary>Почему ночью картинка черно-белая?</summary>
+<p>В темноте цветоразностная информация теряется. Матрицы камер устроены так, что для получения цветного изображения нужно больше света, чем для черно-белого. Чтобы повысить чувствительность, камера отключает цветовой фильтр (Bayer filter) и переходит в монохромный режим, используя всю площадь пикселей для улавливания яркости.</p>
+</details>
+
+<details>
+<summary>Вредна ли ИК-подсветка для глаз?</summary>
+<p>Инфракрасное излучение от камер наблюдения (ближний ИК-диапазон) безопасно для человека и животных. Его мощность крайне мала и сравнима с обычным пультом от телевизора. Однако не рекомендуется смотреть непосредственно в мощные ИК-прожекторы с близкого расстояния, хотя риск повреждения сетчатки от бытовых камер отсутствует.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/b/be/bezalkogolnoe-pivo-s-pokhmelya.html" class="pb-related-card">
+                <span class="pb-related-title">Безалкогольное пиво с похмелья: польза или вред?</span>
+                <span class="pb-related-desc">Можно ли пить безалкогольное пиво с похмелья? Разбор состава, влияния на мозг и организм, мифы о выв</span>
+            </a><a href="/articles/p/pr/proverit-istoriyu-registratsii-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Проверить историю регистрации авто: полная инструкция</span>
+                <span class="pb-related-desc">Как проверить историю регистрации авто перед покупкой. Узнайте, как найти скрытые проблемы, ограниче</span>
+            </a><a href="/articles/r/ra/ratsiya-optim-viking-nastrojka.html" class="pb-related-card">
+                <span class="pb-related-title">Настройка рации Viking: частоты, CTCSS, мощность</span>
+                <span class="pb-related-desc">Полная инструкция по настройке рации Viking: каналы, CTCSS/DCS, сканирование. Как прошить и проверит</span>
+            </a><a href="/articles/i/iz/iza-chego-umer-viktor-tsoj.html" class="pb-related-card">
+                <span class="pb-related-title">Как умер Виктор Цой: официальная версия и детали трагедии</span>
+                <span class="pb-related-desc">Подробный разбор обстоятельств гибели Виктора Цоя. Официальная версия ДТП, хроника событий 15 август</span>
+            </a><a href="/articles/p/pa/pakhan-eto-prostymi-slovami.html" class="pb-related-card">
+                <span class="pb-related-title">Кто такой пахан: простыми словами о значении слова</span>
+                <span class="pb-related-desc">Узнайте, что значит слово пахан простыми словами. История термина, значение в криминальной среде и с</span>
+            </a><a href="/articles/p/pr/proverit-avto-na-zapret-registratsionnykh-dejstvij-po-gos-nomeru.html" class="pb-related-card">
+                <span class="pb-related-title">Проверить авто на запрет регистрационных действий по гос номеру</span>
+                <span class="pb-related-desc">Как проверить машину на запрет регистрации по гос номеру онлайн. Причины ограничений, пошаговая инст</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

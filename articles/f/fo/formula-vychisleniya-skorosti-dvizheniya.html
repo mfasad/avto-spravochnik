@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Формула скорости движения: расчет, единицы измерения и примеры — Авто Справочник</title>
+    <meta name="description" content="Как вычислить скорость движения? Полная формула, перевод км/ч в м/с, примеры задач и таблица скоростей. Разбор физики движения для автомобилистов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/f/fo/formula-vychisleniya-skorosti-dvizheniya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Формула скорости движения: расчет, единицы измерения и примеры">
+    <meta property="og:description" content="Как вычислить скорость движения? Полная формула, перевод км/ч в м/с, примеры задач и таблица скоростей. Разбор физики движения для автомобилистов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/obuchenie-i-testy/">Обучение и Тесты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Формула скорости движения: расчет, единицы измерения и примеры</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовая-формула-и-её-переменные">Базовая формула и её переменные</a></li><li><a href="#единицы-измерения-и-конвертация">Единицы измерения и конвертация</a></li><li><a href="#равномерное-и-равноускоренное-движение">Равномерное и равноускоренное движение</a></li><li><a href="#таблица-скоростей-и-времени-в-пути">Таблица скоростей и времени в пути</a></li><li><a href="#влияние-внешних-факторов-на-скорость">Влияние внешних факторов на скорость</a></li><li><a href="#практическое-применение-формул-для-водителя">Практическое применение формул для водителя</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/1/1-/1-km-po-vremeni-na-mashine.html">Сколько ехать 1 км на машине: время, скорость и факторы</a></li><li><a href="/articles/k/ka/kak-nauchitsya-ne-glokhnut-na-mekhanike.html">Как не глохнуть на механике: секреты плавного старта</a></li><li><a href="/articles/g/ga/gabarity-mashiny-kak-pochuvstvovat.html">Как почувствовать габариты машины: советы для новичков</a></li><li><a href="/articles/c/ch/chto-takoe-sfericheskoe-zerkalo.html">Что такое сферическое зеркало: виды, формулы и применение</a></li><li><a href="/articles/k/ka/kak-ponyat-kuda-krutit-rul-pri-zadnem-khode.html">Куда крутить руль при заднем ходе: разбираемся с нуля</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Формула вычисления скорости движения: теория и практика</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовая-формула-и-её-переменные">Базовая формула и её переменные</a></li><li><a href="#единицы-измерения-и-конвертация">Единицы измерения и конвертация</a></li><li><a href="#равномерное-и-равноускоренное-движение">Равномерное и равноускоренное движение</a></li><li><a href="#таблица-скоростей-и-времени-в-пути">Таблица скоростей и времени в пути</a></li><li><a href="#влияние-внешних-факторов-на-скорость">Влияние внешних факторов на скорость</a></li><li><a href="#практическое-применение-формул-для-водителя">Практическое применение формул для водителя</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Понимание того, как быстро движется объект, является фундаментальным для любого водителя, будь то пилот болида Формулы-1 или владелец повседневного седана. <strong>Формула скорости</strong> — это не просто абстрактное уравнение из школьного учебника физики, а реальный инструмент, позволяющий рассчитать время в пути, оценить тормозной путь и избежать аварийных ситуаций на дороге. Знание принципов кинематики помогает лучше чувствовать габариты автомобиля и динамику разгона.</p>
+
+<p>В основе всех расчетов лежит простая, но мощная зависимость между пройденным расстоянием и затраченным временем. Если вы знаете, сколько километров проехал ваш автомобиль и сколько времени это заняло, вы легко можете определить среднюю скорость движения. Этот параметр критически важен для соблюдения правил дорожного движения и планирования поездок.</p>
+
+<p>Однако в реальной жизни все не всегда так линейно, как в идеальных задачах. На движение влияют сопротивление воздуха, состояние дорожного покрытия и технические характеристики двигателя. Тем не менее, базовая физика остается неизменной: скорость — это величина, показывающая, какой путь преодолевает тело за единицу времени.</p>
+
+<h2 id="базовая-формула-и-её-переменные">Базовая формула и её переменные</h2>
+
+<p>Классическая формула для расчета средней скорости выглядит предельно просто: <code>V = S / t</code>. Здесь <strong>V</strong> (velocity) обозначает искомую скорость, <strong>S</strong> (space) — пройденное расстояние, а <strong>t</strong> (time) — время, затраченное на движение. Используя этот алгоритм, можно легко пересчитывать параметры движения в уме или с помощью калькулятора.</p>
+
+<p>Для автомобилистов наиболее привычными единицами измерения являются километры в час (км/ч). Однако в физике и технике часто используются метры в секунду (м/с), что позволяет более точно оценивать мгновенные изменения состояния автомобиля. Понимание разницы между этими величинами необходимо для правильного восприятия дорожной обстановки.</p>
+
+<ul>
+<li>🚗 <strong>Расстояние (S):</strong> Длина пути, который преодолел автомобиль от точки А до точки Б.</li>
+<li>⏱️ <strong>Время (t):</strong> Длительность движения, необходимая для преодоления указанного расстояния.</li>
+<li>🏎️ <strong>Скорость (V):</strong> Результат деления пути на время, показывающий интенсивность движения.</li>
+</ul>
+
+<p>Важно понимать, что данная формула дает значение <em>средней</em> скорости. В реальном потоке автомобиль постоянно меняет темп: разгоняется на зеленых светофорах и тормозит перед пешеходами. Поэтому полученное значение является усредненным показателем за весь отрезок пути.</p>
+
+<div class="pb-poll" id="poll-b11d69f4"><div class="pb-poll-question">📊 Какой тип движения для вас наиболее привычен в городе?</div><div class="pb-poll-option" data-poll="b11d69f4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Тихий (до 40 км/ч)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b11d69f4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Средний (40-60 км/ч)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b11d69f4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Активный (60-80 км/ч)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b11d69f4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Трассовый (более 90 км/ч)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="единицы-измерения-и-конвертация">Единицы измерения и конвертация</h2>
+
+<p>Одной из самых частых задач при расчетах является перевод единиц измерения. Спидометр в автомобиле показывает километры в час, но для оценки реакции водителя и тормозного пути удобнее использовать метры в секунду. Чтобы перевести км/ч в м/с, необходимо разделить значение на 3,6. Это соотношение <mark>является ключевым для точных инженерных расчетов</mark> тормозных систем.</p>
+
+<p>Обратный перевод также не сложен: если вам нужно узнать скорость в км/ч, зная её в м/с, просто умножьте значение на 3,6. Такая математическая операция помогает быстро оценить, насколько опасен объект, летящий навстречу, или какова реальная скорость автомобиля при движении задним ходом на парковке.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> При расчетах тормозного пути всегда используйте метры в секунду. Использование километров в час в физических формулах без предварительного перевода приведет к ошибочным и potentially опасным результатам оценки безопасности.</blockquote>
+
+<p>Рассмотрим пример: автомобиль движется со скоростью 72 км/ч. Для перевода в систему СИ делим 72 на 3,6 и получаем 20 м/с. Это означает, что каждую секунду машина проезжает расстояние в 20 метров — примерно 4 длины кузова легкового автомобиля. Осознание этой цифры помогает держать более безопасную дистанцию.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Запомните простое правило: чтобы быстро прикинуть скорость в м/с, разделите значение в км/ч на 4 и прибавьте 10%. Это даст приближенный результат, достаточный для быстрой оценки ситуации на дороге.</p></aside>
+
+<h2 id="равномерное-и-равноускоренное-движение">Равномерное и равноускоренное движение</h2>
+
+<p>В идеальном мире автомобили двигались бы равномерно, сохраняя постоянную скорость. Однако в реальности мы чаще сталкиваемся с <strong>равноускоренным движением</strong>, когда скорость меняется с течением времени. Разгон при старте со светофора или торможение перед поворотом — это примеры изменения скорости, где вступает в силу понятие ускорения.</p>
+
+<p>Формула для расчета скорости при равноускоренном движении выглядит так: <code>V = V0 + at</code>. Здесь <strong>V0</strong> — начальная скорость, <strong>a</strong> — ускорение (или замедление при торможении), а <strong>t</strong> — время. Знание этого уравнения позволяет понять, почему тяжелый грузовик разгоняется дольше, чем легковая <em>Toyota Camry</em> или <em>BMW</em>.</p>
+
+<ul>
+<li>🚦 <strong>Разгон:</strong> Ускорение направлено в сторону движения, скорость растет.</li>
+<li>🛑 <strong>Торможение:</strong> Ускорение направлено против движения, скорость падает.</li>
+<li>📉 <strong>Постоянная скорость:</strong> Ускорение равно нулю, движение становится равномерным.</li>
+</ul>
+
+<p>При экстренном торможении значение ускорения (декаeleration) может достигать 8-10 м/с² для современных автомобилей с системами ABS. Понимание физики процесса помогает водителю не паниковать и правильно дозировать усилие на педали тормоза, особенно на скользкой дороге.</p>
+
+<h2 id="таблица-скоростей-и-времени-в-пути">Таблица скоростей и времени в пути</h2>
+
+<p>Для наглядного представления зависимости времени от скорости при фиксированном расстоянии удобно использовать таблицы. Ниже приведены расчетные данные для прохождения отрезка пути в 100 километров при различных скоростных режимах. Эти данные актуальны для планирования длительных поездок на трассе.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Скорость (км/ч)</th>
+<th>Скорость (м/с)</th>
+<th>Время в пути (мин)</th>
+<th>Характер движения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>60</td>
+<td>16.7</td>
+<td>100</td>
+<td>Город / Трасса</td>
+</tr>
+<tr>
+<td>90</td>
+<td>25.0</td>
+<td>66.7</td>
+<td>Трасса (эконом)</td>
+</tr>
+<tr>
+<td>110</td>
+<td>30.6</td>
+<td>54.5</td>
+<td>Трасса (стандарт)</td>
+</tr>
+<tr>
+<td>130</td>
+<td>36.1</td>
+<td>46.2</td>
+<td>Автобан</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Как видно из таблицы, увеличение средней скорости всего на 20-30 км/ч позволяет существенно сэкономить время в дальних поездках. Однако стоит помнить, что расход топлива при speeds выше 90-100 км/ч начинает расти экспоненциально из-за аэродинамического сопротивления.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Оптимальная скорость для дальних поездок с точки зрения расхода топлива и безопасности находится в диапазоне 90-100 км/ч. Превышение этого порога дает минимальный выигрыш во времени, но резко повышает риски и затраты.</p></aside>
+
+<h2 id="влияние-внешних-факторов-на-скорость">Влияние внешних факторов на скорость</h2>
+
+<p>Теоретическая формула не учитывает множество переменных, с которыми сталкивается водитель. Ветер, состояние дорожного покрытия, загрузка автомобиля и даже давление в шинах влияют на реальную скорость движения. Например, встречный ветер действует как дополнительный тормоз, заставляя двигатель работать интенсивнее для поддержания заданного темпа.</p>
+
+<p>Также важно учитывать инерцию. Мгновенно изменить скорость невозможно ни физически, ни технически. <strong>Инерционная масса</strong> автомобиля продолжает толкать его вперед даже после того, как вы убрали ногу с педали газа. Это свойство необходимо учитывать при маневрировании в плотном потоке.</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> На мокром асфальте или при наличии снежной каши эффективная скорость безопасного движения должна быть снижена на 30-40% относительно сухой дороги. Формула тормозного пути квадратично зависит от скорости, и на скользком покрытии остановка займет в разы больше метров.</p>
+
+<p>Современные системы помощи водителю, такие как круиз-контроль и ограничители скорости, помогают поддерживать заданные параметры. Однако электроника не может предугадать все нюансы дорожной ситуации, поэтому контроль за скоростью должен оставаться приоритетом человека.</p>
+
+<details class="pb-accordion"><summary>Почему спидометр всегда врет?</summary><div class="pb-accordion-body"><p>Спидометр показывает скорость чуть выше реальной (обычно на 5-10 км/ч). Это сделано преднамеренно производителями автомобилей для обеспечения безопасности и соблюдения юридических норм, чтобы водитель гарантированно не превышал лимит, даже если датчики дают небольшую погрешность.</p></div></details>
+
+<h2 id="практическое-применение-формул-для-водителя">Практическое применение формул для водителя</h2>
+
+<p>Знание формул скорости полезно не только для сдачи экзаменов в ГИБДД, но и для повседневной езды. Умение быстро прикинуть в уме, успеете ли вы проскочить перекресток на желтый или безопасно перестроиться в соседний ряд, базируется на интуитивном понимании физики движения. Это навык, который приходит с опытом, но теоретическая база ускоряет его формирование.</p>
+
+<p>Кроме того, понимание принципов расчета скорости помогает правильно оценивать показания навигационных систем. GPS-навигаторы часто показывают "проектную" скорость, которая может отличаться от показаний спидометра из-за особенностей приема сигнала или калибровки колес после замены резины.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Контрольный список перед поездкой</h4><label class="check-item"><input type="checkbox"><span>Проверить давление в шинах</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в исправности спидометра</span></label><label class="check-item"><input type="checkbox"><span>Загрузить актуальные карты</span></label><label class="check-item"><input type="checkbox"><span>Проверить прогноз погоды</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>В заключение стоит отметить, что скорость — это лишь один из параметров движения. Безопасность складывается из множества факторов, где главными остаются внимательность водителя и соблюдение правил дорожного движения. Формулы помогают понять процессы, но ответственность за результат всегда несет человек за рулем.</p>
+
+<details>
+<summary>Как быстро перевести км/ч в м/с в уме?</summary>
+<p>Разделите число километров в час на 4, а затем прибавьте к результату 10% от полученного числа. Например, 100 км/ч: делим на 4 (получаем 25), прибавляем 10% (2.5), итого 27.5 м/с. Точное значение 27.78, погрешность минимальна.</p>
+</details>
+
+<details>
+<summary>Почему средняя скорость всегда меньше максимальной?</summary>
+<p>Средняя скорость учитывает все остановки, разгоны и замедления. Поскольку в реальном движении автомобиль не может все время двигаться с максимальной скоростью из-за светофоров, поворотов и трафика, итоговое среднее значение всегда будет ниже пиковых показателей.</p>
+</details>
+
+<details>
+<summary>Влияет ли размер колес на показания скорости?</summary>
+<p>Да, влияет. Спидометр калибруется под определенный диаметр колеса. Если вы поставите колеса большего диаметра, реальная скорость будет выше показаний спидометра, и наоборот. Это важно учитывать при тюнинге автомобиля.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/1/1-/1-km-po-vremeni-na-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько ехать 1 км на машине: время, скорость и факторы</span>
+                <span class="pb-related-desc">Узнайте, сколько времени занимает 1 км пути на машине. Расчеты для города и трассы, влияние пробок и</span>
+            </a><a href="/articles/k/ka/kak-nauchitsya-ne-glokhnut-na-mekhanike.html" class="pb-related-card">
+                <span class="pb-related-title">Как не глохнуть на механике: секреты плавного старта</span>
+                <span class="pb-related-desc">Устали глохнуть на светофорах? Узнайте, как правильно работать сцеплением и газом. Пошаговая инструк</span>
+            </a><a href="/articles/g/ga/gabarity-mashiny-kak-pochuvstvovat.html" class="pb-related-card">
+                <span class="pb-related-title">Как почувствовать габариты машины: советы для новичков</span>
+                <span class="pb-related-desc">Учитесь чувствовать габариты авто. Простые упражнения, настройка зеркал и психологические приемы для</span>
+            </a><a href="/articles/c/ch/chto-takoe-sfericheskoe-zerkalo.html" class="pb-related-card">
+                <span class="pb-related-title">Что такое сферическое зеркало: виды, формулы и применение</span>
+                <span class="pb-related-desc">Подробный разбор сферических зеркал: вогнутые и выпуклые. Оптические свойства, формулы, построение и</span>
+            </a><a href="/articles/k/ka/kak-ponyat-kuda-krutit-rul-pri-zadnem-khode.html" class="pb-related-card">
+                <span class="pb-related-title">Куда крутить руль при заднем ходе: разбираемся с нуля</span>
+                <span class="pb-related-desc">Пошаговое руководство для новичков: как правильно вращать руль при движении задним ходом, чтобы не д</span>
+            </a><a href="/articles/k/ka/kakaya-kategoriya-nuzhna-dlya-upravleniya-belazom.html" class="pb-related-card">
+                <span class="pb-related-title">Какая категория нужна для управления Белазом: требования 2026 года</span>
+                <span class="pb-related-desc">Узнайте, какая категория прав требуется для управления карьерным самосвалом Белаз, особенности обуче</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

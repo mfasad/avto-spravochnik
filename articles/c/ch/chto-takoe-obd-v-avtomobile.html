@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Что такое OBD в автомобиле: виды, функции и как пользоваться — Авто Справочник</title>
+    <meta name="description" content="Подробный гид по диагностическому разъему OBD. Узнайте, как считать ошибки, расшифровать коды и выбрать сканер для самостоятельного ремонта.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/c/ch/chto-takoe-obd-v-avtomobile.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Что такое OBD в автомобиле: виды, функции и как пользоваться">
+    <meta property="og:description" content="Подробный гид по диагностическому разъему OBD. Узнайте, как считать ошибки, расшифровать коды и выбрать сканер для самостоятельного ремонта.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Что такое OBD в автомобиле: виды, функции и как пользоваться</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#эволюция-стандартов-от-obd-i-до-obd-ii">Эволюция стандартов: от OBD-I до OBD-II</a></li><li><a href="#где-находится-разъем-и-как-он-устроен">Где находится разъем и как он устроен</a></li><li><a href="#как-работают-коды-неисправностей-dtc">Как работают коды неисправностей DTC</a></li><li><a href="#выбор-диагностического-оборудования-от-elm327-до-профессиональных-сканеров">Выбор диагностического оборудования: от ELM327 до профессиональных сканеров</a></li><li><a href="#процесс-самостоятельной-диагностики">Процесс самостоятельной диагностики</a></li><li><a href="#типичные-ошибки-и-мифы-об-obd">Типичные ошибки и мифы об OBD</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/po/polyarnost-v-prikurivatele-avtomobilya.html">Полярность в прикуривателе: где плюс и минус, схема и ошибки</a></li><li><a href="/articles/e/ep/eps-na-paneli-avtomobilya.html">EPS на панели автомобиля: что это, как работает и как устранить неисправности</a></li><li><a href="/articles/s/si/signaly-na-paneli-priborov-avtomobilya.html">Сигналы на панели приборов: расшифровка и что делать</a></li><li><a href="/articles/z/za/zastrevaet-klyuch-v-zamke-zazhiganiya.html">Ключ застрял в замке зажигания — причины и как вытащить без поломки</a></li><li><a href="/articles/p/pr/provoda-dlya-prikurivaniya-kakie-vybrat.html">Провода для прикуривания: какие выбрать для авто</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Что такое OBD в автомобиле: полное руководство по диагностике</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#эволюция-стандартов-от-obd-i-до-obd-ii">Эволюция стандартов: от OBD-I до OBD-II</a></li><li><a href="#где-находится-разъем-и-как-он-устроен">Где находится разъем и как он устроен</a></li><li><a href="#как-работают-коды-неисправностей-dtc">Как работают коды неисправностей DTC</a></li><li><a href="#выбор-диагностического-оборудования-от-elm327-до-профессиональных-сканеров">Выбор диагностического оборудования: от ELM327 до профессиональных сканеров</a></li><li><a href="#процесс-самостоятельной-диагностики">Процесс самостоятельной диагностики</a></li><li><a href="#типичные-ошибки-и-мифы-об-obd">Типичные ошибки и мифы об OBD</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Современный автомобиль — это сложный компьютеризированный организм, где каждый узел находится под постоянным контролем электроники. Если вы хотя бы раз сталкивались с загоревшейся лампочкой <strong>Check Engine</strong> на приборной панели, то наверняка задумывались, как именно машина сообщает о проблеме. Ответ кроется в стандартизированной системе диагностики, известной как <strong>OBD</strong>. Эта технология превратила ремонт из гадания на кофейной гуще в точный процесс считывания цифровых кодов.</p>
+
+<p>Аббревиатура <strong>OBD</strong> (On-Board Diagnostics) переводится как «бортовая диагностика». Это стандартизированный протокол, который позволяет внешним устройствам — сканерам или смартфонам — «разговаривать» с электронным блоком управления (ЭБУ) автомобиля. Через специальный разъем можно получить доступ к данным о работе двигателя, коробки передач, подушек безопасности и других систем. Понимание принципов работы этой системы дает водителю колоссальное преимущество, позволяя избежать лишней траты денег в автосервисе.</p>
+
+<p>В этой статье мы разберем эволюцию стандартов от OBD-I до современного OBD-II, рассмотрим физическое расположение разъемов и научимся правильно выбирать диагностическое оборудование. Вы узнаете, почему коды ошибок не всегда означают поломку и как использовать полученные данные для <strong>предупредительного ремонта</strong>. Владение этой информацией — ключ к уверенному общению с автомобилем.</p>
+
+<h2 id="эволюция-стандартов-от-obd-i-до-obd-ii">Эволюция стандартов: от OBD-I до OBD-II</h2>
+
+<p>История бортовой диагностики началась задолго до появления универсальных стандартов. В начале 80-х годов компания <em>General Motors</em> внедрила первую систему, получившую название <strong>OBD-I</strong>. Это был важный шаг, но система имела существенные недостатки: каждый автопроизводитель использовал свои разъемы, расположение пинов и программные коды. Владелец <em>Ford</em> не мог использовать сканер от <em>Toyota</em>, что делало диагностику дорогой и зависимой от дилерских центров.</p>
+
+<p>Ситуация кардинально изменилась с внедрением стандарта <strong>OBD-II</strong>, который стал обязательным для всех автомобилей, продаваемых в США с 1996 года, а позже и в Европе (стандарт <em>EOBD</em>). Новая система унифицировала не только форму 16-контактного разъема, но и набор кодов неисправностей, протоколы обмена данными и скорость передачи информации. Теперь любой универсальный сканер мог подключиться к машине любого бренда.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Хотя разъем OBD-II един для всех, протоколы связи (CAN, K-Line, J1850) могут различаться. Дешевые китайские адаптеры часто некорректно работают с автомобилями до 2008-2010 годов выпуска, особенно с дизельными двигателями европейского рынка.</p>
+</blockquote>
+
+<p>Современные версии стандарта, такие как <strong>OBD-III</strong>, находятся в стадии внедрения и предполагают беспроводную передачу данных о состоянии авто прямо в службы мониторинга или страховые компании без физического подключения. Однако пока что золотым стандартом остается именно OBD-II, с которым взаимодействует 99% диагностического оборудования.</p>
+
+<ul>
+<li> 🚗 <strong>OBD-I:</strong> Проприетарные системы 80-х годов, отсутствие унификации, специфичные разъемы для каждого бренда.</li>
+<li> 🔧 <strong>OBD-II:</strong> Глобальный стандарт с 1996 года, единый 16-контактный разъем, универсальные коды ошибок.</li>
+<li> 📡 <strong>OBD-III:</strong> Перспективная технология с удаленным мониторингом через GSM/GPS, пока не получившая массового распространения.</li>
+</ul>
+
+<h2 id="где-находится-разъем-и-как-он-устроен">Где находится разъем и как он устроен</h2>
+
+<p>Согласно стандарту, диагностический порт <strong>DLC</strong> (Data Link Connector) должен располагаться в пределах 40 см от рулевого колеса, чтобы механик мог легко получить к нему доступ. Чаще всего вы найдете его под торпедой со стороны водителя, иногда закрытым пластиковой заглушкой с надписью <code>OBD</code> или <code>Diagnosis</code>. В некоторых моделях, например, у <em>BMW</em> или <em>Peugeot</em>, разъем может быть спрятан в бардачке, под центральным подлокотником или даже в нише для запаски.</p>
+
+<p>Сам разъем представляет собой трапециевидную колодку с 16 контактами. Не все пины в ней задействованы — производители используют только необходимые для коммуникации. Ключевыми являются контакты питания (16 — плюс, 4 и 5 — масса) и линии передачи данных (обычно 6 и 14 для <strong>CAN-bus</strong>, 7 для <em>K-Line</em>). Именно через эти линии сканер считывает потоки данных в реальном времени.</p>
+
+<div class="pb-poll" id="poll-1de025af"><div class="pb-poll-question">📊 Где вы искали разъем OBD в своей машине?</div><div class="pb-poll-option" data-poll="1de025af" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Под рулем слева</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1de025af" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">В бардачке</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1de025af" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Под центральным подлокотником</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1de025af" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">В моторном отсеке</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1de025af" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, где он</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Важно отметить, что питание на разъем подается напрямую от аккумулятора, независимо от положения ключа в замке зажигания (хотя активация ЭБУ часто требует включения зажигания). Это позволяет считывать ошибки даже на заглушенном автомобиле, но для проведения тестов в реальном времени (<strong>Live Data</strong>) двигатель должен работать или находиться в режиме «Key On, Engine Off».</p>
+
+<ul>
+<li> 📍 <strong>Расположение:</strong> 90% вероятности — под рулевой колонкой, слева от водителя.</li>
+<li> ⚡ <strong>Питание:</strong> Постоянный ток 12В, риск разряда аккумулятора при долгом подключении сканера.</li>
+<li> 🔌 <strong>Конфигурация:</strong> 16 пинов, из которых активными могут быть только 4-6 штук.</li>
+</ul>
+
+<h2 id="как-работают-коды-неисправностей-dtc">Как работают коды неисправностей DTC</h2>
+
+<p>Когда электронный блок управления фиксирует отклонение параметров от нормы (например, слишком бедная смесь или пропуски зажигания), он записывает в память специальный код — <strong>DTC</strong> (Diagnostic Trouble Code). Эти коды имеют строго определенную структуру из пяти символов: одной буквы и четырех цифр. Понимание этой структуры помогает сразу определить, в какой системе искать проблему, не заглядывая в мануалы.</p>
+
+<p>Первый символ — это буква, указывающая на тип системы: <strong>P</strong> (Powertrain) для двигателя и трансмиссии, <strong>B</strong> (Body) для кузова, <strong>C</strong> (Chassis) для ходовой части и <strong>U</strong> (Network) для сетевых взаимодействий. Следующая цифра указывает на стандарт (0 — универсальный SAE, 1 — заводской). Остальные цифры конкретизируют узел и тип неисправности.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Код</th>
+<th>Расшифровка</th>
+<th>Вероятная причина</th>
+<th>Серьезность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>P0300</code></td>
+<td>Случайные пропуски зажигания</td>
+<td>Свечи, катушки, подсос воздуха</td>
+<td>Высокая</td>
+</tr>
+<tr>
+<td><code>P0171</code></td>
+<td>Слишком бедная смесь (банк 1)</td>
+<td>Подсос воздуха, неисправный ДМРВ</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td><code>P0420</code></td>
+<td>Низкая эффективность катализатора</td>
+<td>Износ катализатора, лямбда-зонд</td>
+<td>Средняя</td>
+</tr>
+<tr>
+<td><code>C0035</code></td>
+<td>Неисправность датчика скорости колеса</td>
+<td>Обрыв проводки, грязный датчик ABS</td>
+<td>Высокая</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Коды делятся на два типа: «Pending» (ожидающие) и «Confirmed» (подтвержденные). Ошибка попадает в статус Pending при первом обнаружении проблемы. Если при следующем цикле прогрева двигателя ошибка повторяется, она становится Confirmed, и на приборной панели загорается лампа <strong>Check Engine</strong>. Это сделано для того, чтобы система не реагировала на случайные сбои, например, из-за плохого бензина.</p>
+
+<details class="pb-accordion"><summary>Что такое «замороженный кадр» (Freeze Frame)?</summary><div class="pb-accordion-body"><p>Это снимок параметров двигателя в момент возникновения ошибки. Сканер сохраняет данные об оборотах, температуре, нагрузке и скорости именно в ту секунду, когда случился сбой. Анализируя Freeze Frame, можно понять, при каких условиях возникает неисправность: на холодную, под нагрузкой или на холостом ходу.</p></div></details>
+
+<h2 id="выбор-диагностического-оборудования-от-elm327-до-профессиональных-сканеров">Выбор диагностического оборудования: от ELM327 до профессиональных сканеров</h2>
+
+<p>Рынок диагностических устройств огромен, и выбор зависит от ваших целей. Для рядового автолюбителя, желающего просто убрать ошибку или проверить уровень зарядки, подойдет бюджетный адаптер на базе чипа <strong>ELM327</strong>. Эти компактные «свистки» подключаются к смартфону через Bluetooth или Wi-Fi. Однако стоит остерегаться дешевых копий с урезанной версией прошивки (1.5 вместо 2.1), которые могут не поддерживать современные протоколы <em>CAN-bus</em>.</p>
+
+<p>Для более глубокой диагностики, включая кодирование скрытых функций или адаптацию узлов, потребуются мультимарочные сканеры среднего уровня, такие как <em>Launch</em>, <em>Autel</em> или специализированные решения вроде <em>Carista</em> и <em>BimmerCode</em>. Они предоставляют доступ к конкретным блокам (ABS, Airbag, SRS) и позволяют проводить активные тесты, например, включить вентилятор охлаждения или проверить работу форсунок по очереди.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Критерии выбора сканера</h4><label class="check-item"><input type="checkbox"><span>Поддержка протокола вашего авто (CAN/K-Line)</span></label><label class="check-item"><input type="checkbox"><span>Наличие функции Live Data (графики в реальном времени)</span></label><label class="check-item"><input type="checkbox"><span>Возможность обновления ПО сканера</span></label><label class="check-item"><input type="checkbox"><span>Совместимость с вашим смартфоонам (iOS/Android)</span></label><label class="check-item"><input type="checkbox"><span>Цена и функционал</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Профессиональное дилерское оборудование, такое как <em>ODIS</em> для <em>VAG</em> или <em>ISTA</em> для <em>BMW</em>, стоит тысячи долларов и требует лицензий. Оно необходимо для сложного ремонта, прошивки ЭБУ и замены крупных узлов с привязкой к VIN-коду. Для домашнего гаража покупка такого аппарата нецелесообразна, лучше воспользоваться услугами специализированного сервиса.</p>
+
+<ul>
+<li> 📱 <strong>Бюджетный уровень:</strong> ELM327 + приложение Torque/CarScanner. Только чтение/стирание кодов и базовые параметры.</li>
+<li> 🛠️ <strong>Продвинутый уровень:</strong> Мультимарочные планшеты. Работа со всеми системами, адаптации, сервисные интервалы.</li>
+<li> 🏭 <strong>Профессиональный уровень:</strong> Дилерские сканеры. Полное перепрограммирование, защита компонентов, глубокая диагностика.</li>
+</ul>
+
+<h2 id="процесс-самостоятельной-диагностики">Процесс самостоятельной диагностики</h2>
+
+<p>Процедура считывания ошибок достаточно проста и не требует глубоких технических знаний. Сначала найдите разъем и подключите адаптер. Если используется Bluetooth-сканер, сопрягите его со смартфоном (часто пин-код <code>1234</code> или <code>0000</code>). Запустите приложение и дождитесь установления связи с ЭБУ. В этот момент сканер опрашивает блоки управления и получает список сохраненных кодов.</p>
+
+<p>После получения списка кодов не спешите покупать запчасти. Ошибка «Неисправность датчика кислорода» не всегда означает, что умер сам датчик. Это может быть обрыв проводки, окисление контактов или даже проблема с давлением топлива, из-за которой смесь стала некорректной. Используйте интернет-ресурсы для расшифровки кода конкретно для вашей модели автомобиля, так как общие описания могут быть неточными.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Стирание ошибок без устранения их причины — временная мера. Лампа Check Engine погаснет, но через несколько циклов прогрева двигателя (Drive Cycle) ошибка появится снова, так как проблема никуда не денется.</p>
+</blockquote>
+
+<p>Если ошибок нет, но поведение автомобиля странное, используйте режим <strong>Live Data</strong>. Сравнивайте показания датчиков с эталонными значениями для вашего режима работы (холостой ход, полная нагрузка). Например, напряжение на лямбда-зонде должно быстро меняться, а положение дросельной заслонки (TPS) должно расти плавно без скачков.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед подключением сканера убедитесь, что аккумулятор автомобиля заряжен. Скачки напряжения при запуске двигателя с подключенным дешевым адаптером могут привести к его сгоранию или зависанию ЭБУ.</p></aside>
+
+<h2 id="типичные-ошибки-и-мифы-об-obd">Типичные ошибки и мифы об OBD</h2>
+
+<p>Существует расхожее мнение, что если горит «Чек», то машину нужно немедленно останавливать. Это не всегда так. Если лампа горит ровным светом и поведение автомобиля не изменилось, можно доехать до сервиса своим ходом. Однако <strong>мигающий</strong> Check Engine свидетельствует о критических пропусках зажигания, которые могут быстро разрушить катализатор. В этом случае движение нужно прекратить.</p>
+
+<p>Еще один миф гласит, что снятие клеммы аккумулятора всегда сбрасывает ошибки. На современных автомобилях с множеством блоков управления это часто приводит лишь к сбросу настроек радио и часов, пока коды ошибок остаются в энергонезависимой памяти ЭБУ. Кроме того, после сброса питания автомобилю требуется время (от 10 до 100 км пробега) на повторное обучение топливных коррекций, в течение которого расход топлива может быть повышен.</p>
+
+<p>Многие владельцы также игнорируют коды, связанные с системой EVAP (улавливание паров бензина), считая их несущественными. Хотя машина и будет ездить, негерметичность топливной системы — это не только экология, но и риск пожара или попадания грязи в бак. Диагностика через OBD помогает выявить такие скрытые проблемы на ранней стадии.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Диагностика через OBD — это не волшебная палочка, а инструмент для сбора информации. Правильная интерпретация данных важнее, чем сам факт наличия сканера.</p></aside>
+
+<details>
+<summary>Можно ли через OBD увеличить мощность двигателя (Чип-тюнинг)?</summary>
+<p>Теоретически да, разъем OBD используется для перепрограммирования карт двигателя (Stage 1, Stage 2). Однако это требует профессионального оборудования и знаний. Самостоятельные попытки «раздушить» мотор через дешевые приложения могут привести к детонации и выходу двигателя из строя. Стандартный OBD-сканер предназначен для диагностики, а не для глубокого тюнинга.</p>
+</details>
+
+<details>
+<summary>Почему сканер не видит автомобиль?</summary>
+<p>Причин может быть несколько: выключено зажигание (на некоторых авто), сгорел предохранитель цепи питания разъема OBD, несовместимость протокола связи (особенно на старых авто до 2005 года) или брак самого адаптера. Проверьте наличие напряжения на контактах 16 и 4/5 разъема мультиметром.</p>
+</details>
+
+<details>
+<summary>Вредно ли держать адаптер ELM327 постоянно включенным?</summary>
+<p>Качественные адаптеры имеют функцию энергосбережения и уходят в спящий режим после выключения зажигания. Дешевые копии могут продолжать потреблять ток, что приведет к разряду аккумулятора за 3-5 дней простоя. Лучше вынимать устройство, если планируете долгую стоянку.</p>
+</details>
+
+<details>
+<summary>Показывает ли OBD реальный пробег автомобиля?</summary>
+<p>В некоторых блоках (например, ABS или КПП) может храниться моточасы или свой пробег, но основной пробег часто пишется в защищенные ячейки иммобилайзера или приборной панели. Простым OBD-сканером «пробить» скрученный пробег удается не всегда, для этого нужны специализированные программаторы.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/po/polyarnost-v-prikurivatele-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Полярность в прикуривателе: где плюс и минус, схема и ошибки</span>
+                <span class="pb-related-desc">Подробный разбор полярности в автомобильном прикуривателе. Где плюс и минус, как проверить мультимет</span>
+            </a><a href="/articles/e/ep/eps-na-paneli-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">EPS на панели автомобиля: что это, как работает и как устранить неисправности</span>
+                <span class="pb-related-desc">Разбираемся, что такое EPS на панели приборов, почему загорается индикатор и как диагностировать пол</span>
+            </a><a href="/articles/s/si/signaly-na-paneli-priborov-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Сигналы на панели приборов: расшифровка и что делать</span>
+                <span class="pb-related-desc">Подробный разбор всех индикаторов на приборной панели автомобиля: от аварийных до информационных. Уз</span>
+            </a><a href="/articles/z/za/zastrevaet-klyuch-v-zamke-zazhiganiya.html" class="pb-related-card">
+                <span class="pb-related-title">Ключ застрял в замке зажигания — причины и как вытащить без поломки</span>
+                <span class="pb-related-desc">Почему ключ зажигания не поворачивается и не вынимается? 7 причин, пошаговая инструкция извлечения, </span>
+            </a><a href="/articles/p/pr/provoda-dlya-prikurivaniya-kakie-vybrat.html" class="pb-related-card">
+                <span class="pb-related-title">Провода для прикуривания: какие выбрать для авто</span>
+                <span class="pb-related-desc">Как выбрать пусковые провода для авто: сечение, длина, материал изоляции. Рейтинг лучших производите</span>
+            </a><a href="/articles/p/pu/pusko-zaryadka-dlya-akkumulyatora-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Пуско-зарядное устройство для автомобиля: выбор и рейтинг 2026</span>
+                <span class="pb-related-desc">Как выбрать пуско-зарядное устройство для аккумулятора? Рейтинг бустеров, виды ЗУ, правила эксплуата</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

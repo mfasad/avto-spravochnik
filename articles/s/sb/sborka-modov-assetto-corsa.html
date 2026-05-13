@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Сборка модов Assetto Corsa: Полный гайд по установке — Авто Справочник</title>
+    <meta name="description" content="Подробная инструкция по сборке модов для Assetto Corsa. Настройка Content Manager, CSP, проверка совместимости и решение ошибок загрузки трасс.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/sb/sborka-modov-assetto-corsa.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Сборка модов Assetto Corsa: Полный гайд по установке">
+    <meta property="og:description" content="Подробная инструкция по сборке модов для Assetto Corsa. Настройка Content Manager, CSP, проверка совместимости и решение ошибок загрузки трасс.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Сборка модов Assetto Corsa: Полный гайд по установке</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#фундаментальные-основы-content-manager-и-custom-shaders-pack">Фундаментальные основы: Content Manager и Custom Shaders Pack</a></li><li><a href="#архитектура-файлов-и-типы-модификаций">Архитектура файлов и типы модификаций</a></li><li><a href="#пошаговая-инструкция-по-установке-модов">Пошаговая инструкция по установке модов</a></li><li><a href="#настройка-графики-и-оптимизация-производительности">Настройка графики и оптимизация производительности</a></li><li><a href="#решениеных-проблем-и-конфликтов">Решениеных проблем и конфликтов</a></li><li><a href="#где-искать-качественный-контент-и-как-проверять-безопасность">Где искать качественный контент и как проверять безопасность</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/t/to/top-5-avtomobilnykh-pylesosov.html">Топ 5 автомобильных пылесосов: рейтинг лучших моделей 2026</a></li><li><a href="/articles/k/ka/kak-najti-tovar-deshevle.html">Как найти автозапчасти дешевле: 12 проверенных способов 2026</a></li><li><a href="/articles/c/ch/chekhol-na-rul-s-podogrevom-besprovodnoj.html">Беспроводной чехол на руль с подогревом: как выбрать и установить</a></li><li><a href="/articles/k/ka/kak-nazyvaetsya-truba-szadi-mashiny.html">Как называется труба сзади машины: устройство выхлопной системы</a></li><li><a href="/articles/k/ka/kamera-zadnego-vida-rabotaet-cherez-raz.html">Камера заднего вида работает через раз: диагностика и ремонт</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Сборка модов Assetto Corsa: Профессиональный подход</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#фундаментальные-основы-content-manager-и-custom-shaders-pack">Фундаментальные основы: Content Manager и Custom Shaders Pack</a></li><li><a href="#архитектура-файлов-и-типы-модификаций">Архитектура файлов и типы модификаций</a></li><li><a href="#пошаговая-инструкция-по-установке-модов">Пошаговая инструкция по установке модов</a></li><li><a href="#настройка-графики-и-оптимизация-производительности">Настройка графики и оптимизация производительности</a></li><li><a href="#решениеных-проблем-и-конфликтов">Решениеных проблем и конфликтов</a></li><li><a href="#где-искать-качественный-контент-и-как-проверять-безопасность">Где искать качественный контент и как проверять безопасность</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Мир симуляторов вождения давно вышел за рамки стандартных возможностей, заложенных разработчиками, и <strong>Assetto Corsa</strong> стала ярчайшим примером того, как сообщество может расширить горизонты игры. Сборка модов — это не просто добавление новых машин, а создание полноценной экосистемы, требующей глубокого понимания структуры файлов и зависимостей. <em>Кунео</em> (разработчики) заложили отличный фундамент, но без стороннего софта современная симуляция невозможна.</p>
+
+<p>Для новичка процесс может показаться хаотичным набором действий, где легко запутаться в версиях драйверов и плагинах. Однако грамотная организация процесса установки позволяет превратить стандартную игру в фотореалистичный симулятор с физикой, неотличимой от реальности. <mark>Критически важно понимать, что стабильность работы симулятора на 90% зависит от правильной последовательности установки базовых компонентов, а не от количества скачанных автомобилей.</mark></p>
+
+<p>В этой статье мы разберем архитектуру моддинга, от базовых библиотек до сложных конфигураций погоды. Вам предстоит узнать, как избежать конфликтов версий и почему старые методы установки через папку <code>mods</code> уходят в прошлое. Правильная <strong>сборка модов</strong> — это баланс между визуальным качеством и производительностью системы.</p>
+
+<h2 id="фундаментальные-основы-content-manager-и-custom-shaders-pack">Фундаментальные основы: Content Manager и Custom Shaders Pack</h2>
+
+<p>Любая профессиональная сборка начинается не с выбора болида, а с установки правильного лаунчера. Стандартный лаунчер игры давно устарел и не поддерживает современные графические технологии, поэтому <strong>Content Manager</strong> (CM) является обязательным стандартом индустрии. Это приложение берет на управление запуском, настройкой серверов и, самое главное, установкой дополнений.</p>
+
+<p>Параллельно с лаунчером необходимо установить <strong>Custom Shaders Pack</strong> (CSP). Это набор скриптов, который кардинально меняет рендеринг света, тени, отражений и погодных условий. Без активации CSP большинство современных трасс просто не запустятся или будут выглядеть как плоские текстуры из начала 2000-х. Именно связка CM и CSP создает ту самую"магию", за которую все любят моды.</p>
+
+<p>Установка этих компонентов требует внимательности к версиям. Часто бывает так, что новая версия CSP требует определенной версии <em>Content Manager</em>, и игнорирование этого приводит к вылетам. Всегда проверяйте совместимость перед обновлением, особенно если у вас установлена большая коллекция дополнений.</p>
+
+<div class="pb-poll" id="poll-6d76f0d3"><div class="pb-poll-question">📊 Какой лаунчер вы используете для Assetto Corsa?</div><div class="pb-poll-option" data-poll="6d76f0d3" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Оригинальный лаунчер Steam</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6d76f0d3" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Content Manager</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6d76f0d3" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Пиратская сборка без лаунчера</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6d76f0d3" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не играю, только читаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не устанавливайте Custom Shaders Pack поверх"грязной" версии игры, где ранее были ручные правки файлов <code>system.cfg</code> или <code>graphics.ini</code>. Это гарантированно приведет к конфликтам настроек и нестабильному FPS.</p>
+</blockquote>
+
+<h2 id="архитектура-файлов-и-типы-модификаций">Архитектура файлов и типы модификаций</h2>
+
+<p>Понимание структуры папок — ключ к успешному управлению контентом. В отличие от многих других игр, здесь нет единой папки"Install", куда можно свалить все архивы. Файлы модов делятся на несколько ключевых типов, каждый из которых имеет свое место в директории <code>Assetto Corsa</code>.</p>
+
+<p>Автомобили обычно упаковываются в формате <code>.car</code> или <code>.acmod</code> и размещаются в папке <code>content/cars</code>. Трассы, являющиеся наиболее тяжелыми объектами, лежат в <code>content/tracks</code>. Отдельно существуют плагины погоды (Weather) и скины, которые требуют индивидуального подхода к установке. Путаница в этих директориях — самая частая причина, почему игра не видит новый контент.</p>
+
+<p>Современные моды часто используют технологию <strong>ACMOD</strong>, которая представляет собой самодостаточный архив. Это упрощает жизнь пользователю: достаточно перетащить файл в окно Content Manager, и он сам найдет нужное место. Однако старые моды, особенно треки с множеством конфигураций, могут требовать ручной распаковки и проверки путей к текстурам.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте функцию"Show hidden content" в Content Manager, чтобы видеть системные и скрытые моды, которые могут конфликтовать с новыми установками.</p></aside>
+
+<p>Важно различать понятия"мод" и"патч". Мод добавляет новый контент, а патч (например, Pure или Sol) меняет глобальные параметры рендеринга. <em>Sol</em> долгое время был стандартом погоды, но сейчас его место занимает <strong>Pure</strong>, который требует отдельной покупки и установки, так как не является бесплатным дополнением.</p>
+
+<h2 id="пошаговая-инструкция-по-установке-модов">Пошаговая инструкция по установке модов</h2>
+
+<p>Процесс инсталляции можно разделить на четкие этапы, соблюдение которых минимизирует риски ошибок. Сначала всегда устанавливаются базовые компоненты (CM, CSP), затем драйверы погоды, и только в конце — конкретные машины и треки. Нарушение этой последовательности часто приводит к тому, что трассы загружаются без освещения или с розовыми текстурами.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист правильной установки</h4><label class="check-item"><input type="checkbox"><span>Проверка версии Content Manager</span></label><label class="check-item"><input type="checkbox"><span>Установка Custom Shaders Pack (стабильная версия)</span></label><label class="check-item"><input type="checkbox"><span>Установка драйвера погоды (Pure/Sol)</span></label><label class="check-item"><input type="checkbox"><span>Тестовый заезд на стандартной трассе</span></label><label class="check-item"><input type="checkbox"><span>Установка пользовательских автомобилей</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>При установке автомобилей через Content Manager используйте кнопку"Install new content" в верхнем меню. Если вы предпочитаете ручной метод, убедитесь, что путь к файлу не содержит кириллических символов, так как движок игры может некорректно обрабатывать русские буквы в путях к файлам. После копирования файлов обязательно перезапустите лаунчер, чтобы обновился кэш.</p>
+
+<p>Для трасс процесс аналогичен, но требует больше дискового пространства. Тяжелые треки вроде <em>Nürburgring Nordschleife</em> с детализацией 4K могут весить несколько гигабайт. После установки рекомендуется запустить практику на этой трассе в одиночном режиме, чтобы движок скомпилировал шейдеры и не было фризов во время онлайн-заездов.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип мода</th>
+<th>Расположение файла</th>
+<th>Метод установки</th>
+<th>Необходим CSP</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Автомобиль</td>
+<td>content/cars</td>
+<td>Drag & Drop в CM</td>
+<td>Желательно</td>
+</tr>
+<tr>
+<td>Трасса</td>
+<td>content/tracks</td>
+<td>Ручной или CM</td>
+<td>Обязательно</td>
+</tr>
+<tr>
+<td>Погода (Pure)</td>
+<td>content/weather</td>
+<td>CM (Apps)</td>
+<td>Да (версия 0.1.79+)</td>
+</tr>
+<tr>
+<td>Скин</td>
+<td>content/cars/{car}/skins</td>
+<td>Ручной</td>
+<td>Нет</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ Внимание: При ручной установке модов никогда не заменяйте файлы в папке <code>system</code>, если в инструкции явно не указано сделать резервную копию. Повреждение системных файлов движка потребует полной переустановки игры.</p>
+</blockquote>
+
+<h2 id="настройка-графики-и-оптимизация-производительности">Настройка графики и оптимизация производительности</h2>
+
+<p>Сборка модов — это постоянный поиск компромисса между качеством картинки и количеством кадров в секунду. <strong>Custom Shaders Pack</strong> предоставляет огромные возможности для настройки, но по умолчанию может быть слишком требовательным к ресурсам. В меню CSP раздел"Post Processing" позволяет отключать тяжелые эффекты, такие как объемные облака или детализированные отражения.</p>
+
+<p>Особое внимание следует уделить настройкам <em>Ray Tracing</em>, если ваша видеокарта поддерживает эту технологию. Включение трассировки лучей в CSP дает фотореалистичные отражения, но может снизить FPS вдвое. Для соревновательной игры онлайн лучше использовать классический рендеринг с высокими настройками текстур, но без избыточных пост-эффектов.</p>
+
+<details class="pb-accordion"><summary>Секретные настройки CSP для слабых ПК</summary><div class="pb-accordion-body"><p>В файле настройки CSP можно вручную прописать параметры, отключающие рендеринг теней для удаленных объектов. Для этого нужно найти раздел [SHADERS] и установить параметр renderShadowDistance в значение 50. Это значительно повысит FPS на старых процессорах.</p></div></details>
+
+<p>Также важна настройка разрешения рендеринга. Использование масштабирования изображения (Upscaling) через <strong>DLSS</strong> или <em>FSR</em> в настройках CSP позволяет получить четкую картинку при меньшем внутреннем разрешении. Это особенно актуально для владельцев мониторов 4K, где нагрузка на GPU при сборке модов возрастает кратно.</p>
+
+<h2 id="решениеных-проблем-и-конфликтов">Решениеных проблем и конфликтов</h2>
+
+<p>Даже при аккуратной сборке могут возникать конфликты. Самая распространенная проблема —"вылет" игры при загрузке определенной трассы. Чаще всего это указывает на нехватку оперативной памяти или конфликт версий CSP. Если игра закрывается без ошибки, попробуйте запустить ее в режиме совместимости или откатить версию шейдер-пака до предыдущей стабильной сборки.</p>
+
+<p>Проблемы с текстурами (мигание, отсутствие деталей) часто решаются очисткой кэша шейдеров. В Content Manager есть функция"Clean shader cache", которую нужно использовать после каждого крупного обновления драйверов видеокарты или самого CSP. Накопление мусорных файлов кэша — бич долгоиграющих сборок.</p>
+
+<p>Если моды не отображаются в списке, проверьте, не стоит ли фильтр"Hide unsupported content" в настройках лаунчера. Иногда старые моды помечаются как несовместимые с текущей версией игры, и простой снятие галочки возвращает их в строй. Также убедитесь, что антивирус не блокирует работу скриптов Lua, которые активно используются модами.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>90% проблем со стабильностью решаются обновлением Custom Shaders Pack до последней preview-версии или откатом на последнюю стабильную (stable) версию.</p></aside>
+
+<h2 id="где-искать-качественный-контент-и-как-проверять-безопасность">Где искать качественный контент и как проверять безопасность</h2>
+
+<p>Основным источником модов является сайт <em>RaceDepartment</em>, где контент проходит модерацию. Однако множество уникальных автомобилей можно найти на специализированных форумах и Discord-каналах. При скачивании из непроверенных источников всегда проверяйте файлы антивирусом, так как исполняемые файлы модов могут быть маскировкой для вредоносного ПО.</p>
+
+<p>Обращайте внимание на дату выхода мода. Моды, созданные более 3-4 лет назад, могут некорректно работать с новыми версиями CSP. Ищите пометки"Updated for CSP" или"Pure Compatible". Сообщество часто выпускает патчи совместимости для старой классики, которые можно найти в комментариях к оригинальным темам.</p>
+
+<p>Для проверки целостности файлов используйте функцию"Verify integrity" в Steam после установки большого количества модов. Это поможет заменить системные файлы, которые могли быть случайно повреждены или изменены некорректно работающими плагинами. Регулярная проверка целостности — хорошая привычка для любого моддера.</p>
+
+<details>
+<summary>Почему игра вылетает сразу после появления логотипа?</summary>
+<p>Чаще всего проблема кроется в конфликте драйверов видеокарты и версии Custom Shaders Pack. Попробуйте запустить игру без CSP (отключив его в Content Manager). Если игра запускается, переустановите CSP на версию помеченную как Stable.</p>
+</details>
+
+<details>
+<summary>Можно ли играть с модами в онлайн-режиме?</summary>
+<p>Да, но только если у всех игроков на сервере установлены идентичные версии модов (машины и трассы). Для автомобилей часто используются"заменители" (sound/physics swaps), которые позволяют играть на стандартных моделях с физикой реальных прототипов, что упрощает подключение к серверам.</p>
+</details>
+
+<details>
+<summary>Как удалить мод полностью, если он вызывает ошибки?</summary>
+<p>Простого удаления файлов из папки content часто недостаточно. Используйте Content Manager: найдите мод в списке, нажмите правой кнопкой мыши и выберите"Uninstall" или"Delete". Если мод установлен вручную, удалите папку и очистите кэш шейдеров.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/t/to/top-5-avtomobilnykh-pylesosov.html" class="pb-related-card">
+                <span class="pb-related-title">Топ 5 автомобильных пылесосов: рейтинг лучших моделей 2026</span>
+                <span class="pb-related-desc">Обзор 5 лучших автомобильных пылесосов. Сравниваем мощность, типы фильтров и удобство использования.</span>
+            </a><a href="/articles/k/ka/kak-najti-tovar-deshevle.html" class="pb-related-card">
+                <span class="pb-related-title">Как найти автозапчасти дешевле: 12 проверенных способов 2026</span>
+                <span class="pb-related-desc">Где искать дешёвые оригинальные и неоригинальные запчасти для авто: сравнение цен, проверка поставщи</span>
+            </a><a href="/articles/c/ch/chekhol-na-rul-s-podogrevom-besprovodnoj.html" class="pb-related-card">
+                <span class="pb-related-title">Беспроводной чехол на руль с подогревом: как выбрать и установить</span>
+                <span class="pb-related-desc">Экспертный обзор чехлов на руль с подогревом без проводов: плюсы и минусы, ТОП-5 моделей, инструкция</span>
+            </a><a href="/articles/k/ka/kak-nazyvaetsya-truba-szadi-mashiny.html" class="pb-related-card">
+                <span class="pb-related-title">Как называется труба сзади машины: устройство выхлопной системы</span>
+                <span class="pb-related-desc">Узнайте, как правильно называется труба сзади машины. Подробный разбор выхлопной системы, виды глуши</span>
+            </a><a href="/articles/k/ka/kamera-zadnego-vida-rabotaet-cherez-raz.html" class="pb-related-card">
+                <span class="pb-related-title">Камера заднего вида работает через раз: диагностика и ремонт</span>
+                <span class="pb-related-desc">Почему парктроник включается с перебоями? Разбираем причины: от окисленных контактов до сбоя магнито</span>
+            </a><a href="/articles/x/xi/xiaomi-pylesos-dlya-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Xiaomi пылесос для авто: ТОП-5 моделей 2026 и как выбрать</span>
+                <span class="pb-related-desc">Рейтинг лучших автомобильных пылесосов Xiaomi: сравнение характеристик, цены, отзывы владельцев. Как</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

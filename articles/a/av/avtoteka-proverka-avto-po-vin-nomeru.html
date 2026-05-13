@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Автотека: проверка авто по вин-коду онлайн — Авто Справочник</title>
+    <meta name="description" content="Полная проверка авто по вин-номеру в Автотеке. Узнайте историю машины, скручен пробег или нет, есть ли ограничения и залоги перед покупкой.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/a/av/avtoteka-proverka-avto-po-vin-nomeru.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Автотека: проверка авто по вин-коду онлайн">
+    <meta property="og:description" content="Полная проверка авто по вин-номеру в Автотеке. Узнайте историю машины, скручен пробег или нет, есть ли ограничения и залоги перед покупкой.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/" class="pb-nav-active">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/pokupka-i-prodazha/">Покупка и Продажа</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Автотека: проверка авто по вин-коду онлайн</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-автотека-и-откуда-берутся-данные">Что такое Автотека и откуда берутся данные</a></li><li><a href="#как-правильно-пробить-автомобиль-по-vin-коду">Как правильно пробить автомобиль по VIN-коду</a></li><li><a href="#расшифровка-ключевых-разделов-отчета">Расшифровка ключевых разделов отчета</a></li><li><a href="#юридическая-чистота-залоги-угон-и-ограничения">Юридическая чистота: залоги, угон и ограничения</a></li><li><a href="#техническое-состояние-и-история-обслуживания">Техническое состояние и история обслуживания</a></li><li><a href="#стоимость-проверки-и-альтернативы">Стоимость проверки и альтернативы</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ki/kitajskij-vnedorozhnik-rejting-luchshikh.html">Китайский внедорожник: рейтинг лучших моделей 2026-2026</a></li><li><a href="/articles/a/av/avtomobil-dom-na-kolesakh.html">Автомобиль дом на колесах: гид по выбору и покупке кемпера</a></li><li><a href="/articles/c/ch/cherry-tigo-pro-max.html">Cherry Tiggo Pro Max: обзор, характеристики и отзывы владельцев 2026</a></li><li><a href="/articles/n/na/nadezhnyj-avtomobil-do-500-tysyach.html">Надежный автомобиль до 500 000 ₽ в 2026: ТОП-10 моделей и критерии выбора</a></li><li><a href="/articles/k/kl/klyuch-avto-s-probegom.html">Ключ авто с пробегом: как проверить и избежать мошенничества</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Проверка авто по вин-номеру: как не купить проблемную машину</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-автотека-и-откуда-берутся-данные">Что такое Автотека и откуда берутся данные</a></li><li><a href="#как-правильно-пробить-автомобиль-по-vin-коду">Как правильно пробить автомобиль по VIN-коду</a></li><li><a href="#расшифровка-ключевых-разделов-отчета">Расшифровка ключевых разделов отчета</a></li><li><a href="#юридическая-чистота-залоги-угон-и-ограничения">Юридическая чистота: залоги, угон и ограничения</a></li><li><a href="#техническое-состояние-и-история-обслуживания">Техническое состояние и история обслуживания</a></li><li><a href="#стоимость-проверки-и-альтернативы">Стоимость проверки и альтернативы</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Покупка подержанного автомобиля всегда сопряжена с определенными рисками, ведь продавец может скрыть реальный пробег, факт ДТП или наличие юридических ограничений. Именно для минимизации этих рисков существует <strong>Автотека</strong> — сервис, позволяющий пробить машину по уникальному VIN-номеру и получить исчерпывающую информацию о её прошлом. В отличие от простых баз ГИБДД, этот агрегатор собирает данные из тысяч источников, включая страховые компании, сервисные центры и объявления о продаже.</p>
+
+<p>Использование подобных отчетов стало стандартом безопасности для любого разумного покупателя на вторичном рынке. Отчет покажет, как эксплуатировался автомобиль, менялись ли у него владельцы и не числится ли он в угоне. Без такой <strong>проверки</strong> сделка превращается в лотерею, где на кону стоят сотни тысяч рублей.</p>
+
+<p>В этой статье мы подробно разберем, как правильно пользоваться сервисом, какие данные он содержит и на какие нюансы стоит обратить особое внимание при анализе полученного отчета. Грамотная интерпретация данных поможет вам отсеять неподходящие варианты еще на этапе телефонного разговора.</p>
+
+<h2 id="что-такое-автотека-и-откуда-берутся-данные">Что такое Автотека и откуда берутся данные</h2>
+
+<p>Автотека представляет собой масштабную базу данных, аккумулирующую информацию о транспортных средствах, зарегистрированных на территории России. Основным источником сведений служат объявления о продаже автомобилей на популярных площадках, таких как Авито, Auto.ru и Drom.ru. Однако ценность сервиса заключается не только в архивах объявлений, но и в интеграции с государственными реестрами и базами страховых компаний.</p>
+
+<p>Система анализирует фотографии, размещенные в разных объявлениях за разные годы. Алгоритмы <strong>компьютерного зрения</strong> сравнивают изображения, фиксируя повреждения кузова, которые могли быть скрыты продавцом при последующей продаже. Это позволяет выявить даже те аварии, о которых не было заявлено в ГИБДД, если они были зафиксированы визуально на фото.</p>
+
+<p>Кроме визуального анализа, сервис сопоставляет данные о пробеге. Если в одном объявлении указано 100 000 км, а через год в другом — 80 000 км, система помечает это как подозрительное изменение. Также учитываются данные о ТО, полученные от официальных дилеров, и информация из базы ОСАГО, где фиксируется пробег при заключении договора.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Данные в отчете могут обновляться с задержкой. Если продавец только что купил машину и еще не успел её зарегистрировать или застраховать, в базе может не быть свежей информации о новом собственнике.</p>
+</blockquote>
+
+<p>Важно понимать, что Автотека не является государственным органом, а представляет собой коммерческий агрегатор. Тем не менее, точность собираемой информации позволяет с высокой долей вероятности оценить техническое и юридическое состояние <em>транспортного средства</em>.</p>
+
+<div class="pb-poll" id="poll-627e8acc"><div class="pb-poll-question">📊 Как вы обычно проверяете автомобиль перед покупкой?</div><div class="pb-poll-option" data-poll="627e8acc" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Только визуально</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="627e8acc" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">По базе ГИБДД бесплатно</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="627e8acc" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Заказываю платный отчет</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="627e8acc" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Вообще не проверяю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="как-правильно-пробить-автомобиль-по-vin-коду">Как правильно пробить автомобиль по VIN-коду</h2>
+
+<p>Процесс получения отчета максимально упрощен и не требует специальных технических знаний. Все, что вам понадобится — это доступ в интернет и VIN-номер автомобиля. Найти этот код можно в техническом паспорте (ПТС), свидетельстве о регистрации (СТС) или на кузове самой машины, обычно под лобовым стеклом или на стойке двери.</p>
+
+<p>Для начала работы перейдите на страницу сервиса и введите 17-значный код в специальное поле поиска. Система автоматически определит марку и модель, если код введен корректно. После этого вам будет предложено оплатить формирование отчета, так как услуга является платной, но стоимость несоизмерима с рисками покупки «кота в мешке».</p>
+
+<p>Оплатить проверку можно различными способами: банковскими картами, электронными кошельниками или через системы быстрых платежей. После проведения транзакции отчет формируется мгновенно и становится доступен для просмотра и скачивания в формате PDF. Вы также получите ссылку на email, что позволит сохранить историю проверки.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Что нужно для проверки</h4><label class="check-item"><input type="checkbox"><span>Найти VIN-код в документах</span></label><label class="check-item"><input type="checkbox"><span>Проверить читаемость кода на кузове</span></label><label class="check-item"><input type="checkbox"><span>Иметь доступ к интернету</span></label><label class="check-item"><input type="checkbox"><span>Оплатить услугу формирования отчета</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Стоит отметить, что иногда для старых автомобилей или редких моделей данных может быть меньше. В таких случаях система честно предупреждает о неполноте сведений. Однако даже частичный отчет может содержать критически важную информацию, например, о нахождении машины в залоге.</p>
+
+<h2 id="расшифровка-ключевых-разделов-отчета">Расшифровка ключевых разделов отчета</h2>
+
+<p>Полученный документ содержит множество разделов, и новичку бывает сложно сориентироваться в потоке информации. Наиболее важным блоком является «История владения», где отображается количество собственников и периоды эксплуатации. Резкая смена владельцев или использование автомобиля в такси (что часто помечается отдельным значком) должны насторожить покупателя.</p>
+
+<p>Раздел «ДТП и повреждения» визуизирует места ударов на схеме кузова. Здесь важно смотреть не только на количество аварий, но и на их характер. Мелкие царапины на бампере менее опасны, чем нарушение геометрии лонжеронов. Также в этом блоке отображаются фотографии с мест событий, если они были загружены в базу.</p>
+
+<p>Отдельного внимания заслуживает блок «Пробег». Здесь представлены графики изменения показаний одометра. Если вы видите резкие скачки вниз, это прямой признак <strong>скручивания пробега</strong>. Даже если продавец клянется, что «просто менял приборную панель», юридически это считается скруткой, и автомобиль теряет в цене.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Раздел отчета</th>
+<th>Что показывает</th>
+<th>На что обратить внимание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Владение</td>
+<td>Количество хозяев, тип владельца (физ/юр лицо)</td>
+<td>Использование в такси, лизинге</td>
+</tr>
+<tr>
+<td>ДТП</td>
+<td>Зарегистрированные аварии, схемы повреждений</td>
+<td>Серьезные удары в силовые элементы</td>
+</tr>
+<tr>
+<td>Пробег</td>
+<td>Динамика изменения показаний одометра</td>
+<td>Резкое уменьшение цифр (скрутка)</td>
+</tr>
+<tr>
+<td>Ограничения</td>
+<td>Запреты на регистрацию, залоги, угон</td>
+<td>Наличие активных запретов от ФССП</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>В разделе «Комплектация» можно сверить заводские опции с тем, что есть в наличии. Это помогает выявить автомобили, побывавшие в «тотале» и восстановленные с заменой оригинальных деталей на дешевые аналоги. Также здесь могут быть указаны данные о цвете, который иногда меняют без документального оформления.</p>
+
+<details class="pb-accordion"><summary>Скрытые маркеры в отчете</summary><div class="pb-accordion-body"><p>В отчете могут встречаться специальные пометки, например, «Машина из каршеринга» или «Работала в такси». Эти метки ставятся на основе анализа объявлений и данных телематики. Даже если машину перекрасили и поменяли салон, скрыть её прошлое в цифровом следе практически невозможно.</p></div></details>
+
+<h2 id="юридическая-чистота-залоги-угон-и-ограничения">Юридическая чистота: залоги, угон и ограничения</h2>
+
+<p>Одной из самых опасных ситуаций для покупателя является приобретение автомобиля, находящегося в залоге у банка. В этом случае, если прежний владелец перестанет платить кредит, банк имеет полное право изъять транспортное средство, даже если вы являетесь добросовestным приобретателем. Автотека проверяет базы реестра залогов, что позволяет избежать такой участи.</p>
+
+<p>Также система мониторит базы розыска и ограничения регистрационных действий. Машина может быть арестована судебными приставами из-за долгов владельца по алиментам, штрафам или кредитам. Купить такой автомобиль можно, но поставить его на учет в ГИБДД не получится до тех пор, пока долги не будут погашены.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если в отчете указано ограничение на регистрационные действия, ни в коем случае не передавайте деньги продавцу. Снятие ограничений может занять месяцы, а в некоторых случаях требует личного присутствия должника.</p>
+</blockquote>
+
+<p>Проверка на угон осуществляется по базам МВД. Статус «в угоне» может появиться у машины, которую, например, угнали в другом регионе и еще не успели найти, или у автомобиля с перебитыми номерами. Покупка такой техники грозит её конфискацией и уголовным делом для нового владельца.</p>
+
+<p>Для полной уверенности рекомендуется сверить VIN-номер в отчете с номером на кузове автомобиля. Несоответствие даже одной цифры говорит о том, что перед вами либо «конструктор», либо машина с перебитыми идентификационными знаками. <strong>Юридическая чистота</strong> — это фундамент безопасной сделки.</p>
+
+<h2 id="техническое-состояние-и-история-обслуживания">Техническое состояние и история обслуживания</h2>
+
+<p>Хотя Автотека не проводит физическую диагностику двигателя или коробки передач, она предоставляет косвенные данные о техническом состоянии. История обращений к официальным дилерам может рассказать о частоте замены масла, ремонтах подвески и других дорогостоящих процедурах. Отсутствие записей в течение долгих лет может свидетельствовать о «гаражном» обслуживании.</p>
+
+<p>Анализ фотографий помогает оценить состояние лакокрасочного покрытия и салона. Если на старых фото видны глубокие вмятины, а на новых их нет, значит, кузовной ремонт проводился. По характеру повреждений можно предположить, насколько качественно было выполнено восстановление.</p>
+
+<p>Важным индикатором является использование автомобиля в коммерческих целях. Машины из таксопарков или каршеринга, как правило, имеют огромный ресурсный износ, который не всегда заметен внешне. Двигатели таких <em>агрегатов</em> часто работают на износ, а салон может быть пропитан запахом сотен разных пассажиров.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Сравните данные о последнем ТО с текущим пробегом. Если на сервисе машина была в 150 000 км, а сейчас на одометре 120 000 км — пробег точно скручен.</p></aside>
+
+<p>Отсутствие информации о ремонтах не всегда означает, что их не было. Владелец мог обслуживаться в частных сервисах, которые не передают данные в единую базу. Поэтому отсутствие записей — не повод сразу отказываться от покупки, но повод провести более тщательную диагностику на подъемнике.</p>
+
+<h2 id="стоимость-проверки-и-альтернативы">Стоимость проверки и альтернативы</h2>
+
+<p>Услуга формирования отчета является платной, что часто вызывает вопросы у экономных покупателей. Однако стоимость одного отчета несоизмерима с потенциальными убытками от покупки проблемного автомобиля. Цена формируется исходя из затрат на сбор, обработку и хранение огромных массивов данных из различных источников.</p>
+
+<p>Существуют бесплатные альтернативы, такие как сайт ГИБДД или реестр залогов, но они дают лишь фрагментарную картину. Бесплатные сервисы не покажут скрученный пробег, историю ДТП, если она не попала в базу полиции, или использование машины в такси. Платный отчет экономит время, собирая все данные в одном документе.</p>
+
+<p>Часто продавцы сами предоставляют отчет Автотеки, чтобы доказать прозрачность истории автомобиля. В таких случаях важно проверить дату формирования отчета: если ему больше месяца, ситуация могла измениться. Лучше заказать свежую проверку самостоятельно непосредственно перед сделкой.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Платная проверка окупается даже в том случае, если она просто подтверждает ваши подозрения и спасает от покупки неликвида.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли проверить автомобиль только по госномеру?</summary>
+<p>Формально поиск ведется по VIN-коду. Однако многие сервисы, включая саму Автотеку, позволяют ввести госномер, чтобы найти привязанный к нему VIN в базах объявлений или других источниках. Но наиболее точный и надежный способ — использовать именно 17-значный код кузова.</p>
+</details>
+
+<details>
+<summary>Насколько актуальны данные в базе?</summary>
+<p>Данные обновляются регулярно, но не в режиме реального времени. Информация из ГИБДД может поступать с задержкой в несколько дней или недель. Данные из объявлений обновляются по мере их появления на площадках-партнерах.</p>
+</details>
+
+<details>
+<summary>Что делать, если в отчете ошибка?</summary>
+<p>Если вы обнаружили несоответствие данных (например, неверный цвет или год выпуска), можно обратиться в службу поддержки сервиса для уточнения информации. Ошибки могут возникать при ручном вводе данных операторами или при распознавании текста.</p>
+</details>
+
+<details>
+<summary>Покажет ли отчет, был ли автомобиль в такси?</summary>
+<p>Да, если автомобиль использовался в официальных таксопарках или каршеринге, и эти данные попали в базы объявлений или страховые реестры, в отчете будет соответствующая пометка. Это критически важный параметр, так как ресурс таких машин значительно ниже.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ki/kitajskij-vnedorozhnik-rejting-luchshikh.html" class="pb-related-card">
+                <span class="pb-related-title">Китайский внедорожник: рейтинг лучших моделей 2026-2026</span>
+                <span class="pb-related-desc">Объективный рейтинг китайских внедорожников. Сравнение Geely, Haval, Chery и Exeed. Реальный расход,</span>
+            </a><a href="/articles/a/av/avtomobil-dom-na-kolesakh.html" class="pb-related-card">
+                <span class="pb-related-title">Автомобиль дом на колесах: гид по выбору и покупке кемпера</span>
+                <span class="pb-related-desc">Полный обзор типов автодомов, их плюсов и минусов. Как выбрать кемпер для путешествий, сравнение lay</span>
+            </a><a href="/articles/c/ch/cherry-tigo-pro-max.html" class="pb-related-card">
+                <span class="pb-related-title">Cherry Tiggo Pro Max: обзор, характеристики и отзывы владельцев 2026</span>
+                <span class="pb-related-desc">Подробный разбор кроссовера Cherry Tiggo Pro Max: технические параметры, комплектации, плюсы и минус</span>
+            </a><a href="/articles/n/na/nadezhnyj-avtomobil-do-500-tysyach.html" class="pb-related-card">
+                <span class="pb-related-title">Надежный автомобиль до 500 000 ₽ в 2026: ТОП-10 моделей и критерии выбора</span>
+                <span class="pb-related-desc">Ищем лучшие б/у машины до 500 000 рублей: рейтинг надежных авто с пробегом, на что смотреть при поку</span>
+            </a><a href="/articles/k/kl/klyuch-avto-s-probegom.html" class="pb-related-card">
+                <span class="pb-related-title">Ключ авто с пробегом: как проверить и избежать мошенничества</span>
+                <span class="pb-related-desc">Полное руководство по проверке ключей от подержанного автомобиля: от диагностики чипа до юридических</span>
+            </a><a href="/articles/r/ra/razmestit-obyavlenie-o-prodazhe-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Как разместить объявление о продаже автомобиля: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как правильно разместить объявление о продаже авто на популярных плошадках. Советы по оформ</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

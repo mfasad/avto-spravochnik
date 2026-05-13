@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Пусковой ток насоса: расчет, защита и выбор оборудования — Авто Справочник</title>
+    <meta name="description" content="Что такое пусковой ток скважинного насоса? Как рассчитать нагрузку на сеть, выбрать автомат и стабилизатор. Таблица кратности токов и советы экспертов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pu/puskovoj-tok-nasosa-dlya-skvazhiny.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Пусковой ток насоса: расчет, защита и выбор оборудования">
+    <meta property="og:description" content="Что такое пусковой ток скважинного насоса? Как рассчитать нагрузку на сеть, выбрать автомат и стабилизатор. Таблица кратности токов и советы экспертов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/garazh-i-strojka/">Гараж и Стройка</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Пусковой ток насоса: расчет, защита и выбор оборудования</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физическая-природа-возникновения-пусковых-токов">Физическая природа возникновения пусковых токов</a></li><li><a href="#расчет-пускового-тока-для-различных-типов-насосов">Расчет пускового тока для различных типов насосов</a></li><li><a href="#таблица-кратности-токов-для-популярных-типов-двигателей">Таблица кратности токов для популярных типов двигателей</a></li><li><a href="#влияние-пусковых-токов-на-элементы-электросети">Влияние пусковых токов на элементы электросети</a></li><li><a href="#методы-снижения-пусковой-нагрузки-и-защиты">Методы снижения пусковой нагрузки и защиты</a></li><li><a href="#выбор-стабилизатора-напряжения-для-насосной-станции">Выбор стабилизатора напряжения для насосной станции</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pe/perekryt-kryshu-myagkoj-krovlej.html">Перекрыть крышу мягкой кровлей: технологии, цены, монтаж</a></li><li><a href="/articles/k/ka/kak-podklyuchit-trekhkontaktnyj-vyklyuchatel.html">Как подключить трехконтактный выключатель: схема и монтаж</a></li><li><a href="/articles/v/va/varianty-vorot-dlya-garazha.html">Варианты ворот для гаража: виды, плюсы и минусы конструкций</a></li><li><a href="/articles/s/sm/smotrovye-yamy-dlya-legkovykh-avtomobilej.html">Смотровая яма для легковых авто: размеры, чертежи, гидроизоляция</a></li><li><a href="/articles/p/po/portal-mojka-dlya-legkovykh-avtomobilej.html">Портал мойка для легковых автомобилей: выбор и монтаж</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Пусковой ток насоса для скважины: расчет и защита сети</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физическая-природа-возникновения-пусковых-токов">Физическая природа возникновения пусковых токов</a></li><li><a href="#расчет-пускового-тока-для-различных-типов-насосов">Расчет пускового тока для различных типов насосов</a></li><li><a href="#таблица-кратности-токов-для-популярных-типов-двигателей">Таблица кратности токов для популярных типов двигателей</a></li><li><a href="#влияние-пусковых-токов-на-элементы-электросети">Влияние пусковых токов на элементы электросети</a></li><li><a href="#методы-снижения-пусковой-нагрузки-и-защиты">Методы снижения пусковой нагрузки и защиты</a></li><li><a href="#выбор-стабилизатора-напряжения-для-насосной-станции">Выбор стабилизатора напряжения для насосной станции</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Эффективная работа автономной системы водоснабжения напрямую зависит от правильного подбора электрооборудования. Владельцы частных домов часто сталкиваются с ситуацией, когда при запуске мощного насоса выбивает автоматический выключатель или мигает свет во всем доме. Это явление связано с физическими процессами, происходящими в обмотках двигателя в момент включения.</p>
+
+<p>Кратковременный скачок потребления энергии, известный как <strong>пусковой ток</strong>, может в несколько раз превышать номинальные значения, указанные в паспорте устройства. Игнорирование этого фактора при проектировании электросети приводит к перегреву проводки, деградации контактов и преждевременному выходу из строя дорогостоящего насосного оборудования. Понимание природы этого явления позволит избежать аварийных ситуаций.</p>
+
+<p>В данной статье мы подробно разберем, почему возникает пиковая нагрузка, как ее правильно рассчитать для конкретного типа двигателя и какие технические решения помогут защитить вашу систему водоснабжения. Мы рассмотрим различия между однофазными и трехфазными моделями, а также методы плавного запуска.</p>
+
+<h2 id="физическая-природа-возникновения-пусковых-токов">Физическая природа возникновения пусковых токов</h2>
+
+<p>В момент подачи напряжения на неподвижный ротор электродвигателя он еще не начал вращаться и не создает противо-ЭДС. В этот краткий промежуток времени сопротивление обмоток минимально, что приводит к резкому скачку потребления электроэнергии из сети. Двигатель работает в режиме короткого замыкания, пока не наберет необходимые обороты.</p>
+
+<p>Длительность этого процесса обычно составляет от нескольких миллисекунд до 2-3 секунд, в зависимости от мощности агрегата и нагрузки на валу. Однако даже за такое короткое время ток может достичь значений, опасных для слабой проводки. Особенно это критично для погружных моделей, где охлаждение двигателя зависит от скорости протока воды.</p>
+
+<p>Существует прямая зависимость между конструкцией двигателя и величиной скачка. Асинхронные двигатели с короткозамкнутым ротором, которые чаще всего используются в бытовых насосах <em>Grundfos</em> или <em>Pedrollo</em>, характеризуются высокой кратностью пускового тока. Это необходимо для создания достаточного вращающего момента, чтобы сорвать ротор с места и преодолеть инерцию воды в трубопроводе.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Частые запуски насоса в режиме полного пускового тока без достаточных интервалов для остывания обмоток могут привести к тепловому пробою изоляции и межвитковому замыканию.</p>
+</blockquote>
+
+<h2 id="расчет-пускового-тока-для-различных-типов-насосов">Расчет пускового тока для различных типов насосов</h2>
+
+<p>Для подбора защитной автоматики недостаточно знать только номинальную мощность насоса. Необходимо учитывать коэффициент кратности (K), который показывает, во сколько раз пусковой ток превышает рабочий. Для бытовых однофазных насосов этот коэффициент обычно находится в диапазоне от 3 до 7.</p>
+
+<p>Формула расчета выглядит следующим образом: <code>I_пуск = I_ном × K</code>. Где <code>I_ном</code> — номинальный ток, указанный на шильдике двигателя, а <code>K</code> — кратность. Например, если насос потребляет 5 Ампер в рабочем режиме, а кратность равна 6, то в момент старта ток составит 30 Ампер. Именно на эту величину должен быть рассчитан автоматический выключатель с учетом его время-токовой характеристики.</p>
+
+<p>Трехфазные двигатели часто имеют меньшую кратность пускового тока по сравнению с однофазными аналогами той же мощности, но их пуск требует более сложной схемы подключения. Использование схемы «звезда-треугольник» позволяет снизить пусковые токи, однако в бытовых скважинных насосах малой и средней мощности такая опция встречается редко из-за габаритных ограничений.</p>
+
+<div class="pb-poll" id="poll-46268ae4"><div class="pb-poll-question">📊 Какой у вас тип насоса для скважины?</div><div class="pb-poll-option" data-poll="46268ae4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Однофазный поверхностный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="46268ae4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Однофазный погружной</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="46268ae4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Трехфазный промышленный</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="46268ae4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Пока не знаю / Выбираю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Важно учитывать, что с течением времени износ подшипников или загрязнение рабочей колеса могут увеличивать нагрузку на вал. Это приведет к увеличению времени разгона двигателя и, как следствие, к более длительному воздействию пускового тока на сеть. Регулярное техническое обслуживание помогает держать эти параметры в норме.</p>
+
+<h2 id="таблица-кратности-токов-для-популярных-типов-двигателей">Таблица кратности токов для популярных типов двигателей</h2>
+
+<p>Для удобства оценки нагрузки на электросеть вашего дома приведем сравнительные данные. Значения могут варьироваться в зависимости от производителя и серии двигателя, но дают общее представление о масштабах проблемы.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип двигателя</th>
+<th>Мощность (кВт)</th>
+<th>Номинальный ток (А)</th>
+<th>Кратность (K)</th>
+<th>Пусковой ток (А)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Однофазный асинхронный</td>
+<td>1.1</td>
+<td>8.5</td>
+<td>6.0</td>
+<td>51.0</td>
+</tr>
+<tr>
+<td>Однофазный асинхронный</td>
+<td>2.2</td>
+<td>14.0</td>
+<td>5.5</td>
+<td>77.0</td>
+</tr>
+<tr>
+<td>Трехфазный асинхронный</td>
+<td>3.0</td>
+<td>6.3</td>
+<td>4.5</td>
+<td>28.3</td>
+</tr>
+<tr>
+<td>Трехфазный асинхронный</td>
+<td>5.5</td>
+<td>11.0</td>
+<td>5.0</td>
+<td>55.0</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Как видно из таблицы, даже небольшие по мощности насосы создают существенную нагрузку. При одновременном запуске нескольких потребителей (например, насоса и кондиционера) суммарный пусковой ток может превысить возможности вводного автомата.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При расчете сечения кабеля всегда берите запас 20-30% сверх расчетного пускового тока, чтобы избежать нагрева проводки в момент старта оборудования.</p></aside>
+
+<h2 id="влияние-пусковых-токов-на-элементы-электросети">Влияние пусковых токов на элементы электросети</h2>
+
+<p>Резкие скачки напряжения и тока негативно сказываются не только на самом насосе, но и на всей домашней сети. В первую очередь страдают контакты реле, пускателей и автоматических выключателей. При разрыве цепи под высокой нагрузкой возникает электрическая дуга, которая выжигает металл контактов, увеличивая переходное сопротивление.</p>
+
+<p>Просадки напряжения в момент запуска мощного насоса могут привести к некорректной работе чувствительной электроники: газовых котлов, компьютеров и систем «умный дом». <mark>Критическим считается падение напряжения ниже 180 Вольт для однофазной сети, при котором электроника может перейти в аварийный режим или перезагрузиться.</mark></p>
+
+<p>Кабельная продукция также испытывает стресс. Хотя кратковременный нагрев не успевает расплавить изоляцию, циклическое расширение и сужение жил при регулярных пусках ускоряет старение меди или алюминия. Особенно это актуально для длинных линий питания скважинных насосов, где падение напряжения на старте может быть значительным.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Если при запуске насоса свет в доме меркнет заметно и надолго, это свидетельствует о недостаточном сечении подводящего кабеля или плохом контакте в щитке.</p>
+</blockquote>
+
+<h2 id="методы-снижения-пусковой-нагрузки-и-защиты">Методы снижения пусковой нагрузки и защиты</h2>
+
+<p>Существует несколько проверенных способов минимизировать негативное влияние пусковых токов. Наиболее эффективным и современным решением является использование устройств плавного пуска (УПП) или частотных преобразователей. Эти приборы позволяют подавать напряжение на двигатель постепенно, исключая резкий скачок.</p>
+
+<p>Частотный преобразователь (инвертор) не только ограничивает пусковой ток, но и позволяет регулировать производительность насоса, поддерживая постоянное давление в системе без использования гидрофора большого объема. Для двигателей мощностью свыше 2.2 кВт это практически обязательное решение для комфортной эксплуатации.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка системы плавного пуска</h4><label class="check-item"><input type="checkbox"><span>Установлен ли УПП или частотник?:Настроена ли кривая разгона?:Проверены ли контакты на входе и выходе:Подобрано ли сечение кабеля по току преобразователя:</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 1</div></div>
+
+<p>Более бюджетным, но менее эффективным вариантом является использование реле задержки включения или схем переключения «звезда-треугольник» (для трехфазных моторов). Также важно правильно подбирать характеристики автоматических выключателей: для насосов рекомендуется использовать автоматы с характеристикой «D», которые предназначены для защиты двигателей и выдерживают кратковременные перегрузки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Установка частотного преобразователя окупается за счет экономии электроэнергии, отсутствия гидроударов в трубах и продления срока службы двигателя насоса.</p></aside>
+
+<h2 id="выбор-стабилизатора-напряжения-для-насосной-станции">Выбор стабилизатора напряжения для насосной станции</h2>
+
+<p>Если в вашей местности нестабильное напряжение, установка стабилизатора становится необходимостью. Однако при его выборе многие совершают ошибку, ориентируясь только на номинальную мощность насоса. Стабилизатор должен выдерживать пусковые токи без ухода в защиту.</p>
+
+<p>Для электромеханических и релейных стабилизаторов запас по мощности должен составлять не менее 300% от номинала насоса. Электронные стабилизаторы с двойным преобразованием (инверторные) лучше справляются с пиковыми нагрузками, но они дороже. При выборе модели обращайте внимание на параметр «перегрузочная способность».</p>
+
+<p>Не стоит забывать про фазировку. Для некоторых моделей насосов, особенно с конденсаторным пуском, критически важно правильное подключение фазы и нуля. Ошибка может привести к тому, что двигатель не запустится или будет гудеть, потребляя ток, близкий к пусковому, постоянно.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Никогда не подключайте трехфазный двигатель к однофазной сети через простые конденсаторные схемы без учета возросших пусковых токов — это гарантированно приведет к срабатыванию защиты или пожару.</p>
+</blockquote>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли использовать обычный автомат «C» для защиты насоса?</summary>
+<p>Использование автомата с характеристикой «C» (стандартный бытовой) возможно только если пусковой ток насоса не превышает 5-7 кратного значения от номинала автомата. В большинстве случаев для насосов лучше подходят автоматы характеристики «D», которые имеют увеличенный диапазон мгновенного расцепления, позволяющий двигателю запуститься без выбивания защиты.</p>
+</details>
+
+<details>
+<summary>Почему насос гудит, но не запускается?</summary>
+<p>Это классический признак того, что двигатель не может развить достаточный вращающий момент для преодоления пускового сопротивления. Причины: низкое напряжение в сети, неисправность пускового конденсатора (в однофазных моторах), заклинивание рабочего колеса песком или солями, либо межвитковое замыкание.</p>
+</details>
+
+<details>
+<summary>Как часто можно включать и выключать насос?</summary>
+<p>Для большинства бытовых скважинных насосов количество включений ограничено 20-30 разами в час. Частые пуски с высоким пусковым током не дают двигателю остыть и быстро изнашивают пусковую автоматику. Для решения проблемы необходимо установить гидроаккумулятор большего объема или настроить реле давления на большую дельту.</p>
+</details>
+
+<details>
+<summary>Нужен ли отдельный стабилизатор только для насоса?</summary>
+<p>Да, это оптимальное решение. Подключение всего дома к мощному стабилизатору дорого и создает дополнительные потери. Выделенный стабилизатор для насосной группы защитит именно двигатель от скачков и сам не будет уходить в защиту при включении других приборов в доме.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pe/perekryt-kryshu-myagkoj-krovlej.html" class="pb-related-card">
+                <span class="pb-related-title">Перекрыть крышу мягкой кровлей: технологии, цены, монтаж</span>
+                <span class="pb-related-desc">Как правильно перекрыть крышу мягкой кровлью? Подробная инструкция по укладке битумной черепицы, выб</span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-trekhkontaktnyj-vyklyuchatel.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить трехконтактный выключатель: схема и монтаж</span>
+                <span class="pb-related-desc">Подробная инструкция по установке трехклавишного выключателя света. Схемы подключения, выбор инструм</span>
+            </a><a href="/articles/v/va/varianty-vorot-dlya-garazha.html" class="pb-related-card">
+                <span class="pb-related-title">Варианты ворот для гаража: виды, плюсы и минусы конструкций</span>
+                <span class="pb-related-desc">Обзор всех типов гаражных ворот: от распашных до роллетных. Сравнение цен, теплоизоляции и надежност</span>
+            </a><a href="/articles/s/sm/smotrovye-yamy-dlya-legkovykh-avtomobilej.html" class="pb-related-card">
+                <span class="pb-related-title">Смотровая яма для легковых авто: размеры, чертежи, гидроизоляция</span>
+                <span class="pb-related-desc">Как сделать смотровую яму для легковых автомобилей своими руками. Размеры, чертежи, гидроизоляция, в</span>
+            </a><a href="/articles/p/po/portal-mojka-dlya-legkovykh-avtomobilej.html" class="pb-related-card">
+                <span class="pb-related-title">Портал мойка для легковых автомобилей: выбор и монтаж</span>
+                <span class="pb-related-desc">Подробный гид по портальным мойкам для легковых авто. Принцип работы, преимущества, виды установок и</span>
+            </a><a href="/articles/k/ka/kak-vyglyadit-pravo-sobstvennosti-na-garazh.html" class="pb-related-card">
+                <span class="pb-related-title">Право собственности на гараж: документы, регистрация, нюансы 2026</span>
+                <span class="pb-related-desc">Как выглядит право собственности на гараж: виды документов, порядок оформления, отличия от аренды и </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

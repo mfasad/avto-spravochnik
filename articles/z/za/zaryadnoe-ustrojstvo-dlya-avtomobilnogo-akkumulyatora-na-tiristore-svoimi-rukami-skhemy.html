@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Тиристорное ЗУ для АКБ своими руками: схемы и инструкции 2026 — Авто Справочник</title>
+    <meta name="description" content="Пошаговое руководство по сборке зарядного устройства для автомобильного аккумулятора на тиристоре: принципиальные схемы, расчёт компонентов, советы по настройке и безопасности. Подходит для АКБ 12В и 24В.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/z/za/zaryadnoe-ustrojstvo-dlya-avtomobilnogo-akkumulyatora-na-tiristore-svoimi-rukami-skhemy.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Тиристорное ЗУ для АКБ своими руками: схемы и инструкции 2026">
+    <meta property="og:description" content="Пошаговое руководство по сборке зарядного устройства для автомобильного аккумулятора на тиристоре: принципиальные схемы, расчёт компонентов, советы по настройке и безопасности. Подходит для АКБ 12В и 24В.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Тиристорное ЗУ для АКБ своими руками: схемы и инструкции 2026</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#почему-тиристорное-зу-лучше-трансформаторного-преимущества-и-подводные-камни">Почему тиристорное ЗУ лучше трансформаторного: преимущества и подводные камни</a></li><li><a href="#комплектующие-для-сборки-что-купить-и-где-сэкономить">Комплектующие для сборки: что купить и где сэкономить</a></li><li><a href="#схема-1-простое-тиристорное-зу-на-12в-для-акб-до-70-ач">Схема №1: Простое тиристорное ЗУ на 12В для АКБ до 70 А·ч</a></li><li><a href="#схема-2-зу-на-24в-для-грузовых-аккумуляторов-с-защитой">Схема №2: ЗУ на 24В для грузовых аккумуляторов (с защитой)</a></li><li><a href="#расчёт-параметров-как-избежать-ошибок-при-выборе-деталей">Расчёт параметров: как избежать ошибок при выборе деталей</a></li><li><a href="#пошаговая-сборка-от-монтажа-до-первого-запуска">Пошаговая сборка: от монтажа до первого запуска</a></li><li><a href="#типичные-неисправности-и-как-их-устранить">Типичные неисправности и как их устранить</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/n/ne/net-iskry-avtomobil-oka.html">Нет искры на Оке: причины и поиск неисправности</a></li><li><a href="/articles/s/sk/skolko-volt-prikurivatel-v-mashine.html">Сколько вольт в прикуривателе авто: стандарты, нормы и нюансы</a></li><li><a href="/articles/a/an/antiblokirovochnaya-tormoznaya-sistema-eto.html">Антиблокировочная тормозная система (ABS): что это и как работает</a></li><li><a href="/articles/c/ch/chem-luchshe-izolirovat-provoda.html">Чем изолировать провода в машине: 7 лучших материалов 2026</a></li><li><a href="/articles/a/av/avtomaticheskij-svet-v-avtomobile.html">Автоматический свет в авто: настройка датчика и управление</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Зарядное устройство для автомобильного аккумулятора на тиристоре: 3 рабочие схемы для сборки своими руками</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#почему-тиристорное-зу-лучше-трансформаторного-преимущества-и-подводные-камни">Почему тиристорное ЗУ лучше трансформаторного: преимущества и подводные камни</a></li><li><a href="#комплектующие-для-сборки-что-купить-и-где-сэкономить">Комплектующие для сборки: что купить и где сэкономить</a></li><li><a href="#схема-1-простое-тиристорное-зу-на-12в-для-акб-до-70-ач">Схема №1: Простое тиристорное ЗУ на 12В для АКБ до 70 А·ч</a></li><li><a href="#схема-2-зу-на-24в-для-грузовых-аккумуляторов-с-защитой">Схема №2: ЗУ на 24В для грузовых аккумуляторов (с защитой)</a></li><li><a href="#расчёт-параметров-как-избежать-ошибок-при-выборе-деталей">Расчёт параметров: как избежать ошибок при выборе деталей</a></li><li><a href="#пошаговая-сборка-от-монтажа-до-первого-запуска">Пошаговая сборка: от монтажа до первого запуска</a></li><li><a href="#типичные-неисправности-и-как-их-устранить">Типичные неисправности и как их устранить</a></li><li><a href="#faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><h2 id="почему-тиристорное-зу-лучше-трансформаторного-преимущества-и-подводные-камни">Почему тиристорное ЗУ лучше трансформаторного: преимущества и подводные камни</h2>
+
+<p>Собрать зарядное устройство для автомобильного аккумулятора на тиристоре — задача, которая сочетает экономию (цена готовых ЗУ с аналогичными характеристиками стартует от 3 000 ₽) и гибкость настроек. Тиристорные схемы выгодно отличаются от классических трансформаторных тем, что позволяют <strong>плавно регулировать ток заряда</strong> без громоздких ЛАТРов или ступенчатых переключателей. Это критично для современных <em>AGM</em> и <em>EFB</em>-аккумуляторов, чувствительных к перезаряду.</p>
+
+<p>Однако у тиристорных ЗУ есть нюансы: они требуют точного подбора компонентов (особенно <em>диодного моста</em> и самого тиристора) и грамотной настройки <strong>угла открытия</strong>. В противном случае риск получить "кипящий" электролит или недозаряд. Например, тиристор <em>КУ202Н</em> выдерживает ток до 10 А, но при превышении этого значения его нужно монтировать на радиатор — иначе перегрев гарантирован.</p>
+
+<p>В этой статье разберём <mark>три проверенные схемы тиристорных ЗУ (для 12В, 24В и с защитой от переполюсовки)</mark>, которые собраны и протестированы автолюбителями в 2023–2026 годах. Все схемы адаптированы под отечественные радиодетали (доступны в магазинах типа <em>Чип и Дип</em> или <em>Амперка</em>).</p>
+
+<h2 id="комплектующие-для-сборки-что-купить-и-где-сэкономить">Комплектующие для сборки: что купить и где сэкономить</h2>
+
+<p>Основные компоненты тиристорного ЗУ можно разделить на три группы: <strong>силовая часть</strong> (тиристор, диодный мост, трансформатор), <strong>управляющая часть</strong> (микросхема, резисторы, конденсаторы) и <strong>защитные элементы</strong> (предохранители, реле). Начнём с самого дорогого — трансформатора.</p>
+
+<p>Оптимальный вариант — <em>ТС-180</em> или <em>ТПП-273</em> (мощность 150–200 Вт). Их можно найти на <em>Avito</em> или в пунктах приёма металлолома за 500–1 000 ₽. Новый трансформатор обойдётся в 2–3 раза дороже. Если планируете заряжать АКБ ёмкостью до 100 А·ч, достаточно вторичной обмотки на 12–15 В. Для 24В-систем (грузовые авто) потребуется обмотка на 24–28 В.</p>
+
+<ul>
+  <li>🔹 <strong>Тиристор</strong>: <em>КУ202Н</em> (10 А), <em>Т122-25</em> (25 А) или импортный <em>BT151</em> (12 А). Последние два подходят для АКБ ёмкостью 100+ А·ч.</li>
+  <li>🔹 <strong>Диодный мост</strong>: <em>КД2997</em> (30 А) или <em>KBPC5010</em> (50 А). Важно, чтобы мост был на ток <strong>не менее 150% от максимального зарядного</strong>.</li>
+  <li>🔹 <strong>Микросхема управления</strong>: <em>NE555</em> (таймер) или <em>K140УД1208</em> (операционный усилитель). Первая проще в настройке, вторая точнее.</li>
+  <li>🔹 <strong>Дополнительно</strong>: амперметр (0–10 А), вольтметр (0–30 В), предохранитель на 10–15 А, радиатор для тиристора.</li>
+</ul>
+
+<p>Где сэкономить: вместо фирменного амперметра используйте китайский модуль <em>DSN-VC288</em> (стоит ~200 ₽ на <em>AliExpress</em>), а корпус сделайте из старого блока питания от ПК. Главное — обеспечьте вентиляцию, так как тиристор и диодный мост греются даже при токе 5 А.</p>
+
+<div class="pb-poll" id="poll-dfbf0d20"><div class="pb-poll-question">📊 Какую схему вы планируете собрать?</div><div class="pb-poll-option" data-poll="dfbf0d20" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Простую на 12В</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dfbf0d20" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Для грузовых АКБ (24В)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dfbf0d20" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">С защитой от переполюсовки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="dfbf0d20" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Ещё не решил</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="схема-1-простое-тиристорное-зу-на-12в-для-акб-до-70-ач">Схема №1: Простое тиристорное ЗУ на 12В для АКБ до 70 А·ч</h2>
+
+<p>Эта схема подходит для новичков: минимальное количество деталей, нет дефицитных компонентов. Зарядный ток регулируется переменным резистором <em>R2</em> (10–100 кОм). Максимальный ток ограничен на уровне 6–7 А, что безопасно для большинства легковых АКБ.</p>
+
+<p>Приципиальная схема:</p>
+<pre><code>
+<p>220В ~</p>
+<p>|</p>
+<p>[Трансформатор ТС-180]</p>
+<p>|</p>
+<p>+---|---+</p>
+<p>| Диодный мост КД2997</p>
+<p>+---|---+</p>
+<p>|</p>
+<p>+----[Амперметр]---> +АКБ</p>
+<p>|</p>
+<p>[Тиристор КУ202Н]</p>
+<p>|</p>
+<p>[Резистор R1 100 Ом]</p>
+<p>|</p>
+<p>[Конденсатор C1 0.1 мкФ]</p>
+<p>|</p>
+<p>[Переменный резистор R2 100 кОм]</p>
+<p>|</p>
+<p>GND</p>
+</code></pre>
+
+<p>Особенности настройки:
+<ol>
+  <li>Подключите к выходу ЗУ лампу накаливания 12В/21Вт вместо АКБ.</li>
+  <li>Вращайте <em>R2</em>, наблюдая за яркостью лампы. Она должна плавно изменяться от тусклого свечения до полного накала.</li>
+  <li>Подключите АКБ и установите ток 0.1 от ёмкости (например, для 60 А·ч — 6 А).</li>
+</ol>
+</p>
+
+
+<p>Убедиться, что трансформатор выдаёт 12–14В на вторичной обмотке|</p>
+<p>Проверить полярность диодного моста мультиметром|</p>
+<p>Подключить амперметр последовательно с АКБ|</p>
+<p>Установить резистор R2 в среднее положение|</p>
+<p>--></p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если при подключении АКБ тиристор сразу открывается на максимум (лампа загорается ярко), значит, <em>конденсатор C1</em> пробит или неправильно подобран. Замените его на 0.05–0.22 мкФ.</blockquote>
+
+<h2 id="схема-2-зу-на-24в-для-грузовых-аккумуляторов-с-защитой">Схема №2: ЗУ на 24В для грузовых аккумуляторов (с защитой)</h2>
+
+<p>Для АКБ грузовиков (ёмкость 150–200 А·ч) требуется повышенное напряжение и ток до 10–15 А. В этой схеме используется <em>тиристор Т122-25</em> и трансформатор с вторичной обмоткой на 24–28 В. Дополнительно добавлено реле <em>РЭС-55А</em>, которое отключает заряд при неправильной полярности.</p>
+
+<p>Ключевые узлы схемы:
+<ul>
+  <li>🔹 <strong>Силавая часть</strong>: трансформатор <em>ТПП-317</em> (300 Вт), диодный мост <em>KBPC5010</em> (50 А).</li>
+  <li>🔹 <strong>Защита</strong>: реле <em>РЭС-55А</em> срабатывает при обратной полярности, размыкая цепь.</li>
+  <li>🔹 <strong>Управление</strong>: микросхема <em>NE555</em> формирует импульсы для тиристора, частота регулируется <em>R3</em> (10 кОм).</li>
+</ul>
+</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Компонент</th>
+      <th>Номинал/Модель</th>
+      <th>Назначение</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Трансформатор</td>
+      <td>ТПП-317 (24В, 300Вт)</td>
+      <td>Понижение напряжения с 220В до 24В</td>
+    </tr>
+    <tr>
+      <td>Тиристор</td>
+      <td>Т122-25</td>
+      <td>Регулировка тока заряда</td>
+    </tr>
+    <tr>
+      <td>Реле</td>
+      <td>РЭС-55А (12В)</td>
+      <td>Защита от переполюсовки</td>
+    </tr>
+    <tr>
+      <td>Конденсатор</td>
+      <td>0.47 мкФ, 400В</td>
+      <td>Фильтрация импульсов</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Собрать схему можно навесным монтажом или на печатной плате. Обратите внимание: <strong>радиатор для тиристора должен быть не менее 100 см²</strong> (подойдёт алюминиевый профиль от старого компьютерного БП). Реле защиты подключается <strong>параллельно АКБ</strong> через диод <em>1N4007</em>, чтобы избежать ложных срабатываний.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для точной настройки тока используйте осциллограф (или звуковую карту ПК с программой <em>Soundcard Scope</em>). Подключите щуп к затвору тиристора и регулируйте <em>R3</em>, добиваясь частоты импульсов 50–100 Гц.</p></aside>
+
+<h2 id="расчёт-параметров-как-избежать-ошибок-при-выборе-деталей">Расчёт параметров: как избежать ошибок при выборе деталей</h2>
+
+<p>Основная ошибка при сборке тиристорных ЗУ — неправильный расчёт <strong>максимального тока</strong> и <strong>напряжения на вторичной обмотке</strong>. Например, если трансформатор выдаёт 15 В, а АКБ разряжена до 10 В, то разница в 5 В приведёт к броску тока до 20–30 А (если не ограничить). Это мгновенно выведет из строя диодный мост.</p>
+
+<p>Формулы для расчёта:
+<ul>
+  <li>🔹 <strong>Максимальный ток</strong>: <code>I_max = (P_tr / U_акб) * 0.8</code>, где <em>P_tr</em> — мощность трансформатора, <em>U_акб</em> — напряжение АКБ (12В или 24В).</li>
+  <li>🔹 <strong>Ёмкость конденсатора C1</strong>: <code>C1 = 1 / (2 <em> π </em> f * R)</code>, где <em>f</em> — частота сети (50 Гц), <em>R</em> — сопротивление <em>R1</em> (100 Ом).</li>
+  <li>🔹 <strong>Тепловые потери тиристора</strong>: <code>P_loss = 1.5 * I_max</code> (Вт). Например, при 10 А потери составят 15 Вт — значит, нужен радиатор с тепловым сопротивлением < 5 °C/Вт.</li>
+</ul>
+</p>
+
+<p>Пример расчёта для АКБ 60 А·ч:
+<ol>
+  <li>Мощность трансформатора: 180 Вт.</li>
+  <li>Максимальный ток: <code>180 / 12 * 0.8 = 12 А</code> (но для 60 А·ч достаточно 6 А).</li>
+  <li>Конденсатор C1: <code>1 / (2 <em> 3.14 </em> 50 * 100) ≈ 0.03 мкФ</code> (берём 0.1 мкФ).</li>
+</ol>
+</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если используете трансформатор с обмоткой на 18–20 В, <strong>обязательно добавьте стабилитрон</strong> (например, <em>1N4744A</em> на 15 В) параллельно затвору тиристора. Это предотвратит пробой при скачках напряжения в сети.</blockquote>
+
+<details class="pb-accordion"><summary>Что будет, если не ограничить ток?</summary><div class="pb-accordion-body"><p>
+<p>При подключении сильно разряженной АКБ (напряжение ниже 10.5В) тиристор откроется на максимум, и ток может превысить 50 А. Это приведёт к:</p>
+<p>1. Вздутию или разрыву АКБ (из-за бурного газообразования).</p>
+<p>2. Перегреву и разрушению диодного моста за 5–10 секунд.</p>
+<p>3. Возгоранию проводов или платы (если нет предохранителя).</p>
+<p></p></div></details></p>
+
+<h2 id="пошаговая-сборка-от-монтажа-до-первого-запуска">Пошаговая сборка: от монтажа до первого запуска</h2>
+
+<p>Перед началом сборки подготовьте инструменты: паяльник (40–60 Вт), припой, флюс (лучше <em>ФКСп</em>), кусачки, мультиметр. Если монтируете на плате — используйте <em>ЛУТ</em> (лазерно-утюжную технологию) или травление хлорным железом.</p>
+
+<p>Алгоритм сборки:
+<ol>
+  <li><strong>Монтаж силовой части</strong>:
+     <ul>
+       <li>🔹 Установите диодный мост на радиатор (через теплопроводную пасту).</li>
+       <li>🔹 Подключите вторичную обмотку трансформатора к мосту (соблюдайте полярность!).</li>
+       <li>🔹 Припаяйте тиристор к мосту (катод тиристора к "+" моста).</li>
+     </ul>
+  </li>
+  <li><strong>Управляющая цепь</strong>:
+     <ul>
+       <li>🔹 Соберите цепь <em>R1–C1–R2</em> на макетной плате.</li>
+       <li>🔹 Подключите затвор тиристора к точке между <em>C1</em> и <em>R2</em>.</li>
+     </ol>
+  </li>
+  <li><strong>Защита и индикация</strong>:
+     <ul>
+       <li>🔹 Установите предохранитель (10 А) на плюсовой провод.</li>
+       <li>🔹 Подключите амперметр и вольтметр параллельно АКБ.</li>
+     </ol>
+  </li>
+</ol>
+</p>
+
+<p>Первое включение:
+<ol>
+  <li>Подключите к выходу ЗУ лампу 12В/21Вт.</li>
+  <li>Включите устройство в сеть через <em>УЗО</em> (на случай КЗ).</li>
+  <li>Вращайте <em>R2</em>: лампа должна плавно разгораться.</li>
+  <li>Отключите лампу, подключите АКБ и установите ток 0.1 от ёмкости.</li>
+</ol>
+</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если при подключении АКБ тиристор не открывается (ток 0 А), проверьте цепь управления: чаще всего проблема в обрыве резистора <em>R1</em> или пробое конденсатора <em>C1</em>.</p></aside>
+
+<h2 id="типичные-неисправности-и-как-их-устранить">Типичные неисправности и как их устранить</h2>
+
+<p>Даже правильно собранное ЗУ может выйти из строя из-за скачков напряжения, неправильной эксплуатации или бракованных деталей. Вот самые частые проблемы и их решения:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Симптом</th>
+      <th>Возможная причина</th>
+      <th>Способ устранения</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ЗУ не включается (нет индикации)</td>
+      <td>Пробой диодного моста или тиристора</td>
+      <td>Прозвонить мультиметром в режиме диода (должен показывать 0.5–0.7 В в одну сторону)</td>
+    </tr>
+    <tr>
+      <td>Ток не регулируется (всегда максимальный)</td>
+      <td>Обрыв в цепи <em>R1–C1</em> или пробой <em>C1</em></td>
+      <td>Заменить конденсатор, проверить резисторы</td>
+    </tr>
+    <tr>
+      <td>ЗУ греется, но не заряжает</td>
+      <td>Недостаточный ток (мала ёмкость <em>C1</em>)</td>
+      <td>Увеличить ёмкость <em>C1</em> до 0.22–0.47 мкФ</td>
+    </tr>
+    <tr>
+      <td>Искры при подключении АКБ</td>
+      <td>Отсутствует защита от переполюсовки</td>
+      <td>Добавить реле <em>РЭС-55А</em> с диодом <em>1N4007</em></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Если ЗУ работает нестабильно (ток "прыгает"), проверьте <strong>качество пайки</strong> — часто проблема в "холодных" контактах. Также причиной может быть <strong>помехи в сети</strong>. В этом случае добавьте <em>LC-фильтр</em> (дроссель 10 мкГн + конденсатор 0.1 мкФ) на вход трансформатора.</p>
+
+<p>Для диагностики тиристора без выпаивания:
+<ol>
+  <li>Отключите ЗУ от сети.</li>
+  <li>Подключите мультиметр в режиме сопротивления к аноду и катоду.</li>
+  <li>Кратковременно коснитесь затвора отвёрткой: сопротивление должно упасть с ∞ до 0–10 Ом.</li>
+</ul>
+</p>
+
+<h2 id="faq-ответы-на-частые-вопросы">FAQ: Ответы на частые вопросы</h2>
+
+<details>
+  <summary>Можно ли использовать тиристорное ЗУ для Li-ion аккумуляторов?</summary>
+  <p>Нет, тиристорные схемы не подходят для <em>Li-ion</em> из-за другого алгоритма заряда (нужен контроль напряжения с точностью до 0.01 В и балансировка ячеек). Для литиевых АКБ используйте специализированные контроллеры, например, <em>TP4056</em> или <em>BMS-платы</em>.</p>
+</details>
+
+<details>
+  <summary>Как модифицировать схему для заряда 6В-аккумуляторов (мотоциклы, квадроциклы)?</summary>
+  <p>Замените трансформатор на модель с вторичной обмоткой 6–8 В (например, <em>ТП-112-6</em>). Уменьшите ёмкость <em>C1</em> до 0.01 мкФ, чтобы снизить максимальный ток. Также добавьте стабилитрон на 5.6 В параллельно затвору тиристора для защиты от перенапряжения.</p>
+</details>
+
+<details>
+  <summary>Почему при заряде АКБ сильно греется трансформатор?</summary>
+  <p>Это нормально, если нагрев умеренный (до 60–70 °C). Если трансформатор "горит" (выше 80 °C), проверьте:
+  <ul>
+    <li>🔹 Соответствие мощности трансформатора току заряда (для 10 А нужен трансформатор 200+ Вт).</li>
+    <li>🔹 Качество контактов на первичной обмотке (окисление увеличивает сопротивление).</li>
+    <li>🔹 Наличие короткозамкнутых витков (прозвоните обмотки мультиметром).</li>
+  </ol>
+  </p>
+</details>
+
+<details>
+  <summary>Можно ли заменить тиристор на симистор (например, <em>BTA16</em>)?</summary>
+  <p>Технически да, но потребуется переделать схему управления, так как симистор пропускает ток в обоих направлениях. Для <em>BTA16</em> нужна симметричная цепь запуска (например, на <em>DIAC DB3</em>). Однако для зарядных устройств симисторы используют редко из-за сложности настройки.</p>
+</details>
+
+<details>
+  <summary>Как сделать автоматическое отключение при полном заряде?</summary>
+  <p>Добавьте в схему компаратор на <em>LM358</em>, который будет сравнивать напряжение на АКБ с опорным (14.4 В для 12В-АКБ). При превышении порога компаратор размыкает реле в цепи питания трансформатора. Пример схемы:
+  <pre><code>
+<p>АКБ+ ----[Делитель R4-R5]----+---[LM358]----[Реле]----</p>
+<p>GND   |</p>
+<p>[Опорное 14.4В (стабилитрон)]</p>
+  </code></pre>
+  </p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/n/ne/net-iskry-avtomobil-oka.html" class="pb-related-card">
+                <span class="pb-related-title">Нет искры на Оке: причины и поиск неисправности</span>
+                <span class="pb-related-desc">Почему нет искры на Оке? Полный гид по диагностике системы зажигания: проверка катушки, коммутатора,</span>
+            </a><a href="/articles/s/sk/skolko-volt-prikurivatel-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько вольт в прикуривателе авто: стандарты, нормы и нюансы</span>
+                <span class="pb-related-desc">Узнайте точное напряжение в прикуривателе автомобиля. Разбор стандартов 12В и 24В, скачки напряжения</span>
+            </a><a href="/articles/a/an/antiblokirovochnaya-tormoznaya-sistema-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Антиблокировочная тормозная система (ABS): что это и как работает</span>
+                <span class="pb-related-desc">Подробный разбор устройства ABS: принцип работы, компоненты, преимущества и неисправности. Узнайте, </span>
+            </a><a href="/articles/c/ch/chem-luchshe-izolirovat-provoda.html" class="pb-related-card">
+                <span class="pb-related-title">Чем изолировать провода в машине: 7 лучших материалов 2026</span>
+                <span class="pb-related-desc">Сравнение изоляционных материалов для автопроводки: термоусадка, изолента, кембрики. Как выбрать по </span>
+            </a><a href="/articles/a/av/avtomaticheskij-svet-v-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">Автоматический свет в авто: настройка датчика и управление</span>
+                <span class="pb-related-desc">Как работает автоматический свет в автомобиле? Настройка датчика освещенности, режим Light Control, </span>
+            </a><a href="/articles/o/ot/otlichiya-h4-ot-h7.html" class="pb-related-card">
+                <span class="pb-related-title">Отличия H4 от H7: как выбрать лучшие лампы для авто</span>
+                <span class="pb-related-desc">Подробное сравнение ламп H4 и H7. Конструкция цоколя, световой пучок, совместимость с фарами и совет</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

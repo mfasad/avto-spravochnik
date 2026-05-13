@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Поиск запчасти по артикулу: точный алгоритм подбора — Авто Справочник</title>
+    <meta name="description" content="Как найти деталь по артикулу и избежать ошибок. Проверка кодов, кроссы, чтение VIN-кодов и работа с каталогами автозапчастей.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/po/poisk-detali-po-artikulu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Поиск запчасти по артикулу: точный алгоритм подбора">
+    <meta property="og:description" content="Как найти деталь по артикулу и избежать ошибок. Проверка кодов, кроссы, чтение VIN-кодов и работа с каталогами автозапчастей.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Поиск запчасти по артикулу: точный алгоритм подбора</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-артикул-и-где-его-искать-на-детали">Что такое артикул и где его искать на детали</a></li><li><a href="#структура-заводских-каталожных-номеров">Структура заводских каталожных номеров</a></li><li><a href="#использование-vin-кода-для-точного-подбора">Использование VIN-кода для точного подбора</a></li><li><a href="#оригинал-или-аналог-работа-с-кросс-кодами">Оригинал или аналог: работа с кросс-кодами</a></li><li><a href="#алгоритм-поиска-в-интернет-магазинах">Алгоритм поиска в интернет-магазинах</a></li><li><a href="#типичные-ошибки-и-способы-их-избежать">Типичные ошибки и способы их избежать</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ko/kollektor-v-avtomobile-chto-eto.html">Коллектор в автомобиле: устройство, неисправности и ремонт</a></li><li><a href="/articles/k/kh/khimiya-dlya-mojki-radiatorov.html">Химия для мойки радиаторов: выбор средства и технология</a></li><li><a href="/articles/d/dv/dvigatel-glokhnet-pri-nazhatii-na-pedal-tormoza.html">Глохнет двигатель при торможении: причины и решения</a></li><li><a href="/articles/n/na/na-kakoj-skorosti-zavodit-mashinu-s-tolkacha.html">На какой скорости заводить машину с толкача: безопасный алгоритм</a></li><li><a href="/articles/k/kp/kpp-rasshifrovka-korobka-peredachi.html">КПП — что это в машине? Расшифровка коробки передач и виды</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Поиск запчасти по артикулу: точный алгоритм подбора</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-артикул-и-где-его-искать-на-детали">Что такое артикул и где его искать на детали</a></li><li><a href="#структура-заводских-каталожных-номеров">Структура заводских каталожных номеров</a></li><li><a href="#использование-vin-кода-для-точного-подбора">Использование VIN-кода для точного подбора</a></li><li><a href="#оригинал-или-аналог-работа-с-кросс-кодами">Оригинал или аналог: работа с кросс-кодами</a></li><li><a href="#алгоритм-поиска-в-интернет-магазинах">Алгоритм поиска в интернет-магазинах</a></li><li><a href="#типичные-ошибки-и-способы-их-избежать">Типичные ошибки и способы их избежать</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Ситуация, когда автомобиль требует срочной замены узла, часто застает врасплох, особенно если вы привыкли полагаться на сервисное обслуживание. Самостоятельный <strong>поиск запчасти по артикулу</strong> становится единственным способом сэкономить время и деньги, но этот процесс полон нюансов, о которых знают не все водители. Ошибка в одной цифре кода может привести к покупке неподходящего элемента, что повлечет за собой дополнительные расходы на повторную доставку и простой транспортного средства в гараже.</p>
+<p>Современный рынок переполнен аналогами и заменителями, что делает задачу подбора еще более сложной. Знание точного <em>OEM-номера</em> — это ваш главный козырь в борьбе с некомпетентностью продавцов и риском купить некачественный товар. В этой статье мы разберем, как правильно читать заводские маркировки, использовать каталоги и избегать распространенных ловушек при заказе компонентов через интернет-магазины.</p>
+
+<h2 id="что-такое-артикул-и-где-его-искать-на-детали">Что такое артикул и где его искать на детали</h2>
+<p>Артикул, или каталожный номер, представляет собой уникальную комбинацию цифр и букв, присвоенную производителем конкретному изделию. Это не просто случайный набор символов, а строго структурированный <strong>идентификатор</strong>, который позволяет точно определить спецификацию узла. В отличие от названия, которое может быть переведено или изменено в разных регионах, номер остается неизменным во всех базах данных производителя.</p>
+<p>Найти этот код можно непосредственно на самом изделии. Обычно он наносится методом литья, штамповки или наклеивается на специальную этикетку. Расположение маркировки зависит от типа детали: на фильтрах и свечах код виден сразу, а вот для <em>электронных блоков</em> или элементов подвески может потребоваться демонтаж и очистка поверхности от грязи.</p>
+<blockquote>
+<p>⚠️ Внимание: Если номер на детали сильно загрязнен или поврежден коррозией, не пытайтесь угадать пропущенные символы. Ошибка даже в одной цифре приведет к покупке совершенно другого товара, который может не подойти по посадочным размерам.</p>
+</blockquote>
+<p>Иногда на корпусе детали присутствуют несколько кодов. Основным считается тот, который нанесен производителем автомобиля (OEM), а не поставщиком комплектующих. Например, на фаре может быть логотип <em>Hella</em> или <em>Osram</em> с их внутренним номером, но рядом всегда будет штамп концерна-автопроизводителя, который и нужен для поиска.</p>
+<p>Важно понимать разницу между основным номером и номером модификации. Часто артикул дополняется буквенным индексом в конце, указывающим на версию или год выпуска. При подборе <strong>запасных частей</strong> игнорирование этого суффикса может привести к тому, что деталь станет на место, но не будет корректно работать с остальными системами автомобиля.</p>
+
+<h2 id="структура-заводских-каталожных-номеров">Структура заводских каталожных номеров</h2>
+<p>Разные автопроизводители используют свои системы кодирования, и понимание этой логики значительно упрощает жизнь. Например, концерн VAG (Volkswagen, Audi) использует девятизначную систему, где первые три цифры указывают на группу деталей, а следующие — на конкретный элемент. Последние буквы обозначают версию или модификацию, что критически важно при поиске.</p>
+<p>Японские производители, такие как <em>Toyota</em> или <em>Nissan</em>, часто разбивают номер на две части через дефис. Первая часть обозначает базовую группу, а вторая — конкретную модификацию. Зная эту структуру, вы можете искать аналоги, меняя только вторую часть номера, если первая совпадает с вашей группой узлов.</p>
+<p>Американские бренды, включая <em>Ford</em> и <em>GM</em>, также имеют свои уникальные форматы, которые могут содержать буквы и цифры в хаотичном, на первый взгляд, порядке. Однако и здесь прослеживается логика: определенные символы указывают на десятилетие выпуска, модель автомобиля и тип узла.</p>
+<ul>
+<li>🔍 <strong>VAG Group:</strong> 3+3+2+1ная система (Группа + Деталь + Версия).</li>
+<li>🔍 <strong>Toyota:</strong> 5+5 символов, разделенных дефисом (Базовая группа + Деталь).</li>
+<li>🔍 <strong>Ford:</strong> Комбинация из 4 блоков, указывающая на эру, тип авто, группу и номер.</li>
+<li>🔍 <strong>BMW:</strong> 11-значный код, где первые цифры указывают на основную группу системы.</li>
+</ul>
+<p>Понимание структуры помогает не только в поиске, но и в проверке достоверности информации, предоставляемой продавцом. Если вам предлагают деталь с номером, который явно выбивается из стандартной логики бренда, это повод усомниться в его подлинности.</p>
+
+<h2 id="использование-vin-кода-для-точного-подбора">Использование VIN-кода для точного подбора</h2>
+<p>Самым надежным способом найти нужную запчасть является использование <strong>VIN-кода</strong> автомобиля. Это 17-значный идентификатор, который содержит полную информацию о комплектации вашего транспортного средства на момент выхода с конвейера. Поиск по VIN исключает человеческий фактор и ошибки, связанные с визуальным осмотром.</p>
+<p>Для работы с VIN-кодом необходимо использовать специализированные онлайн-каталоги или обращаться к официальным дилерам. Введя код в поисковую строку, вы получаете <em>схематическое изображение</em> узлов автомобиля с привязкой к конкретным номерам деталей. Это особенно актуально для сложных агрегатов, где визуально отличить модификации невозможно.</p>
+<div class="pb-poll" id="poll-b8af432b"><div class="pb-poll-question">📊 Насколько часто вы используете VIN-код при покупке запчастей?</div><div class="pb-poll-option" data-poll="b8af432b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Всегда, это единственный верный способ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b8af432b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Иногда, если помню где найти</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b8af432b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Редко, обычно ищу по названию</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b8af432b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда, покупаю только по образцу</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+<p>Однако стоит помнить, что VIN-код актуален только для оригинальных деталей. Если вы планируете покупать аналоги, вам все равно придется использовать кроссы, но база будет заложена именно через VIN. Это гарантирует, что вы ищете замену именно для той версии двигателя или трансмиссии, которая установлена на вашем авто.</p>
+<blockquote>
+<p>⚠️ Внимание: VIN-код действителен только для состояния автомобиля"с завода". Если предыдущий владелец менял двигатель, коробку передач или другие крупные узлы, данные в каталоге могут не совпадать с реальностью. Всегда проводите визуальную сверку.</p>
+</blockquote>
+<p>При заказе через интернет-магазины поле для ввода VIN часто является обязательным. Это позволяет системе автоматически отфильтровать неподходящие товары и предложить только те, которые гарантированно встанут на ваше место. Игнорировать этот инструмент — значит сознательно идти на риск.</p>
+
+<h2 id="оригинал-или-аналог-работа-с-кросс-кодами">Оригинал или аналог: работа с кросс-кодами</h2>
+<p>Оригинальные запчасти часто отличаются высокой стоимостью, поэтому многие водители ищут аналоги. Процесс подбора заменителя называется кроссированием. <strong>Кросс-коды</strong> — это номера деталей других производителей, которые соответствуют оригиналу по размерам и характеристикам.</p>
+<p>Найти кроссы можно в специальных таблицах соответствия или используя функционал крупных интернет-магазинов. Однако слепое доверие к таким таблицам опасно. Производители аналогов могут менять технологию производства, и деталь с тем же кросс-кодом может отличаться по ресурсу или материалам.</p>
+<p>При выборе аналога обращайте внимание на бренд-производитель. Известные компании, такие как <em>Bosch</em>, <em>Mann</em> или <em>Sachs</em>, часто являются поставщиками на конвейер, и их продукция под собственным брендом будет идентична оригиналу, но стоить дешевле.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип детали</th>
+<th>Рекомендуемый подход</th>
+<th>Риск при замене</th>
+<th>Пример бренда-аналога</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Фильтры</td>
+<td>Можно брать качественный аналог</td>
+<td>Низкий</td>
+<td>Mann-Filter, Mahle</td>
+</tr>
+<tr>
+<td>Тормозные колодки</td>
+<td>Только проверенные бренды</td>
+<td>Средний (скрип, износ)</td>
+<td>Brembo, Textar</td>
+</tr>
+<tr>
+<td>Датчики ЭБУ</td>
+<td>Строго оригинал или OEM</td>
+<td>Высокий (ошибки системы)</td>
+<td>VDO, Siemens</td>
+</tr>
+<tr>
+<td>Элементы подвески</td>
+<td>Оригинал или топ-сегмент</td>
+<td>Высокий (безопасность)</td>
+<td>Lemförder, TRW</td>
+</tr>
+</tbody>
+</table></div>
+<p>Важно учитывать, что один и тот же завод может производить детали для разных брендов. Например, купив свечу зажигания под маркой <em>Denso</em>, вы можете получить тот же продукт, что и в коробке <em>Toyota</em>, но по более низкой цене. Изучение таких взаимосвязей помогает экономить без потери качества.</p>
+
+<h2 id="алгоритм-поиска-в-интернет-магазинах">Алгоритм поиска в интернет-магазинах</h2>
+<p>Поиск в интернет-магазинах требует четкого алгоритма действий. Сначала введите найденный номер в поисковую строку. Если поиск по точному номеру не дает результатов, попробуйте ввести только основную часть кода, отбросив последние буквы или цифры, обозначающие ревизию.</p>
+<p>Используйте фильтры для сортировки результатов. Обязательно проверяйте наличие фото товара. Иногда <strong>каталожный номер</strong> на картинке может отличаться от того, что указано в описании, что сигнализирует об ошибке в базе данных магазина.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед оплатой</h4><label class="check-item"><input type="checkbox"><span>Совпадает ли номер на фото с номером в описании</span></label><label class="check-item"><input type="checkbox"><span>Указан ли производитель (не просто"Аналог")</span></label><label class="check-item"><input type="checkbox"><span>Есть ли фото упаковки и маркировки</span></label><label class="check-item"><input type="checkbox"><span>Совпадает ли страна производителя с ожидаемой</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<p>Обращайте внимание на статус наличия. Если товар помечен как"под заказ", уточните сроки. Поставщики могут не иметь актуальной информации об снятии детали с производства, и ожидание в месяц может закончиться сообщением об отмене заказа.</p>
+<p>При работе с крупными агрегаторами запчастей используйте расширенный поиск. Часто там можно указать VIN-код автомобиля, и система сама предложит совместимые варианты. Это особенно удобно, если вы не уверены в правильности расшифрованного номера.</p>
+<p>Не забывайте сравнивать цены у разных поставщиков. Разброс цен на одну и ту же деталь может достигать 30-40%. Однако слишком низкая цена должна настораживать: велик риск нарваться на контрафакт или товар с истекшим сроком годности.</p>
+
+<h2 id="типичные-ошибки-и-способы-их-избежать">Типичные ошибки и способы их избежать</h2>
+<p>Одной из самых частых ошибок является путаница между левой и правой стороной автомобиля. Детали подвески, зеркал или фар часто имеют разные артикулы для левой и правой сторон. В каталогах они могут обозначаться как L/R или иметь разные последние цифры.</p>
+<p>Другая распространенная проблема — игнирование года выпуска. Автомобиль одного и того же модели может комплектоваться разными деталями в зависимости от года сборки. Всегда сверяйте <em>период производства</em>, указанный в каталоге, с годом выпуска вашего авто.</p>
+<details class="pb-accordion"><summary>Как отличить подделку по артикулу?</summary><div class="pb-accordion-body"><p>На поддельных деталях номер часто нанесен криво, шрифт может"плыть" или отличаться от оригинального. Также обратите внимание на качество литья: на оригинале нет заусенцев, а поверхность гладкая. Подделки часто имеют более легкий вес из-за использования дешевых сплавов.</p></div></details>
+<p>Еще одна ошибка — поиск по названию вместо номера. Названия могут быть перевод</div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ko/kollektor-v-avtomobile-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Коллектор в автомобиле: устройство, неисправности и ремонт</span>
+                <span class="pb-related-desc">Что такое коллектор в машине, как он работает и какие признаки неисправности. Подробное описание впу</span>
+            </a><a href="/articles/k/kh/khimiya-dlya-mojki-radiatorov.html" class="pb-related-card">
+                <span class="pb-related-title">Химия для мойки радиаторов: выбор средства и технология</span>
+                <span class="pb-related-desc">Эффективная химия для мойки радиаторов автомобиля. Обзор составов, инструкция по очистке без снятия </span>
+            </a><a href="/articles/d/dv/dvigatel-glokhnet-pri-nazhatii-na-pedal-tormoza.html" class="pb-related-card">
+                <span class="pb-related-title">Глохнет двигатель при торможении: причины и решения</span>
+                <span class="pb-related-desc">Почему машина глохнет при нажатии на тормоз? Разбираем причины: вакуумник, РХХ, датчик положения дро</span>
+            </a><a href="/articles/n/na/na-kakoj-skorosti-zavodit-mashinu-s-tolkacha.html" class="pb-related-card">
+                <span class="pb-related-title">На какой скорости заводить машину с толкача: безопасный алгоритм</span>
+                <span class="pb-related-desc">Оптимальная скорость для запуска двигателя с толкача: пошаговая инструкция, риски для АКПП/МКПП, сов</span>
+            </a><a href="/articles/k/kp/kpp-rasshifrovka-korobka-peredachi.html" class="pb-related-card">
+                <span class="pb-related-title">КПП — что это в машине? Расшифровка коробки передач и виды</span>
+                <span class="pb-related-desc">КПП расшифровывается как коробка передач. Разбираем устройство, виды (МКПП, АКПП, робот, вариатор), </span>
+            </a><a href="/articles/k/ka/kak-vklyuchit-ili-vyklyuchit-dvigatel.html" class="pb-related-card">
+                <span class="pb-related-title">Как включить или выключить двигатель: алгоритмы запуска и глушения</span>
+                <span class="pb-related-desc">Полный гид по запуску и остановке ДВС. Правила прогрева, работа с турбиной, система Start-Stop и защ</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

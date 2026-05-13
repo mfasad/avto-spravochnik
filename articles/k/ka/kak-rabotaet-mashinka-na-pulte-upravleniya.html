@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как работает машинка на пульте управления: устройство и принцип — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор устройства радиоуправляемого автомобиля. Как работает передатчик, приемник, сервопривод и ESC. Основы настройки и ремонта.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-rabotaet-mashinka-na-pulte-upravleniya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как работает машинка на пульте управления: устройство и принцип">
+    <meta property="og:description" content="Подробный разбор устройства радиоуправляемого автомобиля. Как работает передатчик, приемник, сервопривод и ESC. Основы настройки и ремонта.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как работает машинка на пульте управления: устройство и принцип</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#фундамент-управления-передатчик-и-приемник">Фундамент управления: передатчик и приемник</a></li><li><a href="#сердце-модели-электронная-система-управления-esc">Сердце модели: электронная система управления (ESC)</a></li><li><a href="#механика-движения-сервопривод-рулевого-управления">Механика движения: сервопривод рулевого управления</a></li><li><a href="#энергетика-типы-аккумуляторов-и-их-влияние-на-динамику">Энергетика: типы аккумуляторов и их влияние на динамику</a></li><li><a href="#двигатели-коллекторные-против-бесколлекторных">Двигатели: коллекторные против бесколлекторных</a></li><li><a href="#диагностика-и-обслуживание-системы">Диагностика и обслуживание системы</a></li><li><a href="#настройка-чувствительности-и-экспоненты">Настройка чувствительности и экспоненты</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/sa/samyj-dorogoj-sovremennyj-avtomobil.html">Самый дорогой современный автомобиль: топ-10 гиперкаров 2026</a></li><li><a href="/articles/a/ar/aromatizator-dlya-avtomobilya-na-solnechnykh-batareyakh.html">Ароматизатор для авто на солнечных батареях: плюсы и минусы 2026</a></li><li><a href="/articles/m/ma/marka-mashiny-v-i-krylya.html">Марка машины и крылья: расшифровка логотипов и их история</a></li><li><a href="/articles/a/ar/aromatizator-samolet-v-mashinu.html">Ароматизатор «Самолет» в машину: выбор, установка и уход (2026)</a></li><li><a href="/articles/c/ch/chto-takoe-deflektory-v-mashine.html">Дефлекторы на машину: что это, виды, плюсы и минусы установки</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как работает машинка на пульте управления: полный разбор</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#фундамент-управления-передатчик-и-приемник">Фундамент управления: передатчик и приемник</a></li><li><a href="#сердце-модели-электронная-система-управления-esc">Сердце модели: электронная система управления (ESC)</a></li><li><a href="#механика-движения-сервопривод-рулевого-управления">Механика движения: сервопривод рулевого управления</a></li><li><a href="#энергетика-типы-аккумуляторов-и-их-влияние-на-динамику">Энергетика: типы аккумуляторов и их влияние на динамику</a></li><li><a href="#двигатели-коллекторные-против-бесколлекторных">Двигатели: коллекторные против бесколлекторных</a></li><li><a href="#диагностика-и-обслуживание-системы">Диагностика и обслуживание системы</a></li><li><a href="#настройка-чувствительности-и-экспоненты">Настройка чувствительности и экспоненты</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Многие водители воспринимают радиоуправляемые модели как простые игрушки, не подозревая, что внутри пластикового корпуса скрывается сложная инженерная система, во многом повторяющая устройство полноразмерного автомобиля. Понимание того, <strong>как работает машинка на пульте управления</strong>, открывает двери в увлекательный мир моделизма, где каждый узел требует точной настройки и обслуживания. Это не просто развлечение, а настоящая школа электротехники и механики в миниатюре.</p>
+
+<p>Основной принцип действия базируется на беспроводной передаче команд от оператора к исполняющим механизмам модели. В отличие от игрушек с ИК-портом, современные <em>RC-модели</em> используют радиоканалы, позволяющие управлять машиной на расстоянии до нескольких сотен метров даже за препятствиями. Сигнал кодируется, передается на несущей частоте и декодируется приемником, который распределяет энергию аккумулятора по нужным агрегатам.</p>
+
+<p>Ключевым элементом здесь является согласованность работы всех компонентов: от качества антенны до скорости реакции сервопривода. <mark>Задержка сигнала (latency) в профессиональных системах не должна превышать 10-15 миллисекунд</mark>, иначе управление станет невозможным на высоких скоростях. Давайте разберем каждый узел этой цепи отдельно, чтобы вы могли не только выбирать качественную технику, но и грамотно ее обслуживать.</p>
+
+<h2 id="фундамент-управления-передатчик-и-приемник">Фундамент управления: передатчик и приемник</h2>
+
+<p>Сердцем любой системы дистанционного управления является связка «передатчик — приемник». Передатчик, или пульт, генерирует радиосигнал определенной частоты, модулируя его в зависимости от положения стиков и кнопок. Приемник, установленный в машине, ловит эти волны и преобразует их в электрические импульсы, понятные электронике модели. Современные системы работают в диапазоне <strong>2.4 ГГц</strong>, что обеспечивает стабильность связи и отсутствие помех даже при одновременной работе десятка моделей.</p>
+
+<p>Внутри пульта находится кварцевый генератор, задающий частоту, и модулятор, который «накладывает» информацию о ваших действиях на несущую волну. Если вы нажимаете газ, передатчик посылает пакет данных с соответствующим кодом. Приемник, настроенный на ту же частоту и протокол, считывает этот код. Важно понимать, что разные производители используют различные <strong>протоколы связи</strong>, поэтому пульт от одной модели не всегда подойдет к другой без перепрошивки или специального модуля.</p>
+
+<ul>
+<li>📡 <strong>Антенная система:</strong> обеспечивает передачу сигнала; в пультах часто используются выдвижные антенны, а в приемниках — встроенные или выносные.</li>
+<li>⚙️ <strong>Кристаллы частоты:</strong> в старых моделях определяли канал связи, в новых заменены программным переключением.</li>
+<li>🔋 <strong>Источник питания пульта:</strong> обычно батарейки АА или литий-полимерный аккумулятор, разряд которых может снизить дальность связи.</li>
+</ul>
+
+<p>Качество связи напрямую зависит от расположения антенны в кузове модели. Антенна приемника должна быть расправлена вдоль борта и не должна касаться металлических частей или карбона, так как это создает экранирующий эффект. <em>Carbon fiber</em> (углеволокно), часто используемое в шасси, отлично блокирует радиоволны, поэтому антенну часто выводят в специальный пластиковый кожух на крыше или бампере.</p>
+
+<div class="pb-poll" id="poll-15a14fb8"><div class="pb-poll-question">📊 Какой тип управления вы предпочитаете?</div><div class="pb-poll-option" data-poll="15a14fb8" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Пистолетная рукоять (классика)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="15a14fb8" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Джойстик (геймпад)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="15a14fb8" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Смартфон (гироскоп)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="15a14fb8" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, только начинаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="сердце-модели-электронная-система-управления-esc">Сердце модели: электронная система управления (ESC)</h2>
+
+<p>Электронный регулятор хода, или <strong>ESC</strong> (Electronic Speed Controller), является вторым по важности компонентом после аккумулятора. Именно он управляет скоростью и направлением вращения электродвигателя. Получая сигнал от приемника, ESC преобразует постоянный ток аккумулятора в трехфазный переменный ток (для бесколлекторных моторов) или просто модулирует напряжение (для коллекторных).</p>
+
+<p>Главный параметр ESC — максимальный ток, который он может пропустить через себя без перегрева. Если вы поставите мощный мотор на слабый регулятор, последний сгорит. Современные регуляторы оснащены системой <strong>BEC</strong> (Battery Eliminator Circuit), которая понижает напряжение с аккумулятора (например, 11.1 В) до 5-6 В для питания приемника и сервопривода. Это избавляет от необходимости устанавливать отдельную батарейку для электроники.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При первом включении новой модели всегда снимайте шестерни с двигателя или отключайте вал, чтобы проверить работу ESC без нагрузки. Это предотвратит резкий рывок машины и возможную поломку дифференциала.</p></aside>
+
+<p>Настройка ESC часто производится через специальный порт подключения к компьютеру или последовательностью нажатий кнопки на самом регуляторе. Вы можете задать тип аккумулятора (LiPo/NiMH), режим торможения и порог отсечки по низкому напряжению. <em>Low Voltage Detection</em> (LVD) — критически важная функция, которая отключает мотор, если батарея разрядилась ниже безопасного уровня, спасая её от вздутия и выхода из строя.</p>
+
+<h2 id="механика-движения-сервопривод-рулевого-управления">Механика движения: сервопривод рулевого управления</h2>
+
+<p>Сервопривод, или «серва», — это электромеханическое устройство, преобразующее электрический сигнал в точное угловое перемещение вала. Внутри корпуса находится миниатюрный моторчик, редуктор и потенциометр обратной связи. Когда приемник посылает сигнал «повернуть влево», мотор крутит редуктор до тех пор, пока потенциометр не сообщит о достижении нужного угла, после чего мотор останавливается и удерживает позицию.</p>
+
+<p>Основная характеристика сервопривода — <strong>крутящий момент</strong> (измеряется в кг/см) и скорость реакции (время поворота на 60 градусов). Для тяжелых шоссейных моделей или внедорожников с большими колесами требуются мощные сервы с металлическим редуктором. Пластиковые шестерни в редукторе быстро выйдут из строя при ударах или высокой нагрузке, что приведет к потере управления.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип сервопривода</th>
+<th>Материал шестерен</th>
+<th>Крутящий момент (кг/см)</th>
+<th>Применение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Стандартный</td>
+<td>Пластик</td>
+<td>1.5 - 2.5</td>
+<td>Легкие модели 1:18, 1:24</td>
+</tr>
+<tr>
+<td>Усиленный</td>
+<td>Карбон/Титан</td>
+<td>4.0 - 6.0</td>
+<td>Шоссейные модели 1:10</td>
+</tr>
+<tr>
+<td>Высоковольтный</td>
+<td>Металл</td>
+<td>8.0 - 12.0+</td>
+<td>Большие внедорожники, роботы</td>
+</tr>
+<tr>
+<td>Цифровой</td>
+<td>Металл</td>
+<td>Зависит от модели</td>
+<td>Спорт, дрифт (высокая точность)</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Важно правильно настроить длину тяги, соединяющей серву с поворотными кулаками. Если тяга слишком короткая или длинная, колеса будут перекошены даже в нейтральном положении, что вызовет увод машины в сторону. Регулировка производится с помощью специальных пластиковых или металлических наконечников, вкручиваемых в тягу.</p>
+
+<h2 id="энергетика-типы-аккумуляторов-и-их-влияние-на-динамику">Энергетика: типы аккумуляторов и их влияние на динамику</h2>
+
+<p>Источник питания определяет, как долго и насколько быстро сможет ездить ваша модель. Сегодня стандартом де-факто являются <strong>Li-Po</strong> (литий-полимерные) аккумуляторы. Они обладают высокой токоотдачей и малым весом. Однако они требуют бережного обращения: их нельзя перезаряжать, переразряжать и хранить полностью заряженными длительное время.</p>
+
+<p>Второй популярный тип — <em>NiMH</em> (никель-металлгидридные). Они тяжелее и имеют меньшую емкость, но гораздо безопаснее и дешевле. Для новичков, которые только учатся понимать, как работает машинка на пульте управления, NiMH станут отличным стартом. Они прощают ошибки зарядки и не требуют сложной балансировки ячеек.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка аккумулятора перед запуском</h4><label class="check-item"><input type="checkbox"><span>Визуальный осмотр на вздутие</span></label><label class="check-item"><input type="checkbox"><span>Проверка напряжения мультиметром</span></label><label class="check-item"><input type="checkbox"><span>Плотность посадки в отсеке</span></label><label class="check-item"><input type="checkbox"><span>Температура после зарядки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<blockquote>
+<p>⚠️ Внимание: Никогда не используйте поврежденный Li-Po аккумулятор! Если вы заметили вздутие, прокол или запах электролита, немедленно прекратите эксплуатацию и утилизируйте батарею в специальном пункте. Риск возгорания очень высок.</p>
+</blockquote>
+
+<p>Емкость аккумулятора измеряется в мАч (миллиампер-часах), а токоотдача — в <strong>C</strong> (C-rate). Чем выше параметр C, тем больший ток может отдать батарея в пике нагрузки. Для скоростных моделей с бесколлекторными моторами нужны батареи с токоотдачей не менее 30C-50C, иначе «просадка» напряжения под нагрузкой приведет к потере мощности.</p>
+
+<h2 id="двигатели-коллекторные-против-бесколлекторных">Двигатели: коллекторные против бесколлекторных</h2>
+
+<p>Выбор двигателя диктует характер всей модели. <strong>Коллекторные моторы</strong> (Brushed) имеют щетки, которые трутся о коллектор, создавая искрение и трение. Они дешевле, проще в управлении, но менее эффективны и требуют периодической замены щеток. Их КПД составляет около 70-75%.</p>
+
+<p>Бесколлекторные моторы (<em>Brushless</em>) лишены щеток. Вращение создается за счет взаимодействия магнитного поля статора и ротора. Такие моторы обладают КПД до 90%, почти не греются при правильной нагрузке и служат в разы дольше. Однако они требуют более дорогого ESC и сложной настройки.</p>
+
+<p>При выборе мотора обращайте внимание на маркировку витков (Turns). Меньшее число витков (например, 3.5T) означает более высокую скорость вращения, но меньший крутящий момент и больший нагрев. Большое число витков (17.5T) дает больше тяги и меньше греется, но максимальная скорость будет ниже.</p>
+
+<details class="pb-accordion"><summary>Почему греется двигатель?</summary><div class="pb-accordion-body"><p>Двигатель греется из-за прохождения электрического тока и механического трения. В бесколлекторных моторах основной нагрев дают потери в меди и магнитные потери. Перегрев выше 80-90 градусов может привести к размагничиванию неодимовых магнитов, что необратимо снизит мощность мотора.</p></div></details>
+
+<h2 id="диагностика-и-обслуживание-системы">Диагностика и обслуживание системы</h2>
+
+<p>Даже самая надежная техника требует обслуживания. Понимание того, как работает машинка на пульте управления, помогает быстро находить неисправности. Чаще всего проблемы связаны с плохим контактом, разряженной батареей или механическим заклиниванием узлов.</p>
+
+<ul>
+<li>🔌 <strong>Отсутствие реакции:</strong> проверьте соединения проводов между приемником, ESC и сервой. Часто от вибрации разъемы отходят.</li>
+<li>📶 <strong>Малая дальность:</strong> осмотрите антенну приемника. Если она обрезана или повреждена, дальность упадет до 1-2 метров.</li>
+<li>🔊 <strong>Писк мотора:</strong> характерный звук при старте бесколлекторного мотора может означать проблему с настройками тайминга или повреждение обмотки.</li>
+</ul>
+
+<p>Регулярно очищайте модель от пыли и песка, особенно после заездов по грунту. Песок, попадая в подшипники и шестерни дифференциала, работает как абразив, быстро выводя механику из строя. Используйте сжатый воздух и специальные спреи для чистки электроники.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не мойте электронные компоненты (приемник, ESC, мотор) водой под давлением! Вода под высоким давлением загоняет грязь глубже в подшипники и может повредить изоляцию обмоток, даже если они залиты лаком.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Регулярная протяжка винтов крепления двигателя и шестерен — обязательная процедура. Вибрация от мотора постепенно ослабляет крепления, что может привести к смещению мотора и поломке главной шестерни.</p></aside>
+
+<h2 id="настройка-чувствительности-и-экспоненты">Настройка чувствительности и экспоненты</h2>
+
+<p>Для тонкой настройки поведения модели в пульте существуют функции <strong>Expo</strong> (экспонента) и EPA (End Point Adjustment). Экспонента позволяет изменить чувствительность стика в центре хода, не меняя максимальное отклонение. Это полезно, когда машина слишком резко реагирует на малейшее движение пальца на высоких скоростях.</p>
+
+<p>Настройка конечных точек (EPA) ограничивает ход сервопривода или регулятора газа. Например, вы можете ограничить угол поворота колес, чтобы они не задевали элементы подвески, или ограничить максимальную скорость заднего хода для безопасности.</p>
+
+<p>Процесс настройки требует времени и тестовых заездов. Записывайте изменения параметров, чтобы понимать, что именно улучшило поведение модели. Современный моделинг — это симбиоз механики и электроники, где настройка софта часто важнее, чем замена «железа».</p>
+
+<details>
+<summary>Почему машинка дергается при нажатии газа?</summary>
+<p>Дерганье (cogging) часто встречается на низких оборотах бесколлекторных моторов. Это связано с дискретным переключением фаз. Решается настройкой тайминга в ESC, включением режима"Smooth Start" или заменой мотора на модель с большим количеством полюсов.</p>
+</details>
+
+<details>
+<summary>Как увеличить дальность управления?</summary>
+<p>Убедитесь, что антенна пульта полностью выдвинута и расположена вертикально. В приемнике антенна должна быть расправлена вдоль борта. Избегайте использования антенн с поврежденным изолятором. В редких случаях помогает установка усилителя сигнала, но чаще проблема решается правильной укладкой антенны.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать аккумуляторы большей емкости?</summary>
+<p>Да, если они физически помещаются в отсек и имеют compatible разъем. Большая емкость (мАч) увеличит время работы, но не даст больше мощности. Главное — убедитесь, что ESC поддерживает напряжение новой батареи (количество S в LiPo).</p>
+</details>
+
+<details>
+<summary>Что такоеFail Safe и зачем он нужен?</summary>
+<p>Fail Safe — это функция безопасности. Если связь между пультом и приемником пропадает, модель должна автоматически остановиться или перейти в нейтраль. Это предотвращает неконтролируемый улет модели и возможные травмы или повреждения.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/sa/samyj-dorogoj-sovremennyj-avtomobil.html" class="pb-related-card">
+                <span class="pb-related-title">Самый дорогой современный автомобиль: топ-10 гиперкаров 2026</span>
+                <span class="pb-related-desc">Узнайте, какой самый дорогой современный автомобиль в мире. Рейтинг гиперкаров, цены Bugatti, Rolls-</span>
+            </a><a href="/articles/a/ar/aromatizator-dlya-avtomobilya-na-solnechnykh-batareyakh.html" class="pb-related-card">
+                <span class="pb-related-title">Ароматизатор для авто на солнечных батареях: плюсы и минусы 2026</span>
+                <span class="pb-related-desc">Как выбрать и использовать экологичный ароматизатор для машины с солнечной зарядкой? Обзор моделей, </span>
+            </a><a href="/articles/m/ma/marka-mashiny-v-i-krylya.html" class="pb-related-card">
+                <span class="pb-related-title">Марка машины и крылья: расшифровка логотипов и их история</span>
+                <span class="pb-related-desc">Узнайте, какие марки авто имеют крылья в логотипе. История символов Бентли, Астон Мартин, Лада и дру</span>
+            </a><a href="/articles/a/ar/aromatizator-samolet-v-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Ароматизатор «Самолет» в машину: выбор, установка и уход (2026)</span>
+                <span class="pb-related-desc">Как правильно выбрать и использовать ароматизатор «Самолет» для авто? Обзор видов, советы по установ</span>
+            </a><a href="/articles/c/ch/chto-takoe-deflektory-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Дефлекторы на машину: что это, виды, плюсы и минусы установки</span>
+                <span class="pb-related-desc">Дефлекторы на автомобиль: назначение, виды (боковые, капотные, багажника), материалы, как выбрать и </span>
+            </a><a href="/articles/k/ka/kamery-360-dlya-teyes.html" class="pb-related-card">
+                <span class="pb-related-title">Камеры 360 для Teyes: выбор, установка и настройка</span>
+                <span class="pb-related-desc">Полный гид по круговому обзору для Teyes. Выбор моделей, схема подключения, калибровка и устранение </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

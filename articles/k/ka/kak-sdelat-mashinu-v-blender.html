@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как создать 3D-модель машины в Blender: пошаговое руководство — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как смоделировать автомобиль в Blender с нуля: от базовой геометрии до текстурирования и рендера. Пошаговая инструкция с советами для новичков и продвинутых пользователей.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-sdelat-mashinu-v-blender.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как создать 3D-модель машины в Blender: пошаговое руководство">
+    <meta property="og:description" content="Узнайте, как смоделировать автомобиль в Blender с нуля: от базовой геометрии до текстурирования и рендера. Пошаговая инструкция с советами для новичков и продвинутых пользователей.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как создать 3D-модель машины в Blender: пошаговое руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-подготовка-референсы-и-настройки-blender">1. Подготовка: референсы и настройки Blender</a></li><li><a href="#2-блокинг-создание-базовой-формы-кузова">2. Блокинг: создание базовой формы кузова</a></li><li><a href="#3-детализация-двери-колёса-и-мелкие-элементы">3. Детализация: двери, колёса и мелкие элементы</a></li><li><a href="#4-топология-и-оптимизация-сетки">4. Топология и оптимизация сетки</a></li><li><a href="#5-материалы-и-текстурирование">5. Материалы и текстурирование</a></li><li><a href="#6-освещение-и-рендер">6. Освещение и рендер</a></li><li><a href="#7-экспорт-и-использование-модели">7. Экспорт и использование модели</a></li><li><a href="#8-типичные-ошибки-и-как-их-избежать">8. Типичные ошибки и как их избежать</a></li><li><a href="#faq-частые-вопросы-по-моделированию-машин-в-blender">FAQ: Частые вопросы по моделированию машин в Blender</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-rabotayut-mekhanicheskie-chasy-naruchnye.html">Как работают механические часы: устройство, виды и уход</a></li><li><a href="/articles/c/ch/chem-otlichayutsya-estradnye-dinamiki-ot-koaksialnykh.html">Эстрадные или коаксиальные динамики: в чем разница и что выбрать</a></li><li><a href="/articles/b/ba/bamblbi-transformer-mashina-marka.html">Bumblebee из Трансформеров: какая машина у персонажа в фильмах</a></li><li><a href="/articles/m/ma/material-eva-chto-takoe.html">Материал EVA: что это такое, свойства и применение в авто</a></li><li><a href="/articles/s/sa/samaya-vysokaya-mashina-legkovaya.html">Самая высокая легковая машина: обзор гигантов автопрома</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Создание реалистичной машины в Blender: от эскиза до финального рендера</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-подготовка-референсы-и-настройки-blender">1. Подготовка: референсы и настройки Blender</a></li><li><a href="#2-блокинг-создание-базовой-формы-кузова">2. Блокинг: создание базовой формы кузова</a></li><li><a href="#3-детализация-двери-колёса-и-мелкие-элементы">3. Детализация: двери, колёса и мелкие элементы</a></li><li><a href="#4-топология-и-оптимизация-сетки">4. Топология и оптимизация сетки</a></li><li><a href="#5-материалы-и-текстурирование">5. Материалы и текстурирование</a></li><li><a href="#6-освещение-и-рендер">6. Освещение и рендер</a></li><li><a href="#7-экспорт-и-использование-модели">7. Экспорт и использование модели</a></li><li><a href="#8-типичные-ошибки-и-как-их-избежать">8. Типичные ошибки и как их избежать</a></li><li><a href="#faq-частые-вопросы-по-моделированию-машин-в-blender">FAQ: Частые вопросы по моделированию машин в Blender</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Создание 3D-модели автомобиля в <em>Blender</em> — задача, которая пугает многих новичков, но на деле оказывается увлекательным процессом, если подходить к ней системно. Эта программа с открытым исходным кодом стала стандартом для моделирования, анимации и рендеринга, а её инструменты позволяют воссоздать даже самые сложные детали кузова, салона или двигателя. Но с чего начать? Как избежать типичных ошибок при работе с кривыми поверхностями? И какие плагины ускорят процесс?</p>
+
+<p>В этом руководстве мы разберём весь путь — от подготовки референсов до финального рендера, уделяя внимание <strong>ключевым этапам</strong>: блокинг (создание базовой формы), сглаживание поверхностей, добавление деталей и настройка материалов. Вы узнаете, как работать с модификатором <code>Subdivision Surface</code>, почему важно правильно расставлять <em>loop cuts</em>, и как избежать артефактов при экспорте модели в другие программы. А если вы мечтаете о динамических сценах — мы заложим основу для будущей анимации колёс или открывания дверей.</p>
+
+<p>Неважно, планируете ли вы использовать модель для игры, визуализации тюнинга или просто для портфолио — этот гайд поможет структурировать процесс. Для удобства мы разделили его на логические блоки, чтобы вы могли вернуться к нужному этапу в любой момент. Готовы начать?</p>
+
+<h2 id="1-подготовка-референсы-и-настройки-blender">1. Подготовка: референсы и настройки Blender</h2>
+
+<p>Первый шаг — сбор визуальных материалов. Без качественных референсов даже опытные 3D-художники рискуют получить модель с искажёнными пропорциями. Ищите фотографии автомобиля в <strong>трёх проекциях</strong>: вид спереди, сбоку и сзади. Оптимально, если снимки сделаны на одном уровне (без перспективных искажений) и в высоком разрешении. Источники:</p>
+
+<ul>
+  <li>📌 <em>Blueprints</em> — схемы с точными размерами (можно найти на <em>Blueprints.com</em> или <em>TurboSquid</em>).</li>
+  <li>📸 <em>Google Images</em> с фильтром по лицензии "Для повторного использования".</li>
+  <li>🎥 <em>YouTube</em> — видеообзоры автомобилей (паузите кадры для деталей).</li>
+  <li>🖼️ <em>Blender Artists</em> — форум, где пользователи делятся своими референсами.</li>
+</ul>
+
+<p>Когда материалы собраны, настройте рабочее пространство в <em>Blender</em>:</p>
+
+<ol>
+  <li>Откройте новую сцену (<code>File → New → General</code>).</li>
+  <li>Переключитесь в режим <code>Orthographic</code> (клавиша <code>5</code> на нумпаде) для работы без перспективы.</li>
+  <li>Импортируйте референсы как плоскости (<code>Add → Image → Reference</code>) и расположите их по осям XYZ.</li>
+  <li>Активируйте привязку к сетке (<code>Snap to Grid</code>) и включите отображение осей (<code>Viewport Overlays → Axes</code>).</li>
+</ol>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте аддон <em>Import Images as Planes</em> (включён в Blender по умолчанию), чтобы быстро разместить референсы в 3D-пространстве. Настройте их прозрачность на 50–70%, чтобы видеть модель сквозь них.</p></aside>
+
+<p>Не забывайте про <strong>масштаб сцены</strong>: если вы моделируете реальный автомобиль, установите единицы измерения в метрах (<code>Scene Properties → Units → Metric</code>). Например, длина <em>Toyota Camry</em> — около 4.8 м, а высота — 1.4 м. Это поможет избежать проблем при будущем экспорте или анимации.</p>
+
+<h2 id="2-блокинг-создание-базовой-формы-кузова">2. Блокинг: создание базовой формы кузова</h2>
+
+<p>На этом этапе важно не детализировать модель, а заложить правильную "основу". Начните с примитива <code>Cube</code> и трансформируйте его под габариты автомобиля, ориентируясь на референсы. Используйте <strong>модификатор <code>Mirror</code></strong>, чтобы симметрично редактировать обе стороны кузова.</p>
+
+<p>Основные правила блокинга:</p>
+
+<ul>
+  <li>🔹 Делите модель на логические части: капот, крыша, багажник, колёсные арки.</li>
+  <li>🔹 Используйте <code>Extrude</code> (клавиша <code>E</code>) для "вытягивания" новых граней.</li>
+  <li>🔹 Контролируйте топологию: избегайте <em>N-gons</em> (многоугольников с 5+ вершинами) и триангуляции на этом этапе.</li>
+  <li>🔹 Применяйте <code>Loop Cuts</code> (клавиша <code>Ctrl+R</code>) для создания опорных рёбер вдоль изгибов кузова.</li>
+</ul>
+
+<p>Для криволинейных поверхностей (например, крыши <em>Porsche 911</em>) используйте технику <strong>"box modeling"</strong>:</p>
+
+<ol>
+  <li>Создайте грубый каркас из кубов.</li>
+  <li>Добавьте модификатор <code>Subdivision Surface</code> (уровень <code>View: 2</code>, <code>Render: 3</code>).</li>
+  <li>Сгладьте углы, перемещая вершины вдоль нормалей (<code>G → Z</code>).</li>
+</ol>
+
+
+<p>Длина модели соответствует референсу|Колёсные арки симметричны|Основные изгибы кузова заложены|Нет пересекающихся граней--></p>
+
+<p><mark>Критическая ошибка новичков: игнорирование опорных рёбер (<em>support loops</em>) вокруг острых углов (например, переднего бампера). Без них модификатор <code>Subdivision Surface</code> создаст "размытые" грани, и модель потеряет чёткость.</mark></p>
+
+<h2 id="3-детализация-двери-колёса-и-мелкие-элементы">3. Детализация: двери, колёса и мелкие элементы</h2>
+
+<p>Когда базовая форма готова, приступайте к проработке деталей. Начните с <strong>колёс</strong> — их часто моделируют отдельно и присоединяют позже. Алгоритм:</p>
+
+<ol>
+  <li>Создайте цилиндр (<code>Add → Cylinder</code>) с 32 вершинами по окружности.</li>
+  <li>Добавьте <code>Loop Cuts</code> для протектора и диска.</li>
+  <li>Для реалистичного протектора используйте модификатор <code>Displace</code> с текстурой шин (можно скачать бесплатно на <em>Texturing.XYZ</em>).</li>
+  <li>Смоделируйте болты и центральную гайку отдельно (примитив <code>Torus</code> + <code>Boolean</code> для отверстий).</li>
+</ol>
+
+<p>Для <strong>дверей и окон</strong>:</p>
+
+<ul>
+  <li>🚪 Выделите грани двери на основной модели и отделите их (<code>P → Separate</code>).</li>
+  <li>🔲 Добавьте толщину (<code>Solidify</code> модификатор) и проработайте внутреннюю панель.</li>
+  <li>🔄 Для петель используйте цилиндры с модификатором <code>Array</code> (чтобы дублировать их вдоль оси).</li>
+  <li>💎 Стекла моделируйте как отдельные плоскости с материалом <em>Glass BSDF</em>.</li>
+</ul>
+
+<details class="pb-accordion"><summary>Как смоделировать решётку радиатора?</summary><div class="pb-accordion-body"><p>
+<p>1. Создайте плоскость размером с решётку.</p>
+<p>2. Примените модификатор <code>Array</code> по оси X с offsets.</p>
+<p>3. Добавьте <code>Boolean</code> для создания отверстий (используйте кубы как "вычитаемые" объекты).</p>
+<p>4. Для округлых форм (например, у <em>Mercedes-Benz</em>) используйте <code>Curve</code> как путь для <code>Array</code>.</p></div></details></p>
+
+<p>Не увлекайтесь мелочами на этом этапе! Детализируйте только те элементы, которые видны в финальном рендере. Например, если машина будет показана издалека, достаточно упрощённой модели двигателя под капотом.</p>
+
+<h2 id="4-топология-и-оптимизация-сетки">4. Топология и оптимизация сетки</h2>
+
+<p>Правильная топология — залог реалистичной модели и её корректного поведения при анимации. Основные принципы:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Проблема</th>
+      <th>Решение</th>
+      <th>Пример</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Неровные изгибы на кузове</td>
+      <td>Добавьте <code>Loop Cuts</code> вдоль кривой</td>
+      <td>Крыло <em>Ford Mustang</em></td>
+    </tr>
+    <tr>
+      <td>Артефакты при сглаживании</td>
+      <td>Используйте <code>Edge Crease</code> (клавиша <code>Shift+E</code>)</td>
+      <td>Резкие углы бампера</td>
+    </tr>
+    <tr>
+      <td>Слишком много полигонов</td>
+      <td>Примените <code>Decimate</code> модификатор</td>
+      <td>Детали салона</td>
+    </tr>
+    <tr>
+      <td>Пересекающиеся грани</td>
+      <td>Включите <code>Overlays → Face Orientation</code></td>
+      <td>Колёсные арки</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Для проверки топологии:</p>
+
+<ol>
+  <li>Переключитесь в режим редактирования (<code>Tab</code>).</li>
+  <li>Активируйте отображение <code>Face Orientation</code> (красный/синий цвета покажут неправильные нормали).</li>
+  <li>Используйте <code>X-Ray Mode</code> (клавиша <code>Alt+Z</code>), чтобы увидеть скрытые грани.</li>
+</ol>
+
+
+<p>Сбор референсов|Блокинг кузова|Детализация|Топология и сглаживание|Текстурирование--></p>
+
+<p><strong>Профессиональный совет</strong>: если модель предназначена для игр, ограничьте количество полигонов до 50–100 тыс. (для AAA-проектов — до 300 тыс.). Для этого:</p>
+
+<ul>
+  <li>🎮 Используйте <code>Retopology</code> (инструмент <em>BSurfaces</em> или аддон <em>RetopoFlow</em>).</li>
+  <li>🖌️ Запекайте (<code>Bake</code>) высокополигональную модель в нормали для низкополигональной.</li>
+  <li>🔍 Упрощайте геометрию скрытых деталей (например, внутреннюю сторону капота).</li>
+</ul>
+
+<h2 id="5-материалы-и-текстурирование">5. Материалы и текстурирование</h2>
+
+<p>Реалистичные материалы преображают даже упрощённую модель. В <em>Blender</em> используйте нодовый редактор <code>Shader Editor</code> для создания материалов. Базовые типы:</p>
+
+<ul>
+  <li>🚗 <strong>Кузов</strong>: <em>Principled BSDF</em> с текстурой металлик/краски (параметры <code>Metallic: 0.8</code>, <code>Roughness: 0.1–0.3</code>).</li>
+  <li>🔦 <strong>Стекла</strong>: <em>Glass BSDF</em> + <em>Fresnel</em> для реалистичных бликов.</li>
+  <li>🛞 <strong>Шины</strong>: <em>Principled BSDF</em> с высоким <code>Roughness (0.7–0.9)</code> и текстурой протектора.</li>
+  <li>💺 <strong>Салон</strong>: комбинация <em>Fabric</em> (для сидений) и <em>Plastic</em> (для панели приборов).</li>
+</ul>
+
+<p>Где брать текстуры?</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Ресурс</th>
+      <th>Тип текстур</th>
+      <th>Лицензия</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>Texturing.XYZ</em></td>
+      <td>PBR-материалы (металл, пластик, резина)</td>
+      <td>CC0 (бесплатно)</td>
+    </tr>
+    <tr>
+      <td><em>Poly Haven</em></td>
+      <td>HDRI для освещения + материалы</td>
+      <td>CC0</td>
+    </tr>
+    <tr>
+      <td><em>Substance Source</em></td>
+      <td>Процедурные материалы (платно)</td>
+      <td>Коммерческая</td>
+    </tr>
+    <tr>
+      <td><em>BlenderKit</em></td>
+      <td>Готовые материалы и модели</td>
+      <td>Смешанная</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Для нанесения текстур:</p>
+
+<ol>
+  <li>Распакуйте UV-развёртку (<code>U → Unwrap</code>).</li>
+  <li>Используйте <em>Smart UV Project</em> для сложных деталей.</li>
+  <li>Подключите текстуры в нодах через <code>Image Texture</code> → <code>Base Color</code>.</li>
+  <li>Для реалистичных царапин добавьте маску <code>Mix Shader</code> с <em>Scratch PBR</em> текстурой.</li>
+</ol>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте HDRI-текстуры для освещения сцены — они имитируют реальную среду и добавляют реалистичные отражения на кузов (например, <em>Studio Small 01</em> из <em>Poly Haven</em>).</p></aside>
+
+<h2 id="6-освещение-и-рендер">6. Освещение и рендер</h2>
+
+<p>Даже идеальная модель будет выглядеть плоско без правильного освещения. В <em>Blender</em> есть два основных движка рендера: <code>Eevee</code> (быстрый, но менее реалистичный) и <code>Cycles</code> (требует больше ресурсов, но даёт фотorealistic результат). Для автомобилей лучше выбрать <code>Cycles</code> с такими настройками:</p>
+
+<ul>
+  <li>💡 <strong>Освещение</strong>:
+    <ul>
+      <li>Добавьте <code>Sun Light</code> (интенсивность <code>5.0</code>) для основного источника.</li>
+      <li>Разместите <code>Area Light</code> спереди и сзади для подсветки (цвет: лёгкий голубой/оранжевый).</li>
+      <li>Используйте <code>HDRI</code> в <code>World Properties</code> (например, <em>Industrial Sunrise</em>).</li>
+    </ul>
+  </li>
+  <li>📸 <strong>Камера</strong>:
+    <ul>
+      <li>Установите фокусное расстояние <code>50–85 мм</code> для естественной перспективы.</li>
+      <li>Активируйте <code>Depth of Field</code> (глубина резкости) для реалистичного размытия фона.</li>
+    </ul>
+  </li>
+  <li>⚙️ <strong>Настройки рендера</strong>:
+    <ul>
+      <li><code>Samples: 256–512</code> (чем выше, тем меньше шумов).</li>
+      <li><code>Denoise: OpenImageDenoise</code> для сглаживания артефактов.</li>
+      <li><code>Film → Transparent</code>, если нужен альфа-канал (для композитинга).</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Для динамичных сцен (например, вращающиеся колёса) настройте анимацию:</p>
+
+<ol>
+  <li>Выделите колесо, перейдите в <code>Pose Mode</code>.</li>
+  <li>Добавьте ключевые кадры вращения (<code>I → Rotation</code>) на 1-м и 50-м кадре.</li>
+  <li>В <code>Graph Editor</code> сделайте кривую вращения линейной.</li>
+  <li>Рендерите как <code>OpenGL</code> для предварительного просмотра.</li>
+</ol>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чтобы сэкономить время рендера, отключите (<code>Disable</code>) модификатор <code>Subdivision Surface</code> для объектов, которые не попадают в кадр.</p></aside>
+
+<h2 id="7-экспорт-и-использование-модели">7. Экспорт и использование модели</h2>
+
+<p>Готовую модель можно экспортировать для игр, 3D-печати или дальнейшей обработки. Популярные форматы:</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Формат</th>
+      <th>Назначение</th>
+      <th>Особенности</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.fbx</code></td>
+      <td>Игровые движки (<em>Unreal Engine</em>, <em>Unity</em>)</td>
+      <td>Сохраняет анимацию и материалы</td>
+    </tr>
+    <tr>
+      <td><code>.obj</code></td>
+      <td>3D-печать, <em>Maya</em>, <em>3ds Max</em></td>
+      <td>Не поддерживает анимацию</td>
+    </tr>
+    <tr>
+      <td><code>.stl</code></td>
+      <td>3D-печать</td>
+      <td>Только геометрия, без текстур</td>
+    </tr>
+    <tr>
+      <td><code>.glb/.gltf</code></td>
+      <td>Веб (Three.js, <em>Babylon.js</em>)</td>
+      <td>Лёгкий вес, поддерживает PBR-материалы</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Перед экспортом:</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если модель предназначена для игр, примените все модификаторы (<code>Apply All Modifiers</code>), удалите ненужные вершины (<code>Limited Dissolve</code>) и оптимизируйте UV-развёртку. В противном случае движок может неправильно отобразить геометрию.</blockquote>
+
+<p>Для экспорта в <code>.fbx</code>:</p>
+
+<ol>
+  <li>Выделите все объекты модели (<code>A</code>).</li>
+  <li>Перейдите в <code>File → Export → FBX</code>.</li>
+  <li>Включите опции:
+    <ul>
+      <li><code>Apply Modifiers</code></li>
+      <li><code>Add Leaf Bones</code> (если есть анимация)</li>
+      <li><code>Primary Bone Axis: Y</code></li>
+    </ol>
+  </li>
+  <li>Нажмите <code>Export FBX</code>.</li>
+</ul>
+
+<p>Если модель будет использоваться в <em>Unreal Engine</em>, импортируйте её через <code>Content Browser</code> и настройте материалы заново (движок не сохраняет ноды из <em>Blender</em>).</p>
+
+<h2 id="8-типичные-ошибки-и-как-их-избежать">8. Типичные ошибки и как их избежать</h2>
+
+<p>Даже опытные 3D-художники сталкиваются с проблемами при моделировании автомобилей. Вот самые распространённые:</p>
+
+<ul>
+  <li>🚫 <strong>Несимметричный кузов</strong>:
+    <blockquote>⚠️ <strong>Внимание:</strong> Всегда используйте модификатор <code>Mirror</code> и проверяйте симметрию в режиме <code>Wireframe</code> (<code>Z → Wireframe</code>). Даже миллиметровое смещение будет заметно на рендере.</blockquote>
+  </li>
+  <li>🚫 <strong>Артефакты сглаживания</strong>:
+    <p>Проблема возникает из-за неравномерного распределения рёбер. Решение: добавьте <code>Loop Cuts</code> вокруг острых углов или используйте <code>Edge Crease</code>.</p>
+  </li>
+  <li>🚫 <strong>Слишком высокий полигонный счет</strong>:
+    <p>Для статичных моделей (например, для портфолио) это не критично, но для игр или AR-приложений оптимизируйте сетку с помощью <code>Decimate</code> или ручного ретопологии.</p>
+  </li>
+  <li>🚫 <strong>Неправильные нормали</strong>:
+    <p>Если поверхность выглядит тёмной или "дырявой", нажмите <code>Shift+N</code> в режиме редактирования, чтобы пересчитать нормали (<code>Recalculate Normals</code>).</p>
+  </li>
+  <li>🚫 <strong>Отсутствие референсов</strong>:
+    <p>Без них практически невозможно соблюсти пропорции. Всегда держите под рукой хотя бы боковой вид автомобиля.</p>
+  </li>
+</ul>
+
+<p>Если модель выглядит "пластиковой", проверьте:</p>
+
+<ul>
+  <li>🔹 Уровень <code>Roughness</code> в материалах (для металла: <code>0.1–0.3</code>, для резины: <code>0.7–0.9</code>).</li>
+  <li>🔹 Наличие <em>Environment Map</em> в настройках мира (<code>World → Surface</code>).</li>
+  <li>🔹 Корректность UV-развёртки (нет растяжений или наложений).</li>
+</ul>
+
+<h2 id="faq-частые-вопросы-по-моделированию-машин-в-blender">FAQ: Частые вопросы по моделированию машин в Blender</h2>
+
+<details>
+  <summary>Можно ли смоделировать машину без мыши с 3 кнопками?</summary>
+  <p>Да, но это менее удобно. В <em>Blender</em> многие функции привязаны к средней кнопке мыши (например, вращение вида). Альтернативы:</p>
+  <ul>
+    <li>Используйте эмуляцию средней кнопки (настройте в <code>Edit → Preferences → Input</code>).</li>
+    <li>Купите недорогую 3D-мышь (например, <em>3Dconnexion SpaceMouse</em>).</li>
+    <li>Замените горячие клавиши: вращение вида — <code>Alt+ЛКМ</code>, масштаб — <code>Ctrl+ЛКМ</code>.</li>
+  </ul>
+</details>
+
+<details>
+  <summary>Как сделать реалистичные фары?</summary>
+  <p>Фары состоят из трёх частей:</p>
+  <ol>
+    <li><strong>Стекло</strong>: материал <em>Glass BSDF</em> с <code>IOR: 1.45</code> (как у стекла).</li>
+    <li><strong>Отражатель</strong>: <em>Glossy BSDF</em> с текстурой хрома.</li>
+    <li><strong>Лампа</strong>: <code>Emission</code> с яркостью <code>10–20</code> и лёгким желтоватым оттенком.</li>
+  </ol>
+  <p>Для эффекта рассеивания добавьте внутри фары объёмный свет (<code>Volume Scatter</code>) с низкой плотностью.</p>
+</details>
+
+<details>
+  <summary>Сколько времени занимает создание машины в Blender?</summary>
+  <p>Время зависит от уровня детализации:</p>
+  <ul>
+    <li>🚗 <strong>Low-poly модель</strong> (для игр): 4–8 часов.</li>
+    <li>🚘 <strong>Средний уровень</strong> (для визуализации): 10–20 часов.</li>
+    <li>🏎️ <strong>High-poly</strong> (для рендера или анимации): 30–50+ часов.</li>
+  </ul>
+  <p>С аддонами вроде <em>HardOps</em> или <em>BoxCutter</em> процесс ускоряется на 30–40%.</p>
+</details>
+
+<details>
+  <summary>Как анимировать открывание дверей?</summary>
+  <p>Алгоритм:</p>
+  <ol>
+    <li>Разделите дверь и кузов на отдельные объекты.</li>
+    <li>Добавьте <code>Hinge Constraint</code> (в <code>Physics Properties</code>) к двери, указав точку крепления (петли).</li>
+    <li>Создайте кость (<code>Armature</code>) для двери и привяжите её к петле.</li>
+    <li>Анимируйте вращение кости (<code>I → Rotation</code>) на 50–90 градусов.</li>
+  </ol>
+  <p>Для плавного движения используйте <code>Graph Editor</code> и настройте кривые анимации по <em>Bezier</em>.</p>
+</details>
+
+<details>
+  <summary>Какие аддоны ускоряют моделирование машин?</summary>
+  <p>Топ-5 плагинов для <em>Blender</em>:</p>
+  <ul>
+    <li><strong><em>HardOps</strong></strong>: быстрые булевы операции и сглаживание.</li>
+    <li><strong><em>BoxCutter</strong></strong>: интуитивное "вырезание" форм.</li>
+    <li><strong><em>MeshMachine</strong></strong>: создание механических деталей (болты, решётки).</li>
+    <li><strong><em>AutoMirror</strong></strong>: автоматическое зеркальное копирование редактируемых вершин.</li>
+    <li><strong><em>DecalMachine</em></em>: нанесение наклеек и логотипов.</li>
+  </ul>
+  <p>Все аддоны можно установить через <code>Edit → Preferences → Add-ons → Install</code>.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-rabotayut-mekhanicheskie-chasy-naruchnye.html" class="pb-related-card">
+                <span class="pb-related-title">Как работают механические часы: устройство, виды и уход</span>
+                <span class="pb-related-desc">Подробный разбор устройства механических часов. Узнайте, как работает заводная пружина, баланс и спу</span>
+            </a><a href="/articles/c/ch/chem-otlichayutsya-estradnye-dinamiki-ot-koaksialnykh.html" class="pb-related-card">
+                <span class="pb-related-title">Эстрадные или коаксиальные динамики: в чем разница и что выбрать</span>
+                <span class="pb-related-desc">Подробный разбор отличий эстрадных и коаксиальных динамиков. Сравнение характеристик, звука и сфер п</span>
+            </a><a href="/articles/b/ba/bamblbi-transformer-mashina-marka.html" class="pb-related-card">
+                <span class="pb-related-title">Bumblebee из Трансформеров: какая машина у персонажа в фильмах</span>
+                <span class="pb-related-desc">Узнайте, какую марку и модель автомобиля использовал Бамблби в фильмах про Трансформеров, технически</span>
+            </a><a href="/articles/m/ma/material-eva-chto-takoe.html" class="pb-related-card">
+                <span class="pb-related-title">Материал EVA: что это такое, свойства и применение в авто</span>
+                <span class="pb-related-desc">Полный разбор материала EVA: что это, химический состав, плюсы и минусы. Где используется в автомоби</span>
+            </a><a href="/articles/s/sa/samaya-vysokaya-mashina-legkovaya.html" class="pb-related-card">
+                <span class="pb-related-title">Самая высокая легковая машина: обзор гигантов автопрома</span>
+                <span class="pb-related-desc">Какая самая высокая машина легковая в мире? Узнайте технические характеристики рекордсменов, особенн</span>
+            </a><a href="/articles/c/ch/chto-takoe-shtorki-bezopasnosti-v-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">Шторки безопасности в авто: виды, принцип работы и ремонт</span>
+                <span class="pb-related-desc">Подробный гид по шторкам безопасности: как они работают, когда срабатывают, почему могут не раскрыть</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

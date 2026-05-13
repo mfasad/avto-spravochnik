@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как узнать пробег по моточасам: формулы и калькулятор — Авто Справочник</title>
+    <meta name="description" content="Подробная инструкция по расчету реального пробега двигателя по моточасам. Формулы пересчета для дизеля и бензина, коэффициенты износа и таблица соответствий.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-uznat-probeg-po-motochasam.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как узнать пробег по моточасам: формулы и калькулятор">
+    <meta property="og:description" content="Подробная инструкция по расчету реального пробега двигателя по моточасам. Формулы пересчета для дизеля и бензина, коэффициенты износа и таблица соответствий.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как узнать пробег по моточасам: формулы и калькулятор</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#разница-между-моточасами-и-километрами">Разница между моточасами и километрами</a></li><li><a href="#формулы-и-коэффициенты-для-пересчета">Формулы и коэффициенты для пересчета</a></li><li><a href="#таблица-соответствия-моточасов-и-километров">Таблица соответствия моточасов и километров</a></li><li><a href="#влияние-режима-работы-на-износ-двигателя">Влияние режима работы на износ двигателя</a></li><li><a href="#где-найти-счетчик-моточасов-на-технике">Где найти счетчик моточасов на технике</a></li><li><a href="#практические-советы-по-обслуживанию-по-моточасам">Практические советы по обслуживанию по моточасам</a></li><li><a href="#диагностика-скрытых-проблем-через-анализ-наработки">Диагностика скрытых проблем через анализ наработки</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/c/ch/chto-oznachaet-v-mashine-a-s.html">Что означает в машине А/С: расшифровка и работа кондиционера</a></li><li><a href="/articles/l/lu/lukojl-dlya-yaponskikh-avto-5w30.html">Лукойл 5W30 для японских авто: выбор, совместимость, отзывы 2026</a></li><li><a href="/articles/s/sk/skolko-vesit-padzhero-4.html">Сколько весит Mitsubishi Pajero 4: масса всех поколений и модификаций</a></li><li><a href="/articles/v/ve/ves-lady-granty-sport.html">Вес Lada Granta Sport: таблица масс по кузовам и комплектациям</a></li><li><a href="/articles/k/ka/kak-pomenyat-salonnyj-filtr-tiguan-2.html">Замена салонного фильтра Volkswagen Tiguan 2: пошаговая инструкция 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как узнать пробег по моточасам: точный расчет ресурса</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#разница-между-моточасами-и-километрами">Разница между моточасами и километрами</a></li><li><a href="#формулы-и-коэффициенты-для-пересчета">Формулы и коэффициенты для пересчета</a></li><li><a href="#таблица-соответствия-моточасов-и-километров">Таблица соответствия моточасов и километров</a></li><li><a href="#влияние-режима-работы-на-износ-двигателя">Влияние режима работы на износ двигателя</a></li><li><a href="#где-найти-счетчик-моточасов-на-технике">Где найти счетчик моточасов на технике</a></li><li><a href="#практические-советы-по-обслуживанию-по-моточасам">Практические советы по обслуживанию по моточасам</a></li><li><a href="#диагностика-скрытых-проблем-через-анализ-наработки">Диагностика скрытых проблем через анализ наработки</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Определение реального технического состояния техники часто становится сложной задачей, когда стандартные показания одометра вызывают сомнения или не могут быть получены напрямую. Владельцы спецтехники, тракторов и даже автомобилей, длительное время работавших в режиме холостого хода, часто задаются вопросом, как узнать пробег по моточасам, чтобы оценить остаточный ресурс силового агрегата. <strong>Моточас</strong> — это единица учета рабочего времени двигателя, которая не всегда прямо пропорциональна пройденному расстоянию, но тесно связана со степенью износа узлов.</p>
+<p>Необходимость пересчета возникает при покупке подержанной техники, планировании технического обслуживания или оценке эффективности использования автопарка. Простая экстраполяция цифр может привести к ошибочным выводам, так как режимы эксплуатации кардинально влияют на скорость выработки ресурса. В этой статье мы разберем методики конвертации, коэффициенты нагрузки и способы получения наиболее достоверной картины состояния вашего двигателя.</p>
+
+<h2 id="разница-между-моточасами-и-километрами">Разница между моточасами и километрами</h2>
+<p>Фундаментальное различие между этими понятиями кроется в том, что они измеряют разные физические процессы. Километраж фиксирует перемещение транспортного средства в пространстве, в то время как <em>моточасы</em> отражают продолжительность работы двигателя независимо от того, движется машина или стоит на месте. Для строительной техники, такой как экскаваторы или погрузчики, счетчик моточасов является основным прибором учета, так как понятие "пробега" там часто не применимо в классическом понимании.</p>
+<p>При работе в тяжелых условиях, например, при частых простоях в пробках с работающим двигателем или при выполнении стационарных работ (работа гидравлики, генератора), одометр может показывать смешные значения, тогда как износ поршневой группы идет полным ходом. Именно поэтому <strong>ресурс двигателя</strong> правильнее оценивать именно по наработке моточасов, особенно для дизельных агрегатов промышленного назначения.</p>
+<p>Существует также разница в методике подсчета на разных типах техники. На современных автомобилях электроника может конвертировать время работы в условные километры для сервисного интервала, но "сырые" данные всегда хранятся в виде времени. Понимание этой разницы критически важно при принятии решения о покупке техники с "нулевым" пробегом, но тысячами часов наработки.</p>
+
+<h2 id="формулы-и-коэффициенты-для-пересчета">Формулы и коэффициенты для пересчета</h2>
+<p>Для перевода моточасов в километры не существует единой универсальной константы, применимой ко всем машинам мира. Однако в инженерной практике и при эксплуатации спецтехники используются усредненные коэффициенты, позволяющие получить приближенное значение. Базовая формула выглядит как произведение количества моточасов на среднюю скорость движения или условный коэффициент пробега.</p>
+<p>Для легковых бензиновых автомобилей часто используют коэффициент 40-50 км/ч. Это означает, что один моточас приравнивается к 40-50 километрам пробега в смешанном цикле. Для дизельных двигателей тяжелой техники, работающей под нагрузкой, коэффициент может быть выше, достигая 60-70 км/ч, так как их рабочий диапазон скоростей и оборотов отличается. Важно учитывать, что <strong>коэффициент нагрузки</strong> напрямую влияет на итоговую цифру.</p>
+<details class="pb-accordion"><summary>Откуда берутся коэффициенты?</summary><div class="pb-accordion-body"><p>Коэффициенты пересчета (40, 50, 60 км/ч) получены эмпирическим путем на основе статистики эксплуатации больших парков техники. Они учитывают среднее время простоя, работу на холостом ходу и реальную среднюю скорость в конкретных условиях (город, трасса, карьер).</p></div></details>
+<p>Если вы владеете конкретной моделью трактора или грузовика, лучше обратиться к заводскому руководству, где производитель может указывать эквивалентные значения. Например, для некоторых моделей <em>CAT</em> или <em>Komatsu</em> существуют свои таблицы соответствия, учитывающие специфику гидравлической системы и трансмиссии.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для получения более точной цифры разделите общий пробег (если он известен за определенный период) на общее количество моточасов, наработанных за это же время. Вы получите индивидуальный коэффициент для вашей машины.</p></aside>
+
+<h2 id="таблица-соответствия-моточасов-и-километров">Таблица соответствия моточасов и километров</h2>
+<p>Ниже приведена ориентировочная таблица, демонстрирующая зависимость между наработкой и пробегом для различных типов техники. Эти данные помогут вам быстро сориентироваться в примерном ресурсе, однако помните, что реальные условия могут вносить коррективы до 20%.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип техники</th>
+<th>Условный коэффициент (км/мч)</th>
+<th>500 моточасов</th>
+<th>1000 моточасов</th>
+<th>Ресурс до капремонта (примерно)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Легковой автомобиль (бензин)</td>
+<td>40 км</td>
+<td>20 000 км</td>
+<td>40 000 км</td>
+<td>8 000 - 10 000 мч</td>
+</tr>
+<tr>
+<td>Грузовик (дизель)</td>
+<td>60 км</td>
+<td>30 000 км</td>
+<td>60 000 км</td>
+<td>15 000 - 20 000 мч</td>
+</tr>
+<tr>
+<td>Трактор (агро)</td>
+<td>30 км</td>
+<td>15 000 км</td>
+<td>30 000 км</td>
+<td>10 000 - 12 000 мч</td>
+</tr>
+<tr>
+<td>Экскаватор / Погрузчик</td>
+<td>0 км (условно)</td>
+<td>-</td>
+<td>-</td>
+<td>12 000 - 15 000 мч</td>
+</tr>
+</tbody>
+</table></div>
+<p>Как видно из таблицы, для стационарной техники пробег не имеет смысла, и главным показателем остается чистое время работы. Для транспортных средств таблица дает понимание, насколько интенсивно эксплуатировался автомобиль. Если на одометре 200 000 км, а по расчету через моточасы должно быть 400 000 км, значит, машина часто стояла с работающим мотором.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Табличные данные носят справочный характер. Реальный износ зависит от качества обслуживания, топлива и стиля вождения, а не только от времени работы.</p></aside>
+
+<h2 id="влияние-режима-работы-на-износ-двигателя">Влияние режима работы на износ двигателя</h2>
+<p>Режим работы двигателя — это, пожалуй, самый важный фактор, который необходимо учитывать при оценке состояния. Работа на холостом ходу (idle) считается наиболее щадящей для трансмиссии и ходовой части, но может быть коварной для двигателя, особенно дизельного. В режиме <strong>холостого хода</strong> температура в цилиндрах может быть недостаточной для полного сгорания топлива, что ведет к образованию нагара и разжижению масла.</p>
+<blockquote>⚠️ Внимание: Длительная работа дизельного двигателя на холостом ходу (более 15-20 минут без нагрузки) приравнивается к работе под полной нагрузкой по степени загрязнения системы выпуска сажей. Это может привести к быстрому выходу из строя сажевого фильтра (DPF).</blockquote>
+<p>С другой стороны, работа под полной нагрузкой, когда двигатель отдает 100% мощности (например, подъем в гору с грузом или копка грунта), вызывает максимальный тепловой и механический стресс. В таких условиях 1 моточас может быть эквивалентен гораздо большему пробегу по трассе с точки зрения износа поршневой группы. <em>Турбокомпрессоры</em> также испытывают колоссальные нагрузки при резких изменениях режимов работы.</p>
+<div class="pb-poll" id="poll-08bc3e6b"><div class="pb-poll-question">📊 В каком режиме чаще всего работает ваша техника?</div><div class="pb-poll-option" data-poll="08bc3e6b" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Только холостой ход (генератор/насос)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="08bc3e6b" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Смешанный цикл (город/трасса)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="08bc3e6b" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Тяжелая нагрузка (стройка/карьер)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="08bc3e6b" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Стою в пробках (легковое авто)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="где-найти-счетчик-моточасов-на-технике">Где найти счетчик моточасов на технике</h2>
+<p>Расположение прибора учета времени работы зависит от типа и года выпуска техники. На современных автомобилях и грузовиках эта информация часто скрыта в бортовом компьютере и не выводится на приборную панель в обычном режиме. Чтобы узнать точное количество моточасов, может потребоваться вход в сервисное меню или подключение диагностического сканера.</p>
+<p>На специальной технике (тракторы, экскаваторы, генераторы) счетчик моточасов обычно расположен непосредственно на панели приборов рядом с указателем температуры и давления масла. Он может быть механическим (циферблат со стрелкой или барабанный) или электронным. В электронных системах данные часто дублируются в памяти <strong>ECU</strong> (электронного блока управления).</p>
+<p>Если на вашем автомобиле нет явного счетчика, попробуйте следующие методы:</p>
+<ul>
+<li>🔍 Зажмите комбинацию кнопок на приборной панели (часто "Reset" + "OK" или зажатие кнопки сброса суточного пробега при включении зажигания) для входа в скрытое меню.</li>
+<li>💻 Используйте диагностический адаптер <em>OBD-II</em> и программное обеспечение для чтения параметров "Engine Run Time" или "Total Idle Time".</li>
+<li>📖 Изучите инструкцию по эксплуатации, где описан вход в инженерное меню для вашей конкретной модели.</li>
+</ul>
+<p>Для старой техники без электроники единственным способом остается визуальный осмотр механического счетчика или, в крайнем случае, оценка состояния масла и компрессии, что косвенно укажет на наработку.</p>
+
+<h2 id="практические-советы-по-обслуживанию-по-моточасам">Практические советы по обслуживанию по моточасам</h2>
+<p>Переход на систему обслуживания по моточасам является более грамотным подходом, особенно для техники, работающей в городе или в режиме частых остановок. Замена масла строго по километражу в таких условиях может привести к тому, что вы перекатаете ресурс смазочного материала, так как двигатель работал больше, чем проехал.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист перехода на ТО по моточасам</h4><label class="check-item"><input type="checkbox"><span>Узнать норматив моточасов для вашей модели масла</span></label><label class="check-item"><input type="checkbox"><span>Установить приложение или вести журнал учета моточасов</span></label><label class="check-item"><input type="checkbox"><span>Рассчитать индивидуальный интервал замены</span></label><label class="check-item"><input type="checkbox"><span>Запомнить показания счетчика после последней замены</span></label><label class="check-item"><input type="checkbox"><span>Спланировать следующее ТО по времени работы</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+<p>Рекомендуется сокращать интервалы замены технических жидкостей, если более 40% наработки приходится на работу в режиме холостого хода или в тяжелых условиях (пыль, перепады температур). <strong>Ресурс фильтров</strong> в таких условиях также снижается, поэтому их стоит менять чаще регламентного срока, привязанного к пробегу.</p>
+<blockquote>⚠️ Внимание: Не игнорируйте сезонность. Зимой двигатель работает дольше на прогрев, что увеличивает счетчик моточасов, но не увеличивает пробег. Летний интервал замены масла может не подойти для зимней эксплуатации.</blockquote>
+<p>Ведение собственного журнала, где вы фиксируете показания счетчика моточасов при каждой заправке или еженедельно, поможет вам выстроить идеальную стратегию обслуживания и избежать внезапных поломок.</p>
+
+<h2 id="диагностика-скрытых-проблем-через-анализ-наработки">Диагностика скрытых проблем через анализ наработки</h2>
+<p>Анализ соотношения моточасов и реального пробега позволяет выявить скрытые проблемы в эксплуатации автопарка или личного транспорта. Резкое увеличение времени работы двигателя без увеличения километража может указывать на неисправности в системе охлаждения (двигатель долго греется), проблемы с трансмиссией (пробуксовка) или просто на неэффективное использование техники водителем.</p>
+<p>При покупке подержанной спецтехники, где пробег не является основным критерием, именно моточасы становятся "правдой". Однако и здесь есть нюансы: счетчики могут быть заменены, а электронные данные — сброшены. Поэтому всегда проводите комплексную диагностику, включая анализ масла и проверку компрессии, чтобы подтвердить данные приборов.</p>
+<p>Понимание того, как узнать пробег по моточасам, дает вам в руки мощный инструмент контроля. Это позволяет не зависеть от маркетинговых уловок сервисов и объективно оценивать стоимость владения техникой.</p>
+
+<details>
+<summary>Можно ли точно перевести моточасы в километры?</summary>
+<p>Точно — нельзя, так как средняя скорость движения постоянно меняется. Можно получить лишь приблизительное значение, используя усредненные коэффициенты (обычно 1 моточас = 40-50 км для легковых авто). Для точной оценки ресурса лучше оперировать именно моточасами.</p>
+</details>
+<details>
+<summary>Что больше изнашивает двигатель: пробег или моточасы?</summary>
+<p>Двигатель изнашивают обороты и нагрузка. Моточасы лучше отражают время работы двигателя, включая простои. 1000 км по трассе на крейсерской скорости износят мотор меньше, чем 1000 км в городских пробках, хотя моточасов во втором случае будет больше. Поэтому моточасы — более честный показатель износа.</p>
+</details>
+<details>
+<summary>Где посмотреть моточасы на автомобиле без счетчика?</summary>
+<p>На современных авто данные хранятся в ЭБУ. Их можно считать через диагностический разъем OBD-II с помощью ноутбука или профессионального сканера. На некоторых моделях (например, отдельные версии Ford, BMW) можно войти в скрытое меню приборной панели комбинацией кнопок.</p>
+</details>
+<details>
+<summary>Какой ресурс двигателя в моточасах?</summary>
+<p>Ресурс зависит от класса двигателя. Атмосферные бензиновые моторы ходят 6000-10000 мч. Турбодизели — 10000-20000 мч. Двигатели спецтехники (Deutz, Perkins, Cummins) при должном уходе могут выработать 20000-30000 мч до первого капитального ремонта.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/c/ch/chto-oznachaet-v-mashine-a-s.html" class="pb-related-card">
+                <span class="pb-related-title">Что означает в машине А/С: расшифровка и работа кондиционера</span>
+                <span class="pb-related-desc">Подробный разбор кнопки А/С в автомобиле: как работает система климата, стоит ли включать зимой и ка</span>
+            </a><a href="/articles/l/lu/lukojl-dlya-yaponskikh-avto-5w30.html" class="pb-related-card">
+                <span class="pb-related-title">Лукойл 5W30 для японских авто: выбор, совместимость, отзывы 2026</span>
+                <span class="pb-related-desc">Какое масло Лукойл 5W30 подходит для Toyota, Honda, Nissan и других японских машин? Разбираем специф</span>
+            </a><a href="/articles/s/sk/skolko-vesit-padzhero-4.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько весит Mitsubishi Pajero 4: масса всех поколений и модификаций</span>
+                <span class="pb-related-desc">Точный вес Mitsubishi Pajero 4 поколения (2006-2021) по модификациям: бензин/дизель, 3/5 дверей, с н</span>
+            </a><a href="/articles/v/ve/ves-lady-granty-sport.html" class="pb-related-card">
+                <span class="pb-related-title">Вес Lada Granta Sport: таблица масс по кузовам и комплектациям</span>
+                <span class="pb-related-desc">Точные данные о весе Лады Гранты Спорт (2023-2026) по типам кузова, двигателям и комплектациям. Срав</span>
+            </a><a href="/articles/k/ka/kak-pomenyat-salonnyj-filtr-tiguan-2.html" class="pb-related-card">
+                <span class="pb-related-title">Замена салонного фильтра Volkswagen Tiguan 2: пошаговая инструкция 2026</span>
+                <span class="pb-related-desc">Как самостоятельно поменять салонный фильтр на Фольксваген Тигуан 2 (AD1): фото, видео, выбор фильтр</span>
+            </a><a href="/articles/t/ts/tseny-na-regulirovku-klapanov.html" class="pb-related-card">
+                <span class="pb-related-title">Стоимость регулировки клапанов в 2026: цены, факторы, советы</span>
+                <span class="pb-related-desc">Актуальные цены на регулировку клапанов двигателя в сервисах и самостоятельно. От чего зависит стоим</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

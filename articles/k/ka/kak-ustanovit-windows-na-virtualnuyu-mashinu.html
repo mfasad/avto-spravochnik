@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как установить Windows на виртуальную машину: пошаговая инструкция — Авто Справочник</title>
+    <meta name="description" content="Подробный гайд, как установить Windows на виртуальную машину VirtualBox или VMware. Настройка BIOS, создание образа и оптимизация системы для тестов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-ustanovit-windows-na-virtualnuyu-mashinu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как установить Windows на виртуальную машину: пошаговая инструкция">
+    <meta property="og:description" content="Подробный гайд, как установить Windows на виртуальную машину VirtualBox или VMware. Настройка BIOS, создание образа и оптимизация системы для тестов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/obuchenie-i-testy/">Обучение и Тесты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как установить Windows на виртуальную машину: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-платформы-виртуализации-и-подготовка">Выбор платформы виртуализации и подготовка</a></li><li><a href="#настройка-biosuefi-для-работы-виртуальных-машин">Настройка BIOS/UEFI для работы виртуальных машин</a></li><li><a href="#создание-и-конфигурация-новой-виртуальной-машины">Создание и конфигурация новой виртуальной машины</a></li><li><a href="#процесс-установки-операционной-системы">Процесс установки операционной системы</a></li><li><a href="#установка-драйверов-и-гостевых-дополнений">Установка драйверов и гостевых дополнений</a></li><li><a href="#оптимизация-и-безопасность-виртуальной-среды">Оптимизация и безопасность виртуальной среды</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-najti-skill-testy-v-gta-5-onlajn.html">Скилл тесты в GTA 5 Online: как найти и пройти</a></li><li><a href="/articles/b/bo/boyus-vodit-mashinu-no-khochu.html">Боюсь водить машину, но хочу: как преодолеть страх за рулем</a></li><li><a href="/articles/b/be/besplatnye-ploshchadki-dlya-vozhdeniya.html">Бесплатные площадки для вождения: где тренироваться новичкам</a></li><li><a href="/articles/k/ka/kak-ezdit-v-gorode-v-assetto-corsa.html">Как ездить в городе в Assetto Corsa: гайд для реализма 2026</a></li><li><a href="/articles/6/6-/6-km-ch-v-ms.html">6 км/ч в м/с: точный расчет и конвертация скорости</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как установить Windows на виртуальную машину: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-платформы-виртуализации-и-подготовка">Выбор платформы виртуализации и подготовка</a></li><li><a href="#настройка-biosuefi-для-работы-виртуальных-машин">Настройка BIOS/UEFI для работы виртуальных машин</a></li><li><a href="#создание-и-конфигурация-новой-виртуальной-машины">Создание и конфигурация новой виртуальной машины</a></li><li><a href="#процесс-установки-операционной-системы">Процесс установки операционной системы</a></li><li><a href="#установка-драйверов-и-гостевых-дополнений">Установка драйверов и гостевых дополнений</a></li><li><a href="#оптимизация-и-безопасность-виртуальной-среды">Оптимизация и безопасность виртуальной среды</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Создание изолированной среды для тестирования программ, запуска сомнительного софта или освоения новой операционной системы — задача, с которой сталкиваются многие IT-специалисты и продвинутые пользователи. Вместо того чтобы рисковать стабильностью основной операционной системы, разумнее использовать <strong>виртуализацию</strong>. Этот подход позволяет запускать гостевую ОС поверх вашей текущей (хостовой), полностью изолируя процессы и файлы.</p>
+
+<p>Процесс разворачивания виртуальной машины (ВМ) может показаться сложным новичку из-за обилия настроек и терминологии. Однако, если разбить процедуру на логические этапы, становится понятно, что ничего сверхъестественного в этом нет. Вам потребуется лишь свободное место на диске, достаточный объем оперативной памяти и установочный образ системы.</p>
+
+<p>В этом материале мы детально разберем, как подготовить окружение, выбрать подходящий гипервизор и корректно инсталлировать <em>Windows 10</em> или <em>Windows 11</em>. Мы затронем важные нюансы настройки BIOS/UEFI, которые часто становятся причиной ошибок при запуске, и обсудим оптимизацию производительности гостевой системы.</p>
+
+<h2 id="выбор-платформы-виртуализации-и-подготовка">Выбор платформы виртуализации и подготовка</h2>
+
+<p>Первым шагом является выбор программного обеспечения, которое будет эмулировать «железо» для гостевой операционной системы. На рынке существует несколько лидеров, каждый из которых имеет свои преимущества. Наиболее популярными решениями являются <em>Oracle VM VirtualBox</em> (полностью бесплатен и открыт) и <em>VMware Workstation Player</em> (имеет бесплатную версию для личного использования).</p>
+
+<p>Выбор часто зависит от ваших потребностей: если вам нужна максимальная совместимость с современными стандартами и лучшая графическая производительность, стоит присмотреться к продуктам VMware. Если же приоритетом является открытый код и кроссплатформенность, то VirtualBox станет отличным выбором. Обе платформы поддерживают создание <strong>снапшотов</strong>, что позволяет сохранять состояние системы в любой момент времени.</p>
+
+<p>Перед установкой софта убедитесь, что ваш процессор поддерживает технологии виртуализации. Для Intel это технология <code>VT-x</code>, а для AMD — <code>AMD-V</code>. Часто эти функции отключены по умолчанию в BIOS материнской платы, что приводит к ошибкам при запуске ВМ.</p>
+
+<div class="pb-poll" id="poll-36da241f"><div class="pb-poll-question">📊 Какую платформу виртуализации вы предпочитаете?</div><div class="pb-poll-option" data-poll="36da241f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Oracle VM VirtualBox</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="36da241f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">VMware Workstation</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="36da241f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Hyper-V</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="36da241f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">QEMU/KVM</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="36da241f" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Parallels Desktop</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Также критически важно скачать актуальный ISO-образ операционной системы с официального сайта Microsoft. Использование сторонних сборок может привести к нестабильной работе или внедрению вредоносного кода в вашу тестовую среду.</p>
+
+<h2 id="настройка-biosuefi-для-работы-виртуальных-машин">Настройка BIOS/UEFI для работы виртуальных машин</h2>
+
+<p>Если при попытке запустить виртуальную машину вы получаете ошибку о недоступности виртуализации, необходимо проверить настройки базовой системы ввода-вывода. Это фундаментальный этап, без которого гипервизоры не могут функционировать корректно.</p>
+
+<p>Для входа в BIOS обычно требуется нажать клавишу <code>Del</code>, <code>F2</code> или <code>F10</code> сразу после включения компьютера. Интерфейсы могут отличаться, но логика поиска остается единой. Вам нужно найти раздел, связанный с процессором (CPU Configuration) или системными настройками (Advanced).</p>
+
+<ul>
+<li>🔍 Для процессоров Intel ищите опцию <code>Intel Virtualization Technology</code> или <code>VT-x</code> и переключите её в состояние <code>Enabled</code>.</li>
+<li>🔍 Для процессоров AMD найдите пункт <code>SVM Mode</code> или <code>AMD-V</code> и также активируйте его.</li>
+<li>🔍 Убедитесь, что опция <code>Execute Disable Bit</code> (или NX Bit) также включена, так как современные ОС требуют её наличия.</li>
+</ul>
+
+<p>После внесения изменений обязательно сохраните настройки, обычно это делается клавишей <code>F10</code>, и дождитесь перезагрузки. Теперь программное обеспечение для виртуализации получит прямой доступ к инструкциям процессора, что значительно повысит производительность.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы используете Windows 10 или 11, проверьте, не конфликтует ли встроенный Hyper-V с сторонними гипервизорами. Иногда требуется отключать Hyper-V через «Включение или отключение компонентов Windows» для корректной работы VirtualBox.</p></aside>
+
+<h2 id="создание-и-конфигурация-новой-виртуальной-машины">Создание и конфигурация новой виртуальной машины</h2>
+
+<p>Запустите выбранный гипервизор и нажмите кнопку создания новой машины. Мастер настройки предложит вам ввести имя, которое автоматически задаст тип и версию ОС. Здесь важно правильно указать версию, чтобы эмулятор применил оптимальные настройки по умолчанию.</p>
+
+<p>На этапе выделения ресурсов не стоит жадничать, но и отдавать все ресурсы хосту нельзя. Золотая середина — выделить около 50% доступной оперативной памяти, но не менее 4 ГБ для комфортной работы Windows 10/11. Для жесткого диска рекомендуется выбрать формат <strong>VDI</strong> (для VirtualBox) или <strong>VMDK</strong> (для VMware) с динамическим размером.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Динамический размер диска означает, что файл-образ будет расти по мере заполнения данными, но не будет уменьшаться автоматически при удалении файлов внутри гостевой ОС.</p>
+</blockquote>
+
+<p>В настройках процессора рекомендуется выделить не менее двух ядер, если ваш хост имеет 4 и более ядер. Это обеспечит отзывчивость интерфейса. Также в разделе «Дисплей» стоит увеличить объем видеопамяти до максимума (обычно 128 МБ) и включить 3D-ускорение.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Настройка параметров ВМ</h4><label class="check-item"><input type="checkbox"><span>Выделить не менее 4 ГБ ОЗУ</span></label><label class="check-item"><input type="checkbox"><span>Создать динамический диск объемом 60+ ГБ</span></label><label class="check-item"><input type="checkbox"><span>Включить 3D-ускорение</span></label><label class="check-item"><input type="checkbox"><span>Подключить ISO-образ в виртуальный привод</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Последним шагом на этом этапе является подключение скачанного ранее ISO-образа в виртуальный оптический привод. В настройках носителей (Storage) выберите пустой слот CD/DVD и укажите путь к файлу образа на физическом диске.</p>
+
+<h2 id="процесс-установки-операционной-системы">Процесс установки операционной системы</h2>
+
+<p>После запуска виртуальной машины начнется загрузка с подключенного образа. Если вы видите логотип Windows, значит, все предыдущие шаги выполнены верно. Процесс установки мало чем отличается от установки на реальный компьютер, но имеет свои особенности.</p>
+
+<p>На этапе выбора типа установки обязательно выберите <code>Выборочная: только установка Windows (для опытных пользователей)</code>. Это позволит создать чистую структуру разделов. В появившемся списке дисков вы увидите «Незанятое пространство» — это ваш виртуальный диск.</p>
+
+<p>Просто выберите его и нажмите «Далее». Система сама создаст необходимые служебные разделы. Процесс копирования файлов займет некоторое время, зависящее от скорости вашего физического накопителя и нагрузки на процессор.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Минимальное требование</th>
+<th>Рекомендуемое значение для ВМ</th>
+<th>Комментарий</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Оперативная память</td>
+<td>2 ГБ (Win 10), 4 ГБ (Win 11)</td>
+<td>4-8 ГБ</td>
+<td>Меньше 4 ГБ система будет работать медленно</td>
+</tr>
+<tr>
+<td>Дисковое пространство</td>
+<td>32 ГБ</td>
+<td>64-100 ГБ</td>
+<td>Нужно место для обновлений и тестового софта</td>
+</tr>
+<tr>
+<td>Процессор</td>
+<td>1 ГГц, 2 ядра</td>
+<td>2-4 ядра</td>
+<td>Одно ядро вызовет сильные лаги интерфейса</td>
+</tr>
+<tr>
+<td>Разрешение экрана</td>
+<td>800x600</td>
+<td>1920x1080</td>
+<td>Требует установки драйверов гостевой ОС</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>После первой перезагрузки система предложит пройти этап первоначальной настройки (OOBE). Здесь можно пропустить ввод ключа продукта (если он не куплен отдельно), выбрать регион и создать локальную учетную запись, чтобы не привязывать тестовую среду к личному аккаунту Microsoft.</p>
+
+<h2 id="установка-драйверов-и-гостевых-дополнений">Установка драйверов и гостевых дополнений</h2>
+
+<p>Сразу после установки вы заметите, что разрешение экрана низкое, а интернет может не работать. Это нормально, так как используются стандартные базовые драйверы. Для полноценной работы необходимо установить пакет <strong>Guest Additions</strong> (в VirtualBox) или <strong>VMware Tools</strong>.</p>
+
+<p>В меню виртуальной машины найдите пункт «Устройства» -> «Подключить образ диска Guest Additions». Внутри гостевой Windows откройте проводник, перейдите на виртуальный CD-дисковод и запустите установщик. Это критически важный этап.</p>
+
+<details class="pb-accordion"><summary>Зачем нужны гостевые дополнения?</summary><div class="pb-accordion-body"><p>Они устанавливают специальные драйверы для видеокарты, мыши и сети, позволяя использовать полноэкранный режим, пробрасывать USB-устройства и организовывать обмен буфером обмена между хостом и гостем.</p></div></details>
+
+<p>После установки дополнений система попросит перезагрузку. После неё вы сможете изменять размер окна виртуальной машины, и разрешение гостевой ОС будет подстраиваться автоматически. Также станет доступна общая папка для быстрого обмена файлами.</p>
+
+<h2 id="оптимизация-и-безопасность-виртуальной-среды">Оптимизация и безопасность виртуальной среды</h2>
+
+<p>Использование виртуальной машины не снимает ответственности за безопасность. Если вы планируете тестировать вирусы или сомнительный софт, обязательно изолируйте сеть. В настройках сети ВМ выберите режим <code>Host-only</code> (Только хост) или полностью отключите сетевой адаптер.</p>
+
+<p>Для повышения производительности можно отключить визуальные эффекты внутри гостевой Windows. Перейдите в <code>Свойства системы -> Дополнительные параметры системы -> Быстродействие</code> и выберите «Обеспечить наилучшее быстродействие». Это сделает интерфейс менее красивым, но более отзывчивым.</p>
+
+<p>Не забывайте делать снапшоты (снимки состояния) перед установкой нового программного обеспечения. Если что-то пойдет не так, вы сможете откатиться к предыдущему состоянию за секунды, не переустанавливая систему заново.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Снапшоты занимают место на физическом диске. Не храните их слишком долго и удаляйте старые версии, если они больше не нужны, чтобы не переполнить хранилище.</p>
+</blockquote>
+
+<p>Регулярно обновляйте сам гипервизор до последней версии. Разработчики постоянно улучшают совместимость и закрывают уязвимости, через которые гостевая система теоретически могла бы получить доступ к хосту.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильная настройка сети и регулярное создание снапшотов — два главных правила безопасной и удобной работы с виртуальными машинами.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли запустить виртуальную машину без включенной виртуализации в BIOS?</summary>
+<p>Технически некоторые старые версии гипервизоров могли использовать бинарную трансляцию, но это работало крайне медленно. Современные версии VirtualBox и VMware просто не запустят 64-битную гостевую ОС без включенной аппаратной виртуализации (VT-x/AMD-V).</p>
+</details>
+
+<details>
+<summary>Сколько виртуальных машин можно запустить одновременно?</summary>
+<p>Количество ограничено только ресурсами вашего физического компьютера. Каждая запущенная ВМ потребляет выделенную ей оперативную память и долю процессорного времени. Если у вас 16 ГБ ОЗУ, вы комфортно запустите 2-3 машины с Windows, но 10 машин с Linux могут уже вызвать swapping и тормоза.</p>
+</details>
+
+<details>
+<summary>Безопасно ли тестировать вирусы в виртуальной машине?</summary>
+<p>Да, это основной сценарий использования ВМ. Однако убедитесь, что сетевой адаптер ВМ отключен или настроен в режим изоляции, а общие папки (Shared Folders) не подключены, чтобы инфекция не перекинулась на основной компьютер.</p>
+</details>
+
+<details>
+<summary>Почему виртуальная машина работает медленно?</summary>
+<p>Чаще всего проблема в нехватке оперативной памяти или выделении только одного ядра процессора. Также отсутствие установленных <em>Guest Additions</em> (драйверов видео) сильно снижает отзывчивость интерфейса. Проверьте, не используется ли ваш физический диск на 100% другими процессами.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-najti-skill-testy-v-gta-5-onlajn.html" class="pb-related-card">
+                <span class="pb-related-title">Скилл тесты в GTA 5 Online: как найти и пройти</span>
+                <span class="pb-related-desc">Полный гайд по скилл тестам в GTA 5 Online. Где найти все локации, как пройти испытания на время и п</span>
+            </a><a href="/articles/b/bo/boyus-vodit-mashinu-no-khochu.html" class="pb-related-card">
+                <span class="pb-related-title">Боюсь водить машину, но хочу: как преодолеть страх за рулем</span>
+                <span class="pb-related-desc">Практические советы, как перестать бояться водить машину: психология, тренировки и ошибки новичков. </span>
+            </a><a href="/articles/b/be/besplatnye-ploshchadki-dlya-vozhdeniya.html" class="pb-related-card">
+                <span class="pb-related-title">Бесплатные площадки для вождения: где тренироваться новичкам</span>
+                <span class="pb-related-desc">Где найти бесплатные площадки для вождения? Полный гид по автодромам, парковкам и зонам для отработк</span>
+            </a><a href="/articles/k/ka/kak-ezdit-v-gorode-v-assetto-corsa.html" class="pb-related-card">
+                <span class="pb-related-title">Как ездить в городе в Assetto Corsa: гайд для реализма 2026</span>
+                <span class="pb-related-desc">Полное руководство по городскому вождению в Assetto Corsa: настройки, трафик, физика и секреты реали</span>
+            </a><a href="/articles/6/6-/6-km-ch-v-ms.html" class="pb-related-card">
+                <span class="pb-related-title">6 км/ч в м/с: точный расчет и конвертация скорости</span>
+                <span class="pb-related-desc">Как перевести 6 км/ч в м/с? Подробная формула, таблицы перевода, примеры расчета и онлайн-калькулято</span>
+            </a><a href="/articles/a/an/angelskaya-numerologiya-777-chto-oznachaet.html" class="pb-related-card">
+                <span class="pb-related-title">Ангельская нумерология 777: значение, символы и послания</span>
+                <span class="pb-related-desc">Что означает ангельская нумерология 777? Узнайте тайный смысл повторяющихся семерок, влияние на любо</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

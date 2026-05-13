@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>ЛиАЗ 5256 в OMSI 2: установка, аддоны и настройка физики — Авто Справочник</title>
+    <meta name="description" content="Полный гайд по автобусу ЛиАЗ 5256 для OMSI 2. Обзор аддонов, инструкция по установке, настройка звука и физики, а также решение частых ошибок.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/l/li/liaz-5256-omsi-2.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="ЛиАЗ 5256 в OMSI 2: установка, аддоны и настройка физики">
+    <meta property="og:description" content="Полный гайд по автобусу ЛиАЗ 5256 для OMSI 2. Обзор аддонов, инструкция по установке, настройка звука и физики, а также решение частых ошибок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">ЛиАЗ 5256 в OMSI 2: установка, аддоны и настройка физики</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#обзор-популярных-аддонов-лиаз-5256-для-симулятора">Обзор популярных аддонов ЛиАЗ 5256 для симулятора</a></li><li><a href="#технические-требования-и-установка-модификации">Технические требования и установка модификации</a></li><li><a href="#настройка-физики-и-поведения-автобуса">Настройка физики и поведения автобуса</a></li><li><a href="#работа-с-звуковым-оформлением-и-скриптами">Работа с звуковым оформлением и скриптами</a></li><li><a href="#типичные-проблемы-и-способы-их-решения">Типичные проблемы и способы их решения</a></li><li><a href="#советы-по-вождению-лиаз-5256-в-игре">Советы по вождению ЛиАЗ 5256 в игре</a></li><li><a href="#где-искать-карты-и-сценарии-для-лиаза">Где искать карты и сценарии для ЛиАЗа</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/i/ig/igry-pro-mashiny-s-khoroshej-grafikoj.html">Топ игр про машины с лучшей графикой на ПК и консолях</a></li><li><a href="/articles/m/mi/mikhail-gorshenev-kto-eto.html">Михаил Горшенев: биография, смерть и наследие лидера «Короля и Шута»</a></li><li><a href="/articles/k/ka/kartina-muzhik-s-yablokom.html">Картина «Мужик с яблоком»: анализ сюжета и ценности</a></li><li><a href="/articles/k/ku/kupra-avtomobil-proizvoditel-strana.html">Купра автомобиль: производитель, страна бренда и модельный ряд</a></li><li><a href="/articles/p/pe/pej-i-poj-moya-podruzhka-na-zemle-zhivut-lish-raz.html">Пей и пой, моя подружка: история и смысл легендарной песни</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>ЛиАЗ 5256 в OMSI 2: полный обзор аддонов и настройки</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#обзор-популярных-аддонов-лиаз-5256-для-симулятора">Обзор популярных аддонов ЛиАЗ 5256 для симулятора</a></li><li><a href="#технические-требования-и-установка-модификации">Технические требования и установка модификации</a></li><li><a href="#настройка-физики-и-поведения-автобуса">Настройка физики и поведения автобуса</a></li><li><a href="#работа-с-звуковым-оформлением-и-скриптами">Работа с звуковым оформлением и скриптами</a></li><li><a href="#типичные-проблемы-и-способы-их-решения">Типичные проблемы и способы их решения</a></li><li><a href="#советы-по-вождению-лиаз-5256-в-игре">Советы по вождению ЛиАЗ 5256 в игре</a></li><li><a href="#где-искать-карты-и-сценарии-для-лиаза">Где искать карты и сценарии для ЛиАЗа</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Симулятор общественного транспорта OMSI 2 стал настоящим феноменом в индустрии, позволяя энтузиастам почувствовать себя водителями автобусов в реалистичных условиях. Особое место в сердцах российских игроков занимает легендарный <em>ЛиАЗ 5256</em>, чье появление в игре стало знаковым событием. Этот автобус, ставший символом постсоветского периода и современных городских маршрутов, требует детальной проработки для достижения максимальной достоверности в виртуальном пространстве.</p>
+<p>В отличие от западных аналогов, отечественная техника имеет уникальную физику поведения, специфический звук двигателя и особую логику работы приборов. <strong>Правильная настройка ЛиАЗа</strong> в симуляторе позволяет не просто кататься по карте, а отрабатывать навыки переключения передач на механике и управления пневмоподвеской. В этой статье мы разберем все аспекты эксплуатации этой модели в OMSI 2, от выбора аддона до тонкой настройки параметров.</p>
+<p>Стоит отметить, что сообщество мододелов постоянно совершенствует качество проработки салона и внешних моделей. Современные версии аддонов предлагают полностью функциональные приборы, работающий маршрутизатор и даже имитацию износа деталей. <em>Виртуальный ЛиАЗ</em> сегодня — это сложная система, требующая понимания технических нюансов реального прототипа для комфортной езды.</p>
+
+<h2 id="обзор-популярных-аддонов-лиаз-5256-для-симулятора">Обзор популярных аддонов ЛиАЗ 5256 для симулятора</h2>
+<p>На просторах интернета можно найти множество вариаций этого автобуса, однако далеко не все из них заслуживают внимания. Качественный аддон должен включать в себя не только детализированную 3D-модель, но и корректно работающую <strong>физику подвески</strong>. Наиболее ценятся модификации, где реализована разница в поведении пустого и загруженного автобуса, что критически важно для симуляции.</p>
+<p>Отдельного внимания заслуживают аддоны, воссоздающие конкретные модификации, такие как <em>ЛиАЗ 5256.20</em> или более современные версии с газовым оборудованием. Различия касаются не только внешнего вида, но и характеристик двигателя, типа коробки передач и даже шума в салоне. Выбор конкретной версии зависит от того, какую эпоху и какой регион вы планируете симулировать.</p>
+<ul>
+<li>🚌 <strong>ЛиАЗ 5256.20 (Классика):</strong> Воссоздает версию с механической коробкой передач и характерным дизельным звуком, идеален для ретро-маршрутов.</li>
+<li>⚙️ <strong>ЛиАЗ 5256.25 (Современный):</strong> Часто оснащается автоматической КПП и имеет улучшенную шумоизоляцию в виртуальном салоне.</li>
+<li>🌬️ <strong>Газовая модификация:</strong> Специфический аддон с измененной системой хранения топлива и немного иной динамикой разгона.</li>
+</ul>
+<p>При скачивании файлов важно обращать внимание на дату релиза и версию OMSI 2, для которой создан мод. <strong>Устаревшие аддоны</strong> могут вызывать конфликты скриптов или некорректно отображать текстуры в новых версиях симулятора. Рекомендуется использовать только проверенные источники и читать комментарии других пользователей перед установкой.</p>
+
+<div class="pb-poll" id="poll-6472de81"><div class="pb-poll-question">📊 Какой ЛиАЗ 5256 вы предпочитаете в OMSI 2?</div><div class="pb-poll-option" data-poll="6472de81" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Классический дизель 5256.20</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6472de81" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Современный с автоматом 5256.25</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6472de81" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Газовая версия (КПМГ)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6472de81" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Мне все равно, лишь бы ехал</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="технические-требования-и-установка-модификации">Технические требования и установка модификации</h2>
+<p>Процесс инсталляции аддона обычно не вызывает сложностей у опытных пользователей, но новичкам следует быть внимательными. Файлы модификации необходимо размещать в строго определенную директорию игры, иначе симулятор просто не увидит новый транспорт. Стандартный путь выглядит как <code>OMSI 2\Vehicle\LiAZ_5256</code>, однако структура папок может отличаться в зависимости от конкретного аддона.</p>
+<p>Перед началом установки рекомендуется создать резервную копию конфигурационных файлов. Это позволит быстро откатить изменения в случае, если новый автобус вызовет <strong>критическую ошибку</strong> при запуске. Некоторые моды требуют наличия дополнительных библиотек или скриптовых расширений, которые нужно установить предварительно.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед установкой ЛиАЗа</h4><label class="check-item"><input type="checkbox"><span>Скачан архив с аддоном</span></label><label class="check-item"><input type="checkbox"><span>Создана резервная копия папки Vehicle</span></label><label class="check-item"><input type="checkbox"><span>Проверена версия OMSI 2</span></label><label class="check-item"><input type="checkbox"><span>Освобождено место на диске</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<p>После копирования файлов в соответствующие папки необходимо запустить симулятор и проверить наличие автобуса в меню выбора транспорта. Если <em>ЛиАЗ 5256</em> не появился в списке, следует проверить файл <code>vehicle.cfg</code> на наличие синтаксических ошибок. Часто проблема кроется в неправильном кодировании текстовых файлов конфигурации.</p>
+
+<h2 id="настройка-физики-и-поведения-автобуса">Настройка физики и поведения автобуса</h2>
+<p>Одной из главных особенностей OMSI 2 является возможность тонкой настройки параметров транспортного средства. Для <strong>ЛиАЗ 5256</strong> это особенно актуально, так как заводские настройки в аддонах не всегда соответствуют ожиданиям игроков. В файлах конфигурации можно изменить жесткость рессор, скорость работы пневмоподвески и сцепление колес с дорогой.</p>
+<p>Важным параметром является масса автобуса и распределение веса. Реалистичная симуляция требует учета веса пассажиров, что влияет на крены в поворотах и тормозной путь. <em>Настройка инерции</em> двигателя также поможет избежать резких рывков при трогании, характерных для стоковых настроек некоторых модов.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр настройки</th>
+<th>Влияние на gameplay</th>
+<th>Рекомендуемое значение</th>
+</tr>
+<tr>
+<td>Жесткость подвески</td>
+<td>Плавность хода и раскачка</td>
+<td>Среднее (баланс)</td>
+</tr>
+<tr>
+<td>Сцепление (Grip)</td>
+<td>Торможение на мокрой дороге</td>
+<td>0.75 - 0.85</td>
+</tr>
+<tr>
+<td>Мощность двигателя</td>
+<td>Динамика разгона на подъеме</td>
+<td>По спецификации</td>
+</tr>
+<tr>
+<td>Шум КПП</td>
+<td>Атмосферность салона</td>
+<td>Высокий (для дизеля)</td>
+</tr>
+</tbody>
+</table></div>
+<p>Не стоит стремиться сделать управление идеально плавным, как у спорткара. <strong>ЛиАЗ</strong> — это тяжелая машина, и некоторая валкость в управлении добавляет реализма. Однако чрезмерная инерция может сделать вождение утомительным, поэтому важно найти золотую середину методом проб и ошибок.</p>
+<details class="pb-accordion"><summary>Секрет стабильного FPS с ЛиАЗом</summary><div class="pb-accordion-body"><p>Если автобус вызывает падение кадров, попробуйте снизить качество теней в настройках графики OMSI 2 и отключить отражения в салоне. Детализированная кабина ЛиАЗа часто содержит много полигонов.</p></div></details>
+
+<h2 id="работа-с-звуковым-оформлением-и-скриптами">Работа с звуковым оформлением и скриптами</h2>
+<p>Звук — это половина погружения в симулятор, и для <em>ЛиАЗ 5256</em> он имеет критическое значение. Характерный лязг механической коробки передач, шум пневмокомпрессора и вой турбины должны быть синхронизированы с действиями игрока. Многие аддоны позволяют заменять стандартные звуковые пакеты на более качественные записи, сделанные с реальных машин.</p>
+<p>Скриптовая часть отвечает за логику работы приборов и систем. <strong>Функционал маршрутизатора</strong>, открытие дверей, работа подсветки и табло — все это реализуется через скрипты. При установке новых звуковых модов необходимо проверять пути к файлам в конфигурации, чтобы избежать тишины в кабине.</p>
+<ul>
+<li>🔊 <strong>Звук двигателя:</strong> Должен менять тональность в зависимости от оборотов и нагрузки.</li>
+<li>🚪 <strong>Пневмосистема:</strong> Характерный звук стравливания воздуха при открытии дверей и работе подвески.</li>
+<li>🔔 <strong>Сигналы:</strong> Работа аварийной сигнализации и звукового сигнала должна быть четкой и громкой.</li>
+</ul>
+<p>Если вы заметили рассинхронизацию звука и визуальных эффектов, попробуйте снизить настройки звукового движка в меню опций. Иногда <strong>конфликт скриптов</strong> от разных модов может приводить к полному отсутствию звукового сопровождения, что решается отключением лишних дополнений.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте наушники с хорошим басом для максимального погружения. Низкие частоты в OMSI 2 передают вибрацию двигателя ЛиАЗа гораздо реалистичнее, чем встроенные динамики монитора.</p></aside>
+
+<h2 id="типичные-проблемы-и-способы-их-решения">Типичные проблемы и способы их решения</h2>
+<p>Даже самые качественные аддоны могут работать нестабильно из-за конфликтов версий или ошибок в коде. Одной из частых проблем является <strong>вылет симулятора</strong> при попытке сесть в ЛиАЗ 5256. Это часто связано с нехваткой оперативной памяти или повреждением текстурных файлов высокого разрешения.</p>
+<p>Еще одна распространенная ошибка — неработающие приборы в салоне. Стрелки могут замирать на нуле или дергаться хаотично. В этом случае необходимо проверить целостность файлов, отвечающих за <em>анимацию приборов</em>, и убедиться, что в конфигурации указан правильный тип двигателя.</p>
+<blockquote>
+<p>⚠️ Внимание: Установка слишком большого количества тяжелых аддонов одновременно может привести к критическому снижению производительности. ЛиАЗ 5256 с детализированным салоном требует значительных ресурсов GPU.</p>
+</blockquote>
+<p>Для диагностики проблем используйте лог-файлы симулятора, которые создаются при каждом запуске. В них содержится подробная информация об ошибках загрузки скриптов или отсутствии файлов. Анализ лога — первый шаг к <strong>устранению неполадок</strong> и стабильной работе мода.</p>
+
+<h2 id="советы-по-вождению-лиаз-5256-в-игре">Советы по вождению ЛиАЗ 5256 в игре</h2>
+<p>Управление этим автобусом в OMSI 2 требует навыка, особенно если выбрана версия с механической коробкой передач. <strong>Переключение передач</strong> должно происходить в определенном диапазоне оборотов, чтобы избежать рывков и потери динамики. На низких скоростях важно аккуратно работать сцеплением, чтобы автобус не заглох на светофоре.</p>
+<p>При прохождении поворотов необходимо учитывать большой радиус разворота и склонность кузова к кренам. <em>Плавное торможение</em> перед поворотом и аккуратный разгон на выходе помогут сохранить пассажиров целыми и довольными. Не забывайте использовать ручной тормоз при остановках на рельефе.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный секрет комфортной езды на ЛиАЗе в OMSI 2 — это предсказание дорожной ситуации. Начинайте торможение заранее, так как пневматическая система имеет небольшую задержку срабатывания.</p></aside>
+<p>Использование зеркал и камер обзора помогает контролировать ситуацию вокруг массивного кузова. В плотном потоке машин габариты <strong>ЛиАЗ 5256</strong> становятся серьезным испытанием для внимательности водителя. Практика на пустых картах поможет почувствовать габариты перед выездом на сложные маршруты.</p>
+
+<h2 id="где-искать-карты-и-сценарии-для-лиаза">Где искать карты и сценарии для ЛиАЗа</h2>
+<p>Для полноценногоения управления ЛиАЗом 5256 необходимы соответствующие карты. В сообществе OMSI 2 существует множество проектов, воссоздающих российские города с высокой точностью. <strong>Карты Москвы, Санкт-Петербурга</strong> и других мегаполисов часто включают в себя специальные маршруты, заточенные под отечественный транспорт.</p>
+<p>При выборе карты обращайте внимание на качество дорожной разметки и наличие остановочных пунктов. <em>Реалистичность окружения</em> значительно усиливает впечатление от вождения. Многие карты имеют свои требования к версиям аддонов, что стоит учитывать при сборке сборки.</p>
+<blockquote>
+<p>⚠️ Внимание: Скачивайте карты только с официальных форумов или проверенных хостингов. Файлы из сомнительных источников могут содержать вирусы или поврежденные скрипты, ломающие игру.</p>
+</blockquote>
+<p>Установка карт обычно производится в папку <code>OMSI 2\Maps</code>. После добавления файлов необходимо запустить симулятор и выбрать новую карту в меню. Некоторые карты требуют установки дополнительных объектов или текстур, ссылки на которые указаны в описании к скачиванию.</p>
+
+<details>
+<summary>Почему ЛиАЗ 5256 вылетает при загрузке карты?</summary>
+<p>Чаще всего это связано с нехваткой памяти (32-битная версия игры) или конфликтом версий аддона и карты. Попробуйте запустить игру в режиме совместимости или уменьшить настройки графики.</p>
+</details>
+
+<details>
+<summary>Как включить маршрутизатор в ЛиАЗе?</summary>
+<p>В большинстве аддонов маршрутизатор активируется через панель приборов или горячую клавишу (обычно это клавиша"M" или кнопка на самой панели). Убедитесь, что скрипт маршрутизатора активен в настройках автобуса.</p>
+</details>
+
+<details>
+<summary>Можно ли играть в ЛиАЗ 5256 по сети?</summary>
+<p>Да, OMSI 2 поддерживает мультиплеер через мод Multiplayer. Однако для стабильной работы все участники должны иметь одинаковые версии аддонов и карт, иначе возможны рассинхроны и вылеты.</p>
+</details>
+
+<details>
+<summary>Где взять звуки реального ЛиАЗа для мода?</summary>
+<p>Звуковые пакеты часто создаются энтузиастами и выкладываются на специализированных форумах по OMSI 2. Самостоятельная запись требует профессионального оборудования для качественного результата.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/i/ig/igry-pro-mashiny-s-khoroshej-grafikoj.html" class="pb-related-card">
+                <span class="pb-related-title">Топ игр про машины с лучшей графикой на ПК и консолях</span>
+                <span class="pb-related-desc">Обзор гоночных симуляторов и аркад с фотореалистичной графикой. Лучшие проекты с трассировкой лучей,</span>
+            </a><a href="/articles/m/mi/mikhail-gorshenev-kto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Михаил Горшенев: биография, смерть и наследие лидера «Короля и Шута»</span>
+                <span class="pb-related-desc">Кто такой Михаил Горшенев? Полная биография, причины смерти, разбор мифов, семья и вклад в развитие </span>
+            </a><a href="/articles/k/ka/kartina-muzhik-s-yablokom.html" class="pb-related-card">
+                <span class="pb-related-title">Картина «Мужик с яблоком»: анализ сюжета и ценности</span>
+                <span class="pb-related-desc">Подробный разбор сюжета картины «Мужик с яблоком». Как определить автора, стиль и реальную стоимость</span>
+            </a><a href="/articles/k/ku/kupra-avtomobil-proizvoditel-strana.html" class="pb-related-card">
+                <span class="pb-related-title">Купра автомобиль: производитель, страна бренда и модельный ряд</span>
+                <span class="pb-related-desc">Где производят Cupra? История испанского бренда, заводы в Марторелле, связь с Volkswagen и SEAT. Пол</span>
+            </a><a href="/articles/p/pe/pej-i-poj-moya-podruzhka-na-zemle-zhivut-lish-raz.html" class="pb-related-card">
+                <span class="pb-related-title">Пей и пой, моя подружка: история и смысл легендарной песни</span>
+                <span class="pb-related-desc">Разбираем текст песни &#x27;Пей и пой, моя подружка&#x27;. История создания, анализ слов &#x27;на земле живут лишь </span>
+            </a><a href="/articles/n/na/na-kakom-kanale-detskoe-radio.html" class="pb-related-card">
+                <span class="pb-related-title">На каком канале Детское радио: частота и настройки ТВ</span>
+                <span class="pb-related-desc">Узнайте, на каком канале транслируется Детское радио. Таблица частот для цифрового ТВ, спутника и ин</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

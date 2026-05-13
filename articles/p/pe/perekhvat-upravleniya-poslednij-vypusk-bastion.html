@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Бастион: перехват управления и последний выпуск — разбор — Авто Справочник</title>
+    <meta name="description" content="Анализ инцидента перехвата управления в последнем выпуске системы Бастион. Разбор причин, устранение уязвимостей и защита серверов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pe/perekhvat-upravleniya-poslednij-vypusk-bastion.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Бастион: перехват управления и последний выпуск — разбор">
+    <meta property="og:description" content="Анализ инцидента перехвата управления в последнем выпуске системы Бастион. Разбор причин, устранение уязвимостей и защита серверов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Бастион: перехват управления и последний выпуск — разбор</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#механизмы-перехвата-системных-вызовов-в-бастион">Механизмы перехвата системных вызовов в Бастион</a></li><li><a href="#анализ-изменений-в-последнем-выпуске-системы">Анализ изменений в последнем выпуске системы</a></li><li><a href="#сценарии-перехвата-управления-злоумышленниками">Сценарии перехвата управления злоумышленниками</a></li><li><a href="#настройка-правил-для-предотвращения-перехвата">Настройка правил для предотвращения перехвата</a></li><li><a href="#мониторинг-и-реагирование-на-инциденты">Мониторинг и реагирование на инциденты</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/y/ya/yandeks-lavka-na-avto.html">Яндекс Лавка на авто: как устроена доставка на машине</a></li><li><a href="/articles/p/po/pochemu-v-prilozhenii-karty-ne-pokazyvaet-transport.html">Почему приложение карт не показывает транспорт: причины и решения</a></li><li><a href="/articles/i/ig/igry-po-gonki-na-pk.html">Лучшие игры гонки на ПК: рейтинг симуляторов и аркад 2026</a></li><li><a href="/articles/g/gd/gde-priparkovatsya-u-leningradskogo-vokzala.html">Где припарковаться у Ленинградского вокзала: цены и правила</a></li><li><a href="/articles/n/na/na-semi-kholmakh-volna.html">«На семи холмах волна»: что это за фраза и как связана с авто?</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Перехват управления в последнем выпуске Бастион: анализ и защита</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#механизмы-перехвата-системных-вызовов-в-бастион">Механизмы перехвата системных вызовов в Бастион</a></li><li><a href="#анализ-изменений-в-последнем-выпуске-системы">Анализ изменений в последнем выпуске системы</a></li><li><a href="#сценарии-перехвата-управления-злоумышленниками">Сценарии перехвата управления злоумышленниками</a></li><li><a href="#настройка-правил-для-предотвращения-перехвата">Настройка правил для предотвращения перехвата</a></li><li><a href="#мониторинг-и-реагирование-на-инциденты">Мониторинг и реагирование на инциденты</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современные системы защиты информации требуют постоянного мониторинга и анализа, особенно когда речь идет о критической инфраструктуре. Инциденты, связанные с перехватом управления, становятся все более изощренными, заставляя администраторов безопасности пересматривать свои стратегии защиты. В контексте российского рынка ИБ особое место занимает программный комплекс <em>Бастион</em>, который обеспечивает защиту серверов на различных уровнях операционных систем.</p>
+
+<p>Последний выпуск обновлений для данной системы привлек внимание специалистов из-за ряда изменений в архитектуре модулей контроля доступа. <strong>Перехват управления</strong> в данном контексте может рассматриваться двояко: как функциональная возможность системы по перехвату системных вызовов для защиты и как потенциальная уязвимость, позволяющая злоумышленнику получить привилегии. Понимание этой двойственности является ключом к грамотной настройке безопасности.</p>
+
+<p>В этой статье мы детально разберем механизмы работы <em>Бастион</em>, проанализируем особенности последнего релиза и обсудим, как предотвратить несанкционированный доступ к управлению сервером. <mark>Критическим моментом является корректная настройка правил фильтрации системных вызовов в ядре операционной системы.</mark> Игнорирование этих настроек может привести к компрометации всего периметра защиты, независимо от наличия других средств безопасности.</p>
+
+<h2 id="механизмы-перехвата-системных-вызовов-в-бастион">Механизмы перехвата системных вызовов в Бастион</h2>
+
+<p>Принцип работы системы защиты строится на глубокой интеграции с ядром операционной системы. Для реализации политик безопасности <em>Бастион</em> использует механизм внедрения собственных модулей, которые перехватывают обращения приложений к ресурсам ОС. Это позволяет системе анализировать каждое действие пользователя или процесса в реальном времени и принимать решение о его допустимости.</p>
+
+<p>Технически процесс перехвата осуществляется через модификацию таблиц системных вызовов или использование hook-функций. <strong>Системный вызов</strong> — это запрос от программы к ядру ОС для выполнения privileged-операций, таких как чтение файла или открытие сетевого соединения. Перехватывая эти запросы, <em>Бастион</em> выступает в роли строгого контролера, проверяющего каждый запрос against (против) заданных правил безопасности.</p>
+
+<p>Важно понимать, что механизм перехвата должен быть максимально прозрачным для легитимных приложений, но жестким для подозрительной активности. В последнем выпуске была улучшена логика обработки исключений, что снизило нагрузку на процессор при большом количестве одновременных запросов. Однако, если механизм перехвата настроен некорректно, он может стать точкой отказа или, что хуже, вектором атаки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте режим тестирования правил перед применением их в продакшене, чтобы избежать блокировки легитимного системного трафика и остановки сервисов.</p></aside>
+
+<p>Ниже приведена таблица, иллюстрирующая основные типы перехватываемых событий и их влияние на безопасность:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип события</th>
+<th>Объект перехвата</th>
+<th>Риск без защиты</th>
+<th>Действие Бастиона</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Файловый доступ</td>
+<td>Системные файлы, конфиги</td>
+<td>Кража данных, модификация</td>
+<td>Блокировка записи/чтения</td>
+</tr>
+<tr>
+<td>Сетевые соединения</td>
+<td>Порты, протоколы</td>
+<td>Утечка информации, бэкдор</td>
+<td>Разрыв соединения</td>
+</tr>
+<tr>
+<td>Запуск процессов</td>
+<td>Исполняемые файлы</td>
+<td>Запуск вредоносного ПО</td>
+<td>Запрет исполнения</td>
+</tr>
+<tr>
+<td>Доступ к памяти</td>
+<td>Буферы процессов</td>
+<td>Переполнение буфера</td>
+<td>Изоляция процесса</td>
+</tr>
+</tbody>
+</table></div>
+
+<h2 id="анализ-изменений-в-последнем-выпуске-системы">Анализ изменений в последнем выпуске системы</h2>
+
+<p>Последний релиз <em>Бастион</em> принес не только исправления ошибок, но и существенные изменения в архитектуре модуля перехвата управления. Разработчики сосредоточились на повышении устойчивости к методам обхода, которые используют современные эксплойты. <strong>Ядро безопасности</strong> было переписано с учетом новых требований к производительности и совместимости с актуальными версиями операционных систем.</p>
+
+<p>Одной из ключевых особенностей обновления стала внедренная эвристическая проверка цепочек вызовов. Ранее система анализировала каждый вызов изолированно, что позволяло опытным атакам подстраивать последовательность действий для обхода защиты. Теперь <em>Бастион</em> оценивает контекст и историю действий процесса, что значительно затрудняет скрытый перехват управления.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При обновлении до последней версии необходимо пересобрать политики безопасности, так как старые конфигурационные файлы могут быть не полностью совместимы с новым синтаксисом правил.</p>
+</blockquote>
+
+<p>Также стоит отметить оптимизацию работы с сетевым стеком. В предыдущих версиях при высокой нагрузке на сеть наблюдалось увеличение задержек (latency) из-за синхронной обработки пакетов модулем защиты. В новом выпуске применен асинхронный механизм анализа, что позволило сохранить высокую скорость обмена данными даже при включенной глубокой инспекции трафика.</p>
+
+<div class="pb-poll" id="poll-b1e78f65"><div class="pb-poll-question">📊 Что для вас важнее в системе защиты?</div><div class="pb-poll-option" data-poll="b1e78f65" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Скорость работы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b1e78f65" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Уровень защиты</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b1e78f65" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Удобство настройки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b1e78f65" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Цена лицензии</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="сценарии-перехвата-управления-злоумышленниками">Сценарии перехвата управления злоумышленниками</h2>
+
+<p>Несмотря на наличие мощных средств защиты, злоумышленники постоянно разрабатывают новые методы атак. Понимание этих сценариев необходимо для правильной настройки <em>Бастион</em>. Чаще всего атаки направлены на уязвимости в самом механизме перехвата или на ошибки в конфигурации правил.</p>
+
+<p>Один из распространенных сценариев — это <strong>Race Condition</strong> (состояние гонки). Атакующий пытается выполнить malicious-код в тот краткий промежуток времени, когда модуль защиты еще не активировался или находится в состоянии переключения контекста. Если система не успевает перехватить управление, вредоносный код получает привилегии.</p>
+
+<p>Другой сценарий связан с использованием легитимных утизит для администрирования (Living off the Land). Злоумышленник не внедряет свой код, а использует встроенные средства ОС для получения доступа. В этом случае перехват управления должен базироваться на анализе поведения, а не только на сигнатурах файлов.</p>
+
+<ul>
+<li>🔥 Эксплуатация уязвимостей нулевого дня в драйверах системы защиты.</li>
+<li>🔥 Переполнение буфера в модуле обработки системных вызовов.</li>
+<li>🔥 Использование недокументированных функций ядра для обхода хуков.</li>
+<li>🔥 Атаки на цепочку доверия при загрузке модулей безопасности.</li>
+</ul>
+
+<p>Для противодействия этим угрозам <em>Бастион</em> использует цифровую подпись всех своих модулей и строгий контроль целостности файлов. Любая попытка модификации защищаемых файлов или самих модулей защиты приводит к немедленной блокировке и генерации тревожного события.</p>
+
+<details class="pb-accordion"><summary>Технические детали Race Condition атак</summary><div class="pb-accordion-body"><p>Суть атаки заключается в том, что два процесса обращаются к одному ресурсу одновременно. Если система защиты проверяет права доступа в момент Т1, а исполнение кода происходит в момент Т2, и между ними злоумышленник успевает подменить ресурс, то защита будет обойдена.</p></div></details>
+
+<h2 id="настройка-правил-для-предотвращения-перехвата">Настройка правил для предотвращения перехвата</h2>
+
+<p>Эффективность системы <em>Бастион</em> напрямую зависит от качества настроенных правил. Администратор безопасности должен четко понимать, какие процессы являются легитимными, а какие должны быть заблокированы. Неправильная настройка может привести как к дырам в безопасности, так и к неработоспособности бизнес-приложений.</p>
+
+<p>Первым шагом является аудит текущего состояния системы. Необходимо выявить все критические процессы и определить для них минимально необходимые права. Принцип наименьших привилегий (Least Privilege) является фундаментальным при построении правил. <strong>Белый список</strong> исполняемых файлов должен быть сформирован на основе анализа нормального функционирования сервера.</p>
+
+<p>При настройке правил перехвата важно учитывать зависимости между процессами. Блокировка родительского процесса может привести к остановке дочерних сервисов, что вызовет простои. Поэтому рекомендуется использовать режим обучения или логирования перед переходом в режим блокировки.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист настройки правил безопасности</h4><label class="check-item"><input type="checkbox"><span>Аудит запущенных процессов</span></label><label class="check-item"><input type="checkbox"><span>Создание резервной копии конфигурации</span></label><label class="check-item"><input type="checkbox"><span>Настройка правил в режиме логирования</span></label><label class="check-item"><input type="checkbox"><span>Анализ логов и корректировка</span></label><label class="check-item"><input type="checkbox"><span>Переключение в режим блокировки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Особое внимание следует уделить правилам для сетевых служб. Веб-серверы, базы данных и почтовые шлюзы часто становятся мишенями атак. Для них должны быть созданы отдельные профили защиты, ограничивающие доступ только к необходимым портам и файлам конфигурации.</p>
+
+<p>Пример команды для проверки статуса модулей защиты в консоли:</p>
+<pre><code>bastion-cli --status --verbose --check-integrity</code></pre>
+
+<h2 id="мониторинг-и-реагирование-на-инциденты">Мониторинг и реагирование на инциденты</h2>
+
+<p>Установка и настройка системы — это только половина дела. Постоянный мониторинг событий безопасности позволяет вовремя обнаруживать попытки перехвата управления. <em>Бастион</em> предоставляет мощный инструментарий для логирования и анализа событий, который необходимо интегрировать с SIEM-системами.</p>
+
+<p>Ключевым показателем компрометации является резкое увеличение количества блокировок или появление событий с высоким уровнем риска. <strong>Аномальное поведение</strong> приложений, таких как попытки доступа к системным файлам в нерабочее время, должно сразу привлекать внимание оператора.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Логи системы безопасности сами по себе являются критически важными данными. Обеспечьте их защиту от модификации и удаленного копирования на выделенный сервер.</p>
+</blockquote>
+
+<p>Процесс реагирования на инциденты должен быть отлажен заранее. При обнаружении попытки перехвата управления система должна не только блокировать атаку, но и уведомлять администратора, сохранять дампы памяти и изолировать пораженный процесс для дальнейшего анализа.</p>
+
+<ul>
+<li>📊 Настройка алертов для событий критического уровня.</li>
+<li>📊 Регулярный пересмотр и актуализация правил безопасности.</li>
+<li>📊 Проведение учебных тренировок по реагированию на инциденты.</li>
+<li>📊 Анализ тенденций атак для превентивной защиты.</li>
+</ul>
+
+<p> Угрозы эволюционируют, и правила защиты должны адаптироваться соответственно. Регулярный анализ отчетов <em>Бастион</em> помогает выявлять слабые места в инфраструктуре до того, как ими воспользуются злоумышленники.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Эффективный мониторинг превращает пассивную защиту в активную систему обороны, позволяя предотвращать инциденты до нанесения ущерба.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Влияет ли использование Бастион на производительность сервера?</summary>
+<p>Да, использование любого средства защиты накладывает накладные расходы. Однако в последнем выпуске оптимизация кода позволила снизить влияние на производительность до минимальных значений (менее 3-5% в стандартных сценариях). Нагрузка зависит от количества и сложности активных правил.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать Бастион вместе с другими антивирусами?</summary>
+<p>Да, <em>Бастион</em> работает на уровне ядра и системных вызовов, что отличается от файлового мониторинга традиционных антивирусов. Однако рекомендуется настроить исключения в сканерах реального времени для файлов и процессов самой системы Бастион, чтобы избежать конфликтов.</p>
+</details>
+
+<details>
+<summary>Как часто нужно обновлять правила безопасности?</summary>
+<p>Рекомендуется пересматривать правила при каждом значимом изменении в инфраструктуре (установка нового ПО, изменение бизнес-процессов). Базовые сигнатуры обновляются автоматически с выходами новых версий системы, но пользовательские политики требуют ручного контроля.</p>
+</details>
+
+<details>
+<summary>Что делать, если система заблокировала легитимный процесс?</summary>
+<p>Необходимо перейти в режим логирования для данного правила, проанализировать причину блокировки в логах, скорректировать правило, добавив исключение или изменив условия, и только затем возвращать режим блокировки. Всегда имейте план отката изменений.</p>
+</details>
+
+<details>
+<summary>Поддерживает ли Бастион виртуальные среды?</summary>
+<p>Да, система полностью совместима с популярными платформами виртуализации и контейнеризации. Механизмы перехвата адаптированы для работы внутри виртуальных машин и изолированных контейнеров, обеспечивая защиту на уровне гостевой ОС.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/y/ya/yandeks-lavka-na-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Яндекс Лавка на авто: как устроена доставка на машине</span>
+                <span class="pb-related-desc">Полный разбор сервиса Яндекс Лавка на авто. Как работает логистика, сколько зарабатывают курьеры и е</span>
+            </a><a href="/articles/p/po/pochemu-v-prilozhenii-karty-ne-pokazyvaet-transport.html" class="pb-related-card">
+                <span class="pb-related-title">Почему приложение карт не показывает транспорт: причины и решения</span>
+                <span class="pb-related-desc">Приложение карт не показывает транспорт? Разбираем причины сбоев GPS, ошибки серверов и настройки се</span>
+            </a><a href="/articles/i/ig/igry-po-gonki-na-pk.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшие игры гонки на ПК: рейтинг симуляторов и аркад 2026</span>
+                <span class="pb-related-desc">Полный обзор жанра: симуляторы, аркады и онлайн-гонки на ПК. Требования к железу, настройки графики </span>
+            </a><a href="/articles/g/gd/gde-priparkovatsya-u-leningradskogo-vokzala.html" class="pb-related-card">
+                <span class="pb-related-title">Где припарковаться у Ленинградского вокзала: цены и правила</span>
+                <span class="pb-related-desc">Подробный гид по парковкам у Ленинградского вокзала. Тарифы, перехватывающие парковки, бесплатные зо</span>
+            </a><a href="/articles/n/na/na-semi-kholmakh-volna.html" class="pb-related-card">
+                <span class="pb-related-title">«На семи холмах волна»: что это за фраза и как связана с авто?</span>
+                <span class="pb-related-desc">Разбираем происхождение выражения «на семи холмах волна», его связь с автомобилями и дорожными знака</span>
+            </a><a href="/articles/k/kr/kredit-pod-zalog-mashiny-v-sberbanke.html" class="pb-related-card">
+                <span class="pb-related-title">Кредит под залог машины в Сбербанке: условия и требования 2026</span>
+                <span class="pb-related-desc">Полный обзор программы кредитования под залог автомобиля в Сбербанке. Реальные ставки, требования к </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

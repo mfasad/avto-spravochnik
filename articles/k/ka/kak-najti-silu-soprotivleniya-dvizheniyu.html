@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Сила сопротивления движению: формула и расчет — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор силы сопротивления движению. Формулы, коэффициенты аэродинамики и трения качения для точных инженерных расчетов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-najti-silu-soprotivleniya-dvizheniyu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Сила сопротивления движению: формула и расчет">
+    <meta property="og:description" content="Подробный разбор силы сопротивления движению. Формулы, коэффициенты аэродинамики и трения качения для точных инженерных расчетов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Сила сопротивления движению: формула и расчет</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физическая-природа-сил-сопротивления">Физическая природа сил сопротивления</a></li><li><a href="#расчет-силы-трения-качения">Расчет силы трения качения</a></li><li><a href="#аэродинамическое-сопротивление-и-лобовая-площадь">Аэродинамическое сопротивление и лобовая площадь</a></li><li><a href="#суммарная-сила-сопротивления-и-баланс-мощностей">Суммарная сила сопротивления и баланс мощностей</a></li><li><a href="#таблица-коэффициентов-сопротивления">Таблица коэффициентов сопротивления</a></li><li><a href="#методы-снижения-сопротивления">Методы снижения сопротивления</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kamri-zamena-salonnogo-filtra.html">Замена салонного фильтра Toyota Camry: пошаговая инструкция</a></li><li><a href="/articles/p/po/pochemu-gorit-znachok-dvigatelya-na-paneli-priborov.html">Горит значок двигателя: причины, диагностика и устранение неисправностей</a></li><li><a href="/articles/k/ka/kakie-valy-est-v-mashine.html">Какие валы есть в машине: виды, функции и неисправности</a></li><li><a href="/articles/p/pa/pakhnet-maslom-v-mashine.html">Пахнет маслом в машине: причины, диагностика и устранение</a></li><li><a href="/articles/k/ka/kak-sdelat-mashinu-v-domashnikh-usloviyakh.html">Как сделать машину в домашних условиях: пошаговое руководство</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как найти силу сопротивления движению: физика и расчеты</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физическая-природа-сил-сопротивления">Физическая природа сил сопротивления</a></li><li><a href="#расчет-силы-трения-качения">Расчет силы трения качения</a></li><li><a href="#аэродинамическое-сопротивление-и-лобовая-площадь">Аэродинамическое сопротивление и лобовая площадь</a></li><li><a href="#суммарная-сила-сопротивления-и-баланс-мощностей">Суммарная сила сопротивления и баланс мощностей</a></li><li><a href="#таблица-коэффициентов-сопротивления">Таблица коэффициентов сопротивления</a></li><li><a href="#методы-снижения-сопротивления">Методы снижения сопротивления</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Любой объект, перемещающийся в пространстве, неизбежно сталкивается с противодействием среды или поверхности. В инженерной практике и теоретической механике это явление описывается как сила сопротивления движению, которая всегда направлена против вектора скорости тела. Понимание природы этого противодействия критически важно для проектирования транспортных средств, расчета расхода топлива и оценки энергоэффективности механизмов.</p>
+
+<p>Чтобы определить <strong>силу сопротивления движению</strong>, необходимо учитывать несколько факторов: свойства поверхности, скорость объекта, его геометрию и характеристики окружающей среды. В большинстве практических задач эта сила складывается из силы трения качения (или скольжения) и силы аэродинамического сопротивления. Игнорирование этих параметров приводит к существенным ошибкам в расчетах тяговых характеристик двигателя.</p>
+
+<h2 id="физическая-природа-сил-сопротивления">Физическая природа сил сопротивления</h2>
+
+<p>Сопротивление движению возникает из-за взаимодействия микрочастиц контактирующих поверхностей или молекул газа/жидкости с телом. В механике твердого тела основную роль играет сила трения, которая зависит от шероховатости материалов и силы нормальной реакции опоры. Для жидкостей и газов ключевым фактором становится вязкость среды и форма обтекаемого объекта.</p>
+
+<p>Важно различать статическое и динамическое сопротивление. Когда транспортное средство только начинает разгон, оно преодолевает инерцию покоя и максимальное трение. В процессе движения вступает в действие <strong>аэродинамическое сопротивление</strong>, которое растет пропорционально квадрату скорости. Именно поэтому на высоких скоростях основной расход энергии уходит на «разгребание» воздуха, а не на преодоление трения колес.</p>
+
+<p>Коэффициент сопротивления зависит от множества переменных, включая температуру, влажность и состояние дорожного покрытия. Например, на мокром асфальте сцепление колес меняется, что влияет на коэффициент трения качения. Инженеры используют усредненные значения для расчетов, но в реальных условиях эти параметры могут fluctuate (колебаться) в широких пределах.</p>
+
+<div class="pb-poll" id="poll-98af94f5"><div class="pb-poll-question">📊 Что для вас важнее при расчете сопротивления?</div><div class="pb-poll-option" data-poll="98af94f5" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Точность формулы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98af94f5" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Коэффициент трения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98af94f5" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Аэродинамика</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98af94f5" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Расход топлива</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="расчет-силы-трения-качения">Расчет силы трения качения</h2>
+
+<p>Для наземного транспорта основным препятствием является трение качения, возникающее в зоне контакта шины с дорогой. Формула для расчета этой составляющей выглядит достаточно просто, однако требует точного подбора коэффициента <em>f</em>. Базовое уравнение имеет вид:</p>
+
+<pre><code>F_тр = f * N</code></pre>
+
+<p>Где <strong>N</strong> — сила нормальной реакции опоры (для горизонтальной поверхности равна весу тела <em>m*g</em>), а <strong>f</strong> — безразмерный коэффициент трения качения. Этот коэффициент не является константой и зависит от типа покрытия. Для стальных колес по стальным рельсам он минимален, что обеспечивает высокую эффективность поездов. Для автомобильных шин на грунтовой дороге значение может быть в десятки раз выше.</p>
+
+<p>При расчетах необходимо учитывать деформацию шины. Мягкая резина создает большее сопротивление качению, чем жесткая, но обеспечивает лучшее сцепление. Современные низкопрофильные шины разрабатываются с учетом минимизации этого параметра для снижения расхода топлива.</p>
+
+<ul>
+<li>🚗 Асфальт хорошего качества: коэффициент 0.01–0.02</li>
+<li>🚜 Грунтовая дорога: коэффициент 0.05–0.15</li>
+<li>🏜️ Песок или грязь: коэффициент 0.15–0.30</li>
+<li>🚂 Сталь по стали (рельсы): коэффициент 0.001–0.002</li>
+</ul>
+
+<blockquote>
+<p>⚠️ Внимание: Коэффициент трения качения не является постоянной величиной. Он увеличивается с ростом скорости из-за нагревания шины и изменения ее геометрии, что часто упускают из виду при упрощенных расчетах.</p>
+</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте данные о давлении в шинах для корректировки коэффициента трения: недокачанные шины увеличивают сопротивление качения до 20%.</p></aside>
+
+<h2 id="аэродинамическое-сопротивление-и-лобовая-площадь">Аэродинамическое сопротивление и лобовая площадь</h2>
+
+<p>Второй составляющей полной силы сопротивления является аэродинамическое сопротивление, которое становится доминирующим на скоростях выше 60–80 км/ч. Оно определяется формулой, связывающей плотность воздуха, скорость движения и обтекаемость кузова. Чем быстрее движется объект, тем сильнее он «упирается» в воздушный поток.</p>
+
+<p>Ключевым параметром здесь выступает коэффициент аэродинамического сопротивления <strong>Cx</strong> (или <em>Cd</em>). Он зависит исключительно от формы тела. Обтекаемые формы, такие как капля или обтекатель, имеют минимальные значения Cx, в то время как плоские поверхности создают турбулентность и высокое сопротивление. Площадь миделевого сечения (лобовая площадь) также играет прямую роль: грузовик сопротивляется воздуху сильнее легковушки не только из-за формы, но и из-за размеров.</p>
+
+<p>Уравнение для расчета аэродинамической силы выглядит следующим образом:</p>
+
+<pre><code>F_аэр = 0.5 <em> Cx </em> S <em> ρ </em> v²</code></pre>
+
+<p>В этой формуле <strong>S</strong> — лобовая площадь, <strong>ρ</strong> — плотность воздуха (зависит от высоты над уровнем моря и температуры), <strong>v</strong> — скорость. Обратите внимание, что скорость стоит в квадрате. Это означает, что при увеличении скорости в 2 раза, сопротивление воздуха возрастает в 4 раза.</p>
+
+<details class="pb-accordion"><summary>Влияние бокового ветра</summary><div class="pb-accordion-body"><p>Боковой ветер изменяет эффективный угол атаки потока, что может увеличить лобовое сопротивление и потребовать дополнительной мощности двигателя для удержания курса.</p></div></details>
+
+<h2 id="суммарная-сила-сопротивления-и-баланс-мощностей">Суммарная сила сопротивления и баланс мощностей</h2>
+
+<p>Для нахождения полной силы сопротивления движению необходимо алгебраически сложить все составляющие. В простейшем случае движения по горизонтальной прямой это сумма силы трения качения и аэродинамической силы. Однако, если путь имеет уклон, к уравнению добавляется составляющая силы тяжести, действующая вдоль склона.</p>
+
+<p>Полная формула для автомобиля, движущегося в подъем, выглядит так:</p>
+
+<pre><code>F_полн = f <em> m </em> g <em> cos(α) + 0.5 </em> Cx <em> S </em> ρ <em> v² + m </em> g * sin(α)</code></pre>
+
+<p>Здесь <strong>α</strong> — угол подъема. На спуске синус угла становится отрицательным, что фактически помогает движению и снижает требуемую мощность двигателя, иногда даже переводя машину в режим рекуперации или торможения двигателем. Расчет баланса мощностей позволяет определить максимальную скорость транспортного средства или угол подъема, который оно сможет преодолеть.</p>
+
+<p>Точность расчета зависит от правильности ввода исходных данных. Ошибка в определении массы автомобиля или коэффициента Cx может привести к неверному выбору передаточных чисел трансмиссии или мощности мотора.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка данных для расчета</h4><label class="check-item"><input type="checkbox"><span>Уточнить массу автомобиля с грузом</span></label><label class="check-item"><input type="checkbox"><span>Найти актуальный коэффициент Cx для модели</span></label><label class="check-item"><input type="checkbox"><span>Определить тип дорожного покрытия</span></label><label class="check-item"><input type="checkbox"><span>Учесть погодные условия (ветер, плотность воздуха)</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="таблица-коэффициентов-сопротивления">Таблица коэффициентов сопротивления</h2>
+
+<p>Для удобства инженеров и студентов ниже приведена сводная таблица типовых значений коэффициентов сопротивления для различных условий. Эти данные используются для предварительных расчетов и оценки эффективности.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип поверхности / Объекта</th>
+<th>Коэффициент (f или Cx)</th>
+<th>Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Легковой автомобиль (современный)</td>
+<td>0.25 – 0.30 (Cx)</td>
+<td>Хорошая обтекаемость</td>
+</tr>
+<tr>
+<td>Грузовой автомобиль (фургон)</td>
+<td>0.60 – 0.80 (Cx)</td>
+<td>Плохая аэродинамика</td>
+</tr>
+<tr>
+<td>Асфальтобетон (сухой)</td>
+<td>0.010 – 0.018 (f)</td>
+<td>Высокое качество покрытия</td>
+</tr>
+<tr>
+<td>Гравийное покрытие</td>
+<td>0.020 – 0.040 (f)</td>
+<td>Среднее сопротивление</td>
+</tr>
+<tr>
+<td>Снежный накат</td>
+<td>0.030 – 0.050 (f)</td>
+<td>Высокое сопротивление качению</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Использование этих коэффициентов позволяет быстро оценить порядок величин. Однако для точных инженерных проектов, таких как разработка нового кузова автомобиля, данные коэффициенты уточняются в аэродинамических трубах или с помощью компьютерного моделирования <em>CFD</em>.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При движении против сильного ветра эффективная скорость в формуле аэродинамического сопротивления равна сумме скорости автомобиля и скорости ветра. Это может резко увеличить нагрузку на двигатель.</p>
+</blockquote>
+
+<h2 id="методы-снижения-сопротивления">Методы снижения сопротивления</h2>
+
+<p>Снижение силы сопротивления — главная задача автоинженеров для повышения топливной экономичности. Основные методы включают улучшение аэродинамики кузова, использование шин с низким сопротивлением качению и облегчение конструкции. Каждый грамм веса и каждый миллиметр высоты клиренса влияют на итоговый результат.</p>
+
+<p>Применение обтекателей на грузовиках, закрытие радиаторных решеток при движении на высокой скорости и использование специальных аэродинамических дисков колес — все это реальные способы борьбы с сопротивлением. В электромобилях этот вопрос стоит еще острее, так как запас энергии ограничен емкостью батареи, а не объемом топливного бака.</p>
+
+<p>Также стоит упомянуть влияние технического состояния. Грязное днище автомобиля, выступающие элементы багажника на крыше и даже открытые окна на высокой скорости значительно увеличивают Cx. Регулярное обслуживание и правильная эксплуатация помогают поддерживать расчетные параметры сопротивления.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Снижение скорости на 10% может уменьшить аэродинамическое сопротивление почти на 20%, что существенно экономит топливо на трассе.</p></aside>
+
+<p>Таким образом, поиск и расчет силы сопротивления движению — это комплексная задача, требующая учета механических и аэродинамических факторов. Правильное применение формул и коэффициентов позволяет оптимизировать работу транспортных систем и прогнозировать их поведение в различных условиях эксплуатации.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Как влияет скорость на общую силу сопротивления?</summary>
+<p>Сила сопротивления воздуха растет пропорционально квадрату скорости, а сила трения качения увеличивается линейно или слабо-нелинейно. На низких скоростях доминирует трение, на высоких (выше 80 км/ч) — аэродинамика.</p>
+</details>
+
+<details>
+<summary>Может ли сила сопротивления быть отрицательной?</summary>
+<p>Сама по себе сила сопротивления всегда направлена против движения и положительна по модулю. Однако при движении под уклон проекция силы тяжести может превышать силу сопротивления, создавая эффект «отрицательного» общего сопротивления, требующего торможения.</p>
+</details>
+
+<details>
+<summary>Почему коэффициент трения на льду ниже, чем на асфальте?</summary>
+<p>На льду между поверхностью шины и дорогой образуется тонкая водяная пленка (даже при отрицательных температурах из-за давления), которая работает как смазка, резко снижая коэффициент трения и сцепления.</p>
+</details>
+
+<details>
+<summary>Как рассчитать мощность, необходимую для преодоления сопротивления?</summary>
+<p>Мощность равна произведению полной силы сопротивления на скорость движения: <code>P = F_полн * v</code>. Единицы измерения должны быть согласованы (Ньюны и метры в секунду для получения Ватт).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kamri-zamena-salonnogo-filtra.html" class="pb-related-card">
+                <span class="pb-related-title">Замена салонного фильтра Toyota Camry: пошаговая инструкция</span>
+                <span class="pb-related-desc">Как поменять салонный фильтр на Тойота Камри своими руками. Выбор артикулов, частота замены, особенн</span>
+            </a><a href="/articles/p/po/pochemu-gorit-znachok-dvigatelya-na-paneli-priborov.html" class="pb-related-card">
+                <span class="pb-related-title">Горит значок двигателя: причины, диагностика и устранение неисправностей</span>
+                <span class="pb-related-desc">Почему горит Check Engine? Разбираем основные причины появления значка двигателя, способы самодиагно</span>
+            </a><a href="/articles/k/ka/kakie-valy-est-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Какие валы есть в машине: виды, функции и неисправности</span>
+                <span class="pb-related-desc">Разбираемся, какие валы используются в автомобиле: коленвал, распредвал, карданный, полуоси и другие</span>
+            </a><a href="/articles/p/pa/pakhnet-maslom-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Пахнет маслом в машине: причины, диагностика и устранение</span>
+                <span class="pb-related-desc">Запах масла в салоне авто — тревожный сигнал. Разбираем причины: прогар прокладки, сальники, вентиля</span>
+            </a><a href="/articles/k/ka/kak-sdelat-mashinu-v-domashnikh-usloviyakh.html" class="pb-related-card">
+                <span class="pb-related-title">Как сделать машину в домашних условиях: пошаговое руководство</span>
+                <span class="pb-related-desc">Узнайте, как собрать автомобиль своими руками дома: от выбора деталей до сборки и тестирования. Полн</span>
+            </a><a href="/articles/i/ir/iridievye-svechi-reglament-zameny.html" class="pb-related-card">
+                <span class="pb-related-title">Иридиевые свечи: регламент замены, признаки износа и ресурс</span>
+                <span class="pb-related-desc">Полный разбор регламента замены иридиевых свечей зажигания. Реальный ресурс, симптомы выхода из стро</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Формула средней скорости автомобиля: расчет и примеры — Авто Справочник</title>
+    <meta name="description" content="Как правильно вычислить среднюю скорость автомобиля? Формулы, примеры расчетов, нюансы для точных результатов и ошибки, которых стоит избегать.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/sr/srednyaya-skorost-avtomobilya-formula.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Формула средней скорости автомобиля: расчет и примеры">
+    <meta property="og:description" content="Как правильно вычислить среднюю скорость автомобиля? Формулы, примеры расчетов, нюансы для точных результатов и ошибки, которых стоит избегать.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Формула средней скорости автомобиля: расчет и примеры</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-средняя-скорость-и-зачем-она-нужна">Что такое средняя скорость и зачем она нужна</a></li><li><a href="#основная-формула-расчета-средней-скорости">Основная формула расчета средней скорости</a></li><li><a href="#практический-пример-расчета">Практический пример расчета</a></li><li><a href="#нюансы-расчета-для-реальных-поездок">Нюансы расчета для реальных поездок</a></li><li><a href="#сравнение-формул-арифметическая-vs-гармоническая-средняя">Сравнение формул: арифметическая vs. гармоническая средняя</a></li><li><a href="#как-измерить-среднюю-скорость-в-автомобиле">Как измерить среднюю скорость в автомобиле</a></li><li><a href="#типичные-ошибки-при-расчете-средней-скорости">Типичные ошибки при расчете средней скорости</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ko/korolla-150-zavoditsya-i-glokhnet.html">Toyota Corolla 150 глохнет после запуска: причины и решения</a></li><li><a href="/articles/k/ka/kak-najti-detal-po-vin-kodu-avtomobilya.html">Как найти деталь по VIN-коду автомобиля: полное руководство</a></li><li><a href="/articles/k/ka/kakaya-skorost-bolshe-5-m-s-ili-36-km-ch.html">5 м/с или 36 км/ч — какая скорость больше? Сравнение и перевод единиц</a></li><li><a href="/articles/p/pr/proverit-esc-kia-k5.html">Как проверить ESC на Kia K5: диагностика и ошибки системы</a></li><li><a href="/articles/p/po/pochemu-glokhnet-zaz-shans.html">Почему глохнет ЗАЗ Шанс: основные причины и способы устранения</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Средняя скорость автомобиля: формула расчета и практические примеры</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-средняя-скорость-и-зачем-она-нужна">Что такое средняя скорость и зачем она нужна</a></li><li><a href="#основная-формула-расчета-средней-скорости">Основная формула расчета средней скорости</a></li><li><a href="#практический-пример-расчета">Практический пример расчета</a></li><li><a href="#нюансы-расчета-для-реальных-поездок">Нюансы расчета для реальных поездок</a></li><li><a href="#сравнение-формул-арифметическая-vs-гармоническая-средняя">Сравнение формул: арифметическая vs. гармоническая средняя</a></li><li><a href="#как-измерить-среднюю-скорость-в-автомобиле">Как измерить среднюю скорость в автомобиле</a></li><li><a href="#типичные-ошибки-при-расчете-средней-скорости">Типичные ошибки при расчете средней скорости</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Средняя скорость автомобиля — это ключевой параметр, который помогает оценить эффективность поездки, спланировать маршрут или рассчитать время в пути. Многие водители ошибочно считают, что достаточно сложить все скорости движения и разделить на количество измерений. Однако на практике этот показатель зависит от <strong>пройденного расстояния</strong> и <strong>затраченного времени</strong>, а не от мгновенных значений спидометра.</p>
+<p>В этой статье разберем, как правильно рассчитывать среднюю скорость, какие факторы на нее влияют, и почему формула, которую учат в школе, не всегда применима к реальным условиям эксплуатации автомобиля.</p>
+
+<h2 id="что-такое-средняя-скорость-и-зачем-она-нужна">Что такое средняя скорость и зачем она нужна</h2>
+<p>Средняя скорость — это <em>отношение общего пути к общему времени</em>, затраченному на его преодоление. В физике это классическое определение, но в автотематике оно приобретает практические нюансы.</p>
+<p>Знание средней скорости позволяет:</p>
+<ul>
+<li>📍 Точно планировать время прибытия в пункт назначения.</li>
+<li>💰 Оценивать расход топлива на маршруте.</li>
+<li>⚡ Проводить анализ стиля вождения (например, для эко-драйвинга).</li>
+<li>📊 Сравнивать эффективность разных маршрутов.</li>
+</ul>
+<p>Пример: если вы едете из Москвы в Санкт-Петербург (около <code>700 км</code>), и средняя скорость составляет <code>80 км/ч</code>, то времени на путь потребуется <strong>8,75 часа</strong> (без учета остановок).</p>
+
+<div class="pb-poll" id="poll-e3d1127e"><div class="pb-poll-question">📊 Как часто вы рассчитываете среднюю скорость во время поездок?</div><div class="pb-poll-option" data-poll="e3d1127e" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Всегда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e3d1127e" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Иногда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e3d1127e" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Редко</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e3d1127e" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="основная-формула-расчета-средней-скорости">Основная формула расчета средней скорости</h2>
+<p>Классическая формула, которую изучают в школе, выглядит так:</p>
+<p><strong>Средняя скорость = Общий путь / Общее время</strong></p>
+<p>Где:</p>
+<ul>
+<li>📏 <em>Общий путь</em> — сумма всех отрезков маршрута (в километрах).</li>
+<li>⏱️ <em>Общее время</em> — сумма времени движения и всех остановок (в часах).</li>
+</ul>
+<p>Важно: <strong>время простоев</strong> (например, на заправке или в пробке) увеличивает общее время, но не влияет на пройденный путь. Поэтому средняя скорость будет ниже, чем если бы вы ехали без остановок.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чтобы получить точные данные, используйте навигаторы (например, <em>Yandex.Навигатор</em> или <em>Google Maps</em>) — они автоматически рассчитывают среднюю скорость с учетом пробок и остановок.</p></aside>
+
+<h2 id="практический-пример-расчета">Практический пример расчета</h2>
+<p>Представим, что вы проехали <code>300 км</code>, из которых:</p>
+<ul>
+<li>🚗 <code>200 км</code> по трассе со скоростью <code>100 км/ч</code>.</li>
+<li>🏙️ <code>100 км</code> по городу со скоростью <code>50 км/ч</code>.</li>
+</ul>
+<p>Интуитивно можно подумать, что средняя скорость — <code>(100 + 50) / 2 = 75 км/ч</code>. Но это <strong>ошибка</strong>! Правильный расчет:</p>
+<ol>
+<li><p>Время на трассе: <code>200 км / 100 км/ч = 2 часа</code>.</p></li>
+<li><p>Время в городе: <code>100 км / 50 км/ч = 2 часа</code>.</p></li>
+<li><p>Общее время: <code>2 + 2 = 4 часа</code>.</p></li>
+<li><p>Средняя скорость: <code>300 км / 4 ч = 75 км/ч</code>.</p></li>
+</ol>
+<p>В этом случае результат совпал с интуитивным, но только потому, что время на обоих участках было одинаковым. Если бы время отличалось, средняя скорость была бы другой.</p>
+
+<details class="pb-accordion"><summary>Почему нельзя просто сложить скорости и разделить на 2?</summary><div class="pb-accordion-body"><p>Потому что средняя скорость зависит от времени, проведенного на каждом участке. Если вы провели больше времени на низкой скорости, она сильнее повлияет на итоговый результат. </p></div></details>
+
+<h2 id="нюансы-расчета-для-реальных-поездок">Нюансы расчета для реальных поездок</h2>
+<p>В реальных условиях на среднюю скорость влияют:</p>
+<ul>
+<li>🛣️ <strong>Тип дороги</strong> (трасса, город, бездорожье).</li>
+<li>🚦 <strong>Светофоры и пробки</strong> (увеличивают время, но не путь).</li>
+<li>⛽ <strong>Остановки на заправках</strong> и отдых.</li>
+<li>🌧️ <strong>Погодные условия</strong> (дождь, снег, туман).</li>
+<li>🚔 <strong>Ограничения скорости</strong> на отдельных участках.</li>
+</ul>
+<p>Чем больше факторов учитывается, тем точнее будет расчет. Например, если вы едете по трассе с ограничением <code>90 км/ч</code>, но попадаете в пробку на <code>30 минут</code>, средняя скорость снизится.</p>
+
+<blockquote>⚠️ Внимание: если не учитывать время остановок, расчет будет завышен. Например, при поездке на <code>500 км</code> с одной остановкой на <code>1 час</code> средняя скорость будет ниже, чем если бы вы ехали без остановок.</blockquote>
+
+<h2 id="сравнение-формул-арифметическая-vs-гармоническая-средняя">Сравнение формул: арифметическая vs. гармоническая средняя</h2>
+<p>Многие путают <strong>арифметическую</strong> и <strong>гармоническую</strong> среднюю скорость. Разница в том, как учитывается время:</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr><th>Тип средней</th><th>Формула</th><th>Когда применяется</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>Арифметическая</strong></td><td><code>(v₁ + v₂ + ... + vₙ) / n</code></td><td>Если время на каждом участке <em>одинаково</em>.</td></tr>
+<tr><td><strong>Гармоническая</strong></td><td><code>n / (1/v₁ + 1/v₂ + ... + 1/vₙ)</code></td><td>Если <em>длина участков одинакова</em>.</td></tr>
+<tr><td><strong>Средняя по пути</strong></td><td><code>Общий путь / Общее время</code></td><td>Универсальный метод для реальных поездок.</td></tr>
+</tbody>
+</table></div>
+<p>Пример гармонической средней: если вы проехали одинаковое расстояние (<code>100 км</code>) на скоростях <code>50 км/ч</code> и <code>100 км/ч</code>, то средняя скорость будет:</p>
+<p><code>2 / (1/50 + 1/100) = 66,67 км/ч</code>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для точного расчета средней скорости всегда используйте формулу <strong>Общий путь / Общее время</strong> — она учитывает все нюансы поездки.</p></aside>
+
+<h2 id="как-измерить-среднюю-скорость-в-автомобиле">Как измерить среднюю скорость в автомобиле</h2>
+<p>Современные автомобили и гаджеты упрощают задачу:</p>
+<ul>
+<li>📱 <strong>Навигационные приложения</strong> (<em>Google Maps</em>, <em>Yandex.Навигатор</em>, <em>Waze</em>) автоматически рассчитывают среднюю скорость по маршруту.</li>
+<li>🚗 <strong>Бортовой компьютер</strong> многих автомобилей (например, <em>Volkswagen</em>, <em>Toyota</em>) отображает среднюю скорость за поездку.</li>
+<li>⌚ <strong>Спорт-браслеты и смарт-часы</strong> (например, <em>Garmin</em>) могут фиксировать скорость движения.</li>
+<li>📊 <strong>Одометр и секундомер</strong> — классический метод для ручного расчета.</li>
+</ul>
+<p>Если вы хотите рассчитать среднюю скорость вручную, возьмите данные из <code>одометра</code> (общий километраж) и разделите на время поездки (из <code>бортового компьютера</code> или <code>навигатора</code>).</p>
+
+<blockquote>⚠️ Внимание: бортовой компьютер может показывать среднюю скорость <em>только за время движения</em>, исключая остановки. Уточняйте, какие данные он учитывает.</blockquote>
+
+<h2 id="типичные-ошибки-при-расчете-средней-скорости">Типичные ошибки при расчете средней скорости</h2>
+<p>Даже опытные водители допускают ошибки:</p>
+<ul>
+<li>🚫 <strong>Игнорирование остановок</strong>. Если не учитывать время на заправке или отдыхе, результат будет завышен.</li>
+<li>🚫 <strong>Среднее арифметическое скоростей</strong>. Как показано выше, этот метод работает только при одинаковом времени на каждом участке.</li>
+<li>🚫 <strong>Неучет пробок</strong>. В городе средняя скорость может быть в 2–3 раза ниже разрешённой.</li>
+<li>🚫 <strong>Округление данных</strong>. Например, если время поездки <code>2 часа 30 минут</code>, его нужно перевести в <code>2,5 часа</code>, а не округлять до <code>2 или 3</code>.</li>
+</ul>
+<p>Чтобы избежать ошибок, всегда используйте точное время и пройденное расстояние.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Что нужно для точного расчета средней скорости</h4><label class="check-item"><input type="checkbox"><span>Зафиксировать начальный и конечный километраж</span></label><label class="check-item"><input type="checkbox"><span>Засечь точное время поездки (включая остановки)</span></label><label class="check-item"><input type="checkbox"><span>Учесть все участки маршрута (трасса, город и т.д.)</span></label><label class="check-item"><input type="checkbox"><span>Использовать точные данные (не округлять)</span></label><label class="check-item"><input type="checkbox"><span>Проверить, учитывает ли навигатор пробки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>🔹 Как рассчитать среднюю скорость, если я ехал с разными скоростями на разных участках?</summary>
+<p>Используйте формулу <strong>Общий путь / Общее время</strong>. Сложите все пройденные расстояния и разделите на суммарное время (включая остановки). Например, если вы проехали <code>150 км</code> за <code>2 часа</code> и <code>100 км</code> за <code>1,5 часа</code>, средняя скорость будет <code>(150 + 100) / (2 + 1,5) = 250 / 3,5 ≈ 71,43 км/ч</code>.</p>
+</details>
+
+<details>
+<summary>🔹 Почему средняя скорость в городе ниже, чем на трассе?</summary>
+<p>В городе на среднюю скорость влияют <strong>светофоры</strong>, <strong>пробки</strong>, <strong>пешеходные переходы</strong> и <strong>ограничения скорости</strong>. Например, при разрешённой скорости <code>60 км/ч</code> реальная средняя скорость в Москве может быть <code>25–35 км/ч</code> из-за заторов.</p>
+</details>
+
+<details>
+<summary>🔹 Может ли средняя скорость быть выше максимальной разрешённой?</summary>
+<p>Нет, <mark>средняя скорость не может превышать максимально разрешённую на маршруте</mark>. Однако если на части пути вы двигались быстрее (например, на пустой трассе), а на другой — медленнее (в пробке), среднее значение может быть близко к максимальному.</p>
+</details>
+
+<details>
+<summary>🔹 Как средняя скорость влияет на расход топлива?</summary>
+<p>Чем выше средняя скорость (в разумных пределах), тем <strong>экономичнее</strong> расход топлива. Например, при движении со скоростью <code>90–110 км/ч</code> на трассе расход может быть минимальным, а в городе с частыми остановками — увеличенным на <code>20–30%</code>.</p>
+</details>
+
+<details>
+<summary>🔹 Какие приложения лучше использовать для расчета средней скорости?</summary>
+<p>Самые точные данные дают <em>Google Maps</em> и <em>Yandex.Навигатор</em>, так как они учитывают пробки и реальное время в пути. Для Sport-браслетов подойдут <em>Garmin Connect</em> или <em>Strava</em>.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ko/korolla-150-zavoditsya-i-glokhnet.html" class="pb-related-card">
+                <span class="pb-related-title">Toyota Corolla 150 глохнет после запуска: причины и решения</span>
+                <span class="pb-related-desc">Разбираем почему Toyota Corolla 150 заводится и сразу глохнет: диагностика датчиков, топливной систе</span>
+            </a><a href="/articles/k/ka/kak-najti-detal-po-vin-kodu-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Как найти деталь по VIN-коду автомобиля: полное руководство</span>
+                <span class="pb-related-desc">Узнайте, как точно подобрать запчасть по VIN-коду. Разбор каталогов, декодеров и проверка совместимо</span>
+            </a><a href="/articles/k/ka/kakaya-skorost-bolshe-5-m-s-ili-36-km-ch.html" class="pb-related-card">
+                <span class="pb-related-title">5 м/с или 36 км/ч — какая скорость больше? Сравнение и перевод единиц</span>
+                <span class="pb-related-desc">Подробный разбор: как сравнить 5 м/с и 36 км/ч, перевод скоростей в разные единицы, практическое при</span>
+            </a><a href="/articles/p/pr/proverit-esc-kia-k5.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить ESC на Kia K5: диагностика и ошибки системы</span>
+                <span class="pb-related-desc">Пошаговая инструкция по проверке системы курсовой устойчивости (ESC) на Kia K5. Коды ошибок, диагнос</span>
+            </a><a href="/articles/p/po/pochemu-glokhnet-zaz-shans.html" class="pb-related-card">
+                <span class="pb-related-title">Почему глохнет ЗАЗ Шанс: основные причины и способы устранения</span>
+                <span class="pb-related-desc">Разбираемся, почему глохнет ЗАЗ Шанс на холостых, при торможении и на ходу. Диагностика инжектора, д</span>
+            </a><a href="/articles/p/po/pochemu-strelka-takhometra-padaet-na-nol.html" class="pb-related-card">
+                <span class="pb-related-title">Почему стрелка тахометра падает на ноль: причины и ремонт</span>
+                <span class="pb-related-desc">Стрелка тахометра падает на ноль при движении? Разбираем основные причины: датчики, проводка, ЭБУ. Д</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

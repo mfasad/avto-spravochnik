@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Чему равна центробежная сила: формулы и расчеты — Авто Справочник</title>
+    <meta name="description" content="Разбор формулы центробежной силы, влияние скорости и радиуса на занос автомобиля. Почему инерция опасна на поворотах и как её рассчитать.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/c/ch/chemu-ravna-tsentrobezhnaya-sila.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Чему равна центробежная сила: формулы и расчеты">
+    <meta property="og:description" content="Разбор формулы центробежной силы, влияние скорости и радиуса на занос автомобиля. Почему инерция опасна на поворотах и как её рассчитать.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Чему равна центробежная сила: формулы и расчеты</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физическая-природа-явления-и-векторы-сил">Физическая природа явления и векторы сил</a></li><li><a href="#основная-формула-расчета-и-переменные">Основная формула расчета и переменные</a></li><li><a href="#влияние-скорости-и-радиуса-на-устойчивость">Влияние скорости и радиуса на устойчивость</a></li><li><a href="#центр-тяжести-и-риск-опрокидывания">Центр тяжести и риск опрокидывания</a></li><li><a href="#роль-шин-и-коэффициента-сцепления">Роль шин и коэффициента сцепления</a></li><li><a href="#системы-стабилизации-и-электронная-помощь">Системы стабилизации и электронная помощь</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/printsip-raboty-konditsionera-v-mashine.html">Как работает кондиционер в машине: принцип действия и схема</a></li><li><a href="/articles/2/20/2000-oborotov-na-kholostom-khodu.html">2000 оборотов на холостом ходу: причины и устранение</a></li><li><a href="/articles/s/sr/srok-sluzhby-radiatora-avtomobilya.html">Срок службы радиатора автомобиля: факторы и признаки износа</a></li><li><a href="/articles/s/sk/skolko-po-vremeni-nuzhno-progrevat-mashinu.html">Сколько нужно прогревать машину зимой и летом: экспертный гид</a></li><li><a href="/articles/g/gd/gde-nakhoditsya-salonnyj-filtr-na-matize.html">Где салонный фильтр на Матизе: расположение и замена</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Чему равна центробежная сила: физика движения автомобиля</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физическая-природа-явления-и-векторы-сил">Физическая природа явления и векторы сил</a></li><li><a href="#основная-формула-расчета-и-переменные">Основная формула расчета и переменные</a></li><li><a href="#влияние-скорости-и-радиуса-на-устойчивость">Влияние скорости и радиуса на устойчивость</a></li><li><a href="#центр-тяжести-и-риск-опрокидывания">Центр тяжести и риск опрокидывания</a></li><li><a href="#роль-шин-и-коэффициента-сцепления">Роль шин и коэффициента сцепления</a></li><li><a href="#системы-стабилизации-и-электронная-помощь">Системы стабилизации и электронная помощь</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>При прохождении крутого поворота на высокой скорости каждый водитель ощущает, как автомобиль начинает «сносить» наружу траектории. Это физическое явление, которое часто путают с инерцией, но в механике для него есть четкое определение и математическое выражение. Именно эта сила стремится вытолкнуть транспортное средство за пределы дороги, требуя от покрышек максимального сцепления с асфальтом.</p>
+
+<p>Понимание того, <strong>чему равна центробежная сила</strong> в конкретный момент, может спасти жизнь, так как она напрямую влияет на вероятность заноса или опрокидывания. Водителю необходимо осознавать, что удвоение скорости увеличивает эту нагрузку в четыре раза, что часто становится неожиданностью при экстренном маневрировании.</p>
+
+<p>В данной статье мы разберем физическую суть явления, рассмотрим точные формулы расчета и проанализируем, как различные параметры автомобиля влияют на его устойчивость на дороге. Знание этих законов физики помогает не просто сдать экзамен в автошколе, но и безопасно управлять машиной в критических ситуациях.</p>
+
+<h2 id="физическая-природа-явления-и-векторы-сил">Физическая природа явления и векторы сил</h2>
+
+<p>Центробежная сила инерции — это сила, действующая на материальную точку, движущуюся по криволинейной траектории. Важно понимать, что она возникает только в неинерциальных системах отсчета, то есть в системе, связанной с самим движущимся автомобилем. Для наблюдателя, стоящего на обочине, автомобиль стремится двигаться прямолинейно согласно первому закону Ньютона, а криволинейную траекторию ему задает сила трения шин о дорогу.</p>
+
+<p>Вектор <strong>центробежной силы</strong> всегда направлен от центра кривизны поворота наружу. Это означает, что при повороте влеко сила будет толкать машину вправо, и наоборот. В отличие от центростремительной силы, которая прижимает автомобиль к центру дуги, центробежная — это реакция массы на изменение направления движения. Именно она создает ту самую перегрузку, которую чувствуют пассажиры.</p>
+
+<p>Мagnitude (величина) этой силы зависит от массы объекта и ускорения, с которым меняется вектор скорости. В автомобильном контексте это означает, что тяжелый внедорожник будет испытывать большее воздействие, чем легкий спорткар, при прочих равных условиях. Однако решающим фактором часто становится не масса, а скорость движения.</p>
+
+<div class="pb-poll" id="poll-f1ac6d6d"><div class="pb-poll-question">📊 Что, по вашему мнению, сильнее всего влияет на занос автомобиля в повороте?</div><div class="pb-poll-option" data-poll="f1ac6d6d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Скорость движения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f1ac6d6d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Состояние резины</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f1ac6d6d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Масса автомобиля</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="f1ac6d6d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Дорожное покрытие</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="основная-формула-расчета-и-переменные">Основная формула расчета и переменные</h2>
+
+<p>Для определения величины воздействия, выталкивающего автомобиль с траектории, используется классическая формула механики. Она связывает три ключевых параметра: массу, скорость и радиус поворота. Знание этой зависимости позволяет водителю интуитивно или расчетливо оценивать риски перед маневром.</p>
+
+<p>Формула выглядит следующим образом:</p>
+
+<pre><code>F = (m * v²) / R</code></pre>
+
+<p>Где <strong>F</strong> — искомая сила (в Ньютонах), <strong>m</strong> — масса автомобиля (в килограммах), <strong>v</strong> — скорость движения (в метрах в секунду), а <strong>R</strong></p> — радиус поворота (в метрах). Обратите внимание, что скорость в формуле возводится в квадрат. Это означает, что даже небольшое увеличение скорости приводит к экспоненциальному росту нагрузки на шины.</p>
+
+<p>Рассмотрим пример: автомобиль массой 1500 кг входит в поворот радиусом 50 метров со скоростью 20 м/с (72 км/ч). Подставив значения, получим: (1500 * 400) / 50 = 12 000 Ньютонов. Если увеличить скорость до 108 км/ч (30 м/с), сила вырастет до 27 000 Ньютонов — более чем в два раза, хотя скорость выросла только на 50%.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При расчетах всегда переводите скорость из км/ч в м/с, деля значение на 3,6. Ошибка в единицах измерения приведет к неверному результату в 1296 раз.</p></aside>
+
+<h2 id="влияние-скорости-и-радиуса-на-устойчивость">Влияние скорости и радиуса на устойчивость</h2>
+
+<p>Анализ формулы показывает, что <strong>скорость</strong> является доминирующим фактором риска. Поскольку она стоит в числителе и в квадрате, именно превышение скоростного режима чаще всего становится причиной потери управления. На мокрой дороге, где коэффициент сцепления падает, запас прочности шин исчерпывается мгновенно при малейшем увеличении <em>v</em>.</p>
+
+<p>Радиус поворота <strong>R</strong> стоит в знаменателе, что означает обратную зависимость: чем круче поворот (меньше радиус), тем больше сила, выталкивающая автомобиль. На затяжных дугах трассы радиус велик, и сила инерции минимальна. На городских перекрестках или горных серпантинах радиус мал, что требует существенного снижения скорости для сохранения равновесия.</p>
+
+<details class="pb-accordion"><summary>Почему тяжелые машины не всегда опаснее легких?</summary><div class="pb-accordion-body"><p>Хотя масса (m) прямо пропорциональна силе инерции, она же увеличивает и силу сцепления шин с дорогой (так как вес прижимает автомобиль к асфальту). Поэтому коэффициент запаса устойчивости у тяжелых и легких машин может быть схожим, если у них одинаковая резина и центр тяжести.</p></div></details>
+
+<p>Существует критическая скорость, при которой центробежная сила превышает силу трения покоя между шинами и дорогой. В этот момент начинается боковое скольжение (занос). Для предотвращения этого водителю необходимо:</p>
+
+<ul>
+<li>🚗 Снижать скорость <strong>до</strong> входа в поворот, а не во время него.</li>
+<li>🛣️ Выбирать траекторию с максимально большим радиусом (проходить поворот по внешней дуге).</li>
+<li>⚖️ Равномерно распределять массу груза в автомобиле, чтобы не смещать центр тяжести.</li>
+</ul>
+
+<h2 id="центр-тяжести-и-риск-опрокидывания">Центр тяжести и риск опрокидывания</h2>
+
+<p>Помимо заноса, существует риск опрокидывания автомобиля. Это происходит, когда момент центробежной силы относительно точки опоры (внешних колес) становится больше момента силы тяжести. Ключевую роль здесь играет высота <strong>центра тяжести</strong>. Чем выше расположен центр масс (как у внедорожников, кроссоверов или груженых фургонов), тем меньше усилий нужно, чтобы перевернуть машину.</p>
+
+<p>У спортивных автомобилей центр тяжести расположен низко, что позволяет им проходить повороты с огромными ускорениями без риска опрокидывания, ограничиваясь лишь сцеплением шин. У высоких транспортных средств ситуация обратная: даже при хорошем сцеплении с дорогой они могут перевернуться, если <strong>центробежная сила</strong> создаст достаточный рычаг.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип автомобиля</th>
+<th>Высота Ц.Т. (примерно)</th>
+<th>Риск опрокидывания</th>
+<th>Рекомендация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Спорткар</td>
+<td>30-40 см</td>
+<td>Минимальный</td>
+<td>Контроль заноса</td>
+</tr>
+<tr>
+<td>Седан</td>
+<td>50-60 см</td>
+<td>Низкий</td>
+<td>Соблюдение скоростного режима</td>
+</tr>
+<tr>
+<td>Внедорожник</td>
+<td>70-90 см</td>
+<td>Средний</td>
+<td>Осторожность на скользкой дороге</td>
+</tr>
+<tr>
+<td>Груженый фургон</td>
+<td>120+ см</td>
+<td>Высокий</td>
+<td>Снижение скорости в 2 раза</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Груз, закрепленный на крыше автомобиля, значительно поднимает общий центр тяжести. Это делает машину крайне неустойчивой даже на умеренных скоростях. При расчете безопасности движения с багажником на крыше следует исходить из того, что автомобиль ведет себя как высокий грузовик.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Высокий центр тяжести — главный враг устойчивости. Загружая крышу автомобиля, вы снижаете критическую скорость опрокидывания в разы.</p></aside>
+
+<h2 id="роль-шин-и-коэффициента-сцепления">Роль шин и коэффициента сцепления</h2>
+
+<p>Единственная сила, которая противодействует центробежной инерции и удерживает автомобиль на дороге — это сила трения (сцепления) шин с покрытием. Она рассчитывается как произведение веса автомобиля на коэффициент сцепления (<em>μ</em>). Если центробежная сила становится больше силы сцепления, начинается скольжение.</p>
+
+<p>Коэффициент сцепления — величина переменная. На сухом асфальте он может достигать 0.7-0.9, на мокром падает до 0.4-0.5, а на льду составляет всего 0.1-0.2. Это означает, что на льду безопасная скорость прохождения поворота должна быть в 2-3 раза ниже, чем на сухой дороге, так как сила сцепления минимальна.</p>
+
+<p>Состояние протектора и температура резины также критичны. <strong>Летние шины</strong> на морозе «дубеют» и теряют сцепные свойства, превращаясь в пластик. Зимняя резина, наоборот, остается эластичной. Использование не сезонных шин фактически меняет физическую формулу безопасности, сводя расчеты водителя к нулю.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка готовности к зимним поворотам</h4><label class="check-item"><input type="checkbox"><span>Проверить остаточную высоту протектора</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в сезонности резины</span></label><label class="check-item"><input type="checkbox"><span>Проверить давление в шинах</span></label><label class="check-item"><input type="checkbox"><span>Оценить состояние подвески</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="системы-стабилизации-и-электронная-помощь">Системы стабилизации и электронная помощь</h2>
+
+<p>Современные автомобили оснащены электронными системами, помогающими бороться с последствиями действия центробежной силы. Наиболее известная из них — <em>ESP</em> (Electronic Stability Program) или <em>ESC</em>. Эта система отслеживает угловую скорость вращения автомобиля вокруг вертикальной оси и сравнивает её с положением руля.</p>
+
+<p>Если датчики фиксируют, что автомобиль начинает заносить (центростремительное ускорение не соответствует углу поворота колес), система выборочно подтормаживает колеса и снижает мощность двигателя. Это создает искусственный момент силы, возвращающий машину на траекторию. Однако физика есть физика: электроника не может отменить законы Ньютона, если скорость слишком высока.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Не стоит полагаться на ESP в экстремальных ситуациях. Система эффективна только до определенного предела, когда шины еще не потеряли сцепление с дорогой полностью. Если вы входите в поворот на скорости, превышающей физические возможности сцепления, никакая электроника не удержит автомобиль на полосе.</p>
+</blockquote>
+
+<p>Также важную роль играет конструкция подвески. Независимая подвеска позволяет колесам лучше отслеживать рельеф дороги, сохраняя пятно контакта шины с покрытием. Жесткая подвеска уменьшает крены кузова, но может ухудшить сцепление на неровностях. Инженеры ищут баланс, чтобы минимизировать влияние инерционных сил на комфорт и безопасность.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему центробежная сила зависит от квадрата скорости?</summary>
+<p>Это следует из законов кинематики. Ускорение при движении по окружности равно v²/R. Поскольку сила по второму закону Ньютона равна массе, умноженной на ускорение (F=ma), то и сила пропорциональна квадрату скорости. Это фундаментальное свойство динамики вращательного движения.</p>
+</details>
+
+<details>
+<summary>Может ли центробежная сила перевернуть автомобиль на ровной дороге?</summary>
+<p>Да, может. Если скорость на повороте будет достаточно высокой, момент центробежной силы, действующей на центр тяжести, превысит момент силы тяжести, удерживающий колеса на земле. Особенно высок этот риск у автомобилей с высоким центром тяжести и узкой колеей.</p>
+</details>
+
+<details>
+<summary>Как влияет загрузка багажника на крыше на прохождение поворотов?</summary>
+<p>Загрузка крыши поднимает центр тяжести автомобиля. Это уменьшает критический угол крена, при котором происходит опрокидывание. Машина становится более «валкой», увеличивается амплитуда раскачивания, и риск потери устойчивости в повороте значительно возрастает.</p>
+</details>
+
+<details>
+<summary>Правда ли, что на тяжелых машинах центробежная сила больше?</summary>
+<p>Да, сила инерции прямо пропорциональна массе (F ~ m). Однако сила сцепления шин с дорогой тоже зависит от массы (F трения ~ m * g). Поэтому сам по себе вес не является главным врагом в повороте, важнее распределение этого веса и высота центра тяжести.</p>
+</details>
+
+<details>
+<summary>Что делать, если в повороте начался занос?</summary>
+<p>Необходимо повернуть руль в сторону заноса (туда, куда несет заднюю часть автомобиля) и плавно работать газом или тормозом (в зависимости от типа привода и наличия ABS/ESP). Резкие движения рулем или торможение могут усугубить ситуацию.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/printsip-raboty-konditsionera-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Как работает кондиционер в машине: принцип действия и схема</span>
+                <span class="pb-related-desc">Подробное объяснение принципа работы автокондиционера: схема, основные узлы, цикл фреона и типичные </span>
+            </a><a href="/articles/2/20/2000-oborotov-na-kholostom-khodu.html" class="pb-related-card">
+                <span class="pb-related-title">2000 оборотов на холостом ходу: причины и устранение</span>
+                <span class="pb-related-desc">Двигатель держит 2000 оборотов на холостом ходу? Разбираем причины: РХХ, ДМРВ, подсос воздуха, дросс</span>
+            </a><a href="/articles/s/sr/srok-sluzhby-radiatora-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Срок службы радиатора автомобиля: факторы и признаки износа</span>
+                <span class="pb-related-desc">Сколько служит радиатор авто? Узнайте реальный ресурс, признаки старения и методы продления жизни си</span>
+            </a><a href="/articles/s/sk/skolko-po-vremeni-nuzhno-progrevat-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько нужно прогревать машину зимой и летом: экспертный гид</span>
+                <span class="pb-related-desc">Узнайте, сколько времени прогревать авто в разное время года. Советы для бензина, дизеля и гибридов.</span>
+            </a><a href="/articles/g/gd/gde-nakhoditsya-salonnyj-filtr-na-matize.html" class="pb-related-card">
+                <span class="pb-related-title">Где салонный фильтр на Матизе: расположение и замена</span>
+                <span class="pb-related-desc">Подробная инструкция: где находится салонный фильтр на Дэу Матиз. Фото места установки, пошаговая за</span>
+            </a><a href="/articles/c/ch/chem-otlichaetsya-robot-i-avtomat-korobka-peredach.html" class="pb-related-card">
+                <span class="pb-related-title">Робот или автомат: чем отличаются коробки передач</span>
+                <span class="pb-related-desc">Разбираемся в ключевых отличиях робота и автомата: плюсы, минусы, конструкция, стоимость ремонта. Ка</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

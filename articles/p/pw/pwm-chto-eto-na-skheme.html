@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>PWM что это на схеме: расшифровка и принцип работы — Авто Справочник</title>
+    <meta name="description" content="PWM что это на схеме автомобиля и электроники? Полный разбор широтно-импульсной модуляции, обозначений, проверки мультиметром и диагностики.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pw/pwm-chto-eto-na-skheme.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PWM что это на схеме: расшифровка и принцип работы">
+    <meta property="og:description" content="PWM что это на схеме автомобиля и электроники? Полный разбор широтно-импульсной модуляции, обозначений, проверки мультиметром и диагностики.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">PWM что это на схеме: расшифровка и принцип работы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовый-принцип-работы-и-физика-процесса">Базовый принцип работы и физика процесса</a></li><li><a href="#обозначение-pwm-на-электрических-схемах">Обозначение PWM на электрических схемах</a></li><li><a href="#применение-в-автомобильной-электронике">Применение в автомобильной электронике</a></li><li><a href="#диагностика-и-проверка-сигнала-мультиметром">Диагностика и проверка сигнала мультиметром</a></li><li><a href="#частые-неисправности-и-методы-их-устранения">Частые неисправности и методы их устранения</a></li><li><a href="#преимущества-использования-модуляции-в-автопроме">Преимущества использования модуляции в автопроме</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-zamerit-tok-utechki.html">Как замерить ток утечки мультиметром: инструкция</a></li><li><a href="/articles/s/si/sip-kabel-podklyuchenie-k-avtomatu.html">Как подключить СИП кабель к автомату: схема, ошибки, советы</a></li><li><a href="/articles/m/ma/mashina-so-vklyuchennymi-farami.html">Машина со включенными фарами: причины и последствия</a></li><li><a href="/articles/k/ka/kak-prikurivat-mashinu-ot-drugoj.html">Как прикурить машину от другой: полная инструкция</a></li><li><a href="/articles/2/2-/2-5-kvt-kakoj-avtomat.html">Какой автомат ставить на 2.5 кВт: выбор по току и нагрузке</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>PWM что это на схеме: полное руководство по широтно-импульсной модуляции</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовый-принцип-работы-и-физика-процесса">Базовый принцип работы и физика процесса</a></li><li><a href="#обозначение-pwm-на-электрических-схемах">Обозначение PWM на электрических схемах</a></li><li><a href="#применение-в-автомобильной-электронике">Применение в автомобильной электронике</a></li><li><a href="#диагностика-и-проверка-сигнала-мультиметром">Диагностика и проверка сигнала мультиметром</a></li><li><a href="#частые-неисправности-и-методы-их-устранения">Частые неисправности и методы их устранения</a></li><li><a href="#преимущества-использования-модуляции-в-автопроме">Преимущества использования модуляции в автопроме</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>При изучении технической документации или электрических схем автомобиля можно часто встретить загадочную аббревиатуру PWM. Для неподготовленного человека это сочетание букв может показаться сложным техническим кодом, требующим глубоких знаний в радиоэлектронике. Однако, понимание того, что скрывается за этим обозначением, является ключевым навыком для любого современного автолюбителя и профессионального диагноста.</p>
+
+<p>Аббревиатура происходит от английского термина Pulse Width Modulation, что дословно переводится как <strong>широтно-импульсная модуляция</strong>. В русскоязычной литературе также можно встретить сокращение ШИМ, которое несет идентичный смысл. Эта технология позволяет с высокой точностью управлять мощностью, подаваемой на различные исполнительные механизмы в вашем транспортном средстве.</p>
+
+<p>Суть метода заключается не в изменении напряжения, как многие ошибочно полагают, а в манипулировании длительностью импульсов при постоянной амплитуде. Именно этот принцип позволяет плавно регулировать яркость подсветки приборной панели или управлять оборотами вентилятора охлаждения радиатора без потери эффективности.</p>
+
+<h2 id="базовый-принцип-работы-и-физика-процесса">Базовый принцип работы и физика процесса</h2>
+
+<p>Чтобы понять, как работает <strong>ШИМ-сигнал</strong>, представьте себе обычный выключатель света, который вы щелкаете с огромной скоростью. Если вы включите лампочку и сразу же выключите, она вспыхнет и погаснет. Но если вы будете проделывать это действие сотни или тысячи раз в секунду, человеческий глаз просто не успеет заметить мерцания.</p>
+
+<p>Вместо этого он увидит усредненное свечение. Степень яркости или интенсивности работы устройства зависит от соотношения времени, когда сигнал включен, к времени, когда он выключен. Этот параметр называется <strong>скважностью</strong> или коэффициентом заполнения (Duty Cycle). Если сигнал активен 90% времени и выключен 10% времени, устройство будет работать почти на полную мощность.</p>
+
+<p>Напротив, если активная фаза составляет лишь 10%, а 90% времени сигнал находится в состоянии логического нуля, то мощность, передаваемая на нагрузку, будет минимальной. Важно отметить, что частота следования импульсов остается неизменной, меняется лишь их ширина внутри одного периода.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Частота PWM в автомобильной электронике обычно составляет от 100 Гц до 20 кГц, что позволяет избежать слышимого гула в исполнительных механизмах.</p></aside>
+
+<p>Главным преимуществом такого подхода является высокий коэффициент полезного действия. В отличие от резистивного метода управления, где лишняя энергия рассеивается в виде тепла, ключевой элемент (транзистор) в схеме PWM либо полностью открыт, либо полностью закрыт. В обоих этих состояниях потери энергии минимальны.</p>
+
+<h2 id="обозначение-pwm-на-электрических-схемах">Обозначение PWM на электрических схемах</h2>
+
+<p>Когда вы берете в руки сервисную мануал или смотрите на принципиальную электрическую схему автомобиля, важно правильно идентифицировать сигнальные линии. Обозначение <strong>PWM</strong> может встречаться в различных вариациях, зависящих от производителя электроники или конкретного узла.</p>
+
+<p>Чаще всего вы увидите прямое текстовое указание рядом с проводом или контактом разъема. Это может быть просто "PWM", "PWM_IN" (вход сигнала) или "PWM_OUT" (выход управляющего сигнала). В отечественной документации и схемах для грузового транспорта часто используется аналог — <strong>ШИМ</strong>.</p>
+
+<ul>
+<li>🔹 <strong>Прямое обозначение:</strong> буквы PWM, написанные рядом с линией сигнала на плате или в схеме.</li>
+<li>🔹 <strong>Графическое изображение:</strong> иногда сигнал рисуют в виде меандра (прямоугольных импульсов) с подписью частоты.</li>
+<li>🔹 <strong>Синонимы:</strong> встречаются обозначения Duty Cycle или просто управление ключом.</li>
+</ul>
+
+<p>В сложных системах, таких как блок управления двигателем <em>ECU</em>, выводы могут быть пронумерованы, и их назначение нужно искать в таблицах распиновки (pinout). Там для каждого пина будет указано, является ли он источником PWM-сигнала для управления форсункой или катушкой зажигания.</p>
+
+<details class="pb-accordion"><summary>Почему используют переменный ток в PWM?</summary><div class="pb-accordion-body"><p>Хотя амплитуда импульсов постоянна, быстрый переход из состояния 0 в 1 и обратно создает широкий спектр гармоник. Это позволяет фильтровать сигнал и получать на выходе чистое аналоговое напряжение, если пропустить его через ФНЧ (фильтр низких частот).</p></div></details>
+
+<p>Особое внимание стоит уделить цветовому кодированию проводов в жгутах, хотя единого стандарта не существует. Часто сигнальный провод PWM имеет отличную от силовых проводов изоляцию, например, тонкую белую или желтую полоску. Однако полагаться только на цвет нельзя — необходима сверка со схемой.</p>
+
+<h2 id="применение-в-автомобильной-электронике">Применение в автомобильной электронике</h2>
+
+<p>Сфера применения широтно-импульсной модуляции в современном автомобиле огромна. Практически любой узел, требующий плавного регулирования, использует этот метод. Это позволяет инженерам создавать компактные и энергоэффективные системы управления.</p>
+
+<p>Одним из самых заметных для водителя применений является управление яркостью подсветки приборной панели и кнопок. При повороте регулятора освещенности в салоне блок комфорта не меняет напряжение в сети, а изменяет <strong>коэффициент заполнения</strong> сигнала, идущего на светодиоды или лампы накаливания.</p>
+
+<p>Другой критически важный узел — система охлаждения двигателя. Электрические вентиляторы радиатора часто управляются через PWM. Это позволяет им вращаться с разной скоростью в зависимости от температуры антифриза, обеспечивая тихую работу на малых оборотах и мощный обдув при перегреве.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Узел автомобиля</th>
+<th>Функция PWM</th>
+<th>Типичная частота</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Дроссельная заслонка</td>
+<td>Плавное управление углом открытия</td>
+<td>1-5 кГц</td>
+</tr>
+<tr>
+<td>Топливный насос</td>
+<td>Регулировка производительности (давления)</td>
+<td>100-500 Гц</td>
+</tr>
+<tr>
+<td>Генератор</td>
+<td>Управление током возбуждения</td>
+<td>250 Гц</td>
+</tr>
+<tr>
+<td>Климат-контроль</td>
+<td>Скорость вентилятора печки</td>
+<td>20-25 кГц</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Также нельзя забывать про систему зажигания. Хотя в катушках используются более сложные формы импульсов, принцип управления временем накопления энергии (Dwell Time) базируется на тех же законах модуляции длительности.</p>
+
+<div class="pb-poll" id="poll-31b30a39"><div class="pb-poll-question">📊 Какой узел чаще всего выходит из строя?</div><div class="pb-poll-option" data-poll="31b30a39" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Дроссельная заслонка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="31b30a39" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Вентилятор радиатора</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="31b30a39" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Топливный насос</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="31b30a39" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Подсветка салона</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>В дизельных двигателях PWM управляет клапаном рециркуляции отработавших газов (EGR) и регулятором давления в рампе Common Rail. Точность здесь критична, так как от нее зависит экологичность выхлопа и стабильность работы мотора.</p>
+
+<h2 id="диагностика-и-проверка-сигнала-мультиметром">Диагностика и проверка сигнала мультиметром</h2>
+
+<p>Для проверки наличия и качества <strong>PWM-сигнала</strong> обычного мультиметра в режиме измерения постоянного напряжения может быть недостаточно. Если вы просто приложите щупы, прибор покажет усредненное значение, которое сложно интерпретировать без осциллографа.</p>
+
+<p>Однако, многие современные мультиметры имеют функцию измерения <strong>Duty Cycle</strong> (скважности). Переключив прибор в этот режим, вы сможете увидеть процентное соотношение, которое скажет вам, насколько открыт управляющий элемент. Нормальные значения зависят от конкретного режима работы системы.</p>
+
+<p>Если мультиметр показывает напряжение, близкое к бортовому (например, 12-14 Вольт), это может означать, что сигнал постоянно открыт (100% duty cycle) или неисправен датчик, дающий команду на полную мощность. Нулевые показания говорят об обрыве или полном закрытии ключа.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> При измерении сигналов управления форсунками или катушками будьте предельно осторожны. Амплитуда выброса напряжения при индуктивном разрыве может достигать сотен вольт и вывести обычный мультиметр из строя. Используйте только сертифицированное оборудование.</p>
+</blockquote>
+
+<p>Для полноценной диагностики формы сигнала ("чистоты" меандра, отсутствия искажений и звона) необходим осциллограф. Он позволяет увидеть, как выглядит <strong>импульс</strong> в реальном времени, и заметить помехи, которые не видит вольтметр.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка PWM сигнала</h4><label class="check-item"><input type="checkbox"><span>Включить зажигание</span></label><label class="check-item"><input type="checkbox"><span>Подключить щупы к сигнальному проводу</span></label><label class="check-item"><input type="checkbox"><span>Выбрать режим Duty Cycle на мультиметре</span></label><label class="check-item"><input type="checkbox"><span>Сравнить показания с этлонными значениями</span></label><label class="check-item"><input type="checkbox"><span>Проверить "массу" щупа</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="частые-неисправности-и-методы-их-устранения">Частые неисправности и методы их устранения</h2>
+
+<p>Проблемы с PWM-управлением часто маскируются под другие неисправности. Например, если вентилятор печки дует только на максимальной скорости, это может означать выход из строя резистора или самого модулятора, который перестал регулировать скважность.</p>
+
+<p>Одной из распространенных причин является повреждение проводки. Вибрации и перепады температур приводят к микротрещинам в пайке контроллера или перелому провода в гофре. Это вызывает потерю сигнала, и система переходит в аварийный режим работы.</p>
+
+<ul>
+<li>🔸 <strong>Обрыв цепи:</strong> сигнал пропадает полностью, устройство не работает.</li>
+<li>🔸 <strong>Короткое замыкание:</strong> сигнал "прилипает" к плюсу или массе, устройство работает на полную мощность или не включается.</li>
+<li>🔸 <strong>Низкое напряжение:</strong> плохой контакт ("масса") приводит к искажению формы импульса.</li>
+</ul>
+
+<p>В некоторых случаях проблема кроется не в проводке, а в программном сбое блока управления. <strong>ECU</strong> может выдавать некорректный сигнал из-за ошибки в калибровках. В такой ситуации помогает перепрошивка или адаптация узла через диагностический сканер.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>90% проблем с PWM связаны с физической целостностью проводки и качеством контактных соединений, а не с сгоранием самих блоков управления.</p></aside>
+
+<p>Также стоит учитывать влияние электромагнитных помех. Если рядом с сигнальным проводом PWM проходит силовой кабель с высоким током, наводки могут искажать управляющий импульс, вызывая хаотичную работу исполнительного механизма.</p>
+
+<h2 id="преимущества-использования-модуляции-в-автопроме">Преимущества использования модуляции в автопроме</h2>
+
+<p>Почему автопроизводители массово перешли на эту технологию? Ответ кроется в экономии топлива и снижении нагрузки на генератор. Управляя насосом высокого давления или генератором через <strong>ШИМ</strong>, система берет ровно столько энергии, сколько нужно в данный момент.</p>
+
+<p>Кроме того, цифровая природа сигнала делает его устойчивым к помехам по сравнению с аналоговым управлением напряжением. Цифровому бло проще отличить логический ноль и единицу, чем точно измерить уровень напряжения в зашумленной бортовой сети.</p>
+
+<p>Это также позволяет реализовать сложные алгоритмы диагностики. Блок управления может отслеывать ток, протекающий через нагрузку, и по характеру изменения сигнала PWM определять исправность подключенного устройства, фиксируя ошибки в памяти.</p>
+
+<details class="pb-accordion"><summary>Эволюция управления</summary><div class="pb-accordion-body"><p>Первые системы впрыска использовали гидро-механическое регулирование. Переход на электронное PWM-управление позволил снизить расход топлива на 15-20% и радикально уменьшить токсичность выхлопа.</p></div></details>
+
+<p>Надежность транзисторных ключей, используемых в модуляторах, значительно выше, чем у механических регуляторов. Отсутствие трущихся частей и искрения продлевает срок службы узлов, делая современные автомобили более долговечными.</p>
+
+<details>
+<summary>Можно ли проверить PWM сигнал обычной "контролькой" (лампочкой)?</summary>
+<p>Использовать обычную лампочку-контроль для проверки PWM не рекомендуется. Из-за инерционности нити накала вы не увидите мерцания, а лишь тусклое свечение, по которому невозможно судить о параметрах сигнала. Более того, лампочка потребляет ток, который может нагрузить слабую сигнальную цепь и исказить показания.</p>
+</details>
+
+<details>
+<summary>Почему гудит дроссельная заслонка при включенном зажигании?</summary>
+<p>Звук, напоминающий жужжание или писк, издает электромоторчик заслонки, работающий в режиме PWM. Блок управления постоянно проводит калибровку положения заслонки, подавая короткие импульсы. Это штатная работа, но если звук становится громким, возможно, загрязнен механизм или изношены шестерни.</p>
+</details>
+
+<details>
+<summary>Влияет ли разряженный аккумулятор на работу PWM систем?</summary>
+<p>Да, низкое напряжение в бортовой сети критично для PWM. Поскольку амплитуда импульса привязана к напряжению питания, при разряженном АКБ "верхняя полка" импульса проваливается. Это может привести к некорректному открытию форсунок или клапанов, вызывая троение двигателя.</p>
+</details>
+
+<details>
+<summary>Чем отличается PWM от обычного аналогового сигнала 0-5В?</summary>
+<p>Аналоговый сигнал передает информацию уровнем напряжения (например, 2.5В — это 50% мощности). PWM передает информацию временем (50% времени включено, 50% выключено при постоянных 12В). PWM менее чувствителен к падению напряжения в проводах и помехам.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-zamerit-tok-utechki.html" class="pb-related-card">
+                <span class="pb-related-title">Как замерить ток утечки мультиметром: инструкция</span>
+                <span class="pb-related-desc">Полный гид по диагностике утечки тока в автомобиле. Как правильно замерить мультиметром, нормы потре</span>
+            </a><a href="/articles/s/si/sip-kabel-podklyuchenie-k-avtomatu.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить СИП кабель к автомату: схема, ошибки, советы</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению СИП к автомату в щитке: выбор кабеля, обжим наконечников, ошибки</span>
+            </a><a href="/articles/m/ma/mashina-so-vklyuchennymi-farami.html" class="pb-related-card">
+                <span class="pb-related-title">Машина со включенными фарами: причины и последствия</span>
+                <span class="pb-related-desc">Почему горят фары на заглушенной машине? Разбор причин разряда АКБ, неисправностей проводки и правил</span>
+            </a><a href="/articles/k/ka/kak-prikurivat-mashinu-ot-drugoj.html" class="pb-related-card">
+                <span class="pb-related-title">Как прикурить машину от другой: полная инструкция</span>
+                <span class="pb-related-desc">Подробный гид: как правильно прикурить автомобиль с севшим аккумулятором. Инструкция по шагам, схема</span>
+            </a><a href="/articles/2/2-/2-5-kvt-kakoj-avtomat.html" class="pb-related-card">
+                <span class="pb-related-title">Какой автомат ставить на 2.5 кВт: выбор по току и нагрузке</span>
+                <span class="pb-related-desc">Разбираемся, какой автоматический выключатель нужен для нагрузки 2.5 кВт: расчет тока, выбор номинал</span>
+            </a><a href="/articles/o/ok/okislenie-kontaktov-kak-chistit.html" class="pb-related-card">
+                <span class="pb-related-title">Окисление контактов: чем чистить и как восстановить проводку</span>
+                <span class="pb-related-desc">Полный гид по борьбе с окислением контактов. Обзор средств, методы чистки автоэлектрики и электроник</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Производитель авто по VIN-коду: как узнать и проверить — Авто Справочник</title>
+    <meta name="description" content="Подробная инструкция, как определить производителя авто по VIN-коду. Расшифровка символов, базы данных и проверка истории машины.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pr/proizvoditel-avto-po-vin-kodu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Производитель авто по VIN-коду: как узнать и проверить">
+    <meta property="og:description" content="Подробная инструкция, как определить производителя авто по VIN-коду. Расшифровка символов, базы данных и проверка истории машины.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/" class="pb-nav-active">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/pokupka-i-prodazha/">Покупка и Продажа</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Производитель авто по VIN-коду: как узнать и проверить</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-vin-код-и-зачем-он-нужен">Что такое VIN-код и зачем он нужен</a></li><li><a href="#структура-vin-кода-первые-три-символа-wmi">Структура VIN-кода: первые три символа (WMI)</a></li><li><a href="#определение-страны-сборки-и-завода-изготовителя">Определение страны сборки и завода-изготовителя</a></li><li><a href="#проверка-комплектации-и-истории-автомобиля">Проверка комплектации и истории автомобиля</a></li><li><a href="#таблица-основных-кодов-производителей-wmi">Таблица основных кодов производителей (WMI)</a></li><li><a href="#где-и-как-проверить-vin-код-онлайн">Где и как проверить VIN-код онлайн</a></li><li><a href="#частые-проблемы-и-ошибки-при-расшифровке">Частые проблемы и ошибки при расшифровке</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/l/lu/luchshie-mashiny-po-nadezhnosti.html">Топ-10 самых надежных автомобилей 2026: рейтинг по данным владельцев</a></li><li><a href="/articles/t/to/top-mashin-do-500k.html">Топ машин до 500к рублей: что купить в 2026 году</a></li><li><a href="/articles/k/ka/kak-zakazyvat-zapchasti-cherez-internet.html">Как заказать автозапчасти через интернет: пошаговая инструкция</a></li><li><a href="/articles/k/ki/kitajskij-novyj-avtomobil-krossover.html">Китайский кроссовер 2026: Топ моделей, цены и выбор</a></li><li><a href="/articles/a/av/avtokredit-po-gosprogramme-2025.html">Автокредит по госпрограмме 2026: условия, ставки, как оформить</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Определение производителя авто по VIN-коду</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-vin-код-и-зачем-он-нужен">Что такое VIN-код и зачем он нужен</a></li><li><a href="#структура-vin-кода-первые-три-символа-wmi">Структура VIN-кода: первые три символа (WMI)</a></li><li><a href="#определение-страны-сборки-и-завода-изготовителя">Определение страны сборки и завода-изготовителя</a></li><li><a href="#проверка-комплектации-и-истории-автомобиля">Проверка комплектации и истории автомобиля</a></li><li><a href="#таблица-основных-кодов-производителей-wmi">Таблица основных кодов производителей (WMI)</a></li><li><a href="#где-и-как-проверить-vin-код-онлайн">Где и как проверить VIN-код онлайн</a></li><li><a href="#частые-проблемы-и-ошибки-при-расшифровке">Частые проблемы и ошибки при расшифровке</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Покупка подержанного автомобиля всегда сопряжена с рисками, и ключевым инструментом для минимизации этих рисков является идентификационный номер транспортного средства. Именно <strong>VIN-код</strong> (Vehicle Identification Number) позволяет получить исчерпывающую информацию о происхождении машины, ее технических характеристиках и заводской комплектации. Для потенциального покупателя или текущего владельца умение читать этот код открывает доступ к данным, которые часто скрываются недобросовестными продавцами.</p>
+<p>В современной практике проверки автомобилей <strong>определение производителя авто по вин коду</strong> становится первым шагом в цепочке юридических и технических проверок. Это не просто способ узнать марку машины, но и возможность выявить перебитые номера, угнанные транспортные средства или «конструкторы», собранные из частей разных автомобилей. Знание того, как правильно интерпретировать эти 17 символов, дает существенное преимущество при торге и оценке состояния машины.</p>
+<p>В этой статье мы подробно разберем структуру международного стандарта, научимся определять страну-изготовителя и завод сборки, а также обсудим, какие базы данных наиболее актуальны на текущий момент. Вы поймете, почему <em>WBA</em> отличается от <em>WDB</em>, и как код региона может рассказать о реальном рынке сбыта конкретного экземпляра.</p>
+
+<h2 id="что-такое-vin-код-и-зачем-он-нужен">Что такое VIN-код и зачем он нужен</h2>
+<p>Идентификационный номер транспортного средства представляет собой уникальный 17-значный код, присваиваемый каждому автомобилю при производстве. Он служит своего рода цифровым паспортом, который сопровождает машину от конвейера до утилизации. В отличие от государственных регистрационных знаков, которые меняются при смене владельца или региона, <strong>VIN-номер</ остается неизменным на протяжении всего жизненного цикла автомобиля.</p>
+<p>Стандарт ISO 3779, регламентирующий структуру этого кода, был внедрен для унификации данных во всем мире. Это позволяет правоохранительным органам, страховым компаниям и сервисным центрам в любой точке globe получать точную информацию о конкретном экземпляре. Без этого кода было бы невозможно вести учет угонов, оформлять страховые случаи или заказывать оригинальные запчасти, соответствующие модификации двигателя и кузова.</p>
+<blockquote>
+<p>⚠️ Внимание: Никогда не покупайте автомобиль, если VIN-код на кузове не совпадает с номером в документах (ПТС, СТС). Это прямой признак того, что машина может числиться в угоне или иметь криминальное прошлое.</p>
+</blockquote>
+<p>Каждый символ в этой последовательности несет смысловую нагрузку. Первые три знака, известные как <strong>WMI</strong> (World Manufacturer Identifier), отвечают за идентификацию производителя и страны происхождения. Именно они позволяют мгновенно определить, кто выпустил автомобиль и где это произошло. Остальные символы описывают модель, тип кузова, двигатель и год выпуска, а последний знак является контрольной суммой для проверки валидности всего номера.</p>
+
+<h2 id="структура-vin-кода-первые-три-символа-wmi">Структура VIN-кода: первые три символа (WMI)</h2>
+<p>Наиболее важной частью для определения производителя являются первые три символа номера. Эта группа называется <strong>WMI</strong> и является строго регламентированной международными стандартами. Первый символ указывает на географическую зону или конкретную страну, второй обозначает государство, а третий — непосредственно производителя или тип транспортного средства.</p>
+<p>Географическое распределение кодов выглядит следующим образом: буквы от A до H зарезервированы для Африки, от J до R — для Азии, от S до Z — для Европы. Цифры от 1 до 7 закреплены за Северной и Центральной Америкой, а цифра 8 и 9 — за Южную Америку и Океанию соответственно. Зная эту логику, можно сразу отсечь целые регионы производства.</p>
+<div class="pb-poll" id="poll-98b88eac"><div class="pb-poll-question">📊 Где вы чаще всего проверяете VIN-код?</div><div class="pb-poll-option" data-poll="98b88eac" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">На сайте ГИБДД</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98b88eac" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через платные сервисы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98b88eac" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">В приложении банка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="98b88eac" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не проверяю вообще</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+<p>Третий символ в связке с первыми двумя уточняет производителя. Например, для Германии коды начинаются с WA-W0. Комбинация <em>WA1</em> укажет на Porsche, <em>WBA</em> — на BMW, а <em>WDB</em> — на Mercedes-Benz. Однако существуют исключения, когда третий символ равен цифре 9: в этом случае он обозначает производителя, выпускающего менее 500 автомобилей в год, и для полной расшифровки необходимо смотреть последние три знака номера.</p>
+<ul>
+<li>🌍 <strong>1, 4, 5</strong> — США (разные производители, например, 1G — General Motors, 1F — Ford).</li>
+<li>🇯🇵 <strong>J</strong> — Япония (JA-JO, например, JF — Subaru, JM — Mazda).</li>
+<li>🇩🇪 <strong>W</strong> — Германия (WA-W0, например, WVW — Volkswagen).</li>
+<li>🇰🇷 <strong>K</strong> — Южная Корея (KA-KE, например, KMH — Hyundai, KNA — Kia).</li>
+</ul>
+<p>Важно понимать, что <strong>WMI-код</strong> присваивается национальной организацией страны-производителя по согласованию с международными органами. Это гарантирует уникальность сочетания. Если вы видите код, начинающийся на <em>X</em>, это уже указывает на постсоветское пространство, где <em>XTA</em> — это АвтоВАЗ (Lada), а <em>XW8</em> — Volkswagen Russia.</p>
+
+<h2 id="определение-страны-сборки-и-завода-изготовителя">Определение страны сборки и завода-изготовителя</h2>
+<p>Определение страны сборки — это процесс, который часто путают с определением бренда. Автомобиль марки <em>Toyota</em> может быть собран в Японии, США, Турции или России, и от этого зависит качество сборки, используемые материалы и даже коррозионная стойкость кузова. Точную информацию о заводе-изготовителе также можно найти в VIN-коде, обычно это 11-й символ, но иногда данные о заводе «зашиты» в комбинации первых символов или в описательной части (VDS).</p>
+<p>Для точной идентификации завода необходимо обращаться к декодерам конкретных марок, так как единого стандарта для 11-го символа не существует. У каждого концерна своя логика маркировки производственных линий. Например, у Ford первый символ заводского кода может обозначать страну, а второй — конкретный завод. У <em>BMW</em> за сборку отвечает 7-й символ в сочетании с первыми тремя.</p>
+<p>Знание точного места сборки критически важно при покупке, так как автомобили одной и той же модели, но разных заводов, могут существенно отличаться по надежности. Например, бытует мнение, что немецкие <em>Mercedes</em> собираются качественнее турецких или южноафриканских аналогов, хотя контроль качества у глобальных брендов стремится к единому стандарту.</p>
+<details class="pb-accordion"><summary>Почему страна сборки может отличаться от бренда?</summary><div class="pb-accordion-body"><p>Глобализация автопрома привела к тому, что бренды строят заводы ближе к рынкам сбыта или источникам дешевого сырья. Например, многие американские BMW собираются в США, а японские Toyota — в Европе. Это снижает логистические расходы и конечную стоимость автомобиля.</p></div></details>
+<p>Чтобы проверить завод, часто достаточно ввести VIN в специализированный онлайн-сервис или запросить отчет у официального дилера. В отчете будет указан <strong>Plant Code</strong>, который расшифровывается как конкретный адрес производства. Это особенно актуально для автомобилей, собранных методом крупноузловой сборки (SKD) в разных странах.</p>
+<ul>
+<li>🏭 <strong>Калининград (Россия)</strong> — часто встречается в VIN старых сборок Hyundai, Kia, BMW.</li>
+<li>🇨🇳 <strong>Китай</strong> — коды L, начиная с LDC (Dongfeng), LSV (Volkswagen Shanghai) и другие.</li>
+<li>🇺🇸 <strong>США</strong> — множество заводов, коды начинаются на 1, 4, 5.</li>
+<li>🇩🇪 <strong>Германия</strong> — основные заводы премиум-сегмента, коды W.</li>
+</ul>
+
+<h2 id="проверка-комплектации-и-истории-автомобиля">Проверка комплектации и истории автомобиля</h2>
+<p>VIN-код является ключом не только к производителю, но и к заводской комплектации. В описательной части кода (знаки с 4 по 8) зашифрованы модель, тип кузова, серия, двигатель и система безопасности. Декодировав эти символы через базы данных производителя, можно узнать, выходила ли машина с завода с кожаным салоном, панорамной крышей или двигателем определенной мощности.</p>
+<p>Это знание помогает выявить переделанные автомобили. Если в VIN указано, что двигатель должен быть объемом 1.6 литра, а под капотом стоит 2.0, это явный признак вмешательства. Также проверка комплектации позволяет понять, не были ли заменены дорогие элементы на более дешевые аналоги перед продажей.</p>
+<p>Кроме того, по VIN-коду можно восстановить историю обслуживания, если автомобиль обслуживался у официальных дилеров. В базах данных хранятся все обращения, замененные детали и пробег на момент визита. Это позволяет выявить скрученный пробег или участие в ДТП, даже если внешне машина выглядит идеально.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка авто перед покупкой</h4><label class="check-item"><input type="checkbox"><span>Сверить VIN на кузове и в документах</span></label><label class="check-item"><input type="checkbox"><span>Проверить код через онлайн-сервисы</span></label><label class="check-item"><input type="checkbox"><span>Запросить отчет о ДТП и залогах</span></label><label class="check-item"><input type="checkbox"><span>Осмотреть места крепления табличек на предмет сварки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<p>Особое внимание стоит уделить <strong>экологическому классу</strong>, который также часто определяется по VIN. Для владельцев это важно при планировании поездок в центры крупных городов, где действуют ограничения для транспорта низких экологических классов. Ошибка в определении класса может привести к серьезным штрафам.</p>
+
+<h2 id="таблица-основных-кодов-производителей-wmi">Таблица основных кодов производителей (WMI)</h2>
+<p>Ниже приведена таблица с наиболее распространенными кодами WMI, которые помогут вам быстро сориентироваться в происхождении автомобиля. Помните, что это лишь малая часть всех возможных комбинаций, но она охватывает львиную долю автомобильного рынка.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Код WMI</th>
+<th>Производитель</th>
+<th>Страна</th>
+<th>Тип ТС</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1G</td>
+<td>General Motors</td>
+<td>США</td>
+<td>Легковые</td>
+</tr>
+<tr>
+<td>3VW</td>
+<td>Volkswagen de Mexico</td>
+<td>Мексика</td>
+<td>Легковые</td>
+</tr>
+<tr>
+<td>WA1</td>
+<td>Porsche</td>
+<td>Германия</td>
+<td>Легковые/SUV</td>
+</tr>
+<tr>
+<td>YVS</td>
+<td>Scania</td>
+<td>Швеция</td>
+<td>Грузовые/Автобусы</td>
+</tr>
+<tr>
+<td>XTA</td>
+<td>АвтоВАЗ (Lada)</td>
+<td>Россия</td>
+<td>Легковые</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Использование таких таблиц позволяет быстро отфильтровать информацию. Например, если продавец утверждает, что автомобиль собран в Германии, а код начинается на <em>3VW</em>, то машина произведена в Мексике. Такие несоответствия могут стать отличным аргументом для снижения цены или отказа от покупки.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При вводе VIN-кода в поисковые системы используйте только латинские буквы и цифры. Русские буквы (например, О вместо 0 или Е вместо Е) могут исказить результат поиска или привести к ошибке в базе данных.</p></aside>
+
+<h2 id="где-и-как-проверить-vin-код-онлайн">Где и как проверить VIN-код онлайн</h2>
+<p>В современном мире проверка <strong>VIN-кода</strong> не требует посещения ГИБДД или завода-изготовителя. Существует множество онлайн-сервисов, предоставляющих эту услугу. Однако важно различать бесплатные и платные источники, а также понимать глубину предоставляемой информации.</p>
+<p>Официальные сайты производителей часто имеют разделы для проверки истории обслуживания, но они могут требовать авторизации или быть доступны только в определенных регионах. Государственные ресурсы, такие как сайт ГИБДД в России, предоставляют базовую информацию о регистрации, участии в ДТП и нахождении в розыске бесплатно.</p>
+<p>Коммерческие агрегаторы собирают данные из множества источников: страховых компаний, сервисных центров, таможенных деклараций и аукционов. Отчеты таких сервисов обычно наиболее полные и содержат фотографии, данные о пробеге и залоговой истории. Для серьезной покупки такой отчет является обязательной инвестицией.</p>
+<blockquote>
+<p>⚠️ Внимание: Остерегайтесь сайтов-клонов, которые требуют оплату за «бесплатную» проверку или запрашивают полные паспортные данные. Пользуйтесь только проверенными ресурсами с хорошей репутацией.</p>
+</blockquote>
+<p>При использовании мобильных приложений для проверки убедитесь, что у вас стабильное интернет-соединение. Ошибка при загрузке данных может привести к неполной информации. Также рекомендуется перепроверять данные из разных источников, если автомобиль вызывает сомнения.</p>
+
+<h2 id="частые-проблемы-и-ошибки-при-расшифровке">Частые проблемы и ошибки при расшифровке</h2>
+<p>При самостоятельной расшифровке VIN-кода пользователи часто сталкиваются с рядом типичных ошибок. Одна из самых распространенных — путаница между цифрой <code>0</code> и буквой <code>O</code>, а также цифрой <code>1</code> и буквой <code>I</code>. В VIN-кодах используются только цифры и латинские буквы, при этом буквы I, O, Q исключены из использования во избежание путаницы с 1 и 0.</p>
+<p>Другая проблема — неактуальность баз данных. Некоторые бесплатные декодеры могут не содержать информации о новых моделях или редких модификациях, выпущенных ограни</div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/l/lu/luchshie-mashiny-po-nadezhnosti.html" class="pb-related-card">
+                <span class="pb-related-title">Топ-10 самых надежных автомобилей 2026: рейтинг по данным владельцев</span>
+                <span class="pb-related-desc">Какие машины самые надежные? Анализ рейтингов J.D. Power, TÜV, ADAC и отзывов владельцев. Сравнение </span>
+            </a><a href="/articles/t/to/top-mashin-do-500k.html" class="pb-related-card">
+                <span class="pb-related-title">Топ машин до 500к рублей: что купить в 2026 году</span>
+                <span class="pb-related-desc">Честный обзор рынка авто до 500 000 рублей в 2026 году. Лучшие модели, скрытые дефекты и реальные со</span>
+            </a><a href="/articles/k/ka/kak-zakazyvat-zapchasti-cherez-internet.html" class="pb-related-card">
+                <span class="pb-related-title">Как заказать автозапчасти через интернет: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как правильно подобрать и заказать запчасти для авто онлайн: проверенные способы, советы по</span>
+            </a><a href="/articles/k/ki/kitajskij-novyj-avtomobil-krossover.html" class="pb-related-card">
+                <span class="pb-related-title">Китайский кроссовер 2026: Топ моделей, цены и выбор</span>
+                <span class="pb-related-desc">Обзор лучших китайских кроссоверов 2026 года. Сравнение Geely, Chery, Haval. Реальные цены, надежнос</span>
+            </a><a href="/articles/a/av/avtokredit-po-gosprogramme-2025.html" class="pb-related-card">
+                <span class="pb-related-title">Автокредит по госпрограмме 2026: условия, ставки, как оформить</span>
+                <span class="pb-related-desc">Актуальные условия автокредитования по госпрограмме 2026: процентные ставки, требования к заемщикам,</span>
+            </a><a href="/articles/a/av/avito-kursk-avto-s-probegom-chastnye-obyavleniya.html" class="pb-related-card">
+                <span class="pb-related-title">Авто с пробегом в Курске: как купить на Авито у частников без рисков</span>
+                <span class="pb-related-desc">Пошаговое руководство по покупке подержанных авто в Курске через частные объявления на Авито: провер</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

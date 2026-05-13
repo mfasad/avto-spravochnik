@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Каталог всех автомобилей мира: базы данных и поиск авто — Авто Справочник</title>
+    <meta name="description" content="Глобальный каталог всех автомобилей мира: как пользоваться базами данных, искать редкие модели и проверять историю по VIN. Полный гид по авто-каталогам.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/katalog-vsekh-avtomobilej-mira.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Каталог всех автомобилей мира: базы данных и поиск авто">
+    <meta property="og:description" content="Глобальный каталог всех автомобилей мира: как пользоваться базами данных, искать редкие модели и проверять историю по VIN. Полный гид по авто-каталогам.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Каталог всех автомобилей мира: базы данных и поиск авто</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#глобальные-базы-данных-и-их-структура">Глобальные базы данных и их структура</a></li><li><a href="#типология-автомобильных-каталогов">Типология автомобильных каталогов</a></li><li><a href="#поиск-по-vin-и-идентификационным-номерам">Поиск по VIN и идентификационным номерам</a></li><li><a href="#технические-характеристики-и-параметры">Технические характеристики и параметры</a></li><li><a href="#редкие-модели-и-коллекционные-экземпляры">Редкие модели и коллекционные экземпляры</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/e/es/est-li-garderob-v-ostrove-mechty.html">Гардероб в Острове Мечты: где оставить вещи и правила</a></li><li><a href="/articles/p/pa/parkovka-v-tts-iyun.html">Парковка в ТЦ Июнь: правила, тарифы и советы для водителей</a></li><li><a href="/articles/p/pa/parkovka-v-aeroportu-sheremetevo-terminal-v.html">Парковка в Шереметьево терминал B: тарифы, карта и советы</a></li><li><a href="/articles/k/ka/kak-sdelat-iz-bumagi-avtomat-kotoryj-strelyaet.html">Автомат из бумаги, который стреляет: пошаговая инструкция</a></li><li><a href="/articles/m/mu/muzhik-pisaet-v-butylku.html">Мужик писает в бутылку: физиология и этикет в дороге</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Каталог всех автомобилей мира: навигация по глобальным базам</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#глобальные-базы-данных-и-их-структура">Глобальные базы данных и их структура</a></li><li><a href="#типология-автомобильных-каталогов">Типология автомобильных каталогов</a></li><li><a href="#поиск-по-vin-и-идентификационным-номерам">Поиск по VIN и идентификационным номерам</a></li><li><a href="#технические-характеристики-и-параметры">Технические характеристики и параметры</a></li><li><a href="#редкие-модели-и-коллекционные-экземпляры">Редкие модели и коллекционные экземпляры</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Поиск идеального транспортного средства или изучение истории автомобильной индустрии невозможно представить без доступа к структурированной информации. <strong>Каталог всех автомобилей мира</strong> — это не просто список, а сложнейшая цифровая экосистема, объединяющая миллионы моделей от первых паровых прототипов до современных электрокаров. В эпоху глобализации знание того, где искать данные о конкретном <em>Chassis</em> или редкой модификации, становится ключевым навыком для коллекционеров, механиков и автолюбителей.</p>
+
+<p>Современные базы данных позволяют отследить эволюцию дизайна, технические изменения в поколениях и даже узнать, сколько экземпляров определенной модели было выпущено за всю историю. Однако объем информации колоссален, и неподготовленному пользователю легко запутаться в миллионах записей. Именно поэтому важно понимать принципы работы таких систем и знать, какие ресурсы действительно содержат <mark>полную спецификацию</mark> для интересующего вас региона.</p>
+
+<p>В этой статье мы разберем, как устроены глобальные автомобильные архивы, какие существуют типы каталогов и как эффективно использовать фильтры для поиска. Вы узнаете, чем отличаются официальные базы производителей от сторонних агрегаторов, и получите практические советы по навигации в мире автомобильной документации.</p>
+
+<h2 id="глобальные-базы-данных-и-их-структура">Глобальные базы данных и их структура</h2>
+
+<p>Фундаментом любого крупного автомобильного портала является база данных, которая классифицирует технику по строгим стандартам. Обычно используется иерархическая система, начинающаяся с марки, затем переходит к модели, кузову, двигателю и конкретному году выпуска. Для профессионалов критически важно различать <strong>VIN-код</strong> (идентификационный номер) и заводской индекс кузова, так как они несут разную смысловую нагрузку.</p>
+
+<p>Большинство международных каталогов опираются на стандарты ISO, но могут иметь региональные особенности. Например, североамериканские базы часто детализируют комплектацию (trim level) более глубоко, чем европейские аналоги. В то же время, японские архивы могут содержать уникальные данные о аукционных листах и внутренней классификации <em>JDM</em> моделей.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При работе с международными базами данных обращайте внимание на систему мер. Американские каталоги используют дюймы и фунты, в то время как европейские и азиатские — метрическую систему, что может привести к ошибкам при подборе запчастей.</p>
+</blockquote>
+
+<p>Структурирование данных позволяет создавать сложные перекрестные запросы. Пользователь может найти все автомобили с двигателем определенного объема, выпущенные в конкретном году, независимо от бренда. Это особенно полезно для исследователей и тех, кто ищет редкие <strong>агрегаты</strong> для реставрации.</p>
+
+<div class="pb-poll" id="poll-b9442b8f"><div class="pb-poll-question">📊 Какой тип каталога вы используете чаще всего?</div><div class="pb-poll-option" data-poll="b9442b8f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Официальный сайт производителя</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b9442b8f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Сторонние агрегаторы (AutoData, TecDoc)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b9442b8f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Форумы и клубы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b9442b8f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Дилерские базы данных</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="типология-автомобильных-каталогов">Типология автомобильных каталогов</h2>
+
+<p>Все существующие базы можно разделить на несколько ключевых типов в зависимости от их назначения и источника данных. Понимание этой классификации помогает сэкономить время при поиске. Ниже приведены основные категории:</p>
+
+<ul>
+<li>📜 <strong>Официальные каталоги производителей (OEM)</strong> —точнейшие данные по VIN-коду, включая историю заводских замен и цветовые коды краски.</li>
+<li>🛠️ <strong>Технические базы (TecDoc, Autodata)</strong> — ориентированы на механиков, содержат схемы узлов, моменты затяжки и кросс-номера запчастей.</li>
+<li>📊 <strong>Статистические и исторические архивы</strong> — собирают данные о продажах, количестве выпущенных экземпляров и модификациях, полезны для оценки редкости.</li>
+<li>🌐 <strong>Агрегаторы объявлений</strong> — хотя их цель продажа, они формируют огромный массив данных о реальных конфигурациях автомобилей на рынке.</li>
+</ul>
+
+<p>Каждый тип имеет свои преимущества. Официальные каталоги незаменимы при заказе оригинальных деталей, так как содержат актуальную информацию о <strong>суперсесиях</strong> (заменах одних деталей другими). Технические базы удобны для проведения ремонта, предоставляя электрические схемы и инструкции по разборке.</p>
+
+<p>Исторические архивы часто недооценивают, но именно они помогают определить подлинность классического автомобиля. Если вы владеете редким <em>Vintage car</em>, только глубокий анализ исторических каталогов подтвердит его оригинальность и соответствие заводским спецификациям того периода.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте VIN-декодеры только как первичный инструмент. Для точного подбора запчастей всегда сверяйтесь с официальными схемами (EPC) конкретной марки, так как декодеры могут содержать ошибки в комплектациях.</p></aside>
+
+<h2 id="поиск-по-vin-и-идентификационным-номерам">Поиск по VIN и идентификационным номерам</h2>
+
+<p>Самым точным способом идентификации автомобиля в любом каталоге является поиск по <strong>VIN-коду</strong> (Vehicle Identification Number). Этот 17-значный номер содержит закодированную информацию о заводе-изготовителе, модели, году выпуска и серийном номере. Расшифровка начинается с первых трех символов, известных как <em>WMI</em> (World Manufacturer Identifier).</p>
+
+<p>Процесс поиска обычно выглядит следующим образом: пользователь вводит VIN в поле поиска системы, и алгоритм обращается к базе данных производителя. На выходе формируется полная спецификация автомобиля, известная как"build sheet". В этом документе указаны все опции, установленные на заводе, включая тип обивки салона, наличие люка, модель аудиосистемы и цветовой код.</p>
+
+<pre><code>Пример структуры VIN: 1HGCM82633A004352
+<p>1HG - WMI (Производитель: Honda, США)</p>
+<p>CM8 - Описание автомобиля (Модель, тип кузова, двигатель)</p>
+<p>6 - Контрольная цифра</p>
+<p>3 - Год выпуска (2003)</p>
+<p>A - Завод сборки</p>
+<p>004352 - Серийный номер</code></pre></p>
+
+<p>Важно понимать, что не все каталоги имеют доступ к полным данным по VIN. Некоторые бесплатные сервисы показывают только базовую информацию (марка, модель, год), скрывая детали комплектации за платной подпиской. Для глубокого анализа требуется доступ к профессиональным системам или дилерским порталам.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Будьте осторожны с онлайн-сервисами, требующими ввода VIN-кода. Убедитесь, что сайт использует защищенное соединение (HTTPS), чтобы ваши данные и история поисков не были перехвачены третьими лицами.</p>
+</blockquote>
+
+<h2 id="технические-характеристики-и-параметры">Технические характеристики и параметры</h2>
+
+<p>Одной из главных функций автомобильных каталогов является предоставление детальных технических характеристик. Эти данные необходимы для сравнения моделей, подбора аналогов и оценки эксплуатационных качеств. В современных базах информация структурирована по группам: двигатель, трансмиссия, ходовая часть, габариты.</p>
+
+<p>При изучении характеристик двигателя обращайте внимание не только на мощность и крутящий момент, но и на экологический класс (<em>Euro-4, Euro-5</em>), тип впрыска и систему наддува. Эти параметры напрямую влияют на возможность эксплуатации автомобиля в определенных регионах и стоимость его обслуживания.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Описание</th>
+<th>Где искать</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Код двигателя</td>
+<td>Уникальный идентификатор серии мотора (напр. EA888)</td>
+<td>Технический паспорт, блок цилиндров</td>
+</tr>
+<tr>
+<td>Передаточное число</td>
+<td>Соотношение передач в КПП и главной паре</td>
+<td>Каталоги трансмиссий, бирка в салоне</td>
+</tr>
+<tr>
+<td>Разболтовка (PCD)</td>
+<td>Параметры крепления колесных дисков</td>
+<td>Каталоги дисков, мануалы</td>
+</tr>
+<tr>
+<td>Объем бака</td>
+<td>Номинальная емкость топливной системы</td>
+<td>Технические спецификации</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Габаритные данные также имеют значение, особенно при подборе автомобиля для конкретных условий эксплуатации. Ширина с зеркалами и без, радиус разворота, клиренс — все эти цифры можно найти в подробных каталогах. Для коммерческого транспорта критически важны параметры грузоподъемности и объема кузова.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка технических данных</h4><label class="check-item"><input type="checkbox"><span>Сверить код двигателя с базой</span></label><label class="check-item"><input type="checkbox"><span>Проверить совместимость КПП</span></label><label class="check-item"><input type="checkbox"><span>Уточнить тип подвески</span></label><label class="check-item"><input type="checkbox"><span>Проверить размеры шин</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="редкие-модели-и-коллекционные-экземпляры">Редкие модели и коллекционные экземпляры</h2>
+
+<p>Для коллекционеров и реставраторов существуют специализированные каталоги, посвященные редким и историческим автомобилям. В этих базах информация часто собирается энтузиастами и клубами владельцев, так как официальные архивы заводов могут быть утеряны или засекречены. Здесь важна каждая деталь: от формы пуговиц на сиденьях до оттенка хромированных элементов.</p>
+
+<p>Поиск информации о лимитированных сериях требует использования специфических ключевых слов и кодов. Например, знание кода <strong>Special Edition</strong> или кода цвета, который использовался только один год, позволяет найти нужные данные в общих массивах информации. Часто такие автомобили имеют индивидуальные номерные таблички.</p>
+
+<p>Владельцам раритетных <em>Classic cars</em> рекомендуется регистрироваться в международных клубах, которые ведут собственные реестры. Эти реестры часто содержат информацию о текущем местонахождении автомобиля, истории владельцев и проведенных реставрациях, что значительно повышает ликвидность актива.</p>
+
+<details class="pb-accordion"><summary>Как подтвердить редкость автомобиля?</summary><div class="pb-accordion-body"><p>Для подтверждения редкости необходимо найти заводской номер выпуска в серии. Часто эта информация хранится в архивах музеев марки или в частных коллекциях документации. Официальный сертификат соответствия (Certificate of Authenticity) выдают только авторизованные исторические отделы заводов-производителей.</p></div></details>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Где найти каталог цветов для старого автомобиля?</summary>
+<p>Лучшим источником являются официальные архивы производителей, доступные через дилерские центры. Также существуют специализированные форумы и базы данных, такие как PaintRef или аналогичные ресурсы, где пользователи собирают коды красок (Color Codes) по годам и моделям.</p>
+</details>
+
+<details>
+<summary>Можно ли узнать полную комплектацию по VIN бесплатно?</summary>
+<p>Полную детализацию (list of options) бесплатно получить сложно. Большинство бесплатных декодеров показывают только базовые данные. Для получения полного листа сборки (build sheet) обычно требуется платная подписка на профессиональные сервисы или обращение к дилеру марки.</p>
+</details>
+
+<details>
+<summary>Чем отличается каталог TecDoc от каталога производителя?</summary>
+<p>TecDoc — это кросс-брендовая база данных запчастей, которая группирует аналоги от разных производителей. Каталог производителя (OEM) содержит информацию только об оригинальных деталях конкретной марки и их точных заменах, но не показывает дешевые аналоги сторонних брендов.</p>
+</details>
+
+<details>
+<summary>Как найти информацию об автомобиле, если завод-производитель банкрот?</summary>
+<p>В таких случаях следует обращаться в клубы любителей данной марки, специализированные библиотеки технической литературы и аукционные архивы. Часто документация сохраняется в музеях автомобильной промышленности или переходит к компании, купившей бренд.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Глобальный каталог автомобилей — это мощный инструмент, но его эффективность зависит от правильности введенных данных. Всегда перепроверяйте VIN-код и используйте несколько источников для подтверждения технической информации.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/e/es/est-li-garderob-v-ostrove-mechty.html" class="pb-related-card">
+                <span class="pb-related-title">Гардероб в Острове Мечты: где оставить вещи и правила</span>
+                <span class="pb-related-desc">Есть ли гардероб в Острове Мечты? Полный гид по комнатам хранения, ценам, правилам проноса еды и луч</span>
+            </a><a href="/articles/p/pa/parkovka-v-tts-iyun.html" class="pb-related-card">
+                <span class="pb-related-title">Парковка в ТЦ Июнь: правила, тарифы и советы для водителей</span>
+                <span class="pb-related-desc">Узнайте актуальные тарифы, правила парковки и полезные советы для посетителей ТЦ Июнь. Как сэкономит</span>
+            </a><a href="/articles/p/pa/parkovka-v-aeroportu-sheremetevo-terminal-v.html" class="pb-related-card">
+                <span class="pb-related-title">Парковка в Шереметьево терминал B: тарифы, карта и советы</span>
+                <span class="pb-related-desc">Полный гид по парковке в терминале B Шереметьево. Тарифы, карта зон, бесплатное время, способы оплат</span>
+            </a><a href="/articles/k/ka/kak-sdelat-iz-bumagi-avtomat-kotoryj-strelyaet.html" class="pb-related-card">
+                <span class="pb-related-title">Автомат из бумаги, который стреляет: пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как сделать автомат из бумаги своими руками. Подробная схема сборки, выбор материалов и нас</span>
+            </a><a href="/articles/m/mu/muzhik-pisaet-v-butylku.html" class="pb-related-card">
+                <span class="pb-related-title">Мужик писает в бутылку: физиология и этикет в дороге</span>
+                <span class="pb-related-desc">Почему мужчины писают в бутылку? Анализ причин, рисков для здоровья и правил этикета при остановке в</span>
+            </a><a href="/articles/v/vi/vino-sukhoe-beloe-pyaterochka.html" class="pb-related-card">
+                <span class="pb-related-title">Вино сухое белое Пятерочка: топ лучших сортов 2026 года</span>
+                <span class="pb-related-desc">Обзор лучших белых сухих вин в Пятерочке. Рейтинг, цены, советы по выбору и сочетанию с блюдами. Акт</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

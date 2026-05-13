@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как убрать рамку в AutoCAD: 5 проверенных способов — Авто Справочник</title>
+    <meta name="description" content="Пошаговая инструкция по удалению границ и рамок в чертежах AutoCAD. Разбираемся с системными переменными, стилями печати и настройками видового экрана.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-ubrat-ramku-v-avtokade.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как убрать рамку в AutoCAD: 5 проверенных способов">
+    <meta property="og:description" content="Пошаговая инструкция по удалению границ и рамок в чертежах AutoCAD. Разбираемся с системными переменными, стилями печати и настройками видового экрана.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как убрать рамку в AutoCAD: 5 проверенных способов</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-проверка-типа-рамки-системная-или-пользовательская">1. Проверка типа рамки: системная или пользовательская?</a></li><li><a href="#2-удаление-границ-формата-листа-limits-и-extmax">2. Удаление границ формата листа (LIMITS и EXTMAX)</a></li><li><a href="#3-настройка-видового-экрана-убираем-рамку-в-пространстве-листа">3. Настройка видового экрана: убираем рамку в пространстве листа</a></li><li><a href="#4-удаление-пользовательской-рамки-если-она-является-объектом">4. Удаление пользовательской рамки (если она является объектом)</a></li><li><a href="#5-настройка-печати-убираем-рамку-формата-листа">5. Настройка печати: убираем рамку формата листа</a></li><li><a href="#6-проверка-системных-переменных-и-сброс-настроек">6. Проверка системных переменных и сброс настроек</a></li><li><a href="#7-альтернативные-способы-от-экспорта-до-скриптов">7. Альтернативные способы: от экспорта до скриптов</a></li><li><a href="#faq-частые-вопросы-по-удалению-рамок-в-autocad">FAQ: Частые вопросы по удалению рамок в AutoCAD</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/mo/moyushchij-pylesos-avtomobilnyj-dlya-khimchistki.html">Моющий пылесос для автохимчистки: как выбрать и использовать</a></li><li><a href="/articles/z/zh/zhestkaya-i-gibkaya-stsepka-otlichie.html">Жесткая и гибкая сцепка: отличие, плюсы и минусы</a></li><li><a href="/articles/k/ka/kak-polzovatsya-tornadorom-dlya-khimchistki.html">Как пользоваться торнадором для химчистки салона авто</a></li><li><a href="/articles/k/ko/kompressor-avtomobilnyj-220v-ot-seti.html">Автомобильный компрессор 220В: выбор, рейтинг и советы по работе</a></li><li><a href="/articles/m/ma/mashina-s-lestnitsej-kak-nazyvaetsya.html">Как называется машина с лестницей: виды спецтехники</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как убрать рамку в AutoCAD: от формата листа до границ видового экрана</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-проверка-типа-рамки-системная-или-пользовательская">1. Проверка типа рамки: системная или пользовательская?</a></li><li><a href="#2-удаление-границ-формата-листа-limits-и-extmax">2. Удаление границ формата листа (LIMITS и EXTMAX)</a></li><li><a href="#3-настройка-видового-экрана-убираем-рамку-в-пространстве-листа">3. Настройка видового экрана: убираем рамку в пространстве листа</a></li><li><a href="#4-удаление-пользовательской-рамки-если-она-является-объектом">4. Удаление пользовательской рамки (если она является объектом)</a></li><li><a href="#5-настройка-печати-убираем-рамку-формата-листа">5. Настройка печати: убираем рамку формата листа</a></li><li><a href="#6-проверка-системных-переменных-и-сброс-настроек">6. Проверка системных переменных и сброс настроек</a></li><li><a href="#7-альтернативные-способы-от-экспорта-до-скриптов">7. Альтернативные способы: от экспорта до скриптов</a></li><li><a href="#faq-частые-вопросы-по-удалению-рамок-в-autocad">FAQ: Частые вопросы по удалению рамок в AutoCAD</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Работаете в <em>AutoCAD</em> и внезапно обнаружили, что чертеж обрезан ненужной рамкой? Или при печати документа появляются лишние границы, которые портят компоновку? Проблема знакома многим инженерам, архитекторам и дизайнерам. <strong>Рамки в AutoCAD</strong> могут возникать по разным причинам: от включённых границ формата листа до ошибок в настройках видового экрана. В этой статье разберём все возможные источники рамок и способы их удаления — от базовых до продвинутых.</p>
+
+<p>Чаще всего пользователи сталкиваются с двумя типами рамок: <strong>видимые границы области печати</strong> (появляются при предварительном просмотре) и <strong>непечатаемые рамки видового экрана</strong> (отображаются в пространстве модели или листа). В некоторых случаях рамка может быть частью самого чертежа — например, если она была создана как объект <code>POLYLINE</code> или <code>RECTANGLE</code>. Прежде чем приступать к удалению, важно определить, с каким именно типом рамки вы имеете дело. Это сэкономит время и избавит от лишних манипуляций.</p>
+
+<p>В этой статье мы рассмотрим:
+<ul>
+  <li>🔍 Как отличить системную рамку от пользовательской</li>
+  <li>⚙️ Настройки переменных <code>LIMCHECK</code> и <code>EXTMAX</code></li>
+  <li>🖼️ Удаление рамок в пространстве модели и листа</li>
+  <li>📄 Работа с границами формата при печати</li>
+  <li>🔄 Сброс настроек видового экрана до заводских</li>
+</ul>
+
+<div class="pb-poll" id="poll-aa92471f"><div class="pb-poll-question">📊 С какой рамкой в AutoCAD вы чаще сталкиваетесь?</div><div class="pb-poll-option" data-poll="aa92471f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Границы формата листа при печати</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="aa92471f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Рамка видового экрана в пространстве модели</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="aa92471f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Пользовательская рамка (созданная вручную)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="aa92471f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, что это за рамка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="aa92471f" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="1-проверка-типа-рамки-системная-или-пользовательская">1. Проверка типа рамки: системная или пользовательская?</h2>
+
+<p>Прежде чем удалять рамку, нужно понять её природу. <strong>Системные рамки</strong> генерируются <em>AutoCAD</em> автоматически и связаны с настройками листа, границ печати или видового экрана. <strong>Пользовательские рамки</strong> — это обычные объекты чертежа (отрезки, полилинии, блоки), которые кто-то добавил вручную.
+
+<p>Чтобы определить тип рамки:
+<ol>
+  <li>Переключитесь в пространство, где видна рамка (модель или лист).</li>
+  <li>Выделите рамку курсором. Если она выделяется как объект — это пользовательская рамка.</li>
+  <li>Если рамка не выделяется, проверьте настройки границ: введите команду <code>LIMITS</code> и посмотрите текущие значения <code>ON/OFF</code>.</li>
+</ol>
+
+<p>Особое внимание уделите <strong>видовому экрану</strong> (<code>VIEWPORT</code>). Иногда его границы отображаются как рамка, особенно если включён режим <code>DISPLAY VIEWPORT OBJECTS</code>. Чтобы проверить это, введите команду:
+<pre><code>VPORTS → выберите видовой экран → свойства → посмотрите параметр "Display Locked"</code></pre>
+
+<p><strong>Ключевой признак системной рамки</strong>: она исчезает при изменении масштаба или переключении между пространствами модели и листа. Пользовательская рамка останется на месте независимо от масштаба.
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если рамка исчезает при команде <code>ZOOM EXTENTS</code>, но возвращается после регенерации (<code>REGENALL</code>), скорее всего, это граница формата листа, заданная в настройках печати.</p></aside>
+
+<h2 id="2-удаление-границ-формата-листа-limits-и-extmax">2. Удаление границ формата листа (LIMITS и EXTMAX)</h2>
+
+<p>Одна из самых распространённых причин появления рамки — <strong>активные границы чертежа</strong>, заданные командой <code>LIMITS</code>. Эти границы не печатаются, но могут отображаться как пунктирная линия в пространстве модели. Чтобы их убрать:
+
+<p>1. Введите команду:
+<pre><code>LIMITS</code></pre>
+<p>2. В ответ на запрос <code>Specify lower left corner</code> нажмите <code>Enter</code> (оставив значение по умолчанию).</p>
+<p>3. В ответ на <code>Specify upper right corner</code> введите координаты, превышающие размер вашего чертежа, например <code>100000,100000</code>.</p>
+<p>4. Отключите отображение границ командой:</p>
+<pre><code>LIMCHECK → 0</code></pre>
+
+<p>Если рамка осталась, проверьте переменную <code>EXTMAX</code>, которая хранит максимальные координаты объектов в чертеже. Иногда она сбивается при импорте файлов из других САПР. Чтобы сбросить её:
+<pre><code>EXTMAX → введите новые координаты (например, 1e20,1e20)</code></pre>
+
+<p><mark>Важно: после изменения <code>EXTMAX</code> обязательно выполните команду <code>ZOOM ALL</code>, чтобы обновить границы отображения.</mark>
+
+<details class="pb-accordion"><summary>Что делать, если команда LIMITS заблокирована?</summary><div class="pb-accordion-body"><p>Если при вводе <code>LIMITS</code> появляется сообщение "Command not allowed in this context", значит, вы находитесь в пространстве листа. Переключитесь в пространство модели (<code>MODEL</code> или двойной клик за пределами видового экрана) и повторите команду.</p></div></details>
+
+<h2 id="3-настройка-видового-экрана-убираем-рамку-в-пространстве-листа">3. Настройка видового экрана: убираем рамку в пространстве листа</h2>
+
+<p>В пространстве листа рамка часто появляется из-за <strong>неправильных настроек видового экрана</strong> (<code>VIEWPORT</code>). Она может отображаться как сплошная или пунктирная линия вокруг области просмотра. Чтобы её убрать:
+
+<p>1. Перейдите на вкладку листа (<code>LAYOUT</code>).
+<p>2. Выделите видовой экран (кликните по его границе).</p>
+<p>3. В свойствах (<code>PROPERTIES</code> или <code>CTRL+1</code>) найдите параметр <code>Display Locked</code> и установите значение <code>No</code>.</p>
+<p>4. Если рамка всё ещё видна, проверьте стиль отображения:</p>
+<p>- Кликните правой кнопкой по видовому экрану → <code>Properties</code>.</p>
+<p>- В разделе <code>Misc</code> найдите <code>Display Viewport Objects</code> и установите <code>No</code>.</p>
+
+<p>Для полного сброса настроек видового экрана:
+<pre><code>VPORTS → Reset Viewports</code></pre>
+
+<p><strong>Внимание!</strong> Если вы работаете с несколькими видовыми экранами, изменения в одном могут повлиять на другие. Чтобы избежать этого, фиксируйте настройки каждого экрана отдельно командой <code>VPORTS → Lock/Unlock → Lock Display</code>.
+
+
+<p>Выключить Display Locked|Отключить Display Viewport Objects|Проверить масштаб (1:1 для точной печати)|Убедиться, что рамка не является объектом чертежа--></p>
+
+<h2 id="4-удаление-пользовательской-рамки-если-она-является-объектом">4. Удаление пользовательской рамки (если она является объектом)</h2>
+
+<p>Если рамка выделяется как обычный объект, её можно удалить стандартными способами. Однако здесь есть нюансы:
+
+<p>1. <strong>Проверьте слои</strong>: рамка может находиться на заблокированном или отключённом слое. Введите команду:
+   <pre><code>LAYER</code></pre>
+<p>и найдите слои с названиями вроде <code>Border</code>, <code>Frame</code> или <code>A4</code>. Разблокируйте их и сделайте видимыми.</p>
+
+<p>2. <strong>Используйте фильтр выборки</strong>:
+<p>- Введите <code>QSELECT</code>.</p>
+<p>- Выберите <code>Object type: Line, Polyline, LWPolyline</code>.</p>
+<p>- Укажите цвет или тип линии, соответствующий рамке.</p>
+<p>- Нажмите <code>OK</code> и удалите выделенные объекты (<code>ERASE</code>).</p>
+
+<p>3. <strong>Проверьте блоки</strong>: рамка может быть частью блока. Введите:
+   <pre><code>BEDIT → выберите блок → удалите ненужные элементы</code></pre>
+
+<p>Если рамка является <strong>динамическим блоком</strong> с параметрами, её нельзя удалить стандартным способом. В этом случае:
+<p>- Разорвите блок на составляющие: <code>EXPLODE</code>.</p>
+<p>- Удалите ненужные элементы.</p>
+<p>- При необходимости создайте новый блок.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед удалением рамки-объекта убедитесь, что она не связана с внешними ссылками (<code>XREF</code>). Удаление таких объектов может повредить чертеж.</p></aside>
+
+<h2 id="5-настройка-печати-убираем-рамку-формата-листа">5. Настройка печати: убираем рамку формата листа</h2>
+
+<p>При предварительном просмотре печати (<code>PLOT PREVIEW</code>) часто появляется рамка, соответствующая формату бумаги (A4, A3 и т.д.). Эта рамка не печатается, но может мешать оценке компоновки. Чтобы её убрать:
+
+<p>1. Перейдите в настройки печати:
+   <pre><code>PLOT → Page Setup Manager</code></pre>
+<p>2. Выберите текущий стиль печати и нажмите <code>Modify</code>.</p>
+<p>3. В разделе <code>Plot and Scale</code> найдите параметр <code>Plot Style Table</code> и выберите <code>None</code> или <code>monochrome.ctb</code> (если рамка связана со стилем).</p>
+<p>4. В разделе <code>Plot Options</code> снимите галочку с <code>Plot in layout tabs</code> (если она активна).</p>
+
+<p>Если рамка остаётся, проверьте настройки принтера:
+<p>- В диалоговом окне <code>Plot</code> выберите <code>Properties</code> рядом с именем принтера.</p>
+<p>- Найдите раздел <code>Device and Document Settings → Custom Properties</code>.</p>
+<p>- Отключите параметры вроде <code>Show Plot Styles</code> или <code>Show Paper Boundaries</code>.</p>
+
+<p>Для полного сброса настроек печати создайте новый стиль:
+<pre><code>PLOTSTYLE → Add-a-Plot Style Table Wizard → Start from scratch</code></pre>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Параметр</th>
+      <th>Значение для удаления рамки</th>
+      <th>Где находится</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>Plot Style Table</code></td>
+      <td><code>None</code> или <code>monochrome.ctb</code></td>
+      <td><code>Page Setup → Plot Style Table</code></td>
+    </tr>
+    <tr>
+      <td><code>Plot in layout tabs</code></td>
+      <td>Выключено</td>
+      <td><code>Plot Options</code></td>
+    </tr>
+    <tr>
+      <td><code>Show Paper Boundaries</code></td>
+      <td>Выключено</td>
+      <td><code>Printer Properties → Custom Properties</code></td>
+    </tr>
+    <tr>
+      <td><code>Display Plot Styles</code></td>
+      <td>Выключено</td>
+      <td><code>Printer Properties → Graphics</code></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="6-проверка-системных-переменных-и-сброс-настроек">6. Проверка системных переменных и сброс настроек</h2>
+
+<p>Если ни один из способов не помог, проблема может крыться в <strong>системных переменных</strong> <em>AutoCAD</em>. Ниже — ключевые переменные, влияющие на отображение рамок:
+
+<p><ul>
+  <li>📏 <code>LIMCHECK</code> — контролирует отображение границ <code>LIMITS</code>. Установите <code>0</code> для отключения.</li>
+  <li>🖥️ <code>EXTMAX</code> и <code>EXTMIN</code> — определяют границы чертежа. Сбросьте их до больших значений.</li>
+  <li>🔄 <code>VIEWRES</code> — влияет на сглаживание объектов. Попробуйте установить <code>20000</code>.</li>
+  <li>📄 <code>PAPERUPDATE</code> — обновляет границы листа. Установите <code>1</code> и выполните <code>REGENALL</code>.</li>
+</ul>
+
+<p>Для сброса всех настроек до заводских:
+<pre><code>OPTIONS → Profile → Reset</code></pre>
+<strong>Внимание!</strong> Это удалит все пользовательские настройки, включая панели инструментов и горячие клавиши.
+
+<p>Если проблема сохраняется, проверьте файл шаблона (<code>DWT</code>), на основе которого создан чертеж. Возможно, рамка прописана в нём. Создайте новый чертеж с чистого шаблона и импортируйте туда объекты командой <code>INSERT</code>.
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Чтобы быстро проверить, связана ли рамка с шаблоном, создайте новый чертеж (<code>NEW → acad.dwt</code>) и импортируйте в него текущий чертеж как блок. Если рамка исчезла — проблема в шаблоне.</p></aside>
+
+<h2 id="7-альтернативные-способы-от-экспорта-до-скриптов">7. Альтернативные способы: от экспорта до скриптов</h2>
+
+<p>Если стандартные методы не сработали, попробуйте альтернативные подходы:
+
+<p>1. <strong>Экспорт в другой формат</strong>:
+<p>- Сохраните чертеж в <code>DXF</code> (<code>SAVEAS → DXF</code>).</p>
+<p>- Откройте файл в другом редакторе (например, <em>DraftSight</em> или <em>NanoCAD</em>).</p>
+<p>- Удалите рамку и импортируйте обратно в <em>AutoCAD</em>.</p>
+
+<p>2. <strong>Использование скриптов</strong>:
+<p>Создайте скрипт (<code>SCRIPT</code>) для автоматического удаления рамок-объектов:</p>
+   <pre><code>ERASE
+<p>(ssget "_X" '((0 . "LWPOLYLINE,LINE") (62 . 7)))</p>
+   </code></pre>
+<p>Этот скрипт удалит все красные (<code>62 . 7</code>) линии и полилинии. Замените цвет на нужный.</p>
+
+<p>3. <strong>Очистка чертежа</strong>:
+<p>Введите команду:</p>
+   <pre><code>PURGE → Check All → Purge All</code></pre>
+<p>Затем:</p>
+   <pre><code>AUDIT → Yes → Fix any errors checked</code></pre>
+<p>Это удалит неиспользуемые объекты, которые могут создавать "призрачные" рамки.</p>
+
+<p>4. <strong>Проверка внешних ссылок</strong>:
+<p>Если чертеж содержит <code>XREF</code>, рамка может приходить из связанного файла. Введите:</p>
+   <pre><code>XREF → выберите ссылку → Detach</code></pre>
+<p>и проверьте, исчезла ли рамка.</p>
+
+<h2 id="faq-частые-вопросы-по-удалению-рамок-в-autocad">FAQ: Частые вопросы по удалению рамок в AutoCAD</h2>
+
+<details>
+  <summary>Почему после удаления рамки она появляется снова при открытии чертежа?</summary>
+  <p>Скорее всего, рамка прописана в <strong>шаблоне чертежа</strong> (<code>DWT</code>) или связана с <code>XREF</code>. Проверьте:
+  <ul>
+    <li>Файл шаблона, на основе которого создан чертеж.</li>
+    <li>Настройки автоматической загрузки внешних ссылок (<code>XLOADCTL</code>).</li>
+    <li>Скрипты или макросы, выполняемые при открытии файла.</li>
+  </ul>
+  <p>Если проблема в шаблоне, создайте новый чертеж с чистого <code>acad.dwt</code> и перенесите объекты вручную.
+</details>
+
+<details>
+  <summary>Как убрать серую пунктирную рамку вокруг чертежа?</summary>
+  <p>Это <strong>граница зоны печати</strong> (<code>Plot Area</code>). Она отображается только в пространстве листа и не печатается. Чтобы её скрыть:
+  <ol>
+    <li>Перейдите на вкладку листа (<code>LAYOUT</code>).</li>
+    <li>Введите команду <code>PSLTSCALE</code> и установите значение <code>0</code>.</li>
+    <li>Отключите отображение границ в настройках принтера (<code>Plot → Properties → Hide Paper Boundaries</code>).</li>
+  </ol>
+</details>
+
+<details>
+  <summary>Можно ли удалить рамку во всех чертежах сразу?</summary>
+  <p>Да, с помощью <strong>пакетной обработки</strong> или <em>AutoLISP</em>-скрипта. Пример скрипта для удаления рамок-объектов во всех файлах папки:
+  <pre><code>(defun c:delborders ()
+<p>(vl-load-com)</p>
+<p>(setq folder (getfolder "Выберите папку с чертежами: "))</p>
+<p>(setq files (vl-directory-files folder "*.dwg" 1))</p>
+<p>(foreach file files</p>
+<p>(setq doc (vla-open (strcat folder "\\" file)))</p>
+<p>(vla-activate doc)</p>
+<p>(command "_.ERASE" (ssget "_X" '((0 . "LWPOLYLINE,LINE") (62 . 1))) "")</p>
+<p>(vla-save doc)</p>
+<p>(vla-close doc)</p>
+<p>)</p>
+<p>(princ "Готово!")</p>
+<p>)</code></pre></p>
+  <p>Скрипт удаляет все синие (<code>62 . 1</code>) линии и полилинии. <strong>Внимание!</strong> Перед запуском сделайте резервную копию файлов.
+</details>
+
+<details>
+  <summary>Почему рамка видна в PDF, но не видна в AutoCAD?</summary>
+  <p>Это типичная проблема при экспорте в <code>PDF</code>, связанная с:
+  <ul>
+    <li>Настройками стиля печати (<code>CTB/STB</code>). Проверьте, не назначен ли рамке цвет, который становится видимым при печати.</li>
+    <li>Параметрами драйвера принтера. В диалоговом окне <code>PLOT</code> выберите <code>DWG to PDF.pc3</code> и нажмите <code>Properties</code>. Отключите <code>Include plot styles</code>.</li>
+    <li>Слоями, которые отключены на экране, но включены для печати. Проверьте настройки слоёв в <code>Page Setup</code>.</li>
+  </ul>
+  <p>Решение: экспортируйте в <code>PDF</code> через <code>EXPORTTOAUTOCAD</code> или используйте сторонние конвертеры (например, <em>PDF24</em>).
+</details>
+
+<details>
+  <summary>Как вернуть рамку обратно, если она была нужна?</summary>
+  <p>Если вы удалили <strong>пользовательскую рамку</strong>, восстановите её из резервной копии (<code>BAK</code>-файла) или создайте заново:
+  <ol>
+    <li>Введите команду <code>RECTANGLE</code> и нарисуйте рамку нужного размера.</li>
+    <li>Назначьте ей слой (например, <code>Border</code>) и цвет.</li>
+    <li>Если нужна стандартная рамка формата, используйте команду <code>TITLEBLOCK</code> или вставьте блок из библиотеки шаблонов.</li>
+  </ol>
+  <p>Для возврата <strong>системной рамки</strong> (границ <code>LIMITS</code>):
+  <pre><code>LIMCHECK → 1
+<p>LIMITS → укажите нужные координаты</code></pre></p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/mo/moyushchij-pylesos-avtomobilnyj-dlya-khimchistki.html" class="pb-related-card">
+                <span class="pb-related-title">Моющий пылесос для автохимчистки: как выбрать и использовать</span>
+                <span class="pb-related-desc">Экспертный гайд по выбору моющего пылесоса для профессиональной химчистки салона автомобиля: рейтинг</span>
+            </a><a href="/articles/z/zh/zhestkaya-i-gibkaya-stsepka-otlichie.html" class="pb-related-card">
+                <span class="pb-related-title">Жесткая и гибкая сцепка: отличие, плюсы и минусы</span>
+                <span class="pb-related-desc">Разбираем, чем отличается жесткая и гибкая сцепка. Сравнение штанги и троса, правила буксировки, тре</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-tornadorom-dlya-khimchistki.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться торнадором для химчистки салона авто</span>
+                <span class="pb-related-desc">Подробная инструкция: как пользоваться торнадором для химчистки салона автомобиля. Настройка давлени</span>
+            </a><a href="/articles/k/ko/kompressor-avtomobilnyj-220v-ot-seti.html" class="pb-related-card">
+                <span class="pb-related-title">Автомобильный компрессор 220В: выбор, рейтинг и советы по работе</span>
+                <span class="pb-related-desc">Как выбрать автомобильный компрессор от сети 220В? Полный гид по моделям, мощности и правилам безопа</span>
+            </a><a href="/articles/m/ma/mashina-s-lestnitsej-kak-nazyvaetsya.html" class="pb-related-card">
+                <span class="pb-related-title">Как называется машина с лестницей: виды спецтехники</span>
+                <span class="pb-related-desc">Подробный гид по спецтехнике с подъемными механизмами. Узнайте, как правильно называется машина с ле</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-zazhimom-dlya-klemm.html" class="pb-related-card">
+                <span class="pb-related-title">Как пользоваться зажимом для клемм: инструкция</span>
+                <span class="pb-related-desc">Подробный гид: как пользоваться зажимом для клемм. Виды обжимных клещей, выбор наконечников и пошаго</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

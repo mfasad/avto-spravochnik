@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Проверка разрешения на парковку для инвалидов по номеру — Авто Справочник</title>
+    <meta name="description" content="Как проверить действие разрешения на парковку для инвалидов по номеру автомобиля. Инструкция по базе данных ФИС ГРДИ и устранению ошибок.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pr/proverka-razresheniya-na-parkovku-dlya-invalidov-po-nomeru-avtomobilya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Проверка разрешения на парковку для инвалидов по номеру">
+    <meta property="og:description" content="Как проверить действие разрешения на парковку для инвалидов по номеру автомобиля. Инструкция по базе данных ФИС ГРДИ и устранению ошибок.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-nav-active">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/zakony-i-shtrafy/">Законы и Штрафы</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Проверка разрешения на парковку для инвалидов по номеру</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#как-работает-система-учета-парковочных-льгот">Как работает система учета парковочных льгот</a></li><li><a href="#официальные-способы-проверки-по-номеру-автомобиля">Официальные способы проверки по номеру автомобиля</a></li><li><a href="#пошаговая-инструкция-проверки-через-портал-фри">Пошаговая инструкция проверки через портал ФРИ</a></li><li><a href="#альтернативные-методы-госуслуги-и-региональные-сервисы">Альтернативные методы: Госуслуги и региональные сервисы</a></li><li><a href="#что-делать-если-система-не-видит-разрешение">Что делать, если система не видит разрешение</a></li><li><a href="#штрафы-и-ответственность-за-нарушения">Штрафы и ответственность за нарушения</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/n/na/na-kakom-rasstoyanii-mozhno-stavit-avtomobil-ot-zhilogo-doma.html">На каком расстоянии можно парковать машину от дома по закону 2026</a></li><li><a href="/articles/k/ka/kak-posmotret-nalog-na-avtomobil.html">Как проверить налог на автомобиль онлайн и через ГИБДД в 2026 году</a></li><li><a href="/articles/s/s-/s-kakogo-vozrasta-mozhno-sazhat-rebenka-vpered.html">С какого возраста можно сажать ребенка вперед по ПДД в 2026</a></li><li><a href="/articles/u/uv/uvezli-mashinu-na-evakuatore-kuda-zvonit-spb.html">Увезли машину на эвакуаторе в СПб: куда звонить и что делать</a></li><li><a href="/articles/n/na/na-kakom-rasstoyanii-ot-okna-mozhno-stavit-mashinu.html">На каком расстоянии от окна можно ставить машину: ПДД и практика 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Проверка разрешения на парковку для инвалидов по номеру автомобиля</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#как-работает-система-учета-парковочных-льгот">Как работает система учета парковочных льгот</a></li><li><a href="#официальные-способы-проверки-по-номеру-автомобиля">Официальные способы проверки по номеру автомобиля</a></li><li><a href="#пошаговая-инструкция-проверки-через-портал-фри">Пошаговая инструкция проверки через портал ФРИ</a></li><li><a href="#альтернативные-методы-госуслуги-и-региональные-сервисы">Альтернативные методы: Госуслуги и региональные сервисы</a></li><li><a href="#что-делать-если-система-не-видит-разрешение">Что делать, если система не видит разрешение</a></li><li><a href="#штрафы-и-ответственность-за-нарушения">Штрафы и ответственность за нарушения</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Специальное право на бесплатную парковку в зонах, помеченных табличкой 8.17, является одной из ключевых социальных гарантий для людей с ограниченными возможностями здоровья. Однако с 1 января 2021 года в России кардинально изменился порядок использования этих мест: бумажные парковочные удостоверения утратили силу, а на первый план вышла <strong>электронная база данных</strong>. Теперь наличие разрешения привязано непосредственно к государственному номеру транспортного средства, и именно этот факт проверяют контролеры с помощью планшетов.</p>
+<p>Введение единой цифровой системы позволило минимизировать количество злоупотреблений, когда парковочными местами пользовались автомобили без соответствующего статуса. <em>Федеральный реестр инвалидов (ФРИ)</em> теперь синхронизирован с базами ГИБДД и парковочных служб крупных городов. Это означает, что любой гражданин или инспектор может оперативно узнать, имеет ли конкретный автомобиль законное право занимать льготное место, просто пробив номер в системе.</p>
+<p>Ситуации, когда водитель уверен в действии своего разрешения, но получает штраф или эвакуацию, встречаются регулярно. Чаще всего это связано с техническими задержками в обновлении информации или ошибками при подаче данных. В этой статье мы подробно разберем, как осуществляется <strong>проверка разрешения на парковку для инвалидов</strong>, где искать актуальные сведения и что делать, если система выдает некорректный результат.</p>
+
+<h2 id="как-работает-система-учета-парковочных-льгот">Как работает система учета парковочных льгот</h2>
+<p>Основой современной системы является <strong>Федеральная информационная система «Федеральный реестр инвалидов»</strong> (ФИС ФРИ). Именно в эту базу данных попадают сведения о всех гражданах, имеющих право на льготы, после подачи заявления через МФЦ, портал Госуслуг или Пенсионный фонд. После обработки заявления информация передается в единую базу, доступную парковочным службам.</p>
+<p>Ключевым отличием новой системы является отсутствие необходимости размещать на лобовом стекле бумажные свидетельства. Хотя знак «Инвалид» по-прежнему должен быть установлен на автомобиле, основным аргументом для контролеров служит <strong>цифровой след в реестре</strong>. Если номера вашего автомобиля нет в базе, то даже наличие всех физических атрибутов (знака и удостоверения) не защитит от штрафа.</p>
+<blockquote>⚠️ Внимание: С 1 января 2021 года бумажные парковочные удостоверения инвалидов больше не действительны. Парковка разрешена только если автомобиль внесен в Федеральный реестр инвалидов.</blockquote>
+<p>Процесс проверки происходит в автоматическом режиме. Мобильные комплексы фотовидеофиксации или ручные терминалы контролеров считывают номерной знак припаркованного автомобиля и отправляют запрос в базу данных. Ответ приходит за считанные секунды: либо разрешение действует, либо автомобиль числится как нарушитель.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Автоматически обновляйте данные в реестре при смене номера автомобиля или окончании срока действия справки МСЭ, чтобы избежать штрафов.</p></aside>
+
+<h2 id="официальные-способы-проверки-по-номеру-автомобиля">Официальные способы проверки по номеру автомобиля</h2>
+<p>Для водителей и их близких существует несколько легальных способов убедиться, что информация о льготе корректно отражается в системе. Самый надежный и оперативный метод — использование официального портала <em>Федерального реестра инвалидов</em>. Этот ресурс предоставляет актуальную информацию напрямую из источника.</p>
+<p>Также проверку можно осуществить через региональные порталы государственных услуг, например, <em>mos.ru</em> для Москвы или <em>gu.spb.ru</em> для Санкт-Петербурга. Эти системы часто имеют собственные интерфейсы для управления парковочными разрешениями, которые дублируют данные из федеральной базы, но могут отображать их в более удобном для местного пользователя формате.</p>
+<ul>
+<li>🔍 <strong>Портал ФРИ (sfri.ru):</strong> Официальный сервис, позволяющий проверить наличие записи о ТС в реестре.</li>
+<li>🌐 <strong>Региональные порталы:</strong> Сайты мэрий и администраций городов с функцией парковочных разрешений.</li>
+<li>📱 <strong>Мобильные приложения:</strong> Официальные приложения парковочных служб (например, «Парковки России» или «Московский паркинг»).</li>
+</ul>
+<p>При использовании сторонних сервисов или приложений Если вы сомневаетесь в корректности информации, полученной через третье приложение, всегда перепроверяйте данные на <strong>официальном сайте ФРИ</strong> или через Госуслуги.</p>
+<div class="pb-poll" id="poll-d05124a4"><div class="pb-poll-question">📊 Где вы чаще всего проверяете статус парковочного разрешения?</div><div class="pb-poll-option" data-poll="d05124a4" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">На портале ФРИ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d05124a4" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Через Госуслуги</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d05124a4" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">В приложении парковки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d05124a4" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не проверяю, верю системе</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="пошаговая-инструкция-проверки-через-портал-фри">Пошаговая инструкция проверки через портал ФРИ</h2>
+<p>Наиболее полным и достоверным источником информации является сайт <code>sfri.ru</code>. Чтобы проверить статус разрешения, вам не нужно быть зарегистрированным пользователем с электронной подписью для базовой проверки, хотя авторизация через <em>Госуслуги</em> дает расширенный доступ к управлению данными.</p>
+<p>Перейдите в раздел «Парковка» на главной странице или выберите сервис проверки парковочных разрешений. Система запросит ввод данных. В зависимости от выбранного сценария, вам может потребоваться ввести номер автомобиля или данные свидетельства о регистрации ТС (СТС).</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка статуса на портале ФРИ</h4><label class="check-item"><input type="checkbox"><span>Перейти на сайт sfri.ru</span></label><label class="check-item"><input type="checkbox"><span>Выбрать раздел «Парковка»</span></label><label class="check-item"><input type="checkbox"><span>Ввести номер автомобиля</span></label><label class="check-item"><input type="checkbox"><span>Нажать кнопку «Найти»</span></label><label class="check-item"><input type="checkbox"><span>Проверить статус записи</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+<p>Если система находит запись, вы увидите информацию о сроке действия разрешения и статусе инвалидности. Важно сверить номер автомобиля: одна ошибка в цифре или букве может привести к тому, что система выдаст отрицательный результат. В этом случае необходимо проверить данные в личном кабинете.</p>
+<p>В случае если вы являетесь законным представителем инвалида, для получения полной информации может потребоваться авторизация. Используйте учетную запись <strong>Госуслуг</strong>, связанную с данными человека, имеющего льготу, или свою, если вы оформлены как представитель.</p>
+
+<h2 id="альтернативные-методы-госуслуги-и-региональные-сервисы">Альтернативные методы: Госуслуги и региональные сервисы</h2>
+<p>Портал <em>Госуслуги</em> (gosuslugi.ru) служит единой точкой входа для многих государственных сервисов, включая управление парковочными разрешениями. Через личный кабинет можно не только проверить наличие записи, но и подать заявление на ее внесение или изменение.</p>
+<p>Для жителей Москвы и Московской области наиболее актуальным остается портал <em>mos.ru</em>. В разделе «Транспорт» -> «Парковки» -> «Парковочные разрешения» отображается список автомобилей, на которые распространяется льгота. Здесь же можно увидеть историю действий и статус текущих разрешений.</p>
+<p>Региональные особенности могут вносить свои коррективы. В некоторых субъектах РФ данные могут обновляться с задержкой или требовать дополнительной верификации через местные органы соцзащиты. Поэтому, если федеральный сервис показывает наличие льготы, а городской паркомат выписывает штраф, стоит обратиться в местную администрацию.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Сервис</th>
+<th>Доступность</th>
+<th>Необходимость авторизации</th>
+<th>Функционал</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sfri.ru</td>
+<td>Вся Россия</td>
+<td>Нет (для проверки)</td>
+<td>Проверка по номеру ТС</td>
+</tr>
+<tr>
+<td>gosuslugi.ru</td>
+<td>Вся Россия</td>
+<td>Да (ЕСИА)</td>
+<td>Полное управление, подача заявлений</td>
+</tr>
+<tr>
+<td>mos.ru</td>
+<td>Москва</td>
+<td>Да</td>
+<td>Управление парковками Москвы</td>
+</tr>
+<tr>
+<td>gu.spb.ru</td>
+<td>Санкт-Петербург</td>
+<td>Да</td>
+<td>Реестр льготников СПб</td>
+</tr>
+</tbody>
+</table></div>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Региональные порталы ( mos.ru) часто обновляются быстрее федеральных баз в рамках своего региона, но для общей проверки надежнее использовать ФРИ.</p></aside>
+
+<h2 id="что-делать-если-система-не-видит-разрешение">Что делать, если система не видит разрешение</h2>
+<p>Ситуация, когда водитель уверен в наличии льготы, но проверка по номеру автомобиля показывает отсутствие разрешения, требует немедленных действий. Чаще всего проблема кроется в рассинхронизации данных или истечении срока действия справки об инвалидности.</p>
+<p>Первым шагом необходимо проверить срок действия справки МСЭ (Медико-социальной экспертизы). Если срок истек, запись в реестре могла быть автоматически аннулирована системой. В этом случае нужно заново пройти комиссию и подать актуальные документы.</p>
+<blockquote>⚠️ Внимание: Если вы сменили автомобиль, но не внесли изменения в реестр, парковка на новом номере будет считаться нарушением. Льгота не привязана навсегда к одному авто.</blockquote>
+<p>Если документы в порядке, возможно, произошла техническая ошибка при передаче данных из ПФР или МФЦ в реестр. В таком случае следует подать заявление на внесение изменений или correction данных через портал Госуслуг. Процесс может занять от нескольких часов до нескольких рабочих дней.</p>
+<p>Временно, пока ошибка не исправлена, парковаться на местах для инвалидов рискованно. Лучше воспользоваться обычной парковкой или бесплатными зонами общего пользования, чтобы избежать эвакуации и штрафа, оспаривание которого займет много времени.</p>
+
+
+<h2 id="штрафы-и-ответственность-за-нарушения">Штрафы и ответственность за нарушения</h2>
+<p>Парковка на месте, предназначенном для инвалидов, без соответствующего разрешения влечет за собой административную ответственность по части 2 статьи 12.19 КоАП РФ. Размер штрафа для физических лиц составляет <strong>5000 рублей</strong>.</p>
+<p>Кроме денежного взыскания, нарушителю грозит эвакуация транспортного средства на специализированную стоянку. Расходы на эвакуацию и хранение автомобиля оплачивает владелец, что в совокупности с штрафом может составить внушительную сумму.</p>
+<ul>
+<li>🚫 <strong>Отсутствие записи в реестре:</strong> Штраф 5000 руб. + эвакуация.</li>
+<li>🚫 <strong>Использование чужого номера:</strong> Штраф 5000 руб. + возможное уголовное преследование за мошенничество.</li>
+<li>🚫 <strong>Истекший срок справки:</strong> Штраф 5000 руб., так как льгота автоматически аннулируется.</li>
+</ul>
+<p>Важно понимать, что наличие знака «Инвалид» на автомобиле при отсутствии записи в базе не является оправданием. Контролеры руководствуются исключительно данными <strong>электронного реестра</strong>. Поэтому регулярная самостоятельная проверка своего статуса — обязанность каждого льготника.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+<details>
+<summary>Можно ли проверить разрешение по фамилии водителя?</summary>
+<p>Прямая проверка по фамилии в открытых источниках недоступна из соображений конфиденциальности персональных данных. Проверка осуществляется по номеру автомобиля или через авторизованный личный кабинет на Госуслугах/ФРИ, где данные уже привязаны к пользователю.</p>
+</details>
+<details>
+<summary>Что делать, если я продал машину с номером, на который оформлена льгота?</summary>
+<p>Необходимо срочно подать заявление об исключении данного транспортного средства из реестра парковочных разрешений. Это можно сделать через Госуслуги или МФЦ. Пока номер числится за вами, новый владелец может незаконно пользоваться льготой, а штрафы могут приходить вам, либо запись могут заблокировать.</p>
+</details>
+<details>
+<summary>Как долго действует разрешение на парковку?</summary>
+<p>Срок действия разрешения совпадает со сроком действия справки об инвалидности. Если инвалидность установлена бессрочно, то и парковочное разрешение действует бессрочно, но требует подтверждения актуальности данных в реестре при смене автомобиля.</p>
+</details>
+<details>
+<summary>Может ли инвалид оформить разрешение на автомобиль родственника?</summary>
+<p>Да, инвалид может управлять транспортным средством, принадлежащим родственнику, или перевозиться на нем. Для этого автомобиль должен быть внесен в реестр по заявлению инвалида или его законного представителя. Количество автомобилей, которые можно внести, ограничено (обычно до 2-х ТС одновременно).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/n/na/na-kakom-rasstoyanii-mozhno-stavit-avtomobil-ot-zhilogo-doma.html" class="pb-related-card">
+                <span class="pb-related-title">На каком расстоянии можно парковать машину от дома по закону 2026</span>
+                <span class="pb-related-desc">Минимальное расстояние от автомобиля до жилого дома по ПДД и СНиП: нормы парковки, штрафы за нарушен</span>
+            </a><a href="/articles/k/ka/kak-posmotret-nalog-na-avtomobil.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить налог на автомобиль онлайн и через ГИБДД в 2026 году</span>
+                <span class="pb-related-desc">Пошаговая инструкция, как узнать транспортный налог за 5 минут: через сайт ФНС, Госуслуги, мобильные</span>
+            </a><a href="/articles/s/s-/s-kakogo-vozrasta-mozhno-sazhat-rebenka-vpered.html" class="pb-related-card">
+                <span class="pb-related-title">С какого возраста можно сажать ребенка вперед по ПДД в 2026</span>
+                <span class="pb-related-desc">С какого возраста можно сажать ребенка вперед по закону? Разбор ПДД, штрафы за нарушение правил пере</span>
+            </a><a href="/articles/u/uv/uvezli-mashinu-na-evakuatore-kuda-zvonit-spb.html" class="pb-related-card">
+                <span class="pb-related-title">Увезли машину на эвакуаторе в СПб: куда звонить и что делать</span>
+                <span class="pb-related-desc">Автомобиль эвакуировали в Санкт-Петербурге? Узнайте, куда звонить, как найти машину на штрафстоянке </span>
+            </a><a href="/articles/n/na/na-kakom-rasstoyanii-ot-okna-mozhno-stavit-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">На каком расстоянии от окна можно ставить машину: ПДД и практика 2026</span>
+                <span class="pb-related-desc">Разбираемся, сколько метров от окна можно парковать авто по закону и как избежать штрафов. Правила д</span>
+            </a><a href="/articles/d/dt/dtp-s-velosipedistom-kto-vinovat.html" class="pb-related-card">
+                <span class="pb-related-title">Кто виноват в ДТП с велосипедистом: разбор ситуаций по ПДД</span>
+                <span class="pb-related-desc">Узнайте, как определить виновника аварии с велосипедистом: правила ПДД, типичные случаи, штрафы и со</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Расчет сопротивления параллельного соединения: формулы и примеры — Авто Справочник</title>
+    <meta name="description" content="Полный разбор формулы расчета сопротивления параллельного соединения. Узнайте, как вычислить общее R, почему оно меньше наименьшего и как это применять в автоэлектрике.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/f/fo/formula-rascheta-soprotivleniya-parallelnogo.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Расчет сопротивления параллельного соединения: формулы и примеры">
+    <meta property="og:description" content="Полный разбор формулы расчета сопротивления параллельного соединения. Узнайте, как вычислить общее R, почему оно меньше наименьшего и как это применять в автоэлектрике.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Расчет сопротивления параллельного соединения: формулы и примеры</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физическая-сущность-параллельного-соединения">Физическая сущность параллельного соединения</a></li><li><a href="#основная-формула-расчета-общего-сопротивления">Основная формула расчета общего сопротивления</a></li><li><a href="#упрощенная-формула-для-двух-элементов">Упрощенная формула для двух элементов</a></li><li><a href="#расчет-для-множества-одинаковых-проводников">Расчет для множества одинаковых проводников</a></li><li><a href="#сравнительная-таблица-параметров-соединений">Сравнительная таблица параметров соединений</a></li><li><a href="#практическое-применение-в-автоэлектрике">Практическое применение в автоэлектрике</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/sk/skhema-raboty-diodnogo-mosta.html">Схема работы диодного моста в авто: принцип и неисправности</a></li><li><a href="/articles/p/pr/prikurivatel-gde-plyus-a-gde-minus.html">Прикуриватель в машине: где плюс, а где минус — схема и советы</a></li><li><a href="/articles/k/ka/kakaya-chastota-radio-mayak.html">Частота радио маяка: как работает и где используется в авто</a></li><li><a href="/articles/g/go/golosovoj-signal-zadnego-khoda.html">Голосовой сигнал заднего хода: устройство, ремонт и замена</a></li><li><a href="/articles/k/ka/kak-pravilno-pishetsya-rele.html">Как пишется правильно: реле или релле?</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Формула расчета сопротивления параллельного соединения: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физическая-сущность-параллельного-соединения">Физическая сущность параллельного соединения</a></li><li><a href="#основная-формула-расчета-общего-сопротивления">Основная формула расчета общего сопротивления</a></li><li><a href="#упрощенная-формула-для-двух-элементов">Упрощенная формула для двух элементов</a></li><li><a href="#расчет-для-множества-одинаковых-проводников">Расчет для множества одинаковых проводников</a></li><li><a href="#сравнительная-таблица-параметров-соединений">Сравнительная таблица параметров соединений</a></li><li><a href="#практическое-применение-в-автоэлектрике">Практическое применение в автоэлектрике</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Понимание того, как ведут себя электрические цепи, является фундаментальным навыком для любого специалиста по ремонту автомобилей или радиоэлектроники. Когда мы говорим о параллельном соединении проводников, мы рассматриваем схему, в которой начала всех элементов соединены в одну точку, а концы — в другую. Это создает несколько независимых путей для прохождения электрического тока, что кардинально меняет параметры всей системы по сравнению с последовательным подключением.</p>
+
+<p>В автомобильной электрике такой тип соединения встречается повсеместно: от фар головного света до бортовых компьютеров. <strong>Общее сопротивление</strong> в таких цепях всегда ведет себя непредсказуемо для новичков, так как оно не складывается, а уменьшается. Именно этот феномен позволяет подключать множество потребителей к одной бортовой сети 12 или 24 Вольта без критического падения напряжения на каждом из них.</p>
+
+<p>Разберем детально физические процессы, математические выкладки и практическое применение этих знаний. Вы научитесь мгновенно определять параметры сложных цепей и избегать типичных ошибок при диагностике электрооборудования. Это знание необходимо каждому, кто хочет разбираться в устройстве своего автомобиля глубже, чем просто замена свечей.</p>
+
+<h2 id="физическая-сущность-параллельного-соединения">Физическая сущность параллельного соединения</h2>
+
+<p>Параллельное соединение проводников характеризуется тем, что напряжение на концах всех ветвей цепи одинаково. Представьте себе водопроводную трубу, от которой отходят несколько ответвлений к кранам. Давление воды (аналог напряжения) в месте подключения кранов будет одинаковым, независимо от того, сколько кранов открыто. Точно так же ведет себя <strong>электрическое напряжение</strong> в параллельной цепи.</p>
+
+<p>Однако сила тока в этом случае распределяется между ветвями. Чем меньше сопротивление конкретного участка, тем больший ток через него потечет. Это прямая зависимость, описываемая законом Ома для участка цепи. Если вы подключите две лампы разной мощности параллельно, более мощная (имеющая меньшее сопротивление нити накала) будет потреблять больше тока, но напряжение на обеих останется равным напряжению источника.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При параллельном соединении отключение одного потребителя не разрывает цепь для остальных. Это главное преимущество перед последовательным соединением, где выход из строя одного элемента останавливает работу всей системы.</p>
+</blockquote>
+
+<p>Важно понимать, что добавление новых параллельных ветвей увеличивает общую нагрузку на источник питания. <strong>Суммарная сила тока</strong> растет, так как у электронов появляется больше путей для прохождения. Это критически важный момент при проектировании проводки в автомобиле: установка дополнительных мощных потребителей требует проверки сечения проводов и мощности генератора.</p>
+
+<div class="pb-poll" id="poll-9044b2f2"><div class="pb-poll-question">📊 С какой схемой вы сталкиваетесь чаще при ремонте авто?</div><div class="pb-poll-option" data-poll="9044b2f2" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Параллельное соединение</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9044b2f2" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Последовательное соединение</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9044b2f2" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Смешанное соединение</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9044b2f2" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, только меняю лампочки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="основная-формула-расчета-общего-сопротивления">Основная формула расчета общего сопротивления</h2>
+
+<p>Для вычисления общего сопротивления ($R_{общ}$) цепи с параллельно соединенными элементами используется формула, обратная сумме обратных величин сопротивлений каждого проводника. Это может показаться сложным на первый взгляд, но математически это выглядит элегантно и логично. Если у вас есть два или более резистора, формула принимает следующий вид:</p>
+
+<p><pre><code>1 / R_общ = 1 / R1 + 1 / R2 + 1 / R3 + ... + 1 / Rn</pre></code></p>
+
+<p>Здесь $R1, R2, R3$ — это сопротивления отдельных участков цепи. Чтобы найти итоговое значение, необходимо сначала вычислить сумму проводимостей (обратных сопротивлений), а затем полученный результат снова инвертировать. <strong>Проводимость</strong> показывает, насколько легко току пройти через участок, и при параллельном соединении они просто суммируются.</p>
+
+<p>Рассмотрим случай с двумя резисторами, так как это наиболее частая ситуация в практике автоэлектрика. Формула упрощается до произведения сопротивлений, деленного на их сумму. Это позволяет быстро считать в уме или на калькуляторе без использования сложных дробей. Запомните этот вариант, он используется в 90% случаев диагностики.</p>
+
+
+
+<h2 id="упрощенная-формула-для-двух-элементов">Упрощенная формула для двух элементов</h2>
+
+<p>Когда в цепи участвуют только два параллельных потребителя, расчет значительно упрощается. Вместо работы с дробями можно использовать формулу "произведение на сумму". Это стандартный прием, который ускоряет инженерные расчеты и позволяет быстро оценить ситуацию при подборе аналогов сгоревших компонентов.</p>
+
+<p>Формула выглядит так:</p>
+
+<p><pre><code>R_общ = (R1 * R2) / (R1 + R2)</pre></code></p>
+
+<p>Например, если вы подключили два одинаковых резистора по 10 Ом параллельно, общее сопротивление составит 5 Ом. Это универсальное правило: при соединении двух одинаковых элементов итоговое сопротивление всегда в два раза меньше сопротивления одного элемента. <strong>Номинальное значение</strong> каждого резистора при этом не меняется, меняется лишь характеристика всей ветви.</p>
+
+<p>Если же сопротивления различаются, скажем 10 Ом и 20 Ом, расчет будет следующим: $(10 * 20) / (10 + 20) = 200 / 30 ≈ 6.67$ Ом. Как видите, результат всегда меньше наименьшего из исходных сопротивлений. Это аксиома параллельных цепей, нарушение которой указывает на ошибку в расчетах или измерениях.</p>
+
+
+
+<h2 id="расчет-для-множества-одинаковых-проводников">Расчет для множества одинаковых проводников</h2>
+
+<p>В ситуациях, когда параллельно соединено несколько элементов с одинаковым сопротивлением, задача сводится к элементарному делению. Это часто встречается в светодиодных лентах или при подключении групп одинаковых ламп освещения. Здесь не нужно использовать сложные формулы с обратными величинами.</p>
+
+<p>Достаточно разделить сопротивление одного элемента на количество таких элементов в цепи:</p>
+
+<p><pre><code>R_общ = R1 / n</pre></code></p>
+
+<p>Где $n$ — количество одинаковых проводников. Если у вас есть 4 фары с сопротивлением 24 Ома каждая, подключенные параллельно, общее сопротивление цепи составит $24 / 4 = 6$ Ом. Это значительно упрощает диагностику: зная сопротивление одной исправной лампы, можно быстро вычислить, сколько их должно "звенеться" в цепи при прозвонке мультиметром.</p>
+
+<p>Такой подход позволяет мгновенно выявлять обрывы. Если при расчетном сопротивлении 6 Ом прибор показывает 8 Ом, значит, одна из цепей разорвана или имеет плохой контакт. <strong>Диагностика</strong> становится быстрой и точной, не требуя снятия каждого элемента отдельно.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка параллельной цепи</h4><label class="check-item"><input type="checkbox"><span>Отключить питание</span></label><label class="check-item"><input type="checkbox"><span>Замерить сопротивление одного элемента</span></label><label class="check-item"><input type="checkbox"><span>Посчитать количество элементов</span></label><label class="check-item"><input type="checkbox"><span>Разделить R одного на количество</span></label><label class="check-item"><input type="checkbox"><span>Сравнить с замером цепи</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="сравнительная-таблица-параметров-соединений">Сравнительная таблица параметров соединений</h2>
+
+<p>Чтобы окончательно закрепить материал и видеть разницу между типами соединений, рассмотрим сводную таблицу. Она поможет систематизировать знания о том, как распределяются ток, напряжение и сопротивление в разных условиях.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Последовательное соединение</th>
+<th>Параллельное соединение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Сила тока (I)</td>
+<td>Одинакова во всех участках</td>
+<td>Сумма токов ветвей (I = I1 + I2)</td>
+</tr>
+<tr>
+<td>Напряжение (U)</td>
+<td>Сумма напряжений (U = U1 + U2)</td>
+<td>Одинаково на всех участках</td>
+</tr>
+<tr>
+<td>Сопротивление (R)</td>
+<td>Сумма сопротивлений (R = R1 + R2)</td>
+<td>Меньше наименьшего (1/R = 1/R1 + 1/R2)</td>
+</tr>
+<tr>
+<td>Влияние обрыва</td>
+<td>Перестает работать вся цепь</td>
+<td>Работают остальные ветви</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Из таблицы видно, что параллельное соединение обеспечивает независимость работы потребителей. Именно поэтому в автомобилях, домах и промышленных сетях используется именно эта схема. <strong>Стабильность напряжения</strong> является ключевым фактором для корректной работы электроники.</p>
+
+<p>Последовательное соединение используется реже, в основном для делителей напряжения или цепей управления, где ток должен быть одинаковым. Понимание этих различий необходимо для правильного чтения <em>электрических схем</em> любой сложности.</p>
+
+<h2 id="практическое-применение-в-автоэлектрике">Практическое применение в автоэлектрике</h2>
+
+<p>В реальном автомобиле чистое паралл</div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/sk/skhema-raboty-diodnogo-mosta.html" class="pb-related-card">
+                <span class="pb-related-title">Схема работы диодного моста в авто: принцип и неисправности</span>
+                <span class="pb-related-desc">Как устроен диодный мост генератора автомобиля: схема работы, признаки неисправности, проверка мульт</span>
+            </a><a href="/articles/p/pr/prikurivatel-gde-plyus-a-gde-minus.html" class="pb-related-card">
+                <span class="pb-related-title">Прикуриватель в машине: где плюс, а где минус — схема и советы</span>
+                <span class="pb-related-desc">Как правильно определить полярность прикуривателя в автомобиле? Подробная схема с фото, проверка мул</span>
+            </a><a href="/articles/k/ka/kakaya-chastota-radio-mayak.html" class="pb-related-card">
+                <span class="pb-related-title">Частота радио маяка: как работает и где используется в авто</span>
+                <span class="pb-related-desc">Узнайте, какие частоты используют радио маяки для навигации и безопасности. Подробно о стандартах, д</span>
+            </a><a href="/articles/g/go/golosovoj-signal-zadnego-khoda.html" class="pb-related-card">
+                <span class="pb-related-title">Голосовой сигнал заднего хода: устройство, ремонт и замена</span>
+                <span class="pb-related-desc">Полный гид по голосовому сигналу заднего хода. Устройство, схема подключения, диагностика неисправно</span>
+            </a><a href="/articles/k/ka/kak-pravilno-pishetsya-rele.html" class="pb-related-card">
+                <span class="pb-related-title">Как пишется правильно: реле или релле?</span>
+                <span class="pb-related-desc">Подробный разбор слова «реле»: орфография, склонение, употребление в электрике авто. Почему нельзя п</span>
+            </a><a href="/articles/d/da/datchik-sveta-dlya-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Датчик света для автомобиля: установка, диагностика и настройка</span>
+                <span class="pb-related-desc">Подробный гид по датчику освещенности авто. Как работает, где находится, признаки поломки и инструкц</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

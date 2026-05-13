@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как подключить ноутбук к машине: диагностика, OBD2, Wi-Fi — Авто Справочник</title>
+    <meta name="description" content="Полная инструкция: как подключить ноутбук к автомобилю через USB, OBD2 и Wi-Fi. Выбор адаптеров, настройка ПО для диагностики и прошивки ЭБУ.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-podklyuchit-noutbuk-k-mashine.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как подключить ноутбук к машине: диагностика, OBD2, Wi-Fi">
+    <meta property="og:description" content="Полная инструкция: как подключить ноутбук к автомобилю через USB, OBD2 и Wi-Fi. Выбор адаптеров, настройка ПО для диагностики и прошивки ЭБУ.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как подключить ноутбук к машине: диагностика, OBD2, Wi-Fi</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#выбор-аппаратного-интерфейса-для-соединения">Выбор аппаратного интерфейса для соединения</a></li><li><a href="#настройка-программного-обеспечения-на-компьютере">Настройка программного обеспечения на компьютере</a></li><li><a href="#схема-подключения-через-obdii-разъем">Схема подключения через OBDII разъем</a></li><li><a href="#диагностика-через-wi-fi-и-bluetooth-модули">Диагностика через Wi-Fi и Bluetooth модули</a></li><li><a href="#прямое-подключение-к-блоку-управления-эбу">Прямое подключение к блоку управления (ЭБУ)</a></li><li><a href="#типичные-ошибки-и-способы-их-устранения">Типичные ошибки и способы их устранения</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/i/in/invertor-s-24-na-12-volt.html">Инвертор с 24 на 12 вольт: схема, расчет и выбор для авто</a></li><li><a href="/articles/m/mi/migaet-sinyaya-lampochka-v-mashine.html">Почему мигает синяя лампочка в машине? Причины и решения</a></li><li><a href="/articles/g/go/gorit-vosklitsatelnyj-znak-na-mashine.html">Горит восклицательный знак на машине: причины и что делать в 2026 году</a></li><li><a href="/articles/k/ka/kak-proverit-chto-razryazhaet-akkumulyator-v-mashine.html">Как найти утечку тока в машине: 5 способов проверить аккумулятор</a></li><li><a href="/articles/t/tr/transformator-na-zaryadnoe-ustrojstvo.html">Трансформатор для зарядного устройства: выбор, схема, подключение</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как подключить ноутбук к машине: методы и оборудование</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#выбор-аппаратного-интерфейса-для-соединения">Выбор аппаратного интерфейса для соединения</a></li><li><a href="#настройка-программного-обеспечения-на-компьютере">Настройка программного обеспечения на компьютере</a></li><li><a href="#схема-подключения-через-obdii-разъем">Схема подключения через OBDII разъем</a></li><li><a href="#диагностика-через-wi-fi-и-bluetooth-модули">Диагностика через Wi-Fi и Bluetooth модули</a></li><li><a href="#прямое-подключение-к-блоку-управления-эбу">Прямое подключение к блоку управления (ЭБУ)</a></li><li><a href="#типичные-ошибки-и-способы-их-устранения">Типичные ошибки и способы их устранения</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный автомобиль — это сложный вычислительный комплекс, где программное обеспечение управляет тысячами процессов. Владельцы часто сталкиваются с необходимостью глубокой диагностики, которую штатный бортовой компьютер выполнить не в состоянии. Именно в такие моменты возникает потребность соединить персональный компьютер с электроникой транспортного средства для считывания скрытых логов или перепрошивки блоков.</p>
+
+<p>Подключение ноутбука к машине открывает доступ к профессиональным функциям, обычно доступным только в специализированных сервисных центрах. Это позволяет не только выявить ошибку двигателя, но и проверить состояние подушек безопасности, ABS или даже адаптировать новые узлы после замены. Однако, прежде чем приступать к манипуляциям, необходимо четко понимать, какой именно интерфейс и программное обеспечение потребуется для вашей задачи.</p>
+
+<p>В этой статье мы разберем все актуальные способы соединения: от простых OBD2-сканеров до сложных схем с прямым доступом к портам K-Line и CAN-шины. Вы узнаете, как избежать короткого замыкания, какой адаптер выбрать для конкретной марки авто и почему стандартный USB-кабель здесь не поможет без специального конвертера.</p>
+
+<h2 id="выбор-аппаратного-интерфейса-для-соединения">Выбор аппаратного интерфейса для соединения</h2>
+
+<p>Физическое подключение ноутбука к автомобилю невозможно через обычный USB-кабель, так как протоколы обмена данными в них кардинально отличаются. Автомобильная электроника использует последовательные интерфейсы, такие как <strong>K-Line</strong>, <strong>L-Line</strong> или высокоскоростную шину <em>CAN-bus</em>. Для преобразования сигналов в понятный для ПК формат необходим специальный адаптер, который чаще всего вставляется в диагностический разъем OBDII, расположенный под торпедой.</p>
+
+<p>На рынке представлено множество устройств, от дешевых китайских клонов до профессиональных дилерских сканеров. Самые простые модели, такие как <em>ELM327</em>, работают через Bluetooth или Wi-Fi и подходят для базового мониторинга параметров двигателя в реальном времени. Более сложные интерфейсы, например <em>VAG-COM</em> для группы Volkswagen или <em>DDT4ALL</em> для Renault, требуют кабельного соединения через USB для обеспечения стабной передачи больших объемов данных при прошивке.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Использование дешевых китайских адаптеров с клонированными чипами при прошивке ЭБУ может привести к необратимому повреждению блока управления. Для записи ПО используйте только лицензированное оборудование с защитой от обрыва связи.</p>
+</blockquote>
+
+<p>Важным аспектом является питание адаптера. Некоторые профессиональные сканеры требуют внешнего источника питания 12В, в то время как бюджетные модели запитываются напрямую от диагностического разъема автомобиля. При работе с ноутбуком критически важно убедиться, что батарея ПК заряжена, а сам автомобиль находится в режиме зажигания, но двигатель лучше заглушить во избежание помех от генератора.</p>
+
+<div class="pb-poll" id="poll-a1ad18c8"><div class="pb-poll-question">📊 Какой тип подключения вы планируете использовать?</div><div class="pb-poll-option" data-poll="a1ad18c8" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Bluetooth ELM327</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a1ad18c8" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">USB кабель (K-Line/CAN)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a1ad18c8" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Wi-Fi адаптер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a1ad18c8" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Прямое подключение к ЭБУ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="настройка-программного-обеспечения-на-компьютере">Настройка программного обеспечения на компьютере</h2>
+
+<p>После выбора "железа" наступает очередь установки драйверов и специализированного софта. Большинство адаптеров требуют установки драйверов виртуального COM-порта (часто это чипы <em>FTDI</em> или <em>CH340</em>), чтобы операционная система Windows могла распознать устройство. Без корректно установленного драйвера ни одна диагностическая программа не увидит подключенный сканер, даже если он горит индикатором.</p>
+
+<p>Выбор программы зависит от марки автомобиля и целей диагностики. Для универсальных задач отлично подходят <em>Scanmaster ELM</em> или <em>OpenDiag</em> для отечественных авто. Если же требуется глубокая инженерная диагностика, используются специализированные комплексы вроде <em>VCDS</em>, <em>FORScan</em> или дилерские оболочки типа <em>DiagBox</em>. Важно следить за версией программного обеспечения, так как старые версии могут не поддерживать новые протоколы шифрования.</p>
+
+<p>Настройка параметров связи в программе — критический этап. Необходимо правильно выбрать номер COM-порта, скорость обмена данными (битрейт) и тип протокола. Часто используется автоматический поиск, но в сложных случаях, особенно при работе со старыми автомобилями, параметры приходится задавать вручную, опираясь на техническую документацию.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед подключением</h4><label class="check-item"><input type="checkbox"><span>Установлены драйверы адаптера</span></label><label class="check-item"><input type="checkbox"><span>Выбран правильный COM-порт</span></label><label class="check-item"><input type="checkbox"><span>Ноутбук заряжен или подключен к сети</span></label><label class="check-item"><input type="checkbox"><span>Автомобиль в режиме зажигания (Engine Off)</span></label><label class="check-item"><input type="checkbox"><span>Подобрана версия ПО под модель авто</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="схема-подключения-через-obdii-разъем">Схема подключения через OBDII разъем</h2>
+
+<p>Стандартный разъем OBDII (On-Board Diagnostics) расположен в салоне автомобиля, обычно под рулевой колонкой или возле блока предохранителей. Он имеет 16 контактов, но для подключения ноутбука чаще всего задействуются лишь несколько из них: питание, масса и линии передачи данных. Понимание распиновки необходимо, если вы планируете изготовить кабель самостоятельно или ремонтировать существующий.</p>
+
+<p>В таблице ниже приведена стандартная распиновка разъема OBDII, которая актуальна для большинства современных автомобилей, выпущенных после 2000 года. Обратите внимание, что расположение контактов может незначительно отличаться в зависимости от производителя адаптера.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Пин</th>
+<th>Описание</th>
+<th>Цвет провода (тип.)</th>
+<th>Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>GND</td>
+<td>Черный</td>
+<td>Заземление (Кузов)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Signal GND</td>
+<td>Черный/Белый</td>
+<td>Земля сигнала</td>
+</tr>
+<tr>
+<td>6</td>
+<td>CAN High</td>
+<td>Зеленый</td>
+<td>Высокий уровень CAN</td>
+</tr>
+<tr>
+<td>7</td>
+<td>K-Line</td>
+<td>Желтый</td>
+<td>Диагностическая линия K</td>
+</tr>
+<tr>
+<td>14</td>
+<td>CAN Low</td>
+<td>Синий</td>
+<td>Низкий уровень CAN</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>При самостоятельной пайке контактов важно использовать экранированный провод, чтобы минимизировать наводки от бортовой сети. Длина кабеля не должна превышать 2-3 метров, иначе возможны потери сигнала и ошибки связи. Если ноутбук не видит адаптер, первым делом проверьте целостность контактов 4, 5 и 7.</p>
+
+<details class="pb-accordion"><summary>Что делать, если в машине нет OBDII?</summary><div class="pb-accordion-body"><p>В автомобилях до 1996-2000 годов выпуска стандартный 16-пиновый разъем может отсутствовать. В таких случаях требуется изготовление переходника на специфический разъем производителя (например, 12-pin BMW, 3-pin Renault или 2-pin ВАЗ). Схемы таких переходников можно найти в мануалах к конкретным сканерам.</p></div></details>
+
+<h2 id="диагностика-через-wi-fi-и-bluetooth-модули">Диагностика через Wi-Fi и Bluetooth модули</h2>
+
+<p>Беспроводные технологии значительно упрощают процесс диагностики, избавляя от необходимости тянуть длинные кабели через весь салон. Адаптеры с поддержкой Wi-Fi создают локальную сеть, к которой ноутбук подключается как к обычной точке доступа. Это удобно, когда диагностический разъем расположен в труднодоступном месте, например, под бардачком или в багажнике.</p>
+
+<p>Bluetooth-соединение требует сопряжения устройств через стандартный интерфейс операционной системы Windows. После успешного спаривания система создает виртуальный COM-порт, который и выбирается в диагностической программе. Скорость передачи данных по Bluetooth ниже, чем по кабелю, что может быть критично при чтении больших массивов данных или адаптации систем.</p>
+
+<p>Основной проблемой беспроводного подключения является стабильность сигнала. Металлический кузов автомобиля может экранировать сигнал, а работающий двигатель создавать мощные электромагнитные помехи. Поэтому для первичной диагностики и сбора ошибок Wi-Fi подходит идеально, но для тонкой настройки или прошивки лучше использовать проводной интерфейс.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При подключении по Wi-Fi отключите мобильный интернет на ноутбуке, чтобы система не пыталась использовать его для доступа в сеть, что может вызвать конфликт IP-адресов с адаптером.</p></aside>
+
+<h2 id="прямое-подключение-к-блоку-управления-эбу">Прямое подключение к блоку управления (ЭБУ)</h2>
+
+<p>В случаях, когда штатный диагностический разъем не работает, поврежден или заблокирован, применяется прямое подключение к выводам электронного блока управления. Это метод для продвинутых пользователей, требующий вскрытия ЭБУ или доступа к его разъему в подкапотном пространстве. Здесь используются интерфейсы <strong>BDM</strong> (Background Debug Mode) или <strong>Bootloader</strong>.</p>
+
+<p>Для такого подключения понадобятся специальные программаторы, такие как <em>Kess V2</em>, <em>KTAG</em> или <em>Galletto</em>. Соединение осуществляется через тонкие щупы или пайку непосредственно к контактным площадкам на плате блока. Это позволяет восстановить "кирпич" после неудачной прошивки или считать данные напрямую из памяти микросхемы.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Прямое подключение к контактам ЭБУ без опыта работы с электроникой гарантирует вывод блока из строя. Кратковременное замыкание контактов питания на сигнальные линии мгновенно сжигает процессор.</p>
+</blockquote>
+
+<p>Процесс требует точного знания распиновки конкретного процессора (например, <em>Bosch ME7</em> или <em>Siemens Simos</em>). Ошибка в одном контакте может стоить владельцу дорогого ремонта. Кроме того, для работы в режиме Bootloader часто требуется специальное питание на столе или создание условий имитации работы двигателя.</p>
+
+<h2 id="типичные-ошибки-и-способы-их-устранения">Типичные ошибки и способы их устранения</h2>
+
+<p>Даже при правильном подключении пользователи часто сталкиваются с ошибками связи. Самая распространенная из них — "No Link" или "Adapter not found". Это означает, что программа не получает ответ от адаптера. Причины могут быть банальными: сел аккумулятор в машине, отошел контакт в разъеме OBD или сгорел предохранитель, отвечающий за диагностическую линию.</p>
+
+<p>Другая частая проблема — несовместимость протоколов. Если вы пытаетесь подключить ноутбук к старой машине с протоколом <em>KWP2000</em> через адаптер, настроенный только на <strong>CAN-bus</strong>, связи не будет. В таких случаях помогает ручной выбор протокола в настройках ПО или замена адаптера на более универсальный.</p>
+
+<p>Также стоит упомянуть проблему драйверов в Windows 10 и 11. Новые версии ОС часто блокируют установку драйверов для старых китайских адаптеров из-за отсутствия цифровой подписи. Для решения этой проблемы требуется временно отключить проверку подписей драйверов при загрузке системы или искать модифицированные версии драйверов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>90% проблем с подключением решаются проверкой предохранителя диагностической линии или переустановкой драйверов COM-порта с правами администратора.</p></aside>
+
+<details>
+<summary>Можно ли подключить ноутбук к машине через обычный USB-кабель?</summary>
+<p>Нет, напрямую соединить USB ноутбука и USB-порт магнитолы или телефона для диагностики нельзя. Протоколы несовместимы. Нужен специальный OBD-адаптер, который выступает посредником и преобразует сигналы.</p>
+</details>
+
+<details>
+<summary>Нужно ли заводить двигатель при подключении ноутбука?</summary>
+<p>Для чтения ошибок и просмотра параметров двигатель можно не заводить, достаточно включить зажигание. Однако для проведения тестов исполнительных механизмов (включение вентилятора, форсунок) или адаптации дроссельной заслонки двигатель должен работать на холостых оборотах.</p>
+</details>
+
+<details>
+<summary>Опасно ли оставлять ноутбук подключенным на долгое время?</summary>
+<p>Да, если ноутбук не подключен к зарядному устройству, а автомобиль стоит с включенным зажиганием, аккумулятор машины может разрядиться. Также существует риск скачков напряжения в бортовой сети при запуске стартера, что может повредить порт ноутбука.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/i/in/invertor-s-24-na-12-volt.html" class="pb-related-card">
+                <span class="pb-related-title">Инвертор с 24 на 12 вольт: схема, расчет и выбор для авто</span>
+                <span class="pb-related-desc">Как правильно выбрать инвертор с 24 на 12 вольт для грузовика или спецтехники. Расчет мощности, схем</span>
+            </a><a href="/articles/m/mi/migaet-sinyaya-lampochka-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Почему мигает синяя лампочка в машине? Причины и решения</span>
+                <span class="pb-related-desc">Разбираемся, что означает мигание синей лампочки в автомобиле: от неисправностей до штатных режимов.</span>
+            </a><a href="/articles/g/go/gorit-vosklitsatelnyj-znak-na-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Горит восклицательный знак на машине: причины и что делать в 2026 году</span>
+                <span class="pb-related-desc">Разбираемся, почему загорается восклицательный знак на приборной панели автомобиля: от низкого давле</span>
+            </a><a href="/articles/k/ka/kak-proverit-chto-razryazhaet-akkumulyator-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Как найти утечку тока в машине: 5 способов проверить аккумулятор</span>
+                <span class="pb-related-desc">Разряжается аккумулятор за ночь? Узнайте, как самостоятельно найти утечку тока в авто мультиметром, </span>
+            </a><a href="/articles/t/tr/transformator-na-zaryadnoe-ustrojstvo.html" class="pb-related-card">
+                <span class="pb-related-title">Трансформатор для зарядного устройства: выбор, схема, подключение</span>
+                <span class="pb-related-desc">Как правильно подобрать трансформатор для самодельного зарядного устройства? Схемы, расчёты и советы</span>
+            </a><a href="/articles/s/sl/slomalsya-klyuch-v-zamke-zazhiganiya-kak-vytashchit.html" class="pb-related-card">
+                <span class="pb-related-title">Сломался ключ в замке зажигания: как вытащить своими руками</span>
+                <span class="pb-related-desc">Ключ застрял в замке зажигания? Узнайте, как безопасно извлечь обломок, какие инструменты нужны и ко</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

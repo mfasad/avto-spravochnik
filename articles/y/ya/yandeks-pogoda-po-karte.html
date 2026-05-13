@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Яндекс Погода по карте: как пользоваться сервисом — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как работает Яндекс Погода по карте. Читайте о слоях осадков, точности прогноза, радаре и настройках для точного планирования.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/y/ya/yandeks-pogoda-po-karte.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Яндекс Погода по карте: как пользоваться сервисом">
+    <meta property="og:description" content="Узнайте, как работает Яндекс Погода по карте. Читайте о слоях осадков, точности прогноза, радаре и настройках для точного планирования.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Яндекс Погода по карте: как пользоваться сервисом</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-и-источники-данных">Принцип работы и источники данных</a></li><li><a href="#интерпретация-цветовых-слоев-и-обозначений">Интерпретация цветовых слоев и обозначений</a></li><li><a href="#настройка-отображения-и-слоев-карты">Настройка отображения и слоев карты</a></li><li><a href="#использование-радара-осадков-в-реальном-времени">Использование радара осадков в реальном времени</a></li><li><a href="#планирование-маршрутов-и-временная-шкала">Планирование маршрутов и временная шкала</a></li><li><a href="#точность-прогноза-и-факторы-влияния">Точность прогноза и факторы влияния</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-pomytsya-v-maj-sammer-kar.html">Как помыться в Май Саммер Кар: гид по мойкам самообслуживания</a></li><li><a href="/articles/s/sm/smotret-beregis-avtomobilya-v-tsvete.html">Как смотреть «Берегись автомобиля» в цвете: все способы и нюансы</a></li><li><a href="/articles/s/sb/sborka-modelej-iz-bumagi.html">Сборка моделей из бумаги: полное руководство для начинающих</a></li><li><a href="/articles/o/os/ostrov-valaam-na-mashine.html">Остров Валаам на машине: как доехать, паром, цены</a></li><li><a href="/articles/c/ch/chto-oznachaet-v-mashine-sync.html">Что означает Sync в машине: функции, ошибки и настройка</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Яндекс Погода по карте: подробный гид по слоям и радару</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-и-источники-данных">Принцип работы и источники данных</a></li><li><a href="#интерпретация-цветовых-слоев-и-обозначений">Интерпретация цветовых слоев и обозначений</a></li><li><a href="#настройка-отображения-и-слоев-карты">Настройка отображения и слоев карты</a></li><li><a href="#использование-радара-осадков-в-реальном-времени">Использование радара осадков в реальном времени</a></li><li><a href="#планирование-маршрутов-и-временная-шкала">Планирование маршрутов и временная шкала</a></li><li><a href="#точность-прогноза-и-факторы-влияния">Точность прогноза и факторы влияния</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В современном ритме жизни планирование дня часто зависит от капризов природы, и именно поэтому <strong>Яндекс Погода по карте</strong> стала незаменимым инструментом для миллионов пользователей. В отличие от сухих цифровых сводок, визуализация атмосферных явлений на интерактивном глобусе позволяет мгновенно оценить масштаб событий, будь то локальный ливень или циклон, охватывающий целые регионы. Технология <em>Метеум</em>, лежащая в основе сервиса, использует сложные алгоритмы машинного обучения для обработки данных с тысяч метеостанций, спутников и радаров.</p>
+
+<p>Главное преимущество картографического отображения заключается в возможности увидеть движение атмосферных фронтов в реальном времени. <mark>Точность определения границы дождя составляет до 500 метров</mark>, что критически важно для тех, кто планирует короткие поездки или прогулки. Пользователь больше не привязан к конкретному населенному пункту, а может свободно перемещаться по карте, изучая ситуацию в соседних районах или по пути следования.</p>
+
+<p>Интерфейс сервиса спроектирован таким образом, чтобы даже новичок мог легко разобраться в цветовых обозначениях и символах. Однако за простой картинкой скрывается колоссальный объем вычислительной мощности, обрабатывающей терабайты информации каждую секунду. Понимание того, как читать эти данные, поможет вам принимать более взвешенные решения, будь то выбор времени для выезда на дачу или планирование масштабного мероприятия на открытом воздухе.</p>
+
+<h2 id="принцип-работы-и-источники-данных">Принцип работы и источники данных</h2>
+
+<p>Фундаментом точности сервиса является совокупность разнородных источников информации, которые постоянно анализируются нейросетями. Основную массу данных предоставляют наземные метеостанции, однако их плотность неравномерна, поэтому критически важную роль играют <strong>радиолокационные данные</strong> и спутниковые снимки. Радары позволяют отслеживать движение облаков и осадков в реальном времени, создавая динамическую картину, которая обновляется каждые несколько минут.</p>
+
+<p>Технология <em>Метеум</em> отличается от классических методов тем, что она не просто интерполирует данные между станциями, а «учится» на истории наблюдений. Система анализирует, как вели себя атмосферные процессы в схожих условиях в прошлом, и корректирует прогноз в реальном времени. Это позволяет минимизировать ошибки, свойственные традиционным физическим моделям, особенно в условиях сложного рельефа или резкой смены погоды.</p>
+
+<p>Важно понимать, что карта — это не просто статичная картинка, а результат непрерывного вычислительного процесса. Алгоритмы учитывают влияние городской застройки, лесных массивов и водоемов на микроклимат. <strong>Локальные особенности</strong> могут существенно менять картину осадков, и именно детализация карты позволяет увидеть эти нюансы, которые часто упускаются в общих прогнозах для крупных городов.</p>
+
+<details class="pb-accordion"><summary>Откуда берется информация о грозах?</summary><div class="pb-accordion-body"><p>Данные о грозовой активности поступают с детекторов молний, которые фиксируют электромагнитные импульсы разрядов. Эти данные накладываются на карту облачности, позволяя строить треки движения грозовых фронтов с высокой точностью.</p></div></details>
+
+<h2 id="интерпретация-цветовых-слоев-и-обозначений">Интерпретация цветовых слоев и обозначений</h2>
+
+<p>Визуализация погодных явлений на карте строится на интуитивно понятной цветовой схеме, где каждый оттенок имеет свое значение. Для осадков используется градиент от светло-голубого до насыщенного фиолетового, что соответствует интенсивности явления. Светлые тона обозначают слабый дождь или снег, который может даже не достигать поверхности земли, испаряясь в нижних слоях атмосферы.</p>
+
+<p>Насыщенные красные и фиолетовые цвета сигнализируют об <strong>экстремальной интенсивности</strong> осадков, ливнях или грозах. В таких зонах видимость может быть сильно ограничена, а риск подтоплений или возникновения других опасных ситуаций значительно возрастает. Пользователям следует обращать особое внимание на границы этих цветовых зон, так как они часто имеют четкие контуры и быстро перемещаются.</p>
+
+<ul>
+<li>☔ <strong>Синий и голубой</strong> — слабый или умеренный дождь, морось, не требующие срочных действий.</li>
+<li>⛈️ <strong>Оранжевый и красный</strong> — сильный ливень, возможна гроза, рекомендуется воздержаться от поездок.</li>
+<li>❄️ <strong>Белый и серый</strong> — снегопад, метель,.</li>
+<li>🌪️ <strong>Фиолетовый</strong> — очень сильный ливень, град, шквалистый ветер, высокая опасность.</li>
+</ul>
+
+<p>Кроме осадков, карта позволяет отображать слои температуры, ветра и давления. Изотермы (линии равной температуры) помогают понять направление движения воздушных масс. <strong>Ветровые векторы</strong> показывают не только направление, но и силу воздушного потока, что особенно важно для авиамоделистов, парусников и строителей. Понимание этих слоев превращает карту из простого справочника в мощный аналитический инструмент.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Включите слой «Ветер» при планировании поездок на велосипеде или мотоцикле — это поможет выбрать маршрут с меньшим сопротивлением воздуха.</p></aside>
+
+<h2 id="настройка-отображения-и-слоев-карты">Настройка отображения и слоев карты</h2>
+
+<p>Гибкость настроек карты позволяет каждому пользователю адаптировать отображение информации под свои текущие нужды. Переключение между слоями осуществляется через меню, расположенное в углу экрана, где можно выбрать интересующий параметр. Доступны режимы отображения осадков, температуры у поверхности, температуры «по ощущениям», а также направления и силы ветра.</p>
+
+<p>Для тех, кто интересуется долгосрочными тенденциями, полезен слой атмосферного давления. <strong>Изобары</strong> (линии равного давления) помогают идентифицировать центры циклонов и антициклонов. Низкое давление обычно ассоциируется с пасмурной и дождливой погодой, в то время как высокий антициклон приносит ясность и спокойствие, хотя зимой это может означать сильные морозы.</p>
+
+<div class="pb-poll" id="poll-0dcecef0"><div class="pb-poll-question">📊 Какой слой карты вы используете чаще всего?</div><div class="pb-poll-option" data-poll="0dcecef0" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Осадки и грозы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0dcecef0" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Температура воздуха</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0dcecef0" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Ветер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0dcecef0" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Атмосферное давление</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Важной функцией является возможность выбора временной шкалы. Ползунок времени позволяет прокрутить прогноз вперед на несколько часов или даже суток, чтобы увидеть, как будет меняться ситуация. Это помогает спланировать activities заранее, зная, когда именно начнется дождь или когда выглянет солнце. <em>Анимация</em> движения облаков и фронтов дает полное представление о динамике процессов.</p>
+
+<h2 id="использование-радара-осадков-в-реальном-времени">Использование радара осадков в реальном времени</h2>
+
+<p>Радар осадков — это, пожалуй, самый востребованный инструмент для тех, кто хочет знать, что происходит прямо сейчас. Он отображает данные с метеорадаров, показывая фактическое наличие осадков в облаках и их движение. В отличие от прогноза, который является вероятностной моделью, радар показывает <strong>объективную реальность</strong> текущего момента с небольшой задержкой на обработку сигнала.</p>
+
+<p>При работе с радаром важно учитывать его ограничения: он видит осадки в облаке, но они могут не достигать земли из-за испарения, особенно в жаркую погоду. Также рельеф местности может создавать «мертвые зоны» или, наоборот, эхо-сигналы, которые интерпретируются как осадки. Поэтому радар лучше всего использовать в сочетании с общим прогнозом и визуальным наблюдением.</p>
+
+<p>Функция «Сейчас на карте» особенно полезна в период летних гроз, когда ливень может начаться внезапно и закончиться через 15 минут. Глядя на движение цветного пятна на радаре, можно точно рассчитать, успеете ли вы добежать до машины или лучше переждать непогоду в кафе. Это экономит время и сохраняет сухими одежду и обувь.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед выходом на улицу</h4><label class="check-item"><input type="checkbox"><span>Посмотреть текущий слой осадков</span></label><label class="check-item"><input type="checkbox"><span>Проверить направление движения облаков</span></label><label class="check-item"><input type="checkbox"><span>Оценить интенсивность по цвету</span></label><label class="check-item"><input type="checkbox"><span>Спрогнозировать время прибытия фронта</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="планирование-маршрутов-и-временная-шкала">Планирование маршрутов и временная шкала</h2>
+
+<p>Одной из ключевых возможностей сервиса является интеграция погодных данных с навигацией и планированием маршрутов. Зная точное время начала осадков в конкретной точке, можно скорректировать время выезда. Временная шкала позволяет «промотать» погоду вперед, чтобы увидеть, не застанет ли вас дождь в пути или, наоборот, распогодится ли к моменту прибытия.</p>
+
+<p>Для водителей и путешественников критически важно учитывать прогноз ветра и видимости. Сильный боковой ветер может быть опасен для высоких автомобилей и фур, а туман, который также отображается на карте, требует снижения скорости. <strong>Планирование</strong> с учетом этих факторов делает поездку не только комфортнее, но и безопаснее.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение для планирования</th>
+<th>Рекомендация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Интенсивность осадков</td>
+<td>мм/час</td>
+<td>При >5 мм/час взять зонт или отложить выход</td>
+</tr>
+<tr>
+<td>Скорость ветра</td>
+<td>м/с</td>
+<td>При >10 м/с быть осторожным с открытым огнем</td>
+</tr>
+<tr>
+<td>Температура</td>
+<td>°C</td>
+<td>Одеваться по принципу многослойности</td>
+</tr>
+<tr>
+<td>Видимость</td>
+<td>км</td>
+<td>При <1 км включить противотуманки</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Используя временную шкалу, можно также оценить длительность неблагоприятного периода. Если видно, что ливень продлится всего 20 минут, возможно, есть смысл подождать. Если же фронт затяжной, лучше сразу изменить планы. Такая <em>гибкость</em> в принятии решений доступна только при использовании детальных картографических сервисов.</p>
+
+<h2 id="точность-прогноза-и-факторы-влияния">Точность прогноза и факторы влияния</h2>
+
+<p>Вопрос точности погодных прогнозов всегда остается открытым, однако современные технологии позволяют достигать впечатляющих результатов на коротких дистанциях. <strong>Краткосрочный прогноз</strong> (на 1-3 часа) основанный на экстраполяции радарных данных, имеет высокую степень достоверности. Однако чем дальше мы заглядываем в будущее, тем больше влияние хаотичности атмосферных процессов.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Локальные погодные явления, такие как смерчи, шквалы или внезапные градовые облака, могут формироваться быстрее, чем обновляются модели. Всегда оценивайте обстановку визуально, даже если прогноз благоприятный.</p>
+</blockquote>
+
+<p>На точность влияют множество факторов: плотность сети метеонаблюдений, качество радарного покрытия и сложность рельефа. В горной местности прогноз всегда менее точен из-за сильных вертикальных движений воздуха и микроклиматических особенностей. В крупных городах эффект «теплового острова» также вносит свои коррективы, делая температуру в центре выше, чем на окраинах.</p>
+
+<p>Сервис постоянно обучается, анализируя сбываемость своих прогнозов. Если модель регулярно ошибается в определенном районе, алгоритмы вносят поправки. Пользователи также могут участвовать в улучшении сервиса, отмечая фактическую погоду, что помогает калибровать систему. <strong>Обратная связь</strong> от сообщества — важный элемент повышения качества данных.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Наибольшую точность прогноз имеет на временном отрезке до 3 часов и на расстояниях до 50 км от центра наблюдений.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему на карте идет дождь, а на улице сухо?</summary>
+<p>Это явление называется <em>вирга</em>. Осадки выпадают из облака, но не достигают поверхности земли, полностью испаряясь в сухом слое воздуха под облаком. Радар видит капли в облаке, поэтому показывает осадки, но физически дождя нет.</p>
+</details>
+
+<details>
+<summary>Как часто обновляется информация на карте?</summary>
+<p>Слой осадков обновляется в реальном времени с радаров каждые несколько минут. Прогнозные модели пересчитываются несколько раз в сутки, но краткосрочный прогноз корректируется постоянно на основе текущих наблюдений.</p>
+</details>
+
+<details>
+<summary>Можно ли смотреть погоду по карте без интернета?</summary>
+<p>Нет, для отображения динамической карты и слоев требуется постоянное соединение с сервером. Однако в приложении можно сохранить последний загруженный прогноз для офлайн-доступа, но карта работать не будет.</p>
+</details>
+
+<details>
+<summary>Что означают цифры на карте ветра?</summary>
+<p>Цифры обозначают скорость ветра в метрах в секунду (м/с) или километрах в час, в зависимости от настроек отображения. Цвет стрелок также соответствует силе ветра: от зеленого (слабый) до красного (штормовой).</p>
+</details>
+
+<details>
+<summary>Работает ли сервис за пределами России?</summary>
+<p>Да, карты и прогнозы доступны для большинства стран мира. Однако плотность метеостанций и радарное покрытие могут отличаться, что влияет на детализацию и точность данных в отдельных регионах.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-pomytsya-v-maj-sammer-kar.html" class="pb-related-card">
+                <span class="pb-related-title">Как помыться в Май Саммер Кар: гид по мойкам самообслуживания</span>
+                <span class="pb-related-desc">Полный разбор процедуры мойки в My Summer Car: выбор мойки, использование веника, оплата и скрытые ф</span>
+            </a><a href="/articles/s/sm/smotret-beregis-avtomobilya-v-tsvete.html" class="pb-related-card">
+                <span class="pb-related-title">Как смотреть «Берегись автомобиля» в цвете: все способы и нюансы</span>
+                <span class="pb-related-desc">Где найти цветную версию культовой комедии Эльдара Рязанова, как отличить реставрацию от колоризации</span>
+            </a><a href="/articles/s/sb/sborka-modelej-iz-bumagi.html" class="pb-related-card">
+                <span class="pb-related-title">Сборка моделей из бумаги: полное руководство для начинающих</span>
+                <span class="pb-related-desc">Как начать собирать бумажные модели? Лучшие инструменты, типы бумаги и секреты склейки для создания </span>
+            </a><a href="/articles/o/os/ostrov-valaam-na-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Остров Валаам на машине: как доехать, паром, цены</span>
+                <span class="pb-related-desc">Поездка на Валаам на машине: расписание паромов из Сортавалы, цены на билеты, правила въезда и совет</span>
+            </a><a href="/articles/c/ch/chto-oznachaet-v-mashine-sync.html" class="pb-related-card">
+                <span class="pb-related-title">Что означает Sync в машине: функции, ошибки и настройка</span>
+                <span class="pb-related-desc">Полный разбор функции Sync в автомобиле. Узнайте, как управлять мультимедиа голосом, устранять ошибк</span>
+            </a><a href="/articles/l/le/leningradskij-vokzal-gde-vysadit-passazhirov.html" class="pb-related-card">
+                <span class="pb-related-title">Ленинградский вокзал: где высадить пассажиров — парковки и схемы</span>
+                <span class="pb-related-desc">Где лучше высадить пассажиров на Ленинградском вокзале в 2026 году. Карта зон, правила остановок, та</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

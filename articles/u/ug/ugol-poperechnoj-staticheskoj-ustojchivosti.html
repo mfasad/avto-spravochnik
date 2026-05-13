@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Угол поперечной статической устойчивости: расчет и влияние — Авто Справочник</title>
+    <meta name="description" content="Что такое угол поперечной статической устойчивости автомобиля. Факторы влияния, формулы расчета и методы повышения стабильности для безопасности.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/u/ug/ugol-poperechnoj-staticheskoj-ustojchivosti.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Угол поперечной статической устойчивости: расчет и влияние">
+    <meta property="og:description" content="Что такое угол поперечной статической устойчивости автомобиля. Факторы влияния, формулы расчета и методы повышения стабильности для безопасности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/khodovaya-i-rulevoe/">Ходовая и Рулевое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Угол поперечной статической устойчивости: расчет и влияние</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физическая-сущность-и-определение-параметра">Физическая сущность и определение параметра</a></li><li><a href="#факторы-влияющие-на-устойчивость-транспортного-средства">Факторы, влияющие на устойчивость транспортного средства</a></li><li><a href="#математическая-модель-и-расчет-угла">Математическая модель и расчет угла</a></li><li><a href="#влияние-загрузки-и-распределения-масс">Влияние загрузки и распределения масс</a></li><li><a href="#сравнение-статической-и-динамической-устойчивости">Сравнение статической и динамической устойчивости</a></li><li><a href="#методы-повышения-поперечной-устойчивости">Методы повышения поперечной устойчивости</a></li><li><a href="#практические-рекомендации-для-водителей">Практические рекомендации для водителей</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/v/vi/vibratsiya-v-rule-pri-dvizhenii-prichiny.html">Вибрация в руле при движении: причины и способы устранения</a></li><li><a href="/articles/s/sh/shrus-gde-nakhoditsya-v-mashine.html">ШРУС в машине: где находится и как проверить? Полное руководство</a></li><li><a href="/articles/u/us/usilitel-rulya-elektricheskij-ili-gidravlicheskij-kakoj-luchshe.html">Электрический или гидравлический усилитель руля — что лучше выбрать в 2026?</a></li><li><a href="/articles/s/sk/skolko-shrusov-v-mashine.html">Сколько ШРУСов в машине: полный расчет и диагностика</a></li><li><a href="/articles/c/ch/chto-takoe-pylnik-v-mashine.html">Пыльник в машине: что это, зачем нужен и как проверить?</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Угол поперечной статической устойчивости автомобиля</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физическая-сущность-и-определение-параметра">Физическая сущность и определение параметра</a></li><li><a href="#факторы-влияющие-на-устойчивость-транспортного-средства">Факторы, влияющие на устойчивость транспортного средства</a></li><li><a href="#математическая-модель-и-расчет-угла">Математическая модель и расчет угла</a></li><li><a href="#влияние-загрузки-и-распределения-масс">Влияние загрузки и распределения масс</a></li><li><a href="#сравнение-статической-и-динамической-устойчивости">Сравнение статической и динамической устойчивости</a></li><li><a href="#методы-повышения-поперечной-устойчивости">Методы повышения поперечной устойчивости</a></li><li><a href="#практические-рекомендации-для-водителей">Практические рекомендации для водителей</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Безопасность движения транспортного средства напрямую зависит от его способности сопротивляться опрокидыванию при прохождении поворотов или движении по наклонной плоскости. Именно этот критический параметр в теории автомобиля и инженерной практике носит название <strong>угол поперечной статической устойчивости</strong>. Он определяет предельное значение наклона дороги или поперечного ускорения, при котором автомобиль еще сохраняет контакт всех колес с опорной поверхностью.</p>
+
+<p>Понимание физики этого процесса необходимо не только инженерам-конструкторам, но и опытным водителям, особенно тем, кто управляет внедорожниками или грузовым транспортом. Знание факторов, влияющих на устойчивость, позволяет предсказать поведение машины в экстремальных ситуациях и избежать аварий. В данной статье мы подробно разберем механику процесса, методы расчета и способы оптимизации этого показателя.</p>
+
+<h2 id="физическая-сущность-и-определение-параметра">Физическая сущность и определение параметра</h2>
+
+<p>Угол поперечной статической устойчивости — это максимальный угол наклона поперечной плоскости дороги, при котором автомобиль, находящийся в неподвижном состоянии, еще не опрокидывается. Говоря простым языком, это градус, до которого можно наклонить машину вбок, прежде чем она перевернется через борт. Этот показатель является фундаментальным для оценки <strong>статической устойчивости</strong> любого транспортного средства.</p>
+
+<p>В основе явления лежит взаимодействие двух основных сил: силы тяжести, приложенной к центру масс автомобиля, и реакции опоры. Пока проекция центра тяжести находится внутри опорного контура (площади, образованной пятнами контакта колес), машина устойчива. Как только вектор силы тяжести выходит за пределы этого контура, возникает опрокидывающий момент.</p>
+
+<p>Важно отметить, что статическая устойчивость рассматривается в идеальных условиях, когда отсутствуют динамические нагрузки от ветра, инерции при разгоне или торможении. Однако именно этот базовый параметр задает "потолок" безопасности для <em>динамической устойчивости</em> при движении. Чем больше статический угол, тем выше запас прочности при маневрировании.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для грузовых автомобилей с высоким центром тяжести этот параметр является критическим при планировании маршрутов по горным серпантинам.</p></aside>
+
+<h2 id="факторы-влияющие-на-устойчивость-транспортного-средства">Факторы, влияющие на устойчивость транспортного средства</h2>
+
+<p>На величину угла поперечной устойчивости влияет множество конструктивных и эксплуатационных факторов. Основным из них является высота расположения <strong>центра тяжести</strong>. Чем выше он находится над дорогой, тем меньше угол, при котором произойдет опрокидывание. Именно поэтому спортивные автомобили делают максимально низкими, а грузовики с высоким кузовом требуют особой осторожности.</p>
+
+<p>Вторым критическим параметром является колея автомобиля — расстояние между центрами следов шин на дороге. Увеличение ширины колеи напрямую повышает устойчивость, расширяя опорный контур. Также существенную роль играет тип подвески и жесткость стабилизаторов <em>поперечной устойчивости</em>, которые перераспределяют вес между колесами при крене кузова.</p>
+
+<ul>
+<li>🚗 <strong>Высота центра масс:</strong> главный враг устойчивости, зависящий от загрузки и конструкции.</li>
+<li>📏 <strong>Ширина колеи:</strong> увеличение расстояния между колесами повышает стабильность.</li>
+<li>🛞 <strong>Жесткость шин:</strong> мягкие шины увеличивают крен, снижая эффективную устойчивость.</li>
+<li>⚖️ <strong>Распределение веса:</strong> неравномерная загрузка смещает центр тяжести в сторону.</li>
+</ul>
+
+<div class="pb-poll" id="poll-9003e176"><div class="pb-poll-question">📊 Что важнее для внедорожника?</div><div class="pb-poll-option" data-poll="9003e176" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Низкий центр тяжести</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9003e176" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Широкая колея</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9003e176" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Электронные системы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="9003e176" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Мощный двигатель</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="математическая-модель-и-расчет-угла">Математическая модель и расчет угла</h2>
+
+<p>Для инженеров и студентов технических вузов важно понимать, как рассчитывается данный параметр математически. Формула для определения угла поперечной статической устойчивости ($\beta$) выглядит следующим образом: $\tan(\beta) = \frac{B}{2h_g}$, где $B$ — это колея автомобиля, а $h_g$ — высота центра тяжести. Из этой зависимости видно, что для увеличения угла нужно либо расширять колею, либо опускать центр масс.</p>
+
+<p>При проведении расчетов необходимо учитывать деформацию шин и элементов подвески. В реальности автомобиль начинает крениться еще до наступления момента опрокидывания, что изменяет геометрические параметры. Поэтому в формулы часто вводят поправочные коэффициенты, учитывающие <strong>жесткость подвески</strong> и упругость покрышек.</p>
+
+<p>Современное компьютерное моделирование позволяет рассчитывать эти параметры с высокой точностью, учитывая сложные взаимодействия узлов. Однако базовые формулы остаются неизменными и служат основой для первичной оценки безопасности конструкции <em>шасси</em>.</p>
+
+<details class="pb-accordion"><summary>Почему расчеты могут отличаться от реальности?</summary><div class="pb-accordion-body"><p>В реальных условиях дорога не всегда идеально ровная, а шины имеют разную степень износа, что вносит погрешности в теоретические расчеты.</p></div></details>
+
+<h2 id="влияние-загрузки-и-распределения-масс">Влияние загрузки и распределения масс</h2>
+
+<p>Эксплуатационные условия часто вносят свои коррективы в заводские параметры устойчивости. Загрузка автомобиля багажом или пассажирами неизбежно меняет положение центра тяжести. Если груз размещен на крыше или в верхнем багажнике, <strong>центр тяжести</strong> поднимается, что критически снижает угол устойчивости и повышает риск опрокидывания в повороте.</p>
+
+<p>Особое внимание следует уделять боковой перегрузке. Если с одной стороны автомобиля вес значительно больше, чем с другой, проекция центра тяжести смещается в сторону более тяжелой части. Это уменьшает плечо устойчивости с этой стороны и делает транспортное средство уязвимым даже при небольших углах наклона дороги.</p>
+
+<p>Для сохранения безопасности рекомендуется придерживаться правил размещения груза. Тяжелые предметы следует укладывать как можно ниже и ближе к продольной оси симметрии автомобиля. Это позволяет минимизировать негативное влияние на <em>поперечную устойчивость</em>.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип загрузки</th>
+<th>Влияние на центр тяжести</th>
+<th>Риск опрокидывания</th>
+<th>Рекомендация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Пустой салон</td>
+<td>Стандартное положение</td>
+<td>Низкий</td>
+<td>Соблюдать скоростной режим</td>
+</tr>
+<tr>
+<td>Груз на крыше</td>
+<td>Сильное поднятие вверх</td>
+<td>Высокий</td>
+<td>Снижать скорость в поворотах</td>
+</tr>
+<tr>
+<td>Перекос на бок</td>
+<td>Смещение в сторону</td>
+<td>Критический</td>
+<td>Равномерно распределить вес</td>
+</tr>
+<tr>
+<td>Полная загрузка багажника</td>
+<td>Незначительное поднятие</td>
+<td>Средний</td>
+<td>Контролировать торможение</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Правильное распределение груза важнее общей массы автомобиля для сохранения устойчивости.</p></aside>
+
+<h2 id="сравнение-статической-и-динамической-устойчивости">Сравнение статической и динамической устойчивости</h2>
+
+<p>Часто возникает путаница между статической устойчивостью и поведением автомобиля в движении. Статический угол характеризует предельное состояние покоя. Однако при движении в игру вступают силы инерции, центробежные силы и аэродинамика. <strong>Динамическая устойчивость</strong> обычно ниже статической из-за действия этих дополнительных факторов.</p>
+
+<p>При прохождении поворота на центробежную силу накладывается сила тяжести. Если их равнодействующая выйдет за пределы опорного контура раньше, чем это предсказывает статический расчет, автомобиль опрокинется. Поэтому запас по статическому углу должен быть существенным, чтобы компенсировать динамические нагрузки.</p>
+
+<p>Современные системы электронной стабилизации (ESP, ESC) работают на предотвращение потери динамической устойчивости, подтормаживая колеса и снижая мощность двигателя. Однако они не могут изменить физический предел, заданный конструкцией и <em>статическими параметрами</em>.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед поездкой в горы</h4><label class="check-item"><input type="checkbox"><span>Проверить давление в шинах</span></label><label class="check-item"><input type="checkbox"><span>Закрепить груз в багажнике</span></label><label class="check-item"><input type="checkbox"><span>Проверить работу стабилизаторов</span></label><label class="check-item"><input type="checkbox"><span>Оценить высоту центра тяжести</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="методы-повышения-поперечной-устойчивости">Методы повышения поперечной устойчивости</h2>
+
+<p>Существует несколько способов улучшить показатели устойчивости автомобиля. Наиболее эффективный, но сложный в реализации — конструктивное изменение геометрии шасси, например, расширение колеи или установка более широких дисков. Это физически увеличивает базу опоры и повышает предельный <strong>угол крена</strong>.</p>
+
+<p>Более доступный метод — установка более жестких стабилизаторов поперечной устойчивости и пружин с большей жесткостью. Это уменьшает крен кузова при поворотах, сохраняя колеса прижатыми к дороге и поддерживая оптимальное распределение веса. Также важным элементом являются низкопрофильные шины с жесткой боковиной.</p>
+
+<p>Не стоит забывать и о программных методах. Настройка систем активной безопасности позволяет раньше реагировать на критические ситуации. Однако ни одна электроника не сможет исправить фундаментальные ошибки в загрузке или конструкции, если <mark>центр тяжести</mark> находится слишком высоко.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Установка нештатных проставок для подъема кузова (лифт) без соответствующего укрепления подвески может критически снизить угол поперечной устойчивости и сделать автомобиль опасным для эксплуатации.</p>
+</blockquote>
+
+<h2 id="практические-рекомендации-для-водителей">Практические рекомендации для водителей</h2>
+
+<p>Знание теории должно применяться на практике. Водителю следует помнить, что высокий автомобиль (внедорожник, микроавтобус) имеет меньший запас устойчивости. При движении по скользкой дороге или грунту риск бокового соскальзывания может наступить раньше, чем опрокидывание, но на твердом покрытии с высоким сцеплением риск переворота становится реальным.</p>
+
+<p>При буксировке прицепа или установке оборудования на крышу (автобоксы, лодки) необходимо корректировать стиль вождения. Скорость прохождения поворотов должна быть снижена пропорционально росту центра тяжести. Резкие перестроения при высокой загрузке верхних ярусов могут стать фатальными.</p>
+
+<details class="pb-accordion"><summary>Как проверить устойчивость самостоятельно?</summary><div class="pb-accordion-body"><p>Существует метод "шатания", но он субъективен. Точные данные можно получить только на стенде или рассчитав по формулам, зная точный вес и габариты.</p></div></details>
+
+<p>Регулярно проверяйте состояние подвески. Изношенные амортизаторы или просевшие пружины увеличивают амплитуду кренов, что негативно сказывается на динамической составляющей устойчивости. Содержание ходовой части в исправном состоянии — залог вашей безопасности.</p>
+
+<details>
+<summary>Как влияет ширина шин на устойчивость?</summary>
+<p>Более широкие шины увеличивают фактическую ширину опорного контура, что теоретически повышает устойчивость. Однако главное влияние оказывает профиль шины: низкий профиль уменьшает боковой уклон покрышки, снижая общий крен кузова.</p>
+</details>
+
+<details>
+<summary>Можно ли увеличить угол устойчивости без переделки авто?</summary>
+<p>Кардинально увеличить — нет. Можно лишь оптимизировать загрузку (опустить центр тяжести) и заменить элементы подвески на более жесткие, что уменьшит крены, но не изменит геометрический предел опрокидывания.</p>
+</details>
+
+<details>
+<summary>Почему автобусы часто переворачиваются?</summary>
+<p>Автобусы имеют очень высокий центр тяжести относительно ширины колеи. При резком маневре или сильном боковом ветре равнодействующая сил быстро выходит за пределы узкого опорного контура, приводя к опрокидыванию.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/v/vi/vibratsiya-v-rule-pri-dvizhenii-prichiny.html" class="pb-related-card">
+                <span class="pb-related-title">Вибрация в руле при движении: причины и способы устранения</span>
+                <span class="pb-related-desc">Почему вибрирует руль на разных скоростях? Полный гид по диагностике: балансировка, подвеска, тормоз</span>
+            </a><a href="/articles/s/sh/shrus-gde-nakhoditsya-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">ШРУС в машине: где находится и как проверить? Полное руководство</span>
+                <span class="pb-related-desc">Где находится ШРУС в автомобиле, его устройство, признаки неисправности и способы диагностики. Подро</span>
+            </a><a href="/articles/u/us/usilitel-rulya-elektricheskij-ili-gidravlicheskij-kakoj-luchshe.html" class="pb-related-card">
+                <span class="pb-related-title">Электрический или гидравлический усилитель руля — что лучше выбрать в 2026?</span>
+                <span class="pb-related-desc">Сравнение ЭУР и ГУР по надёжности, стоимости ремонта, комфорту и экономичности. Какой усилитель руля</span>
+            </a><a href="/articles/s/sk/skolko-shrusov-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько ШРУСов в машине: полный расчет и диагностика</span>
+                <span class="pb-related-desc">Узнайте, сколько ШРУСов в автомобиле и как выявить неисправность. Полный разбор конструкции, ресурса</span>
+            </a><a href="/articles/c/ch/chto-takoe-pylnik-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Пыльник в машине: что это, зачем нужен и как проверить?</span>
+                <span class="pb-related-desc">Пыльник — незаметный, но критичный элемент авто. Узнайте, где он стоит, как работает, признаки износ</span>
+            </a><a href="/articles/k/ka/kak-postavit-mashinu-na-dyby.html" class="pb-related-card">
+                <span class="pb-related-title">Как поставить машину на дыбы: безопасная инструкция 2026</span>
+                <span class="pb-related-desc">Пошаговое руководство по подъёму автомобиля на дыбы: выбор оборудования, техника безопасности, ошибк</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

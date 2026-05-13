@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как перевести обороты в линейную скорость: формулы и калькулятор — Авто Справочник</title>
+    <meta name="description" content="Полный гид по переводу оборотов в минуту (RPM) в линейную скорость (м/с, км/ч). Формулы, примеры расчетов для колес и валов, таблица соответствий.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/o/ob/oboroty-v-linejnuyu-skorost.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как перевести обороты в линейную скорость: формулы и калькулятор">
+    <meta property="og:description" content="Полный гид по переводу оборотов в минуту (RPM) в линейную скорость (м/с, км/ч). Формулы, примеры расчетов для колес и валов, таблица соответствий.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как перевести обороты в линейную скорость: формулы и калькулятор</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#физический-смысл-и-базовые-формулы">Физический смысл и базовые формулы</a></li><li><a href="#расчет-скорости-для-колес-и-транспортных-средств">Расчет скорости для колес и транспортных средств</a></li><li><a href="#специфика-работы-с-ременными-и-цепными-передачами">Специфика работы с ременными и цепными передачами</a></li><li><a href="#обработка-материалов-скорость-резания-и-подачи">Обработка материалов: скорость резания и подачи</a></li><li><a href="#влияние-передаточных-чисел-на-итоговую-скорость">Влияние передаточных чисел на итоговую скорость</a></li><li><a href="#практические-примеры-и-таблица-соответствий">Практические примеры и таблица соответствий</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kakaya-byvaet-prochnost-boltov.html">Прочность болтов: классы, маркировка и применение</a></li><li><a href="/articles/k/ka/kak-vyglyadit-svechnoj-klyuch-dlya-avtomobilya.html">Свечной ключ для авто: фото, виды и как выбрать правильный</a></li><li><a href="/articles/k/ka/kak-podklyuchit-kar-skaner-k-avtomobilyu-s-telefona.html">Как подключить CAR-сканер к машине через телефон: пошаговый гайд</a></li><li><a href="/articles/d/dl/dlya-chego-nuzhen-tros.html">Трос для автомобиля: 10 способов применения + как выбрать правильно</a></li><li><a href="/articles/r/ro/rotornaya-polirovalnaya-mashinka-dlya-avto.html">Роторная полировальная машинка для авто: выбор и техника</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Перевод оборотов в линейную скорость: точные расчеты для механики</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#физический-смысл-и-базовые-формулы">Физический смысл и базовые формулы</a></li><li><a href="#расчет-скорости-для-колес-и-транспортных-средств">Расчет скорости для колес и транспортных средств</a></li><li><a href="#специфика-работы-с-ременными-и-цепными-передачами">Специфика работы с ременными и цепными передачами</a></li><li><a href="#обработка-материалов-скорость-резания-и-подачи">Обработка материалов: скорость резания и подачи</a></li><li><a href="#влияние-передаточных-чисел-на-итоговую-скорость">Влияние передаточных чисел на итоговую скорость</a></li><li><a href="#практические-примеры-и-таблица-соответствий">Практические примеры и таблица соответствий</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>В инженерной практике и повседневной жизни часто возникает необходимость связать вращательное движение с поступательным. Когда мы говорим о скорости автомобиля, мы подразумеваем, насколько быстро он перемещается по дороге в метрах в секунду или километрах в час. Однако двигатель и трансмиссия оперируют совершенно другими величинами — частотой вращения валов, измеряемой в оборотах в минуту (RPM). Понимание того, как <strong>конвертировать</strong> эти параметры, является ключом к правильному подбору оборудования.</p>
+
+<p>Фундаментальная связь между этими величинами базируется на геометрии вращающегося объекта. Будь то колесо погрузчика, шкив конвейера или режущий диск станка, именно его диаметр определяет, какое расстояние будет пройдено за один полный оборот. Ошибка в расчетах на этом этапе может привести к тому, что механизм будет работать неэффективно или даже выйдет из строя из-за превышения допустимых скоростных режимов.</p>
+
+<p>В этой статье мы разберем математический аппарат, необходимый для точных вычислений, и рассмотрим практические нюансы, которые часто упускают из виду при теоретическом подходе. Вы научитесь быстро переводить <em>RPM</em> в линейные единицы измерения, используя простые формулы, доступные каждому техническому специалисту.</p>
+
+<h2 id="физический-смысл-и-базовые-формулы">Физический смысл и базовые формулы</h2>
+<p>Чтобы понять суть процесса перевода, необходимо представить, что происходит с точкой на краю вращающегося круга. За один полный оборот эта точка проходит путь, равный длине окружности. Длина окружности вычисляется по формуле <code>L = π × D</code>, где D — это диаметр. Следовательно, если вал делает N оборотов в минуту, то линейное расстояние, которое пройдет точка за минуту, будет равно произведению длины окружности на количество оборотов.</p>
+
+<p>Основная формула для расчета линейной скорости (V) выглядит следующим образом: <code>V = π × D × n</code>. Здесь n — это частота вращения. Однако в технике мы редко используем скорость в метрах в минуту. Чаще всего требуется получить результат в метрах в секунду (м/с) или километрах в час (км/ч). Для этого необходимо ввести коэффициенты пересчета времени. Например, для перевода в секунды результат нужно разделить на 60.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При подстановке значений в формулу критически важно следить за размерностями. Если диаметр задан в миллиметрах, а скорость нужна в метрах в секунду, диаметр обязательно нужно предварительно разделить на 1000. Иначе вы получите результат, превышающий реальный в тысячу раз.</p>
+</blockquote>
+
+<p>Рассмотрим упрощенную версию формулы для перевода оборотов в минуту в метры в секунду, если диаметр дан в миллиметрах:</p>
+<pre><code>V (м/с) = (π × D (мм) × n (об/мин)) / 60000</code></pre>
+<p>Использование коэффициента 60000 в знаменателе позволяет сразу учесть перевод миллиметров в метры (деление на 1000) и минут в секунды (деление на 60). Это стандартный инженерный подход, позволяющий минимизировать количество промежуточных вычислений и снизить риск арифметической ошибки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Запоминалка: Число 60000 в знаменателе — это "священная константа" для перевода мм/мин в м/с. Выучив её, вы сэкономите время на калькуляторе.</p></aside>
+
+<h2 id="расчет-скорости-для-колес-и-транспортных-средств">Расчет скорости для колес и транспортных средств</h2>
+<p>В автомобильной и спецтехнике задача часто стоит обратная: зная требуемую скорость движения, подобрать передаточные числа или определить необходимые обороты двигателя. Здесь вступает в силу понятие <strong>качения</strong>. Реальное линейное перемещение колеса может отличаться от теоретического из-за проскальзывания, деформации шины под нагрузкой или работы на мягком грунте.</p>
+
+<p>Для точного расчета необходимо использовать <em>динамический радиус</em> колеса, а не статический, указанный в спецификации шины. Под нагрузкой колесо сплющивается, и эффективный радиус качения уменьшается. Это приводит к тому, что при тех же оборотах транспортное средство пройдет меньшее расстояние, чем предсказывает расчет по внешнему диаметру.</p>
+
+<ul>
+<li>🚗 Для легковых автомобилей погрешность из-за деформации шины обычно составляет 2-3%.</li>
+<li>🚜 Для тяжелой техники на пневмоколесах с низким давлением потеря скорости может достигать 10-15%.</li>
+<li>🚜 Для гусеничной техники расчет ведется по шагу гусеницы и количеству зубьев ведущей звезды, что дает более стабильный результат.</li>
+</ul>
+
+<p>При проектировании систем управления, например, для роботизированных платформ или автономных тележек, важно учитывать коэффициент трения. Если сцепление с поверхностью низкое, часть энергии вращения будет уходить на пробуксовку, и реальная линейная скорость будет ниже расчетной. В таких случаях в формулы вводят <strong>поправочный коэффициент</strong>, empirically determined (опытно установленный) для конкретной пары "покрытие-колесо".</p>
+
+<div class="pb-poll" id="poll-6993b07d"><div class="pb-poll-question">📊 Какой тип привода вас интересует больше всего?</div><div class="pb-poll-option" data-poll="6993b07d" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Электрический мотор-колесо</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6993b07d" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Гидравлический мотор</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6993b07d" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">ДВС через редуктор</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6993b07d" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Прямой привод</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="6993b07d" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="специфика-работы-с-ременными-и-цепными-передачами">Специфика работы с ременными и цепными передачами</h2>
+<p>В механизмах, где вращение передается от двигателя к исполнительному органу через ремни или цепи, расчет линейной скорости часто требуется для самого ремня или цепи. Это необходимо для подбора правильных компонентов, так как у каждого типа передачи есть предельная <strong>линейная скорость</strong>, превышение которой ведет к быстрому износу или разрыву.</p>
+
+<p>Здесь расчет ведется по диаметру ведущего шкива (или звездочки). Формула остается прежней, но Линейная скорость рассчитывается по нейтральной линии ремня, которая проходит примерно посередине его толщины. Для клиновых ремней это особенно актуально, так как они работают боковыми гранями.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип передачи</th>
+<th>Макс. линейная скорость (м/с)</th>
+<th>Особенности расчета</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Плоский ремень</td>
+<td>до 40-60</td>
+<td>Расчет по внешнему диаметру шкива</td>
+</tr>
+<tr>
+<td>Клиновой ремень</td>
+<td>до 25-30</td>
+<td>Учет расчетного диаметра (среднего)</td>
+</tr>
+<tr>
+<td>Зубчатый ремень</td>
+<td>до 80</td>
+<td>Расчет по шагу зубьев и их количеству</td>
+</tr>
+<tr>
+<td>Роликовая цепь</td>
+<td>до 15-20</td>
+<td>Расчет по делительному диаметру звезды</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>При высоких скоростях вращения в ременных передачах начинает сказываться центробежная сила, которая отрывает ремень от шкива. Это явление называется "центрифугированием" и резко снижает передаваемую мощность. Поэтому знание точной линейной скорости необходимо не только для механической прочности, но и для оценки <em>тяговых характеристик</em> системы.</p>
+
+<details class="pb-accordion"><summary>Эффект ползучести ремня</summary><div class="pb-accordion-body"><p>В отличие от цепей, ремни эластичны. При передаче крутящего момента возникает разница скоростей между входящей и выходящей ветвью ремня. Это называется упругим скольжением и составляет обычно 1-2%. При расчетах высокоточных механизмов это нужно учитывать.</p></div></details>
+
+<h2 id="обработка-материалов-скорость-резания-и-подачи">Обработка материалов: скорость резания и подачи</h2>
+<p>В металлообработке и деревообработке перевод оборотов шпинделя в линейную скорость является основой технологии. Здесь используется термин <strong>скорость резания</strong> (Vc). Она определяет, с какой скоростью режущая кромка инструмента проходит по поверхности заготовки. Для каждого материала и типа инструмента существуют строго регламентированные диапазоны этой скорости.</p>
+
+<p>Если установить на станке слишком высокие обороты, режущая кромка мгновенно перегреется и затупится ("сгорит"). Если обороты будут слишком низкими, вместо резания начнется деформация материала, а поверхность получится шероховатой. Формула для расчета оборотов (n) исходя из требуемой скорости резания (Vc) выглядит так:</p>
+<pre><code>n (об/мин) = (1000 × Vc (м/мин)) / (π × D (мм))</code></pre>
+<p>Здесь Vc берется из справочных таблиц для конкретной пары "инструмент-материал". Например, для твердосплавной фрезы по стали скорость резания может составлять 150 м/мин, а для алмазного диска по бетону — уже 3000 м/мин. Ошибка в выборе режима может стоить дорогого инструмента.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При расчете скорости для сверл большого диаметра часто забывают, что линейная скорость на периферии сверла максимальна, а у центра (на поперечной кромке) она стремится к нулю. Это создает неравномерные условия износа и требует особого внимания к заточке.</p>
+</blockquote>
+
+<p>Кроме скорости резания, в обработке важна скорость подачи (мм/мин). Она также является линейной величиной, но зависит от количества режущих кромок (зубьев) и подачи на один зуб. Связь между оборотами и скоростью подачи выражается формулой: <code>Vf = n × z × fz</code>, где z — число зубьев, а fz — подача на зуб.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка режимов резания</h4><label class="check-item"><input type="checkbox"><span>Узнать материал заготовки</span></label><label class="check-item"><input type="checkbox"><span>Выбрать тип инструмента</span></label><label class="check-item"><input type="checkbox"><span>Найти таблицу скоростей резания</span></label><label class="check-item"><input type="checkbox"><span>Рассчитать RPM</span></label><label class="check-item"><input type="checkbox"><span>Проверить мощность станка</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="влияние-передаточных-чисел-на-итоговую-скорость">Влияние передаточных чисел на итоговую скорость</h2>
+<p>В реальных механизмах двигатель редко соединен с рабочим органом напрямую. Между ними почти всегда находится редуктор, вариатор или коробка передач. Передаточное число (i) кардинально меняет соотношение между оборотами двигателя и линейной скоростью на выходе. Если <code>i > 1</code> (редукция), то скорость вращения на выходе падает, а крутящий момент растет.</p>
+
+<p>Для расчета итоговой линейной скорости необходимо сначала определить частоту вращения выходного вала редуктора. Делается это простым делением оборотов двигателя на передаточное число: <code>n_out = n_motor / i</code>. Полученное значение уже подставляется в формулу линейной скорости с учетом диаметра рабочего колеса или барабана.</p>
+
+<p>Сложность может возникнуть с многоступенчатыми редукторами. В этом случае общее передаточное число равно произведению передаточных чисел всех ступеней. Важно не перепутать ступени повышения и понижения скорости. В системах с вариаторами передаточное число меняется динамически, поэтому линейная скорость может варьироваться в широком диапазоне при постоянных оборотах двигателя.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Золотое правило механики: Редуктор не создает энергию, он меняет соотношение скорости и момента. Увеличивая линейную скорость, мы неизбежно теряем в тяговом усилии, и наоборот.</p></aside>
+
+<h2 id="практические-примеры-и-таблица-соответствий">Практические примеры и таблица соответствий</h2>
+<p>Для закрепления материала рассмотрим конкретный пример. Представим, что у нас есть конвейерная лента, приводимая в движение барабаном диаметром 300 мм. Двигатель через редуктор с передаточным числом 1:10 выдает на валу барабана 140 оборотов в минуту. Какова линейная скорость ленты?</p>
+<p>Сначала проверим данные: диаметр 300 мм = 0.3 м. Обороты на выходе 140. Используем формулу: <code>V = π × 0.3 × 140 / 60</code>. Получаем примерно 2.19 м/с. Если бы мы забыли про редуктор и взяли обороты двигателя (1400), результат был бы ошибочным в 10 раз.</p>
+
+<p>Ниже приведена таблица для быстрого ориентирования при стандартных диаметрах колес и частых оборотах. Она поможет быстро прикинуть порядок величин без калькулятора.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Диаметр (мм)</th>
+<th>Обороты (RPM)</th>
+<th>Скорость (м/мин)</th>
+<th>Скорость (км/ч)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>1000</td>
+<td>314</td>
+<td>18.8</td>
+</tr>
+<tr>
+<td>200</td>
+<td>1000</td>
+<td>628</td>
+<td>37.7</td>
+</tr>
+<tr>
+<td>300</td>
+<td>500</td>
+<td>471</td>
+<td>28.3</td>
+</tr>
+<tr>
+<td>500</td>
+<td>100</td>
+<td>157</td>
+<td>9.4</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>50</td>
+<td>157</td>
+<td>9.4</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Как видно из таблицы, удвоение диаметра при тех же оборотах удваивает линейную скорость. Точно так же, удвоение оборотов при том же диаметре дает двукратный прирост скорости. Эта линейная зависимость позволяет легко масштабировать расчеты.</p>
+
+<details>
+<summary>Как перевести угловую скорость (рад/с) в линейную?</summary>
+<p>Если в задаче дана угловая скорость в радианах в секунду (ω), формула упрощается до <code>V = ω × R</code>, где R — радиус в метрах. Это наиболее "чистая" физическая формула, не требующая использования числа Пи и коэффициентов 60, так как радианная мера уже привязана к радиусу.</p>
+</details>
+
+<details>
+<summary>Влияет ли ширина колеса на линейную скорость?</summary>
+<p>Нет, ширина колеса (или барабана) не влияет на линейную скорость перемещения. Скорость зависит только от диаметра (расстояния от оси до поверхности контакта) и частоты вращения. Ширина влияет на грузоподъемность и устойчивость, но не на кинематику движения.</p>
+</details>
+
+<details>
+<summary>Что делать, если диаметр колеса изменился из-за износа?</summary>
+<p>При значительном износе шин или стачании режущего инструмента диаметр уменьшается. Это приводит к падению реальной линейной скорости при сохранении оборотов двигателя. В прецизионных станках и навигационных системах транспортных средств необходимо регулярно вносить коррективы в программное обеспечение или производить замену инструмента.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kakaya-byvaet-prochnost-boltov.html" class="pb-related-card">
+                <span class="pb-related-title">Прочность болтов: классы, маркировка и применение</span>
+                <span class="pb-related-desc">Все о классах прочности болтов. Как расшифровать маркировку на головке, чем отличаются классы 8.8 и </span>
+            </a><a href="/articles/k/ka/kak-vyglyadit-svechnoj-klyuch-dlya-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Свечной ключ для авто: фото, виды и как выбрать правильный</span>
+                <span class="pb-related-desc">Как выглядит свечной ключ для автомобиля: разновидности (трубчатый, карданный, гибкий), размеры под </span>
+            </a><a href="/articles/k/ka/kak-podklyuchit-kar-skaner-k-avtomobilyu-s-telefona.html" class="pb-related-card">
+                <span class="pb-related-title">Как подключить CAR-сканер к машине через телефон: пошаговый гайд</span>
+                <span class="pb-related-desc">Подробная инструкция по подключению диагностического сканера к автомобилю через смартфон: выбор адап</span>
+            </a><a href="/articles/d/dl/dlya-chego-nuzhen-tros.html" class="pb-related-card">
+                <span class="pb-related-title">Трос для автомобиля: 10 способов применения + как выбрать правильно</span>
+                <span class="pb-related-desc">Зачем нужен трос в машине: буксировка, эвакуация, вытаскивание из грязи и другие неочевидные способы</span>
+            </a><a href="/articles/r/ro/rotornaya-polirovalnaya-mashinka-dlya-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Роторная полировальная машинка для авто: выбор и техника</span>
+                <span class="pb-related-desc">Как выбрать роторную полировальную машинку для авто? Сравнение с орбитальными моделями, настройка об</span>
+            </a><a href="/articles/k/ko/kompressor-avtomobilnyj-eto-chto.html" class="pb-related-card">
+                <span class="pb-related-title">Автомобильный компрессор: что это, как выбрать и пользоваться</span>
+                <span class="pb-related-desc">Разбираемся, что такое автомобильный компрессор, для чего он нужен, как правильно выбрать и эксплуат</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

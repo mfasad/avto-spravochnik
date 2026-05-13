@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>AEB в автомобиле: что это, как работает и зачем нужна система — Авто Справочник</title>
+    <meta name="description" content="Разбираемся, что такое AEB (Autonomous Emergency Braking), как она предотвращает ДТП, какие виды существуют и почему это обязательный элемент безопасности в современных авто.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/si/sistema-aeb-chto-eto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="AEB в автомобиле: что это, как работает и зачем нужна система">
+    <meta property="og:description" content="Разбираемся, что такое AEB (Autonomous Emergency Braking), как она предотвращает ДТП, какие виды существуют и почему это обязательный элемент безопасности в современных авто.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-nav-active">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/detskaya-bezopasnost/">Детская Безопасность</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">AEB в автомобиле: что это, как работает и зачем нужна система</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-aeb-и-как-она-появилась">Что такое AEB и как она появилась</a></li><li><a href="#как-работает-aeb-датчики-и-алгоритмы">Как работает AEB: датчики и алгоритмы</a></li><li><a href="#виды-систем-aeb-чем-они-отличаются">Виды систем AEB: чем они отличаются</a></li><li><a href="#ограничения-aeb-когда-система-может-подвести">Ограничения AEB: когда система может подвести</a></li><li><a href="#как-проверить-работу-aeb-в-своём-автомобиле">Как проверить работу AEB в своём автомобиле</a></li><li><a href="#aeb-и-закон-обязательна-ли-система-в-2024-году">AEB и закон: обязательна ли система в 2024 году</a></li><li><a href="#будущее-aeb-что-нас-ждёт-в-ближайшие-5-лет">Будущее AEB: что нас ждёт в ближайшие 5 лет</a></li><li><a href="#faq-частые-вопросы-об-aeb">FAQ: Частые вопросы об AEB</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ko/kogda-mozhno-sidet-rebenku-na-perednem-sidene.html">Со скольки лет ребенку можно ездить спереди в машине? Правила 2026</a></li><li><a href="/articles/k/kr/kreplenie-dlya-avtolyulki-v-mashine.html">Крепление автолюльки в машине: виды, установка и безопасность (2026)</a></li><li><a href="/articles/a/av/avtokreslo-graco-9-36.html">Автокресло Graco 9-36 кг: Полный обзор, характеристики и отзывы</a></li><li><a href="/articles/p/pe/perevoz-detej-v-avtomobile.html">Перевозка детей в машине 2026: правила, штрафы, выбор автокресла</a></li><li><a href="/articles/s/so/so-skolki-kilogramm-buster.html">Со скольки килограмм бустер: вес и рост ребенка по ПДД</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Система AEB в автомобиле: принцип работы, виды и почему она спасает жизни</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-aeb-и-как-она-появилась">Что такое AEB и как она появилась</a></li><li><a href="#как-работает-aeb-датчики-и-алгоритмы">Как работает AEB: датчики и алгоритмы</a></li><li><a href="#виды-систем-aeb-чем-они-отличаются">Виды систем AEB: чем они отличаются</a></li><li><a href="#ограничения-aeb-когда-система-может-подвести">Ограничения AEB: когда система может подвести</a></li><li><a href="#как-проверить-работу-aeb-в-своём-автомобиле">Как проверить работу AEB в своём автомобиле</a></li><li><a href="#aeb-и-закон-обязательна-ли-система-в-2024-году">AEB и закон: обязательна ли система в 2024 году</a></li><li><a href="#будущее-aeb-что-нас-ждёт-в-ближайшие-5-лет">Будущее AEB: что нас ждёт в ближайшие 5 лет</a></li><li><a href="#faq-частые-вопросы-об-aeb">FAQ: Частые вопросы об AEB</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Вы когда-нибудь задумывались, как современные автомобили успевают тормозить за доли секунды до столкновения, даже если водитель не успевает среагировать? За это отвечает система <strong>AEB</strong> (Autonomous Emergency Braking) — одна из самых важных инноваций в области пассивной безопасности за последние 20 лет. Она не просто помогает избежать аварий, но и <mark>сокращает количество смертельных исходов на 38% согласно исследованиям Euro NCAP</mark>.</p>
+
+<p>Если вы планируете покупку нового автомобиля или просто хотите разобраться в современных системах помощи водителю (<em>ADAS</em>), эта статья поможет понять, как работает <strong>AEB</strong>, какие у неё есть ограничения и почему без неё уже сложно представить безопасное авто. Мы разберём технические нюансы, сравним разные поколения систем и объясним, почему даже бюджетные модели сегодня оснащаются этой технологией.</p>
+
+<h2 id="что-такое-aeb-и-как-она-появилась">Что такое AEB и как она появилась</h2>
+
+<p>Система <strong>AEB</strong> (Autonomous Emergency Braking) — это комплекс аппаратного и программного обеспечения, который автоматически активирует торможение, если обнаруживает неизбежное столкновение. В отличие от обычных систем предупреждения (<em>FCW, Forward Collision Warning</em>), которые только сигнализируют водителю звуком или вибрацией, <strong>AEB</strong> <em>самостоятельно</em> принимает решение и действует, даже если водитель не реагирует.</p>
+
+<p>Первые прототипы появились в начале 2000-х, но массовое распространение началось после 2010 года, когда <em>Euro NCAP</em> включил наличие <strong>AEB</strong> в критерии оценки безопасности. Сегодня система стала обязательной для получения максимальных 5 звёзд в краш-тестах. Например, <em>Volvo</em> внедрила её в серийные модели ещё в 2008 году под названием <em>City Safety</em>, а к 2026 году <strong>AEB</strong> устанавливается даже на <em>Lada Vesta</em> и <em>Kia Rio</em>.</p>
+
+<ul>
+  <li>📅 <strong>2006 год</strong> — первые тесты прототипов от <em>Mercedes-Benz</em> и <em>Toyota</em>.</li>
+  <li>🚗 <strong>2008 год</strong> — <em>Volvo XC60</em> стал первым серийным авто с <strong>AEB</strong>.</li>
+  <li>🌍 <strong>2014 год</strong> — <em>Euro NCAP</em> начинает учитывать <strong>AEB</strong> в рейтинге безопасности.</li>
+  <li>📈 <strong>2022 год</strong> — более 60% новых автомобилей в Европе оснащены системой.</li>
+</ul>
+
+<p>Интересно, что изначально <strong>AEB</strong> разрабатывалась для предотвращения наездов на пешеходов, но позже её адаптировали для работы с другими автомобилями, велосипедистами и даже животными. Сегодня это неотъемлемая часть <em>ADAS</em>-систем, наряду с адаптивным круиз-контролем (<em>ACC</em>) и удержанием полосы (<em>LDW</em>).</p>
+
+<div class="pb-poll" id="poll-b6bb6b85"><div class="pb-poll-question">📊 Как вы относитесь к системам автоматического торможения?</div><div class="pb-poll-option" data-poll="b6bb6b85" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Положительно — спасают жизни</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b6bb6b85" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Нейтрально — не мешают, но и не доверяю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b6bb6b85" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Отрицательно — могут сработать некстати</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b6bb6b85" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю, что это такое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="как-работает-aeb-датчики-и-алгоритмы">Как работает AEB: датчики и алгоритмы</h2>
+
+<p>Система <strong>AEB</strong> состоит из трёх ключевых компонентов: <strong>датчиков</strong>, <strong>блока управления</strong> и <strong>исполнительных механизмов</strong> (тормозной системы). Давайте разберёмся, как они взаимодействуют.</p>
+
+<p>Основные типы датчиков, используемых в <strong>AEB</strong>:</p>
+<ul>
+  <li>📡 <strong>Радар</strong> (обычно <code>77 ГГц</code>) — определяет расстояние и скорость объектов впереди с высокой точностью, работает в любых погодных условиях.</li>
+  <li>👁️ <strong>Камера</strong> (моно- или стерео) — распознаёт формы объектов (пешеходы, велосипеды, знаки), но может «слепнуть» в темноте или при ярком солнце.</li>
+  <li>🔦 <strong>Лидар</strong> — используется в премиальных моделях (например, <em>Tesla</em> или <em>Audi</em>), создаёт 3D-карту окружения, но дорог и чувствителен к грязи.</li>
+</ul>
+
+<p>Алгоритм работы <strong>AEB</strong> можно разделить на 4 этапа:</p>
+<ol>
+  <li><strong>Обнаружение</strong>: датчики сканируют пространство впереди автомобиля (обычно до <code>150–200 м</code>).</li>
+  <li><strong>Классификация</strong>: система определяет тип объекта (автомобиль, пешеход, препятствие) и его траекторию.</li>
+  <li><strong>Анализ риска</strong>: рассчитывается вероятность столкновения на основе скорости, дистанции и ускорения.</li>
+  <li><strong>Действие</strong>: если риск высокий, сначала подаётся предупреждение водителю, а затем (при бездействии) активируется торможение.</li>
+</ol>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Тип датчика</th>
+      <th>Преимущества</th>
+      <th>Недостатки</th>
+      <th>Примеры авто</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Радар</td>
+      <td>Работает ночью, в дождь, снег</td>
+      <td>Не распознаёт форму объектов</td>
+      <td><em>Toyota Safety Sense</em>, <em>Bosch MRR</em></td>
+    </tr>
+    <tr>
+      <td>Камера</td>
+      <td>Высокая детализация, распознаёт пешеходов</td>
+      <td>Чувствительна к освещению</td>
+      <td><em>Tesla Vision</em>, <em>Mobileye</em></td>
+    </tr>
+    <tr>
+      <td>Лидар</td>
+      <td>3D-моделирование, высокая точность</td>
+      <td>Дорогой, хрупкий</td>
+      <td><em>Audi A8</em>, <em>Waymo</em></td>
+    </tr>
+    <tr>
+      <td>Комбинированная система</td>
+      <td>Максимальная надёжность</td>
+      <td>Сложная калибровка</td>
+      <td><em>Mercedes-Benz DRIVE PILOT</em></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Важно понимать, что <strong>AEB</strong> не заменяет водителя, а лишь <em>дополняет</em> его реакцию. Система срабатывает только в критических ситуациях, когда время до столкновения исчисляется долями секунды. При этом она учитывает не только расстояние до объекта, но и его скорость, направление движения и даже погодные условия (например, на мокрой дороге тормозной путь увеличивается).</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если на приборной панели загорелся значок <code>AEB OFF</code> или <code>Сheck Collision System</code>, немедленно проверьте чистоту датчиков (особенно камер и радаров) — грязь или снег могут блокировать их работу.</p></aside>
+
+<h2 id="виды-систем-aeb-чем-они-отличаются">Виды систем AEB: чем они отличаются</h2>
+
+<p>Не все системы <strong>AEB</strong> одинаковы. Их можно классифицировать по нескольким критериям: <strong>тип обнаруживаемых объектов</strong>, <strong>скоростной диапазон</strong> и <strong>уровень автоматизации</strong>. Разберёмся подробнее.</p>
+
+<h3>1. По типу объектов</h3>
+<ul>
+  <li>🚘 <strong>AEB City</strong> — работает на низких скоростях (до <code>50–60 км/ч</code>), предназначена для городского трафика (например, предотвращает «парковочные» столкновения).</li>
+  <li>👶 <strong>AEB Pedestrian</strong> — распознаёт пешеходов и велосипедистов, часто комбинируется с <em>Night Vision</em>.</li>
+  <li>🦌 <strong>AEB Animal</strong> — редкий тип, обнаруживает крупных животных (лосей, оленей), используется в <em>Volvo</em> и <em>Subaru</em>.</li>
+  <li>🚛 <strong>AEB Intersection</strong> — предотвращает столкновения на перекрёстках (например, при выезде на «главную» без остановки).</li>
+</ul>
+
+<h3>2. По скоростному диапазону</h3>
+<p>Бюджетные системы (например, в <em>Hyundai Solaris</em> или <em>Renault Duster</em>) обычно работают до <code>60–80 км/ч</code>, тогда как премиальные (как в <em>Mercedes S-Class</em>) способны тормозить даже на скоростях до <code>200 км/ч</code>. При этом эффективность системы падает с ростом скорости — физику не обманешь: тормозной путь при <code>120 км/ч</code> в несколько раз длиннее, чем при <code>50 км/ч</code>.</p>
+
+<h3>3. По уровню автоматизации</h3>
+<p>Здесь выделяют три поколения:</p>
+<ul>
+  <li>🛑 <strong>1-е поколение</strong> (до 2015 г.) — только предупреждение + частичное торможение.</li>
+  <li>🚦 <strong>2-е поколение</strong> (2015–2020 г.) — полное автоматическое торможение, но только в дневное время.</li>
+  <li>🌃 <strong>3-е поколение</strong> (с 2020 г.) — работа в темноте, распознавание сложных сцен (например, ребёнок, выбегающий из-за машины).</li>
+</ul>
+
+<p>При выборе автомобиля обращайте внимание на <strong>сертификацию Euro NCAP</strong> — там указывается, какие именно функции <strong>AEB</strong> поддерживаются. Например, <em>Volvo XC90</em> (2023 год) имеет полный комплект: <strong>AEB City + Pedestrian + Cyclist + Animal</strong>, тогда как <em>Kia Picanto</em> может оснащаться только базовой версией для городских скоростей.</p>
+
+<details class="pb-accordion"><summary>Может ли AEB сработать ложно?</summary><div class="pb-accordion-body"><p>Да, ложные срабатывания возможны, например, при проезде под мостами, рядом с высокими бордюрами или при сильном дожде (капли на камере). В таких случаях система может принять тень или неровность за препятствие. Однако современные алгоритмы учатся отличать реальные угрозы от «фантомов».</p></div></details>
+
+<h2 id="ограничения-aeb-когда-система-может-подвести">Ограничения AEB: когда система может подвести</h2>
+
+<p>Несмотря на высокую эффективность, <strong>AEB</strong> не идеальна. Есть ситуации, в которых она либо не сработает, либо сработает слишком поздно. Вот ключевые ограничения:</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Система <strong>AEB</strong> не распознаёт объекты, движущиеся <em>перпендикулярно</em> вашему автомобилю со скоростью выше <code>30–40 км/ч</code>. Например, если мотоциклист выедет на вашу полосу сбоку на высокой скорости, система может не успеть среагировать.</blockquote>
+
+<ul>
+  <li>🌫️ <strong>Плохие погодные условия</strong>: сильный дождь, снег или туман снижают точность радаров и камер. Например, <em>Tesla Autopilot</em> может отключать часть функций <strong>AEB</strong> при видимости менее <code>50 м</code>.</li>
+  <li>🌃 <strong>Темное время суток</strong>: камеры теряют эффективность, особенно если объект не освещён (пешеход в тёмной одежде).</li>
+  <li>🚧 <strong>Сложная дорожная обстановка</strong>: на многополосных развязках или в пробках система может «теряться» из-за большого количества движущихся объектов.</li>
+  <li>🔧 <strong>Технические неисправности</strong>: загрязнённые датчики, неправильная калибровка или повреждение проводки приводят к отказу системы.</li>
+</ul>
+
+<p>Ещё один важный нюанс: <strong>AEB</strong> не учитывает <strong>состояние дорожного покрытия</strong>. Например, на льду или гравии тормозной путь увеличивается, и даже если система сработает вовремя, автомобиль может не успеть остановиться. Поэтому производители рекомендуют <em>всегда</em> соблюдать дистанцию и скоростной режим, даже если машина оснащена <strong>AEB</strong>.</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Ситуация</th>
+      <th>Вероятность срабатывания AEB</th>
+      <th>Рекомендация</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Пешеход на пешеходном переходе</td>
+      <td>Высокая (90%+)</td>
+      <td>Не снижайте бдительность — система может не распознать ребёнка за высоким бордюром.</td>
+    </tr>
+    <tr>
+      <td>Столкновение сзади в пробке</td>
+      <td>Средняя (70%)</td>
+      <td>Держите дистанцию не менее <code>3 м</code> от впереди идущего авто.</td>
+    </tr>
+    <tr>
+      <td>Животное на дороге ночью</td>
+      <td>Низкая (30%)</td>
+      <td>Снижайте скорость на неосвещённых участках, особенно в лесных зонах.</td>
+    </tr>
+    <tr>
+      <td>Встречный автомобиль на своей полосе</td>
+      <td>Очень низкая (10%)</td>
+      <td><strong>AEB</strong> не предназначена для предотвращения лобовых столкновений на высоких скоростях.</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>AEB — это система <em>последнего шанса</em>. Она не заменяет внимание водителя, а лишь уменьшает последствия ошибки. В 80% случаев ДТП можно избежать, если водитель сам среагирует вовремя.</p></aside>
+
+<h2 id="как-проверить-работу-aeb-в-своём-автомобиле">Как проверить работу AEB в своём автомобиле</h2>
+
+<p>Если ваш автомобиль оснащён <strong>AEB</strong>, важно убедиться, что система работает корректно. Вот пошаговая инструкция для проверки:</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка системы AEB</h4><label class="check-item"><input type="checkbox"><span>Убедитесь, что датчики чистые (камеры, радары)</span></label><label class="check-item"><input type="checkbox"><span>Проверьте в меню авто, включена ли функция (обычно в разделе <code>Безопасность</code> или <code>ADAS</code>)</span></label><label class="check-item"><input type="checkbox"><span>Проведите тест на пустой парковке с мягким препятствием (например, картонной коробкой)</span></label><label class="check-item"><input type="checkbox"><span>Обратите внимание на значки на приборной панели (должен гореть индикатор <code>AEB Ready</code>)</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Для тестирования <strong>не используйте твёрдые препятствия</strong> — даже если система сработает, риск повреждения автомобиля остаётся. Лучше воспользоваться специальными полигонами или сервисными центрами, где проводят диагностику <em>ADAS</em>-систем. Например, в <em>Bosch Car Service</em> или у официальных дилеров <em>Toyota</em>/<em>Volkswagen</em> есть оборудование для калибровки радаров и камер.</p>
+
+<p>Если вы хотите проверить <strong>AEB</strong> самостоятельно:</p>
+<ol>
+  <li>Выберите ровную площадку без посторонних объектов.</li>
+  <li>Установите перед автомобилем мягкое препятствие (например, надувной манекен или коробку).</li>
+  <li>Двигайтесь на скорости <code>10–20 км/ч</code> прямо на объект.</li>
+  <li>Не тормозите — система должна сама активировать торможение.</li>
+</ol>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если <strong>AEB</strong> не сработала во время теста, немедленно обратитесь в сервис! Возможные причины: отключённая функция в настройках, повреждённые датчики или сбой программного обеспечения. Например, после замены лобового стекла часто требуется перекалибровка камеры.</blockquote>
+
+<p>Некоторые автомобили (например, <em>Tesla Model 3</em> или <em>BMW 5 Series</em>) имеют режим <code>Demo Mode</code> для <strong>AEB</strong>, который позволяет безопасно протестировать систему без риска столкновения. Уточните наличие этой функции в руководстве по эксплуатации.</p>
+
+<h2 id="aeb-и-закон-обязательна-ли-система-в-2026-году">AEB и закон: обязательна ли система в 2026 году</h2>
+
+<p>С 2022 года в <strong>Европейском Союзе</strong> и <strong>США</strong> система <strong>AEB</strong> стала обязательной для всех новых автомобилей в рамках стандартов безопасности <em>Euro NCAP</em> и <em>NHTSA</em>. В России пока нет прямого закона, обязывающего устанавливать <strong>AEB</strong>, но с 2026 года <em>Технический регламент Таможенного союза</em> требует наличия хотя бы базовой системы предупреждения столкновений (<em>FCW</em>) для получения <strong>ОТТС</strong> (одобрение типа транспортного средства).</p>
+
+<p>Это означает, что:</p>
+<ul>
+  <li>🚗 Все новые иномарки, официально ввоземые в Россию, оснащаются <strong>AEB</strong> или <em>FCW</em> по умолчанию.</li>
+  <li>📜 При прохождении техосмотра наличие <strong>AEB</strong> не проверяется, но её отсутствие может повлиять на оценку безопасности при страховании (<em>КАСКО</em>).</li>
+  <li>💰 Автомобили с <strong>AEB</strong> часто получают скидку на страховку (до <code>10–15%</code>) у компаний типа <em>Ингосстрах</em> или <em>РЕСО-Гарантия</em>.</li>
+</ul>
+
+<p>В некоторых странах (например, в <strong>Японии</strong> и <strong>Австралии</strong>) уже действуют штрафы за отключение систем безопасности, включая <strong>AEB</strong>. В России таких норм пока нет, но эксперты прогнозируют, что к 2026–2027 году требования ужесточат, особенно для коммерческого транспорта (автобусов, грузовиков).</p>
+
+<p>Если вы покупаете подержанный автомобиль, обязательно проверьте:</p>
+<ul>
+  <li>🔧 Работоспособность <strong>AEB</strong> (просите продавца продемонстрировать тест).</li>
+  <li>📄 Наличие записи о калибровке датчиков в сервисной книжке (особенно если машина побывала в ДТП).</li>
+  <li>💡 Состояние лобового стекла — трещины в зоне камеры могут блокировать её работу.</li>
+</ul>
+
+<h2 id="будущее-aeb-что-нас-ждёт-в-ближайшие-5-лет">Будущее AEB: что нас ждёт в ближайшие 5 лет</h2>
+
+<p>Технологии <strong>AEB</strong> продолжают развиваться. Вот ключевые тренды, которые стоит ожидать:</p>
+
+<ul>
+  <li>🤖 <strong>ИИ и машинное обучение</strong>: будущие системы будут анализировать поведение водителя и предсказывать потенциальные опасности заранее. Например, <em>NVIDIA Drive</em> уже тестирует алгоритмы, которые распознают «подозрительное» поведение пешеходов (например, ребёнок с мячом у дороги).</li>
+  <li>🚦 <strong>V2X-коммуникации</strong>: автомобили будут обмениваться данными друг с другом и с инфраструктурой (светофорами, знаками), что позволит <strong>AEB</strong> срабатывать заранее, ещё до того, как объект попадёт в поле зрения датчиков.</li>
+  <li>🌐 <strong>Облачные обновления</strong>: как в <em>Tesla</em>, системы будут улучшаться «по воздуху» без посещения сервиса. Например, после аварии с участием <em>Uber</em> в 2018 году все автомобили с <strong>AEB</strong> от <em>Mobileye</em> получили обновление для лучшего распознавания велосипедистов.</li>
+  <li>🛡️ <strong>Интеграция с другими системами</strong>: <strong>AEB</strong> будет работать вместе с <em>автопилотом</em>, <em>системой удержания полосы</em> и <em>адаптивным круиз-контролем</em>, создавая единый «щит» безопасности.</li>
+</ul>
+
+<p>Ожидается, что к 2028 году <strong>AEB</strong> станет настолько продвинутой, что сможет предотвращать до <code>90%</code> наездов на пешеходов и <code>70%</code> столкновений в городском трафике. Однако эксперты предупреждают: чем сложнее становятся системы, тем важнее их правильное обслуживание. Например, после замены бампера или фар может потребоваться перекалибровка радаров, иначе <strong>AEB</strong> будет работать некорректно.</p>
+
+<p>Уже сегодня некоторые производители тестируют <strong>AEB</strong>, которая срабатывает не только впереди, но и <em>сзади</em> (например, при движении задним ходом) и по <em>бокам</em> (для предотвращения «подрезов» на перекрёстках). Такие системы пока дороги и устанавливаются только на премиальные модели (например, <em>Mercedes-Benz E-Class 2026</em>), но в ближайшие годы они станут массовыми.</p>
+
+<h2 id="faq-частые-вопросы-об-aeb">FAQ: Частые вопросы об AEB</h2>
+
+<details>
+  <summary>Можно ли отключить AEB и как это сделать?</summary>
+  <p>В большинстве автомобилей <strong>AEB</strong> можно временно отключить через меню настроек (обычно в разделе <code>Безопасность</code> или <code>Водительские ассистенты</code>). Однако система автоматически активируется при следующем запуске двигателя. Полное отключение возможно только в сервисном центре, но это нарушает гарантию и может быть опасно. Например, в <em>Volvo</em> и <em>Tesla</em> отключение <strong>AEB</strong> блокируется программно.</p>
+</details>
+
+<details>
+  <summary>Срабатывает ли AEB на животных?</summary>
+  <p>Только в некоторых моделях. Например, <em>Volvo</em>, <em>Subaru</em> и <em>Audi</em> оснащают свои автомобили <strong>AEB Animal Detection</strong>, которая распознаёт крупных животных (лосей, оленей). Однако мелкие животные (кошки, собаки) обычно игнорируются, чтобы избежать ложных срабатываний. Эффективность на ночных дорогах составляет около <code>40–50%</code>.</p>
+</details>
+
+<details>
+  <summary>Может ли AEB полностью остановить автомобиль?</summary>
+  <p>Да, но только на скоростях до <code>50–60 км/ч</code> (зависит от модели). На более высоких скоростях система лишь снижает скорость, чтобы уменьшить силу удара. Например, <em>Toyota Safety Sense 2.0</em> гарантирует полную остановку при скорости до <code>40 км/ч</code>, а <em>Mercedes PRE-SAFE</em> — до <code>60 км/ч</code>.</p>
+</details>
+
+<details>
+  <summary>Влияет ли AEB на стоимость страховки?</summary>
+  <p>Да, многие страховые компании (например, <em>Ингосстрах</em>, <em>АльфаСтрахование</em>) предоставляют скидку до <code>15%</code> на <em>КАСКО</em> для автомобилей с <strong>AEB</strong>, так как они реже попадают в ДТП. Однако скидка действует только при подтверждении работоспособности системы (например, диагностическим сканером).</p>
+</details>
+
+<details>
+  <summary>Что делать, если AEB сработала ложно?</summary>
+  <p>Если система неожиданно затормозила без причины:</p>
+  <ol>
+    <li>Остановитесь в безопасном месте и проверьте чистоту датчиков.</li>
+    <li>Перезагрузите систему (выключите/включите зажигание).</li>
+    <li>Если проблема повторяется, обратитесь в сервис — возможно, требуется перепрошивка или замена датчика.</li>
+  </ol>
+  <p>Ложные срабатывания чаще происходят в дождь, снег или при езде по гравийным дорогам.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ko/kogda-mozhno-sidet-rebenku-na-perednem-sidene.html" class="pb-related-card">
+                <span class="pb-related-title">Со скольки лет ребенку можно ездить спереди в машине? Правила 2026</span>
+                <span class="pb-related-desc">Когда можно сажать ребенка на переднее сиденье по ПДД 2026: возрастные ограничения, виды удерживающи</span>
+            </a><a href="/articles/k/kr/kreplenie-dlya-avtolyulki-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Крепление автолюльки в машине: виды, установка и безопасность (2026)</span>
+                <span class="pb-related-desc">Как правильно закрепить детское автокресло? Сравнение систем ISOFIX, LATCH и ремней безопасности. Ин</span>
+            </a><a href="/articles/a/av/avtokreslo-graco-9-36.html" class="pb-related-card">
+                <span class="pb-related-title">Автокресло Graco 9-36 кг: Полный обзор, характеристики и отзывы</span>
+                <span class="pb-related-desc">Подробный анализ автокресла Graco 9-36 кг. Особенности трансформации, системы безопасности Isofix и </span>
+            </a><a href="/articles/p/pe/perevoz-detej-v-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">Перевозка детей в машине 2026: правила, штрафы, выбор автокресла</span>
+                <span class="pb-related-desc">Актуальные правила перевозки детей в автомобиле по ПДД 2026: возрастные нормы, типы удерживающих уст</span>
+            </a><a href="/articles/s/so/so-skolki-kilogramm-buster.html" class="pb-related-card">
+                <span class="pb-related-title">Со скольки килограмм бустер: вес и рост ребенка по ПДД</span>
+                <span class="pb-related-desc">Подробный разбор: со скольки килограмм можно использовать бустер. Актуальные правила ПДД 2026 года, </span>
+            </a><a href="/articles/k/ka/kak-sobrat-detskoe-kreslo-avtomobilnoe-posle-stirki-remni.html" class="pb-related-card">
+                <span class="pb-related-title">Как собрать детское автокресло после стирки: пошаговая инструкция</span>
+                <span class="pb-related-desc">Подробный гайд, как правильно собрать детское кресло в машину после стирки. Разбор ремней, установка</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

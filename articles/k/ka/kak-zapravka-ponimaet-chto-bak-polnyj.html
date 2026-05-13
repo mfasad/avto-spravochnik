@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как заправка определяет, что бак полный: механизм и нюансы — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как работают датчики уровня топлива на АЗС, почему отсечка срабатывает не всегда и что делать, если бензин переливается. Технические детали и советы автомобилистам.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-zapravka-ponimaet-chto-bak-polnyj.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как заправка определяет, что бак полный: механизм и нюансы">
+    <meta property="og:description" content="Узнайте, как работают датчики уровня топлива на АЗС, почему отсечка срабатывает не всегда и что делать, если бензин переливается. Технические детали и советы автомобилистам.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как заправка определяет, что бак полный: механизм и нюансы</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-автоматической-отсечки-на-заправочном-пистолете">Принцип работы автоматической отсечки на заправочном пистолете</a></li><li><a href="#почему-отсечка-срабатывает-не-всегда">Почему отсечка срабатывает не всегда?</a></li><li><a href="#что-делать-если-бензин-переливается">Что делать, если бензин переливается?</a></li><li><a href="#влияние-конструкции-бака-на-работу-отсечки">Влияние конструкции бака на работу отсечки</a></li><li><a href="#можно-ли-отключить-автоматическую-отсечку">Можно ли отключить автоматическую отсечку?</a></li><li><a href="#советы-по-правильной-заправке">Советы по правильной заправке</a></li><li><a href="#частые-вопросы-автомобилистов">Частые вопросы автомобилистов</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-muzhchine-sdelat-khorosho.html">Как мужчине сделать хорошо: руководство для автолюбителя</a></li><li><a href="/articles/k/ka/kak-rasschitat-normy-raskhoda-topliva.html">Расчет нормы расхода топлива: формулы, примеры, таблица</a></li><li><a href="/articles/m/mo/mozhno-li-zavesti-mashinu-na-avtomate-s-buksira.html">Можно ли завести машину на автомате с буксира: правила и риски</a></li><li><a href="/articles/l/la/launch-dlya-gruzovykh-avtomobilej.html">Launch для грузовых автомобилей: обзор и инструкция</a></li><li><a href="/articles/z/za/zamena-salonnogo-filtra-passat-b7.html">Замена салонного фильтра Пассат Б7: пошаговая инструкция</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как заправка понимает, что бак полный: принципы работы и практические советы</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-автоматической-отсечки-на-заправочном-пистолете">Принцип работы автоматической отсечки на заправочном пистолете</a></li><li><a href="#почему-отсечка-срабатывает-не-всегда">Почему отсечка срабатывает не всегда?</a></li><li><a href="#что-делать-если-бензин-переливается">Что делать, если бензин переливается?</a></li><li><a href="#влияние-конструкции-бака-на-работу-отсечки">Влияние конструкции бака на работу отсечки</a></li><li><a href="#можно-ли-отключить-автоматическую-отсечку">Можно ли отключить автоматическую отсечку?</a></li><li><a href="#советы-по-правильной-заправке">Советы по правильной заправке</a></li><li><a href="#частые-вопросы-автомобилистов">Частые вопросы автомобилистов</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Каждый водитель сталкивался с ситуацией, когда на заправке пистолет автоматически отключается, сигнализируя о заполнении бака. Но как именно <strong>АЗС определяет</strong>, что топливо больше не куда девать? Этот процесс кажется простым только на первый взгляд. На самом деле за ним стоит сложная система датчиков, механизмов и физических законов.</p>
+<p>В этой статье разберёмся, как работает <em>автоматическая отсечка</em> на колонках, почему иногда она срабатывает раньше времени или, наоборот, позволяет перелить бензин, а также что делать, если система даёт сбой. Это знание поможет избежать неприятностей на заправке и сэкономить время.</p>
+
+<h2 id="принцип-работы-автоматической-отсечки-на-заправочном-пистолете">Принцип работы автоматической отсечки на заправочном пистолете</h2>
+<p>Основной элемент, отвечающий за остановку подачи топлива, — это <strong>клапан отсечки</strong>. Он срабатывает, когда уровень бензина или дизеля в баке поднимается до определённой отметки. Работает это так:</p>
+<p>В <em>топливном пистолете</em> есть небольшое отверстие (воздушный канал), соединённое с вакуумной камерой. Пока бак не заполнен, воздух свободно циркулирует через это отверстие, и вакуум в камере поддерживается. Как только топливо достигает конца пистолета, оно блокирует воздушный канал. Давление в вакуумной камере меняется, и <strong>пружинный механизм</strong> перекрывает подачу горючего.</p>
+<p>Эта система работает на основе <em>закона Паскаля</em> и не требует электроники — всё чистая механика. Именно поэтому она надёжна и используется на большинстве АЗС уже десятилетиями.</p>
+
+<ul>
+<li>🔹 <strong>Вакуумная камера</strong> — создаёт разряжение для срабатывания клапана</li>
+<li>🔹 <strong>Воздушный канал</strong> — пропускает воздух, пока бак не заполнен</li>
+<li>🔹 <strong>Пружинный клапан</strong> — перекрывает топливо при изменении давления</li>
+<li>🔹 <strong>Рычаг отсечки</strong> — механически блокирует подачу</li>
+</ul>
+
+<div class="pb-poll" id="poll-b59643ad"><div class="pb-poll-question">📊 Как часто вы заправляетесь до полного бака?</div><div class="pb-poll-option" data-poll="b59643ad" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Всегда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b59643ad" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Чаще всего</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b59643ad" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Редко</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="b59643ad" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="почему-отсечка-срабатывает-не-всегда">Почему отсечка срабатывает не всегда?</h2>
+<p>Иногда водители сталкиваются с тем, что пистолет отключается задолго до заполнения бака. Причин этому несколько:</p>
+<p><strong>Засорение воздушного канала</strong>. Если в баке скопилась грязь или конденсат, они могут заблокировать отверстие в пистолете раньше времени. Это особенно актуально для старых автомобилей или после заправки на сомнительных АЗС.</p>
+<p><strong>Неправильное положение пистолета</strong>. Если его слишком сильно заглубить в горловину или, наоборот, держать под неправильным углом, воздух перестанет циркулировать, и отсечка сработает ложно.</p>
+
+<p>Также проблема может крыться в <em>неисправности самого пистолета</em>. Изношенные уплотнители или заменители деталей на дешёвых заправках часто приводят к сбоям.</p>
+
+<blockquote>⚠️ Внимание: Если отсечка срабатывает на разных АЗС при заправке одного и того же автомобиля, проверьте <code>горловину бака</code> на наличие механических повреждений или посторонних предметов.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед заправкой всегда проверяйте, чтобы пистолет был чистым — это уменьшит риск попадания грязи в бак и ложных срабатываний отсечки.</p></aside>
+
+<h2 id="что-делать-если-бензин-переливается">Что делать, если бензин переливается?</h2>
+<p>Ситуация, когда отсечка не срабатывает, а топливо начинает выливаться через горловину, не только неудобна, но и опасна. Причины могут быть следующими:</p>
+<ul>
+<li>🚗 <strong>Неисправный клапан отсечки</strong> в пистолете</li>
+<li>🚗 <strong>Повреждённый датчик уровня топлива</strong> в автомобиле (если он связан с системой заправки)</li>
+<li>🚗 <strong>Слишком быстрая подача топлива</strong> — на некоторых АЗС насосы работают на высокой мощности, и механизм не успевает среагировать</li>
+</ul>
+<p>Если вы заметили, что бензин переливается, <strong>немедленно остановите заправку</strong> и оповестите оператора. Не пытайтесь "долить" вручную — это может привести к попаданию топлива на кузов или в салон, что чревато повреждением лакокрасочного покрытия или даже пожаром.</p>
+
+<h2 id="влияние-конструкции-бака-на-работу-отсечки">Влияние конструкции бака на работу отсечки</h2>
+<p>Форма и объём <em>топливного бака</em> также влияют на то, как срабатывает автоматическая отсечка. Например:</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr><th>Тип бака</th><th>Особенности заправки</th><th>Возможные проблемы</th></tr>
+</thead>
+<tbody>
+<tr><td>Прямоугольный бак</td><td>Топливо распределяется равномерно</td><td>Отсечка срабатывает точно</td></tr>
+<tr><td>Круглый или цилиндрический</td><td>Жидкость поднимается по стенкам</td><td>Ложные срабатывания при наклоне автомобиля</td></tr>
+<tr><td>Бак с перегородками</td><td>Топливо заполняет секции поочерёдно</td><td>Отсечка может сработать раньше, если пистолет в "пустой" секции</td></tr>
+<tr><td>Бак с выемками (например, для запасного колеса)</td><td>Неравномерное заполнение</td><td>Риск недолива или перелива</td></tr>
+</tbody>
+</table></div>
+
+<p><mark>На автомобилях с баком нестандартной формы (например, у некоторых кроссоверов) отсечка может срабатывать нестабильно из-за неравномерного распределения топлива.</mark> В таких случаях лучше заправляться на проверенных АЗС с современным оборудованием.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед заправкой</h4><label class="check-item"><input type="checkbox"><span>Убедиться, что пистолет чистый</span></label><label class="check-item"><input type="checkbox"><span>Проверьте горловину бака на наличие мусора</span></label><label class="check-item"><input type="checkbox"><span>Не заглубляйте пистолет слишком сильно</span></label><label class="check-item"><input type="checkbox"><span>Следите за процессом, а не отвлекайтесь на телефон</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="можно-ли-отключить-автоматическую-отсечку">Можно ли отключить автоматическую отсечку?</h2>
+<p>На некоторых заправках можно встретить пистолеты с <em>ручным режимом</em>. Обычно это делается для заправки канистр или техники, где автоматическая отсечка не срабатывает корректно. Чтобы активировать этот режим, нужно:</p>
+<ol>
+<li>Потянуть <code>рычаг отсечки</code> на себя до упора</li>
+<li>Заранее подготовить канистру или ёмкость</li>
+<li>Контролировать процесс визуально, так как автоматическая остановка отключена</li>
+</ol>
+<p>Однако на большинстве современных АЗС такой функции нет — производители уделяют большое внимание безопасности. Попытка вручную удерживать рычаг пистолета может привести к переливу и аварийным ситуациям.</p>
+
+<blockquote>⚠️ Внимание: На заправках <em>Rosneft</em>, <em>Лукойл</em> и <em>Газпромнефть</em> ручной режим, как правило, отключён. Не пытайтесь его активировать — это может привести к блокировке колонки.</blockquote>
+
+<h2 id="советы-по-правильной-заправке">Советы по правильной заправке</h2>
+<p>Чтобы избежать проблем с отсечкой и переливами, следуйте этим рекомендациям:</p>
+<ul>
+<li>🔧 Заправляйтесь на <strong>проверенных АЗС</strong> с современным оборудованием</li>
+<li>🔧 Держите пистолет <strong>вертикально</strong>, не заглубляя его слишком сильно в горловину</li>
+<li>🔧 Если бак заполняется медленно, попробуйте <strong>немного вытянуть пистолет</strong> — возможно, воздушный канал заблокирован</li>
+<li>🔧 Не отвлекайтесь во время заправки — следите за процессом</li>
+</ul>
+<p>Также стоит учитывать, что в <strong>холодное время года</strong> топливо может расширяться, поэтому не стоит заправляться "до горлышка". Оставляйте <code>5-10% свободного пространства</code> в баке.</p>
+
+<details class="pb-accordion"><summary>Что будет, если перелить бензин в бак?</summary><div class="pb-accordion-body"><p>Перелив топлива может привести к попаданию бензина в адсорбер, что выведет его из строя. В худшем случае избыток горючего попадёт в впускной коллектор, что чревато гидроударом и серьёзными поломками двигателя.</p></div></details>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Автоматическая отсечка — это механическая система, которая не зависит от электроники автомобиля. Её работа основана на физических законах и не требует настройки. </p></aside>
+
+<h2 id="частые-вопросы-автомобилистов">Частые вопросы автомобилистов</h2>
+
+<details>
+<summary>Почему на некоторых заправках отсечка срабатывает раньше, чем на других?</summary>
+<p>Причина может быть в разных моделях заправочных пистолетов. Некоторые АЗС используют оборудование с более чувствительными датчиками, которые срабатывают при малейшем изменении давления. Также роль играет скорость подачи топлива — на мощных насосах отсечка может срабатывать быстрее.</p>
+</details>
+
+<details>
+<summary>Можно ли самому отрегулировать отсечку на пистолете?</summary>
+<p>Нет, это невозможно. Клапан отсечки — это герметичная система, и любая попытка вмешательства приведёт к его поломке. Если пистолет работает некорректно, обратитесь к оператору заправки.</p>
+</details>
+
+<details>
+<summary>Что делать, если отсечка не срабатывает, а бензин начинает выливаться?</summary>
+<p>Немедленно отпустите рычаг пистолета и оповестите оператора. Не пытайтесь stop заправку вручную — это может усугубить ситуацию. После инцидента проверьте, не попал ли бензин на кузов или в салон автомобиля.</p>
+</details>
+
+<details>
+<summary>Влияет ли тип топлива (АИ-92, АИ-95, дизель) на работу отсечки?</summary>
+<p>Нет, тип топлива не влияет на механизм отсечки. Она срабатывает одинаково для бензина, дизеля и даже масла. Разница может быть только в скорости заполнения бака из-за разной плотности жидкостей.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-muzhchine-sdelat-khorosho.html" class="pb-related-card">
+                <span class="pb-related-title">Как мужчине сделать хорошо: руководство для автолюбителя</span>
+                <span class="pb-related-desc">Как мужчине сделать хорошо? Обеспечьте его авто правильной диагностикой, качественным топливом и гра</span>
+            </a><a href="/articles/k/ka/kak-rasschitat-normy-raskhoda-topliva.html" class="pb-related-card">
+                <span class="pb-related-title">Расчет нормы расхода топлива: формулы, примеры, таблица</span>
+                <span class="pb-related-desc">Как правильно рассчитать норму расхода топлива для авто? Формулы Минтранса, учет коэффициентов, путе</span>
+            </a><a href="/articles/m/mo/mozhno-li-zavesti-mashinu-na-avtomate-s-buksira.html" class="pb-related-card">
+                <span class="pb-related-title">Можно ли завести машину на автомате с буксира: правила и риски</span>
+                <span class="pb-related-desc">Узнайте, можно ли завести автомобиль с АКПП с буксира, какие последствия для коробки и как правильно</span>
+            </a><a href="/articles/l/la/launch-dlya-gruzovykh-avtomobilej.html" class="pb-related-card">
+                <span class="pb-related-title">Launch для грузовых автомобилей: обзор и инструкция</span>
+                <span class="pb-related-desc">Полный гид по сканерам Launch для грузовиков. Диагностика двигателей, ABS, EBS и K-Line. Выбор модел</span>
+            </a><a href="/articles/z/za/zamena-salonnogo-filtra-passat-b7.html" class="pb-related-card">
+                <span class="pb-related-title">Замена салонного фильтра Пассат Б7: пошаговая инструкция</span>
+                <span class="pb-related-desc">Как заменить салонный фильтр на Volkswagen Passat B7 своими руками. Выбор расходников, пошаговый алг</span>
+            </a><a href="/articles/k/ka/kakoe-davlenie-v-rasshiritelnom-bachke-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Давление в расширительном бачке: норма, проверка и регулировка</span>
+                <span class="pb-related-desc">Какое давление должно быть в расширительном бачке автомобиля? Подробная инструкция по проверке и рег</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

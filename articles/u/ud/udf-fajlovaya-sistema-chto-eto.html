@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>UDF файловая система: что это, плюсы и совместимость — Авто Справочник</title>
+    <meta name="description" content="Подробно о файловой системе UDF: назначение, поддержка дисков DVD/Blu-ray, сравнение с FAT32 и NTFS. Как форматировать и читать UDF в Windows.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/u/ud/udf-fajlovaya-sistema-chto-eto.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="UDF файловая система: что это, плюсы и совместимость">
+    <meta property="og:description" content="Подробно о файловой системе UDF: назначение, поддержка дисков DVD/Blu-ray, сравнение с FAT32 и NTFS. Как форматировать и читать UDF в Windows.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">UDF файловая система: что это, плюсы и совместимость</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#история-возникновения-и-назначение-стандарта">История возникновения и назначение стандарта</a></li><li><a href="#технические-особенности-и-структура-версий">Технические особенности и структура версий</a></li><li><a href="#сравнение-udf-с-fat32-и-ntfs">Сравнение UDF с FAT32 и NTFS</a></li><li><a href="#совместимость-с-операционными-системами">Совместимость с операционными системами</a></li><li><a href="#процесс-форматирования-и-записи-дисков">Процесс форматирования и записи дисков</a></li><li><a href="#восстановление-данных-и-решение-проблем">Восстановление данных и решение проблем</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/z/za/za-skolko-chasov-vyvetrivaetsya-viski.html">За сколько часов выветривается виски: таблица времени</a></li><li><a href="/articles/k/ka/kak-rabotat-na-yandeks-pro.html">Как работать на Яндекс Про: полное руководство для таксистов</a></li><li><a href="/articles/g/gr/granta-vypuskaetsya-ili-net.html">LADA Granta выпускается или нет: актуальное положение дел в 2026 году</a></li><li><a href="/articles/z/za/za-skolko-vykhodit-alkogol-iz-organizma-tablitsa.html">За сколько выходит алкоголь из организма: точная таблица</a></li><li><a href="/articles/s/sk/skolko-posadochnykh-mest-v-mashine.html">Сколько посадочных мест в машине: стандарты, нормы и вместимость</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>UDF файловая система: что это такое и как с ней работать</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#история-возникновения-и-назначение-стандарта">История возникновения и назначение стандарта</a></li><li><a href="#технические-особенности-и-структура-версий">Технические особенности и структура версий</a></li><li><a href="#сравнение-udf-с-fat32-и-ntfs">Сравнение UDF с FAT32 и NTFS</a></li><li><a href="#совместимость-с-операционными-системами">Совместимость с операционными системами</a></li><li><a href="#процесс-форматирования-и-записи-дисков">Процесс форматирования и записи дисков</a></li><li><a href="#восстановление-данных-и-решение-проблем">Восстановление данных и решение проблем</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный пользователь редко задумывается о том, как именно хранятся данные на оптических носителях, пока не столкнется с сообщением об ошибке при попытке открыть диск. Часто причиной проблем становится формат <strong>UDF</strong>, который по умолчанию используется для записи DVD и Blu-ray дисков. Понимание принципов работы этой системы необходимо для успешного восстановления данных и правильной записи информации.</p>
+
+<p>В отличие от привычных жестких дисков, оптические медиа имеют свои физические ограничения и особенности считывания. Файловая система <em>Universal Disk Format</em> была разработана специально для преодоления этих ограничений, обеспечивая кросс-платформенную совместимость. Если вы планируете работать с архивными копиями или профессионально записывать видео, знание нюансов UDF станет критически важным.</p>
+
+<h2 id="история-возникновения-и-назначение-стандарта">История возникновения и назначение стандарта</h2>
+<p>Разработка формата началась в середине 1990-х годов по инициативе объединения OSTA, целью которого было создание единого стандарта для оптических дисков. До этого момента существовала путаница с форматами записи, что мешало широкому распространению перезаписываемых дисков. Новый стандарт должен был стать универсальным решением для всех типов оптических носителей, от CD до новейших Blu-ray.</p>
+
+<p>Главной задачей инженеров было обеспечение возможности пакетной записи, когда файлы добавляются на диск по одному, как на обычную флешку. Это кардинально отличало новый подход от традиционной однократной записи треками. Именно благодаря этому <strong>UDF</strong> стал доминирующим стандартом для бытовых DVD-рекордеров и компьютерных приводов.</p>
+
+<p>С течением времени стандарт неоднократно обновлялся, обрастая новыми функциями и улучшая совместимость с различными операционными системами. Каждая новая версия вносила изменения в структуру каталогов и методы адресации блоков данных. Это позволяло увеличивать максимальный размер поддерживаемых файлов и улучшать отказоустойчивость структуры.</p>
+
+<details class="pb-accordion"><summary>Почему именно UDF для видео-дисков?</summary><div class="pb-accordion-body"><p>Стандарт был выбран для DVD-Video и Blu-ray Disc, так как он позволяет реализовать сложную навигацию по меню и главам, что было невозможно в старых файловых системах.</p></div></details>
+
+<h2 id="технические-особенности-и-структура-версий">Технические особенности и структура версий</h2>
+<p>Ключевой особенностью формата является его модульность, позволяющая внедрять новые функции без потери обратной совместимости. Различные версии стандарта поддерживают разные наборы функций, что иногда приводит к путанице при чтении дисков на старом оборудовании. Важно понимать, какая именно версия используется для записи вашего носителя.</p>
+
+<p>Наиболее распространенной версией является <em>UDF 2.01</em>, которая стала стандартом для дисков DVD-ROM и DVD-Video. Она обеспечивает базовую функциональность для чтения видео и данных на большинстве приводов. Более новые версии, такие как 2.50 и 2.60, добавляют поддержку больших файлов и улучшенное управление метаданными.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Диски, записанные в версии UDF 2.60, могут не читаться на приводах, выпущенных до 2000-х годов. Всегда проверяйте спецификации оборудования перед использованием новейших стандартов записи.</p>
+</blockquote>
+
+<p>Структура файловой системы позволяет эффективно использовать пространство на диске, минимизируя накладные расходы. Это особенно важно для носителей ограниченной емкости, таких как односторонние DVD. Алгоритмы распределения данных обеспечивают равномерный износ поверхности при многократной перезаписи.</p>
+
+<div class="pb-poll" id="poll-d421548f"><div class="pb-poll-question">📊 Какой формат дисков вы используете чаще всего?</div><div class="pb-poll-option" data-poll="d421548f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">CD-R/RW</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d421548f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">DVD-R/RW</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d421548f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Blu-ray</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="d421548f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не использую оптические диски</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="сравнение-udf-с-fat32-и-ntfs">Сравнение UDF с FAT32 и NTFS</h2>
+<p>При выборе формата для записи данных пользователи часто колеблются между тремя основными вариантами. Каждый из них имеет свои сильные и слабые стороны, зависящие от типа носителя и целевого устройства воспроизведения. <strong>FAT32</strong> остается самым совместимым, но имеет ограничения на размер файла.</p>
+
+<p>Система <em>NTFS</em> предлагает продвинутые функции безопасности и журналирования, но плохо поддерживается бытовой электроникой. Телевизоры, автомобильные магнитолы и игровые приставки часто просто не видят диски с такой файловой системой. В этом контексте UDF занимает золотую середину.</p>
+
+<p>Рассмотрим основные различия в таблице, чтобы вы могли сделать осознанный выбор для своей задачи:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Характеристика</th>
+<th>FAT32</th>
+<th>NTFS</th>
+<th>UDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Макс. размер файла</td>
+<td>4 ГБ</td>
+<td>16 ТБ</td>
+<td>Зависит от версии (до 16 ТБ)</td>
+</tr>
+<tr>
+<td>Совместимость с ТВ</td>
+<td>Высокая</td>
+<td>Низкая</td>
+<td>Средняя/Высокая</td>
+</tr>
+<tr>
+<td>Журналирование</td>
+<td>Нет</td>
+<td>Да</td>
+<td>Опционально</td>
+</tr>
+<tr>
+<td>Основное применение</td>
+<td>Флешки, старые ОС</td>
+<td>Системные диски Windows</td>
+<td>Оптические диски (DVD/BD)</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Выбор в пользу <strong>UDF</strong> часто диктуется необходимостью записи файлов размером более 4 гигабайт на оптический носитель. FAT32 просто не позволит сделать это физически, прервав запись. NTFS же может быть не понят плеером, подключенным к телевизору.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы записываете диск исключительно для компьютера, используйте UDF 2.60. Если диск предназначен для старого DVD-плеера, лучше выбрать UDF 2.01 или даже ISO/UDF Bridge.</p></aside>
+
+<h2 id="совместимость-с-операционными-системами">Совместимость с операционными системами</h2>
+<p>Поддержка формата в различных ОС реализована по-разному, что создает определенные сложности для пользователей. В среде <em>Windows</em> поддержка внедрена начиная с версии 2000, но полный функционал чтения и записи доступен не во всех редакциях без дополнительного ПО.</p>
+
+<p>Операционные системы семейства <strong>Linux</strong> имеют отличную встроенную поддержку через драйвер kernel, что делает их идеальным инструментом для работы с проблемными дисками. Пользователи macOS также могут читать и записывать данные, хотя иногда требуется использование сторонних улит для старых версий формата.</p>
+
+<p>Особое внимание стоит уделить мобильным устройствам и Smart TV. Многие современные телевизоры с Android TV или Tizen без проблем читают UDF, в то время как бюджетные модели могут требовать конвертации. Проверка спецификации вашего устройства — первый шаг к успеху.</p>
+
+<p>В Windows 10 и 11 процесс форматирования упрощен, но скрыты некоторые технические детали. Система автоматически выбирает оптимальную версию формата, но иногда этот выбор оказывается несовместим с целевым устройством воспроизведения. В таких случаях требуется ручное вмешательство.</p>
+
+<h2 id="процесс-форматирования-и-записи-дисков">Процесс форматирования и записи дисков</h2>
+<p>Для создания диска в формате UDF в Windows можно использовать встроенные средства или специализированный софт. Стандартная процедура через «Мой компьютер» предлагает два режима: «Как USB-накопитель» и «С проигрывателем CD/DVD». Первый вариант создает полноценную файловую систему UDF.</p>
+
+<p>При выборе режима живой файловой системы диск становится доступен для записи файлов методом перетаскивания. Однако это снижает совместимость с другими компьютерами, если не закрыть сессию. Запись в режиме мастер-диска создает структуру, более похожую на традиционные DVD.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка перед записью диска</h4><label class="check-item"><input type="checkbox"><span>Убедиться в чистоте поверхности диска</span></label><label class="check-item"><input type="checkbox"><span>Проверить свободное место</span></label><label class="check-item"><input type="checkbox"><span>Выбрать правильную версию UDF</span></label><label class="check-item"><input type="checkbox"><span>Закрыть другие программы</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Использование профессионального софта, такого как <em>ImgBurn</em> или <strong>UltraISO</strong>, дает больше контроля над процессом. Вы можете вручную выбрать версию формата, размер кластера и другие параметры. Это особенно полезно при создании загрузочных или мультимедийных дисков.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Прерывание процесса записи на оптический диск в 99% случаев приводит к безвозвратной порче носителя. Используйте источник бесперебойного питания при работе с большими объемами данных.</p>
+</blockquote>
+
+<h2 id="восстановление-данных-и-решение-проблем">Восстановление данных и решение проблем</h2>
+<p>Повреждение файловой системы на оптических дисках — распространенная проблема, вызванная царапинами или деградацией красящего слоя. Программы для восстановления данных, такие как <em>R-Studio</em> или <strong>PhotoRec</strong>, умеют работать с поврежденными секторами UDF. Они игнорируют ошибки чтения и пытаются вытащить уцелевшие файлы.</p>
+
+<p>Частой ошибкой является попытка отформатировать диск заново вместо копирования данных. Если диск определился системой, но файлы не открываются, первым делом нужно создать полный образ диска. Работа с образом безопаснее для физического носителя, чем прямое взаимодействие.</p>
+
+<p>В некоторых случаях помогает переустановка драйверов привода в диспетчере устройств. Windows может некорректно кэшировать информацию о структуре диска. Удаление устройства и повторное сканирование конфигурации иногда возвращает доступ к данным без использования сложного софта.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для максимальных шансов на восстановление данных с поврежденного UDF диска используйте режим посекторного копирования в специализированных утилитах.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли отформатировать диск UDF обратно в FAT32?</summary>
+<p>Да, но это возможно только для перезаписываемых дисков (RW, RE). Одноразовые диски (R) переформатировать нельзя, так как запись на них необратима. Для RW-дисков в Windows это делается через меню форматирования, выбрав нужную файловую систему.</p>
+</details>
+
+<details>
+<summary>Почему компьютер видит диск, но пишет «вставьте диск в устройство»?</summary>
+<p>Это может указывать на физическую неисправность лазерной головки привода или сильное загрязнение линзы. Также проблема может быть в несовместимости версии UDF, если диск записан на более современном приводе, чем тот, который вы используете для чтения.</p>
+</details>
+
+<details>
+<summary>Какая версия UDF нужна для записи фильма в 4K?</summary>
+<p>Для видео высокого разрешения, занимающего более 4 ГБ, необходима файловая система, поддерживающая большие файлы. Подойдет UDF версии 2.50 или выше. Стандартный FAT32 не позволит записать такой файл целиком.</p>
+</details>
+
+<details>
+<summary>Безопасно ли использовать UDF для долгосрочного архивирования?</summary>
+<p>Файловая система надежна, но сами оптические диски подвержены «дисковой гнили». Для долгосрочного хранения (более 10 лет) рекомендуется использовать диски M-Disc, которые используют каменный слой записи, устойчивый к свету и температуре, в сочетании с форматом UDF.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/z/za/za-skolko-chasov-vyvetrivaetsya-viski.html" class="pb-related-card">
+                <span class="pb-related-title">За сколько часов выветривается виски: таблица времени</span>
+                <span class="pb-related-desc">Узнайте точное время выветривания виски из организма. Таблица для разных доз и веса, влияние закуски</span>
+            </a><a href="/articles/k/ka/kak-rabotat-na-yandeks-pro.html" class="pb-related-card">
+                <span class="pb-related-title">Как работать на Яндекс Про: полное руководство для таксистов</span>
+                <span class="pb-related-desc">Пошаговая инструкция по регистрации, настройке и эффективной работе в Яндекс Про для водителей такси</span>
+            </a><a href="/articles/g/gr/granta-vypuskaetsya-ili-net.html" class="pb-related-card">
+                <span class="pb-related-title">LADA Granta выпускается или нет: актуальное положение дел в 2026 году</span>
+                <span class="pb-related-desc">LADA Granta выпускается или нет? Полный разбор текущей ситуации на заводе АвтоВАЗ, изменения в компл</span>
+            </a><a href="/articles/z/za/za-skolko-vykhodit-alkogol-iz-organizma-tablitsa.html" class="pb-related-card">
+                <span class="pb-related-title">За сколько выходит алкоголь из организма: точная таблица</span>
+                <span class="pb-related-desc">Полная таблица вывода алкоголя из организма. Узнайте, за сколько часов выветривается этанол, и почем</span>
+            </a><a href="/articles/s/sk/skolko-posadochnykh-mest-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько посадочных мест в машине: стандарты, нормы и вместимость</span>
+                <span class="pb-related-desc">Узнайте, сколько посадочных мест в машине по ПДД. Стандарты вместимости легковых авто, правила перев</span>
+            </a><a href="/articles/r/ra/rabota-kurerom-na-mashine-kompanii.html" class="pb-related-card">
+                <span class="pb-related-title">Работа курьером на машине компании: плюсы, минусы, требования</span>
+                <span class="pb-related-desc">Узнайте, как устроена работа курьером на корпоративном авто: условия, зарплата, ответственность и со</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

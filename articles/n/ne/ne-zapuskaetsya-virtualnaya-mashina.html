@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Не запускается виртуальная машина: решения для VirtualBox и VMware — Авто Справочник</title>
+    <meta name="description" content="Виртуальная машина не запускается? Разбираем ошибки VirtualBox, VMware и Hyper-V. Решение проблем VT-x/AMD-V, ошибок VDI и конфликтов хост-системы.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/n/ne/ne-zapuskaetsya-virtualnaya-mashina.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Не запускается виртуальная машина: решения для VirtualBox и VMware">
+    <meta property="og:description" content="Виртуальная машина не запускается? Разбираем ошибки VirtualBox, VMware и Hyper-V. Решение проблем VT-x/AMD-V, ошибок VDI и конфликтов хост-системы.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Не запускается виртуальная машина: решения для VirtualBox и VMware</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#диагностика-аппаратной-виртуализации-и-bios">Диагностика аппаратной виртуализации и BIOS</a></li><li><a href="#конфликты-с-hyper-v-и-другими-гипервизорами">Конфликты с Hyper-V и другими гипервизорами</a></li><li><a href="#ошибки-выделения-памяти-и-ресурсов-процессора">Ошибки выделения памяти и ресурсов процессора</a></li><li><a href="#проблемы-с-файлами-дисков-и-контроллерами">Проблемы с файлами дисков и контроллерами</a></li><li><a href="#настройки-сети-и-адаптеров">Настройки сети и адаптеров</a></li><li><a href="#специфические-ошибки-virtualbox-и-vmware">Специфические ошибки VirtualBox и VMware</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/m/mt/mts-kupit-modem-dlya-noutbuka.html">МТС купить модем для ноутбука: выбор, тарифы и настройка</a></li><li><a href="/articles/k/ka/kak-rabotaet-gibridnyj-avto.html">Как работает гибридный авто: устройство, типы и плюсы</a></li><li><a href="/articles/s/sk/skolko-sidr-vyvetrivaetsya-iz-organizma.html">Сколько сидр выветривается из организма: таблица</a></li><li><a href="/articles/m/ma/mashiny-v-kortezhe-putina.html">Машины в кортеже Путина: состав, модели и охрана</a></li><li><a href="/articles/1/13/13-km-skolko-po-vremeni-ekhat.html">13 км сколько по времени ехать: расчет на авто, пешком и на велосипеде</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Не запускается виртуальная машина: полное руководство по устранению ошибок</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#диагностика-аппаратной-виртуализации-и-bios">Диагностика аппаратной виртуализации и BIOS</a></li><li><a href="#конфликты-с-hyper-v-и-другими-гипервизорами">Конфликты с Hyper-V и другими гипервизорами</a></li><li><a href="#ошибки-выделения-памяти-и-ресурсов-процессора">Ошибки выделения памяти и ресурсов процессора</a></li><li><a href="#проблемы-с-файлами-дисков-и-контроллерами">Проблемы с файлами дисков и контроллерами</a></li><li><a href="#настройки-сети-и-адаптеров">Настройки сети и адаптеров</a></li><li><a href="#специфические-ошибки-virtualbox-и-vmware">Специфические ошибки VirtualBox и VMware</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Ситуация, когда виртуальная машина не запускается, знакома каждому, кто работает с тестовыми средами, разработкой ПО или просто изучает новые операционные системы. Экран может погаснуть, появиться черное окно или вылезть пугающее сообщение об ошибке с кодом, который, казалось бы, ничего не значит. Чаще всего проблема кроется не в самой гостевой системе, а в настройках хоста или конфликте ресурсов.</p>
+
+<p>Виртуализация — это сложный процесс, требующий взаимодействия множества компонентов, от аппаратных инструкций процессора до драйверов гипервизора. <strong>Некорректная конфигурация</strong> BIOS/UEFI часто становится первым препятствием на пути к успешному старту. Также причиной могут служить антивирусы, блокирующие низкоуровневые вызовы, или поврежденные файлы дисков.</p>
+
+<p>В этой статье мы разберем основные причины сбоев и предоставим пошаговые инструкции по их устранению. Вы научитесь диагностировать проблемы с <em>VirtualBox</em>, <em>VMware Workstation</em> и <em>Hyper-V</em>, а также поймете, как правильно распределить ресурсы системы для стабильной работы.</p>
+
+<h2 id="диагностика-аппаратной-виртуализации-и-bios">Диагностика аппаратной виртуализации и BIOS</h2>
+
+<p>Первым делом необходимо убедиться, что ваш процессор поддерживает технологию виртуализации и она активирована. Без этого ни одна современная виртуальная машина работать не будет. Речь идет об инструкциях <strong>Intel VT-x</strong> или <strong>AMD-V</strong>, которые должны быть включены на уровне материнской платы.</p>
+
+<p>Для проверки перейдите в BIOS/UEFI при загрузке компьютера (обычно клавиши Del, F2 или F10). Найдите раздел, связанный с процессором (CPU Configuration) или безопасностью, и убедитесь, что пункты <code>Intel Virtualization Technology</code> или <code>SVM Mode</code> имеют статус <code>Enabled</code>. Если они выключены, система просто не сможет запустить второй уровень операционной системы.</p>
+
+<p>Иногда даже при включенной опции в BIOS система может блокировать запуск из-за конфликтов с другими службами Windows. В частности, встроенный <em>Hyper-V</em> может монополизировать ресурсы, не давая работать сторонним гипервизорам.</p>
+
+<blockquote>⚠️ Внимание: Изменение настроек BIOS/UEFI может повлиять на стабильность работы всей системы. Записывайте исходные значения параметров перед их изменением, чтобы иметь возможность откатиться назад.</blockquote>
+
+<details class="pb-accordion"><summary>Как проверить поддержку виртуализации без перезагрузки?</summary><div class="pb-accordion-body"><p>Вы можете использовать утилиту командной строки. Откройте PowerShell и введите команду: systeminfo. Внизу списка найдите строку "Виртуализация". Если там написано "Да", то аппаратная поддержка есть. Если "Нет" — нужно лезть в BIOS.</p></div></details>
+
+<h2 id="конфликты-с-hyper-v-и-другими-гипервизорами">Конфликты с Hyper-V и другими гипервизорами</h2>
+
+<p>Одной из самых частых причин, почему не запускается виртуальная машина в <em>VirtualBox</em> или старых версиях <em>VMware</em>, является активный <strong>Hyper-V</strong>. Этот компонент Windows создает собственный слой абстракции, который может блокировать доступ другим программам к аппаратуре.</p>
+
+<p>Чтобы решить проблему, нужно полностью отключить Hyper-V и связанные с ним функции. Это можно сделать через панель управления или командную строку. Откройте терминал с правами администратора и выполните команду для принудительного отключения:</p>
+
+<pre><code>bcdedit /set hypervisorlaunchtype off</code></pre>
+
+<p>После выполнения команды обязательно перезагрузите компьютер. Также стоит проверить, не активированы ли другие компоненты, такие как "Платформа виртуальной машины" или "Защитник Windows" с функцией изоляции ядра. Эти функции часто включаются автоматически после обновлений Windows.</p>
+
+<ul>
+<li>🛠️ Откройте "Включение или отключение компонентов Windows".</li>
+<li>🛠️ Снимите галочки с Hyper-V, Windows Sandbox и Платформы виртуальной машины.</li>
+<li>🛠️ Перезагрузите ПК и попробуйте запустить ВМ снова.</li>
+</ul>
+
+<div class="pb-poll" id="poll-509b1fba"><div class="pb-poll-question">📊 Какой гипервизор вы используете чаще всего?</div><div class="pb-poll-option" data-poll="509b1fba" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">VirtualBox</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="509b1fba" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">VMware Workstation</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="509b1fba" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Hyper-V</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="509b1fba" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">KVM/QEMU</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="ошибки-выделения-памяти-и-ресурсов-процессора">Ошибки выделения памяти и ресурсов процессора</h2>
+
+<p>Даже если аппаратная часть настроена верно, виртуальная машина может не запускаться из-за банальной нехватки ресурсов. Выделение слишком большого объема <strong>оперативной памяти</strong> гостевой системе может привести к краху хоста или отказу в запуске.</p>
+
+<p>Оптимальным считается выделение не более 50-70% от общего объема RAM вашего компьютера. Например, если у вас 8 ГБ памяти, не стоит отдавать виртуалке больше 4 ГБ. Аналогичная ситуация с ядрами процессора: выделение всех доступных потоков может "задушить" основную систему.</p>
+
+<p>Проверьте настройки конкретной машины в меню "Система" или "Hardware". Убедитесь, что вы не пытаетесь эмулировать 64-битную ОС на процессоре, который работает в 32-битном режиме, или наоборот, если образ диска этого не позволяет.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Ресурс</th>
+<th>Рекомендуемое значение</th>
+<th>Критический минимум</th>
+<th>Риск превышения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>RAM</td>
+<td>50% от общего объема</td>
+<td>2048 МБ</td>
+<td>Сwap-файл, зависание хоста</td>
+</tr>
+<tr>
+<td>CPU Cores</td>
+<td>50% от кол-ва ядер</td>
+<td>1 ядро</td>
+<td>Нестабильность работы ОС</td>
+</tr>
+<tr>
+<td>Video Memory</td>
+<td>128 МБ</td>
+<td>32 МБ</td>
+<td>Графические артефакты</td>
+</tr>
+</tbody>
+</table></div>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Золотое правило виртуализации: никогда не выделяйте виртуальной машине все доступные ресурсы физического компьютера, всегда оставляйте запас для работы хост-системы.</p></aside>
+
+<h2 id="проблемы-с-файлами-дисков-и-контроллерами">Проблемы с файлами дисков и контроллерами</h2>
+
+<p>Если виртуальная машина перестала запускаться после некорректного завершения работы, возможно, поврежден файл виртуального диска (обычно с расширением <code>.vdi</code>, <code>.vmdk</code> или <code>.vhdx</code>). Гипервизоры очень чувствительны к целостности своих контейнеров.</p>
+
+<p>В <em>VirtualBox</em> часто возникает ошибка с кодом <strong>VERR_VD_IMAGE_READ_ONLY</strong> или сообщение о том, что диск занят другим процессом. Это может означать, что файл заблокирован антивирусом или процессом-призраком. Попробуйте закрыть программу полностью через диспетчер задач и запустить её от имени администратора.</p>
+
+<p>Также стоит обратить внимание на тип контроллера накопителя. Для современных систем (Windows 10/11, Linux) лучше использовать контроллер <strong>SATA</strong> или <strong>NVMe</strong>, а для старых ОС (Windows XP, Server 2003) — <strong>IDE</strong>. Неправильный выбор контроллера приведет к тому, что система просто не увидит загрузочный сектор.</p>
+
+<pre><code>VBoxManage modifyhd "C:\VMs\MyVM\disk.vdi" --resize 50000</code></pre>
+
+<p>Эта команда (для VirtualBox) позволяет изменить размер диска, если проблема связана с нехваткой места, но перед любыми манипуляциями с дисками обязательно сделайте их <strong>резервную копию</strong>.</p>
+
+<h2 id="настройки-сети-и-адаптеров">Настройки сети и адаптеров</h2>
+
+<p>Сбои в сетевых драйверах хоста могут блокировать инициализацию виртуальной машины, особенно если для ВМ настроен мостовый режим (Bridged Adapter). В этом случае гипервизор пытается напрямую взаимодействовать с физической сетевой картой, и если драйвер "висит", запуск прерывается.</p>
+
+<p>Попробуйте временно переключить тип подключения на <strong>NAT</strong>. Это самый безопасный режим, который не требует прямого доступа к физическому адаптеру. Если машина запустится, значит, проблема кроется в сетевом стеке или драйверах вашей сетевой карты.</p>
+
+<ul>
+<li>🌐 Откройте настройки сети виртуальной машины.</li>
+<li>🌐 Выберите "Тип подключения: NAT".</li>
+<li>🌐 Удалите лишние адаптеры, если их больше одного.</li>
+</ul>
+
+<blockquote>⚠️ Внимание: При использовании режима "Мост" (Bridged) виртуальная машина становится полноправным участником вашей локальной сети. Убедитесь, что на гостевой ОС установлен надежный фаервол, так как она будет видна другим устройствам.</blockquote>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы используете Wi-Fi подключение, режим "Мост" может работать нестабильно или не работать вовсе из-за ограничений беспроводных протоколов. В таких случаях предпочтительнее использовать NAT.</p></aside>
+
+<h2 id="специфические-ошибки-virtualbox-и-vmware">Специфические ошибки VirtualBox и VMware</h2>
+
+<p>Каждый гипервизор имеет свои уникальные коды ошибок. В <em>VMware</em> частой проблемой является ошибка <code>VMware-vmx</code>, которая часто связана с правами доступа к папкам или антивирусным сканированием. Добавление папки с виртуальными машинами в исключения антивируса часто решает проблему.</p>
+
+<p>В <em>VirtualBox</em> популярная ошибка <code>VT-x is not available (VERR_VMX_NO_VMX)</code> указывает на то, что другая программа (часто это тот же Hyper-V или даже эмуляторы Android) захватила инструкции виртуализации. В таких случаях помогает полный перезапуск службы виртуализации или перезагрузка ПК.</p>
+
+<p>Не забывайте обновлять сами программы виртуализации. Разработчики постоянно выпускают патчи, улучшающие совместимость с новыми версиями Windows и новыми процессорами. Старая версия <em>VirtualBox</em> может просто не "понимать" новую инструкцию процессора.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему виртуальная машина запускается, но экран черный?</summary>
+<p>Чаще всего это проблема с видеоадаптером. Зайдите в настройки ВМ, раздел "Дисплей", и увеличьте объем видеопамяти до максимума (обычно 128 МБ), а также включите 3D-ускорение. Если не поможет, попробуйте сменить графический контроллер на VBoxVGA или VMware SVGA.</p>
+</details>
+
+<details>
+<summary>Можно ли запустить 64-битную систему, если в списке только 32-битные?</summary>
+<p>Нет, это означает, что либо в BIOS выключена виртуализация (VT-x/AMD-V), либо она перехвачена другим гипервизором (Hyper-V). Проверьте настройки BIOS и отключите компоненты Hyper-V в Windows.</p>
+</details>
+
+<details>
+<summary>Как переместить виртуальную машину на другой диск?</summary>
+<p>Просто скопировать папку недостаточно. В VirtualBox используйте функцию "Экспорт" и "Импорт" appliances (.ova), либо зарегистрируйте диск заново через меню "Медиа", указав путь к новому расположению файла .vdi.</p>
+</details>
+
+<details>
+<summary>Влияет ли антивирус на работу виртуальных машин?</summary>
+<p>Да, очень сильно. Антивирусы могут блокировать создание исполняемых файлов в памяти или доступ к сетевым интерфейсам. Обязательно добавьте процесс гипервизора (VBoxHeadless.exe или vmware-vmx.exe) в исключения.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/m/mt/mts-kupit-modem-dlya-noutbuka.html" class="pb-related-card">
+                <span class="pb-related-title">МТС купить модем для ноутбука: выбор, тарифы и настройка</span>
+                <span class="pb-related-desc">Где выгодно купить модем МТС для ноутбука? Обзор актуальных 4G/5G моделей, сравнение тарифов интерне</span>
+            </a><a href="/articles/k/ka/kak-rabotaet-gibridnyj-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Как работает гибридный авто: устройство, типы и плюсы</span>
+                <span class="pb-related-desc">Подробный разбор принципа работы гибридного автомобиля. Узнайте устройство, виды приводов, плюсы и м</span>
+            </a><a href="/articles/s/sk/skolko-sidr-vyvetrivaetsya-iz-organizma.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько сидр выветривается из организма: таблица</span>
+                <span class="pb-related-desc">Точные данные: сколько времени выветривается сидр из организма. Таблица по весу и крепости. Влияние </span>
+            </a><a href="/articles/m/ma/mashiny-v-kortezhe-putina.html" class="pb-related-card">
+                <span class="pb-related-title">Машины в кортеже Путина: состав, модели и охрана</span>
+                <span class="pb-related-desc">Полный разбор состава кортежа президента РФ. Какие машины в кортеже Путина? Технические характеристи</span>
+            </a><a href="/articles/1/13/13-km-skolko-po-vremeni-ekhat.html" class="pb-related-card">
+                <span class="pb-related-title">13 км сколько по времени ехать: расчет на авто, пешком и на велосипеде</span>
+                <span class="pb-related-desc">Узнайте, сколько времени займет путь в 13 км. Точные расчеты для машины, пробок, велосипеда и пешей </span>
+            </a><a href="/articles/c/ch/chto-znachit-estradnaya-akustika.html" class="pb-related-card">
+                <span class="pb-related-title">Что значит эстрадная акустика: особенности и применение</span>
+                <span class="pb-related-desc">Узнайте, что значит эстрадная акустика, чем она отличается от бытовой и как выбрать колонки для выст</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

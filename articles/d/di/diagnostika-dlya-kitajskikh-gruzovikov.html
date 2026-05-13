@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Диагностика китайских грузовиков: полное руководство — Авто Справочник</title>
+    <meta name="description" content="Профессиональная компьютерная диагностика китайских грузовиков. Обзор программ, адаптеров и кодов ошибок для Sitrak, Shacman, FAW.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/d/di/diagnostika-dlya-kitajskikh-gruzovikov.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Диагностика китайских грузовиков: полное руководство">
+    <meta property="og:description" content="Профессиональная компьютерная диагностика китайских грузовиков. Обзор программ, адаптеров и кодов ошибок для Sitrak, Shacman, FAW.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Диагностика китайских грузовиков: полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#особенности-архитектуры-электронных-систем">Особенности архитектуры электронных систем</a></li><li><a href="#необходимое-оборудование-и-адаптеры">Необходимое оборудование и адаптеры</a></li><li><a href="#программное-обеспечение-для-диагностики">Программное обеспечение для диагностики</a></li><li><a href="#диагностика-двигателя-и-топливной-системы">Диагностика двигателя и топливной системы</a></li><li><a href="#диагностика-трансмиссии-и-тормозной-системы">Диагностика трансмиссии и тормозной системы</a></li><li><a href="#типичные-проблемы-и-коды-ошибок">Типичные проблемы и коды ошибок</a></li><li><a href="#практические-советы-по-проведению-диагностики">Практические советы по проведению диагностики</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/e/el/elkast-zapchasti-dlya-inomarok.html">Элькаст запчасти для иномарок: каталог, цены и отзывы</a></li><li><a href="/articles/o/oc/ochistitel-radiatora-kuhler-aussenreiniger.html">Kühler Außenreiniger: профессиональная очистка радиатора своими руками</a></li><li><a href="/articles/k/ka/kak-polzovatsya-obd2-skanerom-na-android.html">OBD2 сканер на Android: как подключить и пользоваться в 2026 году</a></li><li><a href="/articles/p/pi/pikhtin-avto-na-nansena.html">Пихтин Авто на Нансена: честный обзор автосервиса</a></li><li><a href="/articles/l/lu/luchshie-proizvoditeli-vozdushnykh-filtrov-dlya-avtomobilej.html">Лучшие производители воздушных фильтров для авто: рейтинг брендов</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Компьютерная диагностика китайских грузовиков: гид по софту и адаптерам</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#особенности-архитектуры-электронных-систем">Особенности архитектуры электронных систем</a></li><li><a href="#необходимое-оборудование-и-адаптеры">Необходимое оборудование и адаптеры</a></li><li><a href="#программное-обеспечение-для-диагностики">Программное обеспечение для диагностики</a></li><li><a href="#диагностика-двигателя-и-топливной-системы">Диагностика двигателя и топливной системы</a></li><li><a href="#диагностика-трансмиссии-и-тормозной-системы">Диагностика трансмиссии и тормозной системы</a></li><li><a href="#типичные-проблемы-и-коды-ошибок">Типичные проблемы и коды ошибок</a></li><li><a href="#практические-советы-по-проведению-диагностики">Практические советы по проведению диагностики</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный рынок коммерческого транспорта претерпевает кардинальные изменения, и доля китайских производителей грузовиков стремительно растет. Владельцы автопарков и частные перевозчики всё чаще обращают внимание на бренды <em>Sitrak</em>, <em>Shacman</em>, <em>FAW</em> и <em>DongFeng</em> благодаря их привлекательной стоимости и богатому оснащению. Однако эксплуатация такой техники требует специфического подхода, особенно когда речь заходит о техническом обслуживании и поиске неисправностей.</p>
+
+<p>В отличие от европейских аналогов, где стандарты диагностики давно унифицированы,"китайцы" представляют собой сложный конструктор из лицензионных узлов и собственных разработок. Двигатели могут быть производства <em>Weichai</em> или <em>Cummins</em>, коробки передач — <em>Fast Gear</em>, а электроника — <em>Knorr-Bremse</em> или <em>Wabco</em>. <strong>Качественная диагностика</strong> становится ключевым фактором, позволяющим избежать простоя техники и дорогостоящего ремонта методом тыка.</p>
+
+<p>В этой статье мы подробно разберем, какое оборудование и программное обеспечение необходимо для работы с китайской грузовой техникой. Вы узнаете о тонкостях подключения к различным электронным блокам управления (ЭБУ), научитесь интерпретировать специфические коды ошибок и поймете, почему универсальные сканеры часто оказываются бесполезными при глубоком анализе систем.</p>
+
+<h2 id="особенности-архитектуры-электронных-систем">Особенности архитектуры электронных систем</h2>
+
+<p>Главной особенностью китайских грузовиков является эклектичность используемых компонентов. Инженеры часто комбинируют проверенные временем агрегаты от мировых лидеров с собственной электроникой для снижения себестоимости. Например, на грузовике <em>Shacman X3000</em> может стоять двигатель <em>Weichai</em> с системой управления <em>Bosch</em>, но бортовая сеть и панель приборов будут иметь собственную логическую структуру, отличную от европейских стандартов.</p>
+
+<p>Это создает определенные сложности для диагноста. Стандартные протоколы обмена данными могут работать нестабильно, а некоторые параметры становятся доступными только через специализированный софт. <strong>Протокол J1939</strong>, являющийся основным для тяжелых грузовиков, здесь часто дополняется proprietary-расширениями производителей. Именно поэтому подключение обычного мультимарочного сканера может показать лишь поверхностные данные, такие как температура охлаждающей жидкости или заряд аккумулятора, скрывая реальные проблемы.</p>
+
+<blockquote>⚠️ Внимание: Попытка записи параметров или проведения адаптаций через неподдерживаемое программное обеспечение может привести к"окирпучиванию" ЭБУ двигателя или коробки передач. Всегда проверяйте совместимость адаптера перед активными действиями.</blockquote>
+
+<p>Особое внимание следует уделить системе <em>CAN-шины</em>. В китайских грузовиках часто встречается разделение на высокоскоростную и низкоскоростную шины, причем точки доступа к ним могут быть выведены нестандартно. Иногда диагностический разъем <code>OBD-II</code> или <code>J1939 (6-pin/9-pin)</code> расположен в труднодоступном месте, например, под панелью приборов или в нише бардачка, что требует использования удлиненных кабелей.</p>
+
+<h2 id="необходимое-оборудование-и-адаптеры">Необходимое оборудование и адаптеры</h2>
+
+<p>Для полноценной работы с китайской грузовой техникой одного универсального прибора будет недостаточно. Профессиональный подход подразумевает наличие специализированных интерфейсов, заточенных под конкретные марки или системы. Базовым требованием является поддержка протоколов <strong>J1939</strong> и <strong>K-Line</strong> с возможностью переключения напряжений, так как некоторые блоки могут работать при 12В, а другие требовать 24В.</p>
+
+<p>Одним из самых востребованных решений является адаптер <em>Texa Trucks</em> с соответствующими кабелями. Он обеспечивает глубокую диагностику двигателей <em>Weichai</em> и <em>Cummins</em>, которые массово устанавливаются на технику <em>FAW</em> и <em>Howo</em>. Также высокую эффективность показывает оборудование <em>Jaltest</em>, которое регулярно обновляет базы данных по новым моделям китайских тягачей. Для работы с коробками передач <em>Fast Gear</em> часто требуются специфические переходники на 20-pin разъем.</p>
+
+<div class="pb-poll" id="poll-bde23d55"><div class="pb-poll-question">📊 Какой адаптер вы используете для диагностики?</div><div class="pb-poll-option" data-poll="bde23d55" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Jaltest</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bde23d55" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Texa</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bde23d55" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Дилерский сканер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bde23d55" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Универсальный ELM327</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="bde23d55" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Не стоит забывать и о дилерских сканерах. Для <em>Sitrak</em> (CNHTC) идеальным вариантом является оригинальный сканер <em>Howo</em> или его современные аналоги, работающие через планшет. Они позволяют не только читать ошибки, но и проводить сложные процедуры, такие как прожиг сажевого фильтра или обучение педали акселератора.</p>
+
+<ul>
+<li>🔌 <strong>Адаптер VCI</strong> — необходим для связи с блоком управления двигателем и трансмиссией, обеспечивает стабильный канал связи.</li>
+<li>🔋 <strong>Стабилизатор напряжения</strong> — критически важен, так как скачки в бортовой сети китайских грузовиков могут повредить дорогостоящий интерфейс.</li>
+<li>💻 <strong>Ноутбук или планшет</strong> — должен иметь достаточную производительность для запуска тяжелых диагностических программ и емкий аккумулятор.</li>
+</ul>
+
+<h2 id="программное-обеспечение-для-диагностики">Программное обеспечение для диагностики</h2>
+
+<p>Софт является"мозгом" диагностического комплекса. Для китайских грузовиков актуальны как мультибрендовые решения, так и узкоспециализированные программы. Среди универсальных лидеров выделяется <em>Diagnostic Tool</em> (в различных модификациях), который покрывает до 80% потребностей сервиса. Однако для глубокого погружения в систему лучше использовать дилерские программы.</p>
+
+<p>Для автомобилей <em>Sitrak</em> и <em>Howo</em> используется программа <em>CNHTC Diagnostic Tool</em>. Она позволяет видеть работу каждого цилиндра в реальном времени, управлять форсунками и проводить тесты исполнительных механизмов. Владельцам <em>Shacman</em> стоит обратить внимание на софт <em>Shacman Service Master</em>, который отлично дружит с двигателями <em>Weichai</em>. Отдельного внимания заслуживает ПО для двигателей <em>Cummins</em> — <em>Insite</em>, которое является эталоном для работы с этими моторами независимо от того, на каком грузовике они установлены.</p>
+
+<details class="pb-accordion"><summary>Где скачать актуальные версии программ?</summary><div class="pb-accordion-body"><p>Официальные дистрибутивы часто распространяются через дилерские центры или специализированные форумы. Будьте осторожны с файлами из непроверенных источников, они могут содержать вирусы или работать некорректно. Рекомендуется использовать лицензионные версии с регулярным обновлением баз.</</p></div></details>
+
+<p>Важным аспектом является своевременное обновление баз данных. Китайские заводы очень быстро вносят изменения в конструкцию и электронику. Программа, актуальная в начале года, к его концу может уже не видеть новые модификации ЭБУ. <mark>Критически важно обновлять базы данных не реже одного раза в квартал</mark>, чтобы иметь доступ к последним картам диагностики.</p>
+
+<h2 id="диагностика-двигателя-и-топливной-системы">Диагностика двигателя и топливной системы</h2>
+
+<p>Двигатель — сердце грузовика, и его диагностика требует максимальной внимательности. В китайских грузовиках наиболее распространены моторы <em>Weichai</em> (лицензия Steyr) и <em>Cummins</em>. Система Common Rail, устанавливаемая на них, крайне чувствительна к качеству топлива. При подключении сканера в первую очередь необходимо проверить давление в рампе и коррекции по цилиндрам.</p>
+
+<p>Процесс диагностики начинается с чтения кодов неисправностей. Однако слепо доверять кодам нельзя. Например, ошибка"низкое давление в рампе" может указывать как на неисправность топливного насоса низкого давления, так и на подсос воздуха или забитый фильтр. <strong>Анализ параметров в реальном времени</strong> позволяет увидеть, как ведет себя система под нагрузкой. Необходимо отслеживать желаемое и фактическое давление, температуру топлива и положение регулятора давления.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка топливной системы</h4><label class="check-item"><input type="checkbox"><span>Визуальный осмотр на предмет утечек</span></label><label class="check-item"><input type="checkbox"><span>Проверка давления подкачивающего насоса</span></label><label class="check-item"><input type="checkbox"><span>Анализ коррекций форсунок</span></label><label class="check-item"><input type="checkbox"><span>Тест производительности ТНВД</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Особое внимание стоит уделить системе рециркуляции выхлопных газов (EGR) и сажевым фильтрам (DPF). В условиях российской зимы и частых простоев эти системы часто выходят из строя. Программное обеспечение позволяет принудительно запустить регенерацию или, в крайнем случае, программно отключить систему (что требует перепрошивки ЭБУ). Также через диагностику можно проверить работу турбокомпрессора, анализируя давление наддува и положение клапана wastegate.</p>
+
+<h2 id="диагностика-трансмиссии-и-тормозной-системы">Диагностика трансмиссии и тормозной системы</h2>
+
+<p>Коробки передач <em>Fast Gear</em>, устанавливаемые на большинство китайских тягачей, представляют собой механические КПП с пневматическим управлением переключением. Диагностика здесь сводится к проверке работы пневмоклапанов и датчиков положения валов. Ошибки часто возникают из-за нарушения регулировок или проблем с пневмосистемой, а не из-за поломки самой"механики".</p>
+
+<p>Тормозная система <em>Knorr-Bremse</em> или <em>Wabco</em> диагностируется через отдельный модуль ABS/EBS. Здесь можно проверить работу каждого датчика скорости колеса, состояние клапанов модулятора и уровень износа колодок (если установлены датчики износа). <strong>Калибровка датчиков</strong> — частая процедура после замены компонентов или снятия клемм аккумулятора. Без калибровки система ABS может работать некорректно или постоянно сигнализировать об ошибке.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Система</th>
+<th>Типичные ошибки</th>
+<th>Метод проверки</th>
+<th>Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Двигатель</td>
+<td>Низкое давление рампы</td>
+<td>Сравнение желаемого и фактического давления</td>
+<td>Замена фильтров, проверка ТННД</td>
+</tr>
+<tr>
+<td>Трансмиссия</td>
+<td>Ошибка датчика скорости</td>
+<td>Мониторинг сигнала в движении</td>
+<td>Замена датчика, проверка проводки</td>
+</tr>
+<tr>
+<td>Тормоза (ABS)</td>
+<td>Обрыв цепи клапана</td>
+<td>Активная диагностика (тест клапанов)</td>
+<td>Замена модулятора ABS</td>
+</tr>
+<tr>
+<td>Пневматика</td>
+<td>Низкое давление в контурах</td>
+<td>Проверка показаний датчиков давления</td>
+<td>Поиск утечек, замена кранов</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>При работе с трансмиссией также важно проверять уровень масла и состояние сцепления. Хотя сцепление механическое, его привод часто пневматический, и усилитель сцепления может быть причиной проблем с переключением. Диагностика позволяет увидеть время отклика пневмоцилиндров.</p>
+
+<h2 id="типичные-проблемы-и-коды-ошибок">Типичные проблемы и коды ошибок</h2>
+
+<p>Владельцы китайских грузовиков часто сталкиваются с рядом повторяющихся проблем. Одна из самых частых —"глюки" приборной панели и бортового компьютера. Это связано с чувствительностью электроники к перепадам напряжения. Сброс ошибок часто решает проблему временно, но требует проверки генератора и стартерных аккумуляторов.</p>
+
+<p>Другая распространенная проблема — ошибки датчиков уровня топлива. Китайские датчики часто имеют низкий ресурс и начинают"врать" или показывать обрыв цепи. В диагностическом ПО это отображается как скачкообразное изменение сопротивления или напряжения на входе. <em>Решение</em> обычно одно — замена датчика на более качественный аналог или оригинал.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При частом появлении ошибок по датчикам, не спешите их менять. Сначала"прозвоните" проводку и проверьте контакты. Вибрация грузовика часто приводит к окислению или обрыву проводов в жгутах.</</p></aside>
+
+<p>Также встречаются ошибки по системе AdBlue (SCR). В условиях холодного климата жидкость замерзает, датчики уровня и концентрации могут выдавать некорректные данные. Система может перейти в аварийный режим, ограничивая мощность двигателя. Диагностика позволяет определить, какой именно элемент системы SCR вышел из строя: насос, форсунка или датчик NOx.</p>
+
+<h2 id="практические-советы-по-проведению-диагностики">Практические советы по проведению диагностики</h2>
+
+<p>Успешная диагностика невозможна без соблюдения определенного алгоритма действий. Прежде всего, необходимо обеспечить стабильное напряжение в бортовой сети. Подключите зарядное устройство или пуско-зарядный аппарат, особенно если двигатель не будет заводиться в процессе проверки. Скачки напряжения при попытке запуска стартера могут разорвать связь с ЭБУ.</p>
+
+<p>Всегда начинайте с визуального осмотра. Часто проблема кроется в перебитом жгуте проводов, окислившемся разъеме или перетертой трубке пневматики. Компьютерная диагностика должна подтверждать визуальные наблюдения, а не заменять их полностью. После устранения неисправности обязательно стирайте коды ошибок и проверяйте, не возвращаются ли они после пробега.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный принцип диагноста: не верь коду ошибки слепо, проверяй физический параметр, который этот код описывает. Ошибка — это лишь направление для поиска, а не готовый диагноз.</</p></aside>
+
+<p>Ведите журнал ремонтов и проведенных диагностик. История параметров автомобиля помогает выявить тенденцию к ухудшению работы узла еще до того, как загорится лампочка"Check Engine". Это особенно актуально для коммерческого транспорта, где простой равен убыткам.</p>
+
+<details>
+<summary>Как часто нужно проводить полную диагностику китайского грузовика?</summary>
+<p>Рекомендуется проводить полную компьютерную диагностику при каждом плановом техническом обслуживании (каждые 20-40 тыс. км), а также при появлении любых признаков нестабильной работы двигателя или трансмиссии. Профилактика дешевле ремонта.</p>
+</details>
+
+<details>
+<summary>Можно ли диагностировать китайский грузовик через телефон?</summary>
+<p>Да, существуют мобильные адаптеры (например, на базе ELM327 с переключением 12/24В) и приложения (Torque, специальные приложения для J1939). Однако их функционал ограничен чтением базовых параметров и кодов. Для глубокой диагностики и адаптации они не подходят.</p>
+</details>
+
+<details>
+<summary>Что делать, если сканер не видит ЭБУ?</summary>
+<p>Проверьте правильность подключения контактов (особенно массу), целостность предохранителей, отвечающих за диагностический разъем, и соответствие протокола в настройках программы. Иногда требуется вручную выбрать тип соединения (J1939 250kb или 500kb).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/e/el/elkast-zapchasti-dlya-inomarok.html" class="pb-related-card">
+                <span class="pb-related-title">Элькаст запчасти для иномарок: каталог, цены и отзывы</span>
+                <span class="pb-related-desc">Полный обзор продукции Элькаст: запчасти для иномарок. Анализ качества, каталог популярных деталей, </span>
+            </a><a href="/articles/o/oc/ochistitel-radiatora-kuhler-aussenreiniger.html" class="pb-related-card">
+                <span class="pb-related-title">Kühler Außenreiniger: профессиональная очистка радиатора своими руками</span>
+                <span class="pb-related-desc">Полный гид по очистке радиатора снаружи. Обзор средств Kühler Außenreiniger, технология промывки, бе</span>
+            </a><a href="/articles/k/ka/kak-polzovatsya-obd2-skanerom-na-android.html" class="pb-related-card">
+                <span class="pb-related-title">OBD2 сканер на Android: как подключить и пользоваться в 2026 году</span>
+                <span class="pb-related-desc">Пошаговая инструкция по подключению OBD2 адаптера к Android-смартфону: выбор программы, диагностика </span>
+            </a><a href="/articles/p/pi/pikhtin-avto-na-nansena.html" class="pb-related-card">
+                <span class="pb-related-title">Пихтин Авто на Нансена: честный обзор автосервиса</span>
+                <span class="pb-related-desc">Подробный анализ автосервиса Пихтин Авто на улице Нансена. Отзывы, цены, качество ремонта и особенно</span>
+            </a><a href="/articles/l/lu/luchshie-proizvoditeli-vozdushnykh-filtrov-dlya-avtomobilej.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшие производители воздушных фильтров для авто: рейтинг брендов</span>
+                <span class="pb-related-desc">Обзор топ производителей воздушных фильтров. Сравнение MANN, Mahle, Sakura и других брендов. Как выб</span>
+            </a><a href="/articles/m/mo/mozhno-li-buksirovat-mashinu-s-korobkoj-robot.html" class="pb-related-card">
+                <span class="pb-related-title">Можно ли буксировать машину с коробкой робот: правила и риски</span>
+                <span class="pb-related-desc">Узнайте, можно ли буксировать автомобиль с коробкой робот, какие есть ограничения и как правильно эт</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

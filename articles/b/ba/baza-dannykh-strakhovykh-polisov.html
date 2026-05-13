@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>База данных страховых полисов ОСАГО и КАСКО: как проверить и использовать — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как работает база данных страховых полисов, как проверить подлинность ОСАГО и КАСКО, какие сервисы используют страховщики и как избежать мошенничества.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/b/ba/baza-dannykh-strakhovykh-polisov.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="База данных страховых полисов ОСАГО и КАСКО: как проверить и использовать">
+    <meta property="og:description" content="Узнайте, как работает база данных страховых полисов, как проверить подлинность ОСАГО и КАСКО, какие сервисы используют страховщики и как избежать мошенничества.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-nav-active">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/zakony-i-shtrafy/">Законы и Штрафы</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">База данных страховых полисов ОСАГО и КАСКО: как проверить и использовать</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#для-чего-нужна-база-данных-страховых-полисов">Для чего нужна база данных страховых полисов</a></li><li><a href="#кто-имеет-доступ-к-базе-данных">Кто имеет доступ к базе данных</a></li><li><a href="#как-проверить-полис-осаго-в-базе-данных">Как проверить полис ОСАГО в базе данных</a></li><li><a href="#особенности-базы-данных-каско">Особенности базы данных КАСКО</a></li><li><a href="#как-работают-страховые-компании-с-базой-данных">Как работают страховые компании с базой данных</a></li><li><a href="#что-делать-если-полис-не-найден-в-базе">Что делать, если полис не найден в базе</a></li><li><a href="#как-защититься-от-мошенников">Как защититься от мошенников</a></li><li><a href="#faq-частые-вопросы-о-базе-данных-страховых-полисов">FAQ: Частые вопросы о базе данных страховых полисов</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/z/za/zapret-na-avtomobil-chto-eto-znachit.html">Запрет на автомобиль: что это значит и как снять в 2026 году</a></li><li><a href="/articles/p/pr/proverka-dejstviya-polisa-osago.html">Как проверить действие полиса ОСАГО в 2026 году — пошаговая инструкция</a></li><li><a href="/articles/t/ts/tsifry-999-chto-znachit.html">Число 999 на машине: значение, штрафы и мифы в 2026 году</a></li><li><a href="/articles/k/ka/kak-najti-voditelya-po-nomeru.html">Как найти водителя по номеру машины: законные способы</a></li><li><a href="/articles/p/pa/parkovka-peshekhodnyj-perekhod-skolko-metrov-do-i-posle.html">Парковка у пешеходного перехода: расстояние до и после по ПДД 2026</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>База данных страховых полисов: как работает система и как ею пользоваться</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#для-чего-нужна-база-данных-страховых-полисов">Для чего нужна база данных страховых полисов</a></li><li><a href="#кто-имеет-доступ-к-базе-данных">Кто имеет доступ к базе данных</a></li><li><a href="#как-проверить-полис-осаго-в-базе-данных">Как проверить полис ОСАГО в базе данных</a></li><li><a href="#особенности-базы-данных-каско">Особенности базы данных КАСКО</a></li><li><a href="#как-работают-страховые-компании-с-базой-данных">Как работают страховые компании с базой данных</a></li><li><a href="#что-делать-если-полис-не-найден-в-базе">Что делать, если полис не найден в базе</a></li><li><a href="#как-защититься-от-мошенников">Как защититься от мошенников</a></li><li><a href="#faq-частые-вопросы-о-базе-данных-страховых-полисов">FAQ: Частые вопросы о базе данных страховых полисов</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>База данных страховых полисов — это центральный элемент системы обязательного и добровольного страхования в России. Она позволяет страховым компаниям, государственным органам и гражданам оперативно проверять подлинность полисов <strong>ОСАГО</strong> и <strong>КАСКО</strong>, а также отслеживать историю страховых случаев. Без такой системы риск мошенничества с поддельными полисами был бы крайне высок.</p>
+
+<p>В России функционирование базы обеспечивает <em>Российский союз автостраховщиков (РСА)</em>, который ведет единый реестр страховых полисов. Доступ к информации имеют не только страховщики, но и сотрудники ГИБДД, суды, а также сами владельцы транспортных средств. Это делает процесс проверки максимально прозрачным и защищает участников дорожного движения от недобросовестных действий.</p>
+
+<h2 id="для-чего-нужна-база-данных-страховых-полисов">Для чего нужна база данных страховых полисов</h2>
+<p>Основная цель создания единой базы — <strong>борьба с мошенничеством</strong> и обеспечение законности в сфере автострахования. Поддельные полиса ОСАГО или КАСКО могут привести к серьезным последствиям: от штрафов до отсутствия компенсации при ДТП.</p>
+
+<p>Кроме того, база позволяет:</p>
+<ul>
+<li>🔍 Быстро проверять подлинность полиса при оформлении ДТП или контроле со стороны ГИБДД.</li>
+<li>📊 Отслеживать статистику страховых случаев для анализа рисков.</li>
+<li>💳 Упрощать процесс оформления страховки для клиентов за счет автоматизации.</li>
+<li>⚖️ Ускорять разрешение споров между страховыми компаниями и клиентами.</li>
+</ul>
+
+<p>Без такой системы страховым компаниям пришлось бы вручную сверять данные, что увеличило бы время обработки заявок и повысило риск ошибок.</p>
+
+<h2 id="кто-имеет-доступ-к-базе-данных">Кто имеет доступ к базе данных</h2>
+<p>Доступ к базе данных <strong>страховых полисов</strong> строго регламентирован. Полный доступ имеют:</p>
+<ul>
+<li>🏛️ <em>РСА</em> — оператор базы.</li>
+<li>📜 Страховые компании — участники системы ОСАГО.</li>
+<li>🚔 ГИБДД — для проверки полисов во время рейдов или оформления ДТП.</li>
+<li>⚖️ Суды и правоохранительные органы — в рамках расследований.</li>
+</ul>
+
+<p>Обычные граждане могут проверить свой полис через официальные сервисы, например, на сайте <em>РСА</em> или с помощью приложения <em>Госуслуги</em>. Однако полный доступ к истории страховых случаев или данным других водителей для них недоступен.</p>
+
+<div class="pb-poll" id="poll-e6eac030"><div class="pb-poll-question">📊 Как часто вы проверяете подлинность своего полиса ОСАГО?</div><div class="pb-poll-option" data-poll="e6eac030" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Ежемесячно</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e6eac030" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Перед поездкой</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e6eac030" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Только при ДТП</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="e6eac030" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="как-проверить-полис-осаго-в-базе-данных">Как проверить полис ОСАГО в базе данных</h2>
+<p>Проверить подлинность полиса ОСАГО можно несколькими способами. Самый простой — воспользоваться <strong>официальным сервисом РСА</strong> по адресу <code>autoins.ru</code>. Для этого потребуется ввести:</p>
+<ul>
+<li>📄 Серию и номер полиса.</li>
+<li>🔢 Госномер автомобиля.</li>
+<li>📅 Дату начала действия полиса.</li>
+</ul>
+
+<p>Если данные совпадают с теми, что внесены в базу, полис действителен. В противном случае он может быть поддельным или аннулированным.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка полиса ОСАГО</h4><label class="check-item"><input type="checkbox"><span>Ввести серию и номер</span></label><label class="check-item"><input type="checkbox"><span>Указать госномер</span></label><label class="check-item"><input type="checkbox"><span>Проверить дату действия</span></label><label class="check-item"><input type="checkbox"><span>Сверить данные с базой РСА</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Также проверить полис можно через приложение <em>Госуслуги</em>. Для этого нужно:</p>
+<ol>
+<li>Авторизоваться в приложении.</li>
+<li>Перейти в раздел «Транспорт и вождение».</li>
+<li>Выбрать «Проверка полиса ОСАГО».</li>
+<li>Ввести данные полиса.</li>
+</ol>
+
+<blockquote>⚠️ Внимание: если при проверке вы видите сообщение о том, что полис не найден, это может означать, что он поддельный или еще не внесен в базу. В этом случае обратитесь в свою страховую компанию.</blockquote>
+
+<h2 id="особенности-базы-данных-каско">Особенности базы данных КАСКО</h2>
+<p>В отличие от ОСАГО, <strong>КАСКО</strong> не является обязательным видом страхования, поэтому его база данных не так централизована. Каждая страховая компания ведет собственные реестры, однако некоторые данные могут передаваться в <em>РСА</em> для обмена информацией между страховщиками.</p>
+
+<p>Проверить полис КАСКО можно:</p>
+<ul>
+<li>📞 Позвонив в свою страховую компанию.</li>
+<li>🌐 Через личный кабинет на сайте страховщика.</li>
+<li>📧 Отправив запрос на электронную почту компании.</li>
+</ul>
+
+<p>Некоторые страховщики, такие как <em>Сбербанк Страхование</em>, <em>Ингосстрах</em> или <em>АльфаСтрахование</em>, предоставляют возможность проверки полиса онлайн. Для этого нужно ввести номер договора и данные автомобиля.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если вы покупаете подержанный автомобиль, обязательно проверьте, не был ли он застрахован по КАСКО предыдущим владельцем. Это поможет избежать проблем с переоформлением полиса.</p></aside>
+
+<h2 id="как-работают-страховые-компании-с-базой-данных">Как работают страховые компании с базой данных</h2>
+<p>Страховые компании обязаны вносить данные о заключенных договорах в базу <em>РСА</em> в течение <strong>5 рабочих дней</strong> с момента оформления полиса. Это гарантирует, что информация будет актуальной и достоверной.</p>
+
+<p>При оформлении страхового случая страховщик проверяет:</p>
+<ul>
+<li>🔎 Наличие полиса в базе.</li>
+<li>📅 Срок его действия.</li>
+<li>🚗 Соответствие данных автомобиля и владельца.</li>
+<li>💰 Наличие неоплаченных страховых премий.</li>
+</ul>
+
+<p>Если полис не найден или данные не совпадают, страховая компания вправе отказать в выплате компенсации.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr><th>Действие</th><th>Срок выполнения</th><th>Ответственный</th></tr>
+</thead>
+<tbody>
+<tr><td>Внесение данных о полисе в базу РСА</td><td>5 рабочих дней</td><td>Страховая компания</td></tr>
+<tr><td>Проверка полиса при ДТП</td><td>Мгновенно</td><td>ГИБДД или страховщик</td></tr>
+<tr><td>Обновление данных при изменении владельца</td><td>3 рабочих дня</td><td>Страховая компания</td></tr>
+<tr><td>Аннулирование полиса</td><td>1 рабочий день</td><td>Страховая компания</td></tr>
+</tbody>
+</table></div>
+
+<h2 id="что-делать-если-полис-не-найден-в-базе">Что делать, если полис не найден в базе</h2>
+<p>Если при проверке полиса ОСАГО вы получаете сообщение о его отсутствии в базе, не паникуйте. Возможные причины:</p>
+<ul>
+<li>🕒 Данные еще не внесены в базу (если полис оформлен меньше 5 дней назад).</li>
+<li>🔄 Ошибка при вводе данных (проверьте серию, номер, госномер).</li>
+<li>🚨 Пolis поддельный.</li>
+</ul>
+
+<p>В первую очередь свяжитесь со своей страховой компанией и уточните, внесен ли ваш полис в базу. Если проблема не решается, обратитесь в <em>РСА</em> или ГИБДД для разъяснений.</p>
+
+<blockquote>⚠️ Внимание: использование поддельного полиса ОСАГО влечет за собой штраф в размере <mark>800 рублей</mark> по ст. 12.37 КоАП РФ, а также возможные проблемы при оформлении ДТП.</blockquote>
+
+<details class="pb-accordion"><summary>Что будет, если ездить без ОСАГО?</summary><div class="pb-accordion-body"><p>Штраф в размере 800 рублей, а также ответственность за ущерб, причиненный другим участникам ДТП, если вы виновник аварии.</p></div></details>
+
+<h2 id="как-защититься-от-мошенников">Как защититься от мошенников</h2>
+<p>Мошенники часто используют поддельные полисы ОСАГО, чтобы сэкономить на страховке или обмануть покупателей подержанных автомобилей. Чтобы не стать жертвой обмана:</p>
+<ul>
+<li>🛡️ Проверяйте полис на официальных ресурсах (<em>РСА</em>, <em>Госуслуги</em>).</li>
+<li>📄 Требуйте оригинал полиса с водяными знаками и голограммами.</li>
+<li>💳 Оплачивайте страховку только через официальные каналы (банк, сайт страховой компании).</li>
+<li>🔍 Проверяйте лицензию страховой компании на сайте <em>Центробанка</em>.</li>
+</ul>
+
+<p>Если вы подозреваете, что ваш полис поддельный, немедленно обратитесь в полицию или в <em>РСА</em>.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Проверка полиса через официальные сервисы — единственный способ убедиться в его подлинности. Не доверяйте сторонним сайтам, которые предлагают «быструю проверку».</p></aside>
+
+<h2 id="faq-частые-вопросы-о-базе-данных-страховых-полисов">FAQ: Частые вопросы о базе данных страховых полисов</h2>
+
+<details>
+<summary>Можно ли проверить полис КАСКО через базу РСА?</summary>
+<p>Нет, база <em>РСА</em> предназначена только для полисов ОСАГО. Для проверки КАСКО нужно обращаться напрямую в страховую компанию.</p>
+</details>
+
+<details>
+<summary>Сколько времени занимает внесение данных о полисе в базу?</summary>
+<p>Согласно законодательству, страховая компания должна внести данные о полисе ОСАГО в базу <em>РСА</em> в течение <strong>5 рабочих дней</strong> с момента его оформления.</p>
+</details>
+
+<details>
+<summary>Что делать, если при проверке полиса я вижу не свои данные?</summary>
+<p>Это может означать, что произошла ошибка при внесении данных в базу. Немедленно обратитесь в свою страховую компанию для уточнения информации.</p>
+</details>
+
+<details>
+<summary>Может ли страховая компания отказать в выплате, если полис не найден в базе?</summary>
+<p>Да, если полис не найден в базе <em>РСА</em>, страховая компания вправе отказать в выплате компенсации, так как это может быть поддельный документ.</p>
+</details>
+
+<details>
+<summary>Как проверить, не был ли полис ОСАГО аннулирован?</summary>
+<p>Проверка статуса полиса (действующий или аннулированный) доступна через сервис <em>РСА</em>. Если полис аннулирован, вы увидите соответствующее уведомление.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/z/za/zapret-na-avtomobil-chto-eto-znachit.html" class="pb-related-card">
+                <span class="pb-related-title">Запрет на автомобиль: что это значит и как снять в 2026 году</span>
+                <span class="pb-related-desc">Разбираемся, что такое запрет на регистрационные действия с автомобилем, причины наложения, как пров</span>
+            </a><a href="/articles/p/pr/proverka-dejstviya-polisa-osago.html" class="pb-related-card">
+                <span class="pb-related-title">Как проверить действие полиса ОСАГО в 2026 году — пошаговая инструкция</span>
+                <span class="pb-related-desc">Узнайте, как быстро проверить действительность полиса ОСАГО онлайн через ГИБДД, РСА и мобильные прил</span>
+            </a><a href="/articles/t/ts/tsifry-999-chto-znachit.html" class="pb-related-card">
+                <span class="pb-related-title">Число 999 на машине: значение, штрафы и мифы в 2026 году</span>
+                <span class="pb-related-desc">Разбираем, что означает комбинация 999 на номерах авто, почему ее избегают, как регистрировать и как</span>
+            </a><a href="/articles/k/ka/kak-najti-voditelya-po-nomeru.html" class="pb-related-card">
+                <span class="pb-related-title">Как найти водителя по номеру машины: законные способы</span>
+                <span class="pb-related-desc">Узнайте, как найти владельца авто по госномеру легально в 2026 году. Способы для ГИБДД, страховых сл</span>
+            </a><a href="/articles/p/pa/parkovka-peshekhodnyj-perekhod-skolko-metrov-do-i-posle.html" class="pb-related-card">
+                <span class="pb-related-title">Парковка у пешеходного перехода: расстояние до и после по ПДД 2026</span>
+                <span class="pb-related-desc">Сколько метров нельзя парковаться до и после пешеходного перехода? Актуальные правила ПДД, штрафы за</span>
+            </a><a href="/articles/k/kt/kto-iz-voditelej-narushil-pravila-stoyanki-krasnaya-mashina.html" class="pb-related-card">
+                <span class="pb-related-title">Кто нарушил правила стоянки: разбор ситуации с красной машиной</span>
+                <span class="pb-related-desc">Анализ дорожной ситуации: кто из водителей нарушил правила стоянки? Красная машина на тротуаре или у</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

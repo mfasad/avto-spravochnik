@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Принцип работы ГЛОНАСС: как устроена российская навигация — Авто Справочник</title>
+    <meta name="description" content="Подробный разбор принципа работы системы ГЛОНАСС. От спутниковых сигналов до приемников в автомобиле. Точность, отличия от GPS и перспективы развития.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/p/pr/printsip-raboty-sistemy-glonass.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Принцип работы ГЛОНАСС: как устроена российская навигация">
+    <meta property="og:description" content="Подробный разбор принципа работы системы ГЛОНАСС. От спутниковых сигналов до приемников в автомобиле. Точность, отличия от GPS и перспективы развития.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Принцип работы ГЛОНАСС: как устроена российская навигация</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#архитектура-орбитальной-группировки">Архитектура орбитальной группировки</a></li><li><a href="#физические-основы-позиционирования">Физические основы позиционирования</a></li><li><a href="#структура-навигационного-сигнала">Структура навигационного сигнала</a></li><li><a href="#работа-пользовательского-приемника">Работа пользовательского приемника</a></li><li><a href="#система-дифференциальных-коррекций">Система дифференциальных коррекций</a></li><li><a href="#сравнение-с-gps-и-перспективы-развития">Сравнение с GPS и перспективы развития</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-perevezti-bolshoe-zerkalo.html">Как перевезти большое зеркало: инструкция по упаковке</a></li><li><a href="/articles/i/ik/iks-siti-kross-7.html">Икс Сити Кросс 7: Полный обзор кроссовера</a></li><li><a href="/articles/r/re/rezkaya-peremena-9-bukv.html">Резкая перемена 9 букв: разбор кроссвордов и автомобильных терминов</a></li><li><a href="/articles/i/ig/igry-gde-est-mark-2.html">Игры с Марком 2: список лучших проектов и разбор</a></li><li><a href="/articles/c/ch/chto-delat-esli-poteet-zhopa.html">Почему потеет жопа: причины и методы лечения потливости</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как работает ГЛОНАСС: устройство и принцип действия</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#архитектура-орбитальной-группировки">Архитектура орбитальной группировки</a></li><li><a href="#физические-основы-позиционирования">Физические основы позиционирования</a></li><li><a href="#структура-навигационного-сигнала">Структура навигационного сигнала</a></li><li><a href="#работа-пользовательского-приемника">Работа пользовательского приемника</a></li><li><a href="#система-дифференциальных-коррекций">Система дифференциальных коррекций</a></li><li><a href="#сравнение-с-gps-и-перспективы-развития">Сравнение с GPS и перспективы развития</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>В современном мире сложно представить навигацию без спутниковых систем. Российская <strong>ГЛОНАСС</strong> стала одним из ключевых игроков на рынке глобального позиционирования наравне с американским GPS. Понимание того, как именно эта технология определяет местоположение вашего автомобиля или смартфона, помогает лучше ориентироваться в характеристиках навигаторов и понимать причины возможных сбоев.</p>
+
+<p>В основе системы лежит сложнейшая орбитальная группировка спутников, которые непрерывно передают сигналы на Землю. <em>Принцип работы ГЛОНАСС</em> базируется на точнейшем измерении времени прохождения радиосигнала от спутника до приемника пользователя. Именно временная задержка позволяет вычислить расстояние до космического аппарата, а пересечение этих расстояний дает точные координаты.</p>
+
+<p>Данная технология используется не только в гражданской навигации, но и в системах мониторинга транспорта, геодезии и даже в экстренных службах спасения. Знание физических основ работы системы позволяет инженерам и продвинутым пользователям правильно настраивать оборудование и избегать распространенных ошибок при эксплуатации навигационной техники.</p>
+
+<h2 id="архитектура-орбитальной-группировки">Архитектура орбитальной группировки</h2>
+
+<p>Фундаментом всей системы является космический сегмент. В отличие от других систем, спутники ГЛОНАСС располагаются на трех орбитальных плоскостях с наклоном 64,8 градуса. Такая конфигурация обеспечивает отличное покрытие северных широт, что критически важно для территории России. На текущий момент орбитальная группировка насчитывает 24 основных спутника, находящихся в активном состоянии.</p>
+
+<p>Каждый спутник оснащен атомными часами высокой точности, которые синхронизированы с наземным комплексом управления. <strong>Синхронизация времени</strong> является критическим параметром, так как даже микроскопическая ошибка в показаниях часов приведет к значительному смещению координат на земле. Спутники излучают радиосигналы в двух частотных диапазонах, что позволяет корректировать ошибки, вызванные прохождением сигнала через ионосферу.</p>
+
+<p>Ресурс активного существования космических аппаратов ограничен, поэтому на орбиту регулярно выводятся новые спутники серии <em>ГЛОНАСС-М</em> и <em>ГЛОНАСС-К</em>. Новые модели обладают улучшенными характеристиками стабильности частоты и увеличенным сроком службы. Это позволяет поддерживать высокую доступность сигнала даже в условиях плотной городской застройки или сложного рельефа местности.</p>
+
+<ul>
+<li>🛰️ Орбитальная группировка состоит из 24 активных спутников.</li>
+<li>🌍 Наклон орбиты 64,8° обеспечивает лучшее покрытие высоких широт.</li>
+<li>⏱️ На борту каждого аппарата установлены цезиевые или рубидиевые часы.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для максимальной точности навигатору требуется «видеть» минимум 4 спутника, но в идеале их должно быть 7-10.</p></aside>
+
+<h2 id="физические-основы-позиционирования">Физические основы позиционирования</h2>
+
+<p>Ключевым методом определения местоположения в системе ГЛОНАСС является <strong>пассивная дальнометрия</strong>. Приемник не посылает сигналы спутникам, а только принимает их. Расстояние до спутника вычисляется путем умножения скорости света на время прохождения сигнала. Поскольку скорость света постоянна, точность зависит исключительно от точности измерения временного интервала.</p>
+
+<p>Для вычисления трехмерных координат (широта, долгота, высота) приемнику необходимо получить сигналы минимум от четырех спутников. Три спутника позволяют определить положение в пространстве, а четвертый необходим для устранения рассинхронизации часов приемника относительно системного времени ГЛОНАСС. Математически это решается системой из четырех уравнений с четырьмя неизвестными.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Металлические конструкции зданий, тоннели и даже густая листва деревьев могут блокировать или отражать сигнал, вызывая эффект многолучевости, что снижает точность позиционирования.</p>
+</blockquote>
+
+<p>Сигнал от спутника содержит альманах и эфемериды. <em>Альманах</em> содержит общую информацию о состоянии всей группировки, что позволяет приемнику быстро находить видимые спутники при холодном старте. <em>Эфемериды</em> — это точные данные о текущей орбите конкретного спутника, которые обновляются каждые 30 минут и необходимы для высокоточного расчета координат.</p>
+
+<details class="pb-accordion"><summary>Что такое холодный и горячий старт?</summary><div class="pb-accordion-body"><p>Холодный старт — это включение навигатора, который давно не использовался или был перемещен на большое расстояние. В этом случае память пуста, и поиск спутников может занять до 15 минут. Горячий старт происходит, когда актуальные альманах и эфемериды сохранены, и определение координат занимает несколько секунд.</p></div></details>
+
+<h2 id="структура-навигационного-сигнала">Структура навигационного сигнала</h2>
+
+<p>Передача данных осуществляется с использованием псевдослучайных кодовых последовательностей. Сигнал модулируется навигационным сообщением, которое передается со скоростью 50 бит/с. В гражданском диапазоне используются коды стандартной точности, доступные любому пользователю без ограничений.</p>
+
+<p>Структура сообщения строго регламентирована и включает в себя метку времени, координаты спутника в определенный момент и параметры вращения Земли. <strong>Частотное разделение каналов</strong> (FDMA) в ГЛОНАСС означает, что каждый спутник вещает на своей уникальной частоте, в отличие от GPS, где используется кодовое разделение. Это делает приемник более устойчивым к узкополосным помехам.</p>
+
+<p>Современные приемники поддерживают работу с новыми сигналами L3OC, которые обеспечивают лучшую помехоустойчивость и совместимость с другими глобальными системами. Использование нескольких частот позволяет компенсировать задержку сигнала в ионосфере, которая зависит от солнечной активности и времени суток.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Значение / Описание</th>
+<th>Единица измерения</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Несущая частота L1</td>
+<td>1602 МГц + k × 0,5625</td>
+<td>МГц</td>
+</tr>
+<tr>
+<td>Скорость передачи данных</td>
+<td>50</td>
+<td>бит/с</td>
+</tr>
+<tr>
+<td>Период повторения эфемерид</td>
+<td>30</td>
+<td>минут</td>
+</tr>
+<tr>
+<td>Точность времени</td>
+<td>1 × 10<sup>-13</sup></td>
+<td>сек</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Прием сигналов на разных частотах требует более сложной аппаратной части навигатора, но это окупается стабильностью работы. Инженерам приходится учитывать доплеровский сдвиг частоты, возникающий из-за высокой скорости движения спутников относительно наблюдателя на Земле.</p>
+
+<div class="pb-poll" id="poll-41c6ee11"><div class="pb-poll-question">📊 Какой навигацией вы пользуетесь чаще всего?</div><div class="pb-poll-option" data-poll="41c6ee11" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Яндекс.Навигатор</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="41c6ee11" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Google Maps</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="41c6ee11" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">2ГИС</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="41c6ee11" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Штатный автонавигатор</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="41c6ee11" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другое</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="работа-пользовательского-приемника">Работа пользовательского приемника</h2>
+
+<p>Антенна приемника улавливает крайне слабые сигналы со спутников. Сигнал усиливается и преобразуется в цифровую форму. Далее процессор навигатора выполняет корреляционный анализ, выделяя сигналы конкретных спутников из общего шума. Это сложный вычислительный процесс, требующий значительных ресурсов.</p>
+
+<p>После декодирования навигационного сообщения приемник вычисляет псевдодальности до каждого видимого спутника. Затем решается навигационная задача, результатом которой становятся координаты антенны в системе координат ПЗ-90 (или пересчитанные в WGS-84 для совместимости). Современные чипсеты способны отслеживать сотни каналов одновременно.</p>
+
+<p>Для повышения точности в условиях города используются дополнительные датчики. Акселерометры и гироскопы помогают сохранять маршрут при кратковременной потере сигнала (например, в тоннеле). Этот метод называется <em>счислением пути</em> (Dead Reckoning) и позволяет системе «предполагать» местоположение автомобиля, основываясь на его инерции и скорости.</p>
+
+<ul>
+<li>📡 Антенна должна иметь прямую видимость неба для стабильной работы.</li>
+<li>⚡ Чувствительность современных приемников позволяет работать при уровне сигнала -160 дБм.</li>
+<li>🔄 Пересчет координат происходит с частотой от 1 до 10 Гц в зависимости от модели.</li>
+</ul>
+
+<h2 id="система-дифференциальных-коррекций">Система дифференциальных коррекций</h2>
+
+<p>Для задач, требующих сантиметровой точности (геодезия, строительство, автопилотирование), обычного сигнала ГЛОНАСС недостаточно. Здесь вступает в работу система дифференциальных коррекций. Сеть наземных базовых станций с точно известными координатами непрерывно принимает сигналы спутников и вычисляет ошибку измерения.</p>
+
+<p>Полученные поправки передаются пользователям через радиоканал или интернет. Мобильный приемник, получая эти данные, корректирует свои измерения в реальном времени. Такой подход позволяет исключить общие для всех приемников ошибки, такие как нестабильность часов спутника или задержки в атмосфере.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Использование дифференциального режима требует наличия платной подписки или специального оборудования для приема корректирующих сигналов.</p>
+</blockquote>
+
+<p>В России функционирует система <strong>СДКМ</strong> (Система дифференциальных коррекций и мониторинга), которая обеспечивает высокую точность позиционирования на всей территории страны. Это особенно актуально для северных регионов, где традиционные методы геодезии затруднены.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Дифференциальный режим повышает точность с нескольких метров до сантиметров, но требует дополнительного оборудования и канала связи.</p></aside>
+
+<h2 id="сравнение-с-gps-и-перспективы-развития">Сравнение с GPS и перспективы развития</h2>
+
+<p>Главное отличие ГЛОНАСС от GPS заключается в методе разделения каналов. Американская система использует кодовое разделение (CDMA), где все спутники вещают на одной частоте, но с разными кодами. ГЛОНАСС использует частотное разделение (FDMA). Это делает приемники ГЛОНАСС более устойчивыми к помехам, но требует более сложной фильтрации сигнала.</p>
+
+<p>Второе важное отличие — орбитальная конфигурация. Спутники ГЛОНАСС не являются геосинхронными и движутся по орбитам, обеспечивающим лучшее покрытие приполярных областей. Это делает российскую систему предпочтительной для навигации в Арктике и на Северном морском пути.</p>
+
+<p>Будущее системы связано с запуском аппаратов нового поколения <em>ГЛОНАСС-К2</em>. Они будут иметь увеличенный срок службы, более мощные передатчики и поддержку новых сигналов. Также планируется интеграция с низкими орбитальными спутниками для улучшения покрытия в urban-каньонах мегаполисов.</p>
+
+<ul>
+<li>🇷🇺 ГЛОНАСС лучше работает в высоких широтах благодаря наклону орбит.</li>
+<li>📡 FDMA методика делает сигнал более устойчивым к (помехам).</li>
+<li>🚀 Новые спутники серии К2 увеличат мощность сигнала на 6-8 дБ.</li>
+</ul>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка качества сигнала ГЛОНАСС</h4><label class="check-item"><input type="checkbox"><span>Запустить навигационное приложение</span></label><label class="check-item"><input type="checkbox"><span>Выйти на открытое пространство</span></label><label class="check-item"><input type="checkbox"><span>Посмотреть количество спутников</span></label><label class="check-item"><input type="checkbox"><span>Проверить значение HDOP (должно быть < 2)</span></label><label class="check-item"><input type="checkbox"><span>Сравнить скорость движения с реальной</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<details>
+<summary>Почему навигатор долго ищет спутники?</summary>
+<p>Длительный поиск спутников (более 2-3 минут) обычно означает, что у приемника нет актуального альманаха. Это бывает после долгого простоя или перемещения устройства на сотни километров. Также причиной может быть плохой прием сигнала или разряженная внутренняя батарея, которая хранит данные при выключенном питании.</p>
+</details>
+
+<details>
+<summary>Влияет ли погода на работу ГЛОНАСС?</summary>
+<p>Дождь, снег или облачность практически не влияют на прохождение радиосигнала в диапазонах L1/L2. Однако heavy snow (сильный снегопад) или обледенение антенны могут физически блокировать сигнал. Грозовые облака могут вносить небольшие задержки, но это компенсируется алгоритмами приемника.</p>
+</details>
+
+<details>
+<summary>Можно ли использовать ГЛОНАСС без интернета?</summary>
+<p>Да, для определения координат интернет не нужен. Спутники передают всю необходимую информацию напрямую. Интернет требуется только для загрузки карт, прокладки маршрутов с учетом пробок и голосового поиска. «Горячий старт» также возможен без интернета, если устройство ранее уже ловило сигнал.</p>
+</details>
+
+<details>
+<summary>Что такое HDOP и почему это важно?</summary>
+<p>HDOP (Horizontal Dilution of Precision) — коэффициент геометрического ухудшения точности. Он показывает, как расположение видимых спутников влияет на точность. Если все спутники сгруппированы в одной точке неба, HDOP будет высоким, и точность низкой. В идеале HDOP должен быть меньше 1.0-2.0.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-perevezti-bolshoe-zerkalo.html" class="pb-related-card">
+                <span class="pb-related-title">Как перевезти большое зеркало: инструкция по упаковке</span>
+                <span class="pb-related-desc">Пошаговое руководство, как правильно упаковать и транспортировать большое зеркало в легковом авто ил</span>
+            </a><a href="/articles/i/ik/iks-siti-kross-7.html" class="pb-related-card">
+                <span class="pb-related-title">Икс Сити Кросс 7: Полный обзор кроссовера</span>
+                <span class="pb-related-desc">Подробный обзор Икс Сити Кросс 7. Технические характеристики, расход топлива, комплектации и отзывы </span>
+            </a><a href="/articles/r/re/rezkaya-peremena-9-bukv.html" class="pb-related-card">
+                <span class="pb-related-title">Резкая перемена 9 букв: разбор кроссвордов и автомобильных терминов</span>
+                <span class="pb-related-desc">Ищете слово на 9 букв &#x27;резкая перемена&#x27;? Разбираем ответы для кроссвордов, синонимы в русском языке </span>
+            </a><a href="/articles/i/ig/igry-gde-est-mark-2.html" class="pb-related-card">
+                <span class="pb-related-title">Игры с Марком 2: список лучших проектов и разбор</span>
+                <span class="pb-related-desc">Ищете игры, где есть Марк 2? Подробный разбор культовых персонажей по имени Марк, включая Hitman и F</span>
+            </a><a href="/articles/c/ch/chto-delat-esli-poteet-zhopa.html" class="pb-related-card">
+                <span class="pb-related-title">Почему потеет жопа: причины и методы лечения потливости</span>
+                <span class="pb-related-desc">Узнайте, что делать если потеет жопа. Эффективные методы борьбы с гипергидрозом промежности, гигиена</span>
+            </a><a href="/articles/k/ka/kak-skachat-sokhraneniya-dlya-my-summer-car.html" class="pb-related-card">
+                <span class="pb-related-title">Как скачать сохранения для My Summer Car: инструкция</span>
+                <span class="pb-related-desc">Подробный гайд: как найти, скачать и установить сохранения для My Summer Car. Решение проблемы пропа</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

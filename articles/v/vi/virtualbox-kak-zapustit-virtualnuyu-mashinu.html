@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как запустить виртуальную машину в VirtualBox: пошаговая инструкция — Авто Справочник</title>
+    <meta name="description" content="Полное руководство по запуску виртуальной машины в VirtualBox. Настройка BIOS, установка Guest Additions и решение типичных ошибок при старте.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/v/vi/virtualbox-kak-zapustit-virtualnuyu-mashinu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как запустить виртуальную машину в VirtualBox: пошаговая инструкция">
+    <meta property="og:description" content="Полное руководство по запуску виртуальной машины в VirtualBox. Настройка BIOS, установка Guest Additions и решение типичных ошибок при старте.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как запустить виртуальную машину в VirtualBox: пошаговая инструкция</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#предварительная-проверка-настроек-bios-и-uefi">Предварительная проверка настроек BIOS и UEFI</a></li><li><a href="#базовый-запуск-виртуальной-машины">Базовый запуск виртуальной машины</a></li><li><a href="#настройка-параметров-перед-стартом">Настройка параметров перед стартом</a></li><li><a href="#решение-типичных-ошибок-при-запуске">Решение типичных ошибок при запуске</a></li><li><a href="#установка-и-настройка-guest-additions">Установка и настройка Guest Additions</a></li><li><a href="#работа-с-состояниями-сохранения-и-сна">Работа с состояниями сохранения и сна</a></li><li><a href="#оптимизация-производительности-при-старте">Оптимизация производительности при старте</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kakoj-samyj-dlinnyj-tonnel-v-mire.html">Самый длинный тоннель в мире: рекорды и факты</a></li><li><a href="/articles/k/ka/kak-rabotaet-avtopodzavod-v-chasakh.html">Как работает автоподзавод в часах: устройство и уход</a></li><li><a href="/articles/k/ka/kak-stat-kurerom-ozon-dostavki.html">Как стать курьером Ozon: требования, зарплата, отзывы</a></li><li><a href="/articles/s/sk/skolko-sezonov-initsial-di.html">Сколько сезонов у Инициал Ди: Полный список и хронология</a></li><li><a href="/articles/k/ko/kosh-agach-vysota-nad-urovnem-morya.html">Кош-Агач: высота над уровнем моря и климат района</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как запустить виртуальную машину в VirtualBox: полное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#предварительная-проверка-настроек-bios-и-uefi">Предварительная проверка настроек BIOS и UEFI</a></li><li><a href="#базовый-запуск-виртуальной-машины">Базовый запуск виртуальной машины</a></li><li><a href="#настройка-параметров-перед-стартом">Настройка параметров перед стартом</a></li><li><a href="#решение-типичных-ошибок-при-запуске">Решение типичных ошибок при запуске</a></li><li><a href="#установка-и-настройка-guest-additions">Установка и настройка Guest Additions</a></li><li><a href="#работа-с-состояниями-сохранения-и-сна">Работа с состояниями сохранения и сна</a></li><li><a href="#оптимизация-производительности-при-старте">Оптимизация производительности при старте</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+<p>Создание и конфигурация виртуальной среды — это лишь половина пути, после которой пользователь неизбежно сталкивается с вопросом о том, как корректно запустить виртуальную машину в VirtualBox. Процесс старта кажется элементарным, однако он часто сопряжен с техническими нюансами, которые могут блокировать загрузку гостевой операционной системы на самых ранних этапах. Понимание этих нюансов критически важно для тех, кто планирует использовать виртуализацию для тестирования ПО, разработки или безопасного веб-серфинга.</p>
+<p>Виртуализация позволяет запускать изолированную операционную систему поверх вашей основной, используя ресурсы физического хоста. <strong>VirtualBox</strong> является одним из самых популярных решений в этой области благодаря своей бесплатности и кроссплатформенности. Однако, даже имея готовый образ системы или настроенную машину, пользователи могут столкнуться с ошибками гипервизора или проблемами совместимости оборудования.</p>
+<p>В этой статье мы подробно разберем не только стандартный алгоритм действий, но и углубимся в настройки BIOS/UEFI, которые часто игнорируются новичками. Вы узнаете, как правильно интерпретировать коды ошибок и какие параметры необходимо проверить перед нажатием кнопки запуска, чтобы избежать зависаний и сбоев.</p>
+
+<h2 id="предварительная-проверка-настроек-bios-и-uefi">Предварительная проверка настроек BIOS и UEFI</h2>
+<p>Прежде чем пытаться запустить <em>Oracle VM VirtualBox</em>, необходимо убедиться, что ваше физическое оборудование поддерживает технологии виртуализации. Процессоры современных архитектур Intel и AMD имеют встроенные инструкции для ускорения работы виртуальных машин, но по умолчанию они часто отключены на уровне материнской платы. Без активации этих функций запуск 64-битных гостевых систем будет невозможен, а 32-битные будут работать крайне медленно или нестабильно.</p>
+<p>Для проверки и включения необходимых опций вам потребуется войти в меню BIOS или UEFI вашего компьютера. Это делается путем нажатия определенной клавиши (обычно <code>F2</code>, <code>Del</code> или <code>F10</code>) сразу после включения питания, до начала загрузки операционной системы. В зависимости от производителя материнской платы, интерфейс может отличаться, но искомые параметры обычно находятся в разделах, связанных с процессором или безопасностью.</p>
+<blockquote>⚠️ Внимание: Изменение настроек BIOS/UEFI может повлиять на стабильность работы всей системы. Если вы не уверены в своих действиях, запишите исходные значения параметров перед их изменением, чтобы иметь возможность вернуть все как было.</blockquote>
+<p>Вам нужно найти и перевести в состояние <strong>Enabled</strong> (Включено) одну из следующих опций: <em>Intel VT-x</em> для процессоров Intel или <em>AMD-V</em> (SVM Mode) для процессоров AMD. Иногда эти настройки могут быть скрыты внутри подразделов вроде <code>Advanced CPU Configuration</code> или <code>Security</code>. После включения сохраните изменения и перезагрузите компьютер.</p>
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка готовности к виртуализации</h4><label class="check-item"><input type="checkbox"><span>Войти в BIOS/UEFI</span></label><label class="check-item"><input type="checkbox"><span>Найти настройки процессора (CPU)</span></label><label class="check-item"><input type="checkbox"><span>Включить Intel VT-x или AMD-V</span></label><label class="check-item"><input type="checkbox"><span>Сохранить настройки и выйти</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+<p>Если после включения виртуализации в BIOS машина все равно не запускается, стоит проверить, не блокируют ли функцию виртуализации антивирусные программы или брандмауэры. Некоторые защитные решения используют технологии виртуализации для собственной защиты (например, Hyper-V в Windows), что может создавать конфликты с VirtualBox.</p>
+
+<h2 id="базовый-запуск-виртуальной-машины">Базовый запуск виртуальной машины</h2>
+<p>После успешной подготовки аппаратной части можно переходить непосредственно к программному запуску. Интерфейс <em>Oracle VM VirtualBox Manager</em> спроектирован интуитивно понятным, однако здесь также есть свои особенности. Для начала убедитесь, что ваша виртуальная машина отображается в списке слева и имеет статус "Выключена" (Powered Off).</p>
+<p>Стандартный запуск производится двойным кликом по имени машины или выделением ее и нажатием зеленой стрелки "Запустить" на верхней панели инструментов. В этот момент гипервизор начинает выделение зарезервированных ресурсов (оперативной памяти, ядер процессора) и инициирует загрузочный процесс. На экране может появиться логотип VirtualBox, за которым последует экран загрузки гостевой ОС.</p>
+<ul>
+<li>🚀 <strong>Запуск:</strong> Нажмите кнопку "Запустить" в главном окне менеджера.</li>
+<li>💻 <strong>Окно гостевой ОС:</strong> Откроется новое окно, эмулирующее монитор виртуального компьютера.</li>
+<li>⌨️ <strong>Захват клавиатуры:</strong> Обратите внимание на сообщение о том, что клавиатура и мышь могут быть "захвачены" виртуальной машиной.</li>
+</ul>
+<p>Важно понимать разницу между режимами работы окна. По умолчанию VirtualBox использует режим, где курсор мыши "застревает" внутри окна виртуальной машины. Чтобы вернуть управление хост-системе, необходимо использовать специальную клавишу-модификатор. По умолчанию это правый <code>Ctrl</code>, но эту настройку можно изменить в глобальных параметрах программы.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для быстрого возврата управления мышью и клавиатурой от виртуальной машины к основной системе используйте правую клавишу Ctrl (по умолчанию).</p></aside>
+<p>Если при старте вы видите сообщение об ошибке, не спешите паниковать. Код ошибки, обычно начинающийся с <code>VERR_</code>, содержит важную информацию о причине сбоя. Запишите этот код, так как он понадобится для поиска решения или диагностики проблемы.</p>
+
+<h2 id="настройка-параметров-перед-стартом">Настройка параметров перед стартом</h2>
+<p>Иногда стандартных настроек недостаточно для корректной работы специфического программного обеспечения. Перед запуском имеет смысл проверить конфигурацию конкретной машины через меню "Настроить". Здесь находятся критически важные параметры, влияющие на производительность и совместимость.</p>
+<p>В разделе <code>Система → Материнская плата</code> следует проверить порядок загрузки (<strong>Boot Order</strong>). Если вы устанавливаете систему с ISO-образа, убедитесь, что оптический привод стоит выше жесткого диска. Если система уже установлена, приоритет должен быть отдан жесткому диску, иначе машина будет каждый раз пытаться boot-иться с установочного диска.</p>
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Рекомендуемое значение</th>
+<th>Влияние на работу</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Количество процессоров</td>
+<td>1-2 (не более 50% ядер хоста)</td>
+<td>Производительность многозадачности</td>
+</tr>
+<tr>
+<td>Оперативная память</td>
+<td>2048 МБ и выше</td>
+<td>Стабильность работы гостевой ОС</td>
+</tr>
+<tr>
+<td>Видеопамять</td>
+<td>128 МБ</td>
+<td>Плавность интерфейса и графических приложений</td>
+</tr>
+<tr>
+<td>3D-ускорение</td>
+<td>Включено</td>
+<td>Работа графических интерфейсов и игр</td>
+</tr>
+</tbody>
+</table></div>
+<p>Особое внимание стоит уделить разделу <code>Дисплей</code>. Увеличение объема видеопамяти до максимума (обычно 128 МБ) и включение опции <strong>3D-ускорение</strong> значительно улучшает отзывчивость графического интерфейса гостевой системы. Без этого окна могут открываться рывками, а разрешение экрана будет ограничено.</p>
+<details class="pb-accordion"><summary>Почему нельзя выделять все ядра процессора?</summary><div class="pb-accordion-body"><p>Выделение всех доступных ядер хоста виртуальной машине может привести к полной остановке основной операционной системы, так как ей не останется ресурсов для обработки фоновых задач и управления оборудованием.</p></div></details>
+<p>Также в настройках сети стоит выбрать подходящий режим. Для доступа в интернет из виртуальной машины чаще всего используется режим <em>NAT</em>, который транслирует трафик через хост. Если же виртуальная машина должна быть видна в локальной сети как отдельное устройство, выберите режим <strong>Сетевой мост</strong> (Bridged Adapter).</p>
+
+<h2 id="решение-типичных-ошибок-при-запуске">Решение типичных ошибок при запуске</h2>
+<p>Наиболее распространенной проблемой является ошибка <code>VT-x is not available (VERR_VMX_MSR_ALL_VMX_DISABLED)</code>. Она указывает на то, что виртуализация либо отключена в BIOS, либо заблокирована другим программным обеспечением. В Windows 10 и 11 частым виновником становится встроенный гипервизор Hyper-V, который конфликтует с VirtualBox.</p>
+<p>Для решения конфликта с Hyper-V необходимо отключить соответствующие компоненты Windows. Это делается через панель управления: <code>Панель управления → Программы и компоненты → Включение или отключение компонентов Windows</code>. Здесь нужно снять галочки с пунктов <em>Hyper-V</em>, <em>Платформа виртуальной машины</em> и <em>Песочница Windows</em>. После этого обязательна перезагрузка.</p>
+<ul>
+<li>🔧 <strong>Ошибка E_FAIL (0x80004005):</strong> Часто решается отключением 3D-ускорения в настройках дисплея машины.</li>
+<li>📁 <strong>Ошибка доступа к файлам:</strong> Проверьте права доступа к папке, где хранятся виртуальные диски.</li>
+<li>🔌 <strong>Проблемы с USB:</strong> Убедитесь, что установлен <em>Oracle VM VirtualBox Extension Pack</em>.</li>
+</ul>
+<p>Еще одна частая ситуация — невозможность запустить машину после обновления хост-системы. В этом случае может потребоваться переустановка драйверов VirtualBox или сброс настроек сети. Иногда помогает простой перезапуск службы VirtualBox через командную строку с правами администратора.</p>
+<blockquote>⚠️ Внимание: При отключении Hyper-V некоторые функции Windows, такие как WSL2 (Windows Subsystem for Linux) или Docker Desktop, могут перестать работать корректно, так как они также полагаются на технологии виртуализации.</blockquote>
+<div class="pb-poll" id="poll-ba9a0bbd"><div class="pb-poll-question">📊 С какой ошибкой при запуске VirtualBox вы сталкивались чаще всего?</div><div class="pb-poll-option" data-poll="ba9a0bbd" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">ERR_VMX_MSR_ALL_VMX_DISABLED</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ba9a0bbd" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">E_FAIL (0x80004005)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ba9a0bbd" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">NS_ERROR_FAILURE</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="ba9a0bbd" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Другая ошибка</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+<p>Если ошибки связаны с сетевыми адаптерами, попробуйте временно отключить сетевой интерфейс в настройках конкретной виртуальной машины (раздел <code>Сеть</code>, снять галочку <strong>Включить сетевой адаптер</strong>). Это поможет определить, является ли сеть причиной сбоя при старте.</p>
+
+<h2 id="установка-и-настройка-guest-additions">Установка и настройка Guest Additions</h2>
+<p>После успешного запуска и загрузки гостевой операционной системы, первым делом необходимо установить <strong>Guest Additions</strong>. Этот пакет драйверов и утилит критически важен для полноценной интеграции виртуальной машины в среду хоста. Без него разрешение экрана будет низким, а обмен файлами затруднен.</p>
+<p>Для установки в меню окна запущенной виртуальной машины выберите <code>Устройства → Подключить образ диска Дополнений гостевой ОС</code>. Внутри гостевой системы появится виртуальный CD-диск. В Windows-гостях установка происходит автоматически через автозапуск, в Linux-системах (например, Ubuntu) может потребоваться ручной запуск скрипта или установка пакетов через терминал.</p>
+<p>После установки и перезагрузки гостевой ОС становятся доступны ключевые функции: автоматическое изменение разрешения экрана при растягивании окна, общий буфер обмена и возможность перетаскивания файлов (Drag'n'Drop). Также значительно улучшается производительность графического интерфейса благодаря аппаратному ускорению.</p>
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Установка Guest Additions — обязательный шаг для комфортной работы, обеспечивающий правильное разрешение экрана и интеграцию с хост-системой.</p></aside>
+<p>Важно следить за версией дополнений: она должна соответствовать версии самого VirtualBox. При обновлении хост-программы рекомендуется заново смонтировать образ и переустановить дополнения внутри гостевой системы, чтобы избежать конфликтов версий.</p>
+
+<h2 id="работа-с-состояниями-сохранения-и-сна">Работа с состояниями сохранения и сна</h2>
+<p>VirtualBox предлагает гибкие возможности управления состоянием запущенной машины. Помимо полного выключения, вы можете использовать функцию "Сохранить состояние машины". Это аналог режима гибернации: текущее состояние операционной системы (открытые программы, документы, память) сохраняется на жесткий диск хоста.</p>
+<p>При следующем запуске машина восстановится ровно в том же виде, в котором была оставлена, минуя долгую процедуру загрузки BIOS и ОС. Это крайне удобно для рабочих задач, требующих постоянного переключения между проектами. Однако стоит помнить, что файл сохранения может занимать значительный объем дискового пространства, равный объему выделенной оперативной памяти.</p>
+<p>Существует также режим "Послать сигнал закрытия", который эквивалентен нажатию кнопки выключения на физическом компьютере. Гостевая ОС получает сигнал на корректное завершение работы. Если система зависла, можно использовать опцию "Выключить машину", но это равносильно выдергиванию шнура питания и может привести к повреждению файловой системы.</p>
+<ul>
+<li>💾 <strong>Сохранить состояние:</strong> Замораживает машину, сохраняя все данные в RAM на диск.</li>
+<li>🔌 <strong>Выключить машину:</strong> Принудительное отключение питания (аналог hard reset).</li>
+<li>🔄 <strong>Перезагрузить:</strong> Программная перезагрузка гостевой ОС.</li>
+</ul>
+<p>Для автоматизации процессов можно использовать командную строку хоста. Например, команда <code>VBoxManage startvm "ИмяМашины" --type headless</code> позволит запустить виртуальную машину без графического интерфейса, что полезно для серверных задач или фоновых вычислений.</p>
+<pre><code>VBoxManage controlvm "ИмяМашины" savestate</code></pre>
+<p>Эта команда позволяет сохранить состояние работающей виртуальной машины через консоль, что может быть полезно при создании скриптов автоматизации или удаленном управлении.</p>
+
+<h2 id="оптимизация-производительности-при-старте">Оптимизация производительности при старте</h2>
+<p>Скорость запуска и работы виртуальной машины напрямую зависит от типа накопителя, на котором хранятся ее файлы. Размещение виртуальных дисков (файлы <code>.vdi</code> или <code>.vmdk</code>) на SSD или NVMe накопителях дает колоссальный прирост производительности по сравнению с традиционными HDD. Время загрузки гостевой ОС может сократиться в 3-5 раз.</p>
+<p>Также стоит рассмотреть возможность использования формата диска <strong>VHDX</strong> или нативных форматов, если планируется миграция, хотя собственный формат <em>VDI</em> с динамическим размером остается наиболее гибким для VirtualBox. Динамический диск растет по мере заполнения данными, что экономит место, но может фрагментироваться на хосте, требуя периодической дефрагментации или сжатия.</p>
+<blockquote>⚠️ Внимание: Не размещайте файлы виртуальных машин на сетевых дисках или внешних USB-накопителях с низкой скоростью записи. Это приведет к критическому падению производительности и возможным ошибкам файловой системы при записи.</blockquote>
+<p>Для продвинутых пользователей доступна настройка кэширования ввода-вывода. В настройках машины, разделе <code>Носители</code>, можно поэкспериментировать с включением опции <strong>Кэш хоста для ввода/вывода</strong>. На некоторых конфигурациях это позволяет использовать свободную оперативную память хоста для буферизации дисковых операций гостевой системы.</p>
+
+<details>
+<summary>Можно ли запустить VirtualBox, если в BIOS отключена виртуализация?</summary>
+<p>Технически запустить программу-менеджер можно, но создать или запустить 64-битную виртуальную машину не получится. 32-битные системы могут работать в режиме программной эмуляции, но их скорость будет крайне низкой, делая работу невозможной. Активация VT-x/AMD-V в BIOS обязательна для полноценной работы.</p>
+</details>
+
+<details>
+<summary>Почему виртуальная машина запускается сразу в полноэкранном режиме?</summary>
+<p>Это может быть связано с настройками масштабирования или предыдущим состоянием машины. Нажмите правый <code>Ctrl</code> + <code>F</code> (или <code>Host</code> + <code>F</code>), чтобы переключиться в оконный режим. Также проверьте настройки вида в меню "Вид" → "Виртуальный экран".</p>
+</details>
+
+<details>
+<summary>Как запустить виртуальную машину без графического интерфейса (Headless)?</summary>
+<p>Для этого в главном окне VirtualBox нужно нажать правой кнопкой мыши на машину и выбрать "Запустить" → "Запустить без интерфейса". Также можно использовать командную строку: <code>VBoxHeadless --startvm "ИмяМашины"</code>. Это полезно для серверов.</p>
+</details>
+
+<details>
+<summary>Что делать, если курсор мыши не выходит за пределы окна виртуальной машины?</summary>
+<p>Нажмите правую клавишу <code>Ctrl</code> (по умолчанию), чтобы освободить курсор. Если это не помогает, проверьте, установлены ли <em>Guest Additions</em>. После их установки и перезагрузки гостевой ОС курсор должен работать seamlessly (без захвата).</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kakoj-samyj-dlinnyj-tonnel-v-mire.html" class="pb-related-card">
+                <span class="pb-related-title">Самый длинный тоннель в мире: рекорды и факты</span>
+                <span class="pb-related-desc">Узнайте, какой самый длинный тоннель в мире. Обзор Готардского базисного тоннеля, статистика, инжене</span>
+            </a><a href="/articles/k/ka/kak-rabotaet-avtopodzavod-v-chasakh.html" class="pb-related-card">
+                <span class="pb-related-title">Как работает автоподзавод в часах: устройство и уход</span>
+                <span class="pb-related-desc">Подробный гид по механике автоподзавода. Узнайте, как работает ротор, сколько часов нужно носить для</span>
+            </a><a href="/articles/k/ka/kak-stat-kurerom-ozon-dostavki.html" class="pb-related-card">
+                <span class="pb-related-title">Как стать курьером Ozon: требования, зарплата, отзывы</span>
+                <span class="pb-related-desc">Полный гид: как устроиться курьером в Озон. Требования к кандидатам, условия оплаты, виды доставки и</span>
+            </a><a href="/articles/s/sk/skolko-sezonov-initsial-di.html" class="pb-related-card">
+                <span class="pb-related-title">Сколько сезонов у Инициал Ди: Полный список и хронология</span>
+                <span class="pb-related-desc">Точный ответ на вопрос: сколько сезонов у Initial D. Разбор всех частей аниме, хронология серий, спи</span>
+            </a><a href="/articles/k/ko/kosh-agach-vysota-nad-urovnem-morya.html" class="pb-related-card">
+                <span class="pb-related-title">Кош-Агач: высота над уровнем моря и климат района</span>
+                <span class="pb-related-desc">Узнайте точную высоту Кош-Агача над уровнем моря. Климатические особенности, влияние разреженного во</span>
+            </a><a href="/articles/m/mu/muzejno-khramovyj-kompleks-vooruzhennykh-sil.html" class="pb-related-card">
+                <span class="pb-related-title">Музейно-храмовый комплекс ВС РФ: история, архитектура и экспозиции</span>
+                <span class="pb-related-desc">Подробный обзор музейно-храмового комплекса Вооруженных сил РФ в Кубинке. История создания, уникальн</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

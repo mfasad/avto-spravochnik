@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Виртуальная машина для Windows: что это и как работает — Авто Справочник</title>
+    <meta name="description" content="Подробный гид по виртуальным машинам на Windows. Узнайте, зачем нужны VM, как выбрать платформу и настроить изолированную среду для тестов.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/c/ch/chto-takoe-virtualnaya-mashina-dlya-windows.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Виртуальная машина для Windows: что это и как работает">
+    <meta property="og:description" content="Подробный гид по виртуальным машинам на Windows. Узнайте, зачем нужны VM, как выбрать платформу и настроить изолированную среду для тестов.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Виртуальная машина для Windows: что это и как работает</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-и-архитектура-виртуализации">Принцип работы и архитектура виртуализации</a></li><li><a href="#зачем-обычному-пользователю-виртуальная-машина">Зачем обычному пользователю виртуальная машина</a></li><li><a href="#обзор-популярных-платформ-виртуализации">Обзор популярных платформ виртуализации</a></li><li><a href="#системные-требования-и-подготовка-хоста">Системные требования и подготовка хоста</a></li><li><a href="#сравнение-характеристик-платформ-виртуализации">Сравнение характеристик платформ виртуализации</a></li><li><a href="#пошаговая-инструкция-создание-первой-виртуальной-машины">Пошаговая инструкция: создание первой виртуальной машины</a></li><li><a href="#настройка-сети-и-общих-папок">Настройка сети и общих папок</a></li><li><a href="#снимки-системы-и-управление-состоянием">Снимки системы и управление состоянием</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/s/st/strashnye-attraktsiony-v-ostrove-mechty.html">Страшные аттракционы в Острове Мечты: гид по ужасам</a></li><li><a href="/articles/p/po/pochemu-yandeks-karty-ne-pokazyvayut-transport.html">Почему Яндекс Карты не показывают транспорт: 7 причин и решения</a></li><li><a href="/articles/k/ka/kak-vyglyadit-avtomat-kalashnikov.html">Как выглядит автомат Калашникова: фото, устройство и отличия моделей</a></li><li><a href="/articles/k/kr/krutye-filmy-pro-mashiny.html">Топ-15 крутых фильмов про машины: адреналин, скорость и стиль</a></li><li><a href="/articles/z/zh/zhiv-li-gorshok-iz-korol-i-shut.html">Жив ли Горшок из Король и Шут: правда о солисте группы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Что такое виртуальная машина для Windows и зачем она нужна</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-и-архитектура-виртуализации">Принцип работы и архитектура виртуализации</a></li><li><a href="#зачем-обычному-пользователю-виртуальная-машина">Зачем обычному пользователю виртуальная машина</a></li><li><a href="#обзор-популярных-платформ-виртуализации">Обзор популярных платформ виртуализации</a></li><li><a href="#системные-требования-и-подготовка-хоста">Системные требования и подготовка хоста</a></li><li><a href="#сравнение-характеристик-платформ-виртуализации">Сравнение характеристик платформ виртуализации</a></li><li><a href="#пошаговая-инструкция-создание-первой-виртуальной-машины">Пошаговая инструкция: создание первой виртуальной машины</a></li><li><a href="#настройка-сети-и-общих-папок">Настройка сети и общих папок</a></li><li><a href="#снимки-системы-и-управление-состоянием">Снимки системы и управление состоянием</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Представьте, что внутри вашего привычного компьютера с операционной системой Windows существует еще один, полностью независимый компьютер. Он имеет свой собственный процессор, оперативную память и жесткий диск, но все это — лишь программная эмуляция. Именно так работает <strong>виртуальная машина</strong> (VM), позволяющая запускать гостевые операционные системы поверх основной без необходимости покупать дополнительное оборудование.</p>
+
+<p>Эта технология стала стандартом для разработчиков, тестировщиков и обычных пользователей, которым нужно запустить программу, несовместимую с текущей версией Windows, или безопасно протестировать подозрительный файл. Вы получаете <strong>изолированную среду</strong>, где любые действия не навредят основной системе, даже если виртуальная ОС будет уничтожена вирусом.</p>
+
+<p>В этой статье мы детально разберем архитектуру виртуализации, рассмотрим лучшие решения для Windows и научимся создавать собственные виртуальные машины с нуля. Понимание принципов работы <strong>гипервизоров</strong> поможет вам эффективнее использовать ресурсы вашего ПК.</p>
+
+<h2 id="принцип-работы-и-архитектура-виртуализации">Принцип работы и архитектура виртуализации</h2>
+
+<p>В основе технологии лежит программный слой, называемый <strong>гипервизором</strong>. Именно он берет на себя роль диспетчера, распределяя физические ресурсы вашего компьютера — процессорное время, ячейки оперативной памяти и дисковое пространство — между хост-системой (вашей основной Windows) и гостевыми машинами.</p>
+
+<p>Существует два основных типа гипервизоров. Тип 1, или «bare-metal», устанавливается непосредственно на «железо» и используется в серверных дата-центрах. Для домашних ПК актуален <strong>гипервизор 2-го типа</strong>, который работает как обычное приложение внутри Windows. Он транслирует запросы гостевой ОС в команды, понятные физическому оборудованию.</p>
+
+<details class="pb-accordion"><summary>Технические детали трансляции инструкций</summary><div class="pb-accordion-body"><p>Современные процессоры Intel и AMD имеют специальные наборы инструкций (VT-x и AMD-V соответственно), которые аппаратно ускоряют работу виртуальных машин, позволяя им работать почти с нативной скоростью.</p></div></details>
+
+<p>Важно понимать, что виртуализация создает уровень абстракции. Гостевая система «думает», что она работает на реальном компьютере, и не всегда знает о существовании хоста. Это обеспечивает высокий уровень <strong>безопасности</strong> и совместимости.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Гипервизор второго типа позволяет запускать виртуальные машины как обычные приложения, что идеально подходит для тестирования ПО на домашнем ПК.</p></aside>
+
+<h2 id="зачем-обычному-пользователю-виртуальная-машина">Зачем обычному пользователю виртуальная машина</h2>
+
+<p>Многие считают, что VM нужны только программистам, но это заблуждение. Обычному пользователю виртуальная машина может понадобиться для запуска старых игр или программ, которые перестали работать на Windows 10 или 11. Вы можете установить внутри VM Windows XP или 7 и наслаждаться ретро-софтом.</p>
+
+<p>Другой сценарий — <strong>безопасное тестирование</strong>. Если вы скачали файл из непроверенного источника, его запуск на основной системе рискован. В виртуальной среде вирус останется «в коробке» и не сможет повредить ваши личные файлы или украсть пароли браузера.</p>
+
+<ul>
+<li>🛡️ <strong>Изоляция угроз:</strong> Запуск подозрительного ПО в безопасном периметре без риска для основных данных.</li>
+<li>💻 <strong>Совместимость:</strong> Возможность использовать софт, требующий конкретной версии ОС или архитектуры.</li>
+<li>🧪 <strong>Обучение:</strong> Идеальный полигон для изучения Linux или настройки серверов без страха что-то сломать.</li>
+</ul>
+
+<p>Также VM незаменимы для тех, кто хочет попробовать <strong>Linux</strong>, но боится удалять Windows. Вы можете установить Ubuntu или Mint рядом и переключаться между ними, используя ресурсы одного компьютера.</p>
+
+<div class="pb-poll" id="poll-c2d9adfd"><div class="pb-poll-question">📊 Для какой цели вам может понадобиться виртуальная машина?</div><div class="pb-poll-option" data-poll="c2d9adfd" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Запуск старых игр/программ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c2d9adfd" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Тестирование подозрительных файлов</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c2d9adfd" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Изучение Linux/других ОС</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="c2d9adfd" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Мне это не нужно совсем</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="обзор-популярных-платформ-виртуализации">Обзор популярных платформ виртуализации</h2>
+
+<p>Рынок программного обеспечения для создания виртуальных машин предлагает несколько лидеров. Выбор зависит от ваших задач: нужна ли вам максимальная производительность, поддержка специфических функций или простота использования.</p>
+
+<p><strong>Oracle VM VirtualBox</strong> — это, пожалуй, самый популярный бесплатный вариант с открытым исходным кодом. Он поддерживает огромное количество гостевых ОС и имеет активное сообщество. Однако его производительность в графических задачах может уступать платным аналогам.</p>
+
+<p><strong>VMware Workstation Player</strong> предлагает бесплатную версию для личного использования. Этот продукт славится своей стабильностью и отличной работой с <strong>3D-графикой</strong>. Если вам нужно запускать в виртуалке тяжелые приложения или даже легкие игры, VMware часто показывает лучшие результаты.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Для работы с 3D-ускорением в виртуальной машине обязательно установите «Guest Additions» (в VirtualBox) или «VMware Tools» после установки ОС. Без этого графика будет работать медленно.</p></aside>
+
+<p>Встроенное решение от Microsoft — <strong>Hyper-V</strong>. Оно доступно в профессиональных версиях Windows. Это мощный инструмент, работающий на уровне ядра, что делает его очень эффективным, но иногда вызывающим конфликты с другим софтом для виртуализации.</p>
+
+<h2 id="системные-требования-и-подготовка-хоста">Системные требования и подготовка хоста</h2>
+
+<p>Прежде чем создавать виртуальную машину, необходимо убедиться, что ваш компьютер потянет дополнительную нагрузку. Виртуализация consumes ресурсы, поэтому запуск VM на слабом ПК может привести к сильному падению производительности основной системы.</p>
+
+<p>Критически важным параметром является наличие свободной <strong>оперативной памяти</strong>. Если вы хотите запустить Windows 10 внутри виртуалки, ей нужно выделить минимум 2-4 ГБ RAM. Плюс к этому память нужна самой хост-системе. То же самое касается процессора: наличие нескольких ядер позволит комфортно распределить нагрузку.</p>
+
+<p>Обязательно проверьте, включена ли в BIOS/UEFI вашего материнской платы технология виртуализации. Для процессоров Intel она называется <em>Intel VT-x</em>, а для AMD — <em>AMD-V</em>. Без включенной этой опции ни одна программа не сможет запустить гостевую ОС.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка готовности к виртуализации</h4><label class="check-item"><input type="checkbox"><span>Проверить наличие свободной RAM (минимум 4 ГБ в запасе)</span></label><label class="check-item"><input type="checkbox"><span>Убедиться, что есть место на SSD/HDD (минимум 20 ГБ)</span></label><label class="check-item"><input type="checkbox"><span>Проверить включение VT-x/AMD-V в BIOS</span></label><label class="check-item"><input type="checkbox"><span>Скачать образ нужной операционной системы (ISO)</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Также стоит учитывать место на диске. Файлы виртуальных машин занимают много места, особенно если вы делаете <strong>снимки состояния</strong> (snapshots). Рекомендуется использовать SSD-накопитель для хранения виртуальных дисков, чтобы избежать долгих загрузок.</p>
+
+<h2 id="сравнение-характеристик-платформ-виртуализации">Сравнение характеристик платформ виртуализации</h2>
+
+<p>Чтобы упростить выбор инструмента, давайте сравним ключевые параметры популярных решений. Каждая платформа имеет свои сильные стороны, которые могут стать решающими в зависимости от ваших потребностей.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Характеристика</th>
+<th>VirtualBox</th>
+<th>VMware Player</th>
+<th>Hyper-V</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Лицензия</td>
+<td>Бесплатная (Open Source)</td>
+<td>Бесплатная (для личного использования)</td>
+<td>Встроена в Windows Pro</td>
+</tr>
+<tr>
+<td>Поддержка 3D</td>
+<td>Базовая</td>
+<td>Отличная</td>
+<td>Хорошая (зависит от версии)</td>
+</tr>
+<tr>
+<td>Сложность</td>
+<td>Низкая</td>
+<td>Низкая</td>
+<td>Средняя/Высокая</td>
+</tr>
+<tr>
+<td>Совместимость USB</td>
+<td>Хорошая</td>
+<td>Отличная</td>
+<td>Ограниченная</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Как видно из таблицы, для новичков и разовых задач лучше всего подойдет <strong>VirtualBox</strong> благодаря простоте и кроссплатформенности. Если же приоритетом является графическая производительность, стоит присмотреться к продуктам <em>VMware</em>.</p>
+
+<p>Hyper-V же выбирают продвинутые пользователи, которым нужна глубокая интеграция с экосистемой Microsoft и возможность создания сложных сетевых конфигураций внутри Windows.</p>
+
+<h2 id="пошаговая-инструкция-создание-первой-виртуальной-машины">Пошаговая инструкция: создание первой виртуальной машины</h2>
+
+<p>Процесс создания VM стандартизирован в большинстве программ. Рассмотрим общий алгоритм, который применим и для VirtualBox, и для VMware. Сначала необходимо скачать установочный образ операционной системы в формате <strong>ISO</strong> с официального сайта разработчика.</p>
+
+<p>Запустите программу виртуализации и нажмите кнопку «Создать» (New). Вам предложат ввести имя машины и выбрать тип ОС. На этом этапе программа автоматически определит необходимые параметры, но их можно изменить вручную.</p>
+
+<pre><code>Рекомендуемые настройки для Windows 10 Guest:
+<p>- Ядра CPU: 2</p>
+<p>- Оперативная память: 4096 МБ</p>
+<p>- Видеопамять: 128 МБ</code></pre></p>
+
+<p>Далее следует этап создания виртуального жесткого диска. Выберите динамический тип, если хотите, чтобы файл занимал место на физическом диске только по мере заполнения, или фиксированный, если важна максимальная скорость работы.</p>
+
+<details class="pb-accordion"><summary>Динамический или фиксированный диск?</summary><div class="pb-accordion-body"><p>Динамический диск удобен экономией места, но может фрагментироваться. Фиксированный сразу резервирует весь объем (например, 50 ГБ) на вашем SSD, что гарантирует лучшую производительность, но занимает место сразу.</p></div></details>
+
+<p>После создания «коробки» нужно подключить скачанный ранее ISO-образ в настройки носителей (Storage) и запустить машину. Начнется стандартная процедура установки Windows или Linux, как если бы вы ставили систему на новый компьютер.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>После установки гостевой ОС первым делом установите дополнения гостевой системы (Guest Additions / VMware Tools) — это драйверы, которые улучшают работу мыши, экрана и общих папок.</p></aside>
+
+<h2 id="настройка-сети-и-общих-папок">Настройка сети и общих папок</h2>
+
+<p>По умолчанию виртуальная машина часто изолирована или имеет доступ в интернет через NAT (разделяя IP-адрес хоста). Для большинства задач этого достаточно, но если вам нужно, чтобы VM была видна в локальной сети как отдельное устройство, переключите режим сети на <strong>Bridged Adapter</strong> (Сетевой мост).</p>
+
+<p>Одна из самых полезных функций — общие папки. Она позволяет передавать файлы между основной Windows и виртуальной машиной без использования флешек или облачных сервисов. Вы просто указываете папку на хосте, и она появляется как сетевой диск внутри гостевой системы.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Будьте осторожны при пробросе USB-устройств или общих папок. Файловый вирус, попавший в общую папку, может быть мгновенно прочитан антивирусом основной системы или, наоборот, заразить хост, если защита слабая.</p>
+</blockquote>
+
+<p>Для настройки общих папок в меню виртуальной машины найдите раздел «Устройства» -> «Общие папки». Добавьте путь к нужному каталогу и поставьте галочку «Auto-mount», чтобы система смонтировала диск автоматически при загрузке.</p>
+
+<h2 id="снимки-системы-и-управление-состоянием">Снимки системы и управление состоянием</h2>
+
+<p>Одной из «киллер-фич» виртуализации является возможность делать <strong>снапшоты</strong> (snapshots). Снимок сохраняет точное состояние виртуальной машины в конкретный момент времени: открытые программы, файлы, настройки реестра.</p>
+
+<p>Представьте, что вы хотите установить рискованное обновление или новый драйвер. Сделайте снапшот перед этим. Если что-то пойдет не так, вы сможете откатить систему назад за пару секунд, как будто ничего и не происходило. Это invaluable инструмент для экспериментов.</p>
+
+<ul>
+<li>📸 <strong>Точка восстановления:</strong> Мгновенный возврат к рабочему состоянию системы.</li>
+<li>🌳 <strong>Древовидная структура:</strong> Возможность создавать ветки развития системы для разных сценариев тестов.</li>
+<li>💾 <strong>Экономия времени:</strong> Не нужно переустанавливать ОС и софт заново после критической ошибки.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Снимки занимают место на диске. Не храните десятки снапшотов месяцами, иначе файл виртуального диска может разрастись до огромных размеров и замедлить работу.</p>
+</blockquote>
+
+<p>Управлять снимками можно через специальный менеджер в интерфейсе программы. Там можно увидеть историю изменений, удалить старые версии или восстановить систему к выбранной дате.</p>
+
+<details>
+<summary>Как правильно удалять виртуальную машину, чтобы освободить место?</summary>
+<p>Просто удалить ярлык или файл конфигурации недостаточно. В менеджере виртуальных машин выберите нужную VM, нажмите правой кнопкой мыши и выберите «Удалить». Программа предложит два варианта: удалить только регистрацию (файлы останутся на диске) или удалить все файлы. Для полного освобождения места выбирайте второй вариант.</p>
+</details>
+
+<details>
+<summary>Можно ли запустить виртуальную машину без интернета?</summary>
+<p>Да, можно. В настройках сети виртуальной машины выберите режим «Не подключено» (Not Attached) или просто отключите виртуальный сетевой адаптер. Это полезно для создания полностью изолированных лабораторий (air-gapped) для изучения вирусов или работы с конфиденциальными данными.</p>
+</details>
+
+<details>
+<summary>Почему виртуальная машина работает медленно?</summary>
+<p>Основные причины: не включена аппаратная виртуализация (VT-x/AMD-V) в BIOS, выделено слишком мало оперативной памяти, используется медленный HDD вместо SSD, или не установлены драйверы гостевой системы (Guest Additions). Также проверьте, не запущено ли слишком много тяжелых программ на основной системе.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/s/st/strashnye-attraktsiony-v-ostrove-mechty.html" class="pb-related-card">
+                <span class="pb-related-title">Страшные аттракционы в Острове Мечты: гид по ужасам</span>
+                <span class="pb-related-desc">Полный обзор страшных аттракционов в Острове Мечты. Узнайте, какие квесты и комнаты страха стоит пос</span>
+            </a><a href="/articles/p/po/pochemu-yandeks-karty-ne-pokazyvayut-transport.html" class="pb-related-card">
+                <span class="pb-related-title">Почему Яндекс Карты не показывают транспорт: 7 причин и решения</span>
+                <span class="pb-related-desc">Разбираемся, почему в Яндекс Картах пропадает общественный транспорт, как исправить проблему на Andr</span>
+            </a><a href="/articles/k/ka/kak-vyglyadit-avtomat-kalashnikov.html" class="pb-related-card">
+                <span class="pb-related-title">Как выглядит автомат Калашникова: фото, устройство и отличия моделей</span>
+                <span class="pb-related-desc">Подробный разбор внешнего вида АК-47 и его модификаций: от приклада до дульного тормоза. Сравнение с</span>
+            </a><a href="/articles/k/kr/krutye-filmy-pro-mashiny.html" class="pb-related-card">
+                <span class="pb-related-title">Топ-15 крутых фильмов про машины: адреналин, скорость и стиль</span>
+                <span class="pb-related-desc">Лучшие кинофильмы об автомобилях всех времен: от культовых гонок до драматичных историй. Рейтинги, ф</span>
+            </a><a href="/articles/z/zh/zhiv-li-gorshok-iz-korol-i-shut.html" class="pb-related-card">
+                <span class="pb-related-title">Жив ли Горшок из Король и Шут: правда о солисте группы</span>
+                <span class="pb-related-desc">Узнайте правду о судьбе солиста группы Король и Шут. Жив ли Горшок, как сложилась его жизнь после ра</span>
+            </a><a href="/articles/k/ka/kak-samim-osvyatit-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Как освятить машину самому: пошаговая инструкция</span>
+                <span class="pb-related-desc">Можно ли освятить автомобиль самостоятельно без священника? Правила обряда, молитвы, подготовка к ос</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

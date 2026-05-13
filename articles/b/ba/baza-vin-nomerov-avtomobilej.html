@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>База VIN номеров автомобилей: поиск, расшифровка и проверка — Авто Справочник</title>
+    <meta name="description" content="Полная база VIN номеров автомобилей. Как проверить историю машины по ВИН-коду перед покупкой. Расшифровка, проверка на угон, залоги и ДТП онлайн.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/b/ba/baza-vin-nomerov-avtomobilej.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="База VIN номеров автомобилей: поиск, расшифровка и проверка">
+    <meta property="og:description" content="Полная база VIN номеров автомобилей. Как проверить историю машины по ВИН-коду перед покупкой. Расшифровка, проверка на угон, залоги и ДТП онлайн.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/" class="pb-nav-active">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/pokupka-i-prodazha/">Покупка и Продажа</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">База VIN номеров автомобилей: поиск, расшифровка и проверка</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-vin-код-и-где-его-искать">Что такое VIN-код и где его искать</a></li><li><a href="#структура-и-расшифровка-идентификационного-номера">Структура и расшифровка идентификационного номера</a></li><li><a href="#источники-данных-официальные-и-коммерческие-базы">Источники данных: официальные и коммерческие базы</a></li><li><a href="#анализ-истории-эксплуатации-и-технического-состояния">Анализ истории эксплуатации и технического состояния</a></li><li><a href="#юридическая-чистота-залоги-угон-и-ограничения">Юридическая чистота: залоги, угон и ограничения</a></li><li><a href="#распространенные-ошибки-при-проверке-автомобилей">Распространенные ошибки при проверке автомобилей</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pr/proverit-mashinu-po-bazam-gibdd.html">Проверить машину по базам ГИБДД: полная инструкция</a></li><li><a href="/articles/v/vs/vse-kitajskie-brendy-avto.html">Все китайские бренды авто: полный список марок для России</a></li><li><a href="/articles/l/lu/luchshie-7-mestnye-krossovery.html">Лучшие 7 местные кроссоверы 2026: Топ рейтинг моделей</a></li><li><a href="/articles/m/ma/mashinu-pod-zalog-v-bank.html">Машину под залог в банк: условия, проценты, риски 2026</a></li><li><a href="/articles/l/li/li-auto-l7-otzyvy.html">Li Auto L7 отзывы: реальные впечатления, расход и проблемы</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>База VIN номеров автомобилей: как проверить историю машины</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-vin-код-и-где-его-искать">Что такое VIN-код и где его искать</a></li><li><a href="#структура-и-расшифровка-идентификационного-номера">Структура и расшифровка идентификационного номера</a></li><li><a href="#источники-данных-официальные-и-коммерческие-базы">Источники данных: официальные и коммерческие базы</a></li><li><a href="#анализ-истории-эксплуатации-и-технического-состояния">Анализ истории эксплуатации и технического состояния</a></li><li><a href="#юридическая-чистота-залоги-угон-и-ограничения">Юридическая чистота: залоги, угон и ограничения</a></li><li><a href="#распространенные-ошибки-при-проверке-автомобилей">Распространенные ошибки при проверке автомобилей</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Приобретение подержанного транспортного средства всегда сопряжено с определенными рисками, которые могут обернуться серьезными финансовыми потерями для нового владельца. Именно поэтому <strong>база VIN номеров автомобилей</strong> становится незаменимым инструментом для любого покупателя, желающего обезопасить себя от мошеннических действий. Зная уникальный идентификационный код, можно получить исчерпывающую информацию о прошлом машины, не полагаясь только на заверения продавца.</p>
+
+<p>Современные технологии позволяют проводить глубокую проверку технического состояния и юридической чистоты за считанные минуты. Вам больше не нужно быть экспертом в области автомобилей или нанимать частных детективов для сбора информации. Достаточно иметь доступ к интернету и понимание того, как правильно интерпретировать полученные данные из различных реестров.</p>
+
+<p>В этой статье мы подробно разберем, что скрывает в себе семнадцатизначный код, где искать достоверные источники информации и на какие красные флаги следует обращать внимание в первую очередь. <em>Вин-код</em> — это паспорт автомобиля, который невозможно изменить без нарушения целостности кузова, и именно он является ключом к правде о машине.</p>
+
+<h2 id="что-такое-vin-код-и-где-его-искать">Что такое VIN-код и где его искать</h2>
+
+<p>Идентификационный номер транспортного средства, или <strong>VIN</strong> (Vehicle Identification Number), представляет собой уникальный код, состоящий из 17 символов. Этот стандарт был внедрен для унификации данных о производстве автомобилей по всему миру. В отличие от номерных знаков, которые меняются при перерегистрации, <mark>VIN-код присваивается автомобилю один раз на заводе-изготовителе и остается с ним до утилизации</mark>.</p>
+
+<p>Найти этот номер можно в нескольких местах, что продиктовано требованиями безопасности и удобства считывания. Чаще всего он выбит на специальной металлической табличке, расположенной в подкапотном пространстве, или непосредственно на кузове в районе переднего лонжерона. Также дубликат всегда находится на лобовом стекле в левом нижнем углу, если смотреть из салона.</p>
+
+<p>В документах номер указывается в свидетельстве о регистрации транспортного средства (СТС) и паспорте транспортного средства (ПТС). При сверке данных важно обращать внимание на каждую цифру, так как ошибки даже в одном символе могут привести к получению неверной информации из базы данных. Некоторые производители, такие как <em>BMW</em> или <em>Mercedes-Benz</em>, могут дублировать код в труднодоступных местах рамы для дополнительной защиты.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Если вы обнаружили на кузове следы сварки, закрашивания или изменения шрифта в районе нанесения VIN-кода, это прямой признак перебитых номеров. От покупки такого автомобиля следует немедленно отказаться, так как его невозможно будет поставить на учет.</p>
+</blockquote>
+
+<h2 id="структура-и-расшифровка-идентификационного-номера">Структура и расшифровка идентификационного номера</h2>
+
+<p>Понимание структуры кода позволяет мгновенно определить ключевые характеристики автомобиля без обращения к сложным таблицам. Первые три символа, известные как <strong>WMI</strong> (World Manufacturer Identifier), указывают на страну-производителя и конкретный завод. Например, код <code>JT1</code> говорит о том, что автомобиль произведен компанией <em>Toyota</em> в Японии, а <code>WDB</code> указывает на немецкий концерн <em>Mercedes-Benz</em>.</p>
+
+<p>Следующие шесть символов составляют описательную часть (<strong>VDS</strong>). Здесь зашифрована информация о модели, типе кузова, двигателе и комплектации. Производители используют эту секцию по-разному: иногда порядок параметров строго фиксирован, а иногда зависит от конкретной линейки моделей. Именно здесь кроется информация о том, какой мотор должен стоять под капотом по заводским спецификациям.</p>
+
+<p>Завершает код последняя группа из восьми символов, называемая отличительной (<strong>VIS</strong>). В ней содержится информация о модельном годе выпуска и порядковом номере автомобиля на конвейере. Десятый символ часто используется для обозначения года выпуска, что критически важно при подборе запчастей. Остальные символы представляют собой серийный номер, уникальный для каждого экземпляра.</p>
+
+<details class="pb-accordion"><summary>Таблица популярных кодов стран-производителей</summary><div class="pb-accordion-body"><p>1-5 - США, J - Япония, K - Корея, W - Германия, Z - Италия, X - Россия/СССР, L - Китай, V - Франция/Испания/Чехия</p></div></details>
+
+<h2 id="источники-данных-официальные-и-коммерческие-базы">Источники данных: официальные и коммерческие базы</h2>
+
+<p>Информация об автомобиле хранится в множестве разрозненных источников, каждый из которых обладает своей степенью достоверности и актуальности. Официальные государственные реестры, такие как база <em>ГИБДД</em> или <em>ЕАИСТО</em>, содержат данные о регистрации, участии в ДТП и нахождении в розыске. Это первичный источник, с которого всегда следует начинать проверку юридической чистоты.</p>
+
+<p>Коммерческие сервисы агрегируют данные из различных источников, включая страховые компании, сервисные центры и объявления о продаже. Они позволяют сформировать единую картину жизни автомобиля, показывая историю пробега, количество владельцев и факты коммерческого использования. Однако стоит помнить, что такие отчеты являются платными и их достоверность зависит от полноты собранных данных.</p>
+
+<p>Существуют также специализированные базы дилерских центров, куда попадает информация о каждом плановом ТО и гарантийном ремонте. Это invaluable источник для оценки технического состояния. Если в базе дилера пробег зафиксирован как 200 000 км, а на одометре сейчас 90 000 км, то факт скрутки налицо.</p>
+
+<div class="pb-poll" id="poll-3d4d18fc"><div class="pb-poll-question">📊 Где вы чаще всего проверяете авто?</div><div class="pb-poll-option" data-poll="3d4d18fc" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Официальный сайт ГИБДД</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3d4d18fc" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Платные сервисы отчетов</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3d4d18fc" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Сайты объявлений</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="3d4d18fc" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Не проверяю, верю продавцу</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="анализ-истории-эксплуатации-и-технического-состояния">Анализ истории эксплуатации и технического состояния</h2>
+
+<p>Одной из главных целей проверки является выявление скрученного пробега и скрытых дефектов. Анализ записей в сервисных базах позволяет отследить динамику изменения показаний одометра. Резкие скачки или нелогичное снижение цифр свидетельствуют о вмешательстве в приборную панель, что является попыткой скрыть реальный износ узлов и агрегатов.</p>
+
+<p>Важно также обращать внимание на частоту обращений в сервис. Если автомобиль регулярно посещал станцию технического обслуживания для замены элементов подвески или ремонта двигателя, это говорит о тяжелых условиях эксплуатации или низком качестве предыдущего ремонта. Отсутствие записей о ТО в течение длительного времени также является тревожным сигналом.</p>
+
+<p>При анализе данных о ДТП необходимо оценивать не только сам факт происшествия, но и характер повреждений. Информация о замене лонжеронов, подушек безопасности или элементов геометрии кузова требует особой осторожности. Даже качественно восстановленный автомобиль после серьезной аварии теряет в рыночной стоимости и надежности.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Чек-лист проверки истории</h4><label class="check-item"><input type="checkbox"><span>Сверить VIN в документах и на кузове</span></label><label class="check-item"><input type="checkbox"><span>Проверить количество владельцев по ПТС</span></label><label class="check-item"><input type="checkbox"><span>Найти записи о замене двигателя</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии ограничений на регистрацию</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="юридическая-чистота-залоги-угон-и-ограничения">Юридическая чистота: залоги, угон и ограничения</h2>
+
+<p>Покупка автомобиля, находящегося в залоге у банка, грозит потерей транспортного средства, так как кредитор имеет право изъять имущество в счет погашения долга предыдущего владельца. Данные о залогах хранятся в реестре уведомлений о залоге движимого имущества, однако информация туда вносится не всегда оперативно, поэтому требуется комплексная проверка.</p>
+
+<p>Проверка на нахождение в федеральном розыске — обязательный этап. Если автомобиль числится в угоне, его изымут сотрудники полиции при первой же остановке на дороге или попытке регистрации. Владельцу в таком случае придется долго доказывать свою добросовестность в суде, чтобы вернуть деньги, что не всегда удается.</p>
+
+<p>Существуют также ограничения регистрационных действий, которые могут быть наложены судебными приставами из-за долгов владельца по штрафам, алиментам или кредитам. Пока ограничение не снято, новый владелец не сможет оформить машину на себя. Базы данных позволяют увидеть наличие таких запретов еще до момента сделки.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Тип проверки</th>
+<th>Источник данных</th>
+<th>Риск при игнорировании</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Уголовный розыск</td>
+<td>База МВД / ГИБДД</td>
+<td>Изъятие автомобиля, уголовная ответственность</td>
+</tr>
+<tr>
+<td>Залог в банке</td>
+<td>Реестр залогов (Нотариат)</td>
+<td>Потеря автомобиля в пользу банка</td>
+</tr>
+<tr>
+<td>Ограничения ФССП</td>
+<td>База судебных приставов</td>
+<td>Невозможность постановки на учет</td>
+</tr>
+<tr>
+<td>Таможенные ограничения</td>
+<td>ФТС (Таможня)</td>
+<td>Большой штраф, конфискация</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ Внимание: Наличие дубликата ПТС без объективных причин (утеря, заполнение всех страниц) часто указывает на то, что оригинал находится в банке. Будьте предельно внимательны при сделках с дубликатами документов.</p>
+</blockquote>
+
+<h2 id="распространенные-ошибки-при-проверке-автомобилей">Распространенные ошибки при проверке автомобилей</h2>
+
+<p>Многие покупатели совершают ошибку, полагаясь только на один источник информации. Комплексный подход подразумевает перекрестную проверку данных. Например, если в отчете коммерческого сервиса указано ДТП, а в базе ГИБДД его нет, это может означать, что авария была оформлена по европротоколу без вызова инспекторов, но страховая компания зафиксировала ущерб.</p>
+
+<p>Еще одной распространенной ошибкой является игнорирование визуального несоответствия. Если в базе данных указано, что цвет автомобиля черный, а по документам он белый, это требует немедленного выяснения причин. Возможно, машина перекрашивалась, и это не было зарегистрировано, что нарушает правила дорожного движения и создает проблемы при продаже.</p>
+
+<p>Не стоит также полностью доверять "чистой" истории, если автомобиль имеет признаки серьезного ремонта. Базы данных не всегда обновляются мгновенно, и факт попадания в серьезное ДТП мог просто не успеть отразиться в системах. Физический осмотр и диагностика у независимого эксперта остаются важнейшими этапами.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При покупке автомобиля из-за границы (европейский или американский аукцион) используйте международные базы данных, такие как Carfax или AutoCheck, так как в российских базах такой истории еще не будет.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Можно ли проверить автомобиль по VIN бесплатно?</summary>
+<p>Существуют способы получить базовую информацию бесплатно, например, через официальный сайт ГИБДД (история регистраций, ДТП, розыск) или сервис «Реестр залогов». Однако полные отчеты с данными о пробеге, детальном состоянии и истории обслуживания обычно предоставляются платными агрегаторами, которые собирают информацию из множества источников.</p>
+</details>
+
+<details>
+<summary>Что делать, если VIN-код на кузове не читается?</summary>
+<p>Если номер не читается из-за коррозии или повреждений, это является основанием для отказа в регистрации транспортного средства. В таком случае требуется проведение экспертно-криминалистической экспертизы для восстановления номера и установления его подлинности. Без положительного заключения экспертов поставить машину на учет не получится.</p>
+</details>
+
+<details>
+<summary>Насколько актуальны данные в базах?</summary>
+<p>Актуальность данных зависит от источника. Информация в государственных реестрах обновляется в режиме реального времени или с небольшой задержкой. Данные от частных сервисов и дилеров могут обновляться с периодичностью от нескольких дней до месяцев, поэтому всегда стоит учитывать временной лаг.</p>
+</details>
+
+<details>
+<summary>Может ли VIN-код быть поддельным?</summary>
+<p>Да, мошенники могут перебивать номера или создавать полные копии (клоны) автомобилей. Именно поэтому важно сверять не только сам код, но и косвенные признаки: год выпуска деталей, соответствие маркировок стекол и светотехники, а также состояние заводских швов и креплений табличек.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Проверка по VIN — это не гарантия отсутствия проблем, но эффективный фильтр, отсеивающий большинство проблемных автомобилей до этапа торга и диагностики.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pr/proverit-mashinu-po-bazam-gibdd.html" class="pb-related-card">
+                <span class="pb-related-title">Проверить машину по базам ГИБДД: полная инструкция</span>
+                <span class="pb-related-desc">Узнайте, как бесплатно проверить машину по базам ГИБДД на угон, штрафы и ДТП. Пошаговое руководство,</span>
+            </a><a href="/articles/v/vs/vse-kitajskie-brendy-avto.html" class="pb-related-card">
+                <span class="pb-related-title">Все китайские бренды авто: полный список марок для России</span>
+                <span class="pb-related-desc">Подробный обзор всех китайских брендов авто. Сравнение Geely, Haval, Chery, Exeed и других. Актуальн</span>
+            </a><a href="/articles/l/lu/luchshie-7-mestnye-krossovery.html" class="pb-related-card">
+                <span class="pb-related-title">Лучшие 7 местные кроссоверы 2026: Топ рейтинг моделей</span>
+                <span class="pb-related-desc">Обзор лучших 7-местных кроссоверов. Сравнение вместимости, багажников и технических характеристик се</span>
+            </a><a href="/articles/m/ma/mashinu-pod-zalog-v-bank.html" class="pb-related-card">
+                <span class="pb-related-title">Машину под залог в банк: условия, проценты, риски 2026</span>
+                <span class="pb-related-desc">Как оформить авто под залог в банке: требования к машине, процентные ставки, документы и возможные р</span>
+            </a><a href="/articles/l/li/li-auto-l7-otzyvy.html" class="pb-related-card">
+                <span class="pb-related-title">Li Auto L7 отзывы: реальные впечатления, расход и проблемы</span>
+                <span class="pb-related-desc">Честные отзывы владельцев Li Auto L7. Анализ надежности, реального расхода топлива, динамики разгона</span>
+            </a><a href="/articles/p/po/posmotret-avtoteku-po-gos-nomeru.html" class="pb-related-card">
+                <span class="pb-related-title">Как посмотреть Автотеку по гос номеру: инструкция и цены</span>
+                <span class="pb-related-desc">Полный гайд: как пробить машину по номеру через Автотеку. Анализ отчетов, сравнение цен, скрытые рис</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

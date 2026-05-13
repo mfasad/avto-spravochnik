@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Настройка Need for Speed: Most Wanted для слабых ПК и FPS — Авто Справочник</title>
+    <meta name="description" content="Полная регулировка NFS Most Wanted: config.xml, реестр, патч widescreen. Убираем лаги, настраиваем графику и управление для идеальной производительности.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/n/nf/nfs-most-wanted-regulirovka-mashiny.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Настройка Need for Speed: Most Wanted для слабых ПК и FPS">
+    <meta property="og:description" content="Полная регулировка NFS Most Wanted: config.xml, реестр, патч widescreen. Убираем лаги, настраиваем графику и управление для идеальной производительности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/aksessuary-i-tyuning/">Аксессуары и Тюнинг</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Настройка Need for Speed: Most Wanted для слабых ПК и FPS</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#базовая-настройка-графики-через-файл-конфигурации">Базовая настройка графики через файл конфигурации</a></li><li><a href="#устранение-ограничений-fps-и-физики-движения">Устранение ограничений FPS и физики движения</a></li><li><a href="#тюнинг-управления-и-чувствительности-руля">Тюнинг управления и чувствительности руля</a></li><li><a href="#оптимизация-производительности-на-слабых-и-мощных-пк">Оптимизация производительности на слабых и мощных ПК</a></li><li><a href="#решение-проблем-со-звуком-и-интерфейсом">Решение проблем со звуком и интерфейсом</a></li><li><a href="#чек-лист-окончательной-проверки-настроек">Чек-лист окончательной проверки настроек</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pl/plenka-khrom-dlya-avto-kupit.html">Пленка хром для авто купить: цена, виды, инструкция по наклейке</a></li><li><a href="/articles/v/vr/vrashchayushchijsya-aromatizator-v-mashinu.html">Вращающийся ароматизатор в машину: обзор, установка и выбор</a></li><li><a href="/articles/n/na/na-kakikh-mashinakh-ezdili-bandity-v-90-kh.html">На каких машинах ездили бандиты в 90-х: автопарк криминала</a></li><li><a href="/articles/b/ba/basistaya-muzyka-v-mashinu.html">Басистая музыка в машину: выбор треков и настройка автозвука</a></li><li><a href="/articles/k/ka/kak-rabotaet-avtomojka-samoobsluzhivaniya.html">Как работает автомойка самообслуживания: полный гид для новичков</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Профессиональная регулировка NFS Most Wanted: графика, FPS и патчи</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#базовая-настройка-графики-через-файл-конфигурации">Базовая настройка графики через файл конфигурации</a></li><li><a href="#устранение-ограничений-fps-и-физики-движения">Устранение ограничений FPS и физики движения</a></li><li><a href="#тюнинг-управления-и-чувствительности-руля">Тюнинг управления и чувствительности руля</a></li><li><a href="#оптимизация-производительности-на-слабых-и-мощных-пк">Оптимизация производительности на слабых и мощных ПК</a></li><li><a href="#решение-проблем-со-звуком-и-интерфейсом">Решение проблем со звуком и интерфейсом</a></li><li><a href="#чек-лист-окончательной-проверки-настроек">Чек-лист окончательной проверки настроек</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Классическая аркада 2005 года от EA Black Box до сих пор остается эталоном жанра, но современные операционные системы и мощное железо часто становятся препятствием для комфортной игры. <strong>Регулировка машины</strong> и самой игры в 2026 году требует не только выбора деталей в гараже, но и глубокой технической настройки файлов конфигурации. Многие игроки сталкиваются с проблемой, когда автомобиль ведет себя неестественно, а графика либо «мыльная», либо вызывает падение кадров на топовых системах.</p>
+
+<p>Проблема кроется в том, что движок игры изначально не был рассчитан на разрешения выше 1080p и частоту обновления экрана выше 60 Гц. Без правильной модификации <code>config.xml</code> и реестра Windows физика <em>Need for Speed: Most Wanted</em> работает некорректно: машины становятся слишком легкими, а управление — дерганым. В этой статье мы разберем, как превратить старую аркаду в современный гоночный симулятор с плавной картинкой и отзывчивым управлением.</p>
+
+<p>Прежде чем вносить изменения, необходимо убедиться, что у вас установлена чистая версия игры или проверенная сборка, так как пиратские версии часто содержат ошибки в скриптах запуска. <mark>Критически важным шагом является создание резервной копии папки с игрой перед любым вмешательством в системные файлы.</mark> Только после этого можно приступать к тонкой настройке параметров рендеринга и физической модели автомобиля.</p>
+
+<h2 id="базовая-настройка-графики-через-файл-конфигурации">Базовая настройка графики через файл конфигурации</h2>
+
+<p>Основным инструментом регулировки визуальной составляющей является файл <code>config.xml</code>, расположенный в папке <code>C:\Program Files (x86)\EA GAMES\Need for Speed Most Wanted</code> или в папке документов пользователя. Открыв его с помощью блокнота, вы найдете параметры, которые не доступны в стандартном меню игры. Первым делом необходимо изменить разрешение экрана, установив значения <code>width</code> и <code>height</code> в соответствии с вашим монитором, например, <code>1920</code> и <code>1080</code> соответственно.</p>
+
+<p>Далее следует обратить внимание на параметр <code>forcefullscreen</code>. Если установить значение <code>1</code>, игра будет принудительно запускаться в полноэкранном режиме, что снижает задержку ввода (input lag). Для современных широкоформатных мониторов важно проверить параметр <code>aspectratio</code>, хотя современные патчи часто корректируют его автоматически. <strong>Рендеринг</strong> в игре сильно зависит от этих базовых установок.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При изменении разрешения в файле конфигурации убедитесь, что ваш монитор поддерживает выбранные значения. Установка нестандартного разрешения может привести к черному экрану при запуске, и файл придется править вручную до запуска игры.</p>
+</blockquote>
+
+<p>Для улучшения детализации текстуры и сглаживания можно поэкспериментировать с параметрами <code>TextureResolution</code> и <code>VSync</code>. Отключение вертикальной синхронизации (<code>VSync = 0</code>) может увеличить количество FPS, но приведет к разрывам кадра (tearing) на экранах без технологии G-Sync или FreeSync. Оптимальным решением является включение тройной буферизации, если драйверы видеокарты позволяют управлять этим параметром отдельно для исполняемого файла <em>speed2.exe</em>.</p>
+
+<h2 id="устранение-ограничений-fps-и-физики-движения">Устранение ограничений FPS и физики движения</h2>
+
+<p>Одной из самых распространенных проблем является ограничение скорости игры в 60 кадров в секунду. На современных мониторах с частотой 144 Гц или 240 Гц это ограничение делает движение автомобиля дерганым и неестественным. Физический движок игры завязан на частоту кадров: чем выше FPS, тем быстрее работает время в игре и тем чувствительнее становится управление. Для регулировки необходимо использовать сторонние утилиты или править реестр.</p>
+
+<p>Существует специальный патч для разблокировки FPS, который позволяет игре работать на любой частоте обновления монитора. Однако, просто подняв FPS, вы столкнетесь с тем, что <strong>физика машины</strong> станет неуправляемой: автомобиль будет слишком резко реагировать на повороты руля. Это происходит потому, что расчеты инерции и сцепления с дорогой производятся чаще, чем задумывали разработчики.</p>
+
+<p>Чтобы компенсировать это, необходимо внести изменения в реестр Windows. Перейдите по пути <code>HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\EA GAMES\Need for Speed Most Wanted</code> (путь может отличаться в зависимости от версии Windows и разрядности системы). Здесь нужно создать или изменить DWORD-параметр, отвечающий за частоту кадров, или использовать готовый <code>.reg</code> файл из состава патча <em>NFS Most Wanted Widescreen Fix</em>.</p>
+
+<details class="pb-accordion"><summary>Почему физика ломается при высоком FPS?</summary><div class="pb-accordion-body"><p>Физический движок игры использует фиксированный временной шаг (timestep). При увеличении FPS количество шагов в секунду растет, и силы, действующие на машину, суммируются быстрее, что приводит к ускорению времени и повышению чувств"щуплости" автомобиля.</p></div></details>
+
+<p>После применения патча рекомендуется протестировать поведение машины на треке. Если автомобиль кажется слишком нервным, попробуйте снизить чувствительность руля в настройках управления или использовать модификаторы, стабилизирующие физику на высоких частотах кадров. <em>Widescreen Fix</em> часто включает в себя и корректировку физики, что делает его обязательным к установке.</p>
+
+<h2 id="тюнинг-управления-и-чувствительности-руля">Тюнинг управления и чувствительности руля</h2>
+
+<p>Регулировка машины невозможна без правильной настройки ввода. В оригинальной игре параметры чувствительности ограничены, что особенно заметно при использовании современных геймпадов или рулевых комплектов. Для глубокой настройки необходимо обратиться к файлу <code>input.ini</code> или использовать сторонние программы-мапперы, такие как Xpadder или JoyToKey, если стандартные средства не дают желаемого результата.</p>
+
+<p>Внутриигровые настройки позволяют изменить только степень помощи в поворотах и тип управления (цифровое или аналоговое). Для профессиональной регулировки отклика рекомендуется использовать программное обеспечение производителя контроллера. Например, в софте для <em>Logitech</em> или <em>Thrustmaster</em> можно настроить кривую отклика педалей газа и тормоза, сделав их более линейными или, наоборот, прогрессивными.</p>
+
+<ul>
+<li>🎮 <strong>Мертвая зона:</strong> Увеличьте мертвую зону аналоговых стиков до 10-15%, чтобы исключить самопроизвольное подруливание на прямой.</li>
+<li>📉 <strong>Линейность:</strong> Используйте нелинейную кривую для педали газа, чтобы легче контролировать заносы на выходе из поворота.</li>
+<li>🔄 <strong>Вибрация:</strong> Отключите или уменьшите силу вибрации (Force Feedback), так как в NFS MW она часто работает рывками и мешает чувствовать сцепление.</li>
+</ul>
+
+<p>Также стоит упомянуть параметр <code>SteeringSensitivity</code> в конфигурационных файлах некоторых патчей. Его увеличение делает руль более острым, что полезно для дрифта, но требует привыкания. <strong>Контроль заноса</strong> напрямую зависит от того, насколько плавно вы можете дозировать газ, поэтому настройка педалей приоритетнее настройки кнопок.</p>
+
+<div class="pb-poll" id="poll-0ccf99f5"><div class="pb-poll-question">📊 Какой контроллер вы используете для NFS Most Wanted?</div><div class="pb-poll-option" data-poll="0ccf99f5" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Геймпад Xbox</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0ccf99f5" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Геймпад PlayStation</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0ccf99f5" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Руль (Logitech/Thrustmaster)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0ccf99f5" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Клавиатура</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="оптимизация-производительности-на-слабых-и-мощных-пк">Оптимизация производительности на слабых и мощных ПК</h2>
+
+<p>Парадокс игры заключается в том, что она может тормозить как на очень старых, так и на очень новых компьютерах. На слабых системах проблема решается снижением детализации через файл <code>config.xml</code>. Найдите параметр <code>detail</code> и установите его в минимальное значение. Также помогает отключение эффектов постобработки, таких как <strong>Motion Blur</strong> (размытие в движении) и <strong>Depth of Field</strong> (глубина резкости).</p>
+
+<p>На мощных ПК проблема часто кроется в отсутствии поддержки многопоточности. Движок игры плохо распараллелен и загружает в основном одно ядро процессора. Для решения этой проблемы можно попробовать запустить игру в режиме совместимости с Windows XP (Pack 3) или использовать утилиты для принудительного распределения потоков, хотя это редко дает прирост более 10-15%.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Параметр</th>
+<th>Для слабых ПК</th>
+<th>Для мощных ПК</th>
+<th>Влияние</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texture Detail</td>
+<td>Low</td>
+<td>High</td>
+<td>Качество текстур и потребление VRAM</td>
+</tr>
+<tr>
+<td>Shadow Detail</td>
+<td>Off</td>
+<td>High</td>
+<td>Нагрузка на CPU и GPU</td>
+</tr>
+<tr>
+<td>Motion Blur</td>
+<td>Off</td>
+<td>On</td>
+<td>Визуальная скорость и нагрузка</td>
+</tr>
+<tr>
+<td>Reflections</td>
+<td>Low</td>
+<td>High</td>
+<td>Реалистичность кузовов</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Важным аспектом является управление памятью. Игра 32-битная и не может использовать более 2-3 ГБ оперативной памяти. Установка большого количества модов на машины с высоким разрешением текстур может привести к вылетам. <em>Оптимизация</em> в данном случае заключается в балансе между качеством модов и стабильностью работы движка.</p>
+
+<h2 id="решение-проблем-со-звуком-и-интерфейсом">Решение проблем со звуком и интерфейсом</h2>
+
+<p>Часто после регулировки графики пользователи забывают про звук, который на современных системах может работать с задержкой или вообще отсутствовать. В файле <code>config.xml</code> есть раздел, отвечающий за аудиоустройство. Убедитесь, что выбрано правильное устройство вывода, или установите значение <code>default</code>, чтобы система сама выбрала активный динамик.</p>
+
+<p>Проблемы с интерфейсом (UI) связаны с высоким разрешением. Шрифты могут стать нечитаемыми, а элементы меню — уехать за края экрана. Для решения этой проблемы существует патч <em>NFS Most Wanted HUD Fix</em>, который масштабирует интерфейс под 4K и ультра-широкие мониторы. Без него <strong>навигация</strong> в меню становится невозможной.</p>
+
+<blockquote>
+<p>⚠️ Внимание: При установке патчей на интерфейс всегда проверяйте совместимость версий. Патч для версии 1.3 может не работать на версии 1.2, что приведет к вылету игры при входе в главное меню.</p>
+</blockquote>
+
+<p>Также стоит настроить громкость отдельных каналов в микшере Windows. Звуковой движок игры иногда конфликтует с пространственным звуком Windows Sonic или Dolby Atmos, вызывая искажения. Рекомендуется отключить эти функции для процесса <code>speed2.exe</code> в свойствах устройства воспроизведения.</p>
+
+<h2 id="чек-лист-окончательной-проверки-настроек">Чек-лист окончательной проверки настроек</h2>
+
+<p>После внесения всех изменений в файлы и реестр необходимо провести финальную проверку. Не спешите начинать карьеру, сначала протестируйте автомобиль в свободной езде. Убедитесь, что счетчик FPS стабилен, а управление предсказуемо на разных поверхностях: асфальте, гравии и траве.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Финальная проверка настроек</h4><label class="check-item"><input type="checkbox"><span>Проверка разрешения экрана в config.xml</span></label><label class="check-item"><input type="checkbox"><span>Тест FPS в движении (не в меню)</span></label><label class="check-item"><input type="checkbox"><span>Проверка работы руля/геймпада</span></label><label class="check-item"><input type="checkbox"><span>Отсутствие артефактов графики</span></label><label class="check-item"><input type="checkbox"><span>Стабильность звука при нагрузке</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Если вы заметили просадки FPS в определенных местах города (например, в центре с большим трафиком), попробуйте снизить детализацию объектов окружения (<code>WorldDetail</code>). Это часто помогает больше, чем снижение текстур. <strong>Стабильность</strong> важнее максимальной красоты картинки.</p>
+
+<p>Не забывайте, что каждый ПК уникален. То, что работает идеально на одной системе, может требовать дополнительной подгонки на другой. Экспериментируйте с параметрами последовательно, меняя только одно значение за раз, чтобы понимать, какой именно параметр влияет на производительность или физику.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Используйте программу MSI Afterburner для мониторинга FPS и загрузки компонентов в реальном времени. Это поможет точно определить, является ли (узким местом) процессор или видеокарта.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему после установки патча на widescreen пропал звук?</summary>
+<p>Это распространенный конфликт версий. Некоторые версии патча <em>Widescreen Fix</em> меняют исполняемый файл, что может нарушить работу аудио-библиотек. Попробуйте переустановить игру начисто, затем установить патч, а после него — аудио-фикс или драйверы звуковой карты.</p>
+</details>
+
+<details>
+<summary>Как вернуть игру в оконный режим, если она запускается на весь экран?</summary>
+<p>Откройте файл <code>config.xml</code> и найдите параметр <code>forcefullscreen</code>. Измените его значение на <code>0</code>. Также убедитесь, что разрешение в файле не превышает разрешение вашего рабочего стола, иначе игра может принудительно перейти в полноэкранный режим.</p>
+</details>
+
+<details>
+<summary>Можно ли играть в онлайн с модифицированными файлами?</summary>
+<p>Официальные сервера игры давно закрыты. Однако, если вы играете через эмуляторы серверов (например, NFSWA или Online510), использование модифицированных файлов (<code>speed2.exe</code>) может привести к бану или невозможности подключиться. Для онлайн-игры используйте чистые файлы или версии, рекомендованные конкретным сообществом.</p>
+</details>
+
+<details>
+<summary>Почему машина в игре ведет себя как на льду после повышения FPS?</summary>
+<p>Это связано с тем, что физический движок привязан к частоте кадров. Вам необходимо установить патч <em>NFS Most Wanted Physics Fix</em> или аналогичный, который отвязывает расчет физики от FPS, позволяя машине вести себя реалистично даже при 144+ кадрах.</p>
+</details>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главный секрет идеальной NFS Most Wanted — это не максимальная графика, а стабильный FPS выше 60 и правильно настроенная физика, отвязанная от частоты кадров.</p></aside></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pl/plenka-khrom-dlya-avto-kupit.html" class="pb-related-card">
+                <span class="pb-related-title">Пленка хром для авто купить: цена, виды, инструкция по наклейке</span>
+                <span class="pb-related-desc">Где купить качественную хром пленку для авто? Сравнение цен, обзор брендов (3M, Oracal), инструкция </span>
+            </a><a href="/articles/v/vr/vrashchayushchijsya-aromatizator-v-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Вращающийся ароматизатор в машину: обзор, установка и выбор</span>
+                <span class="pb-related-desc">Как выбрать вращающийся ароматизатор в машину? Обзор моделей, принцип работы, советы по креплению и </span>
+            </a><a href="/articles/n/na/na-kakikh-mashinakh-ezdili-bandity-v-90-kh.html" class="pb-related-card">
+                <span class="pb-related-title">На каких машинах ездили бандиты в 90-х: автопарк криминала</span>
+                <span class="pb-related-desc">Обзор автомобилей, на которых передвигались бандиты в 90-х годах. Mercedes W140, BMW E34, Toyota Cam</span>
+            </a><a href="/articles/b/ba/basistaya-muzyka-v-mashinu.html" class="pb-related-card">
+                <span class="pb-related-title">Басистая музыка в машину: выбор треков и настройка автозвука</span>
+                <span class="pb-related-desc">Как сделать музыку в авто максимально басистой? Лучшие жанры для сабвуфера, настройка эквалайзера и </span>
+            </a><a href="/articles/k/ka/kak-rabotaet-avtomojka-samoobsluzhivaniya.html" class="pb-related-card">
+                <span class="pb-related-title">Как работает автомойка самообслуживания: полный гид для новичков</span>
+                <span class="pb-related-desc">Узнайте, как работает автомойка самообслуживания, какие программы выбрать и как правильно мыть машин</span>
+            </a><a href="/articles/s/sd/sdelat-podsvetku-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Подсветка в машине: виды, установка и советы по выбору</span>
+                <span class="pb-related-desc">Узнайте, как сделать подсветку салона, багажника или ног в машине своими руками. Обзор типов светоди</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

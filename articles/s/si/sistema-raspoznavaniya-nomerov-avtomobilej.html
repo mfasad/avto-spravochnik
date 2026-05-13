@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Система распознавания номеров: принцип работы и виды — Авто Справочник</title>
+    <meta name="description" content="Как работает система распознавания номеров (ANPR)? Разбор технологии, компонентов, алгоритмов OCR и сфер применения для безопасности.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/si/sistema-raspoznavaniya-nomerov-avtomobilej.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Система распознавания номеров: принцип работы и виды">
+    <meta property="og:description" content="Как работает система распознавания номеров (ANPR)? Разбор технологии, компонентов, алгоритмов OCR и сфер применения для безопасности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Система распознавания номеров: принцип работы и виды</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#принцип-работы-и-ключевые-этапы-обработки">Принцип работы и ключевые этапы обработки</a></li><li><a href="#аппаратные-компоненты-системы-anpr">Аппаратные компоненты системы ANPR</a></li><li><a href="#программные-алгоритмы-и-искусственный-интеллект">Программные алгоритмы и искусственный интеллект</a></li><li><a href="#факторы-влияющие-на-точность-распознавания">Факторы, влияющие на точность распознавания</a></li><li><a href="#сферы-применения-и-интеграция">Сферы применения и интеграция</a></li><li><a href="#перспективы-развития-и-будущие-тренды">Перспективы развития и будущие тренды</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/f/fa/fary-zapoteli-iznutri-chto-delat.html">Фары запотели изнутри: причины и 10 способов устранить проблему</a></li><li><a href="/articles/c/ch/chto-delat-esli-poteryal-edinstvennye-klyuchi-ot-mashiny.html">Потерял единственные ключи от машины: пошаговый план действий</a></li><li><a href="/articles/c/ch/chto-takoe-v-magnitole-acc.html">Что такое ACC в магнитоле: распиновка и подключение</a></li><li><a href="/articles/s/sa/samye-moshchnye-lampy-h4-galogenovye.html">Самые мощные галогеновые лампы H4: ТОП-10 рейтинг 2026</a></li><li><a href="/articles/v/vi/vidy-lamp-v-avtomobile.html">Виды ламп в автомобиле: классификация, особенности и выбор</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Система распознавания номеров автомобилей: технологии и применение</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#принцип-работы-и-ключевые-этапы-обработки">Принцип работы и ключевые этапы обработки</a></li><li><a href="#аппаратные-компоненты-системы-anpr">Аппаратные компоненты системы ANPR</a></li><li><a href="#программные-алгоритмы-и-искусственный-интеллект">Программные алгоритмы и искусственный интеллект</a></li><li><a href="#факторы-влияющие-на-точность-распознавания">Факторы, влияющие на точность распознавания</a></li><li><a href="#сферы-применения-и-интеграция">Сферы применения и интеграция</a></li><li><a href="#перспективы-развития-и-будущие-тренды">Перспективы развития и будущие тренды</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современные системы безопасности и управления трафиком уже невозможно представить без автоматизированных комплексов. <strong>Система распознавания номеров</strong> стала неотъемлемым элементом парковок, платных трасс и пропускных режимов предприятий. Технологии, лежащие в основе этого процесса, прошли долгий путь от простого считывания штрих-кодов до сложных нейросетей, анализирующих изображение в реальном времени.</p>
+
+<p>Основная задача таких систем заключается в преобразовании видеопотока или статического изображения в машиночитаемый текст. Это позволяет компьютерным системам мгновенно принимать решения: открыть шлагбаум, выписать штраф или просто зафиксировать факт проезда. Эффективность работы напрямую зависит от качества аппаратной части и алгоритмов обработки данных.</p>
+
+<p>Внедрение подобных решений требует глубокого понимания принципов их работы. <em>Автоматическое распознавание номерных знаков</em> (ANPR) базируется на сложных математических моделях, которые должны учитывать множество переменных: от погоды до скорости движения объекта. Именно поэтому грамотный подбор оборудования является критически важным этапом.</p>
+
+<h2 id="принцип-работы-и-ключевые-этапы-обработки">Принцип работы и ключевые этапы обработки</h2>
+
+<p>Процесс идентификации автомобиля начинается задолго до того, как данные попадут в базу учета. Первым этапом всегда является захват изображения. Камера, оснащенная специализированной оптикой, фиксирует момент проезда транспортного средства. Важно, чтобы в этот момент освещение было достаточным, или же использовалась активная <strong>инфракрасная подсветка</strong>, которая высвечивает номерной знак, делая его контрастным относительно фона.</p>
+
+<p>После получения кадра в дело вступает программное обеспечение. Алгоритм сначала должен найти сам номер на изображении, отсекая лишние детали: фары, бампер, элементы кузова. Затем происходит сегментация — разделение изображения на отдельные символы. Каждый символ сравнивается с базой эталонов, после чего формируется текстовая строка.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Низкое разрешение камеры или сильное загрязнение номерного знака могут привести к ошибкам сегментации, когда система распознает"В" как"8" или"О" как"0".</p>
+</blockquote>
+
+<p>Финальный этап — это верификация и передача данных. Система проверяет полученную комбинацию на соответствие стандартам региона (например, проверка контрольной суммы или формата региональных кодов). Только после успешной проверки информация отправляется на сервер или контроллер шлагбаума.</p>
+
+<p>Скорость обработки кадра в современных системах исчисляется миллисекундами. Это позволяет обслуживать потоки высокой интенсивности без образования очередей. Однако, если трафик движется со скоростью выше 80 км/ч, требования к частоте кадров камеры и вычислительной мощности сервера возрастают экспоненциально.</p>
+
+<details class="pb-accordion"><summary>Почему номера светятся в темноте?</summary><div class="pb-accordion-body"><p>На номерах используется световозвращающая пленка. При попадании ИК-лучей от камеры она отражает свет обратно в объектив, создавая эффект яркого свечения, в то время как фон остается темным.</p></div></details>
+
+<h2 id="аппаратные-компоненты-системы-anpr">Аппаратные компоненты системы ANPR</h2>
+
+<p>Качество распознавания на 70% зависит от правильно подобранного"железа". Центральным элементом является камера видеонаблюдения. Для задач ANPR обычные охранные камеры не подходят, так как они имеют слишком длинную выдержку, что приводит к смазыванию изображения движущегося объекта. Специализированные модели обладают функцией <strong>Global Shutter</strong>, которая позволяет считывать информацию с движущихся объектов без искажений.</p>
+
+<p>Оптика также играет решающую роль. Объектив должен иметь фиксированное фокусное расстояние, подобранное под конкретное расстояние до автомобиля. Варифокальные объективы используются реже, так как они требуют ручной настройки и могут сбиться от вибрации. Угол обзора камеры должен быть строго перпендикулярен плоскости номерного знака для минимизации перспективных искажений.</p>
+
+<ul>
+ <li>📷 <strong>Специализированные камеры:</strong> Модели с высокой светочувствительностью и встроенным анализатором.</li>
+ <li>💡 <em>ИК-прожекторы:</em> Освещение с длиной волны 850 нм или 940 нм для ночной съемки.</li>
+ <li>💻 <strong>Серверная часть:</strong> Вычислительные мощности для обработки видеоархива в реальном времени.</li>
+ <li>🔌 <strong>Контроллеры:</strong> Устройства, принимающие сигнал от ПО и открывающие шлагбаум.</li>
+</ul>
+
+<p>Отдельного внимания заслуживает система освещения. В пасмурную погоду или ночью естественного света недостаточно. Инфракрасные прожекторы должны быть синхронизированы с камерой. Использование видимого белого света на въездах часто нежелательно, так как он может слепить водителей, поэтому <em>инфракрасный спектр</em> является стандартом индустрии.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Размещайте камеру под углом не более 30 градусов к плоскости номерного знака. Прямой угол (90 градусов к оси движения) дает наилучший результат для чтения символов.</p></aside>
+
+<h2 id="программные-алгоритмы-и-искусственный-интеллект">Программные алгоритмы и искусственный интеллект</h2>
+
+<p>Если"железо" — это глаза системы, то программное обеспечение — это её мозг. Классические алгоритмы оптического распознавания символов (<strong>OCR</strong>) постепенно уступают место нейросетям. Нейросетевые модели обучаются на миллионах изображений и способны распознавать номера даже в сложных условиях: при наличии бликов, снега, частичного перекрытия или нестандартном шрифте.</p>
+
+<p>Современное ПО умеет не просто считывать текст, но и анализировать контекст. Например, система может игнорировать номера, нарисованные на стенах, или отличать рекламные наклейки от реальных государственных знаков. Алгоритмы глубокого обучения (<em>Deep Learning</em>) позволяют достигать точности распознавания выше 98-99% даже при скорости потока до 100 км/ч.</p>
+
+<p>Важной функцией является работа со списками доступа. Программный комплекс сравнивает распознанный номер с базой данных"своих" или"чужих". Время реакции системы на этом этапе должно быть минимальным, чтобы водитель не успел сдать назад или создать аварийную ситуацию. Задержки более 1-2 секунд считаются недопустимыми для интенсивного трафика.</p>
+
+<div class="pb-table-wrap"><table>
+ <thead>
+ <tr>
+ <th>Тип алгоритма</th>
+ <th>Точность в идеальных условиях</th>
+ <th>Точность при плохом свете</th>
+ <th>Скорость обработки</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td>Классический OCR</td>
+ <td>95-97%</td>
+ <td>60-70%</td>
+ <td>Высокая</td>
+ </tr>
+ <tr>
+ <td>Нейросети (CNN)</td>
+ <td>99%</td>
+ <td>92-95%</td>
+ <td>Средняя</td>
+ </tr>
+ <tr>
+ <td>Гибридные системы</td>
+ <td>99.5%</td>
+ <td>96-98%</td>
+ <td>Зависит от GPU</td>
+ </tr>
+ </tbody>
+</table></div>
+
+<p>Интеграция с внешними базами данных позволяет расширить функционал. Система может мгновенно сигнализировать охране, если номер автомобиля находится в розыскном списке. Также возможно ведение аналитики: подсчет уникальных посетителей, анализ времени пребывания на парковке и выявление закономерностей в трафике.</p>
+
+<div class="pb-poll" id="poll-78a3ecc5"><div class="pb-poll-question">📊 Что важнее для системы распознавания?</div><div class="pb-poll-option" data-poll="78a3ecc5" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Высокое разрешение камеры</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="78a3ecc5" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Мощный ИК-прожектор</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="78a3ecc5" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Современное ПО с ИИ</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="78a3ecc5" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Идеальный угол установки</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="факторы-влияющие-на-точность-распознавания">Факторы, влияющие на точность распознавания</h2>
+
+<p>Несмотря на развитие технологий, существуют физические ограничения, которые влияют на работу <strong>системы распознавания</strong>. Одним из главных врагов является погода. Сильный дождь, снегопад или густой туман рассеивают свет и снижают контрастность изображения. В таких условиях даже лучшие алгоритмы могут давать сбои.</p>
+
+<p>Состояние самого номерного знака также имеет значение. Загрязнение, выцветание краски, наличие рамок, перекрывающих края символов или региональный код, существенно затрудняют работу камеры. В некоторых случаях водители намеренно используют бликующие рамки или пленки, искажающие отражение ИК-лучей, что делает номер нечитаемым для автоматики.</p>
+
+<blockquote>
+<p>⚠️ <strong>Внимание:</strong> Использование специальных спреев или пленок, блокирующих ИК-излучение, является нарушением правил дорожного движения во многих jurisdictions и может повлечь штраф.</p>
+</blockquote>
+
+<p>Геометрия установки оборудования — еще один критический фактор. Если камера установлена слишком высоко или под острым углом, перспективное искажение сделает символы неузнаваемыми. Стандарты требуют, чтобы угол между оптической осью камеры и плоскостью номерного знака не превышал 30 градусов по горизонтали и вертикали.</p>
+
+<p>Скоростной режим также диктует свои требования. Для парковок, где машины движутся со скоростью 5-10 км/ч, достаточно стандартных камер. Для трассовых систем, фиксирующих скорости 100-140 км/ч, требуются скоростные камеры с очень коротким временем экспозиции, чтобы"заморозить" движение.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка условий установки</h4><label class="check-item"><input type="checkbox"><span>Оценка угла падения света</span></label><label class="check-item"><input type="checkbox"><span>Замер расстояния до стоп-линии</span></label><label class="check-item"><input type="checkbox"><span>Проверка наличия засветок от фар</span></label><label class="check-item"><input type="checkbox"><span>Анализ фоновой засветки</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<h2 id="сферы-применения-и-интеграция">Сферы применения и интеграция</h2>
+
+<p>Область применения систем ANPR (Automatic Number Plate Recognition) чрезвычайно широка. Наиболее очевидный сегмент — это платные парковки и парковочные пространства торговых центров. Здесь система работает в связке со шлагбаумом: камера считывает номер при въезде, открывает шлагбаум и фиксирует время. При выезде система рассчитывает стоимость пребывания и, после оплаты, снова дает команду на открытие.</p>
+
+<p>Городские системы безопасности используют эти технологии для поиска угнанных автомобилей и контроля соблюдения правил дорожного движения. Камеры, установленные на опорах освещения, в автоматическом режиме проверяют каждый проезжающий автомобиль по базе данных МВД. Это позволяет эффективно ловить нарушителей без участия инспекторов.</p>
+
+<p>В логистике и на промышленных предприятиях система распознавания номеров помогает автоматизировать учет рабочего времени и контроль доступа на территорию. <em>Система безопасности</em> предприятия может автоматически открывать ворота для транспорта поставщиков, занесенных в"белый список", и блокировать проезд для посторонних.</p>
+
+<ul>
+ <li>🏢 <strong>Бизнес-центры:</strong> Учет рабочего времени сотрудников и посетителей.</li>
+ <li>🛣️ <strong>Платные трассы:</strong> Система Free-flow, где оплата происходит без остановки.</li>
+ <li>🏭 <strong>Заводы:</strong> Контроль вывоза материальных ценностей.</li>
+ <li>🏘️ <strong>Жилые комплексы:</strong> Доступ резидентов и ограничение гостевого трафика.</li>
+</ul>
+
+<p>Интеграция с системами"Умный город" позволяет анализировать транспортные потоки и оптимизировать работу светофоров. Данные о количестве автомобилей и направлениях их движения помогают городским службам планировать ремонт дорог и расширение магистралей.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Главная ценность системы не в самом считывании номера, а в мгновенной реакции инфраструктуры (шлагбаума, светофора,) на полученную информацию.</p></aside>
+
+<h2 id="перспективы-развития-и-будущие-тренды">Перспективы развития и будущие тренды</h2>
+
+<p>Технологии не стоят на месте, и системы распознавания эволюционируют в сторону полной автономности. Будущее за облачными вычислениями, когда обработка видео происходит не на локальном сервере, а в облаке. Это снижает требования к оборудованию на местах и позволяет централизованно обновлять алгоритмы распознавания для всех камер сразу.</p>
+
+<p>Еще один тренд — распознавание без номерных знаков. Камеры с искусственным интеллектом уже учатся идентифицировать автомобиль по его уникальным признакам: цвету, модели, году выпуска, наличию багажника на крыше и даже индивидуальным повреждениям кузова. Это создает цифровой"отпечаток" автомобиля, который невозможно изменить простой помывкой или сменой номеров.</p>
+
+<p>Развивается и направление 5G. Высокая скорость передачи данных позволит передавать видео сверхвысокого разрешения в реальном времени, что повысит точность распознавания на больших расстояниях. Это особенно актуально для систем контроля скорости на трассах, где важно зафиксировать лицо водителя или детали груза.</p>
+
+<details>
+ <summary>Может ли система ошибиться и как это исправить?</summary>
+ <p>Да, ошибки возможны из-за грязи, бликов или нестандартного шрифта. В системах с оператором (парковки) ошибку можно исправить вручную. В автоматических системах (штрафы) существует процедура обжалования с предоставлением фото-доказательств.</p>
+</details>
+
+<details>
+ <summary>Работает ли распознавание ночью?</summary>
+ <p>Да, благодаря инфракрасной подсветке. ИК-лучи невидимы для человека, но отлично освещают световозвращающую поверхность номерного знака, делая его ярким на черно-белом изображении матрицы камеры.</p>
+</details>
+
+<details>
+ <summary>Какова минимальная скорость для распознавания?</summary>
+ <p>Системы работают и на стоянке, и на скорости. Специализированные трассовые комплексы уверенно считывают номера при скоростях до 250 км/ч и выше, в зависимости от модели камеры.</p>
+</details>
+
+<details>
+ <summary>Нужен ли интернет для работы системы?</summary>
+ <p>Не обязательно. Базовая функция открытия шлагбаума может работать в локальной сети (LAN). Интернет требуется только для удаленного мониторинга, передачи данных в центральную базу или облачной обработки.</p>
+</details>
+
+<details>
+ <summary>Влияет ли цвет машины на распознавание?</summary>
+ <p>Сам цвет кузова не влияет на чтение символов номера. Однако темные автомобили хуже видны камерам с функцией WDR (широкий динамический диапазон) в условиях контрастного света, что может косвенно повлиять на поиск номера в кадре.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/f/fa/fary-zapoteli-iznutri-chto-delat.html" class="pb-related-card">
+                <span class="pb-related-title">Фары запотели изнутри: причины и 10 способов устранить проблему</span>
+                <span class="pb-related-desc">Почему запотевают фары изнутри и что делать? Пошаговые инструкции, народные методы и профессиональны</span>
+            </a><a href="/articles/c/ch/chto-delat-esli-poteryal-edinstvennye-klyuchi-ot-mashiny.html" class="pb-related-card">
+                <span class="pb-related-title">Потерял единственные ключи от машины: пошаговый план действий</span>
+                <span class="pb-related-desc">Что делать, если потерял единственные ключи от авто? Разбор способов вскрытия, восстановления и изго</span>
+            </a><a href="/articles/c/ch/chto-takoe-v-magnitole-acc.html" class="pb-related-card">
+                <span class="pb-related-title">Что такое ACC в магнитоле: распиновка и подключение</span>
+                <span class="pb-related-desc">Узнайте, что такое провод ACC в автомобильной магнитоле, зачем он нужен и как правильно его подключи</span>
+            </a><a href="/articles/s/sa/samye-moshchnye-lampy-h4-galogenovye.html" class="pb-related-card">
+                <span class="pb-related-title">Самые мощные галогеновые лампы H4: ТОП-10 рейтинг 2026</span>
+                <span class="pb-related-desc">Обзор самых мощных галогеновых ламп H4. Рейтинг, характеристики, срок службы и влияние на проводку а</span>
+            </a><a href="/articles/v/vi/vidy-lamp-v-avtomobile.html" class="pb-related-card">
+                <span class="pb-related-title">Виды ламп в автомобиле: классификация, особенности и выбор</span>
+                <span class="pb-related-desc">Узнайте, какие лампы используются в автомобиле: галогеновые, ксеноновые, светодиодные и другие. Срав</span>
+            </a><a href="/articles/z/zn/znachok-podushki-bezopasnosti-na-paneli.html" class="pb-related-card">
+                <span class="pb-related-title">Значок подушки безопасности: причины и устранение</span>
+                <span class="pb-related-desc">Горит значок подушки безопасности? Разбираем причины, расшифровку кодов ошибок и методы диагностики </span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

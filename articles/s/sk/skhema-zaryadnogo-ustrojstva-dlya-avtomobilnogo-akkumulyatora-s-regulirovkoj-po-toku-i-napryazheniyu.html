@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Схема зарядного устройства для АКБ с регулировкой тока и напряжения — Авто Справочник</title>
+    <meta name="description" content="Полная схема самодельного зарядного устройства для автомобильного аккумулятора с регулировкой тока и напряжения. Пошаговая инструкция, компоненты, расчёты и меры безопасности.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/s/sk/skhema-zaryadnogo-ustrojstva-dlya-avtomobilnogo-akkumulyatora-s-regulirovkoj-po-toku-i-napryazheniyu.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Схема зарядного устройства для АКБ с регулировкой тока и напряжения">
+    <meta property="og:description" content="Полная схема самодельного зарядного устройства для автомобильного аккумулятора с регулировкой тока и напряжения. Пошаговая инструкция, компоненты, расчёты и меры безопасности.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Схема зарядного устройства для АКБ с регулировкой тока и напряжения</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#1-принцип-работы-и-требования-к-зарядному-устройству">1. Принцип работы и требования к зарядному устройству</a></li><li><a href="#2-компоненты-для-сборки-что-купить-и-где-экономить">2. Компоненты для сборки: что купить и где экономить</a></li><li><a href="#3-схема-на-тиристоре-простая-и-надёжная">3. Схема на тиристоре: простая и надёжная</a></li><li><a href="#4-схема-на-транзисторах-точная-регулировка-без-пульсаций">4. Схема на транзисторах: точная регулировка без пульсаций</a></li><li><a href="#5-схема-на-микроконтроллере-умное-зарядное-устройство">5. Схема на микроконтроллере: умное зарядное устройство</a></li><li><a href="#6-расчёт-компонентов-формулы-и-примеры">6. Расчёт компонентов: формулы и примеры</a></li><li><a href="#7-меры-безопасности-чего-нельзя-делать">7. Меры безопасности: чего нельзя делать</a></li><li><a href="#8-тестирование-и-калибровка-устройства">8. Тестирование и калибровка устройства</a></li><li><a href="#faq-частые-вопросы-и-ответы">FAQ: Частые вопросы и ответы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/a/as/as-chto-znachit-v-mashine.html">АС в машине: что значит, где находится и как работает</a></li><li><a href="/articles/a/as/asr-off-knopka-chto-eto-takoe.html">Кнопка ASR OFF в автомобиле: что это и когда отключать</a></li><li><a href="/articles/v/vy/vympel-57-kak-zaryazhat.html">Вымпел 57: как заряжать и обслуживать аккумулятор</a></li><li><a href="/articles/s/sv/svetodiodnye-lampochki-dlya-avtomobilya.html">Светодиодные лампочки для авто: как выбрать и установить правильно</a></li><li><a href="/articles/m/ma/massa-akkumulyatora-avtomobilya-plyus-ili-minus.html">Масса аккумулятора автомобиля: плюс или минус? Разбор</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Схема зарядного устройства для автомобильного аккумулятора с регулировкой тока и напряжения: подробное руководство</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#1-принцип-работы-и-требования-к-зарядному-устройству">1. Принцип работы и требования к зарядному устройству</a></li><li><a href="#2-компоненты-для-сборки-что-купить-и-где-экономить">2. Компоненты для сборки: что купить и где экономить</a></li><li><a href="#3-схема-на-тиристоре-простая-и-надёжная">3. Схема на тиристоре: простая и надёжная</a></li><li><a href="#4-схема-на-транзисторах-точная-регулировка-без-пульсаций">4. Схема на транзисторах: точная регулировка без пульсаций</a></li><li><a href="#5-схема-на-микроконтроллере-умное-зарядное-устройство">5. Схема на микроконтроллере: умное зарядное устройство</a></li><li><a href="#6-расчёт-компонентов-формулы-и-примеры">6. Расчёт компонентов: формулы и примеры</a></li><li><a href="#7-меры-безопасности-чего-нельзя-делать">7. Меры безопасности: чего нельзя делать</a></li><li><a href="#8-тестирование-и-калибровка-устройства">8. Тестирование и калибровка устройства</a></li><li><a href="#faq-частые-вопросы-и-ответы">FAQ: Частые вопросы и ответы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Автомобильный аккумулятор — это сердце электросистемы машины, и его правильная зарядка напрямую влияет на срок службы и надёжность запуска двигателя. Стандартные зарядные устройства из магазинов часто не учитывают индивидуальные особенности батареи, предлагая фиксированные режимы. <strong>Схема зарядного устройства с регулировкой тока и напряжения</strong> позволяет точно подстроить параметры под тип аккумулятора (AGM, гелевый, кальциевый) и его текущее состояние.</p>
+
+<p>Самодельное устройство не только экономит бюджет, но и даёт полный контроль над процессом. Например, для глубоко разряженной батареи требуется пониженное напряжение (около <strong>12.6 В</strong>) и малый ток (5-10% от ёмкости), тогда как для ускоренной зарядки можно кратковременно повысить ток до <strong>20% от ёмкости</strong>. В этой статье мы разберём <strong>3 рабочие схемы</strong> (на тиристорах, транзисторах и микроконтроллере), рассчитаем компоненты и укажем критические нюансы, которые игнорируют даже некоторые "профессиональные" схемы из интернета.</p>
+
+<p>⚠️ <strong>Предупреждение:</strong> Неправильно собранное зарядное устройство может вывести аккумулятор из строя за 1-2 цикла зарядки. Особенно опасно превышение напряжения выше <code>14.8 В</code> для кальциевых (Ca/Ca) батарей — это приводит к необратимой сульфатации пластин.</p>
+
+<h2 id="1-принцип-работы-и-требования-к-зарядному-устройству">1. Принцип работы и требования к зарядному устройству</h2>
+
+<p>Зарядка автомобильного аккумулятора — это не просто подача напряжения. Процесс делится на <strong>3 этапа</strong>:</p>
+<ul>
+  <li>🔋 <strong>Булькающий режим (десульфатация)</strong> — низкий ток (0.1-0.3С) при напряжении 12.6-13.2 В для восстановления кристаллизованного сульфата свинца.</li>
+  <li>⚡ <strong>Основной заряд</strong> — ток до 10-20% от ёмкости (например, 6 А для 60А·ч батареи) при напряжении 14.4-14.8 В.</li>
+  <li>🛡️ <strong>Дозарядка (абсорбция)</strong> — поддержание напряжения 13.8-14.2 В с постепенным снижением тока до 0.01С.</li>
+</ul>
+
+<p>Ключевые параметры, которые должна обеспечивать схема:</p>
+<ul>
+  <li>📊 <strong>Регулировка тока</strong> от 0.5 до 20 А (в зависимости от ёмкости АКБ).</li>
+  <li>📈 <strong>Стабилизация напряжения</strong> с точностью ±0.1 В в диапазоне 12-16 В.</li>
+  <li>🔄 <strong>Автоматическое отключение</strong> при достижении полного заряда (ток < 0.5 А).</li>
+  <li>🛑 <strong>Защита</strong> от короткого замыкания, переполюсовки и перегрева.</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Многие самодельные схемы из интернета используют упрощённые решения на <em>LM317</em> или <em>TL431</em>, которые не обеспечивают плавную регулировку тока при изменении напряжения. Это приводит к "пульсирующей" зарядке, сокращающей ресурс АКБ на 30-40%.</p>
+
+<div class="pb-poll" id="poll-0e7b8595"><div class="pb-poll-question">📊 Какой тип аккумулятора у вас установлен?</div><div class="pb-poll-option" data-poll="0e7b8595" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Свинцово-кислотный (обычный)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0e7b8595" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">AGM</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0e7b8595" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Гелевый (GEL)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0e7b8595" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Кальциевый (Ca/Ca)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="0e7b8595" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Не знаю</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="2-компоненты-для-сборки-что-купить-и-где-экономить">2. Компоненты для сборки: что купить и где экономить</h2>
+
+<p>Для сборки зарядного устройства с регулировкой понадобятся следующие компоненты (цены актуальны на 2026 год):</p>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Компонент</th>
+      <th>Характеристики</th>
+      <th>Примерная цена, ₽</th>
+      <th>Где купить</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Трансформатор</td>
+      <td>200-300 Вт, 18-24 В на вторичной обмотке</td>
+      <td>800-1500</td>
+      <td><em>AliExpress</em>, радиорынки</td>
+    </tr>
+    <tr>
+      <td>Тиристор <em>BT151</em> или <em>TIC226</em></td>
+      <td>Ток ≥16 А, напряжение ≥400 В</td>
+      <td>150-300</td>
+      <td><em>Chip-Dip</em>, <em>РадиоЛоцман</em></td>
+    </tr>
+    <tr>
+      <td>Микросхема <em>LM358</em> или <em>TL082</em></td>
+      <td>Двойной операционный усилитель</td>
+      <td>50-120</td>
+      <td>Любой радиомагазин</td>
+    </tr>
+    <tr>
+      <td>Резисторы и потенциометры</td>
+      <td>10 кОм (для тока), 1 кОм (для напряжения)</td>
+      <td>20-50</td>
+      <td>Наборы на <em>AliExpress</em></td>
+    </tr>
+    <tr>
+      <td>Диодный мост</td>
+      <td>30-50 А (например, <em>KBPC5010</em>)</td>
+      <td>200-400</td>
+      <td><em>Chip-Dip</em>, <em>Авито</em></td>
+    </tr>
+  </tbody>
+</table></div>
+
+<p>Где можно сэкономить без потери качества:</p>
+<ul>
+  <li>💰 <strong>Трансформатор</strong>: вместо нового берите б/у от старых ИБП (<em>UPS</em>) или микроволновок (перематывайте вторичную обмотку).</li>
+  <li>🔧 <strong>Корпус</strong>: используйте пластиковый бокс от старого блока питания ПК.</li>
+  <li>📉 <strong>Индикаторы</strong>: вместо дорогого амперметра/вольтметра подключите дешёвые китайские модули на <em>TM1637</em> (200-300 ₽).</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Не используйте трансформаторы от советских телевизоров (<em>ТС-180</em>) — их обмотки не рассчитаны на длительную работу с высокими токами, и они перегреваются уже через 20-30 минут.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Перед покупкой тиристора проверьте его маркировку на корпусе. Подделки под <em>BT151</em> часто имеют ток не 16 А, а 8-10 А, что приведёт к пробою при зарядке АКБ ёмкостью выше 70А·ч.</p></aside>
+
+<h2 id="3-схема-на-тиристоре-простая-и-надёжная">3. Схема на тиристоре: простая и надёжная</h2>
+
+<p>Эта схема подходит для новичков, так как не требует программирования и содержит минимальное количество компонентов. Принцип работы основан на фазовом управлении тиристором, который регулирует среднее значение тока через первичную обмотку трансформатора.</p>
+
+<p><strong>Преимущества:</strong></p>
+<ul>
+  <li>✅ Простота настройки — регулировка тока и напряжения отдельными потенциометрами.</li>
+  <li>✅ Высокая надёжность — тиристоры выдерживают кратковременные перегрузки.</li>
+  <li>✅ Низкая стоимость — все компоненты обойдутся в 1000-1500 ₽.</li>
+</ul>
+
+<p><strong>Недостатки:</strong></p>
+<ul>
+  <li>❌ Пульсации тока (до 10-15%) — не подходит для гелевых АКБ.</li>
+  <li>❌ Низкий КПД (60-70%) из-за потерь на тиристоре.</li>
+</ul>
+
+<p>Схема включает:</p>
+<ol>
+  <li>Понижающий трансформатор <code>220В → 18-24В</code>.</li>
+  <li>Диодный мост на <em>50А</em> для выпрямления.</li>
+  <li>Тиристор <em>BT151</em> в цепи первичной обмотки.</li>
+  <li>Операционный усилитель <em>LM358</em> для управления углом открытия тиристора.</li>
+  <li>Потенциометры для регулировки тока (<code>R1</code>) и напряжения (<code>R2</code>).</li>
+</ol>
+
+<p><mark>Критичный нюанс: для стабильной работы тиристора необходимо установить снабберную цепь (резистор 100 Ом + конденсатор 0.1 мкФ) параллельно тиристору. Без неё возможны ложные срабатывания и пробой.</mark></p>
+
+<details class="pb-accordion"><summary>Подробная схема в формате PDF</summary><div class="pb-accordion-body"><p>Скачать схему (1.2 МБ) с точными номиналами резисторов и конденсаторов для тиристорного ЗУ.</p></div></details>
+
+<h2 id="4-схема-на-транзисторах-точная-регулировка-без-пульсаций">4. Схема на транзисторах: точная регулировка без пульсаций</h2>
+
+<p>Если вам нужно зарядное устройство для чувствительных <em>AGM</em> или <em>гелевых</em> аккумуляторов, транзисторная схема — оптимальный выбор. Она обеспечивает плавную регулировку тока без пульсаций (менее 1%) и точное поддержание напряжения.</p>
+
+<p><strong>Ключевые элементы схемы:</strong></p>
+<ul>
+  <li>🔄 <strong>Регулируемый стабилизатор</strong> на <em>LM317</em> (для напряжения) и <em>TIP35C</em> (для тока).</li>
+  <li>📉 <strong>Операционный усилитель</strong> <em>TL082</em> для сравнения опорного напряжения с реальным.</li>
+  <li>🔋 <strong>Шунт</strong> (резистор 0.1 Ом, 10 Вт) для измерения тока.</li>
+</ul>
+
+<p>Преимущества перед тиристорной схемой:</p>
+<ul>
+  <li>📊 Точность поддержания напряжения: ±0.05 В (против ±0.2 В у тиристорной).</li>
+  <li>🔇 Отсутствие акустического шума (тиристоры часто "пищат" на высоких токах).</li>
+  <li>🛡️ Встроенная защита от короткого замыкания за счёт ограничения тока на <em>TIP35C</em>.</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> При сборке транзисторной схемы обязательно используйте радиаторы для <em>LM317</em> и <em>TIP35C</em>. Без охлаждения они перегреваются уже при токах выше 5 А, что приводит к тепловому пробою.</p>
+
+
+<p>Убедиться в правильности полярности подключения АКБ|Проверить номиналы резисторов мультиметром|Подключить временную нагрузку (лампу 12В 21Вт) вместо АКБ|Измерить напряжение холостого хода (должно быть 13.8-14.2 В)|Плавно увеличить ток и следить за нагревом транзисторов--></p>
+
+<h2 id="5-схема-на-микроконтроллере-умное-зарядное-устройство">5. Схема на микроконтроллере: умное зарядное устройство</h2>
+
+<p>Для тех, кто не боится паяльника и кода, лучший вариант — зарядное устройство на <em>Arduino</em> или <em>STM32</em>. Оно позволяет реализовать:</p>
+<ul>
+  <li>📊 <strong>Многоступенчатый алгоритм зарядки</strong> (десульфатация → основной заряд → абсорбция → хранение).</li>
+  <li>📱 <strong>Управление через Bluetooth</strong> (мониторинг тока/напряжения в реальном времени).</li>
+  <li>🔋 <strong>Автоматическое определение типа АКБ</strong> (по кривой разряда).</li>
+  <li>🛡️ <strong>Журналирование</strong> параметров зарядки (полезно для диагностики батареи).</li>
+</ul>
+
+<p><strong>Необходимые компоненты:</strong></p>
+<ul>
+  <li>🤖 Плата <em>Arduino Nano</em> или <em>STM32 Blue Pill</em>.</li>
+  <li>📈 Модуль <em>ACS712</em> (для измерения тока до 20 А).</li>
+  <li>🔌 Модуль реле <em>5V 10A</em> для отключения нагрузки.</li>
+  <li>📟 Дисплей <em>OLED 128x64</em> или <em>LCD 1602</em>.</li>
+</ul>
+
+<p>Пример кода для <em>Arduino</em> (упрощённая версия):</p>
+<pre><code>#include <LiquidCrystal_I2C.h>
+<p>LiquidCrystal_I2C lcd(0x27, 16, 2);</p>
+
+<p>float voltage = 0;</p>
+<p>float current = 0;</p>
+<p>float setVoltage = 14.4; // Уставка напряжения</p>
+<p>float setCurrent = 5.0;   // Уставка тока (А)</p>
+
+<p>void setup() {</p>
+<p>lcd.init();</p>
+<p>lcd.backlight();</p>
+<p>pinMode(A0, INPUT); // Напряжение АКБ</p>
+<p>pinMode(A1, INPUT); // Ток (ACS712)</p>
+<p>pinMode(9, OUTPUT);  // PWM-регулировка</p>
+<p>}</p>
+
+<p>void loop() {</p>
+<p>voltage = analogRead(A0) * 0.0185; // Калибровка под ваш делитель</p>
+<p>current = (analogRead(A1) - 512) * 0.1; // Калибровка ACS712</p>
+
+<p>// PID-регулятор (упрощённо)</p>
+<p>int pwmValue = map(current, 0, setCurrent, 0, 255);</p>
+<p>analogWrite(9, pwmValue);</p>
+
+<p>lcd.setCursor(0, 0);</p>
+<p>lcd.print("U:");</p>
+<p>lcd.print(voltage, 1);</p>
+<p>lcd.print("V");</p>
+
+<p>lcd.setCursor(0, 1);</p>
+<p>lcd.print("I:");</p>
+<p>lcd.print(current, 1);</p>
+<p>lcd.print("A");</p>
+
+<p>delay(200);</p>
+<p>}</code></pre></p>
+
+<p>⚠️ <strong>Внимание:</strong> При использовании <em>ACS712</em> обязательно калибруйте его под вашу схему! Стандартная формула <code>(analogRead - 512) * 0.1</code> даёт погрешность до 15%. Для точности измерьте реальный ток клещами и подберите коэффициент.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Микроконтроллерная схема требует настройки PID-регулятора. Без него устройство будет "раскачиваться" — ток и напряжение будут колебаться с амплитудой до 20% от уставки.</p></aside>
+
+<h2 id="6-расчёт-компонентов-формулы-и-примеры">6. Расчёт компонентов: формулы и примеры</h2>
+
+<p>Чтобы схема работала корректно, необходимо правильно рассчитать номиналы резисторов, конденсаторов и трансформатора. Вот ключевые формулы:</p>
+
+<p><strong>1. Трансформатор:</strong></p>
+<p>Мощность трансформатора (<em>P<sub>тр</sub></em>) должна быть на 30-50% больше максимальной мощности зарядки:</p>
+<p><code>P<sub>тр</sub> = U<sub>заряда</sub> × I<sub>max</sub> × 1.5</code></p>
+<p>Пример: для АКБ 60А·ч с током 6 А и напряжением 14.4 В:</p>
+<p><code>P<sub>тр</sub> = 14.4 × 6 × 1.5 = 129.6 Вт</code> → выбираем трансформатор на 150-200 Вт.</p>
+
+<p><strong>2. Диодный мост:</strong></p>
+<p>Ток диодного моста (<em>I<sub>диод</sub></em>) должен быть в 2 раза больше максимального тока зарядки:</p>
+<p><code>I<sub>диод</sub> = I<sub>max</sub> × 2</code></p>
+<p>Для 6 А → нужен мост на <code>12 А</code> (например, <em>KBPC2510</em>).</p>
+
+<p><strong>3. Резисторы для LM317:</strong></p>
+<p>Номинал резистора <code>R1</code> (между <em>OUT</em> и <em>ADJ</em>) рассчитывается по формуле:</p>
+<p><code>R1 = 1.25 / I<sub>min</sub></code>, где <code>I<sub>min</sub></code> — минимальный ток стабилизатора (обычно 5 мА).</p>
+<p>Пример: <code>R1 = 1.25 / 0.005 = 250 Ом</code>.</p>
+
+<p><strong>4. Шунт для измерения тока:</strong></p>
+<p>Сопротивление шунта (<em>R<sub>шунт</sub></em>) подбирается под максимальный ток и напряжение АЦП микроконтроллера:</p>
+<p><code>R<sub>шунт</sub> = 0.1 / I<sub>max</sub></code> (для падения 0.1 В при максимальном токе).</p>
+<p>Для 10 А: <code>R<sub>шунт</sub> = 0.1 / 10 = 0.01 Ом</code> (10 мОм).</p>
+
+<p>⚠️ <strong>Внимание:</strong> При расчёте шунта учитывайте его мощность! Для тока 10 А и сопротивления 0.01 Ом рассеиваемая мощность составит <code>P = I² × R = 100 × 0.01 = 1 Вт</code>. Берите шунт на 5-10 Вт!</p>
+
+<h2 id="7-меры-безопасности-чего-нельзя-делать">7. Меры безопасности: чего нельзя делать</h2>
+
+<p>Ошибки при сборке и эксплуатации зарядного устройства могут привести к:</p>
+<ul>
+  <li>🔥 <strong>Пожару</strong> (из-за короткого замыкания или перегрева компонентов).</li>
+  <li>💥 <strong>Взрыву АКБ</strong> (при превышении напряжения выше 15.5 В).</li>
+  <li>⚡ <strong>Поражению электрическим током</strong> (220 В на первичной обмотке!).</li>
+</ul>
+
+<p><strong>Запрещёно:</strong></p>
+<ul>
+  <li>🚫 Подключать АКБ к зарядному устройству при работающем двигателе (риск скачка напряжения до 16-18 В).</li>
+  <li>🚫 Использовать провода сечением менее 2.5 мм² (для токов выше 5 А).</li>
+  <li>🚫 Заряжать замёрзший аккумулятор (при температуре ниже 0°C сначала прогрейте его до +10°C).</li>
+  <li>🚫 Оставлять зарядное устройство без присмотра на время более 4 часов (риск перезарядки).</li>
+</ul>
+
+<p><strong>Обязательно:</strong></p>
+<ul>
+  <li>✅ Установите предохранитель на <code>+</code> вывод АКБ (номинал на 20% выше максимального тока).</li>
+  <li>✅ Используйте диод на выходе зарядного устройства (например, <em>1N5408</em>) для защиты от обратного тока.</li>
+  <li>✅ Проверяйте полярность перед подключением — переполюсовка убивает АКБ за 1-2 минуты.</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Если вы чувствуете запах серы или видите пузырьки газа в электролите — немедленно отключите зарядное! Это признак перезарядки, которая ведёт к разрушению пластин.</p>
+
+<h2 id="8-тестирование-и-калибровка-устройства">8. Тестирование и калибровка устройства</h2>
+
+<p>После сборки схему необходимо протестировать и откалибровать. Порядок действий:</p>
+
+<p><strong>1. Проверка холостого хода:</strong></p>
+<ul>
+  <li>Подключите вольтметр к выходным клеммам <strong>без нагрузки</strong>.</li>
+  <li>Напряжение должно быть в пределах <code>13.8-14.2 В</code> (для свинцово-кислотных АКБ).</li>
+  <li>Если напряжение выше 15 В — проверьте цепь обратной связи (возможно, неверный номинал резистора).</li>
+</ul>
+
+<p><strong>2. Тест под нагрузкой:</strong></p>
+<ul>
+  <li>Подключите автомобильную лампу <code>12В 55Вт</code> (ток ~4.5 А).</li>
+  <li>Измерьте ток и напряжение под нагрузкой.</li>
+  <li>Если ток ниже расчётного — увеличьте напряжение трансформатора или проверьте диодный мост.</li>
+</ul>
+
+<p><strong>3. Калибровка амперметра/вольтметра:</strong></p>
+<ul>
+  <li>Сравните показания встроенных приборов с эталонами (мультиметром <em>Fluke</em> или <em>Mastech</em>).</li>
+  <li>При расхождении более 5% подстройте потенциометры или скорректируйте код (для микроконтроллерной схемы).</li>
+</ul>
+
+<p><strong>4. Тест на реальном АКБ:</strong></p>
+<ul>
+  <li>Подключите разряженный аккумулятор (напряжение 11.5-12.0 В).</li>
+  <li>Установите ток <code>0.1 × C</code> (например, 6 А для 60А·ч).</li>
+  <li>Следите за напряжением — оно должно плавно расти до 14.4 В за 4-6 часов.</li>
+</ul>
+
+<p>⚠️ <strong>Внимание:</strong> Если при тесте на АКБ ток падает до нуля через 10-15 минут — проверьте цепь стабилизации. Возможные причины: неисправен операционный усилитель, пробой транзистора или обрыв в шунте.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Калибровку схемы на микроконтроллере удобно проводить через <em>Serial Monitor</em> в <em>Arduino IDE</em>, отправляя команды вида <code>setV 14.4</code> или <code>setI 5.0</code>.</p></aside>
+
+<h2 id="faq-частые-вопросы-и-ответы">FAQ: Частые вопросы и ответы</h2>
+
+<details>
+  <summary>🔋 Какой ток зарядки выбрать для АКБ 60А·ч?</summary>
+  <p>Оптимальный ток — <strong>6 А</strong> (10% от ёмкости). Для ускоренной зарядки можно увеличить до <code>12 А</code> (20%), но не более чем на 1-2 часа. Длительная зарядка высоким током сокращает ресурс батареи.</p>
+</details>
+
+<details>
+  <summary>📉 Почему напряжение на выходе зарядного устройства "прыгает"?</summary>
+  <p>Причины пульсаций:</p>
+  <ul>
+    <li>🔌 Нестабильное сетевое напряжение (решение: подключите через стабилизатор).</li>
+    <li>🔄 Плохая фильтрация после диодного моста (добавьте конденсатор <code>10000 мкФ × 25 В</code>).</li>
+    <li>📊 Неправильная настройка PID-регулятора (уменьшите коэффициент <code>Kd</code>).</li>
+  </ul>
+</details>
+
+<details>
+  <summary>⚡ Можно ли заряжать гелевый аккумулятор самодельным ЗУ?</summary>
+  <p>Да, но с оговорками:</p>
+  <ul>
+    <li>📊 Максимальное напряжение: <code>14.1 В</code> (против 14.8 В для обычных АКБ).</li>
+    <li>📉 Ток зарядки: не более <code>0.2 × C</code> (например, 12 А для 60А·ч).</li>
+    <li>🛡️ Обязательна температура компенсация: при +30°C снижайте напряжение на 0.1 В.</li>
+  </ul>
+  <p>Используйте <strong>транзисторную схему</strong> — она обеспечивает минимальные пульсации тока.</p>
+</details>
+
+<details>
+  <summary>🔌 Как модифицировать схему для зарядки 24В аккумуляторов?</summary>
+  <p>Необходимые изменения:</p>
+  <ul>
+    <li>🔄 Замените трансформатор на модель с вторичной обмоткой <code>30-36 В</code>.</li>
+    <li>📈 Увеличьте номиналы конденсаторов фильтра до <code>22000 мкФ × 35 В</code>.</li>
+    <li>🔋 Пересчитайте резисторы обратной связи под удвоенное напряжение.</li>
+    <li>🛡️ Используйте диодный мост на <code>30-50 А</code> (например, <em>KBPC5010</em>).</li>
+  </ul>
+  <p>⚠️ <strong>Внимание:</strong> При работе с 24В системами <strong>все компоненты должны быть рассчитаны на напряжение ≥40 В</strong> (с запасом)!</p>
+</details>
+
+<details>
+  <summary>🛠️ Что делать, если схема не работает?</summary>
+  <p>Алгоритм диагностики:</p>
+  <ol>
+    <li>Проверьте наличие <code>220В</code> на первичной обмотке трансформатора.</li>
+    <li>Измерьте напряжение на вторичной обмотке (должно быть <code>18-24В</code>).</li>
+    <li>Прозвоните диодный мост — все диоды должны проводить ток в одном направлении.</li>
+    <li>Проверьте питание операционного усилителя (<code>+12В</code> и <code>-12В</code> или <code>0В</code>).</li>
+    <li>Убедитесь, что тиристор/транзистор открывается (проверьте осциллографом или логическим пробником).</li>
+  </ol>
+  <p>Если проблема не найдена — соберите схему на макетной плате по частям, проверяя каждый каскад отдельно.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/a/as/as-chto-znachit-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">АС в машине: что значит, где находится и как работает</span>
+                <span class="pb-related-desc">Узнайте, что такое АС в автомобиле. Подробный разбор системы, её назначение, типы (климат, звук) и с</span>
+            </a><a href="/articles/a/as/asr-off-knopka-chto-eto-takoe.html" class="pb-related-card">
+                <span class="pb-related-title">Кнопка ASR OFF в автомобиле: что это и когда отключать</span>
+                <span class="pb-related-desc">Подробный разбор функции ASR OFF в авто. Зачем нужна система, когда её отключать и как это влияет на</span>
+            </a><a href="/articles/v/vy/vympel-57-kak-zaryazhat.html" class="pb-related-card">
+                <span class="pb-related-title">Вымпел 57: как заряжать и обслуживать аккумулятор</span>
+                <span class="pb-related-desc">Подробная инструкция: как заряжать Вымпел 57, расшифровка индикаторов, выбор режима для AGM и GEL ба</span>
+            </a><a href="/articles/s/sv/svetodiodnye-lampochki-dlya-avtomobilya.html" class="pb-related-card">
+                <span class="pb-related-title">Светодиодные лампочки для авто: как выбрать и установить правильно</span>
+                <span class="pb-related-desc">Подробный гайд по выбору LED-ламп для автомобиля: типы, цоколи, яркость, легальность и пошаговая инс</span>
+            </a><a href="/articles/m/ma/massa-akkumulyatora-avtomobilya-plyus-ili-minus.html" class="pb-related-card">
+                <span class="pb-related-title">Масса аккумулятора автомобиля: плюс или минус? Разбор</span>
+                <span class="pb-related-desc">Весит ли плюсовая клемма больше минусовой? Разбираем мифы, реальную массу АКБ и влияние полярности н</span>
+            </a><a href="/articles/c/ch/chto-takoe-elektrokorrektor-far.html" class="pb-related-card">
+                <span class="pb-related-title">Электрокорректор фар: что это, как работает и зачем нужен в машине</span>
+                <span class="pb-related-desc">Разбираемся, что такое электрокорректор фар, как он устроен, какие виды бывают и как правильно им по</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

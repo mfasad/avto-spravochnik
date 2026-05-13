@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как найти деталь по VIN-коду автомобиля: полное руководство — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как точно подобрать запчасть по VIN-коду. Разбор каталогов, декодеров и проверка совместимости деталей для ремонта авто.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-najti-detal-po-vin-kodu-avtomobilya.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как найти деталь по VIN-коду автомобиля: полное руководство">
+    <meta property="og:description" content="Узнайте, как точно подобрать запчасть по VIN-коду. Разбор каталогов, декодеров и проверка совместимости деталей для ремонта авто.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/dvigatel-i-to/">Двигатель и ТО</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как найти деталь по VIN-коду автомобиля: полное руководство</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-vin-код-и-зачем-он-нужен-для-поиска">Что такое VIN-код и зачем он нужен для поиска</a></li><li><a href="#где-найти-vin-код-на-автомобиле">Где найти VIN-код на автомобиле</a></li><li><a href="#онлайн-каталоги-и-декодеры-как-ими-пользоваться">Онлайн-каталоги и декодеры: как ими пользоваться</a></li><li><a href="#сравнение-методов-дилерский-центр-против-интернет-магазинов">Сравнение методов: дилерский центр против интернет-магазинов</a></li><li><a href="#оригинал-или-аналог-что-выбрать-по-vin">Оригинал или аналог: что выбрать по VIN</a></li><li><a href="#типичные-ошибки-при-подборе-запчастей">Типичные ошибки при подборе запчастей</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-chasto-nuzhno-delat-to.html">Как часто нужно делать ТО автомобиля: интервалы и регламенты</a></li><li><a href="/articles/m/me/mekhanicheskaya-kpp-printsip-raboty.html">Механическая КПП: принцип работы, устройство и диагностика</a></li><li><a href="/articles/h/ho/hold-perevod-na-russkij-yazyk-s-anglijskogo-v-mashine.html">Hold на АКПП: что это значит и как пользоваться</a></li><li><a href="/articles/n/na/na-skolko-rasschitany-svechi-zazhiganiya.html">Срок службы свечей зажигания: когда менять и как проверить?</a></li><li><a href="/articles/r/ro/roliki-v-mashine-chto-eto.html">Ролики в машине: что это такое и зачем нужны</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как найти деталь по VIN-коду автомобиля</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-vin-код-и-зачем-он-нужен-для-поиска">Что такое VIN-код и зачем он нужен для поиска</a></li><li><a href="#где-найти-vin-код-на-автомобиле">Где найти VIN-код на автомобиле</a></li><li><a href="#онлайн-каталоги-и-декодеры-как-ими-пользоваться">Онлайн-каталоги и декодеры: как ими пользоваться</a></li><li><a href="#сравнение-методов-дилерский-центр-против-интернет-магазинов">Сравнение методов: дилерский центр против интернет-магазинов</a></li><li><a href="#оригинал-или-аналог-что-выбрать-по-vin">Оригинал или аналог: что выбрать по VIN</a></li><li><a href="#типичные-ошибки-при-подборе-запчастей">Типичные ошибки при подборе запчастей</a></li><li><a href="#faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Поиск автозапчастей часто превращается в лотерею, особенно когда речь идет о сложных технических узлах или кузовных элементах. Ошибка при выборе даже небольшой втулки может привести к дорогостоящему ремонту или повторной разборке агрегата. Именно поэтому опытные механики и владельцы автомобилей всегда начинают поиск с <strong>VIN-кода</strong>, который является уникальным цифровым паспортом машины.</p>
+
+<p>Использование заводского номера кузова позволяет исключить человеческий фактор и исключить вероятность покупки несовместимой детали. В этой статье мы разберем, где искать информацию, как расшифровывать данные и почему каталоги разных производителей могут показывать разные результаты для одной и той же модели.</p>
+
+<h2 id="что-такое-vin-код-и-зачем-он-нужен-для-поиска">Что такое VIN-код и зачем он нужен для поиска</h2>
+
+<p>Аббревиатура <strong>VIN</strong> (Vehicle Identification Number) обозначает уникальный идентификационный номер транспортного средства. Это не просто набор случайных цифр, а структурированная строка из 17 символов, в которой закодирована информация о заводе-изготовителе, годе выпуска, типе кузова и, что самое важное для нас, <strong>комплектации</strong> автомобиля.</p>
+
+<p>Многие автолюбители ошибочно полагают, что достаточно знать модель и год выпуска машины. Однако в рамках одного модельного года производитель мог выпустить тысячи модификаций с разными двигателями, трансмиссиями и наборами опций. <em>VIN-код</em> позволяет идентифицировать конкретный экземпляр, собранный на конвейере.</p>
+
+<p>При поиске запчастей этот код служит ключом к заводским каталогам. Он помогает определить точные <strong>артикулы</strong> деталей, которые устанавливались на конвейере. Это особенно актуально для современных автомобилей, насыщенных электроникой, где даже одинаковые внешне датчики могут иметь разное программное обеспечение или распиновку.</p>
+
+<blockquote>
+<p>⚠️ Внимание! Никогда не полагайтесь только на визуальное сходство старой и новой детали. В современных автомобилях внешнее сходство часто обманчиво, и единственной гарантией совместимости является проверка по заводскому номеру кузова.</p>
+</blockquote>
+
+<p>Таким образом, использование VIN-кода — это не прихоть, а необходимая мера предосторожности. Она экономит время, деньги и нервы, позволяя сразу заказать именно то, что нужно вашему автомобилю, без лишних примерок и возвратов.</p>
+
+<h2 id="где-найти-vin-код-на-автомобиле">Где найти VIN-код на автомобиле</h2>
+
+<p>Прежде чем приступать к поиску, необходимо locate сам номер. На большинстве автомобилей он расположен в нескольких местах для удобства проверки и безопасности. Самый очевидный вариант — посмотреть в <strong>свидетельство о регистрации</strong> (СТС) или паспорт транспортного средства (ПТС).</p>
+
+<p>Если документы недоступны, номер можно найти на самом кузове. Традиционное место для европейских и американских авто — площадка под лобовым стеклом со стороны водителя. Также часто встречается маркировка на <strong>стойке кузова</strong> (обычно центральной или передней двери) в нижней её части, скрытая за уплотнителем.</p>
+
+<ul>
+<li>🚗 Под капотом: часто выбит на перегородке моторного отсека или на стакане амортизатора.</li>
+<li>📄 В документах: СТС, ПТС, страховой полис и сервисная книжка.</li>
+<li>🔍 На раме: для рамных внедорожников и грузовиков номер часто дублируется на лонжероне рамы.</li>
+<li>📱 В электронике: на некоторых современных авто VIN можно считать через диагностический сканер, подключившись к OBDII разъему.</li>
+</ul>
+
+<p>Важно учитывать, что на автомобилях разных марок расположение может отличаться. Например, у <em>BMW</em> и <em>Mercedes</em> номер часто продублирован под ковриком в багажнике или под задним сиденьем. У японских марок, таких как <em>Toyota</em> или <em>Nissan</em>, табличка с VIN и информацией о допустимых нагрузках обычно расположена на центральной стойке.</p>
+
+<p>При считывании номера будьте внимательны: символы <strong>O</strong> (латинская) и <strong>Q</strong> не используются в VIN-кодах во избежание путаницы с цифрами 0 и 1. Если вы видите эти буквы, возможно, вы неправильно интерпретировали символ или перед вами подделка.</p>
+
+<div class="pb-poll" id="poll-1ec2d491"><div class="pb-poll-question">📊 Где вы чаще всего ищете VIN-код?</div><div class="pb-poll-option" data-poll="1ec2d491" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">В документах (ПТС/СТС)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1ec2d491" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Под лобовым стеклом</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1ec2d491" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">На центральной стойке</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="1ec2d491" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Через диагностический сканер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="онлайн-каталоги-и-декодеры-как-ими-пользоваться">Онлайн-каталоги и декодеры: как ими пользоваться</h2>
+
+<p>Существует множество способов расшифровать VIN и найти нужную деталь. Самый надежный путь — использование официальных или профессиональных онлайн-каталогов, таких как <em>Elcats</em>, <em>Exist</em>, <em>AutoDoc</em> или дилерских порталов (ETKA для VAG, Fast для Toyota). Эти системы содержат актуальные <strong>схемы узлов</strong> и агрегатов.</p>
+
+<p>Процесс поиска обычно выглядит следующим образом: вы вводите VIN-код в поисковую строку, система определяет автомобиль и предлагает разбивку по узлам (двигатель, кузов, электрика). Выбрав нужный узел, вы видите <strong>схематический чертеж</strong> с пронумерованными деталями.</p>
+
+<p>Каждому номеру на схеме соответствует артикул запчасти. Однако здесь кроется важный нюанс: каталог может показывать несколько вариантов одной и той же детали. Это зависит от даты производства автомобиля или страны назначения.</p>
+
+<details class="pb-accordion"><summary>Почему каталог показывает несколько вариантов одной детали?</summary><div class="pb-accordion-body"><p>Производители часто вносят изменения в конструкцию в ходе жизненного цикла модели. Например, до определенного месяца выпуска могли стоять одни генераторы, а после — другие, с измененным креплением. Поэтому важно сверять дату производства авто с периодом применимости детали в каталоге.</p></div></details>
+
+<p>При работе с каталогами обращайте внимание на графу "Примечание" или "Комментарий". Там может быть указано, что деталь устанавливалась только в комплектации с <strong>климат-контролем</strong> или определенным типом коробки передач.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Проверка детали в каталоге</h4><label class="check-item"><input type="checkbox"><span>Ввести VIN-код</span></label><label class="check-item"><input type="checkbox"><span>Выбрать нужный узел на схеме</span></label><label class="check-item"><input type="checkbox"><span>Найти номер детали</span></label><label class="check-item"><input type="checkbox"><span>Проверить период выпуска</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в отсутствии замененных артикулов</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<h2 id="сравнение-методов-дилерский-центр-против-интернет-магазинов">Сравнение методов: дилерский центр против интернет-магазинов</h2>
+
+<p>Где лучше искать запчасти: у официального дилера или в онлайн-магазине? У каждого метода есть свои преимущества и недостатки, которые влияют на итоговую стоимость и скорость получения детали.</p>
+
+<p>Обращение к <strong>официальному дилеру</strong> гарантирует 100% совместимость, так как менеджеры используют заводское ПО. Однако цены здесь часто выше рыночных, а срок ожидания оригинальных запчастей может составлять от нескольких недель до месяцев, особенно для редких моделей.</p>
+
+<p>Интернет-магазины и специализированные сайты предлагают более гибкие условия. Здесь можно найти как оригинал, так и качественные <strong>аналоги</strong> (заменители). Скорость доставки часто выше, а интерфейс сайтов позволяет самостоятельно провести глубокий анализ.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Критерий</th>
+<th>Официальный дилер</th>
+<th>Онлайн-магазины</th>
+<th>Разборки (Б/У)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Цена</td>
+<td>Высокая</td>
+<td>Средняя / Низкая</td>
+<td>Низкая</td>
+</tr>
+<tr>
+<td>Гарантия</td>
+<td>Полная гарантия завода</td>
+<td>Гарантия магазина</td>
+<td>Гарантия на проверку</td>
+</tr>
+<tr>
+<td>Срок доставки</td>
+<p>td>Долгий (заказ)</td></p>
+<td>Средний (склад)</td>
+<td>Мгновенный (наличие)</td>
+</tr>
+<tr>
+<td>Ассортимент</td>
+<td>Только новые оригиналы</td>
+<td>Оригинал + Аналоги</td>
+<td>Б/У оригиналы</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Для критически важных узлов, таких как элементы безопасности или сложные электронные блоки, многие предпочитают переплатить дилеру ради спокойствия. Для расходных материалов или кузовных элементов <em>онлайн-шопинг</em> часто оказывается более рациональным выбором.</p>
+
+<h2 id="оригинал-или-аналог-что-выбрать-по-vin">Оригинал или аналог: что выбрать по VIN</h2>
+
+<p>Когда вы нашли деталь по VIN-коду, перед вами встает выбор: покупать дорогостоящий оригинал или искать замену. <strong>Оригинальные запчасти</strong> (OEM) производятся по спецификациям автоконцерна и проходят жесткий контроль качества.</p>
+
+<p>Однако часто бывает так, что одну и ту же деталь производит один и тот же завод, но поставляет её автоконцерну под своим брендом и в упаковке с логотипом машины. Такие производители называются <strong>OEM-поставщиками</strong>. Покупка их продукции под собственным брендом может сэкономить до 40% бюджета.</p>
+
+<ul>
+<li>🏭 Bosch, Mann-Filter, Mahle — часто производят фильтры и электрику для немецких авто.</li>
+<li>🇯🇵 Denso, Aisin, NGK — основные поставщики для японского автопрома.</li>
+<li>🇫🇷 Valeo, SKF — популярные поставщики для французских марок.</li>
+</ul>
+
+<p>При выборе аналога важно обращать внимание на страну производства и сертификаты качества. Дешевые копии неизвестных брендов могут выйти из строя через несколько тысяч километров, что в итоге приведет к большим расходам на повторный ремонт.</p>
+
+<blockquote>
+<p>⚠️ Внимание! Избегайте покупки критических деталей (тормозные диски, ремни ГРМ, датчики ABS) от неизвестных производителей, даже если VIN-код в каталоге подобран верно. Экономия здесь не оправдывает рисков.</p>
+</blockquote>
+
+<p>Используйте кросс-номерные базы (кроссы), чтобы найти качественный аналог. Введите найденный по VIN оригинальный номер в поисковик, и система покажет список совместимых заменителей от других брендов.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Проверяйте кросс-номера на нескольких ресурсах. Иногда базы данных разных магазинов могут содержать ошибки в совместимости аналогов.</p></aside>
+
+<h2 id="типичные-ошибки-при-подборе-запчастей">Типичные ошибки при подборе запчастей</h2>
+
+<p>Даже опытные пользователи допускают ошибки, которые приводят к покупке ненужных вещей. Одна из самых распространенных проблем — невнимательность к <strong>модификации двигателя</strong>. На одну и ту же модель автомобиля в разные годы могли ставить моторы разной мощности, и детали для них могут отличаться.</p>
+
+<p>Другая частая ошибка — игнирование даты выпуска. Как упоминалось ранее, в середине модельного года производитель может изменить конструкцию узла. Если вы берете деталь для машины, выпущенной в январе, а ставите ту, что идет на машину с декабря, они могут не подойти.</p>
+
+<p>Также стоит упомянуть о проблеме "двойников". Это ситуации, когда один и тот же артикул каталожно подходит к разным машинам, но физически имеет отличия. Например, разъем проводки может быть смещен на 5 миллиметров, что сделает установку невозможной без переделки.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Всегда сверяйте не только VIN-код, но и визуальные параметры детали (количество крепежных отверстий, тип разъема, габариты) перед оплатой.</p></aside>
+
+<p>Не забывайте про региональные особенности. Автомобили, собранные для рынка США или Японии, могут иметь отличия в системе охлаждения или выхлопа по сравнению с европейскими или российскими версиями, даже при одинаковом VIN-коде в начале строки.</p>
+
+<h2 id="faq-часто-задаваемые-вопросы">FAQ: Часто задаваемые вопросы</h2>
+
+<details>
+<summary>Можно ли найти запчасть по VIN-коду, если машина угнана или документы утеряны?</summary>
+<p>Да, если у вас сохранилась фотография номера под лобовым стеклом или вы где-то записывали его ранее. Также номер может быть в базе данных страховой компании или в сервисной книжке, если вы обращались к дилеру. Без номера кузова точный подбор практически невозможен.</p>
+</details>
+
+<details>
+<summary>Почему поиск по VIN выдает деталь, которой нет в наличии?</summary>
+<p>Каталоги показывают технические данные, а не складские остатки. Они говорят о том, что <em>теоретически</em> на такую машину должна ставиться такая деталь. Реальное наличие зависит от поставщиков и логистики магазина, в котором вы делаете заказ.</p>
+</details>
+
+<details>
+<summary>Всегда ли VIN-код гарантирует 100% совместимость?</summary>
+<p>В 95% случаев — да. Однако остаются 5% на ошибки в базах данных, предыдущие неквалифицированные ремонты (когда на машину уже поставили не ту деталь) или очень редкие заводские изменения, не попавшие в цифровые каталоги. Визуальная проверка перед установкой обязательна.</p>
+</details>
+
+<details>
+<summary>Как быть, если по VIN-коду деталь не находится?</summary>
+<p>Такое бывает с очень старыми автомобилями или после глобальных рестайлингов, когда базы данных работают некорректно. В этом случае придется подбирать деталь по параметрам самого узла (размеры, количество зубов шестерни, напряжение) или обращаться к специалистам на профильных форумах.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-chasto-nuzhno-delat-to.html" class="pb-related-card">
+                <span class="pb-related-title">Как часто нужно делать ТО автомобиля: интервалы и регламенты</span>
+                <span class="pb-related-desc">Узнайте, как часто нужно делать ТО машине. Реальные интервалы замены масла, фильтров и жидкостей в з</span>
+            </a><a href="/articles/m/me/mekhanicheskaya-kpp-printsip-raboty.html" class="pb-related-card">
+                <span class="pb-related-title">Механическая КПП: принцип работы, устройство и диагностика</span>
+                <span class="pb-related-desc">Полный разбор механической трансмиссии. Как работает сцепление, коробка передач, синхронизаторы. Диа</span>
+            </a><a href="/articles/h/ho/hold-perevod-na-russkij-yazyk-s-anglijskogo-v-mashine.html" class="pb-related-card">
+                <span class="pb-related-title">Hold на АКПП: что это значит и как пользоваться</span>
+                <span class="pb-related-desc">Подробный перевод и объяснение кнопки Hold на автомате. Разница между режимами, влияние на расход то</span>
+            </a><a href="/articles/n/na/na-skolko-rasschitany-svechi-zazhiganiya.html" class="pb-related-card">
+                <span class="pb-related-title">Срок службы свечей зажигания: когда менять и как проверить?</span>
+                <span class="pb-related-desc">Узнайте, на сколько рассчитаны свечи зажигания разных типов (обычные, иридиевые, платиновые) и как о</span>
+            </a><a href="/articles/r/ro/roliki-v-mashine-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">Ролики в машине: что это такое и зачем нужны</span>
+                <span class="pb-related-desc">Узнайте, какие ролики есть в автомобиле, зачем они нужны, как диагностировать износ и когда требуетс</span>
+            </a><a href="/articles/s/sv/svist-pod-kapotom-pri-ezde.html" class="pb-related-card">
+                <span class="pb-related-title">Свист под капотом при езде: причины, диагностика и ремонт</span>
+                <span class="pb-related-desc">Почему свистит под капотом при езде? Разбираем причины свиста ремня, генератора, подшипников и ролик</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

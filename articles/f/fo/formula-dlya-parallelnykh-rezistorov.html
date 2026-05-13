@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Формула параллельных резисторов: расчёт сопротивления в автоэлектрике — Авто Справочник</title>
+    <meta name="description" content="Как рассчитать общее сопротивление параллельных резисторов в автомобильной электронике: формулы, примеры, таблицы и ошибки. Подробный гайд для автолюбителей и мастеров.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/f/fo/formula-dlya-parallelnykh-rezistorov.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Формула параллельных резисторов: расчёт сопротивления в автоэлектрике">
+    <meta property="og:description" content="Как рассчитать общее сопротивление параллельных резисторов в автомобильной электронике: формулы, примеры, таблицы и ошибки. Подробный гайд для автолюбителей и мастеров.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/elektrika-avto/">Электрика Авто</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Формула параллельных резисторов: расчёт сопротивления в автоэлектрике</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#что-такое-параллельное-соединение-резисторов-и-где-оно-применяется-в-автомобиле">Что такое параллельное соединение резисторов и где оно применяется в автомобиле</a></li><li><a href="#основная-формула-расчёта-параллельных-резисторов">Основная формула расчёта параллельных резисторов</a></li><li><a href="#практические-примеры-расчёта-для-автомобильных-цепей">Практические примеры расчёта для автомобильных цепей</a></li><li><a href="#типичные-ошибки-при-расчёте-параллельных-резисторов">Типичные ошибки при расчёте параллельных резисторов</a></li><li><a href="#как-измерить-сопротивление-параллельных-резисторов-мультиметром">Как измерить сопротивление параллельных резисторов мультиметром</a></li><li><a href="#расчёт-мощности-резисторов-в-параллельных-цепях">Расчёт мощности резисторов в параллельных цепях</a></li><li><a href="#программы-и-онлайн-калькуляторы-для-расчёта-параллельных-резисторов">Программы и онлайн-калькуляторы для расчёта параллельных резисторов</a></li><li><a href="#faq-частые-вопросы-о-параллельных-резисторах-в-авто">FAQ: Частые вопросы о параллельных резисторах в авто</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/z/zv/zvukovoj-signalnyj-pribor-neispraven.html">Звуковой сигнал неисправен: причины и ремонт в 2026 году</a></li><li><a href="/articles/m/mo/montazh-zaryadnoj-stantsii-dlya-elektromobilej.html">Монтаж зарядной станции для электромобилей: инструкция и советы</a></li><li><a href="/articles/v/vy/vyklyuchatel-massy-distantsionnyj-12-volt.html">Дистанционный выключатель массы 12В: выбор, установка, схемы</a></li><li><a href="/articles/s/si/signalizatsiya-pandora-kak-zaglushit-mashinu-s-brelka.html">Как заглушить машину с брелка Pandora: инструкция и советы</a></li><li><a href="/articles/p/pr/pri-povorote-klyucha-zazhiganiya-ne-zagoraetsya-panel-priborov-i-ne-zavoditsya.html">Не загорается панель приборов при повороте ключа — причины и ремонт</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Формула параллельного соединения резисторов: расчёт для автоэлектрики с примерами</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#что-такое-параллельное-соединение-резисторов-и-где-оно-применяется-в-автомобиле">Что такое параллельное соединение резисторов и где оно применяется в автомобиле</a></li><li><a href="#основная-формула-расчёта-параллельных-резисторов">Основная формула расчёта параллельных резисторов</a></li><li><a href="#практические-примеры-расчёта-для-автомобильных-цепей">Практические примеры расчёта для автомобильных цепей</a></li><li><a href="#типичные-ошибки-при-расчёте-параллельных-резисторов">Типичные ошибки при расчёте параллельных резисторов</a></li><li><a href="#как-измерить-сопротивление-параллельных-резисторов-мультиметром">Как измерить сопротивление параллельных резисторов мультиметром</a></li><li><a href="#расчёт-мощности-резисторов-в-параллельных-цепях">Расчёт мощности резисторов в параллельных цепях</a></li><li><a href="#программы-и-онлайн-калькуляторы-для-расчёта-параллельных-резисторов">Программы и онлайн-калькуляторы для расчёта параллельных резисторов</a></li><li><a href="#faq-частые-вопросы-о-параллельных-резисторах-в-авто">FAQ: Частые вопросы о параллельных резисторах в авто</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body"><p>Параллельное соединение резисторов — одна из самых распространённых схем в автомобильной электронике, от систем освещения до бортовых компьютеров. Без правильного расчёта общего сопротивления цепи можно столкнуться с перегревом проводки, выходом из строя датчиков или даже пожаром. В этой статье разберём <strong>формулу для параллельных резисторов</strong>, научимся применять её на практике и избегаем типичных ошибок, которые допускают даже опытные автоэлектрики.</p>
+
+<p>Почему это важно для автомобилистов? В машине резисторы встречаются везде: в делителях напряжения для датчиков кислорода, в цепях подогрева стекол, даже в простейших светодиодных лентах подсветки салона. Неправильный подбор сопротивления может привести к тому, что <em>ECU</em> (электронный блок управления) будет получать некорректные сигналы, а это уже чревато ошибками <code>P0130</code> или <code>P0171</code> на приборной панели. Далее — подробный разбор с формулами, примерами из реальных схем авто и интерактивными виджеттами для проверки своих расчётов.</p>
+
+<h2 id="что-такое-параллельное-соединение-резисторов-и-где-оно-применяется-в-автомобиле">Что такое параллельное соединение резисторов и где оно применяется в автомобиле</h2>
+
+<p>Параллельное соединение — это когда <strong>два или более резистора подключены к одной паре узлов</strong>, создавая несколько путей для тока. В отличие от последовательного соединения, где ток одинаков на всех элементах, здесь <em>напряжение</em> на всех резисторах одинаково, а <em>токи</em> складываются. В автомобиле такая схема используется для:</p>
+
+<ul>
+  <li>🔦 <strong>Делителей напряжения</strong> в датчиках (например, <em>MAP-сенсор</em> или датчик положения дроссельной заслонки).</li>
+  <li>💡 <strong>Светодиодных цепей</strong>, где нужны токоограничивающие резисторы для каждого <em>LED</em>.</li>
+  <li>🔋 <strong>Зарядных цепей аккумулятора</strong>, где параллельные резисторы распределяют ток между банками.</li>
+  <li>📡 <strong>Антенных усилителей</strong> и фильтров помех в аудиосистемах.</li>
+</ul>
+
+<p>Главное преимущество параллельного соединения в автоэлектрике — <strong>надёжность</strong>. Если один резистор выходит из строя (например, перегорает), цепь продолжает работать через оставшиеся элементы. Однако это же и минус: при ошибке в расчётах ток может превысить допустимые значения, что приведёт к <mark>перегреву проводки или срабатыванию предохранителей без видимой причины</mark>.</p>
+
+<div class="pb-poll" id="poll-15b8090f"><div class="pb-poll-question">📊 Где в вашем автомобиле вы сталкивались с резисторами?</div><div class="pb-poll-option" data-poll="15b8090f" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">В цепях освещения</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="15b8090f" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">В датчиках двигателя</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="15b8090f" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">В аудиосистеме</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="15b8090f" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда не обращал внимания</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="15b8090f" data-idx="4" onclick="pbPollVote(this)"><span class="pb-poll-label">Другой вариант</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="основная-формула-расчёта-параллельных-резисторов">Основная формула расчёта параллельных резисторов</h2>
+
+<p>Формула для нахождения общего сопротивления <em>R<sub>общ</sub></em> при параллельном соединении выглядит так:</p>
+
+<pre><code>1 / R<sub>общ</sub> = 1 / R<sub>1</sub> + 1 / R<sub>2</sub> + ... + 1 / R<sub>n</sub></code></pre>
+
+<p>Где:
+<strong>R<sub>общ</sub></strong> — общее сопротивление цепи,
+<strong>R<sub>1</sub>, R<sub>2</sub>, ..., R<sub>n</sub></strong> — сопротивления отдельных резисторов.</p>
+
+<p>Для двух резисторов формулу можно упростить:</p>
+
+<pre><code>R<sub>общ</sub> = (R<sub>1</sub> × R<sub>2</sub>) / (R<sub>1</sub> + R<sub>2</sub>)</code></pre>
+
+<p>Например, если в цепи подогрева зеркал установлены два резистора по <code>100 Ом</code> и <code>200 Ом</code>, общее сопротивление будет:</p>
+
+<pre><code>R<sub>общ</sub> = (100 × 200) / (100 + 200) = 20000 / 300 ≈ 66,67 Ом</code></pre>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если сопротивления резисторов одинаковые (например, два по 100 Ом), общее сопротивление будет ровно в два раза меньше: 100 Ом / 2 = 50 Ом.</p></aside>
+
+<h2 id="практические-примеры-расчёта-для-автомобильных-цепей">Практические примеры расчёта для автомобильных цепей</h2>
+
+<p>Рассмотрим реальные случаи, где требуется рассчитать параллельные резисторы в авто:</p>
+
+<h3>Пример 1: Датчик температуры охлаждающей жидкости (<em>ECT</em>)</h3>
+<p>В схеме датчика часто используется резистор <code>2,2 кОм</code> (pull-up) на плате <em>ECU</em>, параллельно которому подключается термистор датчика. Если сопротивление термистора при +20°C равно <code>2,5 кОм</code>, общее сопротивление цепи будет:</p>
+
+<pre><code>1 / R<sub>общ</sub> = 1 / 2200 + 1 / 2500 ≈ 0,0004545 + 0,0004 = 0,0008545
+<p>R<sub>общ</sub> ≈ 1 / 0,0008545 ≈ 1170 Ом (1,17 кОм)</code></pre></p>
+
+<p>Это значение <em>ECU</em> преобразует в температуру по калибровочной таблице. Ошибка в расчёте здесь приведёт к неверным показаниям на приборной панели.</p>
+
+<h3>Пример 2: Светодиодная подсветка номера</h3>
+<p>Допустим, вы устанавливаете два <em>LED</em> с токоограничивающими резисторами <code>470 Ом</code> каждый, подключённые параллельно к +12В. Общее сопротивление:</p>
+
+<pre><code>R<sub>общ</sub> = (470 × 470) / (470 + 470) = 220900 / 940 ≈ 235 Ом</code></pre>
+
+<p>Теперь по закону Ома можно найти общий ток:</p>
+
+<pre><code>I = U / R = 12В / 235 Ом ≈ 0,051 А (51 мА)</code></pre>
+
+<p>Если каждый <em>LED</em> рассчитан на <code>20 мА</code>, то общий ток <code>51 мА</code> близок к предельному (<code>40 мА</code>), и резисторы лучше взять с запасом — например, <code>560 Ом</code>.</p>
+
+<details class="pb-accordion"><summary>Что будет если использовать резисторы с меньшим сопротивлением?</summary><div class="pb-accordion-body"><p>Светодиоды получат больший ток, чем расчётный, что приведёт к их перегреву и сокращению срока службы. В худшем случае — выход из строя с коротким замыканием и срабатыванием предохранителя.</p></div></details>
+
+<div class="pb-table-wrap"><table>
+  <thead>
+    <tr>
+      <th>Сопротивление резисторов (Ом)</th>
+      <th>Количество резисторов</th>
+      <th>Общее сопротивление (Ом)</th>
+      <th>Общий ток при 12В (мА)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>100</td>
+      <td>2</td>
+      <td>50</td>
+      <td>240</td>
+    </tr>
+    <tr>
+      <td>470</td>
+      <td>2</td>
+      <td>235</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <td>1000 (1 кОм)</td>
+      <td>3</td>
+      <td>333</td>
+      <td>36</td>
+    </tr>
+    <tr>
+      <td>2200 (2,2 кОм)</td>
+      <td>2</td>
+      <td>1100</td>
+      <td>11</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="типичные-ошибки-при-расчёте-параллельных-резисторов">Типичные ошибки при расчёте параллельных резисторов</h2>
+
+<p>Даже опытные автоэлектрики иногда ошибаются. Вот самые распространённые промахи:</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> Если в цепи есть резистор с сопротивлением <code>0 Ом</code> (например, перемычка или сгоревший резистор в обрыве), общее сопротивление цепи также станет <code>0 Ом</code>, что приведёт к короткому замыканию!</blockquote>
+
+<ul>
+  <li>🔧 <strong>Игнорирование температурного коэффициента</strong>. Сопротивление резисторов меняется при нагреве. В автомобиле, где температура под капотом может достигать +100°C, это критично. Например, резистор <code>10 кОм</code> с коэффициентом <code>100 ppm/°C</code> при нагреве до +80°C изменит сопротивление на <code>800 Ом</code> (8%!).</li>
+  <li>📉 <strong>Неучёт допусков</strong>. Резисторы имеют погрешность (5%, 10%). Если в цепи два резистора по <code>1 кОм ±10%</code>, их реальные значения могут быть <code>900 Ом</code> и <code>1100 Ом</code>, а общее сопротивление — от <code>473 Ом</code> до <code>523 Ом</code>.</li>
+  <li>⚡ <strong>Путаница с мощностью</strong>. При параллельном соединении через резистор с меньшим сопротивлением течёт больший ток, поэтому его мощность должна быть выше. Например, в цепи с резисторами <code>100 Ом</code> и <code>1 кОм</code> первый будет рассеивать в 10 раз больше тепла!</li>
+</ul>
+
+
+<p>Дважды перепроверил формулу|Учёт температурного коэффициента|Проверка мощности резисторов|Измерение реального сопротивления мультиметром--></p>
+
+<h2 id="как-измерить-сопротивление-параллельных-резисторов-мультиметром">Как измерить сопротивление параллельных резисторов мультиметром</h2>
+
+<p>Теория — это хорошо, но на практике сопротивление резисторов может отличаться от номинала. Вот как правильно измерить общее сопротивление параллельной цепи:</p>
+
+<ol>
+  <li><strong>Отключите питание</strong>. Даже если цепь запитана от <code>+12В</code>, остаточные токи могут искажать показания.</li>
+  <li><strong>Прозвоните каждый резистор отдельно</strong>. Убедитесь, что нет обрывов (<code>OL</code> на экране мультиметра) или коротких замыканий (<code>0 Ом</code>).</li>
+  <li><strong>Измерьте общее сопротивление</strong>, подключив щупы к крайним выводам цепи. Сравните с расчётным значением.</li>
+</ol>
+
+<p>Пример: если вы измерили два резистора по <code>470 Ом</code>, а мультиметр показывает <code>220 Ом</code> вместо расчётных <code>235 Ом</code>, значит, один из резисторов имеет реальное сопротивление ниже номинала (возможно, <code>430 Ом</code> вместо <code>470 Ом</code>).</p>
+
+<blockquote>⚠️ <strong>Внимание:</strong> При измерении сопротивления в цепи с полупроводниками (диоды, транзисторы) отпаяйте хотя бы один вывод резистора! <em>P-N-переходы</em> могут пропускать ток в одном направлении, искажая результаты.</blockquote>
+
+<h2 id="расчёт-мощности-резисторов-в-параллельных-цепях">Расчёт мощности резисторов в параллельных цепях</h2>
+
+<p>Мощность резистора — это количество тепла, которое он может рассеять без перегрева. В параллельных цепях мощность рассчитывается индивидуально для каждого резистора по формуле:</p>
+
+<pre><code>P = U² / R</code></pre>
+
+<p>Где:
+<strong>P</strong> — мощность в ваттах (<em>Вт</em>),
+<strong>U</strong> — напряжение на резисторе (в параллельной цепи одинаково для всех),
+<strong>R</strong> — сопротивление резистора.</p>
+
+<p>Пример: в цепи с напряжением <code>12В</code> и резисторами <code>100 Ом</code> и <code>200 Ом</code>:</p>
+<ul>
+  <li>Мощность <code>100 Ом</code>: <code>P = 12² / 100 = 1,44 Вт</code>.</li>
+  <li>Мощность <code>200 Ом</code>: <code>P = 12² / 200 = 0,72 Вт</code>.</li>
+</ul>
+
+<p>Это значит, что резистор <code>100 Ом</code> должен быть минимум на <code>2 Вт</code> (с запасом), а <code>200 Ом</code> — на <code>1 Вт</code>. В автомобиле лучше использовать резисторы с <strong>двойным запасом по мощности</strong>, так как возможны скачки напряжения до <code>14,4В</code> (при зарядке аккумулятора).</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>В параллельных цепях резистор с меньшим сопротивлением всегда рассеивает большую мощность!</p></aside>
+
+<h2 id="программы-и-онлайн-калькуляторы-для-расчёта-параллельных-резисторов">Программы и онлайн-калькуляторы для расчёта параллельных резисторов</h2>
+
+<p>Если ручные расчёты кажутся сложными, можно воспользоваться специализированными инструментами:</p>
+
+<ul>
+  <li>🖥️ <strong>LTspice</strong> — бесплатный симулятор схем, где можно смоделировать параллельное соединение и проверить токи/напряжения.</li>
+  <li>🌐 <strong>Онлайн-калькуляторы</strong> (например, <em>Digikey Resistor Calculator</em> или <em>Ohm’s Law Calculator</em>).</li>
+  <li>📱 <strong>Мобильные приложения</strong> вроде <em>ElectroDroid</em> (Android) или <em>EveryCircuit</em> (iOS).</li>
+</ul>
+
+<p>Пример работы с <em>LTspice</em>:
+<p>1. Создайте новую схему.</p>
+<p>2. Добавьте резисторы (<code>R</code>) и источник напряжения (<code>V</code>).</p>
+<p>3. Соедините резисторы параллельно (оба вывода к одной паре узлов).</p>
+<p>4. Запустите симуляцию (<code>.op</code>) и посмотрите ток через каждый резистор.</p></p>
+
+<p>Преимущество симуляторов — они учитывают не только сопротивление, но и <em>паразитные ёмкости/индуктивности</em>, что важно для высокочастотных цепей (например, в системах зажигания).</p>
+
+<h2 id="faq-частые-вопросы-о-параллельных-резисторах-в-авто">FAQ: Частые вопросы о параллельных резисторах в авто</h2>
+
+<details>
+  <summary>Можно ли заменить один резистор на два параллельных с другим номиналом?</summary>
+  <p>Да, но нужно убедиться, что общее сопротивление и мощность соответствуют оригиналу. Например, вместо резистора <code>100 Ом 2 Вт</code> можно параллельно установить два по <code>200 Ом 1 Вт</code> — их общее сопротивление будет <code>100 Ом</code>, а суммарная мощность <code>2 Вт</code>.</p>
+</details>
+
+<details>
+  <summary>Почему в некоторых схемах резисторы соединяют и параллельно, и последовательно?</summary>
+  <p>Такие смешанные цепи позволяют точнее подогнать общее сопротивление под нужное значение. Например, для получения <code>1,5 кОм</code> можно соединить последовательно резисторы <code>1 кОм</code> и <code>470 Ом</code>, а затем параллельно им добавить <code>10 кОм</code> для коррекции.</p>
+</details>
+
+<details>
+  <summary>Как проверить параллельные резисторы без выпаивания?</summary>
+  <p>Отключите питание цепи и измерьте сопротивление между точками подключения. Если значение сильно отличается от расчётного, последовательно отпаивайте резисторы, чтобы найти неисправный. В автомобиле удобно использовать <em>прозвонку</em> с функцией проверки диодов — она покажет падение напряжения на каждом резисторе.</p>
+</details>
+
+<details>
+  <summary>Что будет, если в параллельной цепи один резистор перегорит (обрыв)?</summary>
+  <p>Цепь продолжит работать, но общее сопротивление увеличится, а ток через оставшиеся резисторы вырастет. Например, если в цепи из двух резисторов <code>100 Ом</code> и <code>200 Ом</code> сгорит <code>100 Ом</code>, общее сопротивление станет <code>200 Ом</code>, а ток уменьшится вдвое.</p>
+</details>
+
+<details>
+  <summary>Как рассчитать параллельные резисторы для светодиодной ленты в машине?</summary>
+  <p>Используйте формулу для параллельного соединения, но учитывайте, что <em>LED</em> имеют нелинейную вольт-амперную характеристику. Лучше применять специализированные драйверы или резисторы с запасом по току. Например, для ленты на <code>12В</code> с током <code>20 мА/м</code> и длиной <code>1 м</code> нужен резистор:</p>
+  <pre><code>R = (12В - 3В) / 0,02А = 450 Ом (ближайший стандартный — 470 Ом).</code></pre>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/z/zv/zvukovoj-signalnyj-pribor-neispraven.html" class="pb-related-card">
+                <span class="pb-related-title">Звуковой сигнал неисправен: причины и ремонт в 2026 году</span>
+                <span class="pb-related-desc">Почему не работает звуковой сигнал в машине? Диагностика, ремонт и замена клаксона своими руками. Ин</span>
+            </a><a href="/articles/m/mo/montazh-zaryadnoj-stantsii-dlya-elektromobilej.html" class="pb-related-card">
+                <span class="pb-related-title">Монтаж зарядной станции для электромобилей: инструкция и советы</span>
+                <span class="pb-related-desc">Полное руководство по установке зарядной станции для электромобилей. Выбор оборудования, расчет сече</span>
+            </a><a href="/articles/v/vy/vyklyuchatel-massy-distantsionnyj-12-volt.html" class="pb-related-card">
+                <span class="pb-related-title">Дистанционный выключатель массы 12В: выбор, установка, схемы</span>
+                <span class="pb-related-desc">Как выбрать и подключить дистанционный выключатель массы 12В для авто: схемы, модели, ошибки монтажа</span>
+            </a><a href="/articles/s/si/signalizatsiya-pandora-kak-zaglushit-mashinu-s-brelka.html" class="pb-related-card">
+                <span class="pb-related-title">Как заглушить машину с брелка Pandora: инструкция и советы</span>
+                <span class="pb-related-desc">Узнайте, как заглушить машину с брелка Pandora. Подробная инструкция по управлению двигателем, блоки</span>
+            </a><a href="/articles/p/pr/pri-povorote-klyucha-zazhiganiya-ne-zagoraetsya-panel-priborov-i-ne-zavoditsya.html" class="pb-related-card">
+                <span class="pb-related-title">Не загорается панель приборов при повороте ключа — причины и ремонт</span>
+                <span class="pb-related-desc">Разбираем 7 основных причин, почему не загорается панель приборов при повороте ключа зажигания и маш</span>
+            </a><a href="/articles/s/sk/skhema-podklyucheniya-voltmetra-v-tsep.html" class="pb-related-card">
+                <span class="pb-related-title">Схема подключения вольтметра: как правильно измерить напряжение</span>
+                <span class="pb-related-desc">Подробная инструкция: схема подключения вольтметра в цепь постоянного и переменного тока. Правила бе</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>Как поменять автора песни: права и Metadata ID3 — Авто Справочник</title>
+    <meta name="description" content="Узнайте, как изменить автора трека в ID3-тегах. Правильная смена исполнителя в файлах MP3, FLAC и WAV для корректного отображения.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/k/ka/kak-pomenyat-avtora-pesni.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Как поменять автора песни: права и Metadata ID3">
+    <meta property="og:description" content="Узнайте, как изменить автора трека в ID3-тегах. Правильная смена исполнителя в файлах MP3, FLAC и WAV для корректного отображения.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/drugoe/">Другое</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">Как поменять автора песни: права и Metadata ID3</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#понимание-структуры-музыкальных-файлов-и-тегов">Понимание структуры музыкальных файлов и тегов</a></li><li><a href="#выбор-программного-обеспечения-для-редактирования">Выбор программного обеспечения для редактирования</a></li><li><a href="#пошаговая-инструкция-смена-автора-через-редактор-тегов">Пошаговая инструкция: смена автора через редактор тегов</a></li><li><a href="#автоматизация-и-поиск-данных-в-интернете">Автоматизация и поиск данных в интернете</a></li><li><a href="#проблемы-с-кодировкой-и-отображением-в-автомобиле">Проблемы с кодировкой и отображением в автомобиле</a></li><li><a href="#редактирование-метаданных-без-установки-программ">Редактирование метаданных без установки программ</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/p/pa/park-galitskogo-marshrut-peshkom.html">Парк Галицкого: пешеходный маршрут, карта и время прогулки</a></li><li><a href="/articles/c/ch/cherez-skolko-vyvetritsya-400-gramm-vodki.html">Через сколько выветривается 400 грамм водки: таблица и факторы</a></li><li><a href="/articles/k/ka/kak-vyvesti-bally-tinkoff-na-kartu.html">Как вывести баллы Тинькофф на карту: актуальные способы 2026</a></li><li><a href="/articles/a/av/avtobus-kotoryj-sbil-tsoya.html">Автобус, сбивший Виктора Цоя: история, расследование, последствия</a></li><li><a href="/articles/f/fi/film-pro-gonshchikov-na-realnykh-sobytiyakh.html">Фильмы про гонщиков по реальным событиям: 10 лучших лент для автолюбителей</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>Как поменять автора песни: полное руководство по тегам</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#понимание-структуры-музыкальных-файлов-и-тегов">Понимание структуры музыкальных файлов и тегов</a></li><li><a href="#выбор-программного-обеспечения-для-редактирования">Выбор программного обеспечения для редактирования</a></li><li><a href="#пошаговая-инструкция-смена-автора-через-редактор-тегов">Пошаговая инструкция: смена автора через редактор тегов</a></li><li><a href="#автоматизация-и-поиск-данных-в-интернете">Автоматизация и поиск данных в интернете</a></li><li><a href="#проблемы-с-кодировкой-и-отображением-в-автомобиле">Проблемы с кодировкой и отображением в автомобиле</a></li><li><a href="#редактирование-метаданных-без-установки-программ">Редактирование метаданных без установки программ</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Ситуация, когда музыкальный трек отображается в плеере или медиасистеме автомобиля с ошибочным именем исполнителя, встречается крайне часто. Это происходит из-за некорректно заполненных <strong>метаданных</strong>, которые хранятся внутри самого файла. Автомобильные магнитолы и современные мультимедийные системы полагаются исключительно на цифровые метки, игнорируя название файла.</p>
+
+<p>Чтобы исправить ситуацию, вам не нужно быть программистом или звукоинженером. Достаточно воспользоваться специализированным софтом, который позволяет редактировать служебную информацию трека. <em>ID3-теги</em> — это стандарт, который используется для MP3-файлов, и именно в них прописываются поля Artist, Title и Album.</p>
+
+<p>Процесс смены имени исполнителя занимает всего несколько минут, но требует внимательности к форматам кодировки. Неправильная кодировка может привести к тому, что вместо кириллических букв вы увидите набор непонятных символов. Ниже мы подробно разберем инструменты и методы, которые гарантированно помогут привести вашу музыкальную библиотеку в порядок.</p>
+
+<h2 id="понимание-структуры-музыкальных-файлов-и-тегов">Понимание структуры музыкальных файлов и тегов</h2>
+
+<p>Прежде чем приступать к редактированию, необходимо понять, что именно мы меняем. Аудиофайл состоит из двух частей: непосредственно звукового потока (кодируемого, например, в AAC или MP3) и заголовка с метаданными. Этот заголовок не влияет на качество звучания, но критически важен для <strong>навигации</strong> и сортировки.</p>
+
+<p>Существует несколько версий стандарта ID3. Наиболее распространены версии 1, 2.3 и 2.4. Версия 1 имеет ограничения по длине символов и часто не поддерживает кириллицу, что делает её использование нецелесообразным для русскоязычных треков. Версии 2.x позволяют использовать <strong>Unicode</strong>, что обеспечивает правильное отображение имен артистов на любых устройствах.</p>
+
+<p>Важно различать поле "Artist" (Исполнитель) и "Album Artist" (Исполнитель альбома). Первое указывает на конкретного певца или группу, чей трек воспроизводится. Второе поле используется для объединения треков в единый альбом, особенно если в сборнике участвуют разные артисты или гостевые исполнители.</p>
+
+<ul>
+<li>🎵 <strong>Artist</strong> — конкретный исполнитель трека (например, "Виктор Цой").</li>
+<li>💿 <strong>Album Artist</strong> — основной исполнитель альбома или сборника.</li>
+<li>🎼 <strong>Composer</strong> — композитор, написавший музыку.</li>
+<li>📝 <strong>Lyricist</strong> — автор текста песни.</li>
+</ul>
+
+<blockquote>
+<p>⚠️ Внимание: При смене автора в поле "Album Artist" для всего альбома сразу, убедитесь, что это не нарушит логику работы умных плейлистов, которые могут группировать композиции по этому параметру.</p>
+</blockquote>
+
+<p>Некоторые старые автомобильные головные устройства могут некорректно считывать теги версии 2.4. В таких случаях рекомендуется при сохранении выбирать совместимость с версией <em>ID3v2.3</em>, что повысит вероятность правильного отображения информации на экране магнитолы.</p>
+
+<h2 id="выбор-программного-обеспечения-для-редактирования">Выбор программного обеспечения для редактирования</h2>
+
+<p>Рынок предлагает множество решений для работы с метаданными, от простых встроенных средств операционной системы до мощных специализированных редакторов. Выбор инструмента зависит от объема работы: нужно ли вам переименовать один трек или привести в порядок всю музыкальную коллекцию из тысяч файлов.</p>
+
+<p>Для разовых правок часто достаточно стандартных возможностей ОС. Однако встроенные редакторы Windows или macOS могут быть ограничены в функционале и не поддерживать пакетную обработку или работу со сложными тегами. Для профессиональной работы лучше использовать специализированный софт.</p>
+
+<p>Одним из самых популярных и бесплатных решений является программа <em>MP3Tag</em>. Она поддерживает огромное количество форматов аудиофайлов и позволяет редактировать теги пакетно, используя маски и регулярные выражения. Это значительно ускоряет процесс.</p>
+
+<div class="pb-poll" id="poll-a2103a34"><div class="pb-poll-question">📊 Какой софт вы предпочитаете для работы с музыкой?</div><div class="pb-poll-option" data-poll="a2103a34" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Встроенный плеер Windows</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a2103a34" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">VLC Media Player</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a2103a34" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Специализированный редактор (MP3Tag)</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="a2103a34" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Онлайн-сервисы</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<p>Альтернативой могут служить аудиоплееры с функциями редактирования, такие как <em>MusicBee</em> или <em>Foobar2000</em>. Они удобны тем, что позволяют сразу прослушать результат изменений. Однако для глубокой очистки и правки "битых" тегов лучше подходят именно редакторы.</p>
+
+<h2 id="пошаговая-инструкция-смена-автора-через-редактор-тегов">Пошаговая инструкция: смена автора через редактор тегов</h2>
+
+<p>Рассмотрим алгоритм действий на примере популярного редактора, так как он обеспечивает наилучшую совместимость и контроль над процессом. Сначала необходимо загрузить файлы в программу. Это можно сделать перетаскиванием или через меню "Файл".</p>
+
+<p>Выделите нужный трек или группу треков в списке. В левой части окна (или в нижней панели, в зависимости от настроек интерфейса) вы увидите поля для заполнения. Найдите поле <code>Artist</code> (Исполнитель).</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Алгоритм смены исполнителя</h4><label class="check-item"><input type="checkbox"><span>Загрузить файлы в редактор</span></label><label class="check-item"><input type="checkbox"><span>Выделить нужные треки</span></label><label class="check-item"><input type="checkbox"><span>Ввести новое имя в поле Artist</span></label><label class="check-item"><input type="checkbox"><span>Нажать кнопку Сохранить (Ctrl+S)</span></label><label class="check-item"><input type="checkbox"><span>Проверить результат в плеере</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 5</div></div>
+
+<p>Введите корректное имя исполнителя. Если вы редактируете альбом целиком, где все треки принадлежат одному артисту, удобнее использовать функцию "Расширенные теги" или пакетное редактирование. В этом случае изменение в одном поле применится ко всем выделенным файлам.</p>
+
+<p>После внесения изменений обязательно нажмите кнопку сохранения. Обычно это иконка дискеты или комбинация клавиш <code>Ctrl+S</code>. Программа обновит внутреннюю структуру файла, не затрагивая звуковой поток.</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Действие</th>
+<th>Инструмент</th>
+<th>Результат</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Одиночное редактирование</td>
+<td>Свойства файла / MP3Tag</td>
+<td>Изменен один трек</td>
+</tr>
+<tr>
+<td>Пакетная обработка</td>
+<td>Выделение группы / Маски</td>
+<td>Изменен весь альбом</td>
+</tr>
+<tr>
+<td>Автозаполнение</td>
+<td>Онлайн-базы (MusicBrainz)</td>
+<td>Загружены данные из сети</td>
+</tr>
+</tbody>
+</table></div>
+
+<blockquote>
+<p>⚠️ Внимание: Перед массовой перезаписью тегов всегда создавайте резервную копию файлов. Ошибка в шаблоне переименования может привести к тому, что вы потеряете оригинальные названия композиций.</p>
+</blockquote>
+
+<h2 id="автоматизация-и-поиск-данных-в-интернете">Автоматизация и поиск данных в интернете</h2>
+
+<p>Вручную прописывать авторов для тысяч треков — задача трудоемкая. К счастью, современные редакторы умеют делать это автоматически. Функция автозаполнения обращается к онлайн-базам данных, таким как <em>MusicBrainz</em>, <em>Discogs</em> или <em>FreeDB</em>.</p>
+
+<p>Для использования этой функции выделите треки, принадлежащие одному альбому, и нажмите кнопку поиска по базе данных (часто обозначается как "Tag Sources" или "Auto-tag"). Программа проанализирует имеющиеся данные и предложит варианты совпадений.</p>
+
+<p>Вам останется лишь выбрать правильный альбом из списка. После подтверждения редактор автоматически заполнит поля Artist, Album, Year, Genre и даже добавит обложку альбома. Это самый быстрый способ получить идеальную библиотеку.</p>
+
+<details class="pb-accordion"><summary>Что делать, если автопоиск не находит трек?</summary><div class="pb-accordion-body"><p>Если автоматический поиск не дает результатов, попробуйте изменить маску поиска или ввести имя артиста вручную в поле фильтрации базы данных. Иногда помогает поиск по названию альбома, если трек редкий или является частью сборника.</p></div></details>
+
+<p>Однако стоит помнить, что автоматические базы данных не идеальны. Они могут содержать ошибки или предлагать разные версии релизов. Всегда визуально проверяйте год выпуска и список треков перед применением изменений ко всей группе файлов.</p>
+
+<h2 id="проблемы-с-кодировкой-и-отображением-в-автомобиле">Проблемы с кодировкой и отображением в автомобиле</h2>
+
+<p>Одна из самых частых проблем после смены автора — появление "кракозябр" вместо букв на дисплее магнитолы. Это происходит из-за конфликта кодировок. Старые устройства понимают только <em>ISO-8859-1</em>, в то время как современные используют <em>UTF-8</em> или <em>UTF-16</em>.</p>
+
+<p>Если вы видите нечитаемые символы, откройте редактор тегов и проверьте настройки кодировки при сохранении. В большинстве программ (например, в MP3Tag) это можно сделать через меню "Инструменты" -> "Опции" -> "Теги".</p>
+
+<p>Попробуйте изменить тип кодировки для ID3v2 на <code>UTF-16</code> с байтовой меткой (BOM). Это наиболее совместимый формат для отображения кириллицы в автомобильных системах. Также имеет смысл удалить теги ID3v1, оставив только ID3v2, так как первые часто вызывают конфликты.</p>
+
+<ul>
+<li>🔧 Проверьте настройки кодировки в редакторе тегов.</li>
+<li>🗑️ Удалите устаревшие теги ID3v1, оставив v2.3 или v2.4.</li>
+<li>🚗 Протестируйте файл на магнитоле после каждого изменения настроек.</li>
+</ul>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Если после смены кодировки проблема осталась, попробуйте перекодировать сам файл в другой битрейт или формат (например, из FLAC в MP3 320kbps), так как иногда проблема кроется в особенностях декодера магнитолы.</p></aside>
+
+<h2 id="редактирование-метаданных-без-установки-программ">Редактирование метаданных без установки программ</h2>
+
+<p>Если установка софта невозможна, можно воспользоваться онлайн-сервисами или встроенными средствами ОС. В Windows можно нажать правой кнопкой мыши на файл, выбрать "Свойства" и перейти на вкладку "Подробно".</p>
+
+<p>Здесь можно изменить поле "Участвующие исполнители" или "Альбом". Однако этот метод имеет ограничения: он не всегда корректно обрабатывает пакетные изменения и может не поддерживать все типы тегов. Кроме того, встроенный редактор Windows иногда "портит" обложки альбомов.</p>
+
+<p>Онлайн-сервисы, такие как <em>mp3tag.de</em> (онлайн-версия) или <em>audio-tag-tools.com</em>, позволяют загрузить файл, отредактировать поля в браузере и скачать результат. Это удобно для работы с чужого компьютера, но требует осторожности с конфиденциальностью данных.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не загружайте редкие или личные записи на публичные онлайн-сервисы для редактирования. Используйте только проверенные локальные программы для работы с уникальным контентом.</p>
+</blockquote>
+
+<p>Для пользователей macOS встроенный приложение "Музыка" (бывший iTunes) также позволяет менять информацию о треке через меню "Правка" -> "Свойства". Интерфейс здесь более дружелюбный, но функционал тегов может быть скрыт от неопытного пользователя.</p>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Почему после смены автора в компьютере, в машине отображается старое имя?</summary>
+<p>Скорее всего, файл не был сохранен после редактирования, или магнитола кэширует информацию. Попробуйте извлечь и вставить флешку заново. Также проверьте, не осталось ли у файла старого тега ID3v1, который приоритетнее считывается старыми устройствами.</p>
+</details>
+
+<details>
+<summary>Можно ли поменять автора сразу у 1000 песен?</summary>
+<p>Да, это называется пакетной обработкой. Выделите все нужные файлы в редакторе тегов, впишите имя в поле Artist и нажмите сохранить. Изменение применится ко всем выделенным трекам одновременно.</p>
+</details>
+
+<details>
+<summary>Влияет ли смена имени автора на качество звука?</summary>
+<p>Нет, метаданные хранятся в заголовке файла и никак не затрагивают аудиопоток. Качество звука останется прежним, изменится только текстовая информация, отображаемая плеером.</p>
+</details>
+
+<details>
+<summary>Какой формат тегов лучше выбрать для USB-флешки в авто?</summary>
+<p>Оптимальным выбором является <em>ID3v2.3</em> с кодировкой <code>UTF-16</code>. Этот стандарт обеспечивает максимальную совместимость с автомобильными головными устройствами разных лет выпуска и корректно отображает русские буквы.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/p/pa/park-galitskogo-marshrut-peshkom.html" class="pb-related-card">
+                <span class="pb-related-title">Парк Галицкого: пешеходный маршрут, карта и время прогулки</span>
+                <span class="pb-related-desc">Полный гид по парку Галицкого в Краснодаре. Детальный пеший маршрут, карта зон, время обхода, инфрас</span>
+            </a><a href="/articles/c/ch/cherez-skolko-vyvetritsya-400-gramm-vodki.html" class="pb-related-card">
+                <span class="pb-related-title">Через сколько выветривается 400 грамм водки: таблица и факторы</span>
+                <span class="pb-related-desc">Сколько времени нужно, чтобы 400 грамм водки полностью вывелись из организма? Разбираемся с учётом в</span>
+            </a><a href="/articles/k/ka/kak-vyvesti-bally-tinkoff-na-kartu.html" class="pb-related-card">
+                <span class="pb-related-title">Как вывести баллы Тинькофф на карту: актуальные способы 2026</span>
+                <span class="pb-related-desc">Подробная инструкция, как перевести баллы Тинькофф на карту, обналичить кэшбэк и конвертировать бону</span>
+            </a><a href="/articles/a/av/avtobus-kotoryj-sbil-tsoya.html" class="pb-related-card">
+                <span class="pb-related-title">Автобус, сбивший Виктора Цоя: история, расследование, последствия</span>
+                <span class="pb-related-desc">Подробности трагической аварии на 35-м километре Свердловского шоссе, в которой погибли Виктор Цой и</span>
+            </a><a href="/articles/f/fi/film-pro-gonshchikov-na-realnykh-sobytiyakh.html" class="pb-related-card">
+                <span class="pb-related-title">Фильмы про гонщиков по реальным событиям: 10 лучших лент для автолюбителей</span>
+                <span class="pb-related-desc">Топ фильмов о легендарных гонщиках, основанных на реальных историях: от Формулы-1 до ралли. Списки, </span>
+            </a><a href="/articles/o/oz/ozon-fresh-rabota-kurerom-spb.html" class="pb-related-card">
+                <span class="pb-related-title">Озон Фреш работа курьером СПб: условия, зарплата, отзывы</span>
+                <span class="pb-related-desc">Как устроиться курьером Ozon Fresh в Санкт-Петербурге. Реальная зарплата, условия работы, график и о</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>

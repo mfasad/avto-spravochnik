@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27><text y=%27.9em%27 font-size=%2790%27>🚗</text></svg>">
+    <title>OBD2 это что такое: полное руководство по диагностике авто — Авто Справочник</title>
+    <meta name="description" content="Разбираем OBD2: что это, как работает и зачем нужно. Подключение сканера, расшифровка кодов ошибок и выбор адаптера для самостоятельной диагностики.">
+    <link rel="canonical" href="https://avto-spravochnik.vercel.app/articles/o/ob/obd2-eto-chto-takoe.html">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OBD2 это что такое: полное руководство по диагностике авто">
+    <meta property="og:description" content="Разбираем OBD2: что это, как работает и зачем нужно. Подключение сканера, расшифровка кодов ошибок и выбор адаптера для самостоятельной диагностики.">
+    <meta property="og:locale" content="ru_RU">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css?v=1778675227">
+    
+</head>
+<body class="pb-body">
+    
+    <div class="pb-topbar"></div>
+    <header class="pb-header">
+        <div class="pb-container pb-header-inner">
+            <a href="/" class="pb-logo">
+                <span class="pb-logo-icon">🚗</span>
+                <span class="pb-logo-text">Авто Справочник</span>
+            </a>
+            <button class="pb-menu-btn" aria-label="Меню" id="pbMenuBtn">☰</button>
+            <nav class="pb-nav" id="pbMainNav">
+                <a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a>
+<div class="pb-nav-dropdown">
+            <button class="pb-dropdown-toggle">📂 Все разделы ▾</button>
+            <div class="pb-dropdown-menu"><a href="/category/pokupka-i-prodazha/" class="pb-dropdown-item">🤝 Покупка и Продажа</a>
+<a href="/category/registratsiya-v-gibdd/" class="pb-dropdown-item">📝 Регистрация в ГИБДД</a>
+<a href="/category/zakony-i-shtrafy/" class="pb-dropdown-item">⚖️ Законы и Штрафы</a>
+<a href="/category/detskaya-bezopasnost/" class="pb-dropdown-item">👶 Детская Безопасность</a>
+<a href="/category/dvigatel-i-to/" class="pb-dropdown-item">⚙️ Двигатель и ТО</a>
+<a href="/category/elektrika-avto/" class="pb-dropdown-item">⚡ Электрика Авто</a>
+<a href="/category/khodovaya-i-rulevoe/" class="pb-dropdown-item">🛞 Ходовая и Рулевое</a>
+<a href="/category/kuzov-i-okraska/" class="pb-dropdown-item">🎨 Кузов и Окраска</a>
+<a href="/category/shiny-i-diski/" class="pb-dropdown-item">🍩 Шины и Диски</a>
+<a href="/category/garazh-i-strojka/" class="pb-dropdown-item">🏗️ Гараж и Стройка</a>
+<a href="/category/instrumenty/" class="pb-dropdown-item">🔧 Инструменты</a>
+<a href="/category/aksessuary-i-tyuning/" class="pb-dropdown-item">🧢 Аксессуары и Тюнинг</a>
+<a href="/category/bytovaya-tekhnika/" class="pb-dropdown-item">🧺 Бытовая Техника</a>
+<a href="/category/obuchenie-i-testy/" class="pb-dropdown-item">🎓 Обучение и Тесты</a>
+<a href="/category/drugoe/" class="pb-dropdown-item">📁 Другое</a></div>
+        </div>
+            </nav>
+        </div>
+    </header>
+
+    <nav class="pb-breadcrumbs" aria-label="Навигация">
+        <div class="pb-container"><a href="/">Главная</a><span class="pb-bc-sep">/</span><a href="/category/instrumenty/">Инструменты</a><span class="pb-bc-sep">/</span><span class="pb-bc-current">OBD2 это что такое: полное руководство по диагностике авто</span></div>
+    </nav>
+
+    <main class="pb-main">
+        <div class="pb-container">
+            <div class="pb-article-layout">
+                <aside class="pb-sidebar">
+                    
+                    <nav class="pb-sidebar-search"><div class="pb-search-box"><input type="text" id="globalSearchInput" placeholder="🔍 Поиск..." autocomplete="off"><div class="search-dropdown" id="globalSearchDropdown"></div></div></nav>
+                    <nav class="pb-sidebar-toc"><h3>📋 Содержание</h3><ul><li><a href="#история-появления-и-суть-стандарта-obd2">История появления и суть стандарта OBD2</a></li><li><a href="#конструкция-разъема-и-протоколы-обмена-данными">Конструкция разъема и протоколы обмена данными</a></li><li><a href="#типы-ошибок-и-коды-неисправностей">Типы ошибок и коды неисправностей</a></li><li><a href="#необходимое-оборудование-для-диагностики">Необходимое оборудование для диагностики</a></li><li><a href="#процесс-подключения-и-проведения-диагностики">Процесс подключения и проведения диагностики</a></li><li><a href="#анализ-параметров-в-реальном-времени">Анализ параметров в реальном времени</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></nav>
+                    
+                    <nav class="pb-sidebar-related"><h3>📰 Похожие статьи</h3><ul><li><a href="/articles/k/ka/kak-nastroit-schetchik-motochasov.html">Как настроить счетчик моточасов: полная инструкция</a></li><li><a href="/articles/c/ch/chto-mozhno-sobrat-na-arduino.html">100+ идей для Arduino в машине и гараже: от умного света до автодиагностики</a></li><li><a href="/articles/o/ob/obd-2-chto-eto.html">OBD 2: что это такое, где разъем и как пользоваться сканером</a></li><li><a href="/articles/k/ka/kak-pravilno-derzhat-ak.html">Как правильно держать АК: правила стрельбы и стойки</a></li><li><a href="/articles/p/pn/pnevmaticheskij-shlang-10-mm.html">Пневматический шланг 10 мм: выбор, применение и монтаж в автосервисе</a></li></ul></nav>
+                    
+                </aside>
+                <article class="pb-article">
+                    <h1>OBD2: что это такое и как использовать для диагностики авто</h1>
+                    <nav class="pb-mobile-toc"><details><summary>📋 Содержание</summary><ul><li><a href="#история-появления-и-суть-стандарта-obd2">История появления и суть стандарта OBD2</a></li><li><a href="#конструкция-разъема-и-протоколы-обмена-данными">Конструкция разъема и протоколы обмена данными</a></li><li><a href="#типы-ошибок-и-коды-неисправностей">Типы ошибок и коды неисправностей</a></li><li><a href="#необходимое-оборудование-для-диагностики">Необходимое оборудование для диагностики</a></li><li><a href="#процесс-подключения-и-проведения-диагностики">Процесс подключения и проведения диагностики</a></li><li><a href="#анализ-параметров-в-реальном-времени">Анализ параметров в реальном времени</a></li><li><a href="#часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</a></li></ul></details></nav>
+                    
+                    <div class="pb-article-body">
+
+<p>Современный автомобиль представляет собой сложный комплекс электронных систем, управление которыми берет на себя бортовой компьютер. Водитель часто сталкивается с ситуацией, когда на приборной панели загорается индикатор <strong>Check Engine</strong>, сигнализируя о неисправности, но не давая никакой конкретной информации о характере поломки. Именно в этот момент на помощь приходит стандарт <em>OBD2</em>, являющийся универсальным языком общения между машиной и диагностическим оборудованием.</p>
+
+<p>Аббревиатура OBD2 расшифровывается как On-Board Diagnostics второго поколения. Это не просто разъем в салоне, а целая философия взаимодействия, принятая автопроизводителями по всему миру для унификации процессов поиска и устранения неисправностей. Понимание принципов работы этой системы позволяет владельцу транспортного средства самостоятельно проводить первичную диагностику, экономить время на посещении сервиса и глубже понимать состояние своего автомобиля.</p>
+
+<p>Внедрение этого стандарта стало революционным шагом в автопроме, так как до его появления каждый manufacturer использовал собственные протоколы и разъемы. Теперь же, имея простой <strong>адаптер</strong> и смартфон, можно считать данные с датчиков кислорода, температуры, давления масла и многих других систем жизнеобеспечения машины.</p>
+
+<h2 id="история-появления-и-суть-стандарта-obd2">История появления и суть стандарта OBD2</h2>
+
+<p>История бортовой диагностики началась задолго до появления второго поколения, однако системы были крайне примитивны и часто ограничивались лишь контролем выбросов выхлопных газов. В 1990-х годах, особенно в США, экологические организации потребовали более жесткого контроля за состоянием автомобилей, что привело к созданию единого стандарта. <mark>Ключевым моментом стало обязательное внедрение OBD2 для всех автомобилей, продаваемых в США с 1996 года, а в Европе этот стандарт стал обязательным для бензиновых авто с 2001 года и дизельных с 2004 года.</mark></p>
+
+<p>Суть стандарта заключается в централизации сбора данных. Все важные узлы двигателя, трансмиссии и кузова объединены в единую сеть, доступ к которой осуществляется через один диагностический разъем. Это позволяет использовать универсальные сканеры для чтения информации, независимо от того, произведен автомобиль в Германии, Японии или Корее. До этого механикам приходилось иметь целый арсенал дорогостоящего оборудования для разных марок.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Несмотря на универсальность разъема, некоторые производители могут использовать нестандартные пины или proprietary-протоколы для доступа к определенным блокам управления (например, ABS или Airbag), поэтому дешевые сканеры могут не видеть все системы автомобиля.</p>
+</blockquote>
+
+<p>Важно понимать, что OBD2 — это не только про ошибки. Система в реальном времени мониторит сотни параметров работы двигателя. <strong>Электронный блок управления (ЭБУ)</strong> постоянно сравнивает показания датчиков с эталонными значениями, заложенными в его памяти. Если значение выходит за допустимые пределы в течение определенного времени, система фиксирует ошибку и записывает ее в энергонезависимую память.</p>
+
+<h2 id="конструкция-разъема-и-протоколы-обмена-данными">Конструкция разъема и протоколы обмена данными</h2>
+
+<p>Физически разъем OBD2 представляет собой 16-контактный трапециевидный коннектор. Расположение его регламентировано стандартом: обычно он находится в зоне доступа водителя, чаще всего под панелью приборов слева от рулевой колонки или рядом с блоком предохранителей. Однако каждый контакт в этом разъеме имеет свое строго определенное назначение, что обеспечивает совместимость оборудования.</p>
+
+<p>Внутри разъема задействованы не все 16 контактов. Основные из них отвечают за питание и заземление, а остальные распределены между различными протоколами связи. Автомобиль может использовать один из пяти основных протоколов, и адаптер должен уметь переключаться между ними или автоматически определять нужный.</p>
+
+<p>Ниже приведена таблица распиновки основных контактов, которые наиболее часто используются при диагностике:</p>
+
+<div class="pb-table-wrap"><table>
+<thead>
+<tr>
+<th>Пин (Контакт)</th>
+<th>Описание</th>
+<th>Протокол/Назначение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4, 5, 16</td>
+<td>Заземление и Питание</td>
+<td>Обеспечивают энергией сканер от АКБ авто</td>
+</tr>
+<tr>
+<td>6, 14</td>
+<td>CAN High / CAN Low</td>
+<td>Высокоскоростная шина CAN (современные авто)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>K-Line</td>
+<td>Протокол ISO 9141-2 (старые европейские авто)</td>
+</tr>
+<tr>
+<td>2, 10</td>
+<td>J1850 PWM / VPW</td>
+<td>Протоколы Ford и GM (американские авто 90-х)</td>
+</tr>
+</tbody>
+</table></div>
+
+<p>Наиболее современным и распространенным протоколом сегодня является <em>CAN-bus</em> (Controller Area Network). Он обеспечивает высокую скорость передачи данных и надежность связи. Более старые протоколы, такие как K-Line, встречаются на автомобилях начала 2000-х годов. При выборе адаптера важно, чтобы он поддерживал все основные протоколы, иначе вы рискуете получить устройство, которое просто не сможет подключиться к"мозгам" вашей машины.</p>
+
+<div class="pb-poll" id="poll-816ddcec"><div class="pb-poll-question">📊 Какой у вас опыт диагностики автомобиля?</div><div class="pb-poll-option" data-poll="816ddcec" data-idx="0" onclick="pbPollVote(this)"><span class="pb-poll-label">Никогда не пробовал/ась</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="816ddcec" data-idx="1" onclick="pbPollVote(this)"><span class="pb-poll-label">Пользуюсь простым адаптером ELM327</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="816ddcec" data-idx="2" onclick="pbPollVote(this)"><span class="pb-poll-label">Имею профессиональный сканер</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div><div class="pb-poll-option" data-poll="816ddcec" data-idx="3" onclick="pbPollVote(this)"><span class="pb-poll-label">Обращаюсь только в сервис</span><span class="pb-poll-bar"></span><span class="pb-poll-pct"></span></div></div>
+
+<h2 id="типы-ошибок-и-коды-неисправностей">Типы ошибок и коды неисправностей</h2>
+
+<p>Когда система OBD2 фиксирует проблему, она присваивает ей уникальный код. Эти коды состоят из одной буквы и четырех цифр, например, <code>P0300</code>. Понимание структуры кода помогает быстро определить, в какой системе искать причину неисправности, еще до детальной расшифровки.</p>
+
+<p>Первый символ кода указывает на тип системы:</p>
+<ul>
+<li>🚗 <strong>P (Powertrain)</strong> — Двигатель и трансмиссия (наиболее частые ошибки).</li>
+<li>🚙 <strong>B (Body)</strong> — Кузовные системы (стеклоподъемники, подушки безопасности).</li>
+<li>🛞 <strong>C (Chassis)</strong> — Ходовая часть (ABS, ESP, рулевое управление).</li>
+<li>⚡ <strong>U (Network)</strong> — Сетевые ошибки связи между блоками управления.</li>
+</ul>
+
+<p>Вторая цифра указывает на стандарт кодировки: <code>0</code> означает универсальный код SAE (общий для всех авто), а <code>1</code> — код производителя (уникален для конкретной марки). Остальные цифры уточняют конкретный узел или тип неисправности. Например, коды, начинающиеся на <code>P03xx</code>, почти всегда относятся к системе зажигания и пропускам воспламенения.</p>
+
+<p>Ошибки делятся на два основных типа: постоянные и_pending (ожидающие). Постоянная ошибка загорает лампу Check Engine на панели. Pending-ошибка фиксируется системой, но лампа еще не горит — это происходит, если неисправность проявилась однократно или не носит критический характер. Это позволяет механику увидеть зарождающуюся проблему до того, как она станет серьезной.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>При сбросе ошибок через сканер помните, что некоторые коды (особенно связанные с катализатором) требуют проезда определенного цикла (Drive Cycle) для подтверждения исправности. Сразу после сброса лампа может не загореться, но система будет мониторить узел несколько десятков километров.</p></aside>
+
+<h2 id="необходимое-оборудование-для-диагностики">Необходимое оборудование для диагностики</h2>
+
+<p>Для подключения к разъему OBD2 вам понадобится интерфейс связи. Рынок предлагает огромное количество устройств, от простейших считывателей за пару долларов до профессиональных мультимарочных сканеров. Выбор зависит от ваших целей: разовая проверка или регулярное глубокое тестирование.</p>
+
+<p>Самым популярным решением для домашнего использования является адаптер на базе чипа <em>ELM327</em>. Это небольшое устройство, которое вставляется в разъем автомобиля и соединяется со смартфоном по Bluetooth или Wi-Fi. Существуют версии 1.5 и 2.1. Версия 1.5 считается более надежной и совместимой со старыми автомобилями, тогда как 2.1 часто имеет урезанный функционал и проблемы с подключением.</p>
+
+<p>Для работы с адаптером необходимо программное обеспечение. На Android популярны приложения <code>Torque Pro</code>, <code>HobDrive</code> или <code>OpenDiag</code> (для автомобилей ВАЗ). Для iOS часто используют <code>Car Scanner</code> или <code>DashCommand</code>. Эти программы превращают экран телефона в полноценную приборную панель с графиками и таблицами.</p>
+
+<div class="pb-steps"><h4 class="pb-steps-title">☑️ Выбор адаптера OBD2</h4><label class="check-item"><input type="checkbox"><span>Определить год выпуска авто (до 2005 или после)</span></label><label class="check-item"><input type="checkbox"><span>Проверить тип разъема (16 пин)</span></label><label class="check-item"><input type="checkbox"><span>Выбрать интерфейс (Bluetooth для Android, Wi-Fi для iPhone)</span></label><label class="check-item"><input type="checkbox"><span>Убедиться в поддержке нужных протоколов (CAN, K-Line)</span></label><div class="check-progress">Выполнено: <span class="check-count">0</span> / 4</div></div>
+
+<p>Профессионалы используют более сложные устройства, такие как <strong>Launch</strong>, <strong>Autel</strong> или дилерские сканеры. Они позволяют не только читать ошибки, но и проводить адаптации, кодировать новые блоки, прошивать ЭБУ и тестировать исполнительные механизмы в реальном времени. Стоимость такого оборудования может исчисляться тысячами долларов.</p>
+
+<h2 id="процесс-подключения-и-проведения-диагностики">Процесс подключения и проведения диагностики</h2>
+
+<p>Процедура подключения сканера проста, но требует соблюдения определенной последовательности действий для избежания скачков напряжения в бортовой сети. Сначала найдите диагностический разъем. Если вы не можете его обнаружить, загляните в инструкцию по эксплуатации автомобиля — там всегда указано точное местоположение.</p>
+
+<p>Подключите адаптер к разъему. В этот момент не обязательно, чтобы двигатель был запущен, достаточно повернуть ключ зажигания в положение <code>ON</code> (зажигание включено, стартер не крутит). На адаптере должен загореться индикатор питания. Затем запустите приложение на смартфоне и выполните поиск нового устройства Bluetooth или Wi-Fi сети.</p>
+
+<blockquote>
+<p>⚠️ Внимание: Не оставляйте адаптер OBD2 в разъеме на длительное время (недели и месяцы) без работающего двигателя. Даже в спящем режиме некоторые дешевые модели могут потреблять ток, что приведет к полному разряду аккумуляторной батареи.</p>
+</blockquote>
+
+<p>После соединения приложение предложит выбрать профиль автомобиля или протокол. Лучше выбрать режим"Автоопределение". После успешного подключения вы увидите статус"Связь с ЭБУ установлена". Теперь можно переходить к чтению кодов неисправностей или просмотру параметров в реальном времени.</p>
+
+<details class="pb-accordion"><summary>Что делать, если адаптер не подключается?</summary><div class="pb-accordion-body"><p>Часто проблема кроется в неправильном PIN-коде (стандартные: 1234 или 0000) или в том, что телефон"запомил" устройство с ошибкой. Попробуйте удалить устройство из списка Bluetooth, перезагрузить телефон и попробовать снова. Также убедитесь, что в настройках телефона включена геолокация — это требование Android для работы с Bluetooth-устройствами.</p></div></details>
+
+<h2 id="анализ-параметров-в-реальном-времени">Анализ параметров в реальном времени</h2>
+
+<p>Одной из самых полезных функций OBD2 является возможность видеть работу датчиков в режиме онлайн. Это позволяет оценить эффективность работы двигателя, качество смеси и состояние систем нейтрализации выхлопа. Параметры обновляются несколько раз в секунду, создавая живую картину происходящего.</p>
+
+<p>На что стоит обратить внимание в первую очередь:</p>
+<ul>
+<li>🌡️ <strong>Температура охлаждающей жидкости</strong> — должна стабильно держаться в рабочем диапазоне (обычно 85-95°C).</li>
+<li>⏱️ <strong>Угол опережения зажигания</strong> — динамический параметр, меняющийся от нагрузки и оборотов.</li>
+<li>💨 <strong>Датчик кислорода (Лямбда)</strong> — его напряжение должно быстро меняться, свидетельствуя о правильной работе системы смесеобразования.</li>
+<li>🔋 <strong>Напряжение бортовой сети</strong> — при работающем двигателе должно быть в пределах 13.5-14.5 В.</li>
+</ul>
+
+<p>Анализируя эти данные, можно выявить проблемы, которые не всегда фиксируются кодами ошибок. Например,"умирающий" датчик кислорода может еще не вызвать загорание лампы Check Engine, но его вялая реакция уже будет видна на графике в приложении. Это позволяет заменить деталь превентивно, избежав перерасхода топлива.</p>
+
+<aside class="pb-callout pb-callout-note"><span class="pb-callout-icon">💡</span><p>Графики в реальном времени — лучший способ найти плавающую неисправность, которая проявляется только под нагрузкой или на определенных оборотах, и которую невозможно поймать статическим сканированием.</p></aside>
+
+<h2 id="часто-задаваемые-вопросы-faq">Часто задаваемые вопросы (FAQ)</h2>
+
+<details>
+<summary>Безопасно ли оставлять адаптер OBD2 в машине постоянно?</summary>
+<p>Кратковременное оставление (на ночь или пару дней) обычно безопасно для современных авто. Однако старые адаптеры или неисправная проводка могут разрядить аккумулятор за 3-5 дней простоя. Для длительного хранения автомобиля адаптер лучше извлекать.</p>
+</details>
+
+<details>
+<summary>Может ли OBD2 сканер повредить ЭБУ автомобиля?</summary>
+<p>Качественные адаптеры, работающие в режиме чтения, абсолютно безопасны. Риск существует только при использовании дешевого"ноунейм" оборудования с плохой изоляцией или при попытке записи (прошивки) блоков непроверенным софтом, что может привести к"окирпучиванию" контроллера.</p>
+</details>
+
+<details>
+<summary>Почему сканер видит двигатель, но не видит ABS или Airbag?</summary>
+<p>Стандарт OBD2 обязателен в первую очередь для систем, влияющих на экологию (двигатель). Доступ к другим системам (ABS, SRS, КПП) часто реализован через расширенные протоколы производителей, которые поддерживают не все адаптеры. Для полной диагностики нужны более продвинутые сканеры.</p>
+</details>
+
+<details>
+<summary>Нужно ли сбрасывать ошибки сразу после их появления?</summary>
+<p>Нет, сбрасывать ошибку до выяснения и устранения причины нельзя. Вы потеряете valuable данные (freeze frame), которые помогут мастеру понять, при каких условиях произошла поломка. Сбрасывайте коды только после ремонта.</p>
+</details>
+
+<details>
+<summary>Работает ли OBD2 на очень старых автомобилях?</summary>
+<p>Официальный стандарт OBD2 действует для бензиновых авто с 1996 года (США) и с 2001/2002 (Европа). На более старых машинах могут использоваться другие разъемы или диагностические методы (например, замыкание контактов для мигания лампочки), и стандартный 16-пиновый адаптер там не подойдет.</p>
+</details></div>
+                    
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <section class="pb-related-bottom">
+        <div class="pb-container">
+            <h2 class="pb-related-heading">📖 Читайте также</h2>
+            <div class="pb-related-list"><a href="/articles/k/ka/kak-nastroit-schetchik-motochasov.html" class="pb-related-card">
+                <span class="pb-related-title">Как настроить счетчик моточасов: полная инструкция</span>
+                <span class="pb-related-desc">Подробный гид по установке и настройке счетчиков моточасов. Схемы подключения, типы устройств и наст</span>
+            </a><a href="/articles/c/ch/chto-mozhno-sobrat-na-arduino.html" class="pb-related-card">
+                <span class="pb-related-title">100+ идей для Arduino в машине и гараже: от умного света до автодиагностики</span>
+                <span class="pb-related-desc">Полный гайд по проектам на Arduino для автолюбителей: системы безопасности, мониторинга, тюнинга и а</span>
+            </a><a href="/articles/o/ob/obd-2-chto-eto.html" class="pb-related-card">
+                <span class="pb-related-title">OBD 2: что это такое, где разъем и как пользоваться сканером</span>
+                <span class="pb-related-desc">Полный гид по системе OBD 2: распиновка разъема, назначение контактов, коды ошибок и лучшие адаптеры</span>
+            </a><a href="/articles/k/ka/kak-pravilno-derzhat-ak.html" class="pb-related-card">
+                <span class="pb-related-title">Как правильно держать АК: правила стрельбы и стойки</span>
+                <span class="pb-related-desc">Узнайте, как правильно держать автомат Калашникова. Разбор основных стоек, точек вскидывания и ошибо</span>
+            </a><a href="/articles/p/pn/pnevmaticheskij-shlang-10-mm.html" class="pb-related-card">
+                <span class="pb-related-title">Пневматический шланг 10 мм: выбор, применение и монтаж в автосервисе</span>
+                <span class="pb-related-desc">Как выбрать пневматический шланг 10 мм для компрессора и пневмоинструмента: материалы, рабочее давле</span>
+            </a><a href="/articles/r/re/remkomplekt-dlya-remonta-plastika.html" class="pb-related-card">
+                <span class="pb-related-title">Ремкомплект для ремонта пластика: состав и применение</span>
+                <span class="pb-related-desc">Полный обзор наборов для восстановления пластика. Сравнение компонентов, технологии пайки и выбор ре</span>
+            </a></div>
+        </div>
+    </section>
+
+    <footer class="pb-footer">
+        <div class="pb-container">
+            <div class="pb-footer-top">
+                <div class="pb-footer-brand">🚗 Авто Справочник</div>
+                <p class="pb-footer-desc"></p>
+            </div>
+            <div class="pb-footer-links">
+                <div class="pb-footer-cats"><a href="/category/pokupka-i-prodazha/">🤝 Покупка и Продажа</a> · <a href="/category/registratsiya-v-gibdd/">📝 Регистрация в ГИБДД</a> · <a href="/category/zakony-i-shtrafy/">⚖️ Законы и Штрафы</a> · <a href="/category/detskaya-bezopasnost/">👶 Детская Безопасность</a> · <a href="/category/dvigatel-i-to/">⚙️ Двигатель и ТО</a> · <a href="/category/elektrika-avto/">⚡ Электрика Авто</a></div>
+                <div class="pb-footer-info">
+                    <a href="/">Главная</a> · 
+                    <a href="/about.html">О проекте</a> · 
+                    <a href="/contact.html">Контакты</a> · 
+                    <a href="/privacy.html">Конфиденциальность</a>
+                </div>
+            </div>
+            <div class="pb-footer-bottom">
+                <p>© Авто Справочник. Все права защищены.</p>
+                <!--LiveInternet counter--><div style="margin-top:10px;"><a href="https://www.liveinternet.ru/click"
+                target="_blank"><img id="licnt06C4" width="88" height="15" style="border:0" 
+                title="LiveInternet: показано число посетителей за сегодня"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+                alt=""/></a><script>(function(d,s){d.getElementById("licnt06C4").src=
+                "https://counter.yadro.ru/hit?t26.5;r"+escape(d.referrer)+
+                ((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+                (s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+                ";h"+escape(d.title.substring(0,150))+";"+Math.random()})(document,screen)</script></div><!--/LiveInternet-->
+            </div>
+        </div>
+    </footer>
+    <div id="cookie-consent" class="pb-cookie">
+        <div class="pb-cookie-inner">
+            <span>🍪 Мы используем файлы cookie для улучшения работы сайта.</span>
+            <button id="cookie-accept" class="pb-cookie-btn">Принять</button>
+        </div>
+    </div>
+    <script src="/static/js/main.js"></script>
+    <script>
+    document.getElementById('pbMenuBtn')?.addEventListener('click', () => {
+        document.getElementById('pbMainNav')?.classList.toggle('pb-nav-open');
+    });
+    // Dropdown menu toggle (click for touch devices)
+    document.querySelectorAll('.pb-dropdown-toggle').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            btn.closest('.pb-nav-dropdown').classList.toggle('pb-dd-open');
+        });
+    });
+    document.addEventListener('click', () => {
+        document.querySelectorAll('.pb-nav-dropdown.pb-dd-open').forEach(d => d.classList.remove('pb-dd-open'));
+    });
+    (function() {
+        const popup = document.getElementById('cookie-consent');
+        const btn = document.getElementById('cookie-accept');
+        if (popup && btn && !localStorage.getItem('cookie-accepted')) {
+            setTimeout(() => popup.classList.add('pb-cookie-visible'), 1500);
+            btn.onclick = () => { localStorage.setItem('cookie-accepted','true'); popup.classList.remove('pb-cookie-visible'); };
+        }
+    })();
+    </script>
+    <script>
+    function pbPollVote(el) {
+        var poll = el.closest('.pb-poll');
+        if (poll.classList.contains('voted')) return;
+        poll.classList.add('voted');
+        el.classList.add('selected');
+        var opts = poll.querySelectorAll('.pb-poll-option');
+        var n = opts.length;
+        var raw = [];
+        var sum = 0;
+        for (var i = 0; i < n; i++) {
+            var v = Math.random() * 50 + 5;
+            if (opts[i] === el) v += 30;
+            raw.push(v);
+            sum += v;
+        }
+        var pcts = raw.map(function(v) { return Math.round(v / sum * 100); });
+        var diff = 100 - pcts.reduce(function(a,b){ return a+b; }, 0);
+        pcts[Array.from(opts).indexOf(el)] += diff;
+        setTimeout(function() {
+            opts.forEach(function(opt, i) {
+                opt.querySelector('.pb-poll-bar').style.width = pcts[i] + '%';
+                opt.querySelector('.pb-poll-pct').textContent = pcts[i] + '%';
+            });
+        }, 50);
+    }
+    </script>
+    
+    <script src="/static/js/inject.js" defer></script>
+</body>
+</html>
